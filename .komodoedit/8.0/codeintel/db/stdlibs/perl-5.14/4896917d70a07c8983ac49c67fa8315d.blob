@@ -1,0 +1,29 @@
+<scope ilk="blob" lang="Perl" name="CPANPLUS::Error">
+      <scope classrefs="Exporter" ilk="class" line="1" lineend="144" name="CPANPLUS::Error">
+        <import line="5" module="Log::Message" symbol="private" />
+        <import line="71" module="Exporter" symbol="*" />
+        <import line="72" module="Params::Check" symbol="check" />
+        <variable line="73" name="$ERROR_FH" />
+        <variable line="73" name="$MSG_FH" />
+        <variable line="73" name="@EXPORT" />
+        <variable line="73" name="@ISA" />
+        <scope ilk="function" line="102" lineend="106" name="flush" signature="flush()">
+          </scope>
+        <scope ilk="function" line="108" lineend="110" name="stack" signature="stack()" />
+        <scope ilk="function" line="112" lineend="121" name="stack_as_string" signature="stack_as_string($class)">
+          <variable ilk="argument" name="$class" />
+        </scope>
+      </scope>
+      <scope ilk="class" line="146" lineend="206" name="Log::Message::Handlers">
+        <import line="147" module="Carp" />
+        <scope ilk="function" line="151" lineend="164" name="cp_msg" signature="cp_msg($self, $verbose)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$verbose" />
+        </scope>
+        <scope ilk="function" line="166" lineend="196" name="cp_error" signature="cp_error($self, $verbose)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$verbose" />
+        </scope>
+      </scope>
+    </scope>
+    

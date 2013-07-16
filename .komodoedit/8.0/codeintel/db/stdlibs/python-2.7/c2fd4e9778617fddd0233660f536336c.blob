@@ -1,0 +1,74 @@
+<scope doc="distutils.command.bdist_dumb&#xA;Implements the Distutils &apos;bdist_dumb&apos; command (create a &quot;dumb&quot; built distribution -- i.e., just an archive to be unpacked under $prefix or $exec_prefix)." ilk="blob" lang="Python" name="distutils.command.bdist_dumb">
+      <scope doc="Abstract base class for defining command classes, the &quot;worker bees&quot;&#xA;of the Distutils.  A useful analogy for command classes is to think of them as subroutines with local variables called &quot;options&quot;.  The options are &quot;declared&quot; in &apos;initialize_options()&apos; and &quot;defined&quot; (given their final values, aka &quot;finalized&quot;) in &apos;finalize_options()&apos;, both of which must be defined by every command class.  The distinction between the two is necessary because option values might come from the outside world (command line, config file, ...), and any options dependent on other options must be computed *after* these outside influences have been processed -- hence &apos;finalize_options()&apos;.  The &quot;body&quot; of the subroutine, where it does all its work based on the values of its" ilk="class" name="Command">
+        <scope ilk="function" name="_ensure_tested_string" />
+        <scope doc="Spawn an external command respecting dry-run flag." ilk="function" name="spawn" />
+        <scope ilk="function" name="ensure_finalized" />
+        <scope doc="Create and initialize a new Command object." ilk="function" name="__init__" />
+        <scope doc="Set default values for all the options that this command&#xA;supports." ilk="function" name="initialize_options" />
+        <scope ilk="function" name="dump_options" />
+        <scope doc="# XXX A more explicit way to customize dry_run would be&#xA;better." ilk="function" name="__getattr__" />
+        <scope doc="Determine the sub-commands that are relevant in the current&#xA;distribution (ie., that need to be run)." ilk="function" name="get_sub_commands" />
+        <scope doc="Copy an entire directory tree respecting verbose, dry-run,&#xA;and force flags." ilk="function" name="copy_tree" />
+        <scope doc="If the current verbosity level is of greater than or equal&#xA;to &apos;level&apos; print &apos;msg&apos; to stdout." ilk="function" name="announce" />
+        <scope doc="Run some other command: uses the &apos;run_command()&apos; method of&#xA;Distribution, which creates and finalizes the command object&#xA;if necessary and then invokes its &apos;run()&apos; method." ilk="function" name="run_command" />
+        <scope doc="Set the values of any &quot;undefined&quot; options from corresponding&#xA;option values in some other command object." ilk="function" name="set_undefined_options" />
+        <scope doc="A command&apos;s raison d&apos;etre: carry out the action it exists to&#xA;perform, controlled by the options initialized in&#xA;&apos;initialize_options()&apos;, customized by other commands, the&#xA;setup script, the command-line, and config files, and&#xA;finalized in" ilk="function" name="run" />
+        <scope doc="# XXX rename to &apos;get_reinitialized_command()&apos;? (should do&#xA;the # same in dist.py, if so)" ilk="function" name="reinitialize_command" />
+        <scope doc="Copy a file respecting verbose, dry-run and force flags." ilk="function" name="copy_file" />
+        <scope ilk="function" name="warn" />
+        <scope ilk="function" name="ensure_dirname" />
+        <scope doc="Move a file respecting dry-run flag." ilk="function" name="move_file" />
+        <scope doc="Ensure that &apos;option&apos; is a list of strings." ilk="function" name="ensure_string_list" />
+        <scope ilk="function" name="_ensure_stringlike" />
+        <scope doc="Wrapper around Distribution&apos;s &apos;get_command_obj()&apos; method:&#xA;find (create if necessary and &apos;create&apos; is true) the command&#xA;object for &apos;command&apos;, call its &apos;ensure_finalized()&apos; method,&#xA;and return the finalized command object." ilk="function" name="get_finalized_command" />
+        <scope ilk="function" name="execute" />
+        <scope doc="Ensure that &apos;option&apos; is a string; if not defined, set it to&#xA;&apos;default&apos;." ilk="function" name="ensure_string" />
+        <scope ilk="function" name="mkpath" />
+        <scope ilk="function" name="make_archive" />
+        <scope ilk="function" name="get_command_name" />
+        <scope doc="Special case of &apos;execute()&apos; for operations that process one&#xA;or more input files and generate one output file." ilk="function" name="make_file" />
+        <scope doc="Set final values for all the options that this command&#xA;supports." ilk="function" name="finalize_options" />
+        <scope doc="Ensure that &apos;option&apos; is the name of an existing file." ilk="function" name="ensure_filename" />
+        <scope doc="Print &apos;msg&apos; to stdout if the global DEBUG (taken from the&#xA;DISTUTILS_DEBUG environment variable) flag is true." ilk="function" name="debug_print" />
+      </scope>
+      <scope classrefs="DistutilsError" doc="We don&apos;t know how to do something on the current platform (but&#xA;we do know how to do it on some platform) -- eg. trying to compile C files on a platform not supported by a CCompiler subclass." ilk="class" name="DistutilsPlatformError" />
+      <variable citdl="str" line="7" name="__revision__" />
+      <scope classrefs="Command" doc="&#xA;" ilk="class" line="19" lineend="132" name="bdist_dumb">
+        <scope ilk="function" line="83" lineend="132" name="run" signature="run()">
+          <variable citdl="bdist_dumb" ilk="argument" name="self" />
+          <variable citdl="os.path.join()" line="105" name="pseudoinstall_root" />
+          <variable citdl="get_python_version()" line="125" name="pyversion" />
+          <variable citdl="self.make_archive()" line="121" name="filename" />
+          <variable citdl="self.reinitialize_command()" line="87" name="install" />
+          <variable citdl="os.path.join()" line="107" name="archive_root" />
+          <variable citdl="archive_basename.replace()" line="97" name="archive_basename" />
+        </scope>
+        <scope ilk="function" line="55" lineend="64" name="initialize_options" signature="initialize_options()">
+          <variable citdl="bdist_dumb" ilk="argument" name="self" />
+        </scope>
+        <scope ilk="function" line="66" lineend="81" name="finalize_options" signature="finalize_options()">
+          <variable citdl="bdist_dumb" ilk="argument" name="self" />
+          <variable line="68" name="bdist_base" />
+        </scope>
+        <variable attributes="__instancevar__" line="57" name="plat_name" />
+        <variable attributes="__instancevar__" line="64" name="group" />
+        <variable citdl="str" line="21" name="description" />
+        <variable attributes="__instancevar__" line="58" name="format" />
+        <variable citdl="list" line="23" name="user_options" />
+        <variable attributes="__instancevar__" citdl="int" line="62" name="relative" />
+        <variable attributes="__instancevar__" citdl="int" line="61" name="skip_build" />
+        <variable attributes="__instancevar__" citdl="os.path.join()" line="56" name="bdist_dir" />
+        <variable citdl="list" line="48" name="boolean_options" />
+        <variable citdl="dict" line="50" name="default_format" />
+        <variable attributes="__instancevar__" line="63" name="owner" />
+        <variable attributes="__instancevar__" citdl="int" line="59" name="keep_temp" />
+        <variable attributes="__instancevar__" line="60" name="dist_dir" />
+      </scope>
+      <scope doc="Take the full path &apos;path&apos;, and make it a relative path." ilk="function" name="ensure_relative" signature="ensure_relative(path)" />
+      <scope doc="Return a string that identifies the current platform." ilk="function" name="get_platform" signature="get_platform()" />
+      <scope ilk="function" name="get_python_version" signature="get_python_version()" />
+      <import module="log" />
+      <import module="os" />
+      <scope doc="Recursively remove an entire directory tree." ilk="function" name="remove_tree" signature="remove_tree(directory, verbose=1, dry_run=0)" />
+    </scope>
+    

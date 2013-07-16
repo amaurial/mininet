@@ -1,0 +1,38 @@
+<scope doc="The python bz2 module provides a comprehensive interface for&#xA;the bz2 compression library. It implements a complete file interface, one shot (de)compression functions, and types for sequential (de)compression." ilk="blob" lang="Python" name="bz2">
+      <scope classrefs="object" doc="BZ2Compressor([compresslevel=9]) -&gt; compressor object&#xA;Create a new compressor object. This object may be used to compress data sequentially. If you want to compress data in one shot, use the compress() function instead. The compresslevel parameter, if given, must be a number between 1 and 9." ilk="class" name="BZ2Compressor">
+        <scope doc="x.__setattr__(&apos;name&apos;, value) &lt;==&gt; x.name = value" ilk="function" name="__setattr__" signature="x.__setattr__(&apos;name&apos;, value) &lt;==&gt; x.name = value" />
+        <scope doc="Provide more data to the compressor object." ilk="function" name="compress" returns="str" signature="compress(data) -&gt; string" />
+        <scope doc="x.__getattribute__(&apos;name&apos;) &lt;==&gt; x.name" ilk="function" name="__getattribute__" signature="x.__getattribute__(&apos;name&apos;) &lt;==&gt; x.name" />
+        <scope doc="x.__delattr__(&apos;name&apos;) &lt;==&gt; del x.name" ilk="function" name="__delattr__" signature="x.__delattr__(&apos;name&apos;) &lt;==&gt; del x.name" />
+        <scope doc="Finish the compression process and return what is left in&#xA;internal buffers." ilk="function" name="flush" returns="str" signature="flush() -&gt; string" />
+        <scope ilk="function" name="__init__" />
+      </scope>
+      <scope classrefs="object" doc="BZ2Decompressor() -&gt; decompressor object&#xA;Create a new decompressor object. This object may be used to decompress data sequentially. If you want to decompress data in one shot, use the decompress() function instead." ilk="class" name="BZ2Decompressor">
+        <scope doc="x.__setattr__(&apos;name&apos;, value) &lt;==&gt; x.name = value" ilk="function" name="__setattr__" signature="x.__setattr__(&apos;name&apos;, value) &lt;==&gt; x.name = value" />
+        <scope doc="x.__getattribute__(&apos;name&apos;) &lt;==&gt; x.name" ilk="function" name="__getattribute__" signature="x.__getattribute__(&apos;name&apos;) &lt;==&gt; x.name" />
+        <scope doc="Provide more data to the decompressor object." ilk="function" name="decompress" returns="str" signature="decompress(data) -&gt; string" />
+        <scope doc="x.__delattr__(&apos;name&apos;) &lt;==&gt; del x.name" ilk="function" name="__delattr__" signature="x.__delattr__(&apos;name&apos;) &lt;==&gt; del x.name" />
+        <scope ilk="function" name="__init__" />
+      </scope>
+      <scope classrefs="object" doc="BZ2File(name [, mode=&apos;r&apos;, buffering=0, compresslevel=9]) -&gt; file object&#xA;Open a bz2 file. The mode can be &apos;r&apos; or &apos;w&apos;, for reading (default) or writing. When opened for writing, the file will be created if it doesn&apos;t exist, and truncated otherwise. If the buffering argument is given, 0 means unbuffered, and larger numbers specify the buffer size. If compresslevel is given, must be a number between 1 and 9. Data read is always returned in bytes; data written ought to be bytes." ilk="class" name="BZ2File">
+        <scope doc="__exit__(*excinfo) -&gt; None.  Closes the file." ilk="function" name="__exit__" signature="__exit__(*excinfo) -&gt; None.  Closes the file." />
+        <scope doc="x.__setattr__(&apos;name&apos;, value) &lt;==&gt; x.name = value" ilk="function" name="__setattr__" signature="x.__setattr__(&apos;name&apos;, value) &lt;==&gt; x.name = value" />
+        <scope doc="__enter__() -&gt; self." ilk="function" name="__enter__" signature="__enter__() -&gt; self." />
+        <scope doc="Write the sequence of strings to the file." ilk="function" name="writelines" signature="writelines(sequence_of_strings) -&gt; None" />
+        <scope doc="Read at most size uncompressed bytes, returned as a string." ilk="function" name="read" returns="str" signature="read([size]) -&gt; string" />
+        <scope doc="Call readline() repeatedly and return a list of lines read." ilk="function" name="readlines" returns="list" signature="readlines([size]) -&gt; list" />
+        <scope doc="x.__next__() &lt;==&gt; next(x)" ilk="function" name="__next__" signature="x.__next__() &lt;==&gt; next(x)" />
+        <scope doc="x.__getattribute__(&apos;name&apos;) &lt;==&gt; x.name" ilk="function" name="__getattribute__" signature="x.__getattribute__(&apos;name&apos;) &lt;==&gt; x.name" />
+        <scope doc="Write the &apos;data&apos; string to file." ilk="function" name="write" signature="write(data) -&gt; None" />
+        <scope doc="x.__delattr__(&apos;name&apos;) &lt;==&gt; del x.name" ilk="function" name="__delattr__" signature="x.__delattr__(&apos;name&apos;) &lt;==&gt; del x.name" />
+        <scope doc="x.__iter__() &lt;==&gt; iter(x)" ilk="function" name="__iter__" signature="x.__iter__() &lt;==&gt; iter(x)" />
+        <scope doc="Close the file. Sets data attribute .closed to true." ilk="function" name="close" signature="close() -&gt; None or (perhaps) an integer" />
+        <scope doc="Return the next line from the file, as a string, retaining&#xA;newline." ilk="function" name="readline" returns="str" signature="readline([size]) -&gt; string" />
+        <scope doc="Move to new file position. Argument offset is a byte count." ilk="function" name="seek" signature="seek(offset [, whence]) -&gt; None" />
+        <scope doc="Return the current file position, an integer (may be a long&#xA;integer)." ilk="function" name="tell" returns="int" signature="tell() -&gt; int" />
+        <scope ilk="function" name="__init__" />
+      </scope>
+      <scope doc="Compress data in one shot." ilk="function" name="compress" returns="str" signature="compress(data [, compresslevel=9]) -&gt; string" />
+      <scope doc="Decompress data in one shot." ilk="function" name="decompress" signature="decompress(data) -&gt; decompressed data" />
+    </scope>
+    

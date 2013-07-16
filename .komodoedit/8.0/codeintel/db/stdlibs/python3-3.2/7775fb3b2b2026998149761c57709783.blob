@@ -1,0 +1,81 @@
+<scope doc="distutils.command.build&#xA;Implements the Distutils &apos;build&apos; command." ilk="blob" lang="Python" name="distutils.command.build">
+      <scope classrefs="object" doc="Abstract base class for defining command classes, the &quot;worker bees&quot;&#xA;of the Distutils.  A useful analogy for command classes is to think of them as subroutines with local variables called &quot;options&quot;.  The options are &quot;declared&quot; in &apos;initialize_options()&apos; and &quot;defined&quot; (given their final values, aka &quot;finalized&quot;) in &apos;finalize_options()&apos;, both of which must be defined by every command class.  The distinction between the two is necessary because option values might come from the outside world (command line, config file, ...), and any options dependent on other options must be computed *after* these outside influences have been processed -- hence &apos;finalize_options()&apos;.  The &quot;body&quot; of the subroutine, where it does all its work based on the values of its" ilk="class" name="Command">
+        <scope ilk="function" name="_ensure_tested_string" signature="_ensure_tested_string(self, option, tester, what, error_fmt, default=None)" />
+        <scope doc="Spawn an external command respecting dry-run flag." ilk="function" name="spawn" signature="spawn(self, cmd, search_path=1, level=1)" />
+        <scope ilk="function" name="ensure_finalized" signature="ensure_finalized(self)" />
+        <scope doc="Create and initialize a new Command object." ilk="function" name="__init__" signature="__init__(self, dist)" />
+        <scope doc="Set default values for all the options that this command&#xA;supports." ilk="function" name="initialize_options" signature="initialize_options(self)" />
+        <scope ilk="function" name="dump_options" signature="dump_options(self, header=None, indent=&apos;&apos;)" />
+        <scope doc="# XXX A more explicit way to customize dry_run would be&#xA;better." ilk="function" name="__getattr__" signature="__getattr__(self, attr)" />
+        <scope doc="Determine the sub-commands that are relevant in the current&#xA;distribution (ie., that need to be run)." ilk="function" name="get_sub_commands" signature="get_sub_commands(self)" />
+        <scope doc="Copy an entire directory tree respecting verbose, dry-run,&#xA;and force flags." ilk="function" name="copy_tree" signature="copy_tree(self, infile, outfile, preserve_mode=1, preserve_times=1, preserve_symlinks=0, level=1)" />
+        <scope doc="If the current verbosity level is of greater than or equal&#xA;to &apos;level&apos; print &apos;msg&apos; to stdout." ilk="function" name="announce" signature="announce(self, msg, level=1)" />
+        <scope doc="Run some other command: uses the &apos;run_command()&apos; method of&#xA;Distribution, which creates and finalizes the command object&#xA;if necessary and then invokes its &apos;run()&apos; method." ilk="function" name="run_command" signature="run_command(self, command)" />
+        <scope doc="Set the values of any &quot;undefined&quot; options from corresponding&#xA;option values in some other command object." ilk="function" name="set_undefined_options" signature="set_undefined_options(self, src_cmd, *option_pairs)" />
+        <scope doc="A command&apos;s raison d&apos;etre: carry out the action it exists to&#xA;perform, controlled by the options initialized in&#xA;&apos;initialize_options()&apos;, customized by other commands, the&#xA;setup script, the command-line, and config files, and&#xA;finalized in" ilk="function" name="run" signature="run(self)" />
+        <scope doc="# XXX rename to &apos;get_reinitialized_command()&apos;? (should do&#xA;the # same in dist.py, if so)" ilk="function" name="reinitialize_command" signature="reinitialize_command(self, command, reinit_subcommands=0)" />
+        <scope doc="Copy a file respecting verbose, dry-run and force flags." ilk="function" name="copy_file" signature="copy_file(self, infile, outfile, preserve_mode=1, preserve_times=1, link=None, level=1)" />
+        <scope ilk="function" name="warn" signature="warn(self, msg)" />
+        <scope ilk="function" name="ensure_dirname" signature="ensure_dirname(self, option)" />
+        <scope doc="Move a file respecting dry-run flag." ilk="function" name="move_file" signature="move_file(self, src, dst, level=1)" />
+        <scope doc="Ensure that &apos;option&apos; is a list of strings." ilk="function" name="ensure_string_list" signature="ensure_string_list(self, option)" />
+        <scope ilk="function" name="_ensure_stringlike" signature="_ensure_stringlike(self, option, what, default=None)" />
+        <scope doc="Wrapper around Distribution&apos;s &apos;get_command_obj()&apos; method:&#xA;find (create if necessary and &apos;create&apos; is true) the command&#xA;object for &apos;command&apos;, call its &apos;ensure_finalized()&apos; method,&#xA;and return the finalized command object." ilk="function" name="get_finalized_command" signature="get_finalized_command(self, command, create=1)" />
+        <scope ilk="function" name="execute" signature="execute(self, func, args, msg=None, level=1)" />
+        <scope doc="Ensure that &apos;option&apos; is a string; if not defined, set it to&#xA;&apos;default&apos;." ilk="function" name="ensure_string" signature="ensure_string(self, option, default=None)" />
+        <scope ilk="function" name="mkpath" signature="mkpath(self, name, mode=511)" />
+        <scope ilk="function" name="make_archive" signature="make_archive(self, base_name, format, root_dir=None, base_dir=None)" />
+        <scope ilk="function" name="get_command_name" signature="get_command_name(self)" />
+        <scope doc="Special case of &apos;execute()&apos; for operations that process one&#xA;or more input files and generate one output file." ilk="function" name="make_file" signature="make_file(self, infiles, outfile, func, args, exec_msg=None, skip_msg=None, level=1)" />
+        <scope doc="Set final values for all the options that this command&#xA;supports." ilk="function" name="finalize_options" signature="finalize_options(self)" />
+        <scope doc="Ensure that &apos;option&apos; is the name of an existing file." ilk="function" name="ensure_filename" signature="ensure_filename(self, option)" />
+        <scope doc="Print &apos;msg&apos; to stdout if the global DEBUG (taken from the&#xA;DISTUTILS_DEBUG environment variable) flag is true." ilk="function" name="debug_print" signature="debug_print(self, msg)" />
+      </scope>
+      <scope classrefs="DistutilsError" doc="Syntactic/semantic errors in command options, such as use of&#xA;mutually conflicting options, or inconsistent options, badly-spelled values, etc.  No distinction is made between option values originating in the setup script, the command line, config files, or what-have-you -- but if we *know* something originated in the setup script, we&apos;ll raise DistutilsSetupError instead." ilk="class" name="DistutilsOptionError" />
+      <scope classrefs="Command" doc="&#xA;" ilk="class" line="16" lineend="147" name="build">
+        <scope ilk="function" line="119" lineend="126" name="run" signature="run(self)">
+          <variable citdl="build" ilk="argument" name="self" />
+        </scope>
+        <scope ilk="function" line="54" lineend="67" name="initialize_options" signature="initialize_options(self)">
+          <variable citdl="build" ilk="argument" name="self" />
+        </scope>
+        <scope ilk="function" line="131" lineend="132" name="has_pure_modules" returns="self.distribution.has_pure_modules()" signature="has_pure_modules(self)">
+          <variable citdl="build" ilk="argument" name="self" />
+        </scope>
+        <scope ilk="function" line="134" lineend="135" name="has_c_libraries" returns="self.distribution.has_c_libraries()" signature="has_c_libraries(self)">
+          <variable citdl="build" ilk="argument" name="self" />
+        </scope>
+        <scope ilk="function" line="140" lineend="141" name="has_scripts" returns="self.distribution.has_scripts()" signature="has_scripts(self)">
+          <variable citdl="build" ilk="argument" name="self" />
+        </scope>
+        <scope ilk="function" line="137" lineend="138" name="has_ext_modules" returns="self.distribution.has_ext_modules()" signature="has_ext_modules(self)">
+          <variable citdl="build" ilk="argument" name="self" />
+        </scope>
+        <scope ilk="function" line="69" lineend="117" name="finalize_options" signature="finalize_options(self)">
+          <variable citdl="build" ilk="argument" name="self" />
+          <variable citdl="str" line="81" name="plat_specifier" />
+        </scope>
+        <variable citdl="list" line="20" name="user_options" />
+        <variable attributes="__instancevar__" citdl="int" line="66" name="force" />
+        <variable citdl="str" line="18" name="description" />
+        <variable attributes="__instancevar__" citdl="os.path.join()" line="62" name="build_scripts" />
+        <variable attributes="__instancevar__" citdl="str" line="55" name="build_base" />
+        <variable citdl="list" line="144" name="sub_commands" />
+        <variable attributes="__instancevar__" citdl="get_platform()" line="64" name="plat_name" />
+        <variable attributes="__instancevar__" citdl="os.path.join()" line="61" name="build_temp" />
+        <variable citdl="list" line="49" name="help_options" />
+        <variable attributes="__instancevar__" citdl="os.path.join()" line="59" name="build_platlib" />
+        <variable attributes="__instancevar__" citdl="os.path.join()" line="60" name="build_lib" />
+        <variable attributes="__instancevar__" line="65" name="debug" />
+        <variable citdl="list" line="47" name="boolean_options" />
+        <variable attributes="__instancevar__" citdl="os.path.join()" line="58" name="build_purelib" />
+        <variable attributes="__instancevar__" citdl="os.path.normpath()" line="67" name="executable" />
+        <variable attributes="__instancevar__" line="63" name="compiler" />
+      </scope>
+      <scope doc="Return a string that identifies the current platform." ilk="function" name="get_platform" signature="get_platform()" />
+      <import module="os" />
+      <scope ilk="function" line="11" lineend="13" name="show_compilers" signature="show_compilers()" />
+      <import module="sys" />
+      <variable citdl="str" line="5" name="__revision__" />
+    </scope>
+    

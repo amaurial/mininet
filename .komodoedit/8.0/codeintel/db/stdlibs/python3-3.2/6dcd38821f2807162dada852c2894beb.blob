@@ -1,0 +1,54 @@
+<scope doc="Temporary files.&#xA;This module provides generic, low- and high-level interfaces for creating temporary files and directories.  The interfaces listed as &quot;safe&quot; just below can be used without fear of race conditions. Those listed as &quot;unsafe&quot; cannot, and are provided for backward compatibility only.  This module also provides some data items to the user:  TMP_MAX  - maximum number of names that will be tried before giving up." ilk="blob" lang="Python" name="tempfile">
+      <scope doc="Create and return a temporary file." ilk="function" name="NamedTemporaryFile" signature="NamedTemporaryFile(mode=&apos;w+b&apos;, buffering=-1, encoding=None, newline=None, suffix=&apos;&apos;, prefix=&apos;tmp&apos;, dir=None, delete=True)" />
+      <scope classrefs="object" doc="Temporary file wrapper, specialized to switch from&#xA;StringIO to a real file when it exceeds a certain size or when a fileno is needed." ilk="class" name="SpooledTemporaryFile">
+        <scope ilk="function" name="__exit__" signature="__exit__(self, exc, value, tb)" />
+        <scope ilk="function" name="isatty" signature="isatty(self)" />
+        <scope ilk="function" name="truncate" signature="truncate(self)" />
+        <scope ilk="function" name="read" signature="read(self, *args)" />
+        <scope ilk="function" name="flush" signature="flush(self)" />
+        <scope ilk="function" name="readlines" signature="readlines(self, *args)" />
+        <scope doc="# file protocol" ilk="function" name="__iter__" signature="__iter__(self)" />
+        <scope ilk="function" name="xreadlines" signature="xreadlines(self, *args)" />
+        <scope ilk="function" name="close" signature="close(self)" />
+        <scope ilk="function" name="readline" signature="readline(self, *args)" />
+        <scope ilk="function" name="rollover" signature="rollover(self)" />
+        <scope ilk="function" name="seek" signature="seek(self, *args)" />
+        <scope ilk="function" name="__init__" signature="__init__(self, max_size=0, mode=&apos;w+b&apos;, buffering=-1, encoding=None, newline=None, suffix=&apos;&apos;, prefix=&apos;tmp&apos;, dir=None)" />
+        <scope ilk="function" name="fileno" signature="fileno(self)" />
+        <scope ilk="function" name="_check" signature="_check(self, file)" />
+        <scope ilk="function" name="writelines" signature="writelines(self, iterable)" />
+        <scope doc="# Context management protocol" ilk="function" name="__enter__" signature="__enter__(self)" />
+        <scope ilk="function" name="next" signature="next(self)" />
+        <scope ilk="function" name="write" signature="write(self, s)" />
+        <scope ilk="function" name="tell" signature="tell(self)" />
+      </scope>
+      <variable citdl="int" name="TMP_MAX" />
+      <scope classrefs="object" doc="Create and return a temporary directory.  This has the same&#xA;behavior as mkdtemp but can be used as a context manager.  For example:  with TemporaryDirectory() as tmpdir: ...  Upon exiting the context, the directory and everthing contained in it are removed." ilk="class" name="TemporaryDirectory">
+        <scope ilk="function" name="__enter__" signature="__enter__(self)" />
+        <scope ilk="function" name="__exit__" signature="__exit__(self, exc, value, tb)" />
+        <scope ilk="function" name="__del__" signature="__del__(self)" />
+        <scope doc="Join two or more pathname components, inserting &quot;\&quot; as&#xA;needed." ilk="function" name="_path_join" signature="_path_join(a, *p)" />
+        <scope ilk="function" name="_rmtree" signature="_rmtree(self, path)" />
+        <scope ilk="function" name="__init__" signature="__init__(self, suffix=&apos;&apos;, prefix=&apos;tmp&apos;, dir=None)" />
+        <scope ilk="function" name="cleanup" signature="cleanup(self, _warn=False)" />
+        <scope ilk="function" name="__repr__" signature="__repr__(self)" />
+        <scope doc="Test whether a path is a symbolic link." ilk="function" name="_islink" signature="_islink(path)" />
+        <scope doc="Return true if the pathname refers to an existing directory." ilk="function" name="_isdir" signature="_isdir(s)" />
+      </scope>
+      <scope doc="Create and return a temporary file." ilk="function" name="TemporaryFile" signature="TemporaryFile(mode=&apos;w+b&apos;, buffering=-1, encoding=None, newline=None, suffix=&apos;&apos;, prefix=&apos;tmp&apos;, dir=None, delete=True)" />
+      <variable citdl="list" name="__all__" />
+      <import module="_errno" />
+      <import module="_io" />
+      <import module="_os" />
+      <import module="_sys" />
+      <import module="_thread" />
+      <import module="_warnings" />
+      <scope doc="Accessor for tempfile.tempdir." ilk="function" name="gettempdir" signature="gettempdir()" />
+      <scope doc="Accessor for tempdir.template." ilk="function" name="gettempprefix" signature="gettempprefix()" />
+      <scope doc="User-callable function to create and return a unique&#xA;temporary directory." ilk="function" name="mkdtemp" signature="mkdtemp(suffix=&apos;&apos;, prefix=&apos;tmp&apos;, dir=None)" />
+      <scope doc="User-callable function to create and return a unique&#xA;temporary file." ilk="function" name="mkstemp" signature="mkstemp(suffix=&apos;&apos;, prefix=&apos;tmp&apos;, dir=None, text=False)" />
+      <scope doc="User-callable function to return a unique temporary file&#xA;name." ilk="function" name="mktemp" signature="mktemp(suffix=&apos;&apos;, prefix=&apos;tmp&apos;, dir=None)" />
+      <variable citdl="NoneType" name="tempdir" />
+      <variable citdl="str" name="template" />
+    </scope>
+    

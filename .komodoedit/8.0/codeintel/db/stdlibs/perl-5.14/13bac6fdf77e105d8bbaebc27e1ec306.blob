@@ -1,0 +1,26 @@
+<scope ilk="blob" lang="Perl" name="TAP::Parser::Multiplexer">
+      <scope classrefs="TAP::Object" ilk="class" line="1" lineend="195" name="TAP::Parser::Multiplexer">
+        <import line="6" module="IO::Select" symbol="*" />
+        <import line="7" module="TAP::Object" />
+        <variable line="4" name="$VERSION" />
+        <variable line="4" name="@ISA" />
+        <scope ilk="function" line="60" lineend="66" name="_initialize" signature="_initialize($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="82" lineend="101" name="add" signature="add($self, $parser, $stash)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$parser" />
+          <variable ilk="argument" name="$stash" />
+        </scope>
+        <scope ilk="function" line="112" lineend="115" name="parsers" signature="parsers($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="117" lineend="153" name="_iter" signature="_iter($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="182" lineend="185" name="next" signature="next($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+      </scope>
+    </scope>
+    

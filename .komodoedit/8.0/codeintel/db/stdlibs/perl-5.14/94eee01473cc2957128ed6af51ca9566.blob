@@ -1,0 +1,94 @@
+<scope ilk="blob" lang="Perl" name="GD::Graph">
+      <scope ilk="class" line="32" lineend="549" name="GD::Graph">
+        <import line="38" module="GD" symbol="*" />
+        <import line="39" module="GD::Text::Align" symbol="*" />
+        <import line="40" module="GD::Graph::Data" symbol="*" />
+        <import line="41" module="GD::Graph::Error" symbol="*" />
+        <import line="42" module="Carp" symbol="*" />
+        <import line="47" module="GD::Graph::colour" symbol="**" />
+        <variable line="35" name="$GD::Graph::VERSION" />
+        <variable line="44" name="@GD::Graph::ISA" />
+        <scope ilk="function" line="103" lineend="107" name="_has_default" signature="_has_default($self, $attr)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$attr" />
+        </scope>
+        <scope attributes="__ctor__" ilk="function" line="112" lineend="139" name="new" signature="new($type)">
+          <variable ilk="argument" name="$type" />
+        </scope>
+        <scope ilk="function" line="141" lineend="146" name="get" signature="get($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="148" lineend="171" name="set" signature="set($self, %args)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="%args" />
+        </scope>
+        <scope ilk="function" line="175" lineend="189" name="_set_font" signature="_set_font($self, $name)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$name" />
+        </scope>
+        <scope ilk="function" line="191" lineend="195" name="set_title_font" signature="set_title_font($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="197" lineend="208" name="set_text_clr" signature="set_text_clr($self, $clr)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$clr" />
+        </scope>
+        <scope ilk="function" line="210" lineend="215" name="plot" signature="plot($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="221" lineend="232" name="initialise" signature="initialise($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="243" lineend="278" name="check_data" signature="check_data($self, $data)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$data" />
+        </scope>
+        <scope ilk="function" line="282" lineend="290" name="open_graph" signature="open_graph($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="296" lineend="318" name="init_graph" signature="init_graph($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="320" lineend="375" name="_read_logo_file" signature="_read_logo_file($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="379" lineend="418" name="put_logo" signature="put_logo($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="423" lineend="449" name="set_clr" signature="set_clr($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="452" lineend="457" name="_set_tmp_clr" signature="_set_tmp_clr($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="460" lineend="466" name="_rm_tmp_clr" signature="_rm_tmp_clr($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="473" lineend="478" name="set_clr_uniq" signature="set_clr_uniq($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="482" lineend="486" name="pick_data_clr" signature="pick_data_clr($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="489" lineend="496" name="pick_border_clr" signature="pick_border_clr($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="498" lineend="502" name="gd" signature="gd($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="504" lineend="515" name="export_format" signature="export_format($proto)">
+          <variable ilk="argument" name="$proto" />
+        </scope>
+        <scope ilk="function" line="519" lineend="526" name="import_format" signature="import_format($proto)">
+          <variable ilk="argument" name="$proto" />
+        </scope>
+        <scope ilk="function" line="528" lineend="532" name="can_do_ttf" signature="can_do_ttf($proto)">
+          <variable ilk="argument" name="$proto" />
+        </scope>
+        <scope ilk="function" line="537" lineend="547" name="die_abstract" signature="die_abstract($self, $msg)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$msg" />
+        </scope>
+      </scope>
+    </scope>
+    

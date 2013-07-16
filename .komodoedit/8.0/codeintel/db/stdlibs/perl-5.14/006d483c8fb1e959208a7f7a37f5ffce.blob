@@ -1,0 +1,233 @@
+<scope ilk="blob" lang="Perl" name="HTML::Element">
+      <scope ilk="class" line="1" lineend="4211" name="HTML::Element">
+        <import line="14" module="Carp" />
+        <import line="15" module="HTML::Entities" />
+        <import line="16" module="HTML::Tagset" />
+        <variable line="19" name="$VERSION" />
+        <variable line="25" name="$encoded_content" />
+        <variable line="27" name="$Debug" />
+        <variable line="27" name="$html_uc" />
+        <variable line="27" name="$ID_COUNTER" />
+        <variable line="27" name="%list_type_to_sub" />
+        <variable line="169" name="*HTML::Element::emptyElement" />
+        <variable line="170" name="*HTML::Element::optionalEndTag" />
+        <variable line="171" name="*HTML::Element::linkElements" />
+        <variable line="172" name="*HTML::Element::boolean_attr" />
+        <variable line="173" name="*HTML::Element::canTighten" />
+        <variable line="1459" name="*_fold_case" />
+        <variable line="2652" name="$root" />
+        <variable line="2689" name="$start" />
+        <scope ilk="function" line="165" lineend="165" name="Version" signature="Version()" />
+        <scope ilk="function" line="203" lineend="203" name="ABORT" signature="ABORT()" />
+        <scope ilk="function" line="204" lineend="204" name="PRUNE" signature="PRUNE()" />
+        <scope ilk="function" line="205" lineend="205" name="PRUNE_SOFTLY" signature="PRUNE_SOFTLY()" />
+        <scope ilk="function" line="206" lineend="206" name="OK" signature="OK()" />
+        <scope ilk="function" line="207" lineend="207" name="PRUNE_UP" signature="PRUNE_UP()" />
+        <scope attributes="__ctor__" ilk="function" line="262" lineend="281" name="new" signature="new($class, $tag)">
+          <variable ilk="argument" name="$class" />
+          <variable ilk="argument" name="$tag" />
+        </scope>
+        <scope ilk="function" line="301" lineend="317" name="attr" signature="attr($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="416" lineend="424" name="tag" signature="tag($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="440" lineend="450" name="parent" signature="parent($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="463" lineend="467" name="content_list" signature="content_list()" />
+        <scope ilk="function" line="499" lineend="501" name="content" signature="content()" />
+        <scope ilk="function" line="514" lineend="516" name="content_array_ref" signature="content_array_ref()" />
+        <scope ilk="function" line="546" lineend="548" name="content_refs_list" signature="content_refs_list()" />
+        <scope ilk="function" line="560" lineend="562" name="implicit" signature="implicit()" />
+        <scope ilk="function" line="585" lineend="599" name="pos" signature="pos($self, $parm)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$parm" />
+        </scope>
+        <scope ilk="function" line="623" lineend="630" name="all_attr" signature="all_attr()" />
+        <scope ilk="function" line="632" lineend="634" name="all_attr_names" signature="all_attr_names()" />
+        <scope ilk="function" line="647" lineend="653" name="all_external_attr" signature="all_external_attr()">
+          </scope>
+        <scope ilk="function" line="655" lineend="657" name="all_external_attr_names" signature="all_external_attr_names()" />
+        <scope ilk="function" line="666" lineend="681" name="id" signature="id()" />
+        <scope ilk="function" line="691" lineend="700" name="_gensym" signature="_gensym()" />
+        <scope ilk="function" line="702" lineend="723" name="idf" signature="idf()">
+          </scope>
+        <scope ilk="function" line="791" lineend="820" name="push_content" signature="push_content($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="836" lineend="865" name="unshift_content" signature="unshift_content($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="886" lineend="917" name="splice_content" signature="splice_content($self, $offset, $length, @to_add)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$offset" />
+          <variable ilk="argument" name="$length" />
+          <variable ilk="argument" name="@to_add" />
+        </scope>
+        <scope ilk="function" line="929" lineend="939" name="detach" signature="detach()">
+          </scope>
+        <scope ilk="function" line="949" lineend="955" name="detach_content" signature="detach_content()">
+          </scope>
+        <scope ilk="function" line="971" lineend="1014" name="replace_with" signature="replace_with($self, @replacers)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="@replacers" />
+        </scope>
+        <scope ilk="function" line="1025" lineend="1029" name="preinsert" signature="preinsert($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="1040" lineend="1044" name="postinsert" signature="postinsert($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="1056" lineend="1075" name="replace_with_content" signature="replace_with_content()">
+          </scope>
+        <scope ilk="function" line="1086" lineend="1106" name="delete_content" signature="delete_content()" />
+        <scope ilk="function" line="1128" lineend="1128" name="destroy" signature="destroy()" />
+        <scope ilk="function" line="1129" lineend="1129" name="destroy_content" signature="destroy_content()" />
+        <scope ilk="function" line="1131" lineend="1142" name="delete" signature="delete()">
+          </scope>
+        <scope attributes="__ctor__" ilk="function" line="1162" lineend="1183" name="clone" signature="clone($it)">
+          <variable ilk="argument" name="$it" />
+        </scope>
+        <scope ilk="function" line="1199" lineend="1209" name="clone_list" signature="clone_list()" />
+        <scope ilk="function" line="1219" lineend="1276" name="normalize_content" signature="normalize_content()">
+          </scope>
+        <scope ilk="function" line="1285" lineend="1390" name="delete_ignorable_whitespace" signature="delete_ignorable_whitespace()">
+          </scope>
+        <scope ilk="function" line="1403" lineend="1430" name="insert_element" signature="insert_element($self, $tag, $implicit)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$tag" />
+          <variable ilk="argument" name="$implicit" />
+        </scope>
+        <scope ilk="function" line="1435" lineend="1437" name="_empty_element_map" signature="_empty_element_map()" />
+        <scope ilk="function" line="1439" lineend="1447" name="_fold_case_LC" signature="_fold_case_LC()" />
+        <scope ilk="function" line="1449" lineend="1457" name="_fold_case_NOT" signature="_fold_case_NOT()" />
+        <scope ilk="function" line="1476" lineend="1504" name="dump" signature="dump($self, $fh, $depth)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$fh" />
+          <variable ilk="argument" name="$depth" />
+        </scope>
+        <scope ilk="function" line="1536" lineend="1736" name="as_HTML" signature="as_HTML($self, $entities, $indent, $omissible_map)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$entities" />
+          <variable ilk="argument" name="$indent" />
+          <variable ilk="argument" name="$omissible_map" />
+        </scope>
+        <scope ilk="function" line="1760" lineend="1783" name="as_text" signature="as_text($this, %options)">
+          <variable ilk="argument" name="$this" />
+          <variable ilk="argument" name="%options" />
+        </scope>
+        <scope ilk="function" line="1786" lineend="1795" name="as_trimmed_text" signature="as_trimmed_text($this, %options)">
+          <variable ilk="argument" name="$this" />
+          <variable ilk="argument" name="%options" />
+        </scope>
+        <scope ilk="function" line="1797" lineend="1797" name="as_text_trimmed" signature="as_text_trimmed()" />
+        <scope ilk="function" line="1809" lineend="1858" name="as_XML" signature="as_XML($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="1860" lineend="1887" name="_xml_escape" signature="_xml_escape()">
+          </scope>
+        <scope ilk="function" line="1912" lineend="1977" name="as_Lisp_form" signature="as_Lisp_form()">
+          </scope>
+        <scope ilk="function" line="1987" lineend="1994" name="format" signature="format($self, $formatter)">
+          <import line="1990" module="HTML::FormatText" />
+          <variable ilk="argument" name="$self" />
+          <variable citdl="HTML::FormatText" ilk="argument" name="$formatter" />
+          <import line="1990" module="HTML::FormatText" />
+        </scope>
+        <scope ilk="function" line="2011" lineend="2077" name="starttag" signature="starttag($self, $entities)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$entities" />
+        </scope>
+        <scope ilk="function" line="2085" lineend="2121" name="starttag_XML" signature="starttag_XML($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="2130" lineend="2132" name="endtag" signature="endtag()" />
+        <scope ilk="function" line="2135" lineend="2137" name="endtag_XML" signature="endtag_XML()" />
+        <scope ilk="function" line="2167" lineend="2377" name="traverse" signature="traverse($start, $callback, $ignore_text)">
+          <variable ilk="argument" name="$start" />
+          <variable ilk="argument" name="$callback" />
+          <variable ilk="argument" name="$ignore_text" />
+        </scope>
+        <scope ilk="function" line="2393" lineend="2412" name="is_inside" signature="is_inside($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="2433" lineend="2436" name="is_empty" signature="is_empty($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="2452" lineend="2461" name="pindex" signature="pindex($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="2479" lineend="2504" name="left" signature="left()">
+          </scope>
+        <scope ilk="function" line="2520" lineend="2550" name="right" signature="right()">
+          </scope>
+        <scope ilk="function" line="2585" lineend="2623" name="address" signature="address()">
+          </scope>
+        <scope ilk="function" line="2633" lineend="2640" name="depth" signature="depth()">
+          </scope>
+        <scope ilk="function" line="2651" lineend="2657" name="root" signature="root()">
+          </scope>
+        <scope ilk="function" line="2670" lineend="2677" name="lineage" signature="lineage($here)">
+          <variable ilk="argument" name="$here" />
+        </scope>
+        <scope ilk="function" line="2688" lineend="2695" name="lineage_tag_names" signature="lineage_tag_names()">
+          </scope>
+        <scope ilk="function" line="2710" lineend="2710" name="descendents" signature="descendents()" />
+        <scope ilk="function" line="2712" lineend="2743" name="descendants" signature="descendants($start)">
+          <variable ilk="argument" name="$start" />
+        </scope>
+        <scope ilk="function" line="2761" lineend="2761" name="find" signature="find()" />
+        <scope ilk="function" line="2765" lineend="2789" name="find_by_tag_name" signature="find_by_tag_name()">
+          </scope>
+        <scope ilk="function" line="2803" lineend="2838" name="find_by_attribute" signature="find_by_attribute($self, $attribute, $value)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$attribute" />
+          <variable ilk="argument" name="$value" />
+        </scope>
+        <scope ilk="function" line="2943" lineend="3016" name="look_down" signature="look_down()">
+          </scope>
+        <scope ilk="function" line="3037" lineend="3107" name="look_up" signature="look_up()">
+          </scope>
+        <scope ilk="function" line="3172" lineend="3216" name="attr_get_i" signature="attr_get_i($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="3248" lineend="3262" name="tagname_map" signature="tagname_map()">
+          </scope>
+        <scope ilk="function" line="3293" lineend="3335" name="extract_links" signature="extract_links($start)">
+          <variable ilk="argument" name="$start" />
+        </scope>
+        <scope ilk="function" line="3352" lineend="3392" name="simplify_pres" signature="simplify_pres()">
+          </scope>
+        <scope ilk="function" line="3407" lineend="3487" name="same_as" signature="same_as()">
+          </scope>
+        <scope ilk="function" line="3759" lineend="3778" name="objectify_text" signature="objectify_text()">
+          </scope>
+        <scope ilk="function" line="3780" lineend="3829" name="deobjectify_text" signature="deobjectify_text()">
+          </scope>
+        <scope ilk="function" line="3853" lineend="3859" name="_int2latin" signature="_int2latin()" />
+        <scope ilk="function" line="3861" lineend="3869" name="_int2LATIN" signature="_int2LATIN()" />
+        <scope ilk="function" line="3873" lineend="3878" name="_i2l" signature="_i2l()">
+          </scope>
+        <scope ilk="function" line="3890" lineend="3919" name="_int2ROMAN" signature="_int2ROMAN()">
+          </scope>
+        <scope ilk="function" line="3921" lineend="3921" name="_int2roman" signature="_int2roman()" />
+        <scope ilk="function" line="3924" lineend="3924" name="_int2int" signature="_int2int()" />
+        <scope ilk="function" line="3934" lineend="3979" name="number_lists" signature="number_lists()">
+          </scope>
+        <scope ilk="function" line="4010" lineend="4051" name="has_insane_linkage" signature="has_insane_linkage()">
+          </scope>
+        <scope ilk="function" line="4053" lineend="4099" name="_asserts_fail" signature="_asserts_fail()">
+          </scope>
+        <scope ilk="function" line="4105" lineend="4113" name="_valid_name" signature="_valid_name($self, $attr)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$attr" />
+        </scope>
+        <scope ilk="function" line="4124" lineend="4126" name="element_class" signature="element_class()" />
+        <scope ilk="function" line="3599" lineend="4211" name="new_from_lol" signature="new_from_lol($class)">
+          <variable ilk="argument" name="$class" />
+        </scope>
+      </scope>
+    </scope>
+    

@@ -1,0 +1,32 @@
+<scope ilk="blob" lang="Perl" name="PPIx::Regexp::Token::Structure">
+      <scope ilk="class" line="33" lineend="280" name="PPIx::Regexp::Token::Structure">
+        <import line="41" module="PPIx::Regexp::Constant" symbol="COOKIE_CLASS" />
+        <import line="42" module="PPIx::Regexp::Constant" symbol="COOKIE_QUANT" />
+        <import line="43" module="PPIx::Regexp::Constant" symbol="MINIMUM_PERL" />
+        <import line="44" module="PPIx::Regexp::Constant" symbol="TOKEN_LITERAL" />
+        <import line="49" module="PPIx::Regexp::Token::Comment" />
+        <import line="50" module="PPIx::Regexp::Token::Modifier" />
+        <import line="51" module="PPIx::Regexp::Token::Backreference" />
+        <import line="52" module="PPIx::Regexp::Token::Backtrack" />
+        <import line="53" module="PPIx::Regexp::Token::Recursion" />
+        <variable line="55" name="$VERSION" />
+        <scope ilk="function" line="60" lineend="64" name="can_be_quantified" signature="can_be_quantified($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="66" lineend="70" name="is_quantifier" signature="is_quantifier($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="87" lineend="90" name="perl_version_introduced" signature="perl_version_introduced($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="110" lineend="267" name="__PPIX_TOKENIZER__regexp" signature="__PPIX_TOKENIZER__regexp($class, $tokenizer, $character)">
+          <variable ilk="argument" name="$class" />
+          <variable ilk="argument" name="$tokenizer" />
+          <variable ilk="argument" name="$character" />
+        </scope>
+        <scope ilk="function" line="274" lineend="278" name="__PPIX_LEXER__finalize" signature="__PPIX_LEXER__finalize($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+      </scope>
+    </scope>
+    

@@ -1,0 +1,25 @@
+<scope ilk="blob" lang="Perl" name="ExtUtils::CBuilder::Platform::os2">
+      <scope classrefs="ExtUtils::CBuilder::Platform::Unix" ilk="class" line="1" lineend="80" name="ExtUtils::CBuilder::Platform::os2">
+        <import line="4" module="ExtUtils::CBuilder::Platform::Unix" symbol="*" />
+        <variable line="6" name="$VERSION" />
+        <variable line="6" name="@ISA" />
+        <scope ilk="function" line="10" lineend="10" name="need_prelink" signature="need_prelink()" />
+        <scope ilk="function" line="12" lineend="24" name="prelink" signature="prelink($self, %args)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="%args" />
+        </scope>
+        <scope ilk="function" line="26" lineend="53" name="_do_link" signature="_do_link($self, $how, %args)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$how" />
+          <variable ilk="argument" name="%args" />
+        </scope>
+        <scope ilk="function" line="55" lineend="69" name="extra_link_args_after_prelink" signature="extra_link_args_after_prelink($self, %args)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="%args" />
+        </scope>
+        <scope ilk="function" line="71" lineend="77" name="link_executable" signature="link_executable($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+      </scope>
+    </scope>
+    

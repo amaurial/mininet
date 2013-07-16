@@ -1,0 +1,90 @@
+<scope ilk="blob" lang="Perl" name="Dumpvalue">
+      <scope ilk="class" line="2" lineend="647" name="Dumpvalue">
+        <variable line="4" name="$VERSION" />
+        <variable line="5" name="$stab" />
+        <variable line="5" name="%address" />
+        <variable line="5" name="%stab" />
+        <variable line="5" name="%subs" />
+        <variable line="5" name="@stab" />
+        <scope attributes="__ctor__" ilk="function" line="40" lineend="44" name="new" signature="new($class)">
+          <variable ilk="argument" name="$class" />
+        </scope>
+        <scope ilk="function" line="46" lineend="50" name="set" signature="set($self, %opt)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="%opt" />
+        </scope>
+        <scope ilk="function" line="52" lineend="55" name="get" signature="get($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="57" lineend="65" name="dumpValue" signature="dumpValue($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="67" lineend="73" name="dumpValues" signature="dumpValues($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="77" lineend="83" name="unctrl" signature="unctrl()" />
+        <scope ilk="function" line="85" lineend="122" name="stringify" signature="stringify($self, $noticks)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$noticks" />
+        </scope>
+        <scope ilk="function" line="124" lineend="149" name="DumpElem" signature="DumpElem()">
+          </scope>
+        <scope ilk="function" line="151" lineend="272" name="unwrap" signature="unwrap($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="274" lineend="278" name="matchvar" signature="matchvar()" />
+        <scope ilk="function" line="280" lineend="286" name="compactDump" signature="compactDump($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="288" lineend="293" name="veryCompact" signature="veryCompact($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="295" lineend="306" name="set_unctrl" signature="set_unctrl($self, $in)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$in" />
+        </scope>
+        <scope ilk="function" line="308" lineend="321" name="set_quote" signature="set_quote($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="323" lineend="354" name="dumpglob" signature="dumpglob($self, $package, $off, $key, $val, $all)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$package" />
+          <variable ilk="argument" name="$off" />
+          <variable ilk="argument" name="$key" />
+          <variable ilk="argument" name="$val" />
+          <variable ilk="argument" name="$all" />
+        </scope>
+        <scope ilk="function" line="356" lineend="364" name="CvGV_name" signature="CvGV_name($self, $in)">
+          <import line="361" module="Devel::Peek" />
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$in" />
+          <import line="361" module="Devel::Peek" />
+        </scope>
+        <scope ilk="function" line="366" lineend="380" name="dumpsub" signature="dumpsub($self, $off, $sub)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$off" />
+          <variable ilk="argument" name="$sub" />
+        </scope>
+        <scope ilk="function" line="382" lineend="392" name="findsubs" signature="findsubs($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="394" lineend="428" name="dumpvars" signature="dumpvars($self, $package, @vars)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$package" />
+          <variable ilk="argument" name="@vars" />
+        </scope>
+        <scope ilk="function" line="430" lineend="443" name="scalarUsage" signature="scalarUsage($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="445" lineend="454" name="arrayUsage" signature="arrayUsage($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="456" lineend="468" name="hashUsage" signature="hashUsage($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="470" lineend="480" name="globUsage" signature="globUsage($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+      </scope>
+    </scope>
+    

@@ -1,0 +1,19 @@
+<scope ilk="blob" lang="Perl" name="Pod::ParseLink">
+      <scope classrefs="Exporter" ilk="class" line="22" lineend="113" name="Pod::ParseLink">
+        <import line="29" module="Exporter" symbol="*" />
+        <variable line="27" name="$VERSION" />
+        <variable line="27" name="@EXPORT" />
+        <variable line="27" name="@ISA" />
+        <scope ilk="function" line="40" lineend="62" name="_parse_section" signature="_parse_section($link)">
+          <variable ilk="argument" name="$link" />
+        </scope>
+        <scope ilk="function" line="65" lineend="76" name="_infer_text" signature="_infer_text($page, $section)">
+          <variable ilk="argument" name="$page" />
+          <variable ilk="argument" name="$section" />
+        </scope>
+        <scope attributes="__exported__" ilk="function" line="81" lineend="106" name="parselink" signature="parselink($link)">
+          <variable ilk="argument" name="$link" />
+        </scope>
+      </scope>
+    </scope>
+    

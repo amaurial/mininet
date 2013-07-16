@@ -1,0 +1,81 @@
+<scope doc="Simple API for XML (SAX) implementation for Python.&#xA;This module provides an implementation of the SAX 2 interface; information about the Java version of the interface can be found at http://www.megginson.com/SAX/.  The Python version of the interface is documented at &lt;...&gt;.  This package contains the following modules:  handler -- Base classes and constants which define the SAX 2 API for the &apos;client-side&apos; of SAX for Python. " ilk="blob" lang="Python" name="xml.sax">
+      <scope classrefs="object" doc="Interface for receiving logical document content events.&#xA;This is the main callback interface in SAX, and the one most important to applications. The order of events in this interface mirrors the order of the information in the document." ilk="class" name="ContentHandler">
+        <scope doc="Begin the scope of a prefix-URI Namespace mapping." ilk="function" name="startPrefixMapping" signature="startPrefixMapping(self, prefix, uri)" />
+        <scope doc="End the scope of a prefix-URI mapping." ilk="function" name="endPrefixMapping" signature="endPrefixMapping(self, prefix)" />
+        <scope doc="Receive notification of a processing instruction." ilk="function" name="processingInstruction" signature="processingInstruction(self, target, data)" />
+        <scope doc="Signals the end of an element in non-namespace mode." ilk="function" name="endElement" signature="endElement(self, name)" />
+        <scope doc="Receive notification of a skipped entity." ilk="function" name="skippedEntity" signature="skippedEntity(self, name)" />
+        <scope doc="Called by the parser to give the application a locator for&#xA;locating the origin of document events." ilk="function" name="setDocumentLocator" signature="setDocumentLocator(self, locator)" />
+        <scope doc="Signals the start of an element in namespace mode." ilk="function" name="startElementNS" signature="startElementNS(self, name, qname, attrs)" />
+        <scope doc="Receive notification of character data." ilk="function" name="characters" signature="characters(self, content)" />
+        <scope doc="Receive notification of ignorable whitespace in element&#xA;content." ilk="function" name="ignorableWhitespace" signature="ignorableWhitespace(self, whitespace)" />
+        <scope ilk="function" name="__init__" signature="__init__(self)" />
+        <scope doc="Signals the start of an element in non-namespace mode." ilk="function" name="startElement" signature="startElement(self, name, attrs)" />
+        <scope doc="Signals the end of an element in namespace mode." ilk="function" name="endElementNS" signature="endElementNS(self, name, qname)" />
+        <scope doc="Receive notification of the beginning of a document." ilk="function" name="startDocument" signature="startDocument(self)" />
+        <scope doc="Receive notification of the end of a document." ilk="function" name="endDocument" signature="endDocument(self)" />
+      </scope>
+      <scope classrefs="object" doc="Basic interface for SAX error handlers.&#xA;If you create an object that implements this interface, then register the object with your XMLReader, the parser will call the methods in your object to report all warnings and errors. There are three levels of errors available: warnings, (possibly) recoverable errors, and unrecoverable errors. All methods take a SAXParseException as the only parameter." ilk="class" name="ErrorHandler">
+        <scope doc="Handle a non-recoverable error." ilk="function" name="fatalError" signature="fatalError(self, exception)" />
+        <scope doc="Handle a warning." ilk="function" name="warning" signature="warning(self, exception)" />
+        <scope doc="Handle a recoverable error." ilk="function" name="error" signature="error(self, exception)" />
+      </scope>
+      <scope classrefs="object" doc="Encapsulation of the information needed by the XMLReader to&#xA;read entities.  This class may include information about the public identifier, system identifier, byte stream (possibly with character encoding information) and/or the character stream of an entity.  Applications will create objects of this class for use in the XMLReader.parse method and for returning from EntityResolver.resolveEntity. " ilk="class" name="InputSource">
+        <scope doc="Sets the system identifier of this InputSource." ilk="function" name="setSystemId" signature="setSystemId(self, system_id)" />
+        <scope doc="Returns the public identifier of this InputSource." ilk="function" name="getPublicId" signature="getPublicId(self)" />
+        <scope doc="Sets the character encoding of this InputSource." ilk="function" name="setEncoding" signature="setEncoding(self, encoding)" />
+        <scope doc="Sets the public identifier of this InputSource." ilk="function" name="setPublicId" signature="setPublicId(self, public_id)" />
+        <scope doc="Get the character encoding of this InputSource." ilk="function" name="getEncoding" signature="getEncoding(self)" />
+        <scope doc="Get the character stream for this input source." ilk="function" name="getCharacterStream" signature="getCharacterStream(self)" />
+        <scope doc="Returns the system identifier of this InputSource." ilk="function" name="getSystemId" signature="getSystemId(self)" />
+        <scope doc="Set the character stream for this input source." ilk="function" name="setCharacterStream" signature="setCharacterStream(self, charfile)" />
+        <scope doc="Set the byte stream (a Python file-like object which does&#xA;not perform byte-to-character conversion) for this input&#xA;source." ilk="function" name="setByteStream" signature="setByteStream(self, bytefile)" />
+        <scope ilk="function" name="__init__" signature="__init__(self, system_id=None)" />
+        <scope doc="Get the byte stream for this input source." ilk="function" name="getByteStream" signature="getByteStream(self)" />
+      </scope>
+      <scope classrefs="Exception" doc="Encapsulate an XML error or warning. This class can contain&#xA;basic error or warning information from either the XML parser or the application: you can subclass it to provide additional functionality, or to add localization. Note that although you will receive a SAXException as the argument to the handlers in the ErrorHandler interface, you are not actually required to throw the exception; instead, you can simply read the information in it." ilk="class" name="SAXException">
+        <scope doc="Return a message for this exception." ilk="function" name="getMessage" signature="getMessage(self)" />
+        <scope doc="Return the embedded exception, or None if there was none." ilk="function" name="getException" signature="getException(self)" />
+        <scope doc="Avoids weird error messages if someone does exception[ix] by&#xA;mistake, since Exception has __getitem__ defined." ilk="function" name="__getitem__" signature="__getitem__(self, ix)" />
+        <scope doc="Create a string representation of the exception." ilk="function" name="__str__" signature="__str__(self)" />
+        <scope doc="Creates an exception." ilk="function" name="__init__" signature="__init__(self, msg, exception=None)" />
+      </scope>
+      <scope classrefs="SAXException" doc="Exception class for an unrecognized identifier.&#xA;An XMLReader will raise this exception when it is confronted with an unrecognized feature or property. SAX applications and extensions may use this class for similar purposes." ilk="class" name="SAXNotRecognizedException" />
+      <scope classrefs="SAXException" doc="Exception class for an unsupported operation.&#xA;An XMLReader will raise this exception when a service it cannot perform is requested (specifically setting a state or value). SAX applications and extensions may use this class for similar purposes." ilk="class" name="SAXNotSupportedException" />
+      <scope classrefs="SAXException" doc="Encapsulate an XML parse error or warning.&#xA;This exception will include information for locating the error in the original XML document. Note that although the application will receive a SAXParseException as the argument to the handlers in the ErrorHandler interface, the application is not actually required to throw the exception; instead, it can simply read the information in it and take a different action.  Since this exception is a subclass of SAXException, it inherits the ability to wrap another exception." ilk="class" name="SAXParseException">
+        <scope doc="Get the public identifier of the entity where the exception&#xA;occurred." ilk="function" name="getPublicId" signature="getPublicId(self)" />
+        <scope doc="The column number of the end of the text where the exception&#xA;occurred." ilk="function" name="getColumnNumber" signature="getColumnNumber(self)" />
+        <scope doc="Create a string representation of the exception." ilk="function" name="__str__" signature="__str__(self)" />
+        <scope doc="Get the system identifier of the entity where the exception&#xA;occurred." ilk="function" name="getSystemId" signature="getSystemId(self)" />
+        <scope doc="The line number of the end of the text where the exception&#xA;occurred." ilk="function" name="getLineNumber" signature="getLineNumber(self)" />
+        <scope doc="Creates the exception." ilk="function" name="__init__" signature="__init__(self, msg, exception, locator)" />
+      </scope>
+      <scope classrefs="SAXNotSupportedException" doc="Exception class for a missing driver.&#xA;An XMLReader module (driver) should raise this exception when it is first imported, e.g. when a support module cannot be imported. It also may be raised during parsing, e.g. if executing an external program is not permitted." ilk="class" name="SAXReaderNotAvailable" />
+      <import module="_exceptions" />
+      <variable citdl="list" line="51" name="default_parser_list" />
+      <import module="handler" />
+      <scope doc="Creates and returns a SAX parser." ilk="function" line="68" lineend="90" name="make_parser" returns="_create_parser()" signature="make_parser(parser_list=[])">
+        <variable citdl="list" ilk="argument" name="parser_list" />
+      </scope>
+      <scope ilk="function" line="29" lineend="33" name="parse" signature="parse(source, handler, errorHandler=&lt;xml.sax.handler.ErrorHandler object at 0x06997B70&gt;)">
+        <variable ilk="argument" name="source" />
+        <variable ilk="argument" name="handler" />
+        <variable citdl="make_parser()" line="30" name="parser" />
+        <variable citdl="ErrorHandler()" ilk="argument" name="errorHandler" />
+      </scope>
+      <scope ilk="function" line="35" lineend="46" name="parseString" signature="parseString(string, handler, errorHandler=&lt;xml.sax.handler.ErrorHandler object at 0x06995F50&gt;)">
+        <variable ilk="argument" name="handler" />
+        <variable citdl="make_parser()" line="40" name="parser" />
+        <variable ilk="argument" name="string" />
+        <variable citdl="ErrorHandler()" ilk="argument" name="errorHandler" />
+        <variable citdl="InputSource()" line="44" name="inpsrc" />
+      </scope>
+      <import module="xmlreader" />
+      <variable attributes="protected __hidden__" citdl="str" line="63" name="_key" />
+      <scope attributes="protected __hidden__" ilk="function" line="101" lineend="103" name="_create_parser" returns="drv_module.create_parser()" signature="_create_parser(parser_name)">
+        <variable ilk="argument" name="parser_name" />
+        <variable citdl="__import__()" line="102" name="drv_module" />
+      </scope>
+      <variable attributes="protected __hidden__" citdl="int" line="54" name="_false" />
+    </scope>
+    

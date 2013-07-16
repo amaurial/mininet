@@ -1,0 +1,107 @@
+<scope ilk="blob" lang="Perl" name="Devel::NYTProf::Data">
+      <scope ilk="class" line="12" lineend="813" name="Devel::NYTProf::Data">
+        <import line="46" module="Carp" symbol="carp" />
+        <import line="46" module="Carp" symbol="croak" />
+        <import line="46" module="Carp" symbol="cluck" />
+        <import line="47" module="Cwd" symbol="getcwd" />
+        <import line="48" module="Scalar::Util" symbol="blessed" />
+        <import line="50" module="Devel::NYTProf::Core" symbol="*" />
+        <import line="51" module="Devel::NYTProf::FileInfo" symbol="*" />
+        <import line="52" module="Devel::NYTProf::SubInfo" symbol="*" />
+        <import line="54" module="Devel::NYTProf::Util" symbol="make_path_strip_editor" />
+        <import line="54" module="Devel::NYTProf::Util" symbol="strip_prefix_from_paths" />
+        <import line="54" module="Devel::NYTProf::Util" symbol="get_abs_paths_alternation_regex" />
+        <import line="55" module="Devel::NYTProf::Util" symbol="trace_level" />
+        <variable line="58" name="$VERSION" />
+        <variable line="299" name="$subinfos" />
+        <scope attributes="__ctor__" ilk="function" line="76" lineend="141" name="new" signature="new($class, $args)">
+          <variable ilk="argument" name="$class" />
+          <variable ilk="argument" name="$args" />
+        </scope>
+        <scope ilk="function" line="144" lineend="212" name="collapse_evals_in" signature="collapse_evals_in($profile, $parent_fi)">
+          <variable ilk="argument" name="$profile" />
+          <variable ilk="argument" name="$parent_fi" />
+        </scope>
+        <scope ilk="function" line="214" lineend="214" name="_caches" signature="_caches()" />
+        <scope ilk="function" line="215" lineend="215" name="_clear_caches" signature="_clear_caches()" />
+        <scope ilk="function" line="217" lineend="219" name="attributes" signature="attributes()" />
+        <scope ilk="function" line="221" lineend="223" name="subname_subinfo_map" signature="subname_subinfo_map()" />
+        <scope ilk="function" line="225" lineend="235" name="_disconnect_subinfo" signature="_disconnect_subinfo($self, $si)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$si" />
+        </scope>
+        <scope ilk="function" line="243" lineend="276" name="package_subinfo_map" signature="package_subinfo_map($self, $merge_subs, $nested_pkgs)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$merge_subs" />
+          <variable ilk="argument" name="$nested_pkgs" />
+        </scope>
+        <scope ilk="function" line="289" lineend="324" name="packages_at_depth_subinfo" signature="packages_at_depth_subinfo($self, $opts)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$opts" />
+        </scope>
+        <scope ilk="function" line="326" lineend="331" name="all_fileinfos" signature="all_fileinfos()">
+          </scope>
+        <scope ilk="function" line="333" lineend="335" name="eval_fileinfos" signature="eval_fileinfos()" />
+        <scope ilk="function" line="337" lineend="339" name="noneval_fileinfos" signature="noneval_fileinfos()" />
+        <scope ilk="function" line="380" lineend="384" name="inc" signature="inc()" />
+        <scope ilk="function" line="412" lineend="458" name="dump_profile_data" signature="dump_profile_data($self, $args, $path, $value)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$args" />
+          <variable ilk="argument" name="$path" />
+          <variable ilk="argument" name="$value" />
+        </scope>
+        <scope ilk="function" line="461" lineend="532" name="_dump_elements" signature="_dump_elements($r, $separator, $fh, $path, $callback)">
+          <variable ilk="argument" name="$r" />
+          <variable ilk="argument" name="$separator" />
+          <variable ilk="argument" name="$fh" />
+          <variable ilk="argument" name="$path" />
+          <variable ilk="argument" name="$callback" />
+        </scope>
+        <scope ilk="function" line="535" lineend="537" name="get_profile_levels" signature="get_profile_levels()" />
+        <scope ilk="function" line="539" lineend="544" name="get_fid_line_data" signature="get_fid_line_data($self, $level)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$level" />
+        </scope>
+        <scope ilk="function" line="584" lineend="627" name="normalize_variables" signature="normalize_variables($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="630" lineend="642" name="_zero_array_elem" signature="_zero_array_elem($ary_of_line_data, $index)">
+          <variable ilk="argument" name="$ary_of_line_data" />
+          <variable ilk="argument" name="$index" />
+        </scope>
+        <scope ilk="function" line="645" lineend="653" name="_filename_to_fid" signature="_filename_to_fid($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="677" lineend="694" name="subs_defined_in_file" signature="subs_defined_in_file($self, $fid, $incl_lines)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$fid" />
+          <variable ilk="argument" name="$incl_lines" />
+        </scope>
+        <scope ilk="function" line="697" lineend="705" name="subs_defined_in_file_by_line" signature="subs_defined_in_file_by_line()">
+          </scope>
+        <scope ilk="function" line="730" lineend="743" name="file_line_range_of_sub" signature="file_line_range_of_sub($self, $sub)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$sub" />
+        </scope>
+        <scope ilk="function" line="762" lineend="792" name="resolve_fid" signature="resolve_fid($self, $file)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$file" />
+        </scope>
+        <scope ilk="function" line="795" lineend="803" name="package_fids" signature="package_fids($self, $package)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$package" />
+        </scope>
+        <scope ilk="function" line="806" lineend="811" name="_dumper" signature="_dumper()">
+          <import line="807" module="Data::Dumper" />
+          <import line="807" module="Data::Dumper" />
+        </scope>
+        <scope ilk="function" line="342" lineend="813" name="fileinfo_of" signature="fileinfo_of($self, $arg, $silent_if_undef, $self, $subname)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$arg" />
+          <variable ilk="argument" name="$silent_if_undef" />
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$subname" />
+        </scope>
+      </scope>
+    </scope>
+    

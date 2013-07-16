@@ -1,0 +1,37 @@
+<scope ilk="blob" lang="Perl" name="Memoize">
+      <scope classrefs="Exporter" ilk="class" line="11" lineend="1045" name="Memoize">
+        <import line="25" module="Carp" symbol="*" />
+        <import line="26" module="Exporter" symbol="*" />
+        <import line="28" module="Config" symbol="*" />
+        <variable line="12" name="$VERSION" />
+        <variable line="27" name="$DEBUG" />
+        <scope ilk="function" line="15" lineend="15" name="SCALAR" signature="SCALAR()" />
+        <scope ilk="function" line="16" lineend="16" name="LIST" signature="LIST()" />
+        <scope attributes="__exported__" ilk="function" line="44" lineend="166" name="memoize" signature="memoize($fn, %options)">
+          <variable ilk="argument" name="$fn" />
+          <variable ilk="argument" name="%options" />
+        </scope>
+        <scope ilk="function" line="169" lineend="197" name="_my_tie" signature="_my_tie($context, $hash, $options)">
+          <variable ilk="argument" name="$context" />
+          <variable ilk="argument" name="$hash" />
+          <variable ilk="argument" name="$options" />
+        </scope>
+        <scope attributes="__exportable__" ilk="function" line="199" lineend="214" name="flush_cache" signature="flush_cache()">
+          </scope>
+        <scope ilk="function" line="217" lineend="274" name="_memoizer" signature="_memoizer($orig)">
+          <variable ilk="argument" name="$orig" />
+        </scope>
+        <scope attributes="__exportable__" ilk="function" line="276" lineend="312" name="unmemoize" signature="unmemoize($f)">
+          <variable ilk="argument" name="$f" />
+        </scope>
+        <scope ilk="function" line="314" lineend="340" name="_make_cref" signature="_make_cref($fn, $uppack)">
+          <variable ilk="argument" name="$fn" />
+          <variable ilk="argument" name="$uppack" />
+        </scope>
+        <scope ilk="function" line="342" lineend="349" name="_crap_out" signature="_crap_out($funcname, $context)">
+          <variable ilk="argument" name="$funcname" />
+          <variable ilk="argument" name="$context" />
+        </scope>
+      </scope>
+    </scope>
+    

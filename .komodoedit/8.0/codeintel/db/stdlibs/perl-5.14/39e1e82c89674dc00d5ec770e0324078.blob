@@ -1,0 +1,61 @@
+<scope ilk="blob" lang="Perl" name="CPAN::Mirrors">
+      <scope ilk="class" line="3" lineend="234" name="CPAN::Mirrors">
+        <import line="8" module="Carp" symbol="*" />
+        <import line="9" module="FileHandle" symbol="*" />
+        <import line="10" module="Fcntl" symbol="**" />
+        <import line="11" module="Net::Ping" />
+        <variable line="5" name="$silent" />
+        <variable line="5" name="$urllist" />
+        <variable line="5" name="$VERSION" />
+        <scope attributes="__ctor__" ilk="function" line="13" lineend="31" name="new" signature="new($class, $file)">
+          <variable ilk="argument" name="$class" />
+          <variable ilk="argument" name="$file" />
+        </scope>
+        <scope ilk="function" line="33" lineend="36" name="continents" signature="continents($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="38" lineend="46" name="countries" signature="countries($self, @continents)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="@continents" />
+        </scope>
+        <scope ilk="function" line="48" lineend="57" name="mirrors" signature="mirrors($self, @countries)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="@countries" />
+        </scope>
+        <scope ilk="function" line="59" lineend="119" name="best_mirrors" signature="best_mirrors($self, %args)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="%args" />
+        </scope>
+        <scope ilk="function" line="121" lineend="164" name="_find_best_continent" signature="_find_best_continent($self, $seen, $verbose, $callback)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$seen" />
+          <variable ilk="argument" name="$verbose" />
+          <variable ilk="argument" name="$callback" />
+        </scope>
+        <scope ilk="function" line="167" lineend="234" name="_parse" signature="_parse($self, $file, $handle)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$file" />
+          <variable ilk="argument" name="$handle" />
+        </scope>
+      </scope>
+      <scope ilk="class" line="238" lineend="277" name="CPAN::Mirrored::By">
+        <import line="240" module="Net::Ping" />
+        <scope attributes="__ctor__" ilk="function" line="242" lineend="246" name="new" signature="new($self, $arg)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$arg" />
+        </scope>
+        <scope ilk="function" line="247" lineend="247" name="hostname" signature="hostname()" />
+        <scope ilk="function" line="248" lineend="248" name="continent" signature="continent()" />
+        <scope ilk="function" line="249" lineend="249" name="country" signature="country()" />
+        <scope ilk="function" line="250" lineend="250" name="http" signature="http()" />
+        <scope ilk="function" line="251" lineend="251" name="ftp" signature="ftp()" />
+        <scope ilk="function" line="252" lineend="252" name="rsync" signature="rsync()" />
+        <scope ilk="function" line="254" lineend="257" name="url" signature="url($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="259" lineend="274" name="ping" signature="ping($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+      </scope>
+    </scope>
+    

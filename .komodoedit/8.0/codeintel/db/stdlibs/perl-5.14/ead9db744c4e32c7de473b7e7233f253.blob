@@ -1,0 +1,76 @@
+<scope ilk="blob" lang="Perl" name="DBI::Profile">
+      <scope classrefs="Exporter" ilk="class" line="1" lineend="945" name="DBI::Profile">
+        <import line="675" module="Exporter" />
+        <import line="676" module="UNIVERSAL" />
+        <import line="677" module="Carp" symbol="*" />
+        <import line="679" module="DBI" symbol="dbi_time" />
+        <import line="679" module="DBI" symbol="dbi_profile" />
+        <import line="679" module="DBI" symbol="dbi_profile_merge_nodes" />
+        <import line="679" module="DBI" symbol="dbi_profile_merge" />
+        <variable line="674" name="$VERSION" />
+        <variable line="674" name="@EXPORT" />
+        <variable line="674" name="@EXPORT_OK" />
+        <variable line="674" name="@ISA" />
+        <variable line="702" name="$ON_DESTROY_DUMP" />
+        <variable line="703" name="$ON_FLUSH_DUMP" />
+        <scope attributes="__ctor__" ilk="function" line="705" lineend="709" name="new" signature="new($class)">
+          <variable ilk="argument" name="$class" />
+        </scope>
+        <scope ilk="function" line="712" lineend="762" name="_auto_new" signature="_auto_new($class, $arg)">
+          <import line="743" module="DBI::ProfileSubs" />
+          <variable ilk="argument" name="$class" />
+          <variable ilk="argument" name="$arg" />
+          <import line="743" module="DBI::ProfileSubs" />
+        </scope>
+        <scope ilk="function" line="765" lineend="769" name="empty" signature="empty($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="771" lineend="773" name="filename" signature="filename()" />
+        <scope ilk="function" line="775" lineend="781" name="flush_to_disk" signature="flush_to_disk($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="784" lineend="806" name="as_node_path_list" signature="as_node_path_list($self, $node, $path)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$node" />
+          <variable ilk="argument" name="$path" />
+        </scope>
+        <scope ilk="function" line="809" lineend="842" name="as_text" signature="as_text($self, $args_ref)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$args_ref" />
+        </scope>
+        <scope ilk="function" line="845" lineend="875" name="format" signature="format($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="878" lineend="890" name="format_profile_leaf" signature="format_profile_leaf($self, $thingy, $depth, $pad, $path, $leaves)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$thingy" />
+          <variable ilk="argument" name="$depth" />
+          <variable ilk="argument" name="$pad" />
+          <variable ilk="argument" name="$path" />
+          <variable ilk="argument" name="$leaves" />
+        </scope>
+        <scope ilk="function" line="893" lineend="909" name="format_profile_branch" signature="format_profile_branch($self, $thingy, $depth, $pad, $path, $leaves)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$thingy" />
+          <variable ilk="argument" name="$depth" />
+          <variable ilk="argument" name="$pad" />
+          <variable ilk="argument" name="$path" />
+          <variable ilk="argument" name="$leaves" />
+        </scope>
+        <scope attributes="__exportable__" ilk="function" line="912" lineend="920" name="format_profile_thingy" signature="format_profile_thingy($self, $thingy, $depth, $pad, $path, $leaves)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$thingy" />
+          <variable ilk="argument" name="$depth" />
+          <variable ilk="argument" name="$pad" />
+          <variable ilk="argument" name="$path" />
+          <variable ilk="argument" name="$leaves" />
+        </scope>
+        <scope ilk="function" line="923" lineend="930" name="on_destroy" signature="on_destroy($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="932" lineend="943" name="DESTROY" signature="DESTROY($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+      </scope>
+    </scope>
+    

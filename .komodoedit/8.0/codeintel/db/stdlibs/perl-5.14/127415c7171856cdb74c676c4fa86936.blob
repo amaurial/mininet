@@ -1,0 +1,29 @@
+<scope ilk="blob" lang="Perl" name="HTML::TokeParser">
+      <scope classrefs="HTML::PullParser" ilk="class" line="1" lineend="150" name="HTML::TokeParser">
+        <import line="3" module="HTML::PullParser" />
+        <import line="8" module="Carp" />
+        <import line="9" module="HTML::Entities" symbol="decode_entities" />
+        <import line="10" module="HTML::Tagset" />
+        <variable line="5" name="$VERSION" />
+        <scope ilk="function" line="26" lineend="44" name="new" signature="new($class)">
+          <variable ilk="argument" name="$class" />
+        </scope>
+        <scope ilk="function" line="47" lineend="61" name="get_tag" signature="get_tag($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="64" lineend="78" name="_textify" signature="_textify($self, $token)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$token" />
+        </scope>
+        <scope ilk="function" line="81" lineend="110" name="get_text" signature="get_text($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="113" lineend="119" name="get_trimmed_text" signature="get_trimmed_text($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="121" lineend="148" name="get_phrase" signature="get_phrase($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+      </scope>
+    </scope>
+    

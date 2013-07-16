@@ -1,0 +1,61 @@
+<scope doc="Faux ``threading`` version using ``dummy_thread`` instead of ``thread``.&#xA;The module ``_dummy_threading`` is added to ``sys.modules`` in order to not have ``threading`` considered imported.  Had ``threading`` been directly imported it would have made all subsequent imports succeed regardless of whether ``_thread`` was available which is not desired." ilk="blob" lang="Python" name="dummy_threading">
+      <scope classrefs="_Verbose" doc="Barrier.  Useful for synchronizing a fixed number of threads&#xA;at known synchronization points.  Threads block on &apos;wait()&apos; and are simultaneously once they have all made that call." ilk="class" name="Barrier">
+        <scope doc="Reset the barrier to the initial state." ilk="function" name="reset" signature="reset(self)" />
+        <scope ilk="function" name="_break" signature="_break(self)" />
+        <scope doc="# Block until the barrier is ready for us, or raise an&#xA;exception # if it is broken." ilk="function" name="_enter" signature="_enter(self)" />
+        <scope doc="# Optionally run the &apos;action&apos; and release the threads&#xA;waiting # in the barrier." ilk="function" name="_release" signature="_release(self)" />
+        <scope doc="# Wait in the barrier until we are relased." ilk="function" name="_wait" signature="_wait(self, timeout)" />
+        <scope doc="Place the barrier into a &apos;broken&apos; state." ilk="function" name="abort" signature="abort(self)" />
+        <scope doc="# If we are the last thread to exit the barrier, signal any&#xA;threads # waiting for the barrier to drain." ilk="function" name="_exit" signature="_exit(self)" />
+        <scope doc="Create a barrier, initialised to &apos;parties&apos; threads." ilk="function" name="__init__" signature="__init__(self, parties, action=None, timeout=None, verbose=None)" />
+        <scope doc="Wait for the barrier." ilk="function" name="wait" signature="wait(self, timeout=None)" />
+      </scope>
+      <scope ilk="function" name="BoundedSemaphore" signature="BoundedSemaphore(*args, **kwargs)" />
+      <scope ilk="function" name="Condition" signature="Condition(*args, **kwargs)" />
+      <scope ilk="function" name="Event" signature="Event(*args, **kwargs)" />
+      <scope doc="Dummy implementation of _thread.allocate_lock()." ilk="function" name="Lock" signature="Lock()" />
+      <scope ilk="function" name="RLock" signature="RLock(verbose=None, *args, **kwargs)" />
+      <scope ilk="function" name="Semaphore" signature="Semaphore(*args, **kwargs)" />
+      <scope classrefs="_Verbose" doc="&#xA;" ilk="class" name="Thread">
+        <scope ilk="function" name="isAlive" signature="isAlive(self)" />
+        <scope ilk="function" name="setName" signature="setName(self, name)" />
+        <scope ilk="function" name="_set_ident" signature="_set_ident(self)" />
+        <scope ilk="function" name="_stop" signature="_stop(self)" />
+        <scope ilk="function" name="setDaemon" signature="setDaemon(self, daemonic)" />
+        <scope doc="Remove current thread from the dict of currently running&#xA;threads." ilk="function" name="_delete" signature="_delete(self)" />
+        <scope ilk="function" name="isDaemon" signature="isDaemon(self)" />
+        <scope ilk="function" name="run" signature="run(self)" />
+        <scope ilk="function" name="_set_daemon" signature="_set_daemon(self)" />
+        <scope ilk="function" name="__init__" signature="__init__(self, group=None, target=None, name=None, args=(), kwargs=None, verbose=None)" />
+        <scope ilk="function" name="join" signature="join(self, timeout=None)" />
+        <scope ilk="function" name="start" signature="start(self)" />
+        <scope ilk="function" name="getName" signature="getName(self)" />
+        <scope ilk="function" name="_bootstrap" signature="_bootstrap(self)" />
+        <scope ilk="function" name="_bootstrap_inner" signature="_bootstrap_inner(self)" />
+        <scope ilk="function" name="is_alive" signature="is_alive(self)" />
+        <scope ilk="function" name="_reset_internal_locks" signature="_reset_internal_locks(self)" />
+        <scope ilk="function" name="__repr__" signature="__repr__(self)" />
+      </scope>
+      <scope ilk="function" name="Timer" signature="Timer(*args, **kwargs)" />
+      <variable citdl="list" name="__all__" />
+      <scope ilk="function" name="active_count" signature="active_count()" />
+      <scope ilk="function" name="current_thread" signature="current_thread()" />
+      <scope ilk="function" name="enumerate" signature="enumerate()" />
+      <scope classrefs="object" doc="&#xA;" ilk="class" name="local">
+        <scope ilk="function" name="__delattr__" signature="__delattr__(self, name)" />
+        <scope ilk="function" name="__new__" signature="__new__(cls, *args, **kw)" />
+        <scope ilk="function" name="__getattribute__" signature="__getattribute__(self, name)" />
+        <scope ilk="function" name="__setattr__" signature="__setattr__(self, name, value)" />
+      </scope>
+      <scope ilk="function" name="setprofile" signature="setprofile(func)" />
+      <scope ilk="function" name="settrace" signature="settrace(func)" />
+      <scope doc="Dummy implementation of _thread.stack_size()." ilk="function" name="stack_size" signature="stack_size(size=None)" />
+      <import module="threading" />
+      <variable attributes="__hidden__" line="41" name="held__threading_local" />
+      <variable attributes="__hidden__" citdl="True" line="16" name="holding__threading_local" />
+      <variable attributes="__hidden__" citdl="True" line="14" name="holding_thread" />
+      <variable attributes="__hidden__" line="23" name="held_thread" />
+      <variable attributes="__hidden__" citdl="True" line="15" name="holding_threading" />
+      <variable attributes="__hidden__" line="33" name="held_threading" />
+    </scope>
+    

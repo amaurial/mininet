@@ -1,0 +1,86 @@
+<scope ilk="blob" lang="Perl" name="TAP::Parser::Grammar">
+      <scope classrefs="TAP::Object" ilk="class" line="1" lineend="582" name="TAP::Parser::Grammar">
+        <import line="6" module="TAP::Object" />
+        <import line="7" module="TAP::Parser::ResultFactory" />
+        <import line="8" module="TAP::Parser::YAMLish::Reader" />
+        <variable line="4" name="$VERSION" />
+        <variable line="4" name="@ISA" />
+        <scope ilk="function" line="65" lineend="72" name="_initialize" signature="_initialize($self, $args)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$args" />
+        </scope>
+        <scope ilk="function" line="243" lineend="261" name="set_version" signature="set_version($self, $version)">
+          <import line="258" module="Carp" />
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$version" />
+          <import line="258" module="Carp" />
+        </scope>
+        <scope ilk="function" line="264" lineend="273" name="_order_tokens" signature="_order_tokens($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="286" lineend="308" name="tokenize" signature="tokenize($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="320" lineend="323" name="token_types" signature="token_types($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="338" lineend="341" name="syntax_for" signature="syntax_for($self, $type)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$type" />
+        </scope>
+        <scope ilk="function" line="369" lineend="372" name="handler_for" signature="handler_for($self, $type)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$type" />
+        </scope>
+        <scope ilk="function" line="374" lineend="381" name="_make_version_token" signature="_make_version_token($self, $line, $version)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$line" />
+          <variable ilk="argument" name="$version" />
+        </scope>
+        <scope ilk="function" line="383" lineend="402" name="_make_plan_token" signature="_make_plan_token($self, $line, $tests_planned, $directive, $explanation, $todo)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$line" />
+          <variable ilk="argument" name="$tests_planned" />
+          <variable ilk="argument" name="$directive" />
+          <variable ilk="argument" name="$explanation" />
+          <variable ilk="argument" name="$todo" />
+        </scope>
+        <scope ilk="function" line="404" lineend="415" name="_make_test_token" signature="_make_test_token($self, $line, $ok, $num, $desc, $dir, $explanation)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$line" />
+          <variable ilk="argument" name="$ok" />
+          <variable ilk="argument" name="$num" />
+          <variable ilk="argument" name="$desc" />
+          <variable ilk="argument" name="$dir" />
+          <variable ilk="argument" name="$explanation" />
+        </scope>
+        <scope ilk="function" line="417" lineend="423" name="_make_unknown_token" signature="_make_unknown_token($self, $line)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$line" />
+        </scope>
+        <scope ilk="function" line="425" lineend="432" name="_make_comment_token" signature="_make_comment_token($self, $line, $comment)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$line" />
+          <variable ilk="argument" name="$comment" />
+        </scope>
+        <scope ilk="function" line="434" lineend="441" name="_make_bailout_token" signature="_make_bailout_token($self, $line, $explanation)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$line" />
+          <variable ilk="argument" name="$explanation" />
+        </scope>
+        <scope ilk="function" line="443" lineend="474" name="_make_yaml_token" signature="_make_yaml_token($self, $pad, $marker)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$pad" />
+          <variable ilk="argument" name="$marker" />
+        </scope>
+        <scope ilk="function" line="476" lineend="483" name="_make_pragma_token" signature="_make_pragma_token($self, $line, $pragmas)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$line" />
+          <variable ilk="argument" name="$pragmas" />
+        </scope>
+        <scope ilk="function" line="485" lineend="493" name="_trim" signature="_trim($data)">
+          <variable ilk="argument" name="$data" />
+        </scope>
+      </scope>
+    </scope>
+    

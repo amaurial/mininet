@@ -1,0 +1,45 @@
+<scope ilk="blob" lang="Perl" name="IO::Compress::Bzip2">
+      <scope classrefs="Exporter IO::Compress::Base" ilk="class" line="1" lineend="139" name="IO::Compress::Bzip2">
+        <import line="6" module="Exporter" />
+        <import line="8" module="IO::Compress::Base" symbol="*" />
+        <import line="10" module="IO::Compress::Base::Common" symbol="*" />
+        <import line="11" module="IO::Compress::Adapter::Bzip2" symbol="*" />
+        <variable attributes="__exportable__" line="15" name="$Bzip2Error" />
+        <variable line="15" name="$VERSION" />
+        <variable line="15" name="%EXPORT_TAGS" />
+        <variable line="15" name="@EXPORT_OK" />
+        <variable line="15" name="@ISA" />
+        <scope ilk="function" line="28" lineend="34" name="new" signature="new($class)">
+          <variable ilk="argument" name="$class" />
+        </scope>
+        <scope attributes="__exportable__" ilk="function" line="36" lineend="40" name="bzip2" signature="bzip2()">
+          </scope>
+        <scope ilk="function" line="43" lineend="48" name="mkHeader" signature="mkHeader($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="50" lineend="61" name="getExtraParams" signature="getExtraParams($self)">
+          <import line="54" module="IO::Compress::Base::Common" symbol="*" />
+          <variable ilk="argument" name="$self" />
+          <import line="54" module="IO::Compress::Base::Common" symbol="*" />
+        </scope>
+        <scope ilk="function" line="65" lineend="86" name="ckParams" signature="ckParams($self, $got)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$got" />
+        </scope>
+        <scope ilk="function" line="89" lineend="106" name="mkComp" signature="mkComp($self, $got)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$got" />
+        </scope>
+        <scope ilk="function" line="109" lineend="113" name="mkTrailer" signature="mkTrailer($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="115" lineend="118" name="mkFinalTrailer" signature="mkFinalTrailer()" />
+        <scope ilk="function" line="126" lineend="129" name="getInverseClass" signature="getInverseClass()" />
+        <scope ilk="function" line="131" lineend="137" name="getFileInfo" signature="getFileInfo($self, $params, $file)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$params" />
+          <variable ilk="argument" name="$file" />
+        </scope>
+      </scope>
+    </scope>
+    

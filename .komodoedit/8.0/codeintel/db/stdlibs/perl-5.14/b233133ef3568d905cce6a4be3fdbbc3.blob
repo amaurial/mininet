@@ -1,0 +1,26 @@
+<scope ilk="blob" lang="Perl" name="ActiveState::Browser">
+      <scope ilk="class" line="1" lineend="110" name="ActiveState::Browser">
+        <import line="6" module="ActiveState::Handy" symbol="shell_quote" />
+        <import line="7" module="ActiveState::Path" symbol="find_prog" />
+        <import line="7" module="ActiveState::Path" symbol="abs_path" />
+        <import line="7" module="ActiveState::Path" symbol="join_path" />
+        <import line="8" module="ActiveState::Run" symbol="run" />
+        <variable line="3" name="$VERSION" />
+        <variable line="13" name="$BROWSER" />
+        <variable line="49" name="$HTML_DIR" />
+        <scope ilk="function" line="52" lineend="57" name="can_open" signature="can_open($url)">
+          <variable ilk="argument" name="$url" />
+        </scope>
+        <scope ilk="function" line="59" lineend="69" name="_resolve_file_url" signature="_resolve_file_url($url)">
+          <variable ilk="argument" name="$url" />
+        </scope>
+        <scope ilk="function" line="71" lineend="89" name="_browser_cmd" signature="_browser_cmd($url, $browser)">
+          <variable ilk="argument" name="$url" />
+          <variable ilk="argument" name="$browser" />
+        </scope>
+        <scope ilk="function" line="91" lineend="108" name="open" signature="open($url)">
+          <variable ilk="argument" name="$url" />
+        </scope>
+      </scope>
+    </scope>
+    

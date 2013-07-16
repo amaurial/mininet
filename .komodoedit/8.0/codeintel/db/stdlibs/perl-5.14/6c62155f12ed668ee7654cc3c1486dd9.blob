@@ -1,0 +1,103 @@
+<scope ilk="blob" lang="Perl" name="Pod::Parser">
+      <scope classrefs="Exporter" ilk="class" line="10" lineend="1829" name="Pod::Parser">
+        <import line="205" module="Pod::InputObjects" symbol="*" />
+        <import line="206" module="Carp" symbol="*" />
+        <import line="207" module="Exporter" symbol="*" />
+        <import line="210" module="Symbol" />
+        <variable line="14" name="$VERSION" />
+        <variable line="14" name="%myData" />
+        <variable line="14" name="%myOpts" />
+        <variable line="14" name="@input_stack" />
+        <variable line="14" name="@ISA" />
+        <scope ilk="function" line="266" lineend="270" name="command" signature="command($self, $cmd, $text, $line_num, $pod_para)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$cmd" />
+          <variable ilk="argument" name="$text" />
+          <variable ilk="argument" name="$line_num" />
+          <variable ilk="argument" name="$pod_para" />
+        </scope>
+        <scope ilk="function" line="305" lineend="309" name="verbatim" signature="verbatim($self, $text, $line_num, $pod_para)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$text" />
+          <variable ilk="argument" name="$line_num" />
+          <variable ilk="argument" name="$pod_para" />
+        </scope>
+        <scope ilk="function" line="351" lineend="355" name="textblock" signature="textblock($self, $text, $line_num, $pod_para)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$text" />
+          <variable ilk="argument" name="$line_num" />
+          <variable ilk="argument" name="$pod_para" />
+        </scope>
+        <scope ilk="function" line="387" lineend="391" name="interior_sequence" signature="interior_sequence($self, $seq_cmd, $seq_arg, $pod_seq)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$seq_cmd" />
+          <variable ilk="argument" name="$seq_arg" />
+          <variable ilk="argument" name="$pod_seq" />
+        </scope>
+        <scope attributes="__ctor__" ilk="function" line="443" lineend="454" name="new" signature="new($this, %params)">
+          <variable ilk="argument" name="$this" />
+          <variable ilk="argument" name="%params" />
+        </scope>
+        <scope ilk="function" line="469" lineend="472" name="initialize" signature="initialize()" />
+        <scope ilk="function" line="486" lineend="489" name="begin_pod" signature="begin_pod()" />
+        <scope ilk="function" line="509" lineend="512" name="begin_input" signature="begin_input()" />
+        <scope ilk="function" line="532" lineend="535" name="end_input" signature="end_input()" />
+        <scope ilk="function" line="549" lineend="552" name="end_pod" signature="end_pod()" />
+        <scope ilk="function" line="580" lineend="583" name="preprocess_line" signature="preprocess_line($self, $text, $line_num)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$text" />
+          <variable ilk="argument" name="$line_num" />
+        </scope>
+        <scope ilk="function" line="620" lineend="623" name="preprocess_paragraph" signature="preprocess_paragraph($self, $text, $line_num)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$text" />
+          <variable ilk="argument" name="$line_num" />
+        </scope>
+        <scope ilk="function" line="732" lineend="868" name="parse_text" signature="parse_text($self, $text, $line, $sself, $iseq)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$text" />
+          <variable ilk="argument" name="$line" />
+          <variable ilk="argument" name="$sself" />
+          <variable ilk="argument" name="$iseq" />
+        </scope>
+        <scope ilk="function" line="888" lineend="893" name="interpolate" signature="interpolate($self, $text, $line_num)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$text" />
+          <variable ilk="argument" name="$line_num" />
+        </scope>
+        <scope ilk="function" line="914" lineend="1022" name="parse_paragraph" signature="parse_paragraph($self, $text, $line_num)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$text" />
+          <variable ilk="argument" name="$line_num" />
+        </scope>
+        <scope ilk="function" line="1059" lineend="1114" name="parse_from_filehandle" signature="parse_from_filehandle($self, $in_fh, $out_fh)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$in_fh" />
+          <variable ilk="argument" name="$out_fh" />
+        </scope>
+        <scope ilk="function" line="1164" lineend="1265" name="parse_from_file" signature="parse_from_file($self, $infile, $outfile)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$infile" />
+          <variable ilk="argument" name="$outfile" />
+        </scope>
+        <scope ilk="function" line="1301" lineend="1303" name="errorsub" signature="errorsub()" />
+        <scope ilk="function" line="1322" lineend="1324" name="cutting" signature="cutting()" />
+        <scope ilk="function" line="1366" lineend="1376" name="parseopts" signature="parseopts()">
+          </scope>
+        <scope ilk="function" line="1388" lineend="1390" name="output_file" signature="output_file()" />
+        <scope ilk="function" line="1402" lineend="1404" name="output_handle" signature="output_handle()" />
+        <scope ilk="function" line="1416" lineend="1418" name="input_file" signature="input_file()" />
+        <scope ilk="function" line="1430" lineend="1432" name="input_handle" signature="input_handle()" />
+        <scope ilk="function" line="1465" lineend="1467" name="input_streams" signature="input_streams()" />
+        <scope ilk="function" line="1489" lineend="1491" name="top_stream" signature="top_stream()" />
+        <scope ilk="function" line="1535" lineend="1572" name="_push_input_stream" signature="_push_input_stream($self, $in_fh, $out_fh)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$in_fh" />
+          <variable ilk="argument" name="$out_fh" />
+        </scope>
+        <scope ilk="function" line="1593" lineend="1619" name="_pop_input_stream" signature="_pop_input_stream($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+      </scope>
+    </scope>
+    

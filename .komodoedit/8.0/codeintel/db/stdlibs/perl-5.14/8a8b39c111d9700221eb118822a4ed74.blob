@@ -1,0 +1,89 @@
+<scope ilk="blob" lang="Perl" name="Text::Balanced">
+      <scope classrefs="Exporter" ilk="class" line="1" lineend="1010" name="Text::Balanced">
+        <import line="8" module="Exporter" />
+        <import line="9" module="SelfLoader" symbol="*" />
+        <variable line="11" name="$VERSION" />
+        <variable line="11" name="%EXPORT_TAGS" />
+        <variable line="11" name="@ISA" />
+        <variable line="119" name="*delimited_pat" />
+        <scope ilk="function" line="42" lineend="48" name="_failmsg" signature="_failmsg($message, $pos)">
+          <variable ilk="argument" name="$message" />
+          <variable ilk="argument" name="$pos" />
+        </scope>
+        <scope ilk="function" line="50" lineend="55" name="_fail" signature="_fail($wantarray, $textref, $message, $pos)">
+          <variable ilk="argument" name="$wantarray" />
+          <variable ilk="argument" name="$textref" />
+          <variable ilk="argument" name="$message" />
+          <variable ilk="argument" name="$pos" />
+        </scope>
+        <scope ilk="function" line="57" lineend="90" name="_succeed" signature="_succeed()">
+          </scope>
+        <scope ilk="function" line="94" lineend="117" name="gen_delimited_pat" signature="gen_delimited_pat($dels, $escs)">
+          <variable ilk="argument" name="$dels" />
+          <variable ilk="argument" name="$escs" />
+        </scope>
+        <scope ilk="function" line="123" lineend="141" name="extract_delimited" signature="extract_delimited()">
+          </scope>
+        <scope ilk="function" line="143" lineend="178" name="extract_bracketed" signature="extract_bracketed()">
+          </scope>
+        <scope ilk="function" line="180" lineend="264" name="_match_bracketed" signature="_match_bracketed($textref, $pre, $ldel, $qdel, $quotelike, $rdel)">
+          <variable ilk="argument" name="$textref" />
+          <variable ilk="argument" name="$pre" />
+          <variable ilk="argument" name="$ldel" />
+          <variable ilk="argument" name="$qdel" />
+          <variable ilk="argument" name="$quotelike" />
+          <variable ilk="argument" name="$rdel" />
+        </scope>
+        <scope ilk="function" line="266" lineend="271" name="_revbracket" signature="_revbracket()">
+          </scope>
+        <scope ilk="function" line="275" lineend="301" name="extract_tagged" signature="extract_tagged()">
+          </scope>
+        <scope ilk="function" line="303" lineend="420" name="_match_tagged" signature="_match_tagged($textref, $pre, $ldel, $rdel, $omode, $bad, $ignore)">
+          <import line="343" module="Carp" symbol="*" />
+          <variable ilk="argument" name="$textref" />
+          <variable ilk="argument" name="$pre" />
+          <variable ilk="argument" name="$ldel" />
+          <variable ilk="argument" name="$rdel" />
+          <variable ilk="argument" name="$omode" />
+          <variable ilk="argument" name="$bad" />
+          <variable ilk="argument" name="$ignore" />
+          <import line="343" module="Carp" symbol="*" />
+        </scope>
+        <scope ilk="function" line="422" lineend="434" name="extract_variable" signature="extract_variable()">
+          </scope>
+        <scope ilk="function" line="436" lineend="489" name="_match_variable" signature="_match_variable($textref, $pre)">
+          <variable ilk="argument" name="$textref" />
+          <variable ilk="argument" name="$pre" />
+        </scope>
+        <scope ilk="function" line="491" lineend="519" name="extract_codeblock" signature="extract_codeblock()">
+          </scope>
+        <scope ilk="function" line="521" lineend="628" name="_match_codeblock" signature="_match_codeblock($textref, $pre, $ldel_outer, $rdel_outer, $ldel_inner, $rdel_inner, $rd)">
+          <variable ilk="argument" name="$textref" />
+          <variable ilk="argument" name="$pre" />
+          <variable ilk="argument" name="$ldel_outer" />
+          <variable ilk="argument" name="$rdel_outer" />
+          <variable ilk="argument" name="$ldel_inner" />
+          <variable ilk="argument" name="$rdel_inner" />
+          <variable ilk="argument" name="$rd" />
+        </scope>
+        <scope ilk="function" line="644" lineend="659" name="extract_quotelike" signature="extract_quotelike()">
+          </scope>
+        <scope ilk="function" line="661" lineend="860" name="_match_quotelike" signature="_match_quotelike($textref, $pre, $rawmatch, $qmark)">
+          <variable ilk="argument" name="$textref" />
+          <variable ilk="argument" name="$pre" />
+          <variable ilk="argument" name="$rawmatch" />
+          <variable ilk="argument" name="$qmark" />
+        </scope>
+        <scope ilk="function" line="868" lineend="974" name="extract_multiple" signature="extract_multiple()">
+          <import line="885" module="Carp" symbol="*" />
+          <import line="885" module="Carp" symbol="*" />
+        </scope>
+        <scope attributes="__ctor__" ilk="function" line="976" lineend="1010" name="gen_extract_tagged" signature="gen_extract_tagged()">
+          </scope>
+      </scope>
+      <scope ilk="class" line="1012" lineend="1017" name="Text::Balanced::Extractor">
+        <scope ilk="function" line="1014" lineend="1017" name="extract" signature="extract()" />
+      </scope>
+      <scope ilk="class" line="1019" lineend="1023" name="Text::Balanced::ErrorMsg" />
+    </scope>
+    

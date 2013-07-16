@@ -1,0 +1,143 @@
+<scope doc="More comprehensive traceback formatting for Python scripts.&#xA;To enable this module, do:  import cgitb; cgitb.enable()  at the top of your script.  The optional arguments to enable() are:  display     - if true, tracebacks are displayed in the web browser logdir      - if set, tracebacks are written to files in this directory context     - number of lines of source code to show for each stack frame format      - &apos;text&apos; or &apos;html&apos; controls the output format" ilk="blob" lang="Python" name="cgitb">
+      <scope classrefs="object" doc="A hook to replace sys.excepthook that shows tracebacks in HTML.&#xA;" ilk="class" line="257" lineend="306" name="Hook">
+        <scope ilk="function" line="271" lineend="306" name="handle" signature="handle(self, info=None)">
+          <variable citdl="sys.exc_info()" ilk="argument" name="info" />
+          <variable line="294" name="suffix" />
+          <variable citdl="False" line="277" name="plain" />
+          <variable citdl="Hook" ilk="argument" name="self" />
+          <variable line="295" name="fd" />
+          <variable citdl="os.fdopen()" line="297" name="file" />
+          <variable citdl="formatter()" line="279" name="doc" />
+          <variable citdl="str" line="300" name="msg" />
+          <variable line="295" name="path" />
+          <variable citdl="text" line="276" name="formatter" />
+        </scope>
+        <scope ilk="function" line="268" lineend="269" name="__call__" signature="__call__(self, etype, evalue, etb)">
+          <variable ilk="argument" name="etype" />
+          <variable ilk="argument" name="etb" />
+          <variable citdl="Hook" ilk="argument" name="self" />
+          <variable ilk="argument" name="evalue" />
+        </scope>
+        <scope ilk="function" line="260" lineend="266" name="__init__" signature="__init__(self, display=1, logdir=None, context=5, file=None, format=&apos;html&apos;)">
+          <variable ilk="argument" name="file" />
+          <variable ilk="argument" name="logdir" />
+          <variable citdl="int" ilk="argument" name="context" />
+          <variable citdl="str" ilk="argument" name="format" />
+          <variable citdl="Hook" ilk="argument" name="self" />
+          <variable citdl="int" ilk="argument" name="display" />
+        </scope>
+        <variable attributes="__instancevar__" citdl="int" line="264" name="context" />
+        <variable attributes="__instancevar__" citdl="int" line="262" name="display" />
+        <variable attributes="__instancevar__" line="263" name="logdir" />
+        <variable attributes="__instancevar__" citdl="sys.stdout" line="265" name="file" />
+        <variable attributes="__instancevar__" citdl="str" line="266" name="format" />
+      </scope>
+      <variable citdl="list" line="46" name="__UNDEF__" />
+      <scope doc="Install an exception handler that formats tracebacks as&#xA;HTML." ilk="function" line="309" lineend="316" name="enable" signature="enable(display=1, logdir=None, context=5, format=&apos;html&apos;)">
+        <variable citdl="str" ilk="argument" name="format" />
+        <variable ilk="argument" name="logdir" />
+        <variable citdl="int" ilk="argument" name="context" />
+        <variable citdl="int" ilk="argument" name="display" />
+      </scope>
+      <scope ilk="function" line="59" lineend="63" name="grey" returns="str" signature="grey(text)">
+        <variable ilk="argument" name="text" />
+      </scope>
+      <scope ilk="function" line="308" name="handler" />
+      <scope doc="Return a nice HTML document describing a given traceback." ilk="function" line="102" lineend="190" name="html" returns="pydoc.html.heading()" signature="html(einfo, context=5)">
+        <variable citdl="str" line="109" name="head" />
+        <variable citdl="list" line="153" name="dump" />
+        <variable line="125" name="args" />
+        <variable citdl="inspect.getinnerframes()" line="118" name="records" />
+        <variable citdl="small()" line="144" name="num" />
+        <variable citdl="dict" line="153" name="done" />
+        <variable citdl="os.path.abspath()" line="121" name="file" />
+        <variable line="125" name="varargs" />
+        <variable citdl="list" line="117" name="frames" />
+        <variable citdl="str" line="116" name="indent" />
+        <variable citdl="str" line="146" name="line" />
+        <variable ilk="argument" name="einfo" />
+        <variable line="125" name="locals" />
+        <variable citdl="strong()" line="159" name="name" />
+        <variable citdl="list" line="173" name="exception" />
+        <variable citdl="list" line="139" name="rows" />
+        <variable citdl="time.ctime()" line="108" name="date" />
+        <variable citdl="scanvars()" line="137" name="vars" />
+        <variable citdl="index" line="142" name="i" />
+        <variable citdl="pydoc.html.repr()" line="177" name="value" />
+        <variable citdl="dict" line="132" name="highlight" />
+        <variable citdl="str" line="107" name="pyver" />
+        <variable citdl="str" line="126" name="call" />
+        <variable citdl="int" ilk="argument" name="context" />
+        <scope ilk="function" line="133" lineend="136" name="reader" returns="linecache.getline()" signature="reader(lnum=[lnum])">
+          <variable citdl="list" ilk="argument" name="lnum" />
+        </scope>
+        <variable citdl="etype.__name__" line="106" name="etype" />
+        <variable citdl="str" line="122" name="link" />
+        <variable line="125" name="varkw" />
+      </scope>
+      <import module="inspect" />
+      <import module="keyword" />
+      <import module="linecache" />
+      <scope doc="Find the value for a given name in the given environment." ilk="function" line="65" lineend="79" name="lookup" returns="tuple" signature="lookup(name, frame, locals)">
+        <variable ilk="argument" name="frame" />
+        <variable line="72" name="builtins" />
+        <variable ilk="argument" name="name" />
+        <variable ilk="argument" name="locals" />
+      </scope>
+      <import module="os" />
+      <import module="pydoc" />
+      <scope doc="Return a string that resets the CGI and browser to a known&#xA;state." ilk="function" line="36" lineend="44" name="reset" returns="str" signature="reset()" />
+      <scope doc="Scan one logical line of Python and look up values of&#xA;variables used." ilk="function" line="81" lineend="100" name="scanvars" returns="list" signature="scanvars(reader, frame, locals)">
+        <variable citdl="list" line="83" name="parent" />
+        <variable citdl="list" line="83" name="vars" />
+        <variable ilk="argument" name="frame" />
+        <variable citdl="list" line="83" name="value" />
+        <variable citdl="str" line="83" name="prefix" />
+        <variable citdl="token" line="83" name="lasttoken" />
+        <variable ilk="argument" name="reader" />
+        <variable line="92" name="where" />
+        <variable ilk="argument" name="locals" />
+      </scope>
+      <scope ilk="function" line="47" lineend="51" name="small" returns="str" signature="small(text)">
+        <variable ilk="argument" name="text" />
+      </scope>
+      <scope ilk="function" line="53" lineend="57" name="strong" returns="str" signature="strong(text)">
+        <variable ilk="argument" name="text" />
+      </scope>
+      <import module="sys" />
+      <import module="tempfile" />
+      <scope doc="Return a plain text document describing a given traceback." ilk="function" line="192" lineend="255" name="text" returns="tuple" signature="text(einfo, context=5)">
+        <variable citdl="str" line="199" name="head" />
+        <variable citdl="scanvars()" line="220" name="vars" />
+        <variable line="208" name="args" />
+        <variable citdl="inspect.getinnerframes()" line="205" name="records" />
+        <variable citdl="lnum" line="226" name="num" />
+        <variable citdl="dict" line="230" name="done" />
+        <variable citdl="str" line="207" name="file" />
+        <variable line="208" name="varargs" />
+        <variable citdl="list" line="204" name="frames" />
+        <variable ilk="argument" name="einfo" />
+        <variable line="208" name="locals" />
+        <variable citdl="where" line="235" name="name" />
+        <variable citdl="list" line="244" name="exception" />
+        <variable citdl="list" line="222" name="rows" />
+        <variable citdl="time.ctime()" line="198" name="date" />
+        <variable citdl="list" line="230" name="dump" />
+        <variable citdl="lnum" line="224" name="i" />
+        <variable citdl="pydoc.text.repr()" line="246" name="value" />
+        <variable citdl="str" line="197" name="pyver" />
+        <variable citdl="str" line="209" name="call" />
+        <variable citdl="int" ilk="argument" name="context" />
+        <scope ilk="function" line="216" lineend="219" name="reader" returns="linecache.getline()" signature="reader(lnum=[lnum])">
+          <variable citdl="list" ilk="argument" name="lnum" />
+        </scope>
+        <variable citdl="etype.__name__" line="196" name="etype" />
+        <variable citdl="dict" line="215" name="highlight" />
+        <variable line="208" name="varkw" />
+      </scope>
+      <import module="time" />
+      <import module="tokenize" />
+      <import module="traceback" />
+      <import module="types" />
+    </scope>
+    

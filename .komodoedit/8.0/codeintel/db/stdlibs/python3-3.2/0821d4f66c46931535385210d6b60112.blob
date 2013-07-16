@@ -1,0 +1,89 @@
+<scope doc="Fixer for operator functions.&#xA;operator.isCallable(obj)       -&gt; hasattr(obj, &apos;__call__&apos;) operator.sequenceIncludes(obj) -&gt; operator.contains(obj) operator.isSequenceType(obj)   -&gt; isinstance(obj, collections.Sequence) operator.isMappingType(obj)    -&gt; isinstance(obj, collections.Mapping) operator.isNumberType(obj)     -&gt; isinstance(obj, numbers.Number) operator.repeat(obj, n)        -&gt; operator.mul(obj, n) operator.irepeat(obj, n)       -&gt; operator.imul(obj, n)" ilk="blob" lang="Python" name="lib2to3.fixes.fix_operator">
+      <scope doc="A function call" ilk="function" name="Call" signature="Call(func_name, args=None, prefix=None)" />
+      <scope classrefs="BaseFix" doc="&#xA;" ilk="class" line="26" lineend="98" name="FixOperator">
+        <scope ilk="function" line="89" lineend="98" name="_check_method" returns="getattr()" signature="_check_method(self, node, results)">
+          <variable ilk="argument" name="node" />
+          <variable citdl="tuple" line="95" name="sub" />
+          <variable citdl="method.invocation" line="96" name="invocation_str" />
+          <variable citdl="FixOperator" ilk="argument" name="self" />
+          <variable ilk="argument" name="results" />
+          <variable citdl="getattr()" line="90" name="method" />
+        </scope>
+        <scope ilk="function" line="67" lineend="68" name="_isSequenceType" returns="self._handle_type2abc()" signature="_isSequenceType(self, node, results)">
+          <variable ilk="argument" name="node" />
+          <variable citdl="FixOperator" ilk="argument" name="self" />
+          <variable ilk="argument" name="results" />
+        </scope>
+        <scope ilk="function" line="63" lineend="64" name="_irepeat" returns="self._handle_rename()" signature="_irepeat(self, node, results)">
+          <variable ilk="argument" name="node" />
+          <variable citdl="FixOperator" ilk="argument" name="self" />
+          <variable ilk="argument" name="results" />
+        </scope>
+        <scope ilk="function" line="78" lineend="81" name="_handle_rename" signature="_handle_rename(self, node, results, name)">
+          <variable ilk="argument" name="node" />
+          <variable citdl="FixOperator" ilk="argument" name="self" />
+          <variable ilk="argument" name="results" />
+          <variable line="79" name="method" />
+          <variable ilk="argument" name="name" />
+        </scope>
+        <scope ilk="function" line="43" lineend="46" name="transform" returns="FixOperator.transform.method()" signature="transform(self, node, results)">
+          <variable ilk="argument" name="node" />
+          <variable citdl="FixOperator" ilk="argument" name="self" />
+          <variable ilk="argument" name="results" />
+          <variable citdl="self._check_method()" line="44" name="method" />
+        </scope>
+        <scope ilk="function" line="53" lineend="56" name="_isCallable" returns="Call()" signature="_isCallable(self, node, results)">
+          <variable ilk="argument" name="node" />
+          <variable citdl="FixOperator" ilk="argument" name="self" />
+          <variable citdl="list" line="55" name="args" />
+          <variable line="54" name="obj" />
+          <variable ilk="argument" name="results" />
+        </scope>
+        <scope ilk="function" line="59" lineend="60" name="_repeat" returns="self._handle_rename()" signature="_repeat(self, node, results)">
+          <variable ilk="argument" name="node" />
+          <variable citdl="FixOperator" ilk="argument" name="self" />
+          <variable ilk="argument" name="results" />
+        </scope>
+        <scope ilk="function" line="83" lineend="87" name="_handle_type2abc" returns="Call()" signature="_handle_type2abc(self, node, results, module, abc)">
+          <variable ilk="argument" name="node" />
+          <variable ilk="argument" name="abc" />
+          <variable line="85" name="obj" />
+          <variable citdl="FixOperator" ilk="argument" name="self" />
+          <variable citdl="list" line="86" name="args" />
+          <variable ilk="argument" name="results" />
+          <variable ilk="argument" name="module" />
+        </scope>
+        <scope ilk="function" line="49" lineend="50" name="_sequenceIncludes" returns="self._handle_rename()" signature="_sequenceIncludes(self, node, results)">
+          <variable ilk="argument" name="node" />
+          <variable citdl="FixOperator" ilk="argument" name="self" />
+          <variable ilk="argument" name="results" />
+        </scope>
+        <scope ilk="function" line="71" lineend="72" name="_isMappingType" returns="self._handle_type2abc()" signature="_isMappingType(self, node, results)">
+          <variable ilk="argument" name="node" />
+          <variable citdl="FixOperator" ilk="argument" name="self" />
+          <variable ilk="argument" name="results" />
+        </scope>
+        <scope ilk="function" line="75" lineend="76" name="_isNumberType" returns="self._handle_type2abc()" signature="_isNumberType(self, node, results)">
+          <variable ilk="argument" name="node" />
+          <variable citdl="FixOperator" ilk="argument" name="self" />
+          <variable ilk="argument" name="results" />
+        </scope>
+        <variable citdl="dict()" line="36" name="PATTERN" />
+        <variable citdl="str" line="35" name="obj" />
+        <variable citdl="str" line="30" name="methods" />
+        <variable citdl="True" line="27" name="BM_compatible" />
+        <variable citdl="str" line="28" name="order" />
+      </scope>
+      <scope doc="Return a NAME leaf" ilk="function" name="Name" signature="Name(name, prefix=None)" />
+      <scope doc="A string leaf" ilk="function" name="String" signature="String(string, prefix=None)" />
+      <import module="collections" />
+      <import module="fixer_base" />
+      <scope ilk="function" line="19" lineend="23" name="invocation" returns="invocation.dec" signature="invocation(s)">
+        <variable ilk="argument" name="s" />
+        <scope ilk="function" line="20" lineend="22" name="dec" signature="dec(f)">
+          <variable ilk="argument" name="f" />
+        </scope>
+      </scope>
+      <scope doc="Works like `does_tree_import` but adds an import statement&#xA;if it was not imported." ilk="function" name="touch_import" signature="touch_import(package, name, node)" />
+    </scope>
+    

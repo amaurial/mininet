@@ -1,0 +1,51 @@
+<scope doc="program/module to trace Python program or function execution&#xA;Sample use, command line: trace.py -c -f counts --ignore-dir &apos;$prefix&apos; spam.py eggs trace.py -t --ignore-dir &apos;$prefix&apos; spam.py eggs trace.py --trackcalls spam.py eggs  Sample use, programmatically import sys  # create a Trace object, telling it what to ignore, and whether to # do tracing or line-counting or both." ilk="blob" lang="Python" name="trace">
+      <scope classrefs="object" doc="&#xA;" ilk="class" name="CoverageResults">
+        <scope doc="@param coverdir" ilk="function" name="write_results" signature="write_results(self, show_missing=True, summary=False, coverdir=None)" />
+        <scope doc="Return True if the filename does not refer to a file we want&#xA;to have reported." ilk="function" name="is_ignored_filename" signature="is_ignored_filename(self, filename)" />
+        <scope doc="Return a coverage results file in path." ilk="function" name="write_results_file" signature="write_results_file(self, path, lines, lnotab, lines_hit, encoding=None)" />
+        <scope ilk="function" name="__init__" signature="__init__(self, counts=None, calledfuncs=None, infile=None, callers=None, outfile=None)" />
+        <scope doc="Merge in the data from another CoverageResults" ilk="function" name="update" signature="update(self, other)" />
+      </scope>
+      <scope classrefs="_Ignore" doc="&#xA;" ilk="class" name="Ignore">
+        <scope ilk="function" name="__init__" signature="__init__(self, modules=None, dirs=None)" />
+      </scope>
+      <variable citdl="str" name="PRAGMA_NOCOVER" />
+      <scope classrefs="object" doc="&#xA;" ilk="class" name="Trace">
+        <scope ilk="function" name="run" signature="run(self, cmd)" />
+        <scope ilk="function" name="file_module_function_of" signature="file_module_function_of(self, frame)" />
+        <scope ilk="function" name="localtrace_trace_and_count" signature="localtrace_trace_and_count(self, frame, why, arg)" />
+        <scope doc="Handler for call events." ilk="function" name="globaltrace_lt" signature="globaltrace_lt(self, frame, why, arg)" />
+        <scope ilk="function" name="results" signature="results(self)" />
+        <scope doc="Handler for call events." ilk="function" name="globaltrace_trackcallers" signature="globaltrace_trackcallers(self, frame, why, arg)" />
+        <scope ilk="function" name="localtrace_count" signature="localtrace_count(self, frame, why, arg)" />
+        <scope ilk="function" name="runfunc" signature="runfunc(self, func, *args, **kw)" />
+        <scope doc="Handler for call events." ilk="function" name="globaltrace_countfuncs" signature="globaltrace_countfuncs(self, frame, why, arg)" />
+        <scope ilk="function" name="runctx" signature="runctx(self, cmd, globals=None, locals=None)" />
+        <scope doc="@param count true iff it should count number of times each&#xA;line is executed @param trace true iff it should print out&#xA;each line that is being counted" ilk="function" name="__init__" signature="__init__(self, count=1, trace=1, countfuncs=0, countcallers=0, ignoremods=(), ignoredirs=(), infile=None, outfile=None, timing=False)" />
+        <scope ilk="function" name="localtrace_trace" signature="localtrace_trace(self, frame, why, arg)" />
+      </scope>
+      <variable citdl="list" name="__all__" />
+      <import module="dis" />
+      <scope ilk="function" name="find_executable_linenos" signature="find_executable_linenos(filename)" />
+      <scope ilk="function" name="find_lines" signature="find_lines(code, strs)" />
+      <scope ilk="function" name="find_lines_from_code" signature="find_lines_from_code(code, strs)" />
+      <scope ilk="function" name="find_strings" signature="find_strings(filename, encoding=None)" />
+      <scope ilk="function" name="fullmodname" signature="fullmodname(path)" />
+      <import module="gc" />
+      <import module="inspect" />
+      <import module="io" />
+      <import module="linecache" />
+      <scope ilk="function" name="main" signature="main(argv=None)" />
+      <scope ilk="function" name="modname" signature="modname(path)" />
+      <import module="os" />
+      <import module="pickle" />
+      <import module="re" />
+      <variable citdl="SRE_Pattern" name="rx_blank" />
+      <import module="sys" />
+      <import module="threading" />
+      <import module="time" />
+      <import module="token" />
+      <import module="tokenize" />
+      <scope doc="#  Deprecated API" ilk="function" name="usage" signature="usage(outfile)" />
+    </scope>
+    

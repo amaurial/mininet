@@ -1,0 +1,27 @@
+<scope ilk="blob" lang="Perl" name="HTTP::Date">
+      <scope classrefs="Exporter" ilk="class" line="1" lineend="259" name="HTTP::Date">
+        <import line="6" module="Exporter" />
+        <import line="12" module="Time::Local" />
+        <variable line="3" name="$VERSION" />
+        <variable line="14" name="%MoY" />
+        <variable line="14" name="@DoW" />
+        <variable line="14" name="@MoY" />
+        <scope attributes="__exported__" ilk="function" line="22" lineend="31" name="time2str" signature="time2str($time)">
+          <variable ilk="argument" name="$time" />
+        </scope>
+        <scope attributes="__exported__" ilk="function" line="34" lineend="80" name="str2time" signature="str2time($str)">
+          <import line="71" module="Time::Zone" />
+          <variable ilk="argument" name="$str" />
+          <import line="71" module="Time::Zone" />
+        </scope>
+        <scope attributes="__exportable__" ilk="function" line="83" lineend="237" name="parse_date" signature="parse_date()">
+          </scope>
+        <scope attributes="__exportable__" ilk="function" line="240" lineend="247" name="time2iso" signature="time2iso($time)">
+          <variable ilk="argument" name="$time" />
+        </scope>
+        <scope attributes="__exportable__" ilk="function" line="250" lineend="257" name="time2isoz" signature="time2isoz($time)">
+          <variable ilk="argument" name="$time" />
+        </scope>
+      </scope>
+    </scope>
+    

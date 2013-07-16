@@ -1,0 +1,352 @@
+<scope doc="Configuration functions for the logging package for Python. The core package&#xA;is based on PEP 282 and comments thereto in comp.lang.python, and influenced by Apache&apos;s log4j system.  Copyright (C) 2001-2010 Vinay Sajip. All Rights Reserved.  To use, simply &apos;import logging&apos; and log away!" ilk="blob" lang="Python" name="logging.config">
+      <scope classrefs="object" doc="The configurator base class which defines some useful defaults.&#xA;" ilk="class" line="358" lineend="489" name="BaseConfigurator">
+        <scope doc="Default converter for the ext:// protocol." ilk="function" line="405" lineend="407" name="ext_convert" returns="BaseConfigurator.resolve()" signature="ext_convert(self, value)">
+          <variable citdl="BaseConfigurator" ilk="argument" name="self" />
+          <variable ilk="argument" name="value" />
+        </scope>
+        <scope doc="Utility function which converts lists to tuples." ilk="function" line="485" lineend="489" name="as_tuple" returns="tuple()" signature="as_tuple(self, value)">
+          <variable citdl="BaseConfigurator" ilk="argument" name="self" />
+          <variable citdl="tuple()" ilk="argument" name="value" />
+        </scope>
+        <scope doc="Configure an object with a user-supplied factory." ilk="function" line="471" lineend="483" name="configure_custom" returns="c()" signature="configure_custom(self, config)">
+          <variable citdl="resolve()" line="473" name="c" />
+          <variable citdl="c()" line="479" name="result" />
+          <variable citdl="config.pop()" line="476" name="props" />
+          <variable citdl="BaseConfigurator" ilk="argument" name="self" />
+          <variable citdl="dict()" line="478" name="kwargs" />
+          <variable ilk="argument" name="config" />
+        </scope>
+        <scope doc="Convert values to an appropriate type." ilk="function" line="443" lineend="469" name="convert" returns="ConvertingList" signature="convert(self, value)">
+          <variable line="463" name="prefix" />
+          <variable line="466" name="suffix" />
+          <variable citdl="m.groupdict()" line="462" name="d" />
+          <variable citdl="BaseConfigurator" ilk="argument" name="self" />
+          <variable citdl="self.CONVERT_PATTERN.match()" line="460" name="m" />
+          <variable citdl="ConvertingTuple" ilk="argument" name="value" />
+          <variable citdl="self.value_converters.get()" line="464" name="converter" />
+        </scope>
+        <scope doc="Resolve strings to objects using standard import and&#xA;attribute syntax." ilk="function" line="382" lineend="403" name="resolve" returns="getattr()" signature="resolve(self, s)">
+          <variable ilk="argument" name="s" />
+          <variable citdl="name.pop()" line="388" name="used" />
+          <variable citdl="s.split()" line="387" name="name" />
+          <variable citdl="ValueError()" line="401" name="v" />
+          <variable citdl="getattr()" line="390" name="found" />
+          <variable citdl="BaseConfigurator" ilk="argument" name="self" />
+        </scope>
+        <scope doc="Default converter for the cfg:// protocol." ilk="function" line="409" lineend="441" name="cfg_convert" signature="cfg_convert(self, value)">
+          <variable ilk="argument" name="value" />
+          <variable line="417" name="d" />
+          <variable line="426" name="idx" />
+          <variable citdl="BaseConfigurator" ilk="argument" name="self" />
+          <variable citdl="self.INDEX_PATTERN.match()" line="412" name="m" />
+          <variable citdl="list" line="411" name="rest" />
+          <variable citdl="int()" line="431" name="n" />
+        </scope>
+        <scope ilk="function" line="378" lineend="380" name="__init__" signature="__init__(self, config)">
+          <variable citdl="BaseConfigurator" ilk="argument" name="self" />
+          <variable ilk="argument" name="config" />
+        </scope>
+        <variable citdl="re.compile()" line="363" name="CONVERT_PATTERN" />
+        <variable citdl="re.compile()" line="365" name="WORD_PATTERN" />
+        <variable citdl="dict" line="370" name="value_converters" />
+        <variable citdl="staticmethod()" line="376" name="importer" />
+        <variable citdl="re.compile()" line="368" name="DIGIT_PATTERN" />
+        <variable citdl="re.compile()" line="367" name="INDEX_PATTERN" />
+        <variable attributes="__instancevar__" citdl="ConvertingDict" line="379" name="config" />
+        <variable citdl="re.compile()" line="366" name="DOT_PATTERN" />
+      </scope>
+      <scope classrefs="dict" doc="A converting dictionary wrapper.&#xA;" ilk="class" line="286" lineend="321" name="ConvertingDict">
+        <scope ilk="function" line="289" lineend="299" name="__getitem__" returns="self.configurator.convert()" signature="__getitem__(self, key)">
+          <variable citdl="ConvertingDict" ilk="argument" name="self" />
+          <variable citdl="dict.__getitem__()" line="290" name="value" />
+          <variable ilk="argument" name="key" />
+          <variable citdl="self.configurator.convert()" line="291" name="result" />
+        </scope>
+        <scope ilk="function" line="301" lineend="311" name="get" returns="self.configurator.convert()" signature="get(self, key, default=None)">
+          <variable ilk="argument" name="default" />
+          <variable citdl="ConvertingDict" ilk="argument" name="self" />
+          <variable citdl="dict.get()" line="302" name="value" />
+          <variable ilk="argument" name="key" />
+          <variable citdl="self.configurator.convert()" line="303" name="result" />
+        </scope>
+        <scope ilk="function" line="313" lineend="321" name="pop" returns="self.configurator.convert()" signature="pop(self, key, default=None)">
+          <variable ilk="argument" name="default" />
+          <variable citdl="ConvertingDict" ilk="argument" name="self" />
+          <variable citdl="dict.pop()" line="314" name="value" />
+          <variable ilk="argument" name="key" />
+          <variable citdl="self.configurator.convert()" line="315" name="result" />
+        </scope>
+      </scope>
+      <scope classrefs="list" doc="A converting list wrapper.&#xA;" ilk="class" line="323" lineend="344" name="ConvertingList">
+        <scope ilk="function" line="325" lineend="335" name="__getitem__" returns="self.configurator.convert()" signature="__getitem__(self, key)">
+          <variable citdl="ConvertingList" ilk="argument" name="self" />
+          <variable citdl="list.__getitem__()" line="326" name="value" />
+          <variable ilk="argument" name="key" />
+          <variable citdl="self.configurator.convert()" line="327" name="result" />
+        </scope>
+        <scope ilk="function" line="337" lineend="344" name="pop" returns="self.configurator.convert()" signature="pop(self, idx=-1)">
+          <variable citdl="ConvertingList" ilk="argument" name="self" />
+          <variable citdl="list.pop()" line="338" name="value" />
+          <variable citdl="int" ilk="argument" name="idx" />
+          <variable citdl="self.configurator.convert()" line="339" name="result" />
+        </scope>
+      </scope>
+      <scope classrefs="tuple" doc="A converting tuple wrapper.&#xA;" ilk="class" line="346" lineend="356" name="ConvertingTuple">
+        <scope ilk="function" line="348" lineend="356" name="__getitem__" returns="self.configurator.convert()" signature="__getitem__(self, key)">
+          <variable citdl="ConvertingTuple" ilk="argument" name="self" />
+          <variable citdl="tuple.__getitem__()" line="349" name="value" />
+          <variable ilk="argument" name="key" />
+          <variable citdl="self.configurator.convert()" line="350" name="result" />
+        </scope>
+      </scope>
+      <variable citdl="int" line="39" name="DEFAULT_LOGGING_CONFIG_PORT" />
+      <scope classrefs="BaseConfigurator" doc="Configure logging using a dictionary-like object to describe the&#xA;configuration." ilk="class" line="491" lineend="770" name="DictConfigurator">
+        <scope doc="Configure a formatter from a dictionary." ilk="function" line="641" lineend="661" name="configure_formatter" returns="logging.Formatter()" signature="configure_formatter(self, config)">
+          <variable citdl="self.configure_custom()" line="646" name="result" />
+          <variable citdl="config.get()" line="659" name="dfmt" />
+          <variable citdl="DictConfigurator" ilk="argument" name="self" />
+          <variable citdl="config.get()" line="658" name="fmt" />
+          <variable ilk="argument" name="config" />
+          <variable line="644" name="factory" />
+        </scope>
+        <scope doc="Configure a filter from a dictionary." ilk="function" line="663" lineend="670" name="configure_filter" returns="self.configure_custom()" signature="configure_filter(self, config)">
+          <variable citdl="DictConfigurator" ilk="argument" name="self" />
+          <variable ilk="argument" name="config" />
+          <variable citdl="self.configure_custom()" line="666" name="result" />
+          <variable citdl="config.get()" line="668" name="name" />
+        </scope>
+        <scope doc="Do the configuration." ilk="function" line="497" lineend="639" name="configure" signature="configure(self)">
+          <variable citdl="dict" line="506" name="EMPTY_DICT" />
+          <variable citdl="config.get()" line="525" name="loggers" />
+          <variable citdl="len()" line="601" name="pflen" />
+          <variable line="518" name="handler_config" />
+          <variable citdl="list" line="594" name="child_loggers" />
+          <variable citdl="list()" line="586" name="existing" />
+          <variable citdl="len()" line="602" name="num_existing" />
+          <variable citdl="config.pop()" line="505" name="incremental" />
+          <variable citdl="config.get()" line="555" name="filters" />
+          <variable citdl="name" line="600" name="prefixed" />
+          <variable citdl="handler_config.get()" line="519" name="level" />
+          <variable citdl="existing.index()" line="599" name="i" />
+          <variable citdl="config.get()" line="532" name="root" />
+          <variable citdl="DictConfigurator" ilk="argument" name="self" />
+          <variable citdl="config.get()" line="510" name="handlers" />
+          <variable citdl="config.get()" line="546" name="formatters" />
+          <variable citdl="config.pop()" line="540" name="disable_existing" />
+          <variable citdl="self.configure_handler()" line="517" name="handler" />
+          <variable citdl="self.config" line="500" name="config" />
+        </scope>
+        <scope doc="Configure a root logger from a dictionary." ilk="function" line="767" lineend="770" name="configure_root" signature="configure_root(self, config, incremental=False)">
+          <variable citdl="logging.getLogger()" line="769" name="root" />
+          <variable citdl="DictConfigurator" ilk="argument" name="self" />
+          <variable citdl="False" ilk="argument" name="incremental" />
+          <variable ilk="argument" name="config" />
+        </scope>
+        <scope doc="Add filters to a filterer from a list of names." ilk="function" line="672" lineend="678" name="add_filters" signature="add_filters(self, filterer, filters)">
+          <variable citdl="DictConfigurator" ilk="argument" name="self" />
+          <variable ilk="argument" name="filters" />
+          <variable ilk="argument" name="filterer" />
+        </scope>
+        <scope doc="Configure a non-root logger from a dictionary." ilk="function" line="759" lineend="765" name="configure_logger" signature="configure_logger(self, name, config, incremental=False)">
+          <variable citdl="False" ilk="argument" name="incremental" />
+          <variable citdl="config.get()" line="763" name="propagate" />
+          <variable ilk="argument" name="name" />
+          <variable citdl="DictConfigurator" ilk="argument" name="self" />
+          <variable ilk="argument" name="config" />
+          <variable citdl="logging.getLogger()" line="761" name="logger" />
+        </scope>
+        <scope doc="Add handlers to a logger from a list of names." ilk="function" line="733" lineend="739" name="add_handlers" signature="add_handlers(self, logger, handlers)">
+          <variable citdl="DictConfigurator" ilk="argument" name="self" />
+          <variable ilk="argument" name="logger" />
+          <variable ilk="argument" name="handlers" />
+        </scope>
+        <scope doc="Configure a handler from a dictionary." ilk="function" line="680" lineend="731" name="configure_handler" returns="factory()" signature="configure_handler(self, config)">
+          <variable citdl="self.resolve()" line="692" name="c" />
+          <variable citdl="config.pop()" line="689" name="level" />
+          <variable citdl="DictConfigurator" ilk="argument" name="self" />
+          <variable citdl="self.resolve()" line="695" name="factory" />
+          <variable citdl="self.resolve()" line="697" name="klass" />
+          <variable citdl="config.pop()" line="690" name="filters" />
+          <variable citdl="dict()" line="713" name="kwargs" />
+          <variable citdl="config.pop()" line="682" name="formatter" />
+          <variable ilk="argument" name="config" />
+          <variable citdl="factory()" line="715" name="result" />
+        </scope>
+        <scope doc="Perform configuration which is common to root and non-root&#xA;loggers." ilk="function" line="741" lineend="757" name="common_logger_config" signature="common_logger_config(self, logger, config, incremental=False)">
+          <variable citdl="False" ilk="argument" name="incremental" />
+          <variable citdl="config.get()" line="755" name="filters" />
+          <variable citdl="config.get()" line="745" name="level" />
+          <variable citdl="DictConfigurator" ilk="argument" name="self" />
+          <variable citdl="config.get()" line="752" name="handlers" />
+          <variable ilk="argument" name="config" />
+          <variable ilk="argument" name="logger" />
+        </scope>
+      </scope>
+      <variable citdl="SRE_Pattern" line="267" name="IDENTIFIER" />
+      <variable citdl="int" line="42" name="RESET_ERROR" />
+      <scope classrefs="BaseRequestHandler" doc="Define self.rfile and self.wfile for stream sockets.&#xA;" ilk="class" name="StreamRequestHandler">
+        <scope ilk="function" name="finish" signature="finish(self)" />
+        <scope ilk="function" name="setup" signature="setup(self)" />
+      </scope>
+      <scope classrefs="ThreadingMixIn TCPServer" doc="&#xA;" ilk="class" name="ThreadingTCPServer" />
+      <scope doc="Configure logging using a dictionary." ilk="function" line="774" lineend="776" name="dictConfig" signature="dictConfig(config)">
+        <variable ilk="argument" name="config" />
+      </scope>
+      <scope classrefs="BaseConfigurator" doc="Configure logging using a dictionary-like object to describe the&#xA;configuration." ilk="class" line="772" name="dictConfigClass">
+        <scope doc="Configure a formatter from a dictionary." ilk="function" name="configure_formatter" signature="configure_formatter(self, config)" />
+        <scope doc="Configure a filter from a dictionary." ilk="function" name="configure_filter" signature="configure_filter(self, config)" />
+        <scope doc="Do the configuration." ilk="function" name="configure" signature="configure(self)" />
+        <scope doc="Configure a root logger from a dictionary." ilk="function" name="configure_root" signature="configure_root(self, config, incremental=False)" />
+        <scope doc="Add filters to a filterer from a list of names." ilk="function" name="add_filters" signature="add_filters(self, filterer, filters)" />
+        <scope doc="Configure a non-root logger from a dictionary." ilk="function" name="configure_logger" signature="configure_logger(self, name, config, incremental=False)" />
+        <scope doc="Add handlers to a logger from a list of names." ilk="function" name="add_handlers" signature="add_handlers(self, logger, handlers)" />
+        <scope doc="Configure a handler from a dictionary." ilk="function" name="configure_handler" signature="configure_handler(self, config)" />
+        <scope doc="Perform configuration which is common to root and non-root&#xA;loggers." ilk="function" name="common_logger_config" signature="common_logger_config(self, logger, config, incremental=False)" />
+      </scope>
+      <scope doc="Read the logging configuration from a ConfigParser-format&#xA;file." ilk="function" line="53" lineend="81" name="fileConfig" signature="fileConfig(fname, defaults=None, disable_existing_loggers=True)">
+        <variable citdl="True" ilk="argument" name="disable_existing_loggers" />
+        <variable ilk="argument" name="fname" />
+        <variable citdl="_install_handlers()" line="78" name="handlers" />
+        <variable citdl="configparser.ConfigParser()" line="64" name="cp" />
+        <variable ilk="argument" name="defaults" />
+        <variable citdl="_create_formatters()" line="70" name="formatters" />
+      </scope>
+      <import module="io" />
+      <scope doc="Start up a socket server on the specified port, and listen&#xA;for new configurations." ilk="function" line="779" lineend="893" name="listen" returns="listen.Server" signature="listen(port=9030)">
+        <scope classrefs="StreamRequestHandler" doc="Handler for a logging configuration request.&#xA;&#xA;It expects a completely new logging configuration and uses fileConfig&#xA;to install it." ilk="class" line="792" lineend="840" name="ConfigStreamHandler">
+          <scope doc="Handle a request.&#xA;&#xA;Each request is expected to be a 4-byte length, packed using&#xA;struct.pack(&quot;&gt;L&quot;, n), followed by the config file.&#xA;Uses fileConfig() to do the grunt work." ilk="function" line="799" lineend="840" name="handle" signature="handle()">
+            <import line="807" module="tempfile" />
+            <import line="818" module="json" />
+            <variable citdl="ConfigStreamHandler" ilk="argument" name="self" />
+            <variable citdl="self.connection" line="809" name="conn" />
+            <variable citdl="conn.recv()" line="810" name="chunk" />
+            <variable line="812" name="slen" />
+            <variable citdl="json.loads()" line="819" name="d" />
+            <variable citdl="io.StringIO()" line="825" name="file" />
+            <variable line="838" name="errcode" />
+          </scope>
+        </scope>
+        <scope classrefs="ThreadingTCPServer" doc="A simple TCP socket-based logging config receiver." ilk="class" line="842" lineend="870" name="ConfigSocketReceiver">
+          <variable citdl="int" line="847" name="allow_reuse_address" />
+          <scope attributes="__ctor__" ilk="function" line="849" lineend="856" name="__init__" signature="ConfigSocketReceiver(host=&apos;localhost&apos;, port=DEFAULT_LOGGING_CONFIG_PORT, handler=None, ready=None)">
+            <variable citdl="ConfigSocketReceiver" ilk="argument" name="self" />
+            <variable citdl="str" ilk="argument" name="host" />
+            <variable citdl="int" ilk="argument" name="port" />
+            <variable ilk="argument" name="handler" />
+            <variable ilk="argument" name="ready" />
+          </scope>
+          <variable attributes="__instancevar__" citdl="int" line="853" name="abort" />
+          <variable attributes="__instancevar__" citdl="int" line="855" name="timeout" />
+          <variable attributes="__instancevar__" line="856" name="ready" />
+          <scope ilk="function" line="858" lineend="870" name="serve_until_stopped" signature="serve_until_stopped()">
+            <import line="859" module="select" />
+            <variable citdl="ConfigSocketReceiver" ilk="argument" name="self" />
+            <variable citdl="int" line="860" name="abort" />
+            <variable line="862" name="rd" />
+            <variable line="862" name="wr" />
+            <variable line="862" name="ex" />
+          </scope>
+        </scope>
+        <variable citdl="int" ilk="argument" name="port" />
+        <scope classrefs="threading.Thread" ilk="class" line="872" lineend="891" name="Server">
+          <scope attributes="__ctor__" ilk="function" line="874" lineend="879" name="__init__" signature="Server(rcvr, hdlr, port)">
+            <variable citdl="Server" ilk="argument" name="self" />
+            <variable ilk="argument" name="rcvr" />
+            <variable ilk="argument" name="hdlr" />
+            <variable ilk="argument" name="port" />
+          </scope>
+          <variable attributes="__instancevar__" line="876" name="rcvr" />
+          <variable attributes="__instancevar__" line="877" name="hdlr" />
+          <variable attributes="__instancevar__" line="878" name="port" />
+          <variable attributes="__instancevar__" citdl="threading.Event()" line="879" name="ready" />
+          <scope ilk="function" line="881" lineend="891" name="run" signature="run()">
+            <variable citdl="Server" ilk="argument" name="self" />
+            <variable citdl="rcvr()" line="882" name="server" />
+            <variable attributes="protected" citdl="rcvr()" line="889" name="_listener" />
+          </scope>
+        </scope>
+      </scope>
+      <import module="logging" />
+      <import module="os" />
+      <import module="re" />
+      <import module="socket" />
+      <scope doc="Stop the listening server which was created with a call to&#xA;listen()." ilk="function" line="895" lineend="906" name="stopListening" signature="stopListening()">
+        <variable attributes="protected" line="904" name="_listener" />
+      </scope>
+      <import module="struct" />
+      <import module="sys" />
+      <import module="thread" />
+      <import module="threading" />
+      <import module="traceback" />
+      <import module="types" />
+      <scope ilk="function" line="270" lineend="274" name="valid_ident" returns="bool" signature="valid_ident(s)">
+        <variable ilk="argument" name="s" />
+        <variable citdl="IDENTIFIER.match()" line="271" name="m" />
+      </scope>
+      <scope attributes="protected __hidden__" doc="Resolve a dotted name to a global object." ilk="function" line="84" lineend="96" name="_resolve" returns="__import__()" signature="_resolve(name)">
+        <variable citdl="name.split()" ilk="argument" name="name" />
+        <variable citdl="name.pop()" line="87" name="used" />
+        <variable citdl="getattr()" line="88" name="found" />
+      </scope>
+      <scope attributes="protected __hidden__" ilk="function" line="98" lineend="99" name="_strip_spaces" returns="map()" signature="_strip_spaces(alist)">
+        <variable ilk="argument" name="alist" />
+      </scope>
+      <variable attributes="__hidden__" line="34" name="thread" />
+      <scope attributes="protected __hidden__" doc="Install and return handlers" ilk="function" line="125" lineend="158" name="_install_handlers" returns="dict" signature="_install_handlers(cp, formatters)">
+        <variable ilk="argument" name="cp" />
+        <variable ilk="argument" name="formatters" />
+        <variable citdl="_strip_spaces()" line="127" name="hlist" />
+        <variable citdl="dict" line="132" name="handlers" />
+        <variable citdl="list" line="133" name="fixups" />
+        <variable line="135" name="section" />
+        <variable citdl="_resolve()" line="136" name="klass" />
+        <variable citdl="section.get()" line="137" name="fmt" />
+        <variable citdl="eval()" line="142" name="args" />
+        <variable citdl="klass()" line="144" name="h" />
+        <variable line="146" name="level" />
+        <variable citdl="section.get()" line="151" name="target" />
+      </scope>
+      <scope attributes="protected __hidden__" doc="Create and return formatters" ilk="function" line="104" lineend="122" name="_create_formatters" returns="dict" signature="_create_formatters(cp)">
+        <variable ilk="argument" name="cp" />
+        <variable citdl="_strip_spaces()" line="106" name="flist" />
+        <variable citdl="dict" line="111" name="formatters" />
+        <variable citdl="form" line="113" name="sectname" />
+        <variable citdl="cp.get()" line="114" name="fs" />
+        <variable citdl="cp.get()" line="115" name="dfs" />
+        <variable citdl="_resolve()" line="116" name="c" />
+        <variable line="117" name="class_name" />
+        <variable citdl="c()" line="120" name="f" />
+      </scope>
+      <variable attributes="protected __hidden__" line="51" name="_listener" />
+      <scope attributes="protected __hidden__" doc="When (re)configuring logging, handle loggers which were in the previous&#xA;configuration but are not in the new configuration. There&apos;s no point&#xA;deleting them as other threads may continue to hold references to them;&#xA;and by disabling them, you stop them doing any logging.&#xA;&#xA;However, don&apos;t disable children of named loggers, as that&apos;s probably not&#xA;what was intended by the user. Also, allow existing loggers to NOT be&#xA;disabled if disable_existing is false." ilk="function" line="160" lineend="179" name="_handle_existing_loggers" signature="When (re)configuring logging, handle loggers which were in the previous">
+        <variable ilk="argument" name="existing" />
+        <variable ilk="argument" name="child_loggers" />
+        <variable ilk="argument" name="disable_existing" />
+        <variable citdl="logging.root" line="171" name="root" />
+        <variable line="173" name="logger" />
+      </scope>
+      <scope attributes="protected __hidden__" ilk="function" line="101" lineend="102" name="_encoded" signature="_encoded(s)">
+        <variable ilk="argument" name="s" />
+      </scope>
+      <scope attributes="protected __hidden__" doc="Create and install loggers" ilk="function" line="181" lineend="265" name="_install_loggers" signature="_install_loggers(cp, handlers, disable_existing)">
+        <variable ilk="argument" name="cp" />
+        <variable ilk="argument" name="handlers" />
+        <variable ilk="argument" name="disable_existing" />
+        <variable citdl="llist.split()" line="185" name="llist" />
+        <variable line="189" name="section" />
+        <variable citdl="logging.root" line="190" name="root" />
+        <variable citdl="logging.root" line="191" name="log" />
+        <variable line="193" name="level" />
+        <variable citdl="_strip_spaces()" line="197" name="hlist" />
+        <variable citdl="list()" line="213" name="existing" />
+        <variable citdl="list" line="221" name="child_loggers" />
+        <variable line="225" name="qn" />
+        <variable citdl="section.getint()" line="226" name="propagate" />
+        <variable citdl="logging.getLogger()" line="227" name="logger" />
+        <variable citdl="existing.index()" line="229" name="i" />
+        <variable citdl="str" line="230" name="prefixed" />
+        <variable citdl="len()" line="231" name="pflen" />
+        <variable citdl="len()" line="232" name="num_existing" />
+      </scope>
+    </scope>
+    

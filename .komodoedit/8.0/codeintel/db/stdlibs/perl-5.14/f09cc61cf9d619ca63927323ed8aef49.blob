@@ -1,0 +1,52 @@
+<scope ilk="blob" lang="Perl" name="ExtUtils::CBuilder::Platform::VMS">
+      <scope classrefs="ExtUtils::CBuilder::Base" ilk="class" line="1" lineend="309" name="ExtUtils::CBuilder::Platform::VMS">
+        <import line="4" module="ExtUtils::CBuilder::Base" symbol="*" />
+        <import line="10" module="File::Spec::Functions" symbol="catfile" />
+        <import line="10" module="File::Spec::Functions" symbol="catdir" />
+        <import line="11" module="Config" symbol="*" />
+        <variable line="6" name="$VERSION" />
+        <variable line="6" name="@ISA" />
+        <scope ilk="function" line="15" lineend="15" name="need_prelink" signature="need_prelink()" />
+        <scope ilk="function" line="17" lineend="37" name="arg_defines" signature="arg_defines($self, %args)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="%args" />
+        </scope>
+        <scope ilk="function" line="39" lineend="49" name="arg_include_dirs" signature="arg_include_dirs($self, @dirs)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="@dirs" />
+        </scope>
+        <scope ilk="function" line="56" lineend="63" name="compile" signature="compile($self, %args)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="%args" />
+        </scope>
+        <scope ilk="function" line="65" lineend="102" name="_do_link" signature="_do_link($self, $type, %args)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$type" />
+          <variable ilk="argument" name="%args" />
+        </scope>
+        <scope ilk="function" line="104" lineend="104" name="arg_nolink" signature="arg_nolink()" />
+        <scope ilk="function" line="106" lineend="109" name="arg_object_file" signature="arg_object_file($self, $file)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$file" />
+        </scope>
+        <scope ilk="function" line="111" lineend="114" name="arg_exec_file" signature="arg_exec_file($self, $file)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$file" />
+        </scope>
+        <scope ilk="function" line="116" lineend="119" name="arg_share_object_file" signature="arg_share_object_file($self, $file)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$file" />
+        </scope>
+        <scope ilk="function" line="122" lineend="135" name="lib_file" signature="lib_file($self, $dl_file)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$dl_file" />
+        </scope>
+        <scope ilk="function" line="140" lineend="307" name="_liblist_ext" signature="_liblist_ext($self, $potential_libs, $verbose, $give_libs)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$potential_libs" />
+          <variable ilk="argument" name="$verbose" />
+          <variable ilk="argument" name="$give_libs" />
+        </scope>
+      </scope>
+    </scope>
+    

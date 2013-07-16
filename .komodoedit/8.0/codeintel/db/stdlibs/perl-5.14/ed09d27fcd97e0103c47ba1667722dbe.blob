@@ -1,0 +1,98 @@
+<scope ilk="blob" lang="Perl" name="HTML::TreeBuilder">
+      <scope classrefs="HTML::Element HTML::Parser" ilk="class" line="1" lineend="1643" name="HTML::TreeBuilder">
+        <import line="6" module="Carp" />
+        <import line="55" module="HTML::Entities" />
+        <import line="56" module="HTML::Tagset" symbol="*" />
+        <import line="58" module="HTML::Element" />
+        <import line="59" module="HTML::Parser" />
+        <variable line="7" name="$DEBUG" />
+        <variable line="7" name="$VERSION" />
+        <variable line="7" name="@ISA" />
+        <variable line="69" name="*HTML::TreeBuilder::isKnown" />
+        <variable line="70" name="*HTML::TreeBuilder::canTighten" />
+        <variable line="71" name="*HTML::TreeBuilder::isHeadElement" />
+        <variable line="72" name="*HTML::TreeBuilder::isBodyElement" />
+        <variable line="73" name="*HTML::TreeBuilder::isPhraseMarkup" />
+        <variable line="74" name="*HTML::TreeBuilder::isHeadOrBodyElement" />
+        <variable line="75" name="*HTML::TreeBuilder::isList" />
+        <variable line="76" name="*HTML::TreeBuilder::isTableElement" />
+        <variable line="77" name="*HTML::TreeBuilder::isFormElement" />
+        <variable line="78" name="*HTML::TreeBuilder::p_closure_barriers" />
+        <variable line="183" name="$HTML::Element::encoded_content" />
+        <scope ilk="function" line="83" lineend="92" name="new_from_file" signature="new_from_file($class)">
+          <variable ilk="argument" name="$class" />
+        </scope>
+        <scope ilk="function" line="94" lineend="110" name="new_from_content" signature="new_from_content($class)">
+          <variable ilk="argument" name="$class" />
+        </scope>
+        <scope ilk="function" line="113" lineend="127" name="parse_content" signature="parse_content($tree)">
+          <variable ilk="argument" name="$tree" />
+        </scope>
+        <scope attributes="__ctor__" ilk="function" line="131" lineend="198" name="new" signature="new($class, %attr)">
+          <variable ilk="argument" name="$class" />
+          <variable ilk="argument" name="%attr" />
+        </scope>
+        <scope ilk="function" line="202" lineend="208" name="_elem" signature="_elem($self, $elem, $val)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$elem" />
+          <variable ilk="argument" name="$val" />
+        </scope>
+        <scope ilk="function" line="211" lineend="211" name="implicit_tags" signature="implicit_tags()" />
+        <scope ilk="function" line="212" lineend="212" name="implicit_body_p_tag" signature="implicit_body_p_tag()" />
+        <scope ilk="function" line="213" lineend="213" name="p_strict" signature="p_strict()" />
+        <scope ilk="function" line="214" lineend="214" name="no_space_compacting" signature="no_space_compacting()" />
+        <scope ilk="function" line="215" lineend="215" name="ignore_unknown" signature="ignore_unknown()" />
+        <scope ilk="function" line="216" lineend="216" name="ignore_text" signature="ignore_text()" />
+        <scope ilk="function" line="217" lineend="217" name="ignore_ignorable_whitespace" signature="ignore_ignorable_whitespace()" />
+        <scope ilk="function" line="218" lineend="218" name="store_comments" signature="store_comments()" />
+        <scope ilk="function" line="219" lineend="219" name="store_declarations" signature="store_declarations()" />
+        <scope ilk="function" line="220" lineend="220" name="store_pis" signature="store_pis()" />
+        <scope ilk="function" line="221" lineend="221" name="warn" signature="warn()" />
+        <scope ilk="function" line="223" lineend="226" name="no_expand_entities" signature="no_expand_entities()" />
+        <scope ilk="function" line="230" lineend="235" name="warning" signature="warning($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="245" lineend="874" name="start" signature="start($self, $tag, $attr)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$tag" />
+          <variable ilk="argument" name="$attr" />
+        </scope>
+        <scope ilk="function" line="882" lineend="1124" name="end" signature="end($self, $tag, @stop)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$tag" />
+          <variable ilk="argument" name="@stop" />
+        </scope>
+        <scope ilk="function" line="1131" lineend="1292" name="text" signature="text($self, $text, $is_cdata)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$text" />
+          <variable ilk="argument" name="$is_cdata" />
+        </scope>
+        <scope ilk="function" line="1304" lineend="1339" name="comment" signature="comment($self, $text)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$text" />
+        </scope>
+        <scope ilk="function" line="1341" lineend="1367" name="declaration" signature="declaration($self, $text)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$text" />
+        </scope>
+        <scope ilk="function" line="1371" lineend="1402" name="process" signature="process($self, $text)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$text" />
+        </scope>
+        <scope ilk="function" line="1423" lineend="1478" name="eof" signature="eof()">
+          </scope>
+        <scope ilk="function" line="1484" lineend="1517" name="stunt" signature="stunt()">
+          </scope>
+        <scope ilk="function" line="1520" lineend="1520" name="stunted" signature="stunted()" />
+        <scope ilk="function" line="1521" lineend="1521" name="done" signature="done()" />
+        <scope ilk="function" line="1525" lineend="1565" name="delete" signature="delete()" />
+        <scope ilk="function" line="1567" lineend="1569" name="tighten_up" signature="tighten_up()" />
+        <scope attributes="__ctor__" ilk="function" line="1571" lineend="1591" name="elementify" signature="elementify()">
+          </scope>
+        <scope ilk="function" line="1593" lineend="1596" name="element_class" signature="element_class()" />
+        <scope ilk="function" line="1600" lineend="1638" name="guts" signature="guts()">
+          </scope>
+        <scope ilk="function" line="1640" lineend="1640" name="disembowel" signature="disembowel()" />
+      </scope>
+    </scope>
+    

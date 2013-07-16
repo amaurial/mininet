@@ -1,0 +1,35 @@
+<scope ilk="blob" lang="Perl" name="LWP::Simple">
+      <scope ilk="class" line="1" lineend="96" name="LWP::Simple">
+        <import line="6" module="Exporter" />
+        <import line="14" module="HTTP::Status" symbol="*" />
+        <import line="26" module="LWP::UserAgent" />
+        <import line="27" module="HTTP::Status" />
+        <import line="28" module="HTTP::Date" />
+        <variable line="4" name="$FULL_LWP" />
+        <variable attributes="__exportable__" citdl="LWP::UserAgent" line="4" name="$ua" />
+        <variable line="4" name="$VERSION" />
+        <variable line="4" name="%loop_check" />
+        <variable line="4" name="@EXPORT" />
+        <variable line="4" name="@EXPORT_OK" />
+        <scope ilk="function" line="19" lineend="24" name="import" signature="import($pkg)">
+          <variable ilk="argument" name="$pkg" />
+        </scope>
+        <scope attributes="__exported__" ilk="function" line="34" lineend="39" name="get" signature="get()">
+          </scope>
+        <scope attributes="__exported__" ilk="function" line="42" lineend="58" name="head" signature="head($url)">
+          <variable ilk="argument" name="$url" />
+        </scope>
+        <scope attributes="__exported__" ilk="function" line="61" lineend="75" name="getprint" signature="getprint($url)">
+          <variable ilk="argument" name="$url" />
+        </scope>
+        <scope attributes="__exported__" ilk="function" line="78" lineend="85" name="getstore" signature="getstore($url, $file)">
+          <variable ilk="argument" name="$url" />
+          <variable ilk="argument" name="$file" />
+        </scope>
+        <scope attributes="__exported__" ilk="function" line="88" lineend="93" name="mirror" signature="mirror($url, $file)">
+          <variable ilk="argument" name="$url" />
+          <variable ilk="argument" name="$file" />
+        </scope>
+      </scope>
+    </scope>
+    

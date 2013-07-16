@@ -1,0 +1,38 @@
+<scope ilk="blob" lang="Perl" name="HTML::HeadParser">
+      <scope classrefs="HTML::Parser" ilk="class" line="1" lineend="271" name="HTML::HeadParser">
+        <import line="82" module="HTML::Parser" />
+        <import line="85" module="HTML::Entities" />
+        <variable line="88" name="$DEBUG" />
+        <variable line="88" name="$VERSION" />
+        <variable line="268" name="*utf8_mode" />
+        <scope ilk="function" line="106" lineend="124" name="new" signature="new($class, $header)">
+          <import line="110" module="HTTP::Headers" />
+          <variable ilk="argument" name="$class" />
+          <variable citdl="HTTP::Headers" ilk="argument" name="$header" />
+          <import line="110" module="HTTP::Headers" />
+        </scope>
+        <scope ilk="function" line="137" lineend="142" name="header" signature="header($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="144" lineend="148" name="as_string" signature="as_string($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="150" lineend="167" name="flush_text" signature="flush_text($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="189" lineend="233" name="start" signature="start($self, $tag, $attr)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$tag" />
+          <variable ilk="argument" name="$attr" />
+        </scope>
+        <scope ilk="function" line="235" lineend="241" name="end" signature="end($self, $tag)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$tag" />
+        </scope>
+        <scope ilk="function" line="243" lineend="265" name="text" signature="text($self, $text)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$text" />
+        </scope>
+      </scope>
+    </scope>
+    

@@ -1,0 +1,40 @@
+<scope ilk="blob" lang="Perl" name="Module::Load::Conditional">
+      <scope classrefs="Exporter" ilk="class" line="1" lineend="580" name="Module::Load::Conditional">
+        <import line="5" module="Module::Load" symbol="*" />
+        <import line="6" module="Params::Check" symbol="check" />
+        <import line="7" module="Locale::Maketext::Simple" symbol="Style" />
+        <import line="9" module="Carp" />
+        <import line="10" module="File::Spec" />
+        <import line="11" module="FileHandle" />
+        <import line="12" module="version" symbol="*" />
+        <import line="19" module="Exporter" symbol="*" />
+        <variable line="17" name="$CACHE" />
+        <variable line="17" name="$DEPRECATED" />
+        <variable line="17" name="$VERBOSE" />
+        <variable line="17" name="$VERSION" />
+        <variable line="17" name="@EXPORT_OK" />
+        <variable line="17" name="@ISA" />
+        <variable line="18" name="$CHECK_INC_HASH" />
+        <variable line="18" name="$ERROR" />
+        <variable line="18" name="$FIND_VERSION" />
+        <scope attributes="__exportable__" ilk="function" line="155" lineend="330" name="check_install" signature="check_install(%hash)">
+          <import line="320" module="Module::CoreList" />
+          <import line="321" module="Config" />
+          <variable ilk="argument" name="%hash" />
+          <import line="320" module="Module::CoreList" />
+          <import line="321" module="Config" />
+        </scope>
+        <scope ilk="function" line="332" lineend="391" name="_parse_version" signature="_parse_version($self, $str, $verbose)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$str" />
+          <variable ilk="argument" name="$verbose" />
+        </scope>
+        <scope attributes="__exportable__" ilk="function" line="431" lineend="541" name="can_load" signature="can_load(%hash)">
+          <variable ilk="argument" name="%hash" />
+        </scope>
+        <scope attributes="__exportable__" ilk="function" line="562" lineend="578" name="requires" signature="requires($who)">
+          <variable ilk="argument" name="$who" />
+        </scope>
+      </scope>
+    </scope>
+    

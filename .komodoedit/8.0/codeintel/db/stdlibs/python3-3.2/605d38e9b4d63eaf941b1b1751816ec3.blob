@@ -1,0 +1,555 @@
+<scope doc="# ElementTree&#xA;# $Id: ElementTree.py 3440 2008-07-18 14:45:01Z fredrik $ # # light-weight XML support for Python 2.3 and later. # # history (since 1.2.6): # 2005-11-12 fl   added tostringlist/fromstringlist helpers # 2006-07-05 fl   merged in selected changes from the 1.3 sandbox # 2006-07-05 fl   removed support for 2.1 and earlier # 2007-06-21 fl   added deprecation/future warnings # 2007-08-25 fl   added doctype hook, added parser version attribute etc" ilk="blob" lang="Python" name="xml.etree.ElementTree">
+      <scope ilk="function" line="546" lineend="549" name="Comment" returns="Element" signature="Comment(text=None)">
+        <variable ilk="argument" name="text" />
+        <variable citdl="Element" line="547" name="element" />
+      </scope>
+      <scope classrefs="object" doc="&#xA;" ilk="class" line="171" lineend="508" name="Element">
+        <scope ilk="function" line="434" lineend="435" name="set" signature="set(self, key, value)">
+          <variable citdl="Element" ilk="argument" name="self" />
+          <variable ilk="argument" name="value" />
+          <variable ilk="argument" name="key" />
+        </scope>
+        <scope ilk="function" line="265" lineend="266" name="__getitem__" signature="__getitem__(self, index)">
+          <variable ilk="argument" name="index" />
+          <variable citdl="Element" ilk="argument" name="self" />
+        </scope>
+        <scope ilk="function" line="424" lineend="425" name="get" returns="self.attrib.get()" signature="get(self, key, default=None)">
+          <variable ilk="argument" name="default" />
+          <variable citdl="Element" ilk="argument" name="self" />
+          <variable ilk="argument" name="key" />
+        </scope>
+        <scope ilk="function" line="445" lineend="446" name="keys" returns="self.attrib.keys()" signature="keys(self)">
+          <variable citdl="Element" ilk="argument" name="self" />
+        </scope>
+        <scope ilk="function" line="401" lineend="402" name="iterfind" returns="ElementPath.iterfind()" signature="iterfind(self, path, namespaces=None)">
+          <variable ilk="argument" name="path" />
+          <variable citdl="Element" ilk="argument" name="self" />
+          <variable ilk="argument" name="namespaces" />
+        </scope>
+        <scope ilk="function" line="224" lineend="225" name="makeelement" returns="self.__class__()" signature="makeelement(self, tag, attrib)">
+          <variable citdl="Element" ilk="argument" name="self" />
+          <variable ilk="argument" name="tag" />
+          <variable ilk="argument" name="attrib" />
+        </scope>
+        <scope ilk="function" line="275" lineend="281" name="__setitem__" signature="__setitem__(self, index, element)">
+          <variable ilk="argument" name="index" />
+          <variable citdl="Element" ilk="argument" name="self" />
+          <variable ilk="argument" name="element" />
+        </scope>
+        <scope ilk="function" line="335" lineend="337" name="remove" signature="remove(self, element)">
+          <variable citdl="Element" ilk="argument" name="self" />
+          <variable ilk="argument" name="element" />
+        </scope>
+        <scope ilk="function" line="250" lineend="256" name="__bool__" returns="bool" signature="__bool__(self)">
+          <variable citdl="Element" ilk="argument" name="self" />
+        </scope>
+        <scope ilk="function" line="233" lineend="238" name="copy" returns="makeelement()" signature="copy(self)">
+          <variable citdl="Element" ilk="argument" name="self" />
+          <variable citdl="makeelement()" line="234" name="elem" />
+        </scope>
+        <scope ilk="function" line="389" lineend="390" name="findall" returns="ElementPath.findall()" signature="findall(self, path, namespaces=None)">
+          <variable ilk="argument" name="path" />
+          <variable citdl="Element" ilk="argument" name="self" />
+          <variable ilk="argument" name="namespaces" />
+        </scope>
+        <scope ilk="function" line="300" lineend="302" name="append" signature="append(self, element)">
+          <variable citdl="Element" ilk="argument" name="self" />
+          <variable ilk="argument" name="element" />
+        </scope>
+        <scope ilk="function" line="320" lineend="322" name="insert" signature="insert(self, index, element)">
+          <variable ilk="argument" name="index" />
+          <variable citdl="Element" ilk="argument" name="self" />
+          <variable ilk="argument" name="element" />
+        </scope>
+        <scope ilk="function" line="310" lineend="313" name="extend" signature="extend(self, elements)">
+          <variable citdl="Element" ilk="argument" name="self" />
+          <variable ilk="argument" name="elements" />
+        </scope>
+        <scope ilk="function" line="498" lineend="508" name="itertext" signature="itertext(self)">
+          <variable citdl="Element" ilk="argument" name="self" />
+          <variable line="499" name="tag" />
+        </scope>
+        <scope ilk="function" line="455" lineend="456" name="items" returns="self.attrib.items()" signature="items(self)">
+          <variable citdl="Element" ilk="argument" name="self" />
+        </scope>
+        <scope ilk="function" line="409" lineend="412" name="clear" signature="clear(self)">
+          <variable citdl="Element" ilk="argument" name="self" />
+        </scope>
+        <scope ilk="function" line="377" lineend="378" name="findtext" returns="ElementPath.findtext()" signature="findtext(self, path, default=None, namespaces=None)">
+          <variable ilk="argument" name="default" />
+          <variable ilk="argument" name="path" />
+          <variable citdl="Element" ilk="argument" name="self" />
+          <variable ilk="argument" name="namespaces" />
+        </scope>
+        <scope ilk="function" line="346" lineend="352" name="getchildren" returns="list" signature="getchildren(self)">
+          <variable citdl="Element" ilk="argument" name="self" />
+        </scope>
+        <scope ilk="function" line="471" lineend="478" name="iter" signature="iter(self, tag=None)">
+          <variable citdl="Element" ilk="argument" name="self" />
+          <variable ilk="argument" name="tag" />
+        </scope>
+        <scope ilk="function" line="362" lineend="363" name="find" returns="ElementPath.find()" signature="find(self, path, namespaces=None)">
+          <variable ilk="argument" name="path" />
+          <variable citdl="Element" ilk="argument" name="self" />
+          <variable ilk="argument" name="namespaces" />
+        </scope>
+        <scope doc="# compatibility" ilk="function" line="481" lineend="488" name="getiterator" returns="list()" signature="getiterator(self, tag=None)">
+          <variable citdl="Element" ilk="argument" name="self" />
+          <variable ilk="argument" name="tag" />
+        </scope>
+        <scope ilk="function" line="207" lineend="212" name="__init__" signature="__init__(self, tag, attrib={}, **extra)">
+          <variable citdl="Element" ilk="argument" name="self" />
+          <variable ilk="argument" name="tag" />
+          <variable citdl="dict" ilk="argument" name="attrib" />
+          <variable attributes="kwargs" ilk="argument" name="extra" />
+        </scope>
+        <scope ilk="function" line="289" lineend="290" name="__delitem__" signature="__delitem__(self, index)">
+          <variable ilk="argument" name="index" />
+          <variable citdl="Element" ilk="argument" name="self" />
+        </scope>
+        <scope ilk="function" line="247" lineend="248" name="__len__" returns="len()" signature="__len__(self)">
+          <variable citdl="Element" ilk="argument" name="self" />
+        </scope>
+        <scope ilk="function" line="214" lineend="215" name="__repr__" returns="tuple" signature="__repr__(self)">
+          <variable citdl="Element" ilk="argument" name="self" />
+        </scope>
+        <variable line="195" name="text" />
+        <variable line="203" name="tail" />
+        <variable line="177" name="tag" />
+        <variable citdl="dict" line="187" name="attrib" />
+        <variable attributes="protected __instancevar__" citdl="list" line="212" name="_children" />
+      </scope>
+      <import module="ElementPath" />
+      <scope classrefs="object" doc="&#xA;" ilk="class" line="627" lineend="868" name="ElementTree">
+        <scope ilk="function" line="866" lineend="868" name="write_c14n" returns="ElementTree.write()" signature="write_c14n(self, file)">
+          <variable citdl="ElementTree" ilk="argument" name="self" />
+          <variable ilk="argument" name="file" />
+        </scope>
+        <scope ilk="function" line="641" lineend="642" name="getroot" signature="getroot(self)">
+          <variable citdl="ElementTree" ilk="argument" name="self" />
+        </scope>
+        <scope doc="# compatibility" ilk="function" line="698" lineend="705" name="getiterator" returns="list()" signature="getiterator(self, tag=None)">
+          <variable citdl="ElementTree" ilk="argument" name="self" />
+          <variable ilk="argument" name="tag" />
+        </scope>
+        <scope ilk="function" line="785" lineend="795" name="iterfind" returns="self._root.iterfind()" signature="iterfind(self, path, namespaces=None)">
+          <variable citdl="str" ilk="argument" name="path" />
+          <variable citdl="ElementTree" ilk="argument" name="self" />
+          <variable ilk="argument" name="namespaces" />
+        </scope>
+        <scope ilk="function" line="741" lineend="751" name="findtext" returns="self._root.findtext()" signature="findtext(self, path, default=None, namespaces=None)">
+          <variable ilk="argument" name="default" />
+          <variable citdl="str" ilk="argument" name="path" />
+          <variable citdl="ElementTree" ilk="argument" name="self" />
+          <variable ilk="argument" name="namespaces" />
+        </scope>
+        <scope ilk="function" line="693" lineend="695" name="iter" returns="self._root.iter()" signature="iter(self, tag=None)">
+          <variable citdl="ElementTree" ilk="argument" name="self" />
+          <variable ilk="argument" name="tag" />
+        </scope>
+        <scope ilk="function" line="716" lineend="726" name="find" returns="self._root.find()" signature="find(self, path, namespaces=None)">
+          <variable citdl="str" ilk="argument" name="path" />
+          <variable citdl="ElementTree" ilk="argument" name="self" />
+          <variable ilk="argument" name="namespaces" />
+        </scope>
+        <scope ilk="function" line="811" lineend="864" name="write" signature="write(self, file_or_filename, encoding=None, xml_declaration=None, default_namespace=None, method=None)">
+          <variable citdl="open()" line="833" name="file" />
+          <variable citdl="encoding.lower()" line="851" name="declared_encoding" />
+          <variable citdl="ElementTree" ilk="argument" name="self" />
+          <variable line="861" name="serialize" />
+          <variable line="860" name="qnames" />
+          <variable citdl="str" ilk="argument" name="method" />
+          <variable citdl="function" line="840" name="write" />
+          <variable ilk="argument" name="default_namespace" />
+          <variable ilk="argument" name="xml_declaration" />
+          <variable line="860" name="namespaces" />
+          <variable citdl="str" ilk="argument" name="encoding" />
+          <variable ilk="argument" name="file_or_filename" />
+        </scope>
+        <scope ilk="function" line="666" lineend="683" name="parse" returns="parser.close()" signature="parse(self, source, parser=None)">
+          <variable citdl="True" line="667" name="close_source" />
+          <variable citdl="open()" ilk="argument" name="source" />
+          <variable citdl="ElementTree" ilk="argument" name="self" />
+          <variable citdl="XMLParser()" ilk="argument" name="parser" />
+          <variable citdl="source.read()" line="675" name="data" />
+        </scope>
+        <scope ilk="function" line="651" lineend="653" name="_setroot" signature="_setroot(self, element)">
+          <variable citdl="ElementTree" ilk="argument" name="self" />
+          <variable ilk="argument" name="element" />
+        </scope>
+        <scope ilk="function" line="763" lineend="773" name="findall" returns="self._root.findall()" signature="findall(self, path, namespaces=None)">
+          <variable citdl="str" ilk="argument" name="path" />
+          <variable citdl="ElementTree" ilk="argument" name="self" />
+          <variable ilk="argument" name="namespaces" />
+        </scope>
+        <scope ilk="function" line="629" lineend="633" name="__init__" signature="__init__(self, element=None, file=None)">
+          <variable citdl="ElementTree" ilk="argument" name="self" />
+          <variable ilk="argument" name="file" />
+          <variable ilk="argument" name="element" />
+        </scope>
+        <variable attributes="protected __instancevar__" citdl="parser.close()" line="631" name="_root" />
+      </scope>
+      <variable citdl="set" line="985" name="HTML_EMPTY" />
+      <scope ilk="function" line="568" name="PI" signature="PI(target, text=None)" />
+      <scope classrefs="SyntaxError" doc="&#xA;" ilk="class" line="138" lineend="139" name="ParseError" />
+      <scope ilk="function" line="561" lineend="566" name="ProcessingInstruction" returns="Element" signature="ProcessingInstruction(target, text=None)">
+        <variable ilk="argument" name="text" />
+        <variable ilk="argument" name="target" />
+        <variable citdl="Element" line="562" name="element" />
+      </scope>
+      <scope classrefs="object" doc="&#xA;" ilk="class" line="580" lineend="614" name="QName">
+        <scope ilk="function" line="611" lineend="614" name="__ne__" returns="bool" signature="__ne__(self, other)">
+          <variable citdl="QName" ilk="argument" name="self" />
+          <variable ilk="argument" name="other" />
+        </scope>
+        <scope ilk="function" line="585" lineend="586" name="__str__" returns="tuple" signature="__str__(self)">
+          <variable citdl="QName" ilk="argument" name="self" />
+        </scope>
+        <scope ilk="function" line="591" lineend="594" name="__le__" returns="bool" signature="__le__(self, other)">
+          <variable citdl="QName" ilk="argument" name="self" />
+          <variable ilk="argument" name="other" />
+        </scope>
+        <scope ilk="function" line="587" lineend="588" name="__repr__" returns="tuple" signature="__repr__(self)">
+          <variable citdl="QName" ilk="argument" name="self" />
+        </scope>
+        <scope ilk="function" line="581" lineend="584" name="__init__" signature="__init__(self, text_or_uri, tag=None)">
+          <variable citdl="QName" ilk="argument" name="self" />
+          <variable citdl="str" ilk="argument" name="text_or_uri" />
+          <variable ilk="argument" name="tag" />
+        </scope>
+        <scope ilk="function" line="603" lineend="606" name="__gt__" returns="bool" signature="__gt__(self, other)">
+          <variable citdl="QName" ilk="argument" name="self" />
+          <variable ilk="argument" name="other" />
+        </scope>
+        <scope ilk="function" line="589" lineend="590" name="__hash__" returns="hash()" signature="__hash__(self)">
+          <variable citdl="QName" ilk="argument" name="self" />
+        </scope>
+        <scope ilk="function" line="595" lineend="598" name="__lt__" returns="bool" signature="__lt__(self, other)">
+          <variable citdl="QName" ilk="argument" name="self" />
+          <variable ilk="argument" name="other" />
+        </scope>
+        <scope ilk="function" line="607" lineend="610" name="__eq__" returns="bool" signature="__eq__(self, other)">
+          <variable citdl="QName" ilk="argument" name="self" />
+          <variable ilk="argument" name="other" />
+        </scope>
+        <scope ilk="function" line="599" lineend="602" name="__ge__" returns="bool" signature="__ge__(self, other)">
+          <variable citdl="QName" ilk="argument" name="self" />
+          <variable ilk="argument" name="other" />
+        </scope>
+        <variable attributes="__instancevar__" citdl="str" line="584" name="text" />
+      </scope>
+      <scope ilk="function" line="527" lineend="532" name="SubElement" returns="parent.makeelement()" signature="SubElement(parent, tag, attrib={}, **extra)">
+        <variable citdl="parent.makeelement()" line="530" name="element" />
+        <variable citdl="dict" ilk="argument" name="attrib" />
+        <variable ilk="argument" name="tag" />
+        <variable ilk="argument" name="parent" />
+        <variable attributes="kwargs" ilk="argument" name="extra" />
+      </scope>
+      <scope classrefs="object" doc="&#xA;" ilk="class" line="1394" lineend="1469" name="TreeBuilder">
+        <scope ilk="function" line="1417" lineend="1427" name="_flush" signature="_flush(self)">
+          <variable citdl="str.join()" line="1420" name="text" />
+          <variable citdl="TreeBuilder" ilk="argument" name="self" />
+        </scope>
+        <scope ilk="function" line="1462" lineend="1469" name="end" returns="_factory()" signature="end(self, tag)">
+          <variable citdl="TreeBuilder" ilk="argument" name="self" />
+          <variable ilk="argument" name="tag" />
+        </scope>
+        <scope ilk="function" line="1446" lineend="1453" name="start" returns="elem" signature="start(self, tag, attrs)">
+          <variable citdl="TreeBuilder" ilk="argument" name="self" />
+          <variable ilk="argument" name="tag" />
+          <variable ilk="argument" name="attrs" />
+        </scope>
+        <scope ilk="function" line="1412" lineend="1415" name="close" signature="close(self)">
+          <variable citdl="TreeBuilder" ilk="argument" name="self" />
+        </scope>
+        <scope ilk="function" line="1435" lineend="1436" name="data" signature="data(self, data)">
+          <variable citdl="TreeBuilder" ilk="argument" name="self" />
+          <variable ilk="argument" name="data" />
+        </scope>
+        <scope ilk="function" line="1396" lineend="1403" name="__init__" signature="__init__(self, element_factory=None)">
+          <variable citdl="Element" ilk="argument" name="element_factory" />
+          <variable citdl="TreeBuilder" ilk="argument" name="self" />
+        </scope>
+        <variable attributes="protected __instancevar__" citdl="list" line="1397" name="_data" />
+        <variable attributes="protected __instancevar__" citdl="list" line="1398" name="_elem" />
+        <variable attributes="protected __instancevar__" citdl="int" line="1400" name="_tail" />
+        <variable attributes="protected __instancevar__" citdl="_factory()" line="1399" name="_last" />
+        <variable attributes="protected __instancevar__" citdl="Element" line="1403" name="_factory" />
+      </scope>
+      <variable citdl="str" line="75" name="VERSION" />
+      <scope ilk="function" line="1326" lineend="1330" name="XML" returns="parser.close()" signature="XML(text, parser=None)">
+        <variable ilk="argument" name="text" />
+        <variable citdl="XMLParser()" ilk="argument" name="parser" />
+      </scope>
+      <scope ilk="function" line="1342" lineend="1352" name="XMLID" returns="tuple" signature="XMLID(text, parser=None)">
+        <variable ilk="argument" name="text" />
+        <variable citdl="XMLParser()" ilk="argument" name="parser" />
+        <variable citdl="parser.close()" line="1346" name="tree" />
+        <variable citdl="dict" line="1347" name="ids" />
+        <variable citdl="elem.get()" line="1349" name="id" />
+      </scope>
+      <scope classrefs="object" doc="&#xA;" ilk="class" line="1484" lineend="1677" name="XMLParser">
+        <scope ilk="function" line="1658" lineend="1662" name="feed" signature="feed(self, data)">
+          <variable citdl="XMLParser" ilk="argument" name="self" />
+          <variable ilk="argument" name="data" />
+        </scope>
+        <scope ilk="function" line="1548" lineend="1554" name="_start" returns="self.target.start()" signature="_start(self, tag, attrib_in)">
+          <variable citdl="XMLParser" ilk="argument" name="self" />
+          <variable citdl="fixname()" ilk="argument" name="tag" />
+          <variable citdl="dict" line="1551" name="attrib" />
+          <variable citdl="XMLParser._fixname" line="1549" name="fixname" />
+          <variable ilk="argument" name="attrib_in" />
+        </scope>
+        <scope ilk="function" line="1565" lineend="1566" name="_data" returns="self.target.data()" signature="_data(self, text)">
+          <variable ilk="argument" name="text" />
+          <variable citdl="XMLParser" ilk="argument" name="self" />
+        </scope>
+        <scope ilk="function" line="1571" lineend="1577" name="_comment" returns="XMLParser._comment.comment()" signature="_comment(self, data)">
+          <variable citdl="self.target.comment" line="1573" name="comment" />
+          <variable citdl="XMLParser" ilk="argument" name="self" />
+          <variable ilk="argument" name="data" />
+        </scope>
+        <scope ilk="function" line="1579" lineend="1585" name="_pi" returns="XMLParser._pi.pi()" signature="_pi(self, target, data)">
+          <variable citdl="XMLParser" ilk="argument" name="self" />
+          <variable citdl="self.target.pi" line="1581" name="pi" />
+          <variable ilk="argument" name="data" />
+          <variable ilk="argument" name="target" />
+        </scope>
+        <scope doc="This method of XMLParser is deprecated." ilk="function" line="1642" lineend="1647" name="doctype" signature="doctype(self, name, pubid, system)">
+          <variable citdl="XMLParser" ilk="argument" name="self" />
+          <variable ilk="argument" name="pubid" />
+          <variable ilk="argument" name="name" />
+          <variable ilk="argument" name="system" />
+        </scope>
+        <scope ilk="function" line="1568" lineend="1569" name="_end" returns="self.target.end()" signature="_end(self, tag)">
+          <variable citdl="XMLParser" ilk="argument" name="self" />
+          <variable ilk="argument" name="tag" />
+        </scope>
+        <scope ilk="function" line="1537" lineend="1546" name="_fixname" returns="str" signature="_fixname(self, key)">
+          <variable citdl="XMLParser" ilk="argument" name="self" />
+          <variable citdl="str" line="1540" name="name" />
+          <variable ilk="argument" name="key" />
+        </scope>
+        <scope ilk="function" line="1670" lineend="1677" name="close" returns="self.target.close()" signature="close(self)">
+          <variable citdl="XMLParser" ilk="argument" name="self" />
+          <variable citdl="self.target.close()" line="1675" name="tree" />
+        </scope>
+        <scope ilk="function" line="1587" lineend="1633" name="_default" signature="_default(self, text)">
+          <variable citdl="list" line="1588" name="prefix" />
+          <variable citdl="expat.error()" line="1595" name="err" />
+          <variable citdl="text.strip()" ilk="argument" name="text" />
+          <variable citdl="XMLParser" ilk="argument" name="self" />
+          <variable citdl="list" line="1622" name="pubid" />
+          <variable line="1617" name="type" />
+          <variable citdl="len()" line="1615" name="n" />
+        </scope>
+        <scope ilk="function" line="1556" lineend="1563" name="_start_list" returns="self.target.start()" signature="_start_list(self, tag, attrib_in)">
+          <variable citdl="XMLParser" ilk="argument" name="self" />
+          <variable citdl="fixname()" ilk="argument" name="tag" />
+          <variable citdl="dict" line="1559" name="attrib" />
+          <variable citdl="XMLParser._fixname" line="1557" name="fixname" />
+          <variable ilk="argument" name="attrib_in" />
+        </scope>
+        <scope doc="This method of XMLParser is deprecated." ilk="function" name="_XMLParser__doctype" signature="_XMLParser__doctype(self, name, pubid, system)" />
+        <scope ilk="function" line="1486" lineend="1529" name="__init__" signature="__init__(self, html=0, target=None, encoding=None)">
+          <variable citdl="XMLParser" ilk="argument" name="self" />
+          <variable citdl="int" ilk="argument" name="html" />
+          <variable citdl="expat.ParserCreate()" line="1496" name="parser" />
+          <variable citdl="TreeBuilder" ilk="argument" name="target" />
+          <variable ilk="argument" name="encoding" />
+        </scope>
+        <scope ilk="function" line="1531" lineend="1535" name="_raiseerror" signature="_raiseerror(self, value)">
+          <variable citdl="XMLParser" ilk="argument" name="self" />
+          <variable citdl="ParseError" line="1532" name="err" />
+          <variable ilk="argument" name="value" />
+        </scope>
+        <variable attributes="__instancevar__" citdl="expat.ParserCreate()" line="1500" name="parser" />
+        <variable attributes="__instancevar__" citdl="TreeBuilder" line="1501" name="target" />
+        <variable attributes="private" citdl="XMLParser.doctype" line="1651" name="__doctype" />
+        <variable attributes="protected __instancevar__" citdl="dict" line="1503" name="_names" />
+        <variable attributes="protected __instancevar__" citdl="expat.error" line="1502" name="_error" />
+        <variable attributes="__instancevar__" citdl="dict" line="1525" name="entity" />
+        <variable attributes="__instancevar__" citdl="expat.version_info" line="1527" name="version" />
+        <variable attributes="protected __instancevar__" citdl="list" line="1524" name="_doctype" />
+      </scope>
+      <scope classrefs="object" doc="&#xA;" ilk="class" line="1680" name="XMLTreeBuilder">
+        <scope ilk="function" name="feed" signature="feed(self, data)" />
+        <scope ilk="function" name="_start" signature="_start(self, tag, attrib_in)" />
+        <scope ilk="function" name="_data" signature="_data(self, text)" />
+        <scope ilk="function" name="_comment" signature="_comment(self, data)" />
+        <scope ilk="function" name="_pi" signature="_pi(self, target, data)" />
+        <scope doc="This method of XMLParser is deprecated." ilk="function" name="doctype" signature="doctype(self, name, pubid, system)" />
+        <scope ilk="function" name="_end" signature="_end(self, tag)" />
+        <scope ilk="function" name="_fixname" signature="_fixname(self, key)" />
+        <scope ilk="function" name="close" signature="close(self)" />
+        <scope ilk="function" name="_default" signature="_default(self, text)" />
+        <scope ilk="function" name="_start_list" signature="_start_list(self, tag, attrib_in)" />
+        <scope doc="This method of XMLParser is deprecated." ilk="function" name="_XMLParser__doctype" signature="_XMLParser__doctype(self, name, pubid, system)" />
+        <scope ilk="function" name="__init__" signature="__init__(self, html=0, target=None, encoding=None)" />
+        <scope ilk="function" name="_raiseerror" signature="_raiseerror(self, value)" />
+      </scope>
+      <variable citdl="list" line="57" name="__all__" />
+      <scope ilk="function" line="1201" lineend="1208" name="dump" signature="dump(elem)">
+        <variable line="1206" name="tail" />
+        <variable citdl="ElementTree" ilk="argument" name="elem" />
+      </scope>
+      <scope ilk="function" line="1362" name="fromstring" signature="fromstring(text, parser=None)" />
+      <scope ilk="function" line="1374" lineend="1379" name="fromstringlist" returns="parser.close()" signature="fromstringlist(sequence, parser=None)">
+        <variable citdl="XMLParser()" ilk="argument" name="parser" />
+        <variable ilk="argument" name="sequence" />
+      </scope>
+      <scope ilk="function" line="150" lineend="153" name="iselement" returns="isinstance()" signature="iselement(element)">
+        <variable ilk="argument" name="element" />
+      </scope>
+      <scope ilk="function" line="1237" lineend="1244" name="iterparse" returns="_IterParseIterator()" signature="iterparse(source, events=None, parser=None)">
+        <variable citdl="False" line="1238" name="close_source" />
+        <variable citdl="open()" ilk="argument" name="source" />
+        <variable citdl="XMLParser()" ilk="argument" name="parser" />
+        <variable ilk="argument" name="events" />
+      </scope>
+      <scope ilk="function" line="1221" lineend="1224" name="parse" returns="ElementTree" signature="parse(source, parser=None)">
+        <variable ilk="argument" name="source" />
+        <variable ilk="argument" name="parser" />
+        <variable citdl="ElementTree" line="1222" name="tree" />
+      </scope>
+      <import module="re" />
+      <scope ilk="function" line="1068" lineend="1074" name="register_namespace" signature="register_namespace(prefix, uri)">
+        <variable ilk="argument" name="prefix" />
+        <variable ilk="argument" name="uri" />
+      </scope>
+      <import module="sys" />
+      <scope ilk="function" line="1155" lineend="1165" name="tostring" returns="str.join()" signature="tostring(element, encoding=None, method=None)">
+        <scope ilk="class" line="1156" lineend="1157" name="dummy" />
+        <variable citdl="dummy" line="1159" name="file" />
+        <variable ilk="argument" name="encoding" />
+        <variable citdl="list" line="1158" name="data" />
+        <variable ilk="argument" name="method" />
+        <variable ilk="argument" name="element" />
+      </scope>
+      <scope ilk="function" line="1182" lineend="1190" name="tostringlist" returns="list" signature="tostringlist(element, encoding=None, method=None)">
+        <scope ilk="class" line="1183" lineend="1184" name="dummy" />
+        <variable citdl="dummy" line="1186" name="file" />
+        <variable ilk="argument" name="encoding" />
+        <variable citdl="list" line="1185" name="data" />
+        <variable ilk="argument" name="method" />
+        <variable ilk="argument" name="element" />
+      </scope>
+      <import module="warnings" />
+      <scope attributes="protected __hidden__" ilk="function" line="873" lineend="936" name="_namespaces" returns="tuple" signature="_namespaces(elem, default_namespace=None)">
+        <variable ilk="argument" name="elem" />
+        <variable ilk="argument" name="default_namespace" />
+        <variable citdl="dict" line="877" name="qnames" />
+        <variable citdl="dict" line="880" name="namespaces" />
+        <scope ilk="function" line="884" lineend="909" name="add_qname" signature="add_qname(qname)">
+          <variable ilk="argument" name="qname" />
+          <variable line="888" name="tag" />
+          <variable line="888" name="uri" />
+          <variable citdl="namespaces.get()" line="889" name="prefix" />
+        </scope>
+        <variable citdl="elem.iter" line="913" name="iterate" />
+        <variable citdl="elem.tag" line="917" name="tag" />
+        <variable citdl="key.text" line="928" name="key" />
+        <variable citdl="elem.text" line="933" name="text" />
+      </scope>
+      <scope attributes="protected __hidden__" ilk="function" line="1089" lineend="1091" name="_raise_serialization_error" signature="_raise_serialization_error(text)">
+        <variable ilk="argument" name="text" />
+      </scope>
+      <scope attributes="protected __hidden__" ilk="function" line="1110" lineend="1125" name="_escape_attrib" returns="text.replace()" signature="_escape_attrib(text)">
+        <variable citdl="text.replace()" ilk="argument" name="text" />
+      </scope>
+      <scope attributes="protected __hidden__" ilk="class" line="104" lineend="124" name="_SimpleElementPath">
+        <scope ilk="function" line="106" lineend="110" name="find" returns="elem" signature="find(element, tag, namespaces=None)">
+          <variable citdl="_SimpleElementPath" ilk="argument" name="self" />
+          <variable ilk="argument" name="element" />
+          <variable ilk="argument" name="tag" />
+          <variable ilk="argument" name="namespaces" />
+        </scope>
+        <scope ilk="function" line="111" lineend="115" name="findtext" returns="str" signature="findtext(element, tag, default=None, namespaces=None)">
+          <variable citdl="_SimpleElementPath" ilk="argument" name="self" />
+          <variable ilk="argument" name="element" />
+          <variable ilk="argument" name="tag" />
+          <variable ilk="argument" name="default" />
+          <variable ilk="argument" name="namespaces" />
+          <variable citdl="find()" line="112" name="elem" />
+        </scope>
+        <scope ilk="function" line="116" lineend="122" name="iterfind" signature="iterfind(element, tag, namespaces=None)">
+          <variable citdl="_SimpleElementPath" ilk="argument" name="self" />
+          <variable ilk="argument" name="element" />
+          <variable ilk="argument" name="tag" />
+          <variable ilk="argument" name="namespaces" />
+        </scope>
+        <scope ilk="function" line="123" lineend="124" name="findall" returns="list()" signature="findall(element, tag, namespaces=None)">
+          <variable citdl="_SimpleElementPath" ilk="argument" name="self" />
+          <variable ilk="argument" name="element" />
+          <variable ilk="argument" name="tag" />
+          <variable ilk="argument" name="namespaces" />
+        </scope>
+      </scope>
+      <variable attributes="protected __hidden__" citdl="dict" line="1076" name="_namespace_map" />
+      <scope attributes="protected __hidden__" ilk="function" line="1127" lineend="1138" name="_escape_attrib_html" returns="text.replace()" signature="_escape_attrib_html(text)">
+        <variable citdl="text.replace()" ilk="argument" name="text" />
+      </scope>
+      <scope attributes="protected __hidden__" ilk="function" line="993" lineend="1041" name="_serialize_html" signature="_serialize_html(write, elem, qnames, namespaces)">
+        <variable ilk="argument" name="write" />
+        <variable ilk="argument" name="elem" />
+        <variable ilk="argument" name="qnames" />
+        <variable ilk="argument" name="namespaces" />
+        <variable citdl="elem.tag" line="994" name="tag" />
+        <variable citdl="elem.text" line="995" name="text" />
+        <variable citdl="list()" line="1009" name="items" />
+        <variable citdl="k.text" line="1015" name="k" />
+        <variable citdl="_escape_attrib_html()" line="1024" name="v" />
+      </scope>
+      <scope attributes="protected __hidden__" ilk="function" line="1043" lineend="1047" name="_serialize_text" signature="_serialize_text(write, elem)">
+        <variable ilk="argument" name="write" />
+        <variable ilk="argument" name="elem" />
+      </scope>
+      <variable attributes="protected __hidden__" citdl="Element" line="511" name="_Element" />
+      <variable attributes="protected __hidden__" citdl="dict" line="1049" name="_serialize" />
+      <scope attributes="protected __hidden__" ilk="class" line="1246" lineend="1314" name="_IterParseIterator">
+        <scope attributes="__ctor__" ilk="function" line="1248" lineend="1288" name="__init__" signature="_IterParseIterator(source, events, parser, close_source=False)">
+          <variable citdl="_IterParseIterator" ilk="argument" name="self" />
+          <variable ilk="argument" name="source" />
+          <variable citdl="list" ilk="argument" name="events" />
+          <variable citdl="self._parser._parser" ilk="argument" name="parser" />
+          <variable citdl="False" ilk="argument" name="close_source" />
+          <variable citdl="self._events.append" line="1257" name="append" />
+          <scope ilk="function" line="1284" lineend="1285" name="handler" signature="handler(prefix, event=event, append=append)">
+            <variable ilk="argument" name="prefix" />
+            <variable citdl="event" ilk="argument" name="event" />
+            <variable citdl="self._events.append" ilk="argument" name="append" />
+          </scope>
+        </scope>
+        <variable attributes="protected __instancevar__" line="1249" name="_file" />
+        <variable attributes="protected __instancevar__" citdl="False" line="1250" name="_close_file" />
+        <variable attributes="protected __instancevar__" citdl="list" line="1251" name="_events" />
+        <variable attributes="protected __instancevar__" citdl="int" line="1252" name="_index" />
+        <variable attributes="__instancevar__" citdl="self._root" line="1253" name="root" />
+        <variable attributes="protected __instancevar__" line="1254" name="_parser" />
+        <scope ilk="function" line="1290" lineend="1311" name="__next__" signature="__next__()">
+          <variable citdl="_IterParseIterator" ilk="argument" name="self" />
+          <variable line="1293" name="item" />
+          <variable citdl="self._file.read()" line="1303" name="data" />
+        </scope>
+        <variable attributes="protected __instancevar__" citdl="self._parser.close()" line="1307" name="_root" />
+        <scope ilk="function" line="1313" lineend="1314" name="__iter__" returns="_IterParseIterator" signature="__iter__()">
+          <variable citdl="_IterParseIterator" ilk="argument" name="self" />
+        </scope>
+      </scope>
+      <scope attributes="protected __hidden__" ilk="function" line="938" lineend="983" name="_serialize_xml" signature="_serialize_xml(write, elem, qnames, namespaces)">
+        <variable ilk="argument" name="write" />
+        <variable ilk="argument" name="elem" />
+        <variable ilk="argument" name="qnames" />
+        <variable ilk="argument" name="namespaces" />
+        <variable citdl="elem.tag" line="939" name="tag" />
+        <variable citdl="elem.text" line="940" name="text" />
+        <variable citdl="list()" line="954" name="items" />
+        <variable citdl="k.text" line="960" name="k" />
+        <variable citdl="_escape_attrib()" line="969" name="v" />
+      </scope>
+      <variable attributes="__hidden__" citdl="_SimpleElementPath" line="129" name="ElementPath" />
+      <scope attributes="protected __hidden__" ilk="function" line="1094" lineend="1108" name="_escape_cdata" returns="text.replace()" signature="_escape_cdata(text)">
+        <variable citdl="text.replace()" ilk="argument" name="text" />
+      </scope>
+    </scope>
+    

@@ -1,0 +1,86 @@
+<scope ilk="blob" lang="Perl" name="TAP::Harness">
+      <scope classrefs="TAP::Base" ilk="class" line="1" lineend="849" name="TAP::Harness">
+        <import line="4" module="Carp" symbol="*" />
+        <import line="6" module="File::Spec" symbol="*" />
+        <import line="7" module="File::Path" symbol="*" />
+        <import line="8" module="IO::Handle" symbol="*" />
+        <import line="10" module="TAP::Base" symbol="*" />
+        <variable line="12" name="$VERSION" />
+        <variable line="12" name="@ISA" />
+        <variable line="751" name="$test_args" />
+        <scope ilk="function" line="54" lineend="58" name="_error" signature="_error($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="382" lineend="433" name="_initialize" signature="_initialize($self, $arg_for)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$arg_for" />
+        </scope>
+        <scope ilk="function" line="471" lineend="502" name="runtests" signature="runtests($self, @tests, $interrupted)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="@tests" />
+          <variable ilk="argument" name="$interrupted" />
+        </scope>
+        <scope ilk="function" line="512" lineend="515" name="summary" signature="summary($self, @args)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="@args" />
+        </scope>
+        <scope ilk="function" line="517" lineend="522" name="_after_test" signature="_after_test($self, $aggregate, $job, $parser)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$aggregate" />
+          <variable ilk="argument" name="$job" />
+          <variable ilk="argument" name="$parser" />
+        </scope>
+        <scope ilk="function" line="524" lineend="529" name="_bailout" signature="_bailout($self, $result)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$result" />
+        </scope>
+        <scope ilk="function" line="531" lineend="569" name="_aggregate_parallel" signature="_aggregate_parallel($self, $aggregate, $scheduler)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$aggregate" />
+          <variable ilk="argument" name="$scheduler" />
+        </scope>
+        <scope ilk="function" line="571" lineend="597" name="_aggregate_single" signature="_aggregate_single($self, $aggregate, $scheduler)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$aggregate" />
+          <variable ilk="argument" name="$scheduler" />
+        </scope>
+        <scope ilk="function" line="653" lineend="674" name="aggregate_tests" signature="aggregate_tests($self, $aggregate, @tests)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$aggregate" />
+          <variable ilk="argument" name="@tests" />
+        </scope>
+        <scope ilk="function" line="676" lineend="683" name="_add_descriptions" signature="_add_descriptions($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="694" lineend="701" name="make_scheduler" signature="make_scheduler($self, @tests)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="@tests" />
+        </scope>
+        <scope ilk="function" line="713" lineend="763" name="_get_parser_args" signature="_get_parser_args($self, $job)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$job" />
+        </scope>
+        <scope ilk="function" line="774" lineend="785" name="make_parser" signature="make_parser($self, $job)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$job" />
+        </scope>
+        <scope ilk="function" line="794" lineend="801" name="finish_parser" signature="finish_parser($self, $parser, $session)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$parser" />
+          <variable ilk="argument" name="$session" />
+        </scope>
+        <scope ilk="function" line="803" lineend="825" name="_open_spool" signature="_open_spool($self, $test)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$test" />
+        </scope>
+        <scope ilk="function" line="827" lineend="837" name="_close_spool" signature="_close_spool($self, $parser)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$parser" />
+        </scope>
+        <scope ilk="function" line="839" lineend="847" name="_croak" signature="_croak($self, $message)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$message" />
+        </scope>
+      </scope>
+    </scope>
+    

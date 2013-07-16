@@ -1,0 +1,110 @@
+<scope ilk="blob" lang="Perl" name="CPAN::FirstTime">
+      <scope ilk="class" line="3" lineend="2053" name="CPAN::FirstTime">
+        <import line="6" module="ExtUtils::MakeMaker" />
+        <import line="7" module="FileHandle" />
+        <import line="8" module="File::Basename" />
+        <import line="9" module="File::Path" />
+        <import line="10" module="File::Spec" />
+        <import line="11" module="CPAN::Mirrors" />
+        <variable line="12" name="$auto_config" />
+        <variable line="12" name="$VERSION" />
+        <variable line="588" name="%prompts" />
+        <scope ilk="function" line="730" lineend="1296" name="init" signature="init($configpm, %args)">
+          <import line="732" module="Config" symbol="*" />
+          <import line="765" module="CPAN::Nox" />
+          <import line="767" module="CPAN::HandleConfig" />
+          <import line="1004" module="CPAN::HandleConfig" />
+          <import line="1261" module="lib" />
+          <variable ilk="argument" name="$configpm" />
+          <variable ilk="argument" name="%args" />
+          <import line="732" module="Config" symbol="*" />
+          <import line="765" module="CPAN::Nox" />
+          <import line="767" module="CPAN::HandleConfig" />
+          <import line="1004" module="CPAN::HandleConfig" />
+          <import line="1261" module="lib" />
+        </scope>
+        <scope ilk="function" line="1298" lineend="1344" name="_local_lib_config" signature="_local_lib_config()">
+          </scope>
+        <scope ilk="function" line="1353" lineend="1359" name="_find_shell_config" signature="_find_shell_config()">
+          </scope>
+        <scope ilk="function" line="1363" lineend="1365" name="_local_lib_inc_path" signature="_local_lib_inc_path()" />
+        <scope ilk="function" line="1367" lineend="1369" name="_local_lib_path" signature="_local_lib_path()" />
+        <scope ilk="function" line="1375" lineend="1385" name="_local_lib_home" signature="_local_lib_home()" />
+        <scope ilk="function" line="1388" lineend="1413" name="_do_pick_mirrors" signature="_do_pick_mirrors()">
+          </scope>
+        <scope ilk="function" line="1415" lineend="1494" name="_init_external_progs" signature="_init_external_progs($matcher, $args)">
+          <variable ilk="argument" name="$matcher" />
+          <variable ilk="argument" name="$args" />
+        </scope>
+        <scope ilk="function" line="1496" lineend="1509" name="_check_found" signature="_check_found($prog)">
+          <variable ilk="argument" name="$prog" />
+        </scope>
+        <scope ilk="function" line="1511" lineend="1532" name="_beg_for_make" signature="_beg_for_make()" />
+        <scope ilk="function" line="1534" lineend="1595" name="init_cpan_home" signature="init_cpan_home($matcher)">
+          <import line="1568" module="Cwd" />
+          <variable ilk="argument" name="$matcher" />
+          <import line="1568" module="Cwd" />
+        </scope>
+        <scope ilk="function" line="1597" lineend="1613" name="my_dflt_prompt" signature="my_dflt_prompt($item, $dflt, $m, $no_strip)">
+          <variable ilk="argument" name="$item" />
+          <variable ilk="argument" name="$dflt" />
+          <variable ilk="argument" name="$m" />
+          <variable ilk="argument" name="$no_strip" />
+        </scope>
+        <scope ilk="function" line="1615" lineend="1631" name="my_yn_prompt" signature="my_yn_prompt($item, $dflt, $m)">
+          <variable ilk="argument" name="$item" />
+          <variable ilk="argument" name="$dflt" />
+          <variable ilk="argument" name="$m" />
+        </scope>
+        <scope ilk="function" line="1633" lineend="1647" name="my_prompt_loop" signature="my_prompt_loop($item, $dflt, $m, $ok)">
+          <variable ilk="argument" name="$item" />
+          <variable ilk="argument" name="$dflt" />
+          <variable ilk="argument" name="$m" />
+          <variable ilk="argument" name="$ok" />
+        </scope>
+        <scope ilk="function" line="1662" lineend="1749" name="conf_sites" signature="conf_sites(%args)">
+          <import line="1673" module="File::Copy" />
+          <variable ilk="argument" name="%args" />
+          <import line="1673" module="File::Copy" />
+        </scope>
+        <scope ilk="function" line="1751" lineend="1762" name="find_exe" signature="find_exe($exe, $path)">
+          <variable ilk="argument" name="$exe" />
+          <variable ilk="argument" name="$path" />
+        </scope>
+        <scope ilk="function" line="1764" lineend="1815" name="picklist" signature="picklist($items, $prompt, $default, $require_nonempty, $empty_warning)">
+          <variable ilk="argument" name="$items" />
+          <variable ilk="argument" name="$prompt" />
+          <variable ilk="argument" name="$default" />
+          <variable ilk="argument" name="$require_nonempty" />
+          <variable ilk="argument" name="$empty_warning" />
+        </scope>
+        <scope ilk="function" line="1817" lineend="1831" name="unrangify" signature="unrangify()">
+          </scope>
+        <scope ilk="function" line="1833" lineend="1848" name="display_some" signature="display_some($items, $limit, $pos, $default)">
+          <variable ilk="argument" name="$items" />
+          <variable ilk="argument" name="$limit" />
+          <variable ilk="argument" name="$pos" />
+          <variable ilk="argument" name="$default" />
+        </scope>
+        <scope ilk="function" line="1850" lineend="1861" name="auto_mirrored_by" signature="auto_mirrored_by($local)">
+          <variable ilk="argument" name="$local" />
+        </scope>
+        <scope ilk="function" line="1869" lineend="1943" name="choose_mirrored_by" signature="choose_mirrored_by($local)">
+          <variable ilk="argument" name="$local" />
+        </scope>
+        <scope ilk="function" line="1945" lineend="1996" name="bring_your_own" signature="bring_your_own()">
+          </scope>
+        <scope ilk="function" line="1998" lineend="2004" name="_print_urllist" signature="_print_urllist($which)">
+          <variable ilk="argument" name="$which" />
+        </scope>
+        <scope ilk="function" line="2006" lineend="2011" name="_can_write_to_libdirs" signature="_can_write_to_libdirs()" />
+        <scope ilk="function" line="2013" lineend="2018" name="_using_installbase" signature="_using_installbase()" />
+        <scope ilk="function" line="2020" lineend="2024" name="_using_sudo" signature="_using_sudo()" />
+        <scope ilk="function" line="2026" lineend="2029" name="_strip_spaces" signature="_strip_spaces()" />
+        <scope ilk="function" line="2031" lineend="2041" name="prompt" signature="prompt()">
+          </scope>
+        <scope ilk="function" line="2044" lineend="2049" name="prompt_no_strip" signature="prompt_no_strip()">
+          </scope>
+      </scope>
+    </scope>
+    

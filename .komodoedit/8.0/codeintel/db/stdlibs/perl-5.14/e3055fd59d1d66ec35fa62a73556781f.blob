@@ -1,0 +1,155 @@
+<scope ilk="blob" lang="Perl" name="JSON::backportPP::Boolean">
+      <scope ilk="class" line="2" lineend="1402" name="JSON::PP">
+        <import line="11" module="Carp" />
+        <import line="12" module="B" />
+        <import line="1277" module="Encode" />
+        <import line="1290" module="subs" />
+        <variable line="15" name="$JSON::PP::VERSION" />
+        <variable line="17" name="@JSON::PP::EXPORT" />
+        <variable line="1278" name="*utf8::is_utf8" />
+        <variable line="1282" name="*JSON::PP::JSON_PP_encode_ascii" />
+        <variable line="1283" name="*JSON::PP::JSON_PP_encode_latin1" />
+        <variable line="1284" name="*JSON::PP::JSON_PP_decode_surrogates" />
+        <variable line="1285" name="*JSON::PP::JSON_PP_decode_unicode" />
+        <variable line="1340" name="*JSON::PP::blessed" />
+        <variable line="1341" name="*JSON::PP::reftype" />
+        <variable line="1342" name="*JSON::PP::refaddr" />
+        <variable line="1395" name="$JSON::PP::true" />
+        <variable line="1396" name="$JSON::PP::false" />
+        <scope ilk="function" line="105" lineend="107" name="encode_json" signature="encode_json()" />
+        <scope ilk="function" line="110" lineend="112" name="decode_json" signature="decode_json()" />
+        <scope ilk="function" line="116" lineend="118" name="to_json" signature="to_json()" />
+        <scope ilk="function" line="121" lineend="123" name="from_json" signature="from_json()" />
+        <scope attributes="__ctor__" ilk="function" line="128" lineend="140" name="new" signature="new($class)">
+          <variable ilk="argument" name="$class" />
+        </scope>
+        <scope ilk="function" line="143" lineend="145" name="encode" signature="encode()" />
+        <scope ilk="function" line="148" lineend="150" name="decode" signature="decode()" />
+        <scope ilk="function" line="153" lineend="155" name="decode_prefix" signature="decode_prefix()" />
+        <scope ilk="function" line="163" lineend="175" name="pretty" signature="pretty($self, $v)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$v" />
+        </scope>
+        <scope ilk="function" line="179" lineend="183" name="max_depth" signature="max_depth()">
+          </scope>
+        <scope ilk="function" line="186" lineend="186" name="get_max_depth" signature="get_max_depth()" />
+        <scope ilk="function" line="189" lineend="193" name="max_size" signature="max_size()">
+          </scope>
+        <scope ilk="function" line="196" lineend="196" name="get_max_size" signature="get_max_size()" />
+        <scope ilk="function" line="199" lineend="203" name="filter_json_object" signature="filter_json_object()" />
+        <scope ilk="function" line="205" lineend="211" name="filter_json_single_key_object" signature="filter_json_single_key_object()" />
+        <scope ilk="function" line="213" lineend="221" name="indent_length" signature="indent_length()" />
+        <scope ilk="function" line="223" lineend="225" name="get_indent_length" signature="get_indent_length()" />
+        <scope ilk="function" line="227" lineend="230" name="sort_by" signature="sort_by()" />
+        <scope ilk="function" line="232" lineend="234" name="allow_bigint" signature="allow_bigint()" />
+        <scope ilk="function" line="266" lineend="306" name="PP_encode_json" signature="PP_encode_json($self, $obj)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$obj" />
+        </scope>
+        <scope ilk="function" line="309" lineend="354" name="object_to_json" signature="object_to_json($self, $obj)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$obj" />
+        </scope>
+        <scope ilk="function" line="357" lineend="378" name="hash_to_json" signature="hash_to_json($self, $obj)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$obj" />
+        </scope>
+        <scope ilk="function" line="381" lineend="398" name="array_to_json" signature="array_to_json($self, $obj)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$obj" />
+        </scope>
+        <scope ilk="function" line="401" lineend="451" name="value_to_json" signature="value_to_json($self, $value)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$value" />
+        </scope>
+        <scope ilk="function" line="466" lineend="486" name="string_to_json" signature="string_to_json($self, $arg)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$arg" />
+        </scope>
+        <scope ilk="function" line="489" lineend="500" name="blessed_to_json" signature="blessed_to_json()">
+          </scope>
+        <scope ilk="function" line="503" lineend="506" name="encode_error" signature="encode_error($error)">
+          <variable ilk="argument" name="$error" />
+        </scope>
+        <scope ilk="function" line="509" lineend="511" name="_sort" signature="_sort()" />
+        <scope ilk="function" line="514" lineend="527" name="_up_indent" signature="_up_indent($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="530" lineend="530" name="_down_indent" signature="_down_indent()" />
+        <scope ilk="function" line="533" lineend="538" name="PP_encode_box" signature="PP_encode_box()" />
+        <scope ilk="function" line="543" lineend="552" name="_encode_ascii" signature="_encode_ascii()" />
+        <scope ilk="function" line="555" lineend="564" name="_encode_latin1" signature="_encode_latin1()" />
+        <scope ilk="function" line="567" lineend="570" name="_encode_surrogates" signature="_encode_surrogates()">
+          </scope>
+        <scope ilk="function" line="573" lineend="575" name="_is_bignum" signature="_is_bignum()" />
+        <scope ilk="function" line="638" lineend="713" name="PP_decode_json" signature="PP_decode_json()">
+          </scope>
+        <scope ilk="function" line="716" lineend="719" name="next_chr" signature="next_chr()" />
+        <scope ilk="function" line="722" lineend="730" name="value" signature="value()" />
+        <scope ilk="function" line="732" lineend="839" name="string" signature="string()">
+          </scope>
+        <scope ilk="function" line="842" lineend="889" name="white" signature="white()" />
+        <scope ilk="function" line="892" lineend="939" name="array" signature="array()">
+          </scope>
+        <scope ilk="function" line="942" lineend="1006" name="object" signature="object()">
+          </scope>
+        <scope ilk="function" line="1009" lineend="1016" name="bareKey" signature="bareKey()">
+          </scope>
+        <scope ilk="function" line="1019" lineend="1047" name="word" signature="word()">
+          </scope>
+        <scope ilk="function" line="1050" lineend="1151" name="number" signature="number()">
+          <import line="1138" module="Math::BigInt" />
+          <import line="1146" module="Math::BigFloat" />
+          <import line="1138" module="Math::BigInt" />
+          <import line="1146" module="Math::BigFloat" />
+        </scope>
+        <scope ilk="function" line="1154" lineend="1178" name="is_valid_utf8" signature="is_valid_utf8()">
+          </scope>
+        <scope ilk="function" line="1181" lineend="1217" name="decode_error" signature="decode_error($error, $no_rep)">
+          <variable ilk="argument" name="$error" />
+          <variable ilk="argument" name="$no_rep" />
+        </scope>
+        <scope ilk="function" line="1220" lineend="1238" name="_json_object_hook" signature="_json_object_hook()">
+          </scope>
+        <scope ilk="function" line="1241" lineend="1251" name="PP_decode_box" signature="PP_decode_box()" />
+        <scope ilk="function" line="1256" lineend="1261" name="_decode_surrogates" signature="_decode_surrogates()">
+          </scope>
+        <scope ilk="function" line="1264" lineend="1268" name="_decode_unicode" signature="_decode_unicode()">
+          </scope>
+        <scope ilk="function" line="1304" lineend="1307" name="JSON::PP::incr_parse" signature="JSON::PP::incr_parse()" />
+        <scope ilk="function" line="1310" lineend="1312" name="JSON::PP::incr_skip" signature="JSON::PP::incr_skip()" />
+        <scope ilk="function" line="1315" lineend="1317" name="JSON::PP::incr_reset" signature="JSON::PP::incr_reset()" />
+        <scope ilk="function" line="1398" lineend="1398" name="is_bool" signature="is_bool()" />
+        <scope ilk="function" line="1400" lineend="1400" name="true" signature="true()" />
+        <scope ilk="function" line="1401" lineend="1401" name="false" signature="false()" />
+        <scope ilk="function" line="1402" lineend="1402" name="null" signature="null()" />
+      </scope>
+      <scope ilk="class" line="1406" lineend="1414" name="JSON::backportPP::Boolean">
+        <variable line="1408" name="@JSON::backportPP::Boolean::ISA" />
+      </scope>
+      <scope ilk="class" line="1420" lineend="1596" name="JSON::PP::IncrParser">
+        <variable line="1431" name="$JSON::PP::IncrParser::VERSION" />
+        <scope attributes="__ctor__" ilk="function" line="1435" lineend="1444" name="new" signature="new($class)">
+          <variable ilk="argument" name="$class" />
+        </scope>
+        <scope ilk="function" line="1447" lineend="1494" name="incr_parse" signature="incr_parse($self, $coder, $text)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$coder" />
+          <variable ilk="argument" name="$text" />
+        </scope>
+        <scope ilk="function" line="1497" lineend="1566" name="_incr_parse" signature="_incr_parse($self, $coder, $text, $skip)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$coder" />
+          <variable ilk="argument" name="$text" />
+          <variable ilk="argument" name="$skip" />
+        </scope>
+        <scope ilk="function" line="1569" lineend="1574" name="incr_text" signature="incr_text()" />
+        <scope ilk="function" line="1577" lineend="1581" name="incr_skip" signature="incr_skip($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="1584" lineend="1591" name="incr_reset" signature="incr_reset($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+      </scope>
+    </scope>
+    

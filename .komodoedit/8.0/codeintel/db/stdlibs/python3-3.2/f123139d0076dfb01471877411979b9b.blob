@@ -1,0 +1,47 @@
+<scope doc="functools.py - Tools for working with functions and callable objects&#xA;" ilk="blob" lang="Python" name="functools">
+      <scope doc="(allocate() is an obsolete synonym)" ilk="function" name="Lock" signature="allocate_lock() -&gt; lock object" />
+      <scope classrefs="dict" doc="Dictionary that remembers insertion order&#xA;" ilk="class" name="OrderedDict">
+        <scope ilk="function" name="__ne__" signature="__ne__(self, other)" />
+        <scope ilk="function" name="keys" signature="keys(self)" />
+        <scope doc="Return state information for pickling" ilk="function" name="__reduce__" signature="__reduce__(self)" />
+        <scope ilk="function" name="update" signature="update(*args, **kwds)" />
+        <scope doc="value." ilk="function" name="pop" signature="od.pop(k[,d]) -&gt; v, remove specified key and return the corresponding" />
+        <scope doc="Move an existing element to the end (or beginning if&#xA;last==False)." ilk="function" name="move_to_end" signature="move_to_end(self, key, last=True)" />
+        <scope doc="od.__iter__() &lt;==&gt; iter(od)" ilk="function" name="__iter__" signature="od.__iter__() &lt;==&gt; iter(od)" />
+        <scope doc="Pairs are returned in LIFO order if last is true or FIFO&#xA;order if false." ilk="function" name="popitem" signature="od.popitem() -&gt; (k, v), return and remove a (key, value) pair." />
+        <scope ilk="function" name="__sizeof__" signature="__sizeof__(self)" />
+        <scope doc="od.copy() -&gt; a shallow copy of od" ilk="function" name="copy" signature="od.copy() -&gt; a shallow copy of od" />
+        <scope doc="while comparison to a regular mapping is order-insensitive." ilk="function" name="__eq__" signature="od.__eq__(y) &lt;==&gt; od==y.  Comparison to another OD is order-sensitive" />
+        <scope doc="Initialize an ordered dictionary." ilk="function" name="__init__" signature="__init__(self, *args, **kwds)" />
+        <scope doc="od.__delitem__(y) &lt;==&gt; del od[y]" ilk="function" name="__delitem__" signature="od.__delitem__(y) &lt;==&gt; del od[y]" />
+        <scope doc="If not specified, the value defaults to None." ilk="function" name="fromkeys" signature="OD.fromkeys(S[, v]) -&gt; New ordered dictionary with keys from S." />
+        <scope doc="od.setdefault(k[,d]) -&gt; od.get(k,d), also set od[k]=d if k not in od" ilk="function" name="setdefault" signature="od.setdefault(k[,d]) -&gt; od.get(k,d), also set od[k]=d if k not in od" />
+        <scope ilk="function" name="items" signature="items(self)" />
+        <scope doc="od.clear() -&gt; None.  Remove all items from od." ilk="function" name="clear" signature="od.clear() -&gt; None.  Remove all items from od." />
+        <scope doc="od.__setitem__(i, y) &lt;==&gt; od[i]=y" ilk="function" name="__setitem__" signature="od.__setitem__(i, y) &lt;==&gt; od[i]=y" />
+        <scope ilk="function" name="values" signature="values(self)" />
+        <scope doc="od.__reversed__() &lt;==&gt; reversed(od)" ilk="function" name="__reversed__" signature="od.__reversed__() &lt;==&gt; reversed(od)" />
+        <scope ilk="function" name="_OrderedDict__update" signature="_OrderedDict__update(*args, **kwds)" />
+        <scope doc="od.__repr__() &lt;==&gt; repr(od)" ilk="function" name="__repr__" signature="od.__repr__() &lt;==&gt; repr(od)" />
+      </scope>
+      <variable citdl="tuple" name="WRAPPER_ASSIGNMENTS" />
+      <variable citdl="tuple" name="WRAPPER_UPDATES" />
+      <variable citdl="list" name="__all__" />
+      <scope doc="Convert a cmp= function into a key= function" ilk="function" name="cmp_to_key" signature="cmp_to_key(mycmp)" />
+      <scope doc="Least-recently-used cache decorator." ilk="function" name="lru_cache" signature="lru_cache(maxsize=100)" />
+      <scope doc="Returns a new subclass of tuple with named fields." ilk="function" name="namedtuple" signature="namedtuple(typename, field_names, verbose=False, rename=False)" />
+      <scope classrefs="object" doc="partial(func, *args, **keywords) - new function with partial application&#xA;of the given arguments and keywords." ilk="class" name="partial">
+        <scope doc="x.__setattr__(&apos;name&apos;, value) &lt;==&gt; x.name = value" ilk="function" name="__setattr__" signature="x.__setattr__(&apos;name&apos;, value) &lt;==&gt; x.name = value" />
+        <scope ilk="function" name="__setstate__" />
+        <scope ilk="function" name="__reduce__" />
+        <scope doc="x.__getattribute__(&apos;name&apos;) &lt;==&gt; x.name" ilk="function" name="__getattribute__" signature="x.__getattribute__(&apos;name&apos;) &lt;==&gt; x.name" />
+        <scope doc="x.__delattr__(&apos;name&apos;) &lt;==&gt; del x.name" ilk="function" name="__delattr__" signature="x.__delattr__(&apos;name&apos;) &lt;==&gt; del x.name" />
+        <scope doc="x.__repr__() &lt;==&gt; repr(x)" ilk="function" name="__repr__" signature="x.__repr__() &lt;==&gt; repr(x)" />
+        <scope doc="x.__call__(...) &lt;==&gt; x(...)" ilk="function" name="__call__" signature="x.__call__(...) &lt;==&gt; x(...)" />
+      </scope>
+      <scope doc="Apply a function of two arguments cumulatively to the items&#xA;of a sequence, from left to right, so as to reduce the&#xA;sequence to a single value." ilk="function" name="reduce" signature="reduce(function, sequence[, initial]) -&gt; value" />
+      <scope doc="Class decorator that fills in missing ordering methods" ilk="function" name="total_ordering" signature="total_ordering(cls)" />
+      <scope doc="Update a wrapper function to look like the wrapped function" ilk="function" name="update_wrapper" signature="update_wrapper(wrapper, wrapped, assigned=(&apos;__module__&apos;, &apos;__name__&apos;, &apos;__doc__&apos;, &apos;__annotations__&apos;), updated=(&apos;__dict__&apos;,))" />
+      <scope doc="Decorator factory to apply update_wrapper() to a wrapper&#xA;function" ilk="function" name="wraps" signature="wraps(wrapped, assigned=(&apos;__module__&apos;, &apos;__name__&apos;, &apos;__doc__&apos;, &apos;__annotations__&apos;), updated=(&apos;__dict__&apos;,))" />
+    </scope>
+    

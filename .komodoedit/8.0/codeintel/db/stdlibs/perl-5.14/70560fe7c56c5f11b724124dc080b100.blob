@@ -1,0 +1,69 @@
+<scope ilk="blob" lang="Perl" name="ActiveState::Handy">
+      <scope ilk="class" line="1" lineend="280" name="ActiveState::Handy">
+        <import line="19" module="ActiveState::Run" symbol="run" />
+        <import line="19" module="ActiveState::Run" symbol="shell_quote" />
+        <import line="19" module="ActiveState::Run" symbol="decode_status" />
+        <variable line="5" name="$VERSION" />
+        <variable line="8" name="@EXPORT_OK" />
+        <scope ilk="function" line="22" lineend="27" name="ceil" signature="ceil($n)">
+          <variable ilk="argument" name="$n" />
+        </scope>
+        <scope ilk="function" line="29" lineend="33" name="add" signature="add()">
+          </scope>
+        <scope ilk="function" line="35" lineend="37" name="cat" signature="cat()" />
+        <scope ilk="function" line="39" lineend="44" name="cat_text" signature="cat_text($f)">
+          <variable ilk="argument" name="$f" />
+        </scope>
+        <scope ilk="function" line="46" lineend="59" name="cp_files" signature="cp_files($from, $to, @files)">
+          <import line="47" module="File::Copy" />
+          <import line="48" module="File::Path" />
+          <variable ilk="argument" name="$from" />
+          <variable ilk="argument" name="$to" />
+          <variable ilk="argument" name="@files" />
+          <import line="47" module="File::Copy" />
+          <import line="48" module="File::Path" />
+        </scope>
+        <scope ilk="function" line="61" lineend="79" name="cp_tree" signature="cp_tree($from, $to)">
+          <import line="62" module="File::Copy" />
+          <import line="63" module="File::Path" />
+          <variable ilk="argument" name="$from" />
+          <variable ilk="argument" name="$to" />
+          <import line="62" module="File::Copy" />
+          <import line="63" module="File::Path" />
+        </scope>
+        <scope ilk="function" line="81" lineend="114" name="file_content" signature="file_content($name)">
+          <import line="90" module="File::Basename" />
+          <import line="91" module="File::Path" />
+          <variable ilk="argument" name="$name" />
+          <import line="90" module="File::Basename" />
+          <import line="91" module="File::Path" />
+        </scope>
+        <scope ilk="function" line="116" lineend="124" name="iso_date" signature="iso_date($y, $m, $d)">
+          <variable ilk="argument" name="$y" />
+          <variable ilk="argument" name="$m" />
+          <variable ilk="argument" name="$d" />
+        </scope>
+        <scope ilk="function" line="126" lineend="134" name="iso_datetime" signature="iso_datetime($Y, $M, $D, $h, $m, $s)">
+          <variable ilk="argument" name="$Y" />
+          <variable ilk="argument" name="$M" />
+          <variable ilk="argument" name="$D" />
+          <variable ilk="argument" name="$h" />
+          <variable ilk="argument" name="$m" />
+          <variable ilk="argument" name="$s" />
+        </scope>
+        <scope ilk="function" line="136" lineend="144" name="xml_esc" signature="xml_esc()" />
+        <scope ilk="function" line="146" lineend="150" name="xml_clean" signature="xml_clean()" />
+        <scope ilk="function" line="152" lineend="157" name="stringf" signature="stringf()">
+          </scope>
+        <scope ilk="function" line="159" lineend="172" name="_fmt" signature="_fmt($p, $orig, $left, $min, $max, $arg, $c)">
+          <variable ilk="argument" name="$p" />
+          <variable ilk="argument" name="$orig" />
+          <variable ilk="argument" name="$left" />
+          <variable ilk="argument" name="$min" />
+          <variable ilk="argument" name="$max" />
+          <variable ilk="argument" name="$arg" />
+          <variable ilk="argument" name="$c" />
+        </scope>
+      </scope>
+    </scope>
+    

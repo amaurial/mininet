@@ -1,0 +1,86 @@
+<scope ilk="blob" lang="Perl" name="Moose::Meta::TypeConstraint">
+      <scope ilk="class" line="2" lineend="519" name="Moose::Meta::TypeConstraint">
+        <import line="12" module="metaclass" symbol="*" />
+        <import line="19" module="Scalar::Util" symbol="blessed" />
+        <import line="19" module="Scalar::Util" symbol="refaddr" />
+        <import line="20" module="Sub::Name" symbol="subname" />
+        <variable line="4" name="$Moose::Meta::TypeConstraint::AUTHORITY" />
+        <variable line="7" name="$Moose::Meta::TypeConstraint::VERSION" />
+        <scope ilk="function" line="51" lineend="54" name="parents" signature="parents()">
+          </scope>
+        <scope ilk="function" line="66" lineend="76" name="new" signature="new($class, $first, @rest)">
+          <variable ilk="argument" name="$class" />
+          <variable ilk="argument" name="$first" />
+          <variable ilk="argument" name="@rest" />
+        </scope>
+        <scope ilk="function" line="80" lineend="93" name="coerce" signature="coerce($self)">
+          <import line="86" module="Moose" />
+          <variable ilk="argument" name="$self" />
+          <import line="86" module="Moose" />
+        </scope>
+        <scope ilk="function" line="95" lineend="112" name="assert_coerce" signature="assert_coerce($self)">
+          <import line="101" module="Moose" />
+          <variable ilk="argument" name="$self" />
+          <import line="101" module="Moose" />
+        </scope>
+        <scope ilk="function" line="114" lineend="118" name="check" signature="check($self, @args)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="@args" />
+        </scope>
+        <scope ilk="function" line="120" lineend="128" name="validate" signature="validate($self, $value)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$value" />
+        </scope>
+        <scope ilk="function" line="130" lineend="138" name="assert_valid" signature="assert_valid($self, $value)">
+          <import line="136" module="Moose" />
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$value" />
+          <import line="136" module="Moose" />
+        </scope>
+        <scope ilk="function" line="140" lineend="150" name="get_message" signature="get_message($self, $value)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$value" />
+        </scope>
+        <scope ilk="function" line="154" lineend="175" name="equals" signature="equals($self, $type_or_name)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$type_or_name" />
+        </scope>
+        <scope ilk="function" line="177" lineend="183" name="is_a_type_of" signature="is_a_type_of($self, $type_or_name)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$type_or_name" />
+        </scope>
+        <scope ilk="function" line="185" lineend="198" name="is_subtype_of" signature="is_subtype_of($self, $type_or_name)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$type_or_name" />
+        </scope>
+        <scope ilk="function" line="202" lineend="205" name="compile_type_constraint" signature="compile_type_constraint($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="209" lineend="227" name="_actually_compile_type_constraint" signature="_actually_compile_type_constraint($self)">
+          <import line="217" module="Moose" />
+          <variable ilk="argument" name="$self" />
+          <import line="217" module="Moose" />
+        </scope>
+        <scope ilk="function" line="229" lineend="241" name="_compile_hand_optimized_type_constraint" signature="_compile_hand_optimized_type_constraint($self)">
+          <import line="235" module="Moose" />
+          <variable ilk="argument" name="$self" />
+          <import line="235" module="Moose" />
+        </scope>
+        <scope ilk="function" line="243" lineend="291" name="_compile_subtype" signature="_compile_subtype($self, $check)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$check" />
+        </scope>
+        <scope ilk="function" line="293" lineend="303" name="_compile_type" signature="_compile_type($self, $check)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$check" />
+        </scope>
+        <scope ilk="function" line="307" lineend="316" name="_collect_all_parents" signature="_collect_all_parents($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="318" lineend="322" name="create_child_type" signature="create_child_type($self, %opts)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="%opts" />
+        </scope>
+      </scope>
+    </scope>
+    

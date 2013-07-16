@@ -1,0 +1,45 @@
+<scope ilk="blob" lang="Perl" name="Perl::Critic::Policy::ErrorHandling::RequireCarping">
+      <scope ilk="class" line="8" lineend="410" name="Perl::Critic::Policy::ErrorHandling::RequireCarping">
+        <import line="13" module="Readonly" symbol="*" />
+        <import line="15" module="Perl::Critic::Utils" symbol="**" />
+        <import line="18" module="Perl::Critic::Utils::PPI" symbol="is_ppi_expression_or_generic_statement" />
+        <variable line="21" name="$VERSION" />
+        <scope ilk="function" line="29" lineend="44" name="supported_parameters" signature="supported_parameters()" />
+        <scope ilk="function" line="46" lineend="46" name="default_severity" signature="default_severity()" />
+        <scope ilk="function" line="47" lineend="47" name="default_themes" signature="default_themes()" />
+        <scope ilk="function" line="48" lineend="48" name="applies_to" signature="applies_to()" />
+        <scope ilk="function" line="52" lineend="78" name="violates" signature="violates()">
+          </scope>
+        <scope ilk="function" line="82" lineend="110" name="_last_flattened_argument_list_element_ends_in_newline" signature="_last_flattened_argument_list_element_ends_in_newline($die_or_warn)">
+          <variable ilk="argument" name="$die_or_warn" />
+        </scope>
+        <scope ilk="function" line="188" lineend="235" name="_find_last_flattened_argument_list_element" signature="_find_last_flattened_argument_list_element($die_or_warn)">
+          <variable ilk="argument" name="$die_or_warn" />
+        </scope>
+        <scope ilk="function" line="241" lineend="254" name="_find_last_element_in_subexpression" signature="_find_last_element_in_subexpression($die_or_warn)">
+          <variable ilk="argument" name="$die_or_warn" />
+        </scope>
+        <scope ilk="function" line="259" lineend="294" name="_determine_if_list_is_a_plain_list_and_get_last_child" signature="_determine_if_list_is_a_plain_list_and_get_last_child($list, $die_or_warn)">
+          <variable ilk="argument" name="$list" />
+          <variable ilk="argument" name="$die_or_warn" />
+        </scope>
+        <scope ilk="function" line="301" lineend="312" name="_is_postfix_operator" signature="_is_postfix_operator($element)">
+          <variable ilk="argument" name="$element" />
+        </scope>
+        <scope ilk="function" line="325" lineend="335" name="_is_simple_list_element_token" signature="_is_simple_list_element_token($element)">
+          <variable ilk="argument" name="$element" />
+        </scope>
+        <scope ilk="function" line="357" lineend="367" name="_is_complex_expression_token" signature="_is_complex_expression_token($element)">
+          <variable ilk="argument" name="$element" />
+        </scope>
+        <scope ilk="function" line="372" lineend="386" name="_is_element_contained_in_subroutine" signature="_is_element_contained_in_subroutine($self, $elem)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$elem" />
+        </scope>
+        <scope ilk="function" line="391" lineend="408" name="_is_element_in_namespace_main" signature="_is_element_in_namespace_main($self, $elem)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$elem" />
+        </scope>
+      </scope>
+    </scope>
+    

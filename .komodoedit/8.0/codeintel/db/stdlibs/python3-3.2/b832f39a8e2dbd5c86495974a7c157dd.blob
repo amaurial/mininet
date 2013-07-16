@@ -1,0 +1,228 @@
+<scope doc="Functions that read and write gzipped files.&#xA;The user of the file doesn&apos;t have to worry about the compression, but random access is not allowed." ilk="blob" lang="Python" name="gzip">
+      <variable citdl="int" line="15" name="FCOMMENT" />
+      <variable citdl="int" line="15" name="FEXTRA" />
+      <variable citdl="int" line="15" name="FHCRC" />
+      <variable citdl="int" line="15" name="FNAME" />
+      <variable citdl="int" line="15" name="FTEXT" />
+      <scope classrefs="BufferedIOBase" doc="The GzipFile class simulates most of the methods of a file object with&#xA;the exception of the readinto() and truncate() methods." ilk="class" line="104" lineend="566" name="GzipFile">
+        <scope ilk="function" line="351" lineend="371" name="peek" returns="str" signature="peek(self, n)">
+          <variable citdl="GzipFile" ilk="argument" name="self" />
+          <variable citdl="int" line="368" name="offset" />
+          <variable citdl="int" line="369" name="remaining" />
+          <variable citdl="int" ilk="argument" name="n" />
+        </scope>
+        <scope ilk="function" line="318" lineend="349" name="read" returns="str" signature="read(self, size=-1)">
+          <variable citdl="GzipFile" ilk="argument" name="self" />
+          <variable citdl="int" line="344" name="offset" />
+          <variable citdl="list" line="345" name="chunk" />
+          <variable citdl="min()" line="327" name="readsize" />
+          <variable citdl="int" ilk="argument" name="size" />
+        </scope>
+        <scope ilk="function" line="227" lineend="250" name="_write_gzip_header" signature="_write_gzip_header(self)">
+          <variable citdl="GzipFile" ilk="argument" name="self" />
+          <variable citdl="int" line="239" name="flags" />
+          <variable citdl="os.path.basename()" line="233" name="fname" />
+          <variable citdl="time.time()" line="243" name="mtime" />
+        </scope>
+        <scope doc="Raises a ValueError if the underlying file object has been&#xA;closed." ilk="function" line="213" lineend="218" name="_check_closed" signature="_check_closed(self)">
+          <variable citdl="GzipFile" ilk="argument" name="self" />
+        </scope>
+        <scope ilk="function" line="498" lineend="499" name="writable" returns="bool" signature="writable(self)">
+          <variable citdl="GzipFile" ilk="argument" name="self" />
+        </scope>
+        <scope ilk="function" line="220" lineend="225" name="_init_write" signature="_init_write(self, filename)">
+          <variable citdl="GzipFile" ilk="argument" name="self" />
+          <variable ilk="argument" name="filename" />
+        </scope>
+        <scope ilk="function" line="468" lineend="473" name="flush" signature="flush(self, zlib_mode=2)">
+          <variable citdl="GzipFile" ilk="argument" name="self" />
+          <variable citdl="zlib.Z_SYNC_FLUSH" ilk="argument" name="zlib_mode" />
+        </scope>
+        <scope ilk="function" line="501" lineend="502" name="seekable" returns="bool" signature="seekable(self)">
+          <variable citdl="GzipFile" ilk="argument" name="self" />
+        </scope>
+        <scope ilk="function" line="453" lineend="466" name="close" signature="close(self)">
+          <variable citdl="GzipFile" ilk="argument" name="self" />
+        </scope>
+        <scope ilk="function" line="252" lineend="254" name="_init_read" signature="_init_read(self)">
+          <variable citdl="GzipFile" ilk="argument" name="self" />
+        </scope>
+        <scope ilk="function" line="256" lineend="295" name="_read_gzip_header" signature="_read_gzip_header(self)">
+          <variable citdl="self.fileobj.read()" line="257" name="magic" />
+          <variable citdl="self.decompress.decompress()" line="294" name="uncompress" />
+          <variable citdl="GzipFile" ilk="argument" name="self" />
+          <variable citdl="self.fileobj.read()" line="280" name="s" />
+          <variable citdl="self.fileobj.unused()" line="292" name="unused" />
+          <variable citdl="ord()" line="274" name="xlen" />
+          <variable citdl="ord()" line="266" name="flag" />
+          <variable citdl="ord()" line="263" name="method" />
+        </scope>
+        <scope ilk="function" line="504" lineend="527" name="seek" returns="int" signature="seek(self, offset, whence=0)">
+          <variable citdl="int" line="513" name="count" />
+          <variable citdl="GzipFile" ilk="argument" name="self" />
+          <variable citdl="int" ilk="argument" name="whence" />
+          <variable citdl="bytes()" line="514" name="chunk" />
+          <variable citdl="int" ilk="argument" name="offset" />
+        </scope>
+        <scope ilk="function" line="529" lineend="566" name="readline" returns="str.join()" signature="readline(self, size=-1)">
+          <variable citdl="read()" line="545" name="c" />
+          <variable citdl="int" line="540" name="readsize" />
+          <variable citdl="sys.maxsize" line="533" name="i" />
+          <variable citdl="list" line="543" name="bufs" />
+          <variable citdl="int" line="532" name="offset" />
+          <variable citdl="GzipFile" ilk="argument" name="self" />
+          <variable citdl="sys.maxsize" ilk="argument" name="size" />
+        </scope>
+        <scope doc="Constructor for the GzipFile class." ilk="function" line="113" lineend="196" name="__init__" signature="__init__(self, filename=None, mode=None, compresslevel=9, fileobj=None, mtime=None)">
+          <variable citdl="fileobj.mode" ilk="argument" name="mode" />
+          <variable citdl="builtins.open()" ilk="argument" name="fileobj" />
+          <variable ilk="argument" name="mtime" />
+          <variable citdl="GzipFile" ilk="argument" name="self" />
+          <variable citdl="int" ilk="argument" name="compresslevel" />
+          <variable citdl="fileobj.name" ilk="argument" name="filename" />
+        </scope>
+        <scope doc="Invoke the underlying file object&apos;s fileno() method." ilk="function" line="475" lineend="481" name="fileno" returns="self.fileobj.fileno()" signature="fileno(self)">
+          <variable citdl="GzipFile" ilk="argument" name="self" />
+        </scope>
+        <scope ilk="function" line="377" lineend="417" name="_read" signature="_read(self, size=1024)">
+          <variable citdl="GzipFile" ilk="argument" name="self" />
+          <variable citdl="self.decompress.decompress()" line="396" name="uncompress" />
+          <variable citdl="self.fileobj.read()" line="390" name="buf" />
+          <variable citdl="int" ilk="argument" name="size" />
+        </scope>
+        <scope ilk="function" line="495" lineend="496" name="readable" returns="bool" signature="readable(self)">
+          <variable citdl="GzipFile" ilk="argument" name="self" />
+        </scope>
+        <scope ilk="function" line="427" lineend="447" name="_read_eof" signature="_read_eof(self)">
+          <variable citdl="read32()" line="432" name="crc32" />
+          <variable citdl="GzipFile" ilk="argument" name="self" />
+          <variable citdl="read32()" line="433" name="isize" />
+          <variable citdl="self.fileobj.read()" line="443" name="c" />
+        </scope>
+        <scope ilk="function" line="297" lineend="316" name="write" returns="len()" signature="write(self, data)">
+          <variable citdl="GzipFile" ilk="argument" name="self" />
+          <variable citdl="data.tobytes()" ilk="argument" name="data" />
+        </scope>
+        <scope ilk="function" line="373" lineend="375" name="_unread" signature="_unread(self, buf)">
+          <variable citdl="GzipFile" ilk="argument" name="self" />
+          <variable ilk="argument" name="buf" />
+        </scope>
+        <scope ilk="function" line="206" lineend="211" name="__repr__" returns="str" signature="__repr__(self)">
+          <variable citdl="GzipFile" ilk="argument" name="self" />
+          <variable citdl="repr()" line="210" name="s" />
+          <variable citdl="builtins.open()" line="207" name="fileobj" />
+        </scope>
+        <scope doc="Return the uncompressed stream file position indicator to&#xA;the beginning of the file" ilk="function" line="483" lineend="493" name="rewind" signature="rewind(self)">
+          <variable citdl="GzipFile" ilk="argument" name="self" />
+        </scope>
+        <scope ilk="function" line="419" lineend="425" name="_add_read_data" signature="_add_read_data(self, data)">
+          <variable citdl="GzipFile" ilk="argument" name="self" />
+          <variable ilk="argument" name="data" />
+          <variable citdl="int" line="421" name="offset" />
+        </scope>
+        <variable attributes="__instancevar__" citdl="int" line="174" name="extrastart" />
+        <variable line="110" name="myfileobj" />
+        <variable attributes="__instancevar__" citdl="read32()" line="193" name="mtime" />
+        <variable attributes="__instancevar__" citdl="int" line="225" name="bufsize" />
+        <variable attributes="__instancevar__" citdl="int" line="223" name="size" />
+        <variable attributes="__instancevar__" citdl="int" line="173" name="extrasize" />
+        <variable attributes="__instancevar__" citdl="str" line="172" name="extrabuf" />
+        <variable citdl="int" line="111" name="max_read_chunk" />
+        <variable attributes="property" citdl="fileobj.name" line="199" name="filename" />
+        <scope attributes="__hidden__" ilk="function" line="199" lineend="204" name="filename (property getter)" returns="str" signature="filename (property getter)()">
+          <import line="200" module="warnings" />
+          <variable citdl="GzipFile" ilk="argument" name="self" />
+        </scope>
+        <variable attributes="property" citdl="bool" line="450" name="closed" />
+        <variable attributes="__instancevar__" citdl="zlib.compressobj()" line="183" name="compress" />
+        <variable attributes="__instancevar__" citdl="zlib.decompressobj()" line="386" name="decompress" />
+        <variable attributes="__instancevar__" citdl="builtins.open()" line="191" name="fileobj" />
+        <variable attributes="__instancevar__" citdl="int" line="192" name="offset" />
+        <variable attributes="__instancevar__" citdl="int" line="177" name="min_readsize" />
+        <variable attributes="__instancevar__" citdl="fileobj.name" line="175" name="name" />
+        <variable attributes="__instancevar__" citdl="list" line="224" name="writebuf" />
+        <variable attributes="protected __instancevar__" citdl="True" line="168" name="_new_member" />
+        <variable attributes="__instancevar__" citdl="int" line="222" name="crc" />
+        <variable attributes="__instancevar__" citdl="int" line="166" name="mode" />
+        <scope attributes="__hidden__" ilk="function" line="450" lineend="451" name="closed (property getter)" returns="bool" signature="closed (property getter)()">
+          <variable citdl="GzipFile" ilk="argument" name="self" />
+        </scope>
+      </scope>
+      <scope doc="Return the low-order 32 bits, as a non-negative int" ilk="function" line="27" lineend="29" name="LOWU32" returns="int" signature="LOWU32(i)">
+        <variable ilk="argument" name="i" />
+      </scope>
+      <variable citdl="int" line="17" name="READ" />
+      <scope doc="Return i as an unsigned integer, assuming it fits in 32&#xA;bits." ilk="function" line="19" lineend="25" name="U32" signature="U32(i)">
+        <variable ilk="argument" name="i" />
+      </scope>
+      <variable citdl="int" line="17" name="WRITE" />
+      <variable citdl="list" line="13" name="__all__" />
+      <import module="builtins" />
+      <scope doc="Compress data in one shot and return the compressed string." ilk="function" line="569" lineend="576" name="compress" returns="buf.getvalue()" signature="compress(data, compresslevel=9)">
+        <variable citdl="io.BytesIO()" line="573" name="buf" />
+        <variable citdl="int" ilk="argument" name="compresslevel" />
+        <variable ilk="argument" name="data" />
+      </scope>
+      <scope doc="Decompress a gzip compressed string in one shot." ilk="function" line="578" lineend="583" name="decompress" returns="f.read()" signature="decompress(data)">
+        <variable ilk="argument" name="data" />
+      </scope>
+      <import module="io" />
+      <scope doc="Shorthand for GzipFile(filename, mode, compresslevel)." ilk="function" line="39" lineend="46" name="open" returns="GzipFile()" signature="open(filename, mode=&apos;rb&apos;, compresslevel=9)">
+        <variable citdl="int" ilk="argument" name="compresslevel" />
+        <variable citdl="str" ilk="argument" name="mode" />
+        <variable ilk="argument" name="filename" />
+      </scope>
+      <import module="os" />
+      <scope ilk="function" line="36" lineend="37" name="read32" signature="read32(input)">
+        <variable ilk="argument" name="input" />
+      </scope>
+      <import module="struct" />
+      <import module="sys" />
+      <import module="time" />
+      <scope ilk="function" line="31" lineend="34" name="write32u" signature="write32u(output, value)">
+        <variable ilk="argument" name="output" />
+        <variable ilk="argument" name="value" />
+      </scope>
+      <import module="zlib" />
+      <scope attributes="protected __hidden__" ilk="function" line="586" lineend="622" name="_test" signature="_test()">
+        <variable citdl="list" line="590" name="args" />
+        <variable citdl="bool" line="591" name="decompress" />
+        <variable citdl="sys.stdin.buffer" line="599" name="f" />
+        <variable citdl="sys.stdout.buffer" line="600" name="g" />
+        <variable citdl="f.read()" line="615" name="chunk" />
+      </scope>
+      <scope attributes="protected __hidden__" doc="Minimal read-only file object that prepends a string to the contents&#xA;of an actual file. Shouldn&apos;t be used outside of gzip.py, as it lacks&#xA;essential functionality." ilk="class" line="48" lineend="101" name="_PaddedFile">
+        <scope attributes="__ctor__" ilk="function" line="53" lineend="57" name="__init__" signature="_PaddedFile(f, prepend=&apos;&apos;)">
+          <variable citdl="_PaddedFile" ilk="argument" name="self" />
+          <variable ilk="argument" name="f" />
+          <variable citdl="str" ilk="argument" name="prepend" />
+        </scope>
+        <variable attributes="protected __instancevar__" citdl="str" line="54" name="_buffer" />
+        <variable attributes="protected __instancevar__" citdl="len()" line="55" name="_length" />
+        <variable attributes="__instancevar__" line="56" name="file" />
+        <variable attributes="protected __instancevar__" citdl="int" line="57" name="_read" />
+        <scope ilk="function" line="59" lineend="70" name="read" returns="list" signature="read(size)">
+          <variable citdl="_PaddedFile" ilk="argument" name="self" />
+          <variable ilk="argument" name="size" />
+          <variable citdl="int" line="63" name="read" />
+        </scope>
+        <scope ilk="function" line="72" lineend="81" name="prepend" signature="prepend(prepend=&apos;&apos;, readprevious=False)">
+          <variable citdl="_PaddedFile" ilk="argument" name="self" />
+          <variable citdl="str" ilk="argument" name="prepend" />
+          <variable citdl="False" ilk="argument" name="readprevious" />
+        </scope>
+        <scope ilk="function" line="83" lineend="86" name="unused" returns="str" signature="unused()">
+          <variable citdl="_PaddedFile" ilk="argument" name="self" />
+        </scope>
+        <scope ilk="function" line="88" lineend="98" name="seek" returns="self.file.seek()" signature="seek(offset, whence=0)">
+          <variable citdl="_PaddedFile" ilk="argument" name="self" />
+          <variable ilk="argument" name="offset" />
+          <variable citdl="int" ilk="argument" name="whence" />
+        </scope>
+        <scope ilk="function" line="100" lineend="101" name="__getattr__" returns="getattr()" signature="__getattr__(name)">
+          <variable citdl="_PaddedFile" ilk="argument" name="self" />
+          <variable ilk="argument" name="name" />
+        </scope>
+      </scope>
+    </scope>
+    

@@ -1,0 +1,110 @@
+<scope ilk="blob" lang="Perl" name="Moose::Meta::Role">
+      <scope ilk="class" line="2" lineend="1043" name="Moose::Meta::Role">
+        <import line="12" module="metaclass" symbol="*" />
+        <import line="14" module="Scalar::Util" symbol="blessed" />
+        <import line="15" module="Carp" symbol="confess" />
+        <import line="16" module="Devel::GlobalDestruction" symbol="in_global_destruction" />
+        <import line="18" module="Moose::Meta::Class" symbol="*" />
+        <import line="19" module="Moose::Meta::Role::Attribute" symbol="*" />
+        <import line="20" module="Moose::Meta::Role::Method" symbol="*" />
+        <import line="21" module="Moose::Meta::Role::Method::Required" symbol="*" />
+        <import line="22" module="Moose::Meta::Role::Method::Conflicting" symbol="*" />
+        <import line="23" module="Moose::Meta::Method::Meta" symbol="*" />
+        <import line="24" module="Moose::Util" symbol="ensure_all_roles" />
+        <import line="25" module="Class::MOP::MiniTrait" symbol="*" />
+        <variable line="4" name="$Moose::Meta::Role::AUTHORITY" />
+        <variable line="7" name="$Moose::Meta::Role::VERSION" />
+        <scope ilk="function" line="169" lineend="188" name="initialize" signature="initialize($class, $pkg, %options)">
+          <variable ilk="argument" name="$class" />
+          <variable ilk="argument" name="$pkg" />
+          <variable ilk="argument" name="%options" />
+        </scope>
+        <scope ilk="function" line="190" lineend="228" name="reinitialize" signature="reinitialize($self, $pkg, %options)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$pkg" />
+          <variable ilk="argument" name="%options" />
+        </scope>
+        <scope ilk="function" line="230" lineend="240" name="_restore_metaobjects_from" signature="_restore_metaobjects_from($self, $old_meta)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$old_meta" />
+        </scope>
+        <scope ilk="function" line="242" lineend="254" name="add_attribute" signature="add_attribute($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="256" lineend="260" name="_attach_attribute" signature="_attach_attribute($self, $attribute)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$attribute" />
+        </scope>
+        <scope ilk="function" line="262" lineend="274" name="add_required_methods" signature="add_required_methods($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="276" lineend="288" name="add_conflicting_method" signature="add_conflicting_method($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="362" lineend="368" name="add_override_method_modifier" signature="add_override_method_modifier($self, $method_name, $method)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$method_name" />
+          <variable ilk="argument" name="$method" />
+        </scope>
+        <scope ilk="function" line="370" lineend="376" name="has_override_method_modifier" signature="has_override_method_modifier($self, $method_name)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$method_name" />
+        </scope>
+        <scope ilk="function" line="378" lineend="381" name="get_override_method_modifier" signature="get_override_method_modifier($self, $method_name)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$method_name" />
+        </scope>
+        <scope ilk="function" line="385" lineend="389" name="get_method_modifier_list" signature="get_method_modifier_list($self, $modifier_type)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$modifier_type" />
+        </scope>
+        <scope ilk="function" line="391" lineend="391" name="_meta_method_class" signature="_meta_method_class()" />
+        <scope ilk="function" line="401" lineend="407" name="add_role" signature="add_role($self, $role)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$role" />
+        </scope>
+        <scope ilk="function" line="409" lineend="417" name="calculate_all_roles" signature="calculate_all_roles($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="419" lineend="431" name="does_role" signature="does_role($self, $role)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$role" />
+        </scope>
+        <scope ilk="function" line="433" lineend="433" name="find_method_by_name" signature="find_method_by_name()" />
+        <scope ilk="function" line="439" lineend="491" name="apply" signature="apply($self, $other, %args)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$other" />
+          <variable ilk="argument" name="%args" />
+        </scope>
+        <scope ilk="function" line="493" lineend="493" name="composition_class_roles" signature="composition_class_roles()" />
+        <scope ilk="function" line="495" lineend="517" name="combine" signature="combine($class, @role_specs)">
+          <import line="498" module="Moose::Meta::Role::Composite" />
+          <variable ilk="argument" name="$class" />
+          <variable ilk="argument" name="@role_specs" />
+          <import line="498" module="Moose::Meta::Role::Composite" />
+        </scope>
+        <scope ilk="function" line="519" lineend="522" name="_role_for_combination" signature="_role_for_combination($self, $params)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$params" />
+        </scope>
+        <scope ilk="function" line="524" lineend="572" name="create" signature="create($role, $package_name, %options)">
+          <variable ilk="argument" name="$role" />
+          <variable ilk="argument" name="$package_name" />
+          <variable ilk="argument" name="%options" />
+        </scope>
+        <scope ilk="function" line="574" lineend="585" name="consumers" signature="consumers($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="604" lineend="608" name="is_anon_role" signature="is_anon_role($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="610" lineend="615" name="create_anon_role" signature="create_anon_role($role, %options)">
+          <variable ilk="argument" name="$role" />
+          <variable ilk="argument" name="%options" />
+        </scope>
+        <scope ilk="function" line="623" lineend="645" name="DESTROY" signature="DESTROY($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+      </scope>
+    </scope>
+    

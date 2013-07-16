@@ -1,0 +1,93 @@
+<scope ilk="blob" lang="Perl" name="Pod::InputObjects">
+      <scope ilk="class" line="11" lineend="16" name="Pod::InputObjects">
+        <variable line="14" name="$VERSION" />
+      </scope>
+      <scope ilk="class" line="82" lineend="211" name="Pod::InputSource">
+        <variable line="170" name="*filename" />
+        <scope attributes="__ctor__" ilk="function" line="127" lineend="144" name="new" signature="new($this)">
+          <variable ilk="argument" name="$this" />
+        </scope>
+        <scope ilk="function" line="164" lineend="167" name="name" signature="name()" />
+        <scope ilk="function" line="187" lineend="189" name="handle" signature="handle()" />
+        <scope ilk="function" line="208" lineend="211" name="was_cutting" signature="was_cutting()" />
+      </scope>
+      <scope ilk="class" line="217" lineend="402" name="Pod::Paragraph">
+        <variable line="297" name="*name" />
+        <variable line="381" name="*ptree" />
+        <scope attributes="__ctor__" ilk="function" line="255" lineend="278" name="new" signature="new($this)">
+          <variable ilk="argument" name="$this" />
+        </scope>
+        <scope ilk="function" line="291" lineend="294" name="cmd_name" signature="cmd_name()" />
+        <scope ilk="function" line="309" lineend="312" name="text" signature="text()" />
+        <scope ilk="function" line="325" lineend="329" name="raw_text" signature="raw_text()" />
+        <scope ilk="function" line="343" lineend="345" name="cmd_prefix" signature="cmd_prefix()" />
+        <scope ilk="function" line="359" lineend="361" name="cmd_separator" signature="cmd_separator()" />
+        <scope ilk="function" line="375" lineend="378" name="parse_tree" signature="parse_tree()" />
+        <scope ilk="function" line="398" lineend="402" name="file_line" signature="file_line()">
+          </scope>
+      </scope>
+      <scope ilk="class" line="408" lineend="713" name="Pod::InteriorSequence">
+        <variable line="509" name="*name" />
+        <variable line="636" name="*ldelim" />
+        <variable line="653" name="*rdelim" />
+        <variable line="674" name="*ptree" />
+        <scope attributes="__ctor__" ilk="function" line="449" lineend="491" name="new" signature="new($this)">
+          <variable ilk="argument" name="$this" />
+        </scope>
+        <scope ilk="function" line="503" lineend="506" name="cmd_name" signature="cmd_name()" />
+        <scope ilk="function" line="516" lineend="527" name="_set_child2parent_links" signature="_set_child2parent_links($self, @children)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="@children" />
+        </scope>
+        <scope ilk="function" line="531" lineend="540" name="_unset_child2parent_links" signature="_unset_child2parent_links($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="554" lineend="559" name="prepend" signature="prepend($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="573" lineend="578" name="append" signature="append($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="592" lineend="596" name="nested" signature="nested($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="609" lineend="617" name="raw_text" signature="raw_text($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="630" lineend="633" name="left_delimiter" signature="left_delimiter()" />
+        <scope ilk="function" line="647" lineend="650" name="right_delimiter" signature="right_delimiter()" />
+        <scope ilk="function" line="668" lineend="671" name="parse_tree" signature="parse_tree()" />
+        <scope ilk="function" line="691" lineend="695" name="file_line" signature="file_line()">
+          </scope>
+        <scope ilk="function" line="708" lineend="713" name="DESTROY" signature="DESTROY()" />
+      </scope>
+      <scope ilk="class" line="719" lineend="936" name="Pod::ParseTree">
+        <variable line="788" name="*parse_tree" />
+        <variable line="788" name="*ptree" />
+        <variable line="822" name="@ptree" />
+        <scope attributes="__ctor__" ilk="function" line="750" lineend="760" name="new" signature="new($this)">
+          <variable ilk="argument" name="$this" />
+        </scope>
+        <scope ilk="function" line="779" lineend="785" name="top" signature="top($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="802" lineend="808" name="children" signature="children($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="824" lineend="836" name="prepend" signature="prepend($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="850" lineend="868" name="append" signature="append($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="879" lineend="886" name="raw_text" signature="raw_text($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="892" lineend="900" name="_unset_child2parent_links" signature="_unset_child2parent_links($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="902" lineend="904" name="_set_child2parent_links" signature="_set_child2parent_links()" />
+        <scope ilk="function" line="915" lineend="920" name="DESTROY" signature="DESTROY()" />
+      </scope>
+    </scope>
+    

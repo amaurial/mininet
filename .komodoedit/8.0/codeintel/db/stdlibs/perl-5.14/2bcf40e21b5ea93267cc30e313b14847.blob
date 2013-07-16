@@ -1,0 +1,25 @@
+<scope ilk="blob" lang="Perl" name="Pod::Simple::TiedOutFH">
+      <scope ilk="class" line="3" lineend="63" name="Pod::Simple::TiedOutFH">
+        <import line="4" module="Symbol" symbol="gensym" />
+        <import line="5" module="Carp" />
+        <variable line="6" name="$VERSION" />
+        <scope ilk="function" line="11" lineend="28" name="handle_on" signature="handle_on($class)">
+          <variable ilk="argument" name="$class" />
+        </scope>
+        <scope attributes="__ctor__" ilk="function" line="32" lineend="36" name="TIEHANDLE" signature="TIEHANDLE($class, $scalar_ref)">
+          <variable ilk="argument" name="$class" />
+          <variable ilk="argument" name="$scalar_ref" />
+        </scope>
+        <scope ilk="function" line="38" lineend="45" name="PRINT" signature="PRINT($it)">
+          <variable ilk="argument" name="$it" />
+        </scope>
+        <scope ilk="function" line="47" lineend="49" name="FETCH" signature="FETCH()" />
+        <scope ilk="function" line="51" lineend="56" name="PRINTF" signature="PRINTF($it, $format)">
+          <variable ilk="argument" name="$it" />
+          <variable ilk="argument" name="$format" />
+        </scope>
+        <scope ilk="function" line="58" lineend="58" name="FILENO" signature="FILENO()" />
+        <scope ilk="function" line="60" lineend="60" name="CLOSE" signature="CLOSE()" />
+      </scope>
+    </scope>
+    

@@ -1,0 +1,26 @@
+<scope ilk="blob" lang="Perl" name="Compat5005">
+      <scope ilk="class" line="2" lineend="105" name="JSON::backportPP5005">
+        <variable line="9" name="$JSON::PP5005::VERSION" />
+        <variable line="30" name="*JSON::PP::JSON_PP_encode_ascii" />
+        <variable line="31" name="*JSON::PP::JSON_PP_encode_latin1" />
+        <variable line="32" name="*JSON::PP::JSON_PP_decode_surrogates" />
+        <variable line="33" name="*JSON::PP::JSON_PP_decode_unicode" />
+        <scope ilk="function" line="13" lineend="15" name="utf8::is_utf8" signature="utf8::is_utf8()" />
+        <scope ilk="function" line="17" lineend="18" name="utf8::upgrade" signature="utf8::upgrade()" />
+        <scope ilk="function" line="20" lineend="22" name="utf8::downgrade" signature="utf8::downgrade()" />
+        <scope ilk="function" line="24" lineend="25" name="utf8::encode" signature="utf8::encode()" />
+        <scope ilk="function" line="27" lineend="28" name="utf8::decode" signature="utf8::decode()" />
+        <scope ilk="function" line="36" lineend="36" name="B::SVp_IOK" signature="B::SVp_IOK()" />
+        <scope ilk="function" line="37" lineend="37" name="B::SVp_NOK" signature="B::SVp_NOK()" />
+        <scope ilk="function" line="38" lineend="38" name="B::SVp_POK" signature="B::SVp_POK()" />
+        <scope ilk="function" line="45" lineend="47" name="_encode_ascii" signature="_encode_ascii()" />
+        <scope ilk="function" line="50" lineend="52" name="_encode_latin1" signature="_encode_latin1()" />
+        <scope ilk="function" line="55" lineend="66" name="_decode_surrogates" signature="_decode_surrogates()">
+          </scope>
+        <scope ilk="function" line="69" lineend="90" name="_decode_unicode" signature="_decode_unicode($u)">
+          <variable ilk="argument" name="$u" />
+        </scope>
+        <scope ilk="function" line="93" lineend="102" name="JSON::PP::incr_text" signature="JSON::PP::incr_text()" />
+      </scope>
+    </scope>
+    

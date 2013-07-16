@@ -1,0 +1,221 @@
+<scope doc="&#xA;" ilk="blob" lang="Python" name="xml.dom.pulldom">
+      <variable citdl="str" line="12" name="CHARACTERS" />
+      <variable citdl="str" line="7" name="COMMENT" />
+      <scope classrefs="object" doc="&#xA;" ilk="class" line="205" lineend="288" name="DOMEventStream">
+        <scope ilk="function" line="214" lineend="218" name="reset" signature="reset(self)">
+          <variable citdl="DOMEventStream" ilk="argument" name="self" />
+        </scope>
+        <scope doc="Fallback replacement for getEvent() using the standard SAX2&#xA;interface, which means we slurp the SAX events into memory&#xA;(no performance gain, but we are compatible to all SAX&#xA;parsers)." ilk="function" line="265" lineend="273" name="_slurp" returns="self._emit()" signature="_slurp(self)">
+          <variable citdl="DOMEventStream" ilk="argument" name="self" />
+        </scope>
+        <scope ilk="function" line="250" name="getEvent" signature="getEvent(self)" />
+        <scope ilk="function" line="220" lineend="224" name="__getitem__" returns="getEvent()" signature="__getitem__(self, pos)">
+          <variable citdl="DOMEventStream" ilk="argument" name="self" />
+          <variable ilk="argument" name="pos" />
+          <variable citdl="getEvent()" line="221" name="rc" />
+        </scope>
+        <scope doc="Explicitly release parsing objects" ilk="function" line="283" lineend="288" name="clear" signature="clear()">
+          <variable citdl="DOMEventStream" ilk="argument" name="self" />
+        </scope>
+        <scope ilk="function" line="226" lineend="230" name="__next__" returns="getEvent()" signature="__next__(self)">
+          <variable citdl="DOMEventStream" ilk="argument" name="self" />
+          <variable citdl="getEvent()" line="227" name="rc" />
+        </scope>
+        <scope ilk="function" line="232" lineend="233" name="__iter__" returns="DOMEventStream" signature="__iter__(self)">
+          <variable citdl="DOMEventStream" ilk="argument" name="self" />
+        </scope>
+        <scope doc="Fallback replacement for getEvent() that emits the events&#xA;that _slurp() read previously." ilk="function" line="275" lineend="281" name="_emit" signature="_emit(self)">
+          <variable citdl="DOMEventStream" ilk="argument" name="self" />
+          <variable line="279" name="rc" />
+        </scope>
+        <scope ilk="function" line="235" lineend="248" name="expandNode" signature="expandNode(self, node)">
+          <variable ilk="argument" name="node" />
+          <variable citdl="DOMEventStream" ilk="argument" name="self" />
+          <variable citdl="list" line="237" name="parents" />
+          <variable citdl="getEvent()" line="236" name="event" />
+        </scope>
+        <scope ilk="function" line="206" lineend="212" name="__init__" signature="__init__(self, stream, parser, bufsize)">
+          <variable citdl="DOMEventStream" ilk="argument" name="self" />
+          <variable ilk="argument" name="parser" />
+          <variable ilk="argument" name="bufsize" />
+          <variable ilk="argument" name="stream" />
+        </scope>
+        <variable attributes="__instancevar__" citdl="PullDOM" line="215" name="pulldom" />
+        <variable attributes="__instancevar__" line="208" name="parser" />
+        <variable attributes="__instancevar__" line="209" name="bufsize" />
+        <variable attributes="__instancevar__" line="207" name="stream" />
+      </scope>
+      <variable citdl="str" line="9" name="END_DOCUMENT" />
+      <variable citdl="str" line="6" name="END_ELEMENT" />
+      <scope classrefs="object" doc="&#xA;" ilk="class" line="197" lineend="203" name="ErrorHandler">
+        <scope ilk="function" line="202" lineend="203" name="fatalError" signature="fatalError(self, exception)">
+          <variable citdl="ErrorHandler" ilk="argument" name="self" />
+          <variable ilk="argument" name="exception" />
+        </scope>
+        <scope ilk="function" line="198" lineend="199" name="warning" signature="warning(self, exception)">
+          <variable citdl="ErrorHandler" ilk="argument" name="self" />
+          <variable ilk="argument" name="exception" />
+        </scope>
+        <scope ilk="function" line="200" lineend="201" name="error" signature="error(self, exception)">
+          <variable citdl="ErrorHandler" ilk="argument" name="self" />
+          <variable ilk="argument" name="exception" />
+        </scope>
+      </scope>
+      <variable citdl="str" line="11" name="IGNORABLE_WHITESPACE" />
+      <variable citdl="str" line="10" name="PROCESSING_INSTRUCTION" />
+      <scope classrefs="ContentHandler" doc="&#xA;" ilk="class" line="14" lineend="195" name="PullDOM">
+        <scope ilk="function" line="42" lineend="47" name="startPrefixMapping" signature="startPrefixMapping(self, prefix, uri)">
+          <variable citdl="PullDOM" ilk="argument" name="self" />
+          <variable ilk="argument" name="prefix" />
+          <variable ilk="argument" name="uri" />
+        </scope>
+        <scope ilk="function" line="132" lineend="139" name="comment" signature="comment(self, s)">
+          <variable citdl="self.document.createComment()" line="134" name="node" />
+          <variable citdl="PullDOM" ilk="argument" name="self" />
+          <variable ilk="argument" name="s" />
+          <variable citdl="list" line="138" name="event" />
+        </scope>
+        <scope ilk="function" line="49" lineend="50" name="endPrefixMapping" signature="endPrefixMapping(self, prefix)">
+          <variable citdl="PullDOM" ilk="argument" name="self" />
+          <variable ilk="argument" name="prefix" />
+        </scope>
+        <scope ilk="function" line="141" lineend="148" name="processingInstruction" signature="processingInstruction(self, target, data)">
+          <variable citdl="self.document.createProcessingInstruction()" line="143" name="node" />
+          <variable citdl="PullDOM" ilk="argument" name="self" />
+          <variable ilk="argument" name="data" />
+          <variable ilk="argument" name="target" />
+          <variable citdl="list" line="147" name="event" />
+        </scope>
+        <scope ilk="function" line="128" lineend="130" name="endElement" signature="endElement(self, name)">
+          <variable citdl="PullDOM" ilk="argument" name="self" />
+          <variable ilk="argument" name="name" />
+        </scope>
+        <scope ilk="function" line="34" lineend="37" name="pop" signature="pop(self)">
+          <variable citdl="PullDOM" ilk="argument" name="self" />
+          <variable line="35" name="result" />
+        </scope>
+        <scope ilk="function" line="113" lineend="126" name="startElement" signature="startElement(self, name, attrs)">
+          <variable citdl="self.buildDocument()" line="115" name="node" />
+          <variable citdl="PullDOM" ilk="argument" name="self" />
+          <variable ilk="argument" name="attrs" />
+          <variable ilk="argument" name="name" />
+          <variable citdl="self.document.createAttribute()" line="120" name="attr" />
+        </scope>
+        <scope ilk="function" line="39" lineend="40" name="setDocumentLocator" signature="setDocumentLocator(self, locator)">
+          <variable ilk="argument" name="locator" />
+          <variable citdl="PullDOM" ilk="argument" name="self" />
+        </scope>
+        <scope ilk="function" line="52" lineend="107" name="startElementNS" signature="startElementNS(self, name, tagName, attrs)">
+          <variable citdl="self.buildDocument()" line="72" name="node" />
+          <variable ilk="argument" name="name" />
+          <variable citdl="PullDOM" ilk="argument" name="self" />
+          <variable citdl="str" line="54" name="xmlns_uri" />
+          <variable citdl="a_localname" line="87" name="qname" />
+          <variable line="66" name="prefix" />
+          <variable ilk="argument" name="attrs" />
+          <variable citdl="localname" ilk="argument" name="tagName" />
+          <variable citdl="getattr()" line="55" name="xmlns_attrs" />
+          <variable citdl="self.document.createAttributeNS()" line="90" name="attr" />
+        </scope>
+        <scope ilk="function" line="165" lineend="187" name="buildDocument" returns="node.firstChild" signature="buildDocument(self, uri, tagname)">
+          <variable citdl="self.documentFactory.createDocument()" line="168" name="node" />
+          <variable citdl="PullDOM" ilk="argument" name="self" />
+          <variable ilk="argument" name="uri" />
+          <variable ilk="argument" name="tagname" />
+          <variable citdl="self.document.createComment()" line="177" name="n" />
+        </scope>
+        <scope ilk="function" line="155" lineend="158" name="characters" signature="characters(self, chars)">
+          <variable citdl="self.document.createTextNode()" line="156" name="node" />
+          <variable citdl="PullDOM" ilk="argument" name="self" />
+          <variable ilk="argument" name="chars" />
+        </scope>
+        <scope ilk="function" line="150" lineend="153" name="ignorableWhitespace" signature="ignorableWhitespace(self, chars)">
+          <variable citdl="self.document.createTextNode()" line="151" name="node" />
+          <variable citdl="PullDOM" ilk="argument" name="self" />
+          <variable ilk="argument" name="chars" />
+        </scope>
+        <scope ilk="function" line="18" lineend="32" name="__init__" signature="__init__(self, documentFactory=None)">
+          <variable citdl="PullDOM" ilk="argument" name="self" />
+          <variable ilk="argument" name="documentFactory" />
+        </scope>
+        <scope ilk="function" line="109" lineend="111" name="endElementNS" signature="endElementNS(self, name, tagName)">
+          <variable citdl="PullDOM" ilk="argument" name="self" />
+          <variable ilk="argument" name="name" />
+          <variable ilk="argument" name="tagName" />
+        </scope>
+        <scope doc="Explicitly release parsing structures" ilk="function" line="193" lineend="195" name="clear" signature="clear()">
+          <variable citdl="PullDOM" ilk="argument" name="self" />
+        </scope>
+        <scope ilk="function" line="160" lineend="163" name="startDocument" signature="startDocument(self)">
+          <variable citdl="PullDOM" ilk="argument" name="self" />
+        </scope>
+        <scope ilk="function" line="189" lineend="191" name="endDocument" signature="endDocument(self)">
+          <variable citdl="PullDOM" ilk="argument" name="self" />
+        </scope>
+        <variable attributes="__instancevar__" citdl="xml.dom.minidom.Document.implementation" line="20" name="documentFactory" />
+        <variable attributes="protected __instancevar__" citdl="list" line="30" name="_ns_contexts" />
+        <variable attributes="__instancevar__" citdl="list" line="32" name="pending_events" />
+        <variable attributes="protected __instancevar__" citdl="self._ns_contexts.pop()" line="31" name="_current_context" />
+        <variable attributes="__instancevar__" citdl="list" line="23" name="elementStack" />
+        <variable attributes="protected __instancevar__" citdl="list" line="44" name="_xmlns_attrs" />
+        <variable attributes="protected" line="15" name="_locator" />
+        <variable attributes="__instancevar__" citdl="e" line="22" name="lastEvent" />
+        <variable attributes="__instancevar__" citdl="list" line="21" name="firstEvent" />
+        <variable attributes="__instancevar__" citdl="self.elementStack.append" line="24" name="push" />
+        <variable citdl="self.documentFactory.createDocument()" line="16" name="document" />
+      </scope>
+      <scope classrefs="PullDOM" doc="&#xA;" ilk="class" line="290" lineend="320" name="SAX2DOM">
+        <scope ilk="function" line="298" lineend="302" name="startElement" signature="startElement(self, name, attrs)">
+          <variable ilk="argument" name="name" />
+          <variable citdl="SAX2DOM" ilk="argument" name="self" />
+          <variable ilk="argument" name="attrs" />
+          <variable line="301" name="parentNode" />
+          <variable line="300" name="curNode" />
+        </scope>
+        <scope ilk="function" line="292" lineend="296" name="startElementNS" signature="startElementNS(self, name, tagName, attrs)">
+          <variable ilk="argument" name="name" />
+          <variable ilk="argument" name="tagName" />
+          <variable citdl="SAX2DOM" ilk="argument" name="self" />
+          <variable line="294" name="curNode" />
+          <variable line="295" name="parentNode" />
+          <variable ilk="argument" name="attrs" />
+        </scope>
+        <scope ilk="function" line="316" lineend="320" name="characters" signature="characters(self, chars)">
+          <variable line="318" name="node" />
+          <variable citdl="SAX2DOM" ilk="argument" name="self" />
+          <variable ilk="argument" name="chars" />
+          <variable line="319" name="parentNode" />
+        </scope>
+        <scope ilk="function" line="304" lineend="308" name="processingInstruction" signature="processingInstruction(self, target, data)">
+          <variable line="306" name="node" />
+          <variable citdl="SAX2DOM" ilk="argument" name="self" />
+          <variable ilk="argument" name="data" />
+          <variable ilk="argument" name="target" />
+          <variable line="307" name="parentNode" />
+        </scope>
+        <scope ilk="function" line="310" lineend="314" name="ignorableWhitespace" signature="ignorableWhitespace(self, chars)">
+          <variable line="312" name="node" />
+          <variable citdl="SAX2DOM" ilk="argument" name="self" />
+          <variable ilk="argument" name="chars" />
+          <variable line="313" name="parentNode" />
+        </scope>
+      </scope>
+      <variable citdl="str" line="8" name="START_DOCUMENT" />
+      <variable citdl="str" line="5" name="START_ELEMENT" />
+      <variable citdl="int" line="323" name="default_bufsize" />
+      <scope ilk="function" line="325" lineend="334" name="parse" returns="DOMEventStream" signature="parse(stream_or_string, parser=None, bufsize=None)">
+        <variable citdl="xml.sax.make_parser()" ilk="argument" name="parser" />
+        <variable ilk="argument" name="stream_or_string" />
+        <variable citdl="int" ilk="argument" name="bufsize" />
+        <variable citdl="open()" line="329" name="stream" />
+      </scope>
+      <scope ilk="function" line="336" lineend="346" name="parseString" returns="DOMEventStream" signature="parseString(string, parser=None)">
+        <variable citdl="xml.sax.make_parser()" ilk="argument" name="parser" />
+        <variable citdl="StringIO()" line="343" name="buf" />
+        <variable citdl="len()" line="342" name="bufsize" />
+        <variable ilk="argument" name="string" />
+      </scope>
+      <import module="types" />
+      <import module="xml" />
+    </scope>
+    

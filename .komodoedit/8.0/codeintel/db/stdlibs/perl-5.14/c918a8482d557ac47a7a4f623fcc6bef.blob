@@ -1,0 +1,43 @@
+<scope ilk="blob" lang="Perl" name="Perl::Critic::Policy::Variables::RequireNegativeIndices">
+      <scope ilk="class" line="8" lineend="184" name="Perl::Critic::Policy::Variables::RequireNegativeIndices">
+        <import line="13" module="Readonly" symbol="*" />
+        <import line="15" module="Perl::Critic::Utils" symbol="**" />
+        <variable line="18" name="$VERSION" />
+        <scope ilk="function" line="27" lineend="27" name="supported_parameters" signature="supported_parameters()" />
+        <scope ilk="function" line="28" lineend="28" name="default_severity" signature="default_severity()" />
+        <scope ilk="function" line="29" lineend="29" name="default_themes" signature="default_themes()" />
+        <scope ilk="function" line="30" lineend="30" name="applies_to" signature="applies_to()" />
+        <scope ilk="function" line="34" lineend="42" name="violates" signature="violates($self, $elem, $doc)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$elem" />
+          <variable ilk="argument" name="$doc" />
+        </scope>
+        <scope ilk="function" line="46" lineend="62" name="_is_bad_index" signature="_is_bad_index($elem)">
+          <variable ilk="argument" name="$elem" />
+        </scope>
+        <scope ilk="function" line="64" lineend="82" name="_is_bad_var_in_index" signature="_is_bad_var_in_index($expr)">
+          <variable ilk="argument" name="$expr" />
+        </scope>
+        <scope ilk="function" line="84" lineend="92" name="_arrayindex" signature="_arrayindex($expr)">
+          <variable ilk="argument" name="$expr" />
+        </scope>
+        <scope ilk="function" line="94" lineend="121" name="_cast" signature="_cast($expr)">
+          <variable ilk="argument" name="$expr" />
+        </scope>
+        <scope ilk="function" line="123" lineend="131" name="_symbol" signature="_symbol($expr)">
+          <variable ilk="argument" name="$expr" />
+        </scope>
+        <scope ilk="function" line="133" lineend="148" name="_is_minus_number" signature="_is_minus_number(@expr)">
+          <variable ilk="argument" name="@expr" />
+        </scope>
+        <scope ilk="function" line="150" lineend="171" name="_is_array_name" signature="_is_array_name($elem, $name, $isref)">
+          <variable ilk="argument" name="$elem" />
+          <variable ilk="argument" name="$name" />
+          <variable ilk="argument" name="$isref" />
+        </scope>
+        <scope ilk="function" line="173" lineend="180" name="_is_dereferencer" signature="_is_dereferencer($elem)">
+          <variable ilk="argument" name="$elem" />
+        </scope>
+      </scope>
+    </scope>
+    

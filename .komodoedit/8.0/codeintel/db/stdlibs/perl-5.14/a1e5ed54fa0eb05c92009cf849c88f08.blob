@@ -1,0 +1,35 @@
+<scope ilk="blob" lang="Perl" name="IPC::Msg">
+      <scope ilk="class" line="17" lineend="118" name="IPC::Msg">
+        <import line="19" module="IPC::SysV" symbol="IPC_STAT" />
+        <import line="19" module="IPC::SysV" symbol="IPC_SET" />
+        <import line="19" module="IPC::SysV" symbol="IPC_RMID" />
+        <import line="22" module="Carp" symbol="*" />
+        <variable line="21" name="$VERSION" />
+        <scope ilk="function" line="51" lineend="60" name="new" signature="new($class)">
+          <variable ilk="argument" name="$class" />
+        </scope>
+        <scope ilk="function" line="62" lineend="65" name="id" signature="id($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="67" lineend="73" name="stat" signature="stat($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="75" lineend="93" name="set" signature="set($self, %arg)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="%arg" />
+        </scope>
+        <scope ilk="function" line="95" lineend="98" name="remove" signature="remove($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="100" lineend="109" name="rcv" signature="rcv($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="111" lineend="115" name="snd" signature="snd($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+      </scope>
+      <scope ilk="class" line="31" lineend="48" name="IPC::Msg::stat">
+        <import line="33" module="Class::Struct" symbol="struct" />
+      </scope>
+    </scope>
+    

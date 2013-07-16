@@ -1,0 +1,74 @@
+<scope ilk="blob" lang="Perl" name="App::Prove::State">
+      <scope classrefs="TAP::Base" ilk="class" line="1" lineend="518" name="App::Prove::State">
+        <import line="6" module="File::Find" symbol="*" />
+        <import line="7" module="File::Spec" symbol="*" />
+        <import line="8" module="Carp" symbol="*" />
+        <import line="10" module="App::Prove::State::Result" symbol="*" />
+        <import line="11" module="TAP::Parser::YAMLish::Reader" />
+        <import line="12" module="TAP::Parser::YAMLish::Writer" />
+        <import line="13" module="TAP::Base" symbol="*" />
+        <variable line="4" name="$VERSION" />
+        <variable line="4" name="@ISA" />
+        <scope attributes="__ctor__" ilk="function" line="75" lineend="97" name="new" signature="new($class)">
+          <variable ilk="argument" name="$class" />
+        </scope>
+        <scope ilk="function" line="114" lineend="118" name="extensions" signature="extensions($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="126" lineend="129" name="results" signature="results($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="137" lineend="142" name="commit" signature="commit($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="206" lineend="280" name="apply_switch" signature="apply_switch($self, @opts)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="@opts" />
+        </scope>
+        <scope ilk="function" line="282" lineend="285" name="_select" signature="_select($self, %spec)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="%spec" />
+        </scope>
+        <scope ilk="function" line="293" lineend="309" name="get_tests" signature="get_tests($self, $recurse, @argv)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$recurse" />
+          <variable ilk="argument" name="@argv" />
+        </scope>
+        <scope ilk="function" line="311" lineend="319" name="_query" signature="_query($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="321" lineend="348" name="_query_clause" signature="_query_clause($self, $clause)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$clause" />
+        </scope>
+        <scope ilk="function" line="350" lineend="375" name="_get_raw_tests" signature="_get_raw_tests($self, $recurse, @argv)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$recurse" />
+          <variable ilk="argument" name="@argv" />
+        </scope>
+        <scope ilk="function" line="377" lineend="395" name="_expand_dir_recursive" signature="_expand_dir_recursive($self, $dir, $extensions)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$dir" />
+          <variable ilk="argument" name="$extensions" />
+        </scope>
+        <scope ilk="function" line="414" lineend="443" name="observe_test" signature="observe_test($self, $test_info, $parser)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$test_info" />
+          <variable ilk="argument" name="$parser" />
+        </scope>
+        <scope ilk="function" line="451" lineend="462" name="save" signature="save($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="470" lineend="492" name="load" signature="load($self, $name)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$name" />
+        </scope>
+        <scope ilk="function" line="494" lineend="508" name="_prune_and_stamp" signature="_prune_and_stamp($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="510" lineend="516" name="_regen_seq" signature="_regen_seq($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+      </scope>
+    </scope>
+    

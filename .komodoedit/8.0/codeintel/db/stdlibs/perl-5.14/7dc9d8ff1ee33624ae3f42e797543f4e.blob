@@ -1,0 +1,90 @@
+<scope ilk="blob" lang="Perl" name="Benchmark">
+      <scope classrefs="Exporter" ilk="class" line="1" lineend="1044" name="Benchmark">
+        <import line="432" module="Carp" symbol="*" />
+        <import line="433" module="Exporter" symbol="*" />
+        <variable line="435" name="$VERSION" />
+        <variable line="435" name="%EXPORT_TAGS" />
+        <variable line="435" name="@EXPORT" />
+        <variable line="435" name="@EXPORT_OK" />
+        <variable line="435" name="@ISA" />
+        <variable line="470" name="$Debug" />
+        <variable line="470" name="$Default_Format" />
+        <variable line="470" name="$Default_Style" />
+        <variable line="470" name="$Min_Count" />
+        <variable line="470" name="$Min_CPU" />
+        <variable line="471" name="$Do_Cache" />
+        <variable line="471" name="%_Usage" />
+        <variable line="471" name="%Cache" />
+        <scope ilk="function" line="426" lineend="426" name="_doeval" signature="_doeval()" />
+        <scope ilk="function" line="449" lineend="449" name="mytime" signature="mytime()" />
+        <scope ilk="function" line="453" lineend="458" name="BEGIN" signature="BEGIN()" />
+        <scope ilk="function" line="460" lineend="468" name="import" signature="import($class)">
+          <variable ilk="argument" name="$class" />
+        </scope>
+        <scope ilk="function" line="473" lineend="484" name="init" signature="init()" />
+        <scope ilk="function" line="486" lineend="486" name="debug" signature="debug()" />
+        <scope ilk="function" line="488" lineend="492" name="usage" signature="usage()">
+          </scope>
+        <scope attributes="__exportable__" ilk="function" line="501" lineend="504" name="clearcache" signature="clearcache()" />
+        <scope attributes="__exportable__" ilk="function" line="510" lineend="513" name="clearallcache" signature="clearallcache()" />
+        <scope attributes="__exportable__" ilk="function" line="519" lineend="522" name="enablecache" signature="enablecache()" />
+        <scope attributes="__exportable__" ilk="function" line="528" lineend="531" name="disablecache" signature="disablecache()" />
+        <scope attributes="__ctor__" ilk="function" line="536" lineend="538" name="new" signature="new()">
+          </scope>
+        <scope ilk="function" line="540" lineend="540" name="cpu_p" signature="cpu_p()">
+          </scope>
+        <scope ilk="function" line="541" lineend="541" name="cpu_c" signature="cpu_c()">
+          </scope>
+        <scope ilk="function" line="542" lineend="542" name="cpu_a" signature="cpu_a()">
+          </scope>
+        <scope ilk="function" line="543" lineend="543" name="real" signature="real()">
+          </scope>
+        <scope ilk="function" line="544" lineend="544" name="iters" signature="iters()" />
+        <scope attributes="__ctor__ __exported__" ilk="function" line="551" lineend="563" name="timediff" signature="timediff($a, $b)">
+          <variable ilk="argument" name="$a" />
+          <variable ilk="argument" name="$b" />
+        </scope>
+        <scope attributes="__ctor__ __exportable__" ilk="function" line="569" lineend="579" name="timesum" signature="timesum($a, $b)">
+          <variable ilk="argument" name="$a" />
+          <variable ilk="argument" name="$b" />
+        </scope>
+        <scope attributes="__exported__" ilk="function" line="586" lineend="615" name="timestr" signature="timestr($tr, $style, $f)">
+          <variable ilk="argument" name="$tr" />
+          <variable ilk="argument" name="$style" />
+          <variable ilk="argument" name="$f" />
+        </scope>
+        <scope ilk="function" line="617" lineend="620" name="timedebug" signature="timedebug($msg, $t)">
+          <variable ilk="argument" name="$msg" />
+          <variable ilk="argument" name="$t" />
+        </scope>
+        <scope ilk="function" line="628" lineend="668" name="runloop" signature="runloop($n, $c)">
+          <variable ilk="argument" name="$n" />
+          <variable ilk="argument" name="$c" />
+        </scope>
+        <scope attributes="__exported__" ilk="function" line="675" lineend="702" name="timeit" signature="timeit($n, $code)">
+          <variable ilk="argument" name="$n" />
+          <variable ilk="argument" name="$code" />
+        </scope>
+        <scope attributes="__ctor__ __exportable__" ilk="function" line="714" lineend="798" name="countit" signature="countit($tmax, $code)">
+          <variable ilk="argument" name="$tmax" />
+          <variable ilk="argument" name="$code" />
+        </scope>
+        <scope ilk="function" line="802" lineend="805" name="n_to_for" signature="n_to_for($n)">
+          <variable ilk="argument" name="$n" />
+        </scope>
+        <scope attributes="__exported__" ilk="function" line="812" lineend="844" name="timethis" signature="timethis($n, $code, $title, $style)">
+          <variable ilk="argument" name="$n" />
+          <variable ilk="argument" name="$code" />
+          <variable ilk="argument" name="$title" />
+          <variable ilk="argument" name="$style" />
+        </scope>
+        <scope attributes="__exported__" ilk="function" line="852" lineend="881" name="timethese" signature="timethese($n, $alt, $style)">
+          <variable ilk="argument" name="$n" />
+          <variable ilk="argument" name="$alt" />
+          <variable ilk="argument" name="$style" />
+        </scope>
+        <scope attributes="__exportable__" ilk="function" line="890" lineend="1041" name="cmpthese" signature="cmpthese()">
+          </scope>
+      </scope>
+    </scope>
+    

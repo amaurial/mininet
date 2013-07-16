@@ -1,0 +1,45 @@
+<scope ilk="blob" lang="Perl" name="Class::MOP::Method::Wrapped">
+      <scope ilk="class" line="2" lineend="290" name="Class::MOP::Method::Wrapped">
+        <import line="13" module="Carp" symbol="confess" />
+        <import line="14" module="Scalar::Util" symbol="blessed" />
+        <variable line="4" name="$Class::MOP::Method::Wrapped::AUTHORITY" />
+        <variable line="7" name="$Class::MOP::Method::Wrapped::VERSION" />
+        <scope ilk="function" line="73" lineend="99" name="wrap" signature="wrap($class, $code, %params)">
+          <variable ilk="argument" name="$class" />
+          <variable ilk="argument" name="$code" />
+          <variable ilk="argument" name="%params" />
+        </scope>
+        <scope attributes="__ctor__" ilk="function" line="101" lineend="119" name="_new" signature="_new($class)">
+          <variable ilk="argument" name="$class" />
+        </scope>
+        <scope ilk="function" line="121" lineend="124" name="get_original_method" signature="get_original_method($code)">
+          <variable ilk="argument" name="$code" />
+        </scope>
+        <scope ilk="function" line="126" lineend="131" name="add_before_modifier" signature="add_before_modifier($code, $modifier)">
+          <variable ilk="argument" name="$code" />
+          <variable ilk="argument" name="$modifier" />
+        </scope>
+        <scope ilk="function" line="133" lineend="136" name="before_modifiers" signature="before_modifiers($code)">
+          <variable ilk="argument" name="$code" />
+        </scope>
+        <scope ilk="function" line="138" lineend="143" name="add_after_modifier" signature="add_after_modifier($code, $modifier)">
+          <variable ilk="argument" name="$code" />
+          <variable ilk="argument" name="$modifier" />
+        </scope>
+        <scope ilk="function" line="145" lineend="148" name="after_modifiers" signature="after_modifiers($code)">
+          <variable ilk="argument" name="$code" />
+        </scope>
+        <scope ilk="function" line="165" lineend="174" name="add_around_modifier" signature="add_around_modifier($code, $modifier)">
+          <variable ilk="argument" name="$code" />
+          <variable ilk="argument" name="$modifier" />
+        </scope>
+        <scope ilk="function" line="177" lineend="180" name="around_modifiers" signature="around_modifiers($code)">
+          <variable ilk="argument" name="$code" />
+        </scope>
+        <scope ilk="function" line="182" lineend="199" name="_make_compatible_with" signature="_make_compatible_with($self, $other)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$other" />
+        </scope>
+      </scope>
+    </scope>
+    

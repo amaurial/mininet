@@ -1,0 +1,123 @@
+<scope ilk="blob" lang="Perl" name="SQL::Statement::Operation">
+      <scope classrefs="SQL::Statement::Term" ilk="class" line="1" lineend="112" name="SQL::Statement::Operation">
+        <import line="7" module="Carp" />
+        <import line="9" module="SQL::Statement::Term" />
+        <variable line="6" name="@ISA" />
+        <variable line="11" name="$VERSION" />
+        <scope ilk="function" line="74" lineend="84" name="new" signature="new($class, $owner, $operation, $leftTerm, $rightTerm)">
+          <variable ilk="argument" name="$class" />
+          <variable ilk="argument" name="$owner" />
+          <variable ilk="argument" name="$operation" />
+          <variable ilk="argument" name="$leftTerm" />
+          <variable ilk="argument" name="$rightTerm" />
+        </scope>
+        <scope ilk="function" line="86" lineend="86" name="op" signature="op()" />
+        <scope ilk="function" line="87" lineend="87" name="left" signature="left()" />
+        <scope ilk="function" line="88" lineend="88" name="right" signature="right()" />
+        <scope ilk="function" line="90" lineend="99" name="operate" signature="operate()" />
+        <scope ilk="function" line="101" lineend="110" name="DESTROY" signature="DESTROY()">
+          </scope>
+        <scope ilk="function" line="112" lineend="112" name="value" signature="value()" />
+      </scope>
+      <scope classrefs="SQL::Statement::Operation" ilk="class" line="114" lineend="154" name="SQL::Statement::Operation::Neg">
+        <variable line="116" name="@ISA" />
+        <scope ilk="function" line="151" lineend="154" name="operate" signature="operate()" />
+      </scope>
+      <scope classrefs="SQL::Statement::Operation" ilk="class" line="156" lineend="195" name="SQL::Statement::Operation::And">
+        <variable line="158" name="@ISA" />
+        <scope ilk="function" line="195" lineend="195" name="operate" signature="operate()" />
+      </scope>
+      <scope classrefs="SQL::Statement::Operation" ilk="class" line="197" lineend="236" name="SQL::Statement::Operation::Or">
+        <variable line="199" name="@ISA" />
+        <scope ilk="function" line="236" lineend="236" name="operate" signature="operate()" />
+      </scope>
+      <scope classrefs="SQL::Statement::Operation" ilk="class" line="238" lineend="296" name="SQL::Statement::Operation::Is">
+        <variable line="240" name="@ISA" />
+        <scope ilk="function" line="279" lineend="296" name="operate" signature="operate()">
+          </scope>
+      </scope>
+      <scope classrefs="SQL::Statement::Operation" ilk="class" line="298" lineend="356" name="SQL::Statement::Operation::ANSI::Is">
+        <variable line="300" name="@ISA" />
+        <scope ilk="function" line="339" lineend="356" name="operate" signature="operate()">
+          </scope>
+      </scope>
+      <scope classrefs="SQL::Statement::Operation" ilk="class" line="358" lineend="415" name="SQL::Statement::Operation::Contains">
+        <import line="362" module="Scalar::Util" symbol="looks_like_number" />
+        <variable line="360" name="@ISA" />
+        <scope ilk="function" line="400" lineend="415" name="operate" signature="operate($self, $eval)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$eval" />
+        </scope>
+      </scope>
+      <scope classrefs="SQL::Statement::Operation" ilk="class" line="417" lineend="479" name="SQL::Statement::Operation::Between">
+        <import line="421" module="Scalar::Util" symbol="looks_like_number" />
+        <variable line="419" name="@ISA" />
+        <scope ilk="function" line="460" lineend="479" name="operate" signature="operate($self, $eval)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$eval" />
+        </scope>
+      </scope>
+      <scope classrefs="SQL::Statement::Operation" ilk="class" line="481" lineend="564" name="SQL::Statement::Operation::Equality">
+        <import line="486" module="Carp" />
+        <import line="487" module="Scalar::Util" symbol="looks_like_number" />
+        <variable line="483" name="@ISA" />
+        <scope ilk="function" line="533" lineend="542" name="operate" signature="operate()">
+          </scope>
+        <scope ilk="function" line="544" lineend="553" name="numcmp" signature="numcmp()" />
+        <scope ilk="function" line="555" lineend="564" name="strcmp" signature="strcmp()" />
+      </scope>
+      <scope classrefs="SQL::Statement::Operation::Equality" ilk="class" line="566" lineend="610" name="SQL::Statement::Operation::Equal">
+        <variable line="568" name="@ISA" />
+        <scope ilk="function" line="609" lineend="609" name="numcmp" signature="numcmp()" />
+        <scope ilk="function" line="610" lineend="610" name="strcmp" signature="strcmp()" />
+      </scope>
+      <scope classrefs="SQL::Statement::Operation::Equality" ilk="class" line="612" lineend="656" name="SQL::Statement::Operation::NotEqual">
+        <variable line="614" name="@ISA" />
+        <scope ilk="function" line="655" lineend="655" name="numcmp" signature="numcmp()" />
+        <scope ilk="function" line="656" lineend="656" name="strcmp" signature="strcmp()" />
+      </scope>
+      <scope classrefs="SQL::Statement::Operation::Equality" ilk="class" line="658" lineend="702" name="SQL::Statement::Operation::Lower">
+        <variable line="660" name="@ISA" />
+        <scope ilk="function" line="701" lineend="701" name="numcmp" signature="numcmp()" />
+        <scope ilk="function" line="702" lineend="702" name="strcmp" signature="strcmp()" />
+      </scope>
+      <scope classrefs="SQL::Statement::Operation::Equality" ilk="class" line="704" lineend="748" name="SQL::Statement::Operation::Greater">
+        <variable line="706" name="@ISA" />
+        <scope ilk="function" line="747" lineend="747" name="numcmp" signature="numcmp()" />
+        <scope ilk="function" line="748" lineend="748" name="strcmp" signature="strcmp()" />
+      </scope>
+      <scope classrefs="SQL::Statement::Operation::Equality" ilk="class" line="750" lineend="794" name="SQL::Statement::Operation::LowerEqual">
+        <variable line="752" name="@ISA" />
+        <scope ilk="function" line="793" lineend="793" name="numcmp" signature="numcmp()" />
+        <scope ilk="function" line="794" lineend="794" name="strcmp" signature="strcmp()" />
+      </scope>
+      <scope classrefs="SQL::Statement::Operation::Equality" ilk="class" line="796" lineend="840" name="SQL::Statement::Operation::GreaterEqual">
+        <variable line="798" name="@ISA" />
+        <scope ilk="function" line="839" lineend="839" name="numcmp" signature="numcmp()" />
+        <scope ilk="function" line="840" lineend="840" name="strcmp" signature="strcmp()" />
+      </scope>
+      <scope classrefs="SQL::Statement::Operation" ilk="class" line="842" lineend="924" name="SQL::Statement::Operation::Regexp">
+        <variable line="844" name="@ISA" />
+        <scope ilk="function" line="890" lineend="903" name="right" signature="right()">
+          </scope>
+        <scope ilk="function" line="905" lineend="914" name="regexp" signature="regexp()" />
+        <scope ilk="function" line="916" lineend="924" name="operate" signature="operate()">
+          </scope>
+      </scope>
+      <scope classrefs="SQL::Statement::Operation::Regexp" ilk="class" line="926" lineend="969" name="SQL::Statement::Operation::Like">
+        <variable line="928" name="@ISA" />
+        <scope ilk="function" line="965" lineend="969" name="regexp" signature="regexp()">
+          </scope>
+      </scope>
+      <scope classrefs="SQL::Statement::Operation::Regexp" ilk="class" line="971" lineend="1014" name="SQL::Statement::Operation::Clike">
+        <variable line="973" name="@ISA" />
+        <scope ilk="function" line="1010" lineend="1014" name="regexp" signature="regexp()">
+          </scope>
+      </scope>
+      <scope classrefs="SQL::Statement::Operation::Regexp" ilk="class" line="1016" lineend="1073" name="SQL::Statement::Operation::Rlike">
+        <variable line="1018" name="@ISA" />
+        <scope ilk="function" line="1055" lineend="1059" name="regexp" signature="regexp()">
+          </scope>
+      </scope>
+    </scope>
+    

@@ -1,0 +1,82 @@
+<scope ilk="blob" lang="Perl" name="Env">
+      <scope ilk="class" line="1" lineend="116" name="Env">
+        <variable line="3" name="$VERSION" />
+        <scope ilk="function" line="76" lineend="98" name="import" signature="import($pack)">
+          <variable ilk="argument" name="$pack" />
+        </scope>
+        <scope attributes="__ctor__" ilk="function" line="100" lineend="102" name="TIESCALAR" signature="TIESCALAR()" />
+        <scope ilk="function" line="104" lineend="107" name="FETCH" signature="FETCH($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="109" lineend="116" name="STORE" signature="STORE($self, $value)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$value" />
+        </scope>
+      </scope>
+      <scope classrefs="Tie::Array" ilk="class" line="120" lineend="222" name="Env::Array">
+        <import line="122" module="Config" symbol="*" />
+        <import line="123" module="Tie::Array" symbol="*" />
+        <scope attributes="__ctor__" ilk="function" line="129" lineend="131" name="TIEARRAY" signature="TIEARRAY()" />
+        <scope ilk="function" line="133" lineend="136" name="FETCHSIZE" signature="FETCHSIZE($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="138" lineend="143" name="STORESIZE" signature="STORESIZE($self, $size)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$size" />
+        </scope>
+        <scope ilk="function" line="145" lineend="148" name="CLEAR" signature="CLEAR($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="150" lineend="153" name="FETCH" signature="FETCH($self, $index)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$index" />
+        </scope>
+        <scope ilk="function" line="155" lineend="161" name="STORE" signature="STORE($self, $index, $value)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$index" />
+          <variable ilk="argument" name="$value" />
+        </scope>
+        <scope ilk="function" line="163" lineend="166" name="EXISTS" signature="EXISTS($self, $index)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$index" />
+        </scope>
+        <scope ilk="function" line="168" lineend="174" name="DELETE" signature="DELETE($self, $index)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$index" />
+        </scope>
+        <scope ilk="function" line="176" lineend="182" name="PUSH" signature="PUSH($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="184" lineend="190" name="POP" signature="POP($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="192" lineend="198" name="UNSHIFT" signature="UNSHIFT($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="200" lineend="206" name="SHIFT" signature="SHIFT($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="208" lineend="222" name="SPLICE" signature="SPLICE($self, $offset, $length)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$offset" />
+          <variable ilk="argument" name="$length" />
+        </scope>
+      </scope>
+      <scope classrefs="Tie::Array" ilk="class" line="226" lineend="254" name="Env::Array::VMS">
+        <import line="227" module="Tie::Array" symbol="*" />
+        <scope attributes="__ctor__" ilk="function" line="231" lineend="233" name="TIEARRAY" signature="TIEARRAY()" />
+        <scope ilk="function" line="235" lineend="240" name="FETCHSIZE" signature="FETCHSIZE($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="242" lineend="245" name="FETCH" signature="FETCH($self, $index)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$index" />
+        </scope>
+        <scope ilk="function" line="247" lineend="250" name="EXISTS" signature="EXISTS($self, $index)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$index" />
+        </scope>
+        <scope ilk="function" line="252" lineend="252" name="DELETE" signature="DELETE()" />
+      </scope>
+    </scope>
+    

@@ -1,0 +1,45 @@
+<scope doc="An NNTP client class based on:&#xA;- RFC 977: Network News Transfer Protocol - RFC 2980: Common NNTP Extensions - RFC 3977: Network News Transfer Protocol (version 2)  Example:  &gt;&gt;&gt; from nntplib import NNTP &gt;&gt;&gt; s = NNTP(&apos;news&apos;) &gt;&gt;&gt; resp, count, first, last, name = s.group(&apos;comp.lang.python&apos;) &gt;&gt;&gt; print(&apos;Group&apos;, name, &apos;has&apos;, count, &apos;articles, range&apos;, first, &apos;to&apos;, last)" ilk="blob" lang="Python" name="nntplib">
+      <scope classrefs="tuple" doc="ArticleInfo(number, message_id, lines)&#xA;" ilk="class" name="ArticleInfo">
+        <scope doc="Create new instance of ArticleInfo(number, message_id,&#xA;lines)" ilk="function" name="__new__" signature="__new__(_cls, number, message_id, lines)" />
+        <scope doc="Make a new ArticleInfo object from a sequence or iterable" ilk="function" name="_make" />
+        <scope doc="Return a new ArticleInfo object replacing specified fields&#xA;with new values" ilk="function" name="_replace" signature="_replace(_self, **kwds)" />
+        <scope doc="Return a new OrderedDict which maps field names to their&#xA;values" ilk="function" name="_asdict" signature="_asdict(self)" />
+        <scope doc="Return a nicely formatted representation string" ilk="function" name="__repr__" signature="__repr__(self)" />
+        <scope doc="Return self as a plain tuple. Used by copy and pickle." ilk="function" name="__getnewargs__" signature="__getnewargs__(self)" />
+      </scope>
+      <scope classrefs="tuple" doc="GroupInfo(group, last, first, flag)&#xA;" ilk="class" name="GroupInfo">
+        <scope doc="Create new instance of GroupInfo(group, last, first, flag)" ilk="function" name="__new__" signature="__new__(_cls, group, last, first, flag)" />
+        <scope doc="Make a new GroupInfo object from a sequence or iterable" ilk="function" name="_make" />
+        <scope doc="Return a new GroupInfo object replacing specified fields&#xA;with new values" ilk="function" name="_replace" signature="_replace(_self, **kwds)" />
+        <scope doc="Return a new OrderedDict which maps field names to their&#xA;values" ilk="function" name="_asdict" signature="_asdict(self)" />
+        <scope doc="Return a nicely formatted representation string" ilk="function" name="__repr__" signature="__repr__(self)" />
+        <scope doc="Return self as a plain tuple. Used by copy and pickle." ilk="function" name="__getnewargs__" signature="__getnewargs__(self)" />
+      </scope>
+      <scope classrefs="_NNTPBase" doc="&#xA;" ilk="class" name="NNTP">
+        <scope doc="Initialize an instance." ilk="function" name="__init__" signature="__init__(self, host, port=119, user=None, password=None, readermode=None, usenetrc=False, timeout=&lt;object object at 0x02AC9038&gt;)" />
+        <scope ilk="function" name="_close" signature="_close(self)" />
+      </scope>
+      <scope classrefs="NNTPError" doc="Error in response data&#xA;" ilk="class" name="NNTPDataError" />
+      <scope classrefs="Exception" doc="Base class for all nntplib exceptions&#xA;" ilk="class" name="NNTPError">
+        <scope ilk="function" name="__init__" signature="__init__(self, *args)" />
+      </scope>
+      <scope classrefs="NNTPError" doc="5xx errors&#xA;" ilk="class" name="NNTPPermanentError" />
+      <scope classrefs="NNTPError" doc="Response does not begin with [1-5]&#xA;" ilk="class" name="NNTPProtocolError" />
+      <scope classrefs="NNTPError" doc="Unexpected [123]xx reply&#xA;" ilk="class" name="NNTPReplyError" />
+      <scope classrefs="NNTPError" doc="4xx errors&#xA;" ilk="class" name="NNTPTemporaryError" />
+      <variable citdl="int" name="NNTP_PORT" />
+      <scope classrefs="_NNTPBase" doc="&#xA;" ilk="class" name="NNTP_SSL">
+        <scope doc="This works identically to NNTP.__init__, except for the&#xA;change in default port and the `ssl_context` argument for&#xA;SSL connections." ilk="function" name="__init__" signature="__init__(self, host, port=563, user=None, password=None, ssl_context=None, readermode=None, usenetrc=False, timeout=&lt;object object at 0x02AC9038&gt;)" />
+        <scope ilk="function" name="_close" signature="_close(self)" />
+      </scope>
+      <variable citdl="int" name="NNTP_SSL_PORT" />
+      <variable citdl="list" name="__all__" />
+      <import module="collections" />
+      <import module="datetime" />
+      <scope doc="Takes an unicode string representing a munged header value&#xA;and decodes it as a (possibly non-ASCII) readable value." ilk="function" name="decode_header" signature="decode_header(header_str)" />
+      <import module="re" />
+      <import module="socket" />
+      <import module="ssl" />
+      <import module="warnings" />
+    </scope>
+    

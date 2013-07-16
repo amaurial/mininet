@@ -1,0 +1,59 @@
+<scope ilk="blob" lang="Perl" name="IO::Select">
+      <scope classrefs="Exporter" ilk="class" line="7" lineend="241" name="IO::Select">
+        <import line="10" module="warnings::register" symbol="*" />
+        <import line="12" module="Exporter" />
+        <variable line="11" name="$VERSION" />
+        <variable line="11" name="@ISA" />
+        <scope ilk="function" line="18" lineend="18" name="VEC_BITS" signature="VEC_BITS()" />
+        <scope ilk="function" line="19" lineend="19" name="FD_COUNT" signature="FD_COUNT()" />
+        <scope ilk="function" line="20" lineend="20" name="FIRST_FD" signature="FIRST_FD()" />
+        <scope attributes="__ctor__" ilk="function" line="22" lineend="33" name="new" signature="new($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="35" lineend="38" name="add" signature="add()" />
+        <scope ilk="function" line="41" lineend="44" name="remove" signature="remove()" />
+        <scope ilk="function" line="47" lineend="53" name="exists" signature="exists($vec)">
+          <variable ilk="argument" name="$vec" />
+        </scope>
+        <scope ilk="function" line="56" lineend="62" name="_fileno" signature="_fileno($self, $f)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$f" />
+        </scope>
+        <scope ilk="function" line="64" lineend="87" name="_update" signature="_update($vec)">
+          <variable ilk="argument" name="$vec" />
+        </scope>
+        <scope ilk="function" line="145" lineend="149" name="count" signature="count($vec)">
+          <variable ilk="argument" name="$vec" />
+        </scope>
+        <scope ilk="function" line="151" lineend="155" name="bits" signature="bits($vec)">
+          <variable ilk="argument" name="$vec" />
+        </scope>
+        <scope ilk="function" line="157" lineend="171" name="as_string" signature="as_string($vec)">
+          <variable ilk="argument" name="$vec" />
+        </scope>
+        <scope ilk="function" line="173" lineend="183" name="_max" signature="_max($a, $b, $c)">
+          <variable ilk="argument" name="$a" />
+          <variable ilk="argument" name="$b" />
+          <variable ilk="argument" name="$c" />
+        </scope>
+        <scope ilk="function" line="185" lineend="220" name="select" signature="select($r, $w, $e, $t)">
+          <variable ilk="argument" name="$r" />
+          <variable ilk="argument" name="$w" />
+          <variable ilk="argument" name="$e" />
+          <variable ilk="argument" name="$t" />
+        </scope>
+        <scope ilk="function" line="223" lineend="239" name="handles" signature="handles($vec, $bits)">
+          <variable ilk="argument" name="$vec" />
+          <variable ilk="argument" name="$bits" />
+        </scope>
+        <scope ilk="function" line="105" lineend="241" name="can_read" signature="can_read($vec, $timeout, $vec, $timeout, $vec, $timeout)">
+          <variable ilk="argument" name="$vec" />
+          <variable ilk="argument" name="$timeout" />
+          <variable ilk="argument" name="$vec" />
+          <variable ilk="argument" name="$timeout" />
+          <variable ilk="argument" name="$vec" />
+          <variable ilk="argument" name="$timeout" />
+        </scope>
+      </scope>
+    </scope>
+    

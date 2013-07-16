@@ -1,0 +1,30 @@
+<scope ilk="blob" lang="Perl" name="URI::urn">
+      <scope classrefs="URI" ilk="class" line="1" lineend="97" name="URI::urn">
+        <import line="3" module="URI" />
+        <import line="7" module="Carp" symbol="carp" />
+        <variable line="9" name="%implementor" />
+        <scope ilk="function" line="11" lineend="41" name="_init" signature="_init($class)">
+          <variable ilk="argument" name="$class" />
+        </scope>
+        <scope attributes="__ctor__" ilk="function" line="43" lineend="46" name="_urn_init" signature="_urn_init($class, $self, $nid)">
+          <variable ilk="argument" name="$class" />
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$nid" />
+        </scope>
+        <scope ilk="function" line="48" lineend="60" name="_nid" signature="_nid($self, $new)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$new" />
+        </scope>
+        <scope ilk="function" line="62" lineend="67" name="nid" signature="nid($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="69" lineend="85" name="nss" signature="nss($self, $new)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$new" />
+        </scope>
+        <scope ilk="function" line="87" lineend="95" name="canonical" signature="canonical($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+      </scope>
+    </scope>
+    

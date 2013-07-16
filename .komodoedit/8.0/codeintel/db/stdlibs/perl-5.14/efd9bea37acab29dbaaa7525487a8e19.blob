@@ -1,0 +1,160 @@
+<scope ilk="blob" lang="Perl" name="Pod::Text">
+      <scope classrefs="Pod::Simple Exporter" ilk="class" line="24" lineend="686" name="Pod::Text">
+        <import line="31" module="Carp" symbol="carp" />
+        <import line="31" module="Carp" symbol="croak" />
+        <import line="32" module="Encode" symbol="encode" />
+        <import line="33" module="Exporter" />
+        <import line="34" module="Pod::Simple" />
+        <variable line="29" name="$VERSION" />
+        <variable line="29" name="%ESCAPES" />
+        <variable line="29" name="@EXPORT" />
+        <variable line="29" name="@ISA" />
+        <scope ilk="function" line="50" lineend="53" name="handle_code" signature="handle_code($line, $number, $parser)">
+          <variable ilk="argument" name="$line" />
+          <variable ilk="argument" name="$number" />
+          <variable ilk="argument" name="$parser" />
+        </scope>
+        <scope ilk="function" line="60" lineend="123" name="new" signature="new($class, %opts)">
+          <variable ilk="argument" name="$class" />
+          <variable ilk="argument" name="%opts" />
+        </scope>
+        <scope ilk="function" line="145" lineend="149" name="_handle_text" signature="_handle_text($self, $text)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$text" />
+        </scope>
+        <scope ilk="function" line="152" lineend="158" name="method_for_element" signature="method_for_element($self, $element)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$element" />
+        </scope>
+        <scope ilk="function" line="164" lineend="176" name="_handle_element_start" signature="_handle_element_start($self, $element, $attrs)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$element" />
+          <variable ilk="argument" name="$attrs" />
+        </scope>
+        <scope ilk="function" line="181" lineend="202" name="_handle_element_end" signature="_handle_element_end($self, $element)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$element" />
+        </scope>
+        <scope ilk="function" line="212" lineend="228" name="wrap" signature="wrap($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="232" lineend="247" name="reformat" signature="reformat($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="253" lineend="269" name="output" signature="output($self, @text)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="@text" />
+        </scope>
+        <scope ilk="function" line="274" lineend="274" name="output_code" signature="output_code()" />
+        <scope ilk="function" line="281" lineend="309" name="start_document" signature="start_document($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="318" lineend="321" name="strip_format" signature="strip_format($self, $string)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$string" />
+        </scope>
+        <scope ilk="function" line="330" lineend="374" name="item" signature="item($self, $text)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$text" />
+        </scope>
+        <scope ilk="function" line="378" lineend="387" name="cmd_para" signature="cmd_para($self, $attrs, $text)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$attrs" />
+          <variable ilk="argument" name="$text" />
+        </scope>
+        <scope ilk="function" line="391" lineend="399" name="cmd_verbatim" signature="cmd_verbatim($self, $attrs, $text)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$attrs" />
+          <variable ilk="argument" name="$text" />
+        </scope>
+        <scope ilk="function" line="403" lineend="409" name="cmd_data" signature="cmd_data($self, $attrs, $text)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$attrs" />
+          <variable ilk="argument" name="$text" />
+        </scope>
+        <scope ilk="function" line="417" lineend="431" name="heading" signature="heading($self, $text, $indent, $marker)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$text" />
+          <variable ilk="argument" name="$indent" />
+          <variable ilk="argument" name="$marker" />
+        </scope>
+        <scope ilk="function" line="434" lineend="437" name="cmd_head1" signature="cmd_head1($self, $attrs, $text)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$attrs" />
+          <variable ilk="argument" name="$text" />
+        </scope>
+        <scope ilk="function" line="440" lineend="443" name="cmd_head2" signature="cmd_head2($self, $attrs, $text)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$attrs" />
+          <variable ilk="argument" name="$text" />
+        </scope>
+        <scope ilk="function" line="446" lineend="449" name="cmd_head3" signature="cmd_head3($self, $attrs, $text)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$attrs" />
+          <variable ilk="argument" name="$text" />
+        </scope>
+        <scope ilk="function" line="452" lineend="455" name="cmd_head4" signature="cmd_head4($self, $attrs, $text)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$attrs" />
+          <variable ilk="argument" name="$text" />
+        </scope>
+        <scope ilk="function" line="464" lineend="478" name="over_common_start" signature="over_common_start($self, $attrs)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$attrs" />
+        </scope>
+        <scope ilk="function" line="482" lineend="487" name="over_common_end" signature="over_common_end($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="490" lineend="490" name="start_over_bullet" signature="start_over_bullet()" />
+        <scope ilk="function" line="491" lineend="491" name="start_over_number" signature="start_over_number()" />
+        <scope ilk="function" line="492" lineend="492" name="start_over_text" signature="start_over_text()" />
+        <scope ilk="function" line="493" lineend="493" name="start_over_block" signature="start_over_block()" />
+        <scope ilk="function" line="494" lineend="494" name="end_over_bullet" signature="end_over_bullet()" />
+        <scope ilk="function" line="495" lineend="495" name="end_over_number" signature="end_over_number()" />
+        <scope ilk="function" line="496" lineend="496" name="end_over_text" signature="end_over_text()" />
+        <scope ilk="function" line="497" lineend="497" name="end_over_block" signature="end_over_block()" />
+        <scope ilk="function" line="501" lineend="528" name="item_common" signature="item_common($self, $type, $attrs, $text)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$type" />
+          <variable ilk="argument" name="$attrs" />
+          <variable ilk="argument" name="$text" />
+        </scope>
+        <scope ilk="function" line="531" lineend="531" name="cmd_item_bullet" signature="cmd_item_bullet($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="532" lineend="532" name="cmd_item_number" signature="cmd_item_number($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="533" lineend="533" name="cmd_item_text" signature="cmd_item_text($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="534" lineend="534" name="cmd_item_block" signature="cmd_item_block($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="541" lineend="541" name="cmd_b" signature="cmd_b()" />
+        <scope ilk="function" line="542" lineend="542" name="cmd_f" signature="cmd_f()" />
+        <scope ilk="function" line="543" lineend="543" name="cmd_i" signature="cmd_i()" />
+        <scope ilk="function" line="544" lineend="544" name="cmd_x" signature="cmd_x()" />
+        <scope ilk="function" line="549" lineend="577" name="cmd_c" signature="cmd_c($self, $attrs, $text)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$attrs" />
+          <variable ilk="argument" name="$text" />
+        </scope>
+        <scope ilk="function" line="581" lineend="592" name="cmd_l" signature="cmd_l($self, $attrs, $text)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$attrs" />
+          <variable ilk="argument" name="$text" />
+        </scope>
+        <scope attributes="__exported__" ilk="function" line="600" lineend="640" name="pod2text" signature="pod2text($flag, @fhs)">
+          <variable ilk="argument" name="$flag" />
+          <variable ilk="argument" name="@fhs" />
+        </scope>
+        <scope ilk="function" line="644" lineend="672" name="parse_from_file" signature="parse_from_file($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="677" lineend="680" name="parse_from_filehandle" signature="parse_from_filehandle($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+      </scope>
+    </scope>
+    

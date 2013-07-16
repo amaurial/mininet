@@ -1,0 +1,25 @@
+<scope ilk="blob" lang="Perl" name="Archive::Zip::NewFileMember">
+      <scope classrefs="Archive::Zip::FileMember" ilk="class" line="1" lineend="79" name="Archive::Zip::NewFileMember">
+        <import line="11" module="Archive::Zip" symbol="**" />
+        <variable line="4" name="$VERSION" />
+        <variable line="4" name="@ISA" />
+        <scope ilk="function" line="18" lineend="39" name="_newFromFileNamed" signature="_newFromFileNamed($class, $fileName, $newName)">
+          <variable ilk="argument" name="$class" />
+          <variable ilk="argument" name="$fileName" />
+          <variable ilk="argument" name="$newName" />
+        </scope>
+        <scope ilk="function" line="41" lineend="52" name="rewindData" signature="rewindData($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="57" lineend="63" name="_readRawChunk" signature="_readRawChunk($self, $dataRef, $chunkSize)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$dataRef" />
+          <variable ilk="argument" name="$chunkSize" />
+        </scope>
+        <scope ilk="function" line="66" lineend="77" name="extractToFileNamed" signature="extractToFileNamed($self, $name)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$name" />
+        </scope>
+      </scope>
+    </scope>
+    

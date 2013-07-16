@@ -1,0 +1,177 @@
+<scope doc="A powerful, extensible, and easy-to-use option parser.&#xA;By Greg Ward &lt;gward@python.net&gt;  Originally distributed as Optik.  For support, use the optik-users@lists.sourceforge.net mailing list (http://lists.sourceforge.net/lists/listinfo/optik-users).  Simple usage example:  from optparse import OptionParser" ilk="blob" lang="Python" name="optparse">
+      <scope classrefs="BadOptionError" doc="Raised if an ambiguous option is seen on the command line.&#xA;" ilk="class" name="AmbiguousOptionError">
+        <scope ilk="function" name="__str__" signature="__str__(self)" />
+        <scope ilk="function" name="__init__" signature="__init__(self, opt_str, possibilities)" />
+      </scope>
+      <scope classrefs="OptParseError" doc="Raised if an invalid option is seen on the command line.&#xA;" ilk="class" name="BadOptionError">
+        <scope ilk="function" name="__str__" signature="__str__(self)" />
+        <scope ilk="function" name="__init__" signature="__init__(self, opt_str)" />
+      </scope>
+      <scope classrefs="object" doc="Abstract base class for formatting option help.  OptionParser&#xA;instances should use one of the HelpFormatter subclasses for formatting help; by default IndentedHelpFormatter is used.  Instance attributes: parser : OptionParser the controlling OptionParser instance indent_increment : int the number of columns to indent per nesting level max_help_position : int the maximum starting column for option help text" ilk="class" name="HelpFormatter">
+        <scope ilk="function" name="dedent" signature="dedent(self)" />
+        <scope ilk="function" name="expand_default" signature="expand_default(self, option)" />
+        <scope ilk="function" name="set_parser" signature="set_parser(self, parser)" />
+        <scope ilk="function" name="set_long_opt_delimiter" signature="set_long_opt_delimiter(self, delim)" />
+        <scope ilk="function" name="format_usage" signature="format_usage(self, usage)" />
+        <scope doc="Format a paragraph of free-form text for inclusion in the&#xA;help output at the current indentation level." ilk="function" name="_format_text" signature="_format_text(self, text)" />
+        <scope ilk="function" name="set_short_opt_delimiter" signature="set_short_opt_delimiter(self, delim)" />
+        <scope ilk="function" name="store_option_strings" signature="store_option_strings(self, parser)" />
+        <scope doc="Return a comma-separated list of option strings &amp;&#xA;metavariables." ilk="function" name="format_option_strings" signature="format_option_strings(self, option)" />
+        <scope ilk="function" name="format_option" signature="format_option(self, option)" />
+        <scope ilk="function" name="indent" signature="indent(self)" />
+        <scope ilk="function" name="format_epilog" signature="format_epilog(self, epilog)" />
+        <scope ilk="function" name="format_heading" signature="format_heading(self, heading)" />
+        <scope ilk="function" name="__init__" signature="__init__(self, indent_increment, max_help_position, width, short_first)" />
+        <scope ilk="function" name="format_description" signature="format_description(self, description)" />
+      </scope>
+      <scope classrefs="HelpFormatter" doc="Format help with indented section bodies.&#xA;" ilk="class" name="IndentedHelpFormatter">
+        <scope ilk="function" name="format_heading" signature="format_heading(self, heading)" />
+        <scope ilk="function" name="__init__" signature="__init__(self, indent_increment=2, max_help_position=24, width=None, short_first=1)" />
+        <scope ilk="function" name="format_usage" signature="format_usage(self, usage)" />
+      </scope>
+      <variable citdl="tuple" name="NO_DEFAULT" />
+      <scope classrefs="Exception" doc="&#xA;" ilk="class" name="OptParseError">
+        <scope ilk="function" name="__str__" signature="__str__(self)" />
+        <scope ilk="function" name="__init__" signature="__init__(self, msg)" />
+      </scope>
+      <scope classrefs="object" doc="Instance attributes:&#xA;_short_opts : [string] _long_opts : [string]  action : string type : string dest : string default : any nargs : int const : any choices : [string]" ilk="class" name="Option">
+        <scope ilk="function" name="_check_type" signature="_check_type(self)" />
+        <scope ilk="function" name="check_value" signature="check_value(self, opt, value)" />
+        <scope ilk="function" name="_check_const" signature="_check_const(self)" />
+        <scope ilk="function" name="process" signature="process(self, opt, value, values, parser)" />
+        <scope ilk="function" name="__str__" signature="__str__(self)" />
+        <scope ilk="function" name="_check_action" signature="_check_action(self)" />
+        <scope ilk="function" name="_check_nargs" signature="_check_nargs(self)" />
+        <scope ilk="function" name="__init__" signature="__init__(self, *opts, **attrs)" />
+        <scope ilk="function" name="_set_opt_strings" signature="_set_opt_strings(self, opts)" />
+        <scope ilk="function" name="_check_callback" signature="_check_callback(self)" />
+        <scope ilk="function" name="take_action" signature="take_action(self, action, dest, opt, value, values, parser)" />
+        <scope ilk="function" name="_check_opt_strings" signature="_check_opt_strings(self, opts)" />
+        <scope ilk="function" name="takes_value" signature="takes_value(self)" />
+        <scope ilk="function" name="convert_value" signature="convert_value(self, opt, value)" />
+        <scope ilk="function" name="get_opt_string" signature="get_opt_string(self)" />
+        <scope ilk="function" name="__repr__" signature="__repr__(self)" />
+        <scope ilk="function" name="_set_attrs" signature="_set_attrs(self, attrs)" />
+        <scope ilk="function" name="_check_dest" signature="_check_dest(self)" />
+        <scope ilk="function" name="_check_choice" signature="_check_choice(self)" />
+      </scope>
+      <scope classrefs="OptionError" doc="Raised if conflicting options are added to an OptionParser.&#xA;" ilk="class" name="OptionConflictError" />
+      <scope classrefs="object" doc="Abstract base class.&#xA;Class attributes: standard_option_list : [Option] list of standard options that will be accepted by all instances of this parser class (intended to be overridden by subclasses).  Instance attributes: option_list : [Option] the list of Option objects contained by this OptionContainer _short_opt : { string : Option } dictionary mapping short option strings, eg. &quot;-f&quot; or &quot;-X&quot;," ilk="class" name="OptionContainer">
+        <scope ilk="function" name="set_conflict_handler" signature="set_conflict_handler(self, handler)" />
+        <scope ilk="function" name="set_description" signature="set_description(self, description)" />
+        <scope ilk="function" name="add_options" signature="add_options(self, option_list)" />
+        <scope ilk="function" name="_check_conflict" signature="_check_conflict(self, option)" />
+        <scope ilk="function" name="get_description" signature="get_description(self)" />
+        <scope ilk="function" name="remove_option" signature="remove_option(self, opt_str)" />
+        <scope ilk="function" name="__init__" signature="__init__(self, option_class, conflict_handler, description)" />
+        <scope ilk="function" name="get_option" signature="get_option(self, opt_str)" />
+        <scope ilk="function" name="has_option" signature="has_option(self, opt_str)" />
+        <scope ilk="function" name="format_help" signature="format_help(self, formatter)" />
+        <scope ilk="function" name="format_option_help" signature="format_option_help(self, formatter)" />
+        <scope doc="add_option(Option)&#xA;add_option(opt_str, ..., kwarg=val, ...)" ilk="function" name="add_option" signature="add_option(Option)&#xA;add_option(opt_str, ..., kwarg=val, ...)" />
+        <scope ilk="function" name="_create_option_mappings" signature="_create_option_mappings(self)" />
+        <scope ilk="function" name="format_description" signature="format_description(self, formatter)" />
+        <scope doc="see OptionParser.destroy()." ilk="function" name="destroy" signature="destroy(self)" />
+        <scope ilk="function" name="_share_option_mappings" signature="_share_option_mappings(self, parser)" />
+      </scope>
+      <scope classrefs="OptParseError" doc="Raised if an Option instance is created with invalid or&#xA;inconsistent arguments." ilk="class" name="OptionError">
+        <scope ilk="function" name="__str__" signature="__str__(self)" />
+        <scope ilk="function" name="__init__" signature="__init__(self, msg, option)" />
+      </scope>
+      <scope classrefs="OptionContainer" doc="&#xA;" ilk="class" name="OptionGroup">
+        <scope ilk="function" name="format_help" signature="format_help(self, formatter)" />
+        <scope ilk="function" name="_create_option_list" signature="_create_option_list(self)" />
+        <scope doc="see OptionParser.destroy()." ilk="function" name="destroy" signature="destroy(self)" />
+        <scope ilk="function" name="set_title" signature="set_title(self, title)" />
+        <scope ilk="function" name="__init__" signature="__init__(self, parser, title, description=None)" />
+      </scope>
+      <scope classrefs="OptionContainer" doc="Class attributes:&#xA;standard_option_list : [Option] list of standard options that will be accepted by all instances of this parser class (intended to be overridden by subclasses).  Instance attributes: usage : string a usage string for your program.  Before it is displayed to the user, &quot;%prog&quot; will be expanded to the name of your program (self.prog or os.path.basename(sys.argv[0])). prog : string" ilk="class" name="OptionParser">
+        <scope ilk="function" name="_populate_option_list" signature="_populate_option_list(self, option_list, add_help=True)" />
+        <scope ilk="function" name="_process_long_opt" signature="_process_long_opt(self, rargs, values)" />
+        <scope doc="_process_args(largs : [string], rargs : [string], values :&#xA;Values)" ilk="function" name="_process_args" signature="_process_args(self, largs, rargs, values)" />
+        <scope ilk="function" name="get_usage" signature="get_usage(self)" />
+        <scope doc="Declare that you are done with this OptionParser." ilk="function" name="destroy" signature="destroy(self)" />
+        <scope doc="-&gt; (values : Values, args : [string])" ilk="function" name="check_values" signature="check_values(values : Values, args : [string])" />
+        <scope doc="Set parsing to not stop on the first non-option, allowing&#xA;interspersing switches with command arguments." ilk="function" name="enable_interspersed_args" signature="enable_interspersed_args(self)" />
+        <scope ilk="function" name="set_usage" signature="set_usage(self, usage)" />
+        <scope ilk="function" name="set_process_default_values" signature="set_process_default_values(self, process)" />
+        <scope ilk="function" name="__init__" signature="__init__(self, usage=None, option_list=None, option_class=&lt;class &apos;optparse.Option&apos;&gt;, version=None, conflict_handler=&apos;error&apos;, description=None, formatter=None, add_help_option=True, prog=None, epilog=None)" />
+        <scope ilk="function" name="add_option_group" signature="add_option_group(self, *args, **kwargs)" />
+        <scope ilk="function" name="_get_args" signature="_get_args(self, args)" />
+        <scope doc="Print the version message for this program (self.version) to&#xA;&apos;file&apos; (default stdout)." ilk="function" name="print_version" signature="print_version(file : file = stdout)" />
+        <scope ilk="function" name="get_version" signature="get_version(self)" />
+        <scope ilk="function" name="format_epilog" signature="format_epilog(self, formatter)" />
+        <scope ilk="function" name="exit" signature="exit(self, status=0, msg=None)" />
+        <scope ilk="function" name="get_option_group" signature="get_option_group(self, opt_str)" />
+        <scope doc="Print an extended help message, listing all options and any&#xA;help text provided with them, to &apos;file&apos; (default stdout)." ilk="function" name="print_help" signature="print_help(file : file = stdout)" />
+        <scope doc="Set parsing to stop on the first non-option." ilk="function" name="disable_interspersed_args" signature="disable_interspersed_args(self)" />
+        <scope ilk="function" name="expand_prog_name" signature="expand_prog_name(self, s)" />
+        <scope ilk="function" name="_add_help_option" signature="_add_help_option(self)" />
+        <scope ilk="function" name="get_description" signature="get_description(self)" />
+        <scope ilk="function" name="get_default_values" signature="get_default_values(self)" />
+        <scope ilk="function" name="get_prog_name" signature="get_prog_name(self)" />
+        <scope ilk="function" name="set_default" signature="set_default(self, dest, value)" />
+        <scope doc="Determine which long option string &apos;opt&apos; matches, ie." ilk="function" name="_match_long_opt" returns="str" signature="_match_long_opt(opt : string) -&gt; string" />
+        <scope doc="parse_args(args : [string] = sys.argv[1:], values : Values =&#xA;None) -&gt; (values : Values, args : [string])" ilk="function" name="parse_args" signature="parse_args(self, args=None, values=None)" />
+        <scope ilk="function" name="format_help" signature="format_help(self, formatter=None)" />
+        <scope ilk="function" name="_create_option_list" signature="_create_option_list(self)" />
+        <scope ilk="function" name="set_defaults" signature="set_defaults(self, **kwargs)" />
+        <scope ilk="function" name="_add_version_option" signature="_add_version_option(self)" />
+        <scope ilk="function" name="_get_all_options" signature="_get_all_options(self)" />
+        <scope ilk="function" name="format_option_help" signature="format_option_help(self, formatter=None)" />
+        <scope ilk="function" name="_process_short_opts" signature="_process_short_opts(self, rargs, values)" />
+        <scope doc="Print a usage message incorporating &apos;msg&apos; to stderr and&#xA;exit." ilk="function" name="error" signature="error(msg : string)" />
+        <scope ilk="function" name="_init_parsing_state" signature="_init_parsing_state(self)" />
+        <scope doc="Print the usage message for the current program (self.usage)&#xA;to &apos;file&apos; (default stdout)." ilk="function" name="print_usage" signature="print_usage(file : file = stdout)" />
+      </scope>
+      <scope classrefs="OptParseError" doc="Raised if an invalid option value is encountered on the command&#xA;line." ilk="class" name="OptionValueError" />
+      <variable citdl="str" name="SUPPRESS_HELP" />
+      <variable citdl="str" name="SUPPRESS_USAGE" />
+      <scope classrefs="HelpFormatter" doc="Format help with underlined section headers.&#xA;" ilk="class" name="TitledHelpFormatter">
+        <scope ilk="function" name="format_heading" signature="format_heading(self, heading)" />
+        <scope ilk="function" name="__init__" signature="__init__(self, indent_increment=0, max_help_position=24, width=None, short_first=0)" />
+        <scope ilk="function" name="format_usage" signature="format_usage(self, usage)" />
+      </scope>
+      <scope classrefs="object" doc="&#xA;" ilk="class" name="Values">
+        <scope ilk="function" name="_update" signature="_update(self, dict, mode)" />
+        <scope ilk="function" name="ensure_value" signature="ensure_value(self, attr, value)" />
+        <scope ilk="function" name="__str__" signature="__str__(self)" />
+        <scope doc="Update the option values from an arbitrary dictionary, using&#xA;all keys from the dictionary regardless of whether they have&#xA;a corresponding attribute in self or not." ilk="function" name="_update_loose" signature="_update_loose(self, dict)" />
+        <scope ilk="function" name="read_file" signature="read_file(self, filename, mode=&apos;careful&apos;)" />
+        <scope doc="Update the option values from an arbitrary dictionary, but&#xA;only use keys from dict that already have a corresponding&#xA;attribute in self." ilk="function" name="_update_careful" signature="_update_careful(self, dict)" />
+        <scope ilk="function" name="read_module" signature="read_module(self, modname, mode=&apos;careful&apos;)" />
+        <scope ilk="function" name="__eq__" signature="__eq__(self, other)" />
+        <scope ilk="function" name="__init__" signature="__init__(self, defaults=None)" />
+        <scope ilk="function" name="__repr__" signature="__repr__(self)" />
+      </scope>
+      <variable citdl="list" name="__all__" />
+      <variable citdl="str" name="__copyright__" />
+      <scope ilk="function" name="check_builtin" signature="check_builtin(option, opt, value)" />
+      <scope ilk="function" name="check_choice" signature="check_choice(option, opt, value)" />
+      <scope ilk="function" name="gettext" signature="gettext(message)" />
+      <scope classrefs="object" doc="Instance attributes:&#xA;_short_opts : [string] _long_opts : [string]  action : string type : string dest : string default : any nargs : int const : any choices : [string]" ilk="class" name="make_option">
+        <scope ilk="function" name="_check_type" signature="_check_type(self)" />
+        <scope ilk="function" name="check_value" signature="check_value(self, opt, value)" />
+        <scope ilk="function" name="_check_const" signature="_check_const(self)" />
+        <scope ilk="function" name="process" signature="process(self, opt, value, values, parser)" />
+        <scope ilk="function" name="__str__" signature="__str__(self)" />
+        <scope ilk="function" name="_check_action" signature="_check_action(self)" />
+        <scope ilk="function" name="_check_nargs" signature="_check_nargs(self)" />
+        <scope ilk="function" name="__init__" signature="__init__(self, *opts, **attrs)" />
+        <scope ilk="function" name="_set_opt_strings" signature="_set_opt_strings(self, opts)" />
+        <scope ilk="function" name="_check_callback" signature="_check_callback(self)" />
+        <scope ilk="function" name="take_action" signature="take_action(self, action, dest, opt, value, values, parser)" />
+        <scope ilk="function" name="_check_opt_strings" signature="_check_opt_strings(self, opts)" />
+        <scope ilk="function" name="takes_value" signature="takes_value(self)" />
+        <scope ilk="function" name="convert_value" signature="convert_value(self, opt, value)" />
+        <scope ilk="function" name="get_opt_string" signature="get_opt_string(self)" />
+        <scope ilk="function" name="__repr__" signature="__repr__(self)" />
+        <scope ilk="function" name="_set_attrs" signature="_set_attrs(self, attrs)" />
+        <scope ilk="function" name="_check_dest" signature="_check_dest(self)" />
+        <scope ilk="function" name="_check_choice" signature="_check_choice(self)" />
+      </scope>
+      <import module="os" />
+      <import module="sys" />
+      <import module="textwrap" />
+    </scope>
+    

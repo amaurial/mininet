@@ -1,0 +1,194 @@
+<scope ilk="blob" lang="Perl" name="Pod::Html">
+      <scope classrefs="Exporter" ilk="class" line="1" lineend="2275" name="Pod::Html">
+        <import line="3" module="Exporter" />
+        <import line="11" module="Carp" symbol="*" />
+        <import line="12" module="Config" symbol="*" />
+        <import line="13" module="Cwd" symbol="*" />
+        <import line="14" module="File::Spec" symbol="*" />
+        <import line="15" module="File::Spec::Unix" symbol="*" />
+        <import line="16" module="Getopt::Long" symbol="*" />
+        <variable line="5" name="$VERSION" />
+        <variable line="5" name="@EXPORT" />
+        <variable line="5" name="@EXPORT_OK" />
+        <variable line="5" name="@ISA" />
+        <variable line="251" name="$Ignore" />
+        <scope ilk="function" line="274" lineend="324" name="init_globals" signature="init_globals()" />
+        <scope ilk="function" line="329" lineend="340" name="clean_data" signature="clean_data($dataref)">
+          <variable ilk="argument" name="$dataref" />
+        </scope>
+        <scope attributes="__exported__" ilk="function" line="343" lineend="636" name="pod2html" signature="pod2html()">
+          </scope>
+        <scope ilk="function" line="640" lineend="682" name="usage" signature="usage($podfile)">
+          <variable ilk="argument" name="$podfile" />
+        </scope>
+        <scope ilk="function" line="684" lineend="744" name="parse_command_line" signature="parse_command_line()">
+          </scope>
+        <scope ilk="function" line="749" lineend="776" name="get_cache" signature="get_cache($dircache, $itemcache, $podpath, $podroot, $recurse, @cache_key_args)">
+          <variable ilk="argument" name="$dircache" />
+          <variable ilk="argument" name="$itemcache" />
+          <variable ilk="argument" name="$podpath" />
+          <variable ilk="argument" name="$podroot" />
+          <variable ilk="argument" name="$recurse" />
+          <variable ilk="argument" name="@cache_key_args" />
+        </scope>
+        <scope ilk="function" line="778" lineend="782" name="cache_key" signature="cache_key($dircache, $itemcache, $podpath, $podroot, $recurse)">
+          <variable ilk="argument" name="$dircache" />
+          <variable ilk="argument" name="$itemcache" />
+          <variable ilk="argument" name="$podpath" />
+          <variable ilk="argument" name="$podroot" />
+          <variable ilk="argument" name="$recurse" />
+        </scope>
+        <scope ilk="function" line="789" lineend="854" name="load_cache" signature="load_cache($dircache, $itemcache, $podpath, $podroot)">
+          <variable ilk="argument" name="$dircache" />
+          <variable ilk="argument" name="$itemcache" />
+          <variable ilk="argument" name="$podpath" />
+          <variable ilk="argument" name="$podroot" />
+        </scope>
+        <scope ilk="function" line="861" lineend="956" name="scan_podpath" signature="scan_podpath($podroot, $recurse, $append)">
+          <variable ilk="argument" name="$podroot" />
+          <variable ilk="argument" name="$recurse" />
+          <variable ilk="argument" name="$append" />
+        </scope>
+        <scope ilk="function" line="964" lineend="1018" name="scan_dir" signature="scan_dir($dir, $recurse)">
+          <variable ilk="argument" name="$dir" />
+          <variable ilk="argument" name="$recurse" />
+        </scope>
+        <scope ilk="function" line="1024" lineend="1069" name="scan_headings" signature="scan_headings($sections, @data)">
+          <variable ilk="argument" name="$sections" />
+          <variable ilk="argument" name="@data" />
+        </scope>
+        <scope ilk="function" line="1075" lineend="1101" name="scan_items" signature="scan_items($itemref, $pod, @poddata)">
+          <variable ilk="argument" name="$itemref" />
+          <variable ilk="argument" name="$pod" />
+          <variable ilk="argument" name="@poddata" />
+        </scope>
+        <scope ilk="function" line="1106" lineend="1127" name="process_head" signature="process_head($fh, $tag, $heading, $hasindex)">
+          <variable ilk="argument" name="$fh" />
+          <variable ilk="argument" name="$tag" />
+          <variable ilk="argument" name="$heading" />
+          <variable ilk="argument" name="$hasindex" />
+        </scope>
+        <scope ilk="function" line="1136" lineend="1154" name="emit_item_tag" signature="emit_item_tag($fh, $otext, $text, $compact)">
+          <variable ilk="argument" name="$fh" />
+          <variable ilk="argument" name="$otext" />
+          <variable ilk="argument" name="$text" />
+          <variable ilk="argument" name="$compact" />
+        </scope>
+        <scope ilk="function" line="1156" lineend="1178" name="new_listitem" signature="new_listitem($fh, $tag)">
+          <variable ilk="argument" name="$fh" />
+          <variable ilk="argument" name="$tag" />
+        </scope>
+        <scope ilk="function" line="1183" lineend="1229" name="process_item" signature="process_item($fh, $otext)">
+          <variable ilk="argument" name="$fh" />
+          <variable ilk="argument" name="$otext" />
+        </scope>
+        <scope ilk="function" line="1234" lineend="1238" name="process_over" signature="process_over()" />
+        <scope ilk="function" line="1243" lineend="1267" name="process_back" signature="process_back($fh)">
+          <variable ilk="argument" name="$fh" />
+        </scope>
+        <scope ilk="function" line="1272" lineend="1274" name="process_cut" signature="process_cut()" />
+        <scope ilk="function" line="1280" lineend="1282" name="process_pod" signature="process_pod()" />
+        <scope ilk="function" line="1288" lineend="1299" name="process_for" signature="process_for($fh, $whom, $text)">
+          <variable ilk="argument" name="$fh" />
+          <variable ilk="argument" name="$whom" />
+          <variable ilk="argument" name="$text" />
+        </scope>
+        <scope ilk="function" line="1306" lineend="1313" name="process_begin" signature="process_begin($fh, $whom, $text)">
+          <variable ilk="argument" name="$fh" />
+          <variable ilk="argument" name="$whom" />
+          <variable ilk="argument" name="$text" />
+        </scope>
+        <scope ilk="function" line="1319" lineend="1326" name="process_end" signature="process_end($whom, $text)">
+          <variable ilk="argument" name="$whom" />
+          <variable ilk="argument" name="$text" />
+        </scope>
+        <scope ilk="function" line="1331" lineend="1454" name="process_pre" signature="process_pre($text)">
+          <variable ilk="argument" name="$text" />
+        </scope>
+        <scope ilk="function" line="1463" lineend="1466" name="pure_text" signature="pure_text()">
+          </scope>
+        <scope ilk="function" line="1468" lineend="1471" name="inIS_text" signature="inIS_text()">
+          </scope>
+        <scope ilk="function" line="1477" lineend="1550" name="process_puretext" signature="process_puretext($text, $notinIS)">
+          <variable ilk="argument" name="$text" />
+          <variable ilk="argument" name="$notinIS" />
+        </scope>
+        <scope ilk="function" line="1560" lineend="1560" name="pattern" signature="pattern()" />
+        <scope ilk="function" line="1561" lineend="1561" name="closing" signature="closing()" />
+        <scope ilk="function" line="1563" lineend="1569" name="process_text" signature="process_text($tref)">
+          <variable ilk="argument" name="$tref" />
+        </scope>
+        <scope ilk="function" line="1571" lineend="1585" name="process_text_rfc_links" signature="process_text_rfc_links($text)">
+          <variable ilk="argument" name="$text" />
+        </scope>
+        <scope ilk="function" line="1587" lineend="1786" name="process_text1" signature="process_text1($lev, $rstr, $func, $closing)">
+          <variable ilk="argument" name="$lev" />
+          <variable ilk="argument" name="$rstr" />
+          <variable ilk="argument" name="$func" />
+          <variable ilk="argument" name="$closing" />
+        </scope>
+        <scope ilk="function" line="1791" lineend="1811" name="go_ahead" signature="go_ahead($rstr, $func, $closing)">
+          <variable ilk="argument" name="$rstr" />
+          <variable ilk="argument" name="$func" />
+          <variable ilk="argument" name="$closing" />
+        </scope>
+        <scope ilk="function" line="1817" lineend="1835" name="emit_C" signature="emit_C($text, $nocode, $args)">
+          <variable ilk="argument" name="$text" />
+          <variable ilk="argument" name="$nocode" />
+          <variable ilk="argument" name="$args" />
+        </scope>
+        <scope ilk="function" line="1840" lineend="1849" name="html_escape" signature="html_escape()">
+          </scope>
+        <scope ilk="function" line="1855" lineend="1864" name="dosify" signature="dosify($str)">
+          <variable ilk="argument" name="$str" />
+        </scope>
+        <scope ilk="function" line="1869" lineend="1961" name="page_sect" signature="page_sect($page, $section)">
+          <variable ilk="argument" name="$page" />
+          <variable ilk="argument" name="$section" />
+        </scope>
+        <scope ilk="function" line="1967" lineend="1994" name="relativize_url" signature="relativize_url($dest, $source)">
+          <variable ilk="argument" name="$dest" />
+          <variable ilk="argument" name="$source" />
+        </scope>
+        <scope ilk="function" line="2000" lineend="2055" name="coderef" signature="coderef($page, $item)">
+          <variable ilk="argument" name="$page" />
+          <variable ilk="argument" name="$item" />
+        </scope>
+        <scope ilk="function" line="2061" lineend="2068" name="relative_url" signature="relative_url($source_file, $destination_file)">
+          <variable ilk="argument" name="$source_file" />
+          <variable ilk="argument" name="$destination_file" />
+        </scope>
+        <scope ilk="function" line="2075" lineend="2083" name="finish_list" signature="finish_list($fh)">
+          <variable ilk="argument" name="$fh" />
+        </scope>
+        <scope attributes="__exported__" ilk="function" line="2090" lineend="2100" name="htmlify" signature="htmlify($heading)">
+          <variable ilk="argument" name="$heading" />
+        </scope>
+        <scope attributes="__exportable__" ilk="function" line="2105" lineend="2110" name="anchorify" signature="anchorify($anchor)">
+          <variable ilk="argument" name="$anchor" />
+        </scope>
+        <scope ilk="function" line="2125" lineend="2134" name="depod" signature="depod()">
+          </scope>
+        <scope ilk="function" line="2136" lineend="2171" name="depod1" signature="depod1($rstr, $func, $closing)">
+          <variable ilk="argument" name="$rstr" />
+          <variable ilk="argument" name="$func" />
+          <variable ilk="argument" name="$closing" />
+        </scope>
+        <scope ilk="function" line="2176" lineend="2208" name="fragment_id_readable" signature="fragment_id_readable($text, $generate)">
+          <variable ilk="argument" name="$text" />
+          <variable ilk="argument" name="$generate" />
+        </scope>
+        <scope ilk="function" line="2211" lineend="2224" name="fragment_id_obfuscated" signature="fragment_id_obfuscated($text, $generate)">
+          <variable ilk="argument" name="$text" />
+          <variable ilk="argument" name="$generate" />
+        </scope>
+        <scope ilk="function" line="2232" lineend="2260" name="fragment_id" signature="fragment_id($text, $generate)">
+          <variable ilk="argument" name="$text" />
+          <variable ilk="argument" name="$generate" />
+        </scope>
+        <scope ilk="function" line="2266" lineend="2273" name="make_URL_href" signature="make_URL_href($url)">
+          <variable ilk="argument" name="$url" />
+        </scope>
+      </scope>
+    </scope>
+    

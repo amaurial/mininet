@@ -1,0 +1,49 @@
+<scope doc="Fix incompatible imports and module references.&#xA;" ilk="blob" lang="Python" name="lib2to3.fixes.fix_imports">
+      <scope classrefs="BaseFix" doc="&#xA;" ilk="class" line="85" lineend="145" name="FixImports">
+        <scope ilk="function" line="99" lineend="103" name="compile_pattern" signature="compile_pattern(self)">
+          <variable citdl="FixImports" ilk="argument" name="self" />
+        </scope>
+        <scope ilk="function" line="122" lineend="145" name="transform" signature="transform(self, node, results)">
+          <variable ilk="argument" name="node" />
+          <variable citdl="self.replace.get()" line="126" name="new_name" />
+          <variable line="142" name="bare_name" />
+          <variable citdl="results.get()" line="123" name="import_mod" />
+          <variable citdl="import_mod.value" line="125" name="mod_name" />
+          <variable citdl="FixImports" ilk="argument" name="self" />
+          <variable citdl="match()" ilk="argument" name="results" />
+        </scope>
+        <scope ilk="function" line="118" lineend="120" name="start_tree" signature="start_tree(self, tree, filename)">
+          <variable citdl="FixImports" ilk="argument" name="self" />
+          <variable ilk="argument" name="tree" />
+          <variable ilk="argument" name="filename" />
+        </scope>
+        <scope ilk="function" line="96" lineend="97" name="build_pattern" returns="str.join()" signature="build_pattern(self)">
+          <variable citdl="FixImports" ilk="argument" name="self" />
+        </scope>
+        <scope doc="# Don&apos;t match the node if it&apos;s within another match." ilk="function" line="106" lineend="116" name="match" returns="match()" signature="match(self, node)">
+          <variable ilk="argument" name="node" />
+          <variable citdl="FixImports" ilk="argument" name="self" />
+          <variable citdl="match()" line="108" name="results" />
+          <variable line="107" name="match" />
+        </scope>
+        <variable citdl="True" line="88" name="keep_line_order" />
+        <variable attributes="__instancevar__" citdl="build_pattern()" line="102" name="PATTERN" />
+        <variable citdl="int" line="94" name="run_order" />
+        <variable citdl="dict" line="90" name="mapping" />
+        <variable attributes="__instancevar__" citdl="dict" line="120" name="replace" />
+        <variable citdl="True" line="87" name="BM_compatible" />
+      </scope>
+      <variable citdl="dict" line="8" name="MAPPING" />
+      <scope doc="Return a NAME leaf" ilk="function" name="Name" signature="Name(name, prefix=None)" />
+      <scope ilk="function" line="61" lineend="62" name="alternates" returns="str" signature="alternates(members)">
+        <variable ilk="argument" name="members" />
+      </scope>
+      <scope doc="Follow an attribute chain." ilk="function" name="attr_chain" signature="attr_chain(obj, attr)" />
+      <scope ilk="function" line="65" lineend="82" name="build_pattern" signature="build_pattern(mapping={&apos;dbm&apos;: &apos;dbm.ndbm&apos;, &apos;tkFileDialog&apos;: &apos;tkinter.filedialog&apos;, &apos;__builtin__&apos;: &apos;builtins&apos;, &apos;ttk&apos;: &apos;tkinter.ttk&apos;, &apos;dummy_thread&apos;: &apos;_dummy_thread&apos;, &apos;tkSimpleDialog&apos;: &apos;tkinter.simpledialog&apos;, &apos;FileDialog&apos;: &apos;tkinter.filedialog&apos;, &apos;Tix&apos;: &apos;tkinter.tix&apos;, &apos;gdbm&apos;: &apos;dbm.gnu&apos;, &apos;robotparser&apos;: &apos;urllib.robotparser&apos;, &apos;CGIHTTPServer&apos;: &apos;http.server&apos;, &apos;Cookie&apos;: &apos;http.cookies&apos;, &apos;cPickle&apos;: &apos;pickle&apos;, &apos;SocketServer&apos;: &apos;socketserver&apos;, &apos;repr&apos;: &apos;reprlib&apos;, &apos;Dialog&apos;: &apos;tkinter.dialog&apos;, &apos;ScrolledText&apos;: &apos;tkinter.scrolledtext&apos;, &apos;cookielib&apos;: &apos;http.cookiejar&apos;, &apos;ConfigParser&apos;: &apos;configparser&apos;, &apos;httplib&apos;: &apos;http.client&apos;, &apos;markupbase&apos;: &apos;_markupbase&apos;, &apos;tkMessageBox&apos;: &apos;tkinter.messagebox&apos;, &apos;_winreg&apos;: &apos;winreg&apos;, &apos;DocXMLRPCServer&apos;: &apos;xmlrpc.server&apos;, &apos;cStringIO&apos;: &apos;io&apos;, &apos;copy_reg&apos;: &apos;copyreg&apos;, &apos;Tkdnd&apos;: &apos;tkinter.dnd&apos;, &apos;SimpleHTTPServer&apos;: &apos;http.server&apos;, &apos;SimpleDialog&apos;: &apos;tkinter.simpledialog&apos;, &apos;HTMLParser&apos;: &apos;html.parser&apos;, &apos;BaseHTTPServer&apos;: &apos;http.server&apos;, &apos;tkCommonDialog&apos;: &apos;tkinter.commondialog&apos;, &apos;dumbdbm&apos;: &apos;dbm.dumb&apos;, &apos;UserList&apos;: &apos;collections&apos;, &apos;UserString&apos;: &apos;collections&apos;, &apos;Tkinter&apos;: &apos;tkinter&apos;, &apos;tkFont&apos;: &apos;tkinter.font&apos;, &apos;htmlentitydefs&apos;: &apos;html.entities&apos;, &apos;SimpleXMLRPCServer&apos;: &apos;xmlrpc.server&apos;, &apos;Queue&apos;: &apos;queue&apos;, &apos;tkColorChooser&apos;: &apos;tkinter.colorchooser&apos;, &apos;commands&apos;: &apos;subprocess&apos;, &apos;thread&apos;: &apos;_thread&apos;, &apos;StringIO&apos;: &apos;io&apos;, &apos;xmlrpclib&apos;: &apos;xmlrpc.client&apos;, &apos;Tkconstants&apos;: &apos;tkinter.constants&apos;, &apos;urlparse&apos;: &apos;urllib.parse&apos;, &apos;dbhash&apos;: &apos;dbm.bsd&apos;})">
+        <variable citdl="alternates()" line="67" name="bare_names" />
+        <variable citdl="dict" ilk="argument" name="mapping" />
+        <variable citdl="str.join()" line="66" name="mod_list" />
+      </scope>
+      <import module="fixer_base" />
+    </scope>
+    

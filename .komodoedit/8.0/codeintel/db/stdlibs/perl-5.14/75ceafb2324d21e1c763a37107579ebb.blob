@@ -1,0 +1,69 @@
+<scope ilk="blob" lang="Perl" name="LWP::Protocol::http">
+      <scope classrefs="LWP::Protocol" ilk="class" line="1" lineend="424" name="LWP::Protocol::http">
+        <import line="5" module="HTTP::Response" />
+        <import line="6" module="HTTP::Status" />
+        <import line="7" module="Net::HTTP" />
+        <import line="11" module="LWP::Protocol" />
+        <variable line="9" name="@EXTRA_SOCK_OPTS" />
+        <variable line="9" name="@ISA" />
+        <variable line="404" name="@h" />
+        <scope ilk="function" line="16" lineend="58" name="_new_socket" signature="_new_socket($self, $host, $port, $timeout)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$host" />
+          <variable ilk="argument" name="$port" />
+          <variable ilk="argument" name="$timeout" />
+        </scope>
+        <scope ilk="function" line="60" lineend="63" name="socket_type" signature="socket_type()" />
+        <scope ilk="function" line="65" lineend="69" name="socket_class" signature="socket_class($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="71" lineend="74" name="_extra_sock_opts" signature="_extra_sock_opts()" />
+        <scope ilk="function" line="76" lineend="79" name="_check_sock" signature="_check_sock()" />
+        <scope ilk="function" line="81" lineend="87" name="_get_sock_info" signature="_get_sock_info($self, $res, $sock)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$res" />
+          <variable ilk="argument" name="$sock" />
+        </scope>
+        <scope ilk="function" line="89" lineend="117" name="_fixup_header" signature="_fixup_header($self, $h, $url, $proxy)">
+          <import line="100" module="URI::Escape" />
+          <import line="112" module="URI::Escape" />
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$h" />
+          <variable ilk="argument" name="$url" />
+          <variable ilk="argument" name="$proxy" />
+          <import line="100" module="URI::Escape" />
+          <import line="112" module="URI::Escape" />
+        </scope>
+        <scope ilk="function" line="119" lineend="126" name="hlist_remove" signature="hlist_remove($hlist, $k)">
+          <variable ilk="argument" name="$hlist" />
+          <variable ilk="argument" name="$k" />
+        </scope>
+        <scope ilk="function" line="128" lineend="398" name="request" signature="request($self, $request, $proxy, $arg, $size, $timeout)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$request" />
+          <variable ilk="argument" name="$proxy" />
+          <variable ilk="argument" name="$arg" />
+          <variable ilk="argument" name="$size" />
+          <variable ilk="argument" name="$timeout" />
+        </scope>
+      </scope>
+      <scope ilk="class" line="428" lineend="475" name="LWP::Protocol::http::SocketMethods">
+        <scope ilk="function" line="430" lineend="441" name="sysread" signature="sysread($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="443" lineend="465" name="can_read" signature="can_read($self, $timeout)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$timeout" />
+        </scope>
+        <scope ilk="function" line="467" lineend="470" name="ping" signature="ping($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="472" lineend="475" name="increment_response_count" signature="increment_response_count($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+      </scope>
+      <scope classrefs="LWP::Protocol::http::SocketMethods Net::HTTP" ilk="class" line="478" lineend="482" name="LWP::Protocol::http::Socket">
+        <variable line="479" name="@ISA" />
+      </scope>
+    </scope>
+    

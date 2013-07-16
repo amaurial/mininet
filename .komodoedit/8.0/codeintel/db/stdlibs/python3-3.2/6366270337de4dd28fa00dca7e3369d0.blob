@@ -1,0 +1,105 @@
+<scope doc="A dumb and slow but simple dbm clone.&#xA;For database spam, spam.dir contains the index (a text file), spam.bak *may* contain a backup of the index (also a text file), while spam.dat contains the data (a binary file).  XXX TO DO:  - seems to contain a bug when updating...  - reclaim free space (currently, space once occupied by deleted or expanded items is never reused)" ilk="blob" lang="Python" name="dbm.dumb">
+      <variable citdl="list" line="28" name="__all__" />
+      <import module="_io" />
+      <import module="_os" />
+      <import module="collections" />
+      <scope classrefs="EnvironmentError" doc="I/O operation failed.&#xA;" ilk="class" line="32" name="error">
+        <scope ilk="function" name="__init__" />
+      </scope>
+      <scope doc="Open the database file, filename, and return corresponding&#xA;object." ilk="function" line="240" lineend="265" name="open" returns="_Database" signature="open(file, flag=None, mode=438)">
+        <variable citdl="_os.umask()" line="257" name="um" />
+        <variable ilk="argument" name="flag" />
+        <variable citdl="int" ilk="argument" name="mode" />
+        <variable ilk="argument" name="file" />
+      </scope>
+      <scope attributes="protected __hidden__" classrefs="collections.MutableMapping" ilk="class" line="34" lineend="237" name="_Database">
+        <variable attributes="protected" line="44" name="_os" />
+        <variable attributes="protected" line="45" name="_io" />
+        <scope attributes="__ctor__" ilk="function" line="47" lineend="74" name="__init__" signature="_Database(filebasename, mode)">
+          <variable citdl="_Database" ilk="argument" name="self" />
+          <variable ilk="argument" name="filebasename" />
+          <variable ilk="argument" name="mode" />
+          <variable citdl="_io.open()" line="69" name="f" />
+        </scope>
+        <variable attributes="protected __instancevar__" line="48" name="_mode" />
+        <variable attributes="protected __instancevar__" citdl="str" line="55" name="_dirfile" />
+        <variable attributes="protected __instancevar__" citdl="str" line="61" name="_datfile" />
+        <variable attributes="protected __instancevar__" citdl="str" line="62" name="_bakfile" />
+        <variable attributes="protected __instancevar__" citdl="dict" line="65" name="_index" />
+        <scope attributes="protected" ilk="function" line="77" lineend="89" name="_update" signature="_update()">
+          <variable citdl="_Database" ilk="argument" name="self" />
+          <variable citdl="_io.open()" line="80" name="f" />
+          <variable citdl="line.rstrip()" line="85" name="line" />
+          <variable citdl="key.encode()" line="86" name="key" />
+          <variable line="86" name="pos_and_siz_pair" />
+        </scope>
+        <scope attributes="protected" ilk="function" line="94" lineend="117" name="_commit" signature="_commit()">
+          <variable citdl="_Database" ilk="argument" name="self" />
+          <variable citdl="self._io.open()" line="111" name="f" />
+        </scope>
+        <variable citdl="_Database._commit" line="119" name="sync" />
+        <scope ilk="function" line="121" lineend="129" name="__getitem__" returns="f.read()" signature="__getitem__(key)">
+          <variable citdl="_Database" ilk="argument" name="self" />
+          <variable citdl="key.encode()" ilk="argument" name="key" />
+          <variable citdl="_io.open()" line="125" name="f" />
+          <variable citdl="f.read()" line="127" name="dat" />
+        </scope>
+        <scope attributes="protected" ilk="function" line="135" lineend="144" name="_addval" returns="tuple" signature="_addval(val)">
+          <variable citdl="_Database" ilk="argument" name="self" />
+          <variable ilk="argument" name="val" />
+          <variable citdl="_io.open()" line="136" name="f" />
+          <variable citdl="int" line="138" name="pos" />
+          <variable citdl="int" line="139" name="npos" />
+        </scope>
+        <scope attributes="protected" ilk="function" line="150" lineend="155" name="_setval" returns="tuple" signature="_setval(pos, val)">
+          <variable citdl="_Database" ilk="argument" name="self" />
+          <variable ilk="argument" name="pos" />
+          <variable ilk="argument" name="val" />
+          <variable citdl="_io.open()" line="151" name="f" />
+        </scope>
+        <scope attributes="protected" ilk="function" line="160" lineend="165" name="_addkey" signature="_addkey(key, pos_and_siz_pair)">
+          <variable citdl="_Database" ilk="argument" name="self" />
+          <variable ilk="argument" name="key" />
+          <variable ilk="argument" name="pos_and_siz_pair" />
+          <variable citdl="_io.open()" line="162" name="f" />
+        </scope>
+        <scope ilk="function" line="167" lineend="190" name="__setitem__" signature="__setitem__(key, val)">
+          <variable citdl="_Database" ilk="argument" name="self" />
+          <variable citdl="key.encode()" ilk="argument" name="key" />
+          <variable citdl="val.encode()" ilk="argument" name="val" />
+          <variable citdl="int" line="182" name="oldblocks" />
+          <variable citdl="int" line="183" name="newblocks" />
+        </scope>
+        <scope ilk="function" line="200" lineend="209" name="__delitem__" signature="__delitem__(key)">
+          <variable citdl="_Database" ilk="argument" name="self" />
+          <variable citdl="key.encode()" ilk="argument" name="key" />
+        </scope>
+        <scope ilk="function" line="211" lineend="212" name="keys" returns="list()" signature="keys()">
+          <variable citdl="_Database" ilk="argument" name="self" />
+        </scope>
+        <scope ilk="function" line="214" lineend="215" name="items" returns="list" signature="items()">
+          <variable citdl="_Database" ilk="argument" name="self" />
+        </scope>
+        <scope ilk="function" line="217" lineend="220" name="__contains__" returns="bool" signature="__contains__(key)">
+          <variable citdl="_Database" ilk="argument" name="self" />
+          <variable citdl="key.encode()" ilk="argument" name="key" />
+        </scope>
+        <scope ilk="function" line="222" lineend="223" name="iterkeys" returns="iter()" signature="iterkeys()">
+          <variable citdl="_Database" ilk="argument" name="self" />
+        </scope>
+        <variable citdl="_Database.iterkeys" line="224" name="__iter__" />
+        <scope ilk="function" line="226" lineend="227" name="__len__" returns="len()" signature="__len__()">
+          <variable citdl="_Database" ilk="argument" name="self" />
+        </scope>
+        <scope ilk="function" line="229" lineend="231" name="close" signature="close()">
+          <variable citdl="_Database" ilk="argument" name="self" />
+        </scope>
+        <variable citdl="_Database.close" line="233" name="__del__" />
+        <scope attributes="protected" ilk="function" line="235" lineend="237" name="_chmod" signature="_chmod(file)">
+          <variable citdl="_Database" ilk="argument" name="self" />
+          <variable ilk="argument" name="file" />
+        </scope>
+      </scope>
+      <variable attributes="protected __hidden__" citdl="int" line="30" name="_BLOCKSIZE" />
+    </scope>
+    

@@ -1,0 +1,62 @@
+<scope doc="distutils.extension&#xA;Provides the Extension class, used to describe C/C++ extension modules in setup scripts." ilk="blob" lang="Python" name="distutils.extension">
+      <scope classrefs="object" doc="Just a collection of attributes that describes an extension&#xA;module and everything needed to build it (hopefully in a portable way, but there are hooks that let you be as unportable as you need).  Instance attributes: name : string the full name of the extension, including any packages -- ie. *not* a filename or pathname, but Python dotted name sources : [string] list of source filenames, relative to the distribution root (where the setup script lives), in Unix form (slash-separated)" ilk="class" line="20" lineend="132" name="Extension">
+        <scope doc="# When adding arguments to this constructor, be sure to&#xA;update # setup_keywords in core.py." ilk="function" line="87" lineend="132" name="__init__" signature="__init__(self, name, sources, include_dirs=None, define_macros=None, undef_macros=None, library_dirs=None, libraries=None, runtime_library_dirs=None, extra_objects=None, extra_compile_args=None, extra_link_args=None, export_symbols=None, swig_opts=None, depends=None, language=None, optional=None, **kw)">
+          <variable ilk="argument" name="define_macros" />
+          <variable ilk="argument" name="extra_objects" />
+          <variable ilk="argument" name="extra_link_args" />
+          <variable ilk="argument" name="sources" />
+          <variable ilk="argument" name="depends" />
+          <variable ilk="argument" name="export_symbols" />
+          <variable ilk="argument" name="extra_compile_args" />
+          <variable ilk="argument" name="undef_macros" />
+          <variable ilk="argument" name="optional" />
+          <variable ilk="argument" name="include_dirs" />
+          <variable ilk="argument" name="name" />
+          <variable ilk="argument" name="language" />
+          <variable citdl="Extension" ilk="argument" name="self" />
+          <variable ilk="argument" name="runtime_library_dirs" />
+          <variable ilk="argument" name="libraries" />
+          <variable attributes="kwargs" ilk="argument" name="kw" />
+          <variable citdl="list" line="131" name="msg" />
+          <variable ilk="argument" name="swig_opts" />
+          <variable ilk="argument" name="library_dirs" />
+          <variable citdl="list" line="129" name="options" />
+        </scope>
+        <variable attributes="__instancevar__" citdl="list" line="113" name="define_macros" />
+        <variable attributes="__instancevar__" citdl="list" line="118" name="extra_objects" />
+        <variable attributes="__instancevar__" citdl="list" line="120" name="extra_link_args" />
+        <variable attributes="__instancevar__" line="111" name="sources" />
+        <variable attributes="__instancevar__" citdl="list" line="123" name="depends" />
+        <variable attributes="__instancevar__" citdl="list" line="121" name="export_symbols" />
+        <variable attributes="__instancevar__" citdl="list" line="119" name="extra_compile_args" />
+        <variable attributes="__instancevar__" citdl="list" line="114" name="undef_macros" />
+        <variable attributes="__instancevar__" line="125" name="optional" />
+        <variable attributes="__instancevar__" citdl="list" line="112" name="include_dirs" />
+        <variable attributes="__instancevar__" line="110" name="name" />
+        <variable attributes="__instancevar__" line="124" name="language" />
+        <variable attributes="__instancevar__" citdl="list" line="117" name="runtime_library_dirs" />
+        <variable attributes="__instancevar__" citdl="list" line="116" name="libraries" />
+        <variable attributes="__instancevar__" citdl="list" line="122" name="swig_opts" />
+        <variable attributes="__instancevar__" citdl="list" line="115" name="library_dirs" />
+      </scope>
+      <import module="os" />
+      <scope doc="Reads a Setup file and returns Extension instances." ilk="function" line="134" lineend="233" name="read_setup_file" returns="list" signature="read_setup_file(filename)">
+        <variable citdl="TextFile()" line="147" name="file" />
+        <variable citdl="parse_makefile()" line="143" name="vars" />
+        <variable citdl="value.find()" line="194" name="equals" />
+        <variable line="173" name="module" />
+        <variable ilk="argument" name="filename" />
+        <variable citdl="list" line="184" name="switch" />
+        <variable citdl="Extension" line="174" name="ext" />
+        <variable citdl="list" line="151" name="extensions" />
+        <variable citdl="list" line="184" name="value" />
+        <variable citdl="split_quoted()" line="165" name="words" />
+        <variable citdl="expand_makefile_vars()" line="154" name="line" />
+        <variable citdl="ext.extra_link_args" line="175" name="append_next_word" />
+        <variable line="183" name="suffix" />
+      </scope>
+      <import module="sys" />
+      <import module="warnings" />
+      <variable citdl="str" line="6" name="__revision__" />
+    </scope>
+    

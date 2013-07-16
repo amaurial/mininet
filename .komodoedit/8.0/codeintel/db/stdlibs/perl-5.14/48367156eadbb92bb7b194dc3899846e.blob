@@ -1,0 +1,54 @@
+<scope ilk="blob" lang="Perl" name="Data::Dump">
+      <scope ilk="class" line="1" lineend="549" name="Data::Dump">
+        <import line="7" module="Exporter" />
+        <variable line="4" name="$DEBUG" />
+        <variable line="4" name="$VERSION" />
+        <variable line="4" name="@EXPORT" />
+        <variable line="4" name="@EXPORT_OK" />
+        <variable line="8" name="*import" />
+        <variable line="16" name="$INDENT" />
+        <variable line="16" name="$TRY_BASE64" />
+        <variable line="16" name="%refcnt" />
+        <variable line="16" name="%require" />
+        <variable line="16" name="%seen" />
+        <variable line="16" name="@dump" />
+        <variable line="16" name="@FILTERS" />
+        <variable line="16" name="@fixup" />
+        <variable line="81" name="*pp" />
+        <scope attributes="__exportable__" ilk="function" line="21" lineend="79" name="dump" signature="dump()">
+          <import line="28" module="Data::Dump::FilterContext" />
+          <import line="28" module="Data::Dump::FilterContext" />
+        </scope>
+        <scope attributes="__exported__" ilk="function" line="83" lineend="85" name="dd" signature="dd()" />
+        <scope attributes="__exported__" ilk="function" line="87" lineend="93" name="ddx" signature="ddx()">
+          </scope>
+        <scope attributes="__exportable__" ilk="function" line="95" lineend="98" name="dumpf" signature="dumpf()">
+          <import line="96" module="Data::Dump::Filtered" />
+          <import line="96" module="Data::Dump::Filtered" />
+        </scope>
+        <scope ilk="function" line="100" lineend="385" name="_dump" signature="_dump($name, $idx, $dont_remember, $pclass, $pidx)">
+          <variable ilk="argument" name="$name" />
+          <variable ilk="argument" name="$idx" />
+          <variable ilk="argument" name="$dont_remember" />
+          <variable ilk="argument" name="$pclass" />
+          <variable ilk="argument" name="$pidx" />
+        </scope>
+        <scope ilk="function" line="387" lineend="398" name="tied_str" signature="tied_str($tied)">
+          <variable ilk="argument" name="$tied" />
+        </scope>
+        <scope ilk="function" line="400" lineend="430" name="fullname" signature="fullname($name, $idx, $ref)">
+          <variable ilk="argument" name="$name" />
+          <variable ilk="argument" name="$idx" />
+          <variable ilk="argument" name="$ref" />
+        </scope>
+        <scope ilk="function" line="432" lineend="474" name="format_list" signature="format_list($paren, $comment, @elem)">
+          <variable ilk="argument" name="$paren" />
+          <variable ilk="argument" name="$comment" />
+          <variable ilk="argument" name="@elem" />
+        </scope>
+        <scope ilk="function" line="476" lineend="519" name="str" signature="str()">
+          </scope>
+        <scope attributes="__exportable__" ilk="function" line="532" lineend="547" name="quote" signature="quote()" />
+      </scope>
+    </scope>
+    

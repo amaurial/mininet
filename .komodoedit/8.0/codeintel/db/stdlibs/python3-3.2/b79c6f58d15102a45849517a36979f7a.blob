@@ -1,0 +1,136 @@
+<scope doc="HTTP/1.1 client library&#xA;&lt;intro stuff goes here&gt; &lt;other stuff, too&gt;  HTTPConnection goes through a number of &quot;states&quot;, which define when a client may legally make another request or fetch the response for a particular request. This diagram details these state transitions:  (null) | | HTTPConnection()" ilk="blob" lang="Python" name="http.client">
+      <variable citdl="int" name="ACCEPTED" />
+      <variable citdl="int" name="BAD_GATEWAY" />
+      <variable citdl="int" name="BAD_REQUEST" />
+      <scope classrefs="HTTPException" doc="&#xA;" ilk="class" name="BadStatusLine">
+        <scope ilk="function" name="__init__" signature="__init__(self, line)" />
+      </scope>
+      <variable citdl="int" name="CONFLICT" />
+      <variable citdl="int" name="CONTINUE" />
+      <variable citdl="int" name="CREATED" />
+      <scope classrefs="ImproperConnectionState" doc="&#xA;" ilk="class" name="CannotSendHeader" />
+      <scope classrefs="ImproperConnectionState" doc="&#xA;" ilk="class" name="CannotSendRequest" />
+      <variable citdl="int" name="EXPECTATION_FAILED" />
+      <variable citdl="int" name="FAILED_DEPENDENCY" />
+      <variable citdl="int" name="FORBIDDEN" />
+      <variable citdl="int" name="FOUND" />
+      <variable citdl="int" name="GATEWAY_TIMEOUT" />
+      <variable citdl="int" name="GONE" />
+      <scope classrefs="object" doc="&#xA;" ilk="class" name="HTTPConnection">
+        <scope ilk="function" name="_set_content_length" signature="_set_content_length(self, body)" />
+        <scope doc="Send a request header line to the server." ilk="function" name="putheader" signature="putheader(self, header, *values)" />
+        <scope doc="Send the currently buffered request and clear the buffer." ilk="function" name="_send_output" signature="_send_output(self, message_body=None)" />
+        <scope ilk="function" name="set_debuglevel" signature="set_debuglevel(self, level)" />
+        <scope doc="Connect to the host and port specified in __init__." ilk="function" name="connect" signature="connect(self)" />
+        <scope doc="Close the connection to the HTTP server." ilk="function" name="close" signature="close(self)" />
+        <scope ilk="function" name="__init__" signature="__init__(self, host, port=None, strict=&lt;object object at 0x03FBB570&gt;, timeout=&lt;object object at 0x02AC9038&gt;, source_address=None)" />
+        <scope ilk="function" name="_tunnel" signature="_tunnel(self)" />
+        <scope doc="Send a complete request to the server." ilk="function" name="request" signature="request(self, method, url, body=None, headers={})" />
+        <scope doc="Send `data&apos; to the server." ilk="function" name="send" signature="send(self, data)" />
+        <scope doc="Sets up the host and the port for the HTTP CONNECT&#xA;Tunnelling." ilk="function" name="set_tunnel" signature="set_tunnel(self, host, port=None, headers=None)" />
+        <scope doc="Get the response from the server." ilk="function" name="getresponse" signature="getresponse(self)" />
+        <scope doc="Add a line of output to the current request buffer." ilk="function" name="_output" signature="_output(self, s)" />
+        <scope ilk="function" name="_send_request" signature="_send_request(self, method, url, body, headers)" />
+        <scope doc="Send a request to the server." ilk="function" name="putrequest" signature="putrequest(self, method, url, skip_host=0, skip_accept_encoding=0)" />
+        <scope doc="Indicate that the last header line has been sent to the&#xA;server." ilk="function" name="endheaders" signature="endheaders(self, message_body=None)" />
+        <scope ilk="function" name="_set_hostport" signature="_set_hostport(self, host, port)" />
+      </scope>
+      <scope classrefs="Exception" doc="&#xA;" ilk="class" name="HTTPException" />
+      <scope classrefs="Message" doc="&#xA;" ilk="class" name="HTTPMessage">
+        <scope doc="Find all header lines matching a given header name." ilk="function" name="getallmatchingheaders" signature="getallmatchingheaders(self, name)" />
+      </scope>
+      <scope classrefs="RawIOBase" doc="&#xA;" ilk="class" name="HTTPResponse">
+        <scope ilk="function" name="_check_close" signature="_check_close(self)" />
+        <scope ilk="function" name="geturl" signature="geturl(self)" />
+        <scope ilk="function" name="read" signature="read(self, amt=None)" />
+        <scope ilk="function" name="getheader" signature="getheader(self, name, default=None)" />
+        <scope ilk="function" name="begin" signature="begin(self)" />
+        <scope ilk="function" name="__iter__" signature="__iter__(self)" />
+        <scope ilk="function" name="_read_status" signature="_read_status(self)" />
+        <scope doc="Read the number of bytes requested, compensating for partial&#xA;reads." ilk="function" name="_safe_read" signature="_safe_read(self, amt)" />
+        <scope ilk="function" name="flush" signature="flush(self)" />
+        <scope ilk="function" name="close" signature="close(self)" />
+        <scope ilk="function" name="__init__" signature="__init__(self, sock, debuglevel=0, strict=&lt;object object at 0x03FBB570&gt;, method=None, url=None)" />
+        <scope ilk="function" name="info" signature="info(self)" />
+        <scope ilk="function" name="fileno" signature="fileno(self)" />
+        <scope ilk="function" name="getcode" signature="getcode(self)" />
+        <scope ilk="function" name="_read_chunked" signature="_read_chunked(self, amt)" />
+        <scope ilk="function" name="readable" signature="readable(self)" />
+        <scope ilk="function" name="isclosed" signature="isclosed(self)" />
+        <scope doc="Return list of (header, value) tuples." ilk="function" name="getheaders" signature="getheaders(self)" />
+      </scope>
+      <scope classrefs="HTTPConnection" doc="This class allows communication via SSL.&#xA;" ilk="class" name="HTTPSConnection">
+        <scope doc="Connect to a host on a given (SSL) port." ilk="function" name="connect" signature="connect(self)" />
+        <scope ilk="function" name="__init__" signature="__init__(self, host, port=None, key_file=None, cert_file=None, strict=&lt;object object at 0x03FBB570&gt;, timeout=&lt;object object at 0x02AC9038&gt;, source_address=None, *, context=None, check_hostname=None)" />
+      </scope>
+      <variable citdl="int" name="HTTPS_PORT" />
+      <variable citdl="int" name="HTTP_PORT" />
+      <variable citdl="int" name="HTTP_VERSION_NOT_SUPPORTED" />
+      <variable citdl="int" name="IM_USED" />
+      <variable citdl="int" name="INSUFFICIENT_STORAGE" />
+      <variable citdl="int" name="INTERNAL_SERVER_ERROR" />
+      <scope classrefs="HTTPException" doc="&#xA;" ilk="class" name="ImproperConnectionState" />
+      <scope classrefs="HTTPException" doc="&#xA;" ilk="class" name="IncompleteRead">
+        <scope ilk="function" name="__str__" signature="__str__(self)" />
+        <scope ilk="function" name="__init__" signature="__init__(self, partial, expected=None)" />
+        <scope ilk="function" name="__repr__" signature="__repr__(self)" />
+      </scope>
+      <scope classrefs="HTTPException" doc="&#xA;" ilk="class" name="InvalidURL" />
+      <variable citdl="int" name="LENGTH_REQUIRED" />
+      <variable citdl="int" name="LOCKED" />
+      <scope classrefs="HTTPException" doc="&#xA;" ilk="class" name="LineTooLong">
+        <scope ilk="function" name="__init__" signature="__init__(self, line_type)" />
+      </scope>
+      <variable citdl="int" name="MAXAMOUNT" />
+      <variable citdl="int" name="METHOD_NOT_ALLOWED" />
+      <variable citdl="int" name="MOVED_PERMANENTLY" />
+      <variable citdl="int" name="MULTIPLE_CHOICES" />
+      <variable citdl="int" name="MULTI_STATUS" />
+      <variable citdl="int" name="NON_AUTHORITATIVE_INFORMATION" />
+      <variable citdl="int" name="NOT_ACCEPTABLE" />
+      <variable citdl="int" name="NOT_EXTENDED" />
+      <variable citdl="int" name="NOT_FOUND" />
+      <variable citdl="int" name="NOT_IMPLEMENTED" />
+      <variable citdl="int" name="NOT_MODIFIED" />
+      <variable citdl="int" name="NO_CONTENT" />
+      <scope classrefs="HTTPException" doc="&#xA;" ilk="class" name="NotConnected" />
+      <variable citdl="int" name="OK" />
+      <variable citdl="int" name="PARTIAL_CONTENT" />
+      <variable citdl="int" name="PAYMENT_REQUIRED" />
+      <variable citdl="int" name="PRECONDITION_FAILED" />
+      <variable citdl="int" name="PROCESSING" />
+      <variable citdl="int" name="PROXY_AUTHENTICATION_REQUIRED" />
+      <variable citdl="int" name="REQUESTED_RANGE_NOT_SATISFIABLE" />
+      <variable citdl="int" name="REQUEST_ENTITY_TOO_LARGE" />
+      <variable citdl="int" name="REQUEST_TIMEOUT" />
+      <variable citdl="int" name="REQUEST_URI_TOO_LONG" />
+      <variable citdl="int" name="RESET_CONTENT" />
+      <scope classrefs="ImproperConnectionState" doc="&#xA;" ilk="class" name="ResponseNotReady" />
+      <variable citdl="int" name="SEE_OTHER" />
+      <variable citdl="int" name="SERVICE_UNAVAILABLE" />
+      <variable citdl="int" name="SWITCHING_PROTOCOLS" />
+      <variable citdl="int" name="TEMPORARY_REDIRECT" />
+      <variable citdl="int" name="UNAUTHORIZED" />
+      <variable citdl="int" name="UNPROCESSABLE_ENTITY" />
+      <variable citdl="int" name="UNSUPPORTED_MEDIA_TYPE" />
+      <variable citdl="int" name="UPGRADE_REQUIRED" />
+      <variable citdl="int" name="USE_PROXY" />
+      <scope classrefs="HTTPException" doc="&#xA;" ilk="class" name="UnimplementedFileMode" />
+      <scope classrefs="HTTPException" doc="&#xA;" ilk="class" name="UnknownProtocol">
+        <scope ilk="function" name="__init__" signature="__init__(self, version)" />
+      </scope>
+      <scope classrefs="HTTPException" doc="&#xA;" ilk="class" name="UnknownTransferEncoding" />
+      <variable citdl="list" name="__all__" />
+      <import module="collections" />
+      <import module="email" />
+      <scope classrefs="Exception" doc="&#xA;" ilk="class" name="error" />
+      <import module="io" />
+      <import module="os" />
+      <scope doc="Parses only RFC2822 headers from a file pointer." ilk="function" name="parse_headers" signature="parse_headers(fp, _class=&lt;class &apos;http.client.HTTPMessage&apos;&gt;)" />
+      <variable citdl="dict" name="responses" />
+      <import module="socket" />
+      <import module="ssl" />
+      <scope doc="Parse a URL into 5 components:&#xA;&lt;scheme&gt;://&lt;netloc&gt;/&lt;path&gt;?&lt;query&gt;#&lt;fragment&gt; Return a&#xA;5-tuple: (scheme, netloc, path, query, fragment)." ilk="function" name="urlsplit" signature="urlsplit(url, scheme=&apos;&apos;, allow_fragments=True)" />
+      <import module="warnings" />
+    </scope>
+    

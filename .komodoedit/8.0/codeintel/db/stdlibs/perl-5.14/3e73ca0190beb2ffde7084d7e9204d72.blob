@@ -1,0 +1,36 @@
+<scope ilk="blob" lang="Perl" name="Memoize::Storable">
+      <scope ilk="class" line="1" lineend="72" name="Memoize::Storable">
+        <import line="13" module="Storable" />
+        <variable line="14" name="$VERSION" />
+        <variable line="15" name="$Verbose" />
+        <scope attributes="__ctor__" ilk="function" line="17" lineend="31" name="TIEHASH" signature="TIEHASH($package, $filename)">
+          <import line="18" module="Carp" />
+          <variable ilk="argument" name="$package" />
+          <variable ilk="argument" name="$filename" />
+          <import line="18" module="Carp" />
+        </scope>
+        <scope ilk="function" line="33" lineend="38" name="STORE" signature="STORE($self)">
+          <import line="34" module="Carp" />
+          <variable ilk="argument" name="$self" />
+          <import line="34" module="Carp" />
+        </scope>
+        <scope ilk="function" line="40" lineend="45" name="FETCH" signature="FETCH($self)">
+          <import line="41" module="Carp" />
+          <variable ilk="argument" name="$self" />
+          <import line="41" module="Carp" />
+        </scope>
+        <scope ilk="function" line="47" lineend="52" name="EXISTS" signature="EXISTS($self)">
+          <import line="48" module="Carp" />
+          <variable ilk="argument" name="$self" />
+          <import line="48" module="Carp" />
+        </scope>
+        <scope ilk="function" line="54" lineend="63" name="DESTROY" signature="DESTROY($self)">
+          <import line="55" module="Carp" />
+          <variable ilk="argument" name="$self" />
+          <import line="55" module="Carp" />
+        </scope>
+        <scope ilk="function" line="65" lineend="67" name="FIRSTKEY" signature="FIRSTKEY()" />
+        <scope ilk="function" line="69" lineend="71" name="NEXTKEY" signature="NEXTKEY()" />
+      </scope>
+    </scope>
+    

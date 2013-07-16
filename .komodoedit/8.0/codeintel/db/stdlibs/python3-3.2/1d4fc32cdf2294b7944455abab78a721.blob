@@ -1,0 +1,74 @@
+<scope doc="Implements ThreadPoolExecutor.&#xA;" ilk="blob" lang="Python" name="concurrent.futures.thread">
+      <scope classrefs="Executor" doc="&#xA;" ilk="class" line="80" lineend="130" name="ThreadPoolExecutor">
+        <scope ilk="function" line="107" lineend="121" name="_adjust_thread_count" signature="_adjust_thread_count(self)">
+          <variable citdl="ThreadPoolExecutor" ilk="argument" name="self" />
+          <variable citdl="threading.Thread()" line="115" name="t" />
+          <scope ilk="function" line="110" lineend="111" name="weakref_cb" signature="weakref_cb(_, q=self._work_queue)">
+            <variable ilk="argument" name="_" />
+            <variable citdl="queue.Queue()" ilk="argument" name="q" />
+          </scope>
+        </scope>
+        <scope doc="Submits a callable to be executed with the given arguments." ilk="function" line="94" lineend="104" name="submit" returns="_base.Future()" signature="submit(self, fn, *args, **kwargs)">
+          <variable citdl="_WorkItem" line="100" name="w" />
+          <variable citdl="_base.Future()" line="99" name="f" />
+          <variable attributes="kwargs" ilk="argument" name="kwargs" />
+          <variable citdl="ThreadPoolExecutor" ilk="argument" name="self" />
+          <variable attributes="varargs" ilk="argument" name="args" />
+          <variable citdl="_base.Executor.submit.__doc__" line="105" name="__doc__" />
+          <variable ilk="argument" name="fn" />
+        </scope>
+        <scope doc="Clean-up the resources associated with the Executor." ilk="function" line="123" lineend="129" name="shutdown" signature="shutdown(self, wait=True)">
+          <variable citdl="ThreadPoolExecutor" ilk="argument" name="self" />
+          <variable citdl="_base.Executor.shutdown.__doc__" line="130" name="__doc__" />
+          <variable citdl="True" ilk="argument" name="wait" />
+        </scope>
+        <scope doc="Initializes a new ThreadPoolExecutor instance." ilk="function" line="81" lineend="92" name="__init__" signature="__init__(self, max_workers)">
+          <variable ilk="argument" name="max_workers" />
+          <variable citdl="ThreadPoolExecutor" ilk="argument" name="self" />
+        </scope>
+        <variable attributes="protected __instancevar__" citdl="True" line="91" name="_shutdown" />
+        <variable attributes="protected __instancevar__" citdl="set()" line="90" name="_threads" />
+        <variable attributes="protected __instancevar__" line="88" name="_max_workers" />
+        <variable attributes="protected __instancevar__" citdl="queue.Queue()" line="89" name="_work_queue" />
+        <variable attributes="protected __instancevar__" citdl="threading.Lock()" line="92" name="_shutdown_lock" />
+      </scope>
+      <import module="_base" />
+      <import module="atexit" />
+      <import module="queue" />
+      <import module="threading" />
+      <import module="weakref" />
+      <scope attributes="protected __hidden__" ilk="function" line="60" lineend="78" name="_worker" signature="_worker(executor_reference, work_queue)">
+        <variable ilk="argument" name="executor_reference" />
+        <variable ilk="argument" name="work_queue" />
+        <variable citdl="work_queue.get()" line="63" name="work_item" />
+        <variable citdl="executor_reference()" line="67" name="executor" />
+      </scope>
+      <variable attributes="protected __hidden__" citdl="False" line="29" name="_shutdown" />
+      <variable attributes="protected __hidden__" citdl="weakref.WeakKeyDictionary()" line="28" name="_threads_queues" />
+      <variable attributes="__hidden__" citdl="str" line="6" name="__author__" />
+      <scope attributes="protected __hidden__" classrefs="object" ilk="class" line="42" lineend="58" name="_WorkItem">
+        <scope attributes="__ctor__" ilk="function" line="43" lineend="47" name="__init__" signature="_WorkItem(future, fn, args, kwargs)">
+          <variable citdl="_WorkItem" ilk="argument" name="self" />
+          <variable ilk="argument" name="future" />
+          <variable ilk="argument" name="fn" />
+          <variable ilk="argument" name="args" />
+          <variable ilk="argument" name="kwargs" />
+        </scope>
+        <variable attributes="__instancevar__" line="44" name="future" />
+        <variable attributes="__instancevar__" line="45" name="fn" />
+        <variable attributes="__instancevar__" line="46" name="args" />
+        <variable attributes="__instancevar__" line="47" name="kwargs" />
+        <scope ilk="function" line="49" lineend="58" name="run" signature="run()">
+          <variable citdl="_WorkItem" ilk="argument" name="self" />
+          <variable citdl="fn()" line="54" name="result" />
+        </scope>
+      </scope>
+      <scope attributes="protected __hidden__" ilk="function" line="31" lineend="38" name="_python_exit" signature="_python_exit()">
+        <variable attributes="protected" citdl="True" line="33" name="_shutdown" />
+        <variable citdl="list()" line="34" name="items" />
+        <variable citdl="thread_reference()" line="35" name="thread" />
+      </scope>
+      <scope attributes="protected __hidden__" doc="Remove inactive threads from _thread_references.&#xA;&#xA;Should be called periodically to prevent memory leaks in scenarios such as:&#xA;&gt;&gt;&gt; while True:&#xA;...    t = ThreadPoolExecutor(max_workers=5)&#xA;...    t.map(int, [&apos;1&apos;, &apos;2&apos;, &apos;3&apos;, &apos;4&apos;, &apos;5&apos;])" ilk="function" line="39" lineend="49" name="_remove_dead_thread_references" signature="_remove_dead_thread_references()" />
+      <variable attributes="protected __hidden__" citdl="set()" line="28" name="_thread_references" />
+    </scope>
+    

@@ -1,0 +1,71 @@
+<scope ilk="blob" lang="Perl" name="GD::Text">
+      <scope ilk="class" line="3" lineend="686" name="GD::Text">
+        <import line="65" module="GD" symbol="*" />
+        <import line="66" module="Carp" symbol="*" />
+        <import line="67" module="Cwd" symbol="*" />
+        <import line="77" module="Config" />
+        <import line="492" module="POSIX" />
+        <variable line="6" name="$GD::Text::VERSION" />
+        <variable line="69" name="$FONT_PATH" />
+        <variable line="69" name="$OS" />
+        <variable line="69" name="@FONT_PATH" />
+        <scope attributes="__ctor__" ilk="function" line="90" lineend="102" name="new" signature="new($proto)">
+          <variable ilk="argument" name="$proto" />
+        </scope>
+        <scope ilk="function" line="112" lineend="112" name="error" signature="error()" />
+        <scope ilk="function" line="114" lineend="114" name="_set_error" signature="_set_error()" />
+        <scope ilk="function" line="146" lineend="164" name="set_font" signature="set_font($self, $fonts, $size)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$fonts" />
+          <variable ilk="argument" name="$size" />
+        </scope>
+        <scope ilk="function" line="166" lineend="176" name="_set_builtin_font" signature="_set_builtin_font($self, $font)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$font" />
+        </scope>
+        <scope ilk="function" line="178" lineend="260" name="_find_TTF" signature="_find_TTF($font)">
+          <variable ilk="argument" name="$font" />
+        </scope>
+        <scope ilk="function" line="262" lineend="298" name="_set_TTF_font" signature="_set_TTF_font($self, $font, $size)">
+          <import line="284" module="Cwd" />
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$font" />
+          <variable ilk="argument" name="$size" />
+          <import line="284" module="Cwd" />
+        </scope>
+        <scope ilk="function" line="307" lineend="316" name="set_text" signature="set_text($self, $text)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$text" />
+        </scope>
+        <scope ilk="function" line="345" lineend="380" name="set" signature="set($self, %args)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="%args" />
+        </scope>
+        <scope ilk="function" line="415" lineend="420" name="get" signature="get($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="432" lineend="444" name="width" signature="width($self, $string)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$string" />
+        </scope>
+        <scope ilk="function" line="449" lineend="470" name="_recalc_width" signature="_recalc_width($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="511" lineend="547" name="_recalc" signature="_recalc($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="555" lineend="559" name="is_builtin" signature="is_builtin($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="567" lineend="571" name="is_ttf" signature="is_ttf($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="582" lineend="599" name="can_do_ttf" signature="can_do_ttf($proto)">
+          <variable ilk="argument" name="$proto" />
+        </scope>
+        <scope ilk="function" line="640" lineend="654" name="font_path" signature="font_path($proto)">
+          <variable ilk="argument" name="$proto" />
+        </scope>
+      </scope>
+    </scope>
+    

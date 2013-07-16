@@ -1,0 +1,115 @@
+<scope ilk="blob" lang="Perl" name="Moose::Exporter">
+      <scope ilk="class" line="1" lineend="892" name="Moose::Exporter">
+        <import line="12" module="XSLoader" symbol="*" />
+        <import line="21" module="Class::MOP" symbol="*" />
+        <import line="22" module="List::MoreUtils" symbol="first_index" />
+        <import line="22" module="List::MoreUtils" symbol="uniq" />
+        <import line="23" module="Moose::Util::MetaRole" symbol="*" />
+        <import line="24" module="Scalar::Util" symbol="reftype" />
+        <import line="25" module="Sub::Exporter" symbol="*" />
+        <import line="26" module="Sub::Name" symbol="subname" />
+        <variable line="3" name="$Moose::Exporter::AUTHORITY" />
+        <variable line="6" name="$Moose::Exporter::VERSION" />
+        <variable line="289" name="$CALLER" />
+        <scope ilk="function" line="30" lineend="39" name="setup_import_methods" signature="setup_import_methods($class, %args)">
+          <variable ilk="argument" name="$class" />
+          <variable ilk="argument" name="%args" />
+        </scope>
+        <scope ilk="function" line="41" lineend="91" name="build_import_methods" signature="build_import_methods($class, %args)">
+          <variable ilk="argument" name="$class" />
+          <variable ilk="argument" name="%args" />
+        </scope>
+        <scope ilk="function" line="93" lineend="134" name="_make_exporter" signature="_make_exporter($class, $exports, $is_reexport)">
+          <variable ilk="argument" name="$class" />
+          <variable ilk="argument" name="$exports" />
+          <variable ilk="argument" name="$is_reexport" />
+        </scope>
+        <scope ilk="function" line="139" lineend="146" name="_follow_also" signature="_follow_also($class, $exporting_package)">
+          <variable ilk="argument" name="$class" />
+          <variable ilk="argument" name="$exporting_package" />
+        </scope>
+        <scope ilk="function" line="148" lineend="174" name="_follow_also_real" signature="_follow_also_real($exporting_package)">
+          <variable ilk="argument" name="$exporting_package" />
+        </scope>
+        <scope ilk="function" line="177" lineend="199" name="_parse_trait_aliases" signature="_parse_trait_aliases($class, $package, $aliases)">
+          <variable ilk="argument" name="$class" />
+          <variable ilk="argument" name="$package" />
+          <variable ilk="argument" name="$aliases" />
+        </scope>
+        <scope ilk="function" line="201" lineend="270" name="_make_sub_exporter_params" signature="_make_sub_exporter_params($class, $packages, $export_recorder, $is_reexport)">
+          <variable ilk="argument" name="$class" />
+          <variable ilk="argument" name="$packages" />
+          <variable ilk="argument" name="$export_recorder" />
+          <variable ilk="argument" name="$is_reexport" />
+        </scope>
+        <scope ilk="function" line="272" lineend="287" name="_sub_from_package" signature="_sub_from_package($sclass, $package, $name)">
+          <variable ilk="argument" name="$sclass" />
+          <variable ilk="argument" name="$package" />
+          <variable ilk="argument" name="$name" />
+        </scope>
+        <scope ilk="function" line="291" lineend="314" name="_make_wrapped_sub" signature="_make_wrapped_sub($self, $fq_name, $sub, $export_recorder)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$fq_name" />
+          <variable ilk="argument" name="$sub" />
+          <variable ilk="argument" name="$export_recorder" />
+        </scope>
+        <scope ilk="function" line="316" lineend="335" name="_make_wrapped_sub_with_meta" signature="_make_wrapped_sub_with_meta($self, $fq_name, $sub, $export_recorder)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$fq_name" />
+          <variable ilk="argument" name="$sub" />
+          <variable ilk="argument" name="$export_recorder" />
+        </scope>
+        <scope ilk="function" line="338" lineend="352" name="_curry_wrapper" signature="_curry_wrapper($class, $sub, $fq_name, @extra)">
+          <variable ilk="argument" name="$class" />
+          <variable ilk="argument" name="$sub" />
+          <variable ilk="argument" name="$fq_name" />
+          <variable ilk="argument" name="@extra" />
+        </scope>
+        <scope ilk="function" line="354" lineend="375" name="_late_curry_wrapper" signature="_late_curry_wrapper($class, $sub, $fq_name, $extra, @ex_args)">
+          <variable ilk="argument" name="$class" />
+          <variable ilk="argument" name="$sub" />
+          <variable ilk="argument" name="$fq_name" />
+          <variable ilk="argument" name="$extra" />
+          <variable ilk="argument" name="@ex_args" />
+        </scope>
+        <scope ilk="function" line="377" lineend="463" name="_make_import_sub" signature="_make_import_sub($exporting_package, $exporter, $exports_from, $is_reexport)">
+          <import line="446" module="Moose" />
+          <variable ilk="argument" name="$exporting_package" />
+          <variable ilk="argument" name="$exporter" />
+          <variable ilk="argument" name="$exports_from" />
+          <variable ilk="argument" name="$is_reexport" />
+          <import line="446" module="Moose" />
+        </scope>
+        <scope ilk="function" line="465" lineend="466" name="_strip_traits" signature="_strip_traits()">
+          </scope>
+        <scope ilk="function" line="479" lineend="480" name="_strip_metaclass" signature="_strip_metaclass()">
+          </scope>
+        <scope ilk="function" line="491" lineend="492" name="_strip_meta_name" signature="_strip_meta_name()">
+          </scope>
+        <scope ilk="function" line="503" lineend="533" name="_apply_meta_traits" signature="_apply_meta_traits($class, $traits)">
+          <variable ilk="argument" name="$class" />
+          <variable ilk="argument" name="$traits" />
+        </scope>
+        <scope ilk="function" line="535" lineend="546" name="_get_caller" signature="_get_caller()">
+          </scope>
+        <scope ilk="function" line="548" lineend="564" name="_make_unimport_sub" signature="_make_unimport_sub($exporting_package, $exports, $export_recorder, $is_reexport)">
+          <variable ilk="argument" name="$exporting_package" />
+          <variable ilk="argument" name="$exports" />
+          <variable ilk="argument" name="$export_recorder" />
+          <variable ilk="argument" name="$is_reexport" />
+        </scope>
+        <scope ilk="function" line="566" lineend="593" name="_remove_keywords" signature="_remove_keywords($package, $keywords, $recorded_exports, $is_reexport)">
+          <variable ilk="argument" name="$package" />
+          <variable ilk="argument" name="$keywords" />
+          <variable ilk="argument" name="$recorded_exports" />
+          <variable ilk="argument" name="$is_reexport" />
+        </scope>
+        <scope ilk="function" line="595" lineend="650" name="_make_init_meta" signature="_make_init_meta($class, $args, %options)">
+          <variable ilk="argument" name="$class" />
+          <variable ilk="argument" name="$args" />
+          <variable ilk="argument" name="%options" />
+        </scope>
+        <scope ilk="function" line="652" lineend="655" name="import" signature="import()" />
+      </scope>
+    </scope>
+    

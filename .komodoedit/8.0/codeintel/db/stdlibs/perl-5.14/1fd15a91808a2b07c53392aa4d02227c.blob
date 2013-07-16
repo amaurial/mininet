@@ -1,0 +1,32 @@
+<scope ilk="blob" lang="Perl" name="CPANPLUS::Module::Checksums">
+      <scope classrefs="CPANPLUS::Module::Signature" ilk="class" line="1" lineend="252" name="CPANPLUS::Module::Checksums">
+        <import line="7" module="CPANPLUS::Error" symbol="*" />
+        <import line="8" module="CPANPLUS::Internals::Constants" symbol="*" />
+        <import line="10" module="FileHandle" symbol="*" />
+        <import line="12" module="Locale::Maketext::Simple" symbol="Class" />
+        <import line="13" module="Params::Check" symbol="check" />
+        <import line="14" module="Module::Load::Conditional" symbol="can_load" />
+        <variable line="4" name="@ISA" />
+        <variable line="16" name="$Params::Check::VERBOSE" />
+        <scope ilk="function" line="51" lineend="59" name="checksums" signature="checksums($mod)">
+          <variable ilk="argument" name="$mod" />
+        </scope>
+        <scope ilk="function" line="63" lineend="134" name="_validate_checksum" signature="_validate_checksum($self, %hash)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="%hash" />
+        </scope>
+        <scope ilk="function" line="138" lineend="148" name="_get_checksums_file" signature="_get_checksums_file($self, %hash)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="%hash" />
+        </scope>
+        <scope ilk="function" line="150" lineend="194" name="_parse_checksums_file" signature="_parse_checksums_file($self, %hash)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="%hash" />
+        </scope>
+        <scope ilk="function" line="196" lineend="241" name="_check_signature_for_checksum_file" signature="_check_signature_for_checksum_file($self, %hash)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="%hash" />
+        </scope>
+      </scope>
+    </scope>
+    

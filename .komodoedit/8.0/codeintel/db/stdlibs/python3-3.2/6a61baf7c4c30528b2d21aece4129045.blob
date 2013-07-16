@@ -1,0 +1,22 @@
+<scope doc="The machinery of importlib: finders, loaders, hooks, etc.&#xA;" ilk="blob" lang="Python" name="importlib.machinery">
+      <scope classrefs="object" doc="Meta path import for built-in modules.&#xA;All methods are either class or static methods to avoid the need to instantiate the class." ilk="class" name="BuiltinImporter">
+        <scope doc="Load a built-in module." ilk="function" name="load_module" />
+        <scope doc="Return None as built-in module are never packages." ilk="function" name="is_package" />
+        <scope doc="Return None as built-in modules do not have source code." ilk="function" name="get_source" />
+        <scope doc="Find the built-in module." ilk="function" name="find_module" />
+        <scope doc="Return None as built-in modules do not have code objects." ilk="function" name="get_code" />
+      </scope>
+      <scope classrefs="object" doc="Meta path import for frozen modules.&#xA;All methods are either class or static methods to avoid the need to instantiate the class." ilk="class" name="FrozenImporter">
+        <scope doc="Load a frozen module." ilk="function" name="load_module" />
+        <scope doc="Return if the frozen module is a package." ilk="function" name="is_package" />
+        <scope doc="Return None as frozen modules do not have source code." ilk="function" name="get_source" />
+        <scope doc="Find a frozen module." ilk="function" name="find_module" />
+        <scope doc="Return the code object for the frozen module." ilk="function" name="get_code" />
+      </scope>
+      <scope classrefs="object" doc="Meta path finder for sys.(path|path_hooks|path_importer_cache).&#xA;" ilk="class" name="PathFinder">
+        <scope doc="Search sequence of hooks for a finder for &apos;path&apos;." ilk="function" name="_path_hooks" />
+        <scope doc="Find the module on sys.path or &apos;path&apos; based on&#xA;sys.path_hooks and sys.path_importer_cache." ilk="function" name="find_module" />
+        <scope doc="Get the finder for the path from sys.path_importer_cache." ilk="function" name="_path_importer_cache" />
+      </scope>
+    </scope>
+    

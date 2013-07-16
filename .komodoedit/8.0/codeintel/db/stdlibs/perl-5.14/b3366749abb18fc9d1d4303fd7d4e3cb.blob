@@ -1,0 +1,67 @@
+<scope ilk="blob" lang="Perl" name="Moose::Meta::Role::Application::RoleSummation">
+      <scope ilk="class" line="1" lineend="331" name="Moose::Meta::Role::Application::RoleSummation">
+        <import line="11" module="metaclass" symbol="*" />
+        <import line="13" module="Scalar::Util" symbol="blessed" />
+        <import line="15" module="Moose::Meta::Role::Composite" symbol="*" />
+        <variable line="3" name="$Moose::Meta::Role::Application::RoleSummation::AUTHORITY" />
+        <variable line="6" name="$Moose::Meta::Role::Application::RoleSummation::VERSION" />
+        <scope ilk="function" line="24" lineend="36" name="get_exclusions_for_role" signature="get_exclusions_for_role($self, $role)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$role" />
+        </scope>
+        <scope ilk="function" line="38" lineend="47" name="get_method_aliases_for_role" signature="get_method_aliases_for_role($self, $role)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$role" />
+        </scope>
+        <scope ilk="function" line="49" lineend="55" name="is_method_excluded" signature="is_method_excluded($self, $role, $method_name)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$role" />
+          <variable ilk="argument" name="$method_name" />
+        </scope>
+        <scope ilk="function" line="57" lineend="60" name="is_method_aliased" signature="is_method_aliased($self, $role, $method_name)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$role" />
+          <variable ilk="argument" name="$method_name" />
+        </scope>
+        <scope ilk="function" line="62" lineend="66" name="is_aliased_method" signature="is_aliased_method($self, $role, $method_name)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$role" />
+          <variable ilk="argument" name="$method_name" />
+        </scope>
+        <scope ilk="function" line="68" lineend="92" name="check_role_exclusions" signature="check_role_exclusions($self, $c)">
+          <import line="86" module="Moose" />
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$c" />
+          <import line="86" module="Moose" />
+        </scope>
+        <scope ilk="function" line="94" lineend="112" name="check_required_methods" signature="check_required_methods($self, $c)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$c" />
+        </scope>
+        <scope ilk="function" line="114" lineend="116" name="check_required_attributes" signature="check_required_attributes()" />
+        <scope ilk="function" line="118" lineend="152" name="apply_attributes" signature="apply_attributes($self, $c)">
+          <import line="138" module="Moose" />
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$c" />
+          <import line="138" module="Moose" />
+        </scope>
+        <scope ilk="function" line="154" lineend="203" name="apply_methods" signature="apply_methods($self, $c)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$c" />
+        </scope>
+        <scope ilk="function" line="205" lineend="241" name="apply_override_method_modifiers" signature="apply_override_method_modifiers($self, $c)">
+          <import line="221" module="Moose" />
+          <import line="228" module="Moose" />
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$c" />
+          <import line="221" module="Moose" />
+          <import line="228" module="Moose" />
+        </scope>
+        <scope ilk="function" line="243" lineend="255" name="apply_method_modifiers" signature="apply_method_modifiers($self, $modifier_type, $c)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$modifier_type" />
+          <variable ilk="argument" name="$c" />
+        </scope>
+      </scope>
+    </scope>
+    

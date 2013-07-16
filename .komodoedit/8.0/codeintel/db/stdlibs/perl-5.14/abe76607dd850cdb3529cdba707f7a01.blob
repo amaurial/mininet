@@ -1,0 +1,52 @@
+<scope ilk="blob" lang="Perl" name="ActiveState::Path">
+      <scope classrefs="Exporter" ilk="class" line="1" lineend="185" name="ActiveState::Path">
+        <import line="7" module="Exporter" />
+        <import line="12" module="File::Basename" symbol="dirname" />
+        <import line="12" module="File::Basename" symbol="basename" />
+        <import line="13" module="Cwd" />
+        <import line="14" module="Carp" />
+        <variable line="5" name="$VERSION" />
+        <variable line="9" name="@EXPORT_OK" />
+        <scope ilk="function" line="20" lineend="34" name="path_list" signature="path_list()">
+          <import line="21" module="Config" />
+          <import line="21" module="Config" />
+        </scope>
+        <scope ilk="function" line="36" lineend="47" name="find_prog" signature="find_prog($name)">
+          <variable ilk="argument" name="$name" />
+        </scope>
+        <scope ilk="function" line="49" lineend="58" name="_find_prog" signature="_find_prog($file)">
+          <variable ilk="argument" name="$file" />
+        </scope>
+        <scope ilk="function" line="60" lineend="63" name="is_abs_path" signature="is_abs_path($path)">
+          <variable ilk="argument" name="$path" />
+        </scope>
+        <scope ilk="function" line="65" lineend="68" name="abs_path" signature="abs_path($path)">
+          <variable ilk="argument" name="$path" />
+        </scope>
+        <scope ilk="function" line="70" lineend="79" name="_cwd" signature="_cwd()">
+          </scope>
+        <scope ilk="function" line="81" lineend="84" name="join_path" signature="join_path($base, $path)">
+          <variable ilk="argument" name="$base" />
+          <variable ilk="argument" name="$path" />
+        </scope>
+        <scope ilk="function" line="86" lineend="97" name="_join_path" signature="_join_path($base, $path)">
+          <variable ilk="argument" name="$base" />
+          <variable ilk="argument" name="$path" />
+        </scope>
+        <scope ilk="function" line="99" lineend="144" name="rel_path" signature="rel_path($base, $path, $depth)">
+          <variable ilk="argument" name="$base" />
+          <variable ilk="argument" name="$path" />
+          <variable ilk="argument" name="$depth" />
+        </scope>
+        <scope ilk="function" line="146" lineend="150" name="unsymlinked" signature="unsymlinked($path)">
+          <variable ilk="argument" name="$path" />
+        </scope>
+        <scope ilk="function" line="152" lineend="166" name="realpath" signature="realpath($path)">
+          <variable ilk="argument" name="$path" />
+        </scope>
+        <scope ilk="function" line="168" lineend="183" name="_unsymlinked" signature="_unsymlinked($path)">
+          <variable ilk="argument" name="$path" />
+        </scope>
+      </scope>
+    </scope>
+    

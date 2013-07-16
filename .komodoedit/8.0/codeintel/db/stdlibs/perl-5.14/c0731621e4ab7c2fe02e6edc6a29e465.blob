@@ -1,0 +1,51 @@
+<scope ilk="blob" lang="Perl" name="SQL::Statement::Util">
+      <scope ilk="class" line="1" lineend="14" name="SQL::Statement::Util">
+        <variable line="6" name="$VERSION" />
+        <scope ilk="function" line="9" lineend="14" name="type" signature="type($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+      </scope>
+      <scope classrefs="SQL::Statement::Util" ilk="class" line="16" lineend="58" name="SQL::Statement::Util::Column">
+        <import line="21" module="Params::Util" symbol="_ARRAY" />
+        <import line="21" module="Params::Util" symbol="_HASH0" />
+        <import line="21" module="Params::Util" symbol="_STRING" />
+        <variable line="18" name="@ISA" />
+        <scope attributes="__ctor__" ilk="function" line="23" lineend="50" name="new" signature="new($class, $col_name, $table_name, $term, $display_name, $full_orig_name, $coldef)">
+          <variable ilk="argument" name="$class" />
+          <variable ilk="argument" name="$col_name" />
+          <variable ilk="argument" name="$table_name" />
+          <variable ilk="argument" name="$term" />
+          <variable ilk="argument" name="$display_name" />
+          <variable ilk="argument" name="$full_orig_name" />
+          <variable ilk="argument" name="$coldef" />
+        </scope>
+        <scope ilk="function" line="52" lineend="52" name="value" signature="value()" />
+        <scope ilk="function" line="53" lineend="53" name="term" signature="term()" />
+        <scope ilk="function" line="54" lineend="54" name="display_name" signature="display_name()" />
+        <scope ilk="function" line="55" lineend="55" name="full_orig_name" signature="full_orig_name()" />
+        <scope ilk="function" line="56" lineend="56" name="name" signature="name()" />
+        <scope ilk="function" line="57" lineend="57" name="table" signature="table()" />
+        <scope ilk="function" line="58" lineend="58" name="coldef" signature="coldef()" />
+      </scope>
+      <scope classrefs="SQL::Statement::Util" ilk="class" line="60" lineend="155" name="SQL::Statement::Util::Function">
+        <variable line="62" name="@ISA" />
+        <scope attributes="__ctor__" ilk="function" line="65" lineend="84" name="new" signature="new($class, $name, $sub_name, $args)">
+          <variable ilk="argument" name="$class" />
+          <variable ilk="argument" name="$name" />
+          <variable ilk="argument" name="$sub_name" />
+          <variable ilk="argument" name="$args" />
+        </scope>
+        <scope ilk="function" line="85" lineend="85" name="name" signature="name()" />
+        <scope ilk="function" line="86" lineend="86" name="pkg_name" signature="pkg_name()" />
+        <scope ilk="function" line="87" lineend="87" name="sub_name" signature="sub_name()" />
+        <scope ilk="function" line="88" lineend="88" name="args" signature="args()" />
+        <scope ilk="function" line="90" lineend="103" name="validate" signature="validate($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="105" lineend="113" name="run" signature="run()">
+          <import line="107" module="SQL::Statement::Functions" symbol="*" />
+          <import line="107" module="SQL::Statement::Functions" symbol="*" />
+        </scope>
+      </scope>
+    </scope>
+    

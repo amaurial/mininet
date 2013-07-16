@@ -1,0 +1,41 @@
+<scope doc="Record of phased-in incompatible language changes.&#xA;Each line is of the form:  FeatureName = &quot;_Feature(&quot; OptionalRelease &quot;,&quot; MandatoryRelease &quot;,&quot; CompilerFlag &quot;)&quot;  where, normally, OptionalRelease &lt; MandatoryRelease, and both are 5-tuples of the same form as sys.version_info:  (PY_MAJOR_VERSION, # the 2 in 2.1.0a3; an int PY_MINOR_VERSION, # the 1; an int" ilk="blob" lang="Python" name="__future__">
+      <variable citdl="int" line="70" name="CO_FUTURE_ABSOLUTE_IMPORT" />
+      <variable citdl="int" line="74" name="CO_FUTURE_BARRY_AS_BDFL" />
+      <variable citdl="int" line="69" name="CO_FUTURE_DIVISION" />
+      <variable citdl="int" line="72" name="CO_FUTURE_PRINT_FUNCTION" />
+      <variable citdl="int" line="73" name="CO_FUTURE_UNICODE_LITERALS" />
+      <variable citdl="int" line="71" name="CO_FUTURE_WITH_STATEMENT" />
+      <variable citdl="int" line="68" name="CO_GENERATOR_ALLOWED" />
+      <variable citdl="int" line="67" name="CO_NESTED" />
+      <variable citdl="list" line="61" name="__all__" />
+      <variable citdl="_Feature" line="116" name="absolute_import" />
+      <variable citdl="list" line="50" name="all_feature_names" />
+      <variable citdl="_Feature" line="132" name="barry_as_FLUFL" />
+      <variable citdl="_Feature" line="112" name="division" />
+      <variable citdl="_Feature" line="108" name="generators" />
+      <variable citdl="_Feature" line="104" name="nested_scopes" />
+      <variable citdl="_Feature" line="124" name="print_function" />
+      <variable citdl="_Feature" line="128" name="unicode_literals" />
+      <variable citdl="_Feature" line="120" name="with_statement" />
+      <scope attributes="protected __hidden__" ilk="class" line="76" lineend="102" name="_Feature">
+        <scope attributes="__ctor__" ilk="function" line="77" lineend="80" name="__init__" signature="_Feature(optionalRelease, mandatoryRelease, compiler_flag)">
+          <variable citdl="_Feature" ilk="argument" name="self" />
+          <variable ilk="argument" name="optionalRelease" />
+          <variable ilk="argument" name="mandatoryRelease" />
+          <variable ilk="argument" name="compiler_flag" />
+        </scope>
+        <variable attributes="__instancevar__" line="78" name="optional" />
+        <variable attributes="__instancevar__" line="79" name="mandatory" />
+        <variable attributes="__instancevar__" line="80" name="compiler_flag" />
+        <scope doc="Return first release in which this feature was recognized.&#xA;&#xA;This is a 5-tuple, of the same form as sys.version_info." ilk="function" line="82" lineend="88" name="getOptionalRelease" signature="getOptionalRelease()">
+          <variable citdl="_Feature" ilk="argument" name="self" />
+        </scope>
+        <scope doc="Return release in which this feature will become mandatory.&#xA;&#xA;This is a 5-tuple, of the same form as sys.version_info, or, if&#xA;the feature was dropped, is None." ilk="function" line="90" lineend="97" name="getMandatoryRelease" signature="getMandatoryRelease()">
+          <variable citdl="_Feature" ilk="argument" name="self" />
+        </scope>
+        <scope ilk="function" line="99" lineend="102" name="__repr__" returns="str" signature="__repr__()">
+          <variable citdl="_Feature" ilk="argument" name="self" />
+        </scope>
+      </scope>
+    </scope>
+    

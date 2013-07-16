@@ -1,0 +1,31 @@
+<scope ilk="blob" lang="Perl" name="TAP::Base">
+      <scope classrefs="TAP::Object" ilk="class" line="1" lineend="129" name="TAP::Base">
+        <import line="6" module="TAP::Object" symbol="*" />
+        <variable line="4" name="$VERSION" />
+        <variable line="4" name="@ISA" />
+        <scope ilk="function" line="55" lineend="69" name="_initialize" signature="_initialize($self, $arg_for, $ok_callback)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$arg_for" />
+          <variable ilk="argument" name="$ok_callback" />
+        </scope>
+        <scope ilk="function" line="77" lineend="92" name="callback" signature="callback($self, $event, $callback)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$event" />
+          <variable ilk="argument" name="$callback" />
+        </scope>
+        <scope ilk="function" line="94" lineend="97" name="_has_callbacks" signature="_has_callbacks($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="99" lineend="102" name="_callback_for" signature="_callback_for($self, $event)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$event" />
+        </scope>
+        <scope ilk="function" line="104" lineend="111" name="_make_callback" signature="_make_callback($self, $event)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$event" />
+        </scope>
+        <scope ilk="function" line="119" lineend="119" name="get_time" signature="get_time()" />
+        <scope ilk="function" line="127" lineend="127" name="time_is_hires" signature="time_is_hires()" />
+      </scope>
+    </scope>
+    

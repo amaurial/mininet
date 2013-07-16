@@ -1,0 +1,135 @@
+<scope ilk="blob" lang="Perl" name="DBD::DBM">
+      <scope ilk="class" line="23" lineend="59" name="DBD::DBM">
+        <variable line="26" name="$ATTRIBUTION" />
+        <variable line="26" name="$drh" />
+        <variable line="26" name="$methods_already_installed" />
+        <variable line="26" name="$VERSION" />
+        <scope ilk="function" line="32" lineend="54" name="driver" signature="driver($class, $attr)">
+          <variable ilk="argument" name="$class" />
+          <variable ilk="argument" name="$attr" />
+        </scope>
+        <scope ilk="function" line="56" lineend="59" name="CLONE" signature="CLONE()" />
+      </scope>
+      <scope ilk="class" line="62" lineend="65" name="DBD::DBM::dr">
+        <variable line="64" name="$DBD::DBM::dr::imp_data_size" />
+        <variable line="65" name="@DBD::DBM::dr::ISA" />
+      </scope>
+      <scope ilk="class" line="74" lineend="199" name="DBD::DBM::db">
+        <variable line="76" name="$DBD::DBM::db::imp_data_size" />
+        <variable line="77" name="@DBD::DBM::db::ISA" />
+        <scope ilk="function" line="79" lineend="91" name="validate_STORE_attr" signature="validate_STORE_attr($dbh, $attrib, $value)">
+          <variable ilk="argument" name="$dbh" />
+          <variable ilk="argument" name="$attrib" />
+          <variable ilk="argument" name="$value" />
+        </scope>
+        <scope ilk="function" line="93" lineend="105" name="validate_FETCH_attr" signature="validate_FETCH_attr($dbh, $attrib)">
+          <variable ilk="argument" name="$dbh" />
+          <variable ilk="argument" name="$attrib" />
+        </scope>
+        <scope ilk="function" line="107" lineend="112" name="set_versions" signature="set_versions()">
+          </scope>
+        <scope ilk="function" line="114" lineend="149" name="init_valid_attributes" signature="init_valid_attributes($dbh)">
+          <variable ilk="argument" name="$dbh" />
+        </scope>
+        <scope ilk="function" line="151" lineend="159" name="init_default_attributes" signature="init_default_attributes($dbh, $phase)">
+          <variable ilk="argument" name="$dbh" />
+          <variable ilk="argument" name="$phase" />
+        </scope>
+        <scope ilk="function" line="161" lineend="199" name="get_dbm_versions" signature="get_dbm_versions($dbh, $table)">
+          <variable ilk="argument" name="$dbh" />
+          <variable ilk="argument" name="$table" />
+        </scope>
+      </scope>
+      <scope ilk="class" line="206" lineend="236" name="DBD::DBM::st">
+        <variable line="208" name="$DBD::DBM::st::imp_data_size" />
+        <variable line="209" name="@DBD::DBM::st::ISA" />
+        <scope ilk="function" line="211" lineend="226" name="FETCH" signature="FETCH($sth, $attr)">
+          <variable ilk="argument" name="$sth" />
+          <variable ilk="argument" name="$attr" />
+        </scope>
+        <scope ilk="function" line="228" lineend="236" name="dbm_schema" signature="dbm_schema($sth, $tname)">
+          <variable ilk="argument" name="$sth" />
+          <variable ilk="argument" name="$tname" />
+        </scope>
+      </scope>
+      <scope ilk="class" line="244" lineend="247" name="DBD::DBM::Statement">
+        <variable line="247" name="@DBD::DBM::Statement::ISA" />
+      </scope>
+      <scope ilk="class" line="250" lineend="628" name="DBD::DBM::Table">
+        <import line="252" module="Carp" symbol="*" />
+        <import line="253" module="Fcntl" symbol="*" />
+        <variable line="255" name="@DBD::DBM::Table::ISA" />
+        <variable line="396" name="$MLDBM::UseDB" />
+        <variable line="397" name="$MLDBM::Serializer" />
+        <scope ilk="function" line="259" lineend="268" name="file2table" signature="file2table($self, $meta, $file, $file_is_table, $quoted)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$meta" />
+          <variable ilk="argument" name="$file" />
+          <variable ilk="argument" name="$file_is_table" />
+          <variable ilk="argument" name="$quoted" />
+        </scope>
+        <scope ilk="function" line="284" lineend="319" name="bootstrap_table_meta" signature="bootstrap_table_meta($self, $dbh, $meta, $table)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$dbh" />
+          <variable ilk="argument" name="$meta" />
+          <variable ilk="argument" name="$table" />
+        </scope>
+        <scope ilk="function" line="321" lineend="354" name="init_table_meta" signature="init_table_meta($self, $dbh, $meta, $table)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$dbh" />
+          <variable ilk="argument" name="$meta" />
+          <variable ilk="argument" name="$table" />
+        </scope>
+        <scope ilk="function" line="356" lineend="437" name="open_file" signature="open_file($self, $meta, $attrs, $flags)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$meta" />
+          <variable ilk="argument" name="$attrs" />
+          <variable ilk="argument" name="$flags" />
+        </scope>
+        <scope ilk="function" line="442" lineend="453" name="drop" signature="drop($self, $data)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$data" />
+        </scope>
+        <scope ilk="function" line="462" lineend="483" name="fetch_row" signature="fetch_row($self, $data)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$data" />
+        </scope>
+        <scope ilk="function" line="488" lineend="505" name="insert_new_row" signature="insert_new_row($self, $data, $row_aryref)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$data" />
+          <variable ilk="argument" name="$row_aryref" />
+        </scope>
+        <scope ilk="function" line="510" lineend="534" name="push_names" signature="push_names($self, $data, $row_aryref)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$data" />
+          <variable ilk="argument" name="$row_aryref" />
+        </scope>
+        <scope ilk="function" line="542" lineend="552" name="fetch_one_row" signature="fetch_one_row($self, $key_only, $key)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$key_only" />
+          <variable ilk="argument" name="$key" />
+        </scope>
+        <scope ilk="function" line="554" lineend="559" name="delete_one_row" signature="delete_one_row($self, $data, $aryref)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$data" />
+          <variable ilk="argument" name="$aryref" />
+        </scope>
+        <scope ilk="function" line="561" lineend="569" name="update_one_row" signature="update_one_row($self, $data, $aryref)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$data" />
+          <variable ilk="argument" name="$aryref" />
+        </scope>
+        <scope ilk="function" line="571" lineend="581" name="update_specific_row" signature="update_specific_row($self, $data, $aryref, $origary)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$data" />
+          <variable ilk="argument" name="$aryref" />
+          <variable ilk="argument" name="$origary" />
+        </scope>
+        <scope ilk="function" line="586" lineend="593" name="DESTROY" signature="DESTROY($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="605" lineend="609" name="truncate" signature="truncate()" />
+        <scope ilk="function" line="615" lineend="619" name="seek" signature="seek()" />
+      </scope>
+    </scope>
+    

@@ -1,0 +1,144 @@
+<scope doc="A ScrolledText widget feels like a text widget but also has a&#xA;vertical scroll bar on its right.  (Later, options may be added to add a horizontal bar as well, to make the bars disappear automatically when not needed, to move them to the other side of the window, etc.)  Configuration options are passed to the Text widget. A Frame widget is inserted between the master and the text, to hold the Scrollbar widget. Most methods calls are inherited from the Text widget; Pack, Grid and Place methods are redirected to the Frame widget however." ilk="blob" lang="Python" name="tkinter.scrolledtext">
+      <variable citdl="str" name="BOTH" />
+      <scope classrefs="Widget" doc="Frame widget which may contain other widgets and can have a 3D border.&#xA;" ilk="class" name="Frame">
+        <scope doc="Construct a frame widget with the parent MASTER." ilk="function" name="__init__" signature="__init__(self, master=None, cnf={}, **kw)" />
+      </scope>
+      <scope classrefs="object" doc="Geometry manager Grid.&#xA;Base class to use the methods grid_* in every widget." ilk="class" name="Grid">
+        <scope doc="Set or get the status for propagation of geometry&#xA;information." ilk="function" name="propagate" signature="propagate(self, flag=[&apos;_noarg_&apos;])" />
+        <scope doc="Unmap this widget." ilk="function" name="forget" signature="forget(self)" />
+        <scope doc="Return information about the options for positioning this&#xA;widget in a grid." ilk="function" name="grid_info" signature="grid_info(self)" />
+        <scope doc="Configure column INDEX of a grid." ilk="function" name="columnconfigure" signature="columnconfigure(self, index, cnf={}, **kw)" />
+        <scope doc="Unmap this widget but remember the grid options." ilk="function" name="grid_remove" signature="grid_remove(self)" />
+        <scope doc="Set or get the status for propagation of geometry&#xA;information." ilk="function" name="grid_propagate" signature="grid_propagate(self, flag=[&apos;_noarg_&apos;])" />
+        <scope doc="Configure column INDEX of a grid." ilk="function" name="grid_columnconfigure" signature="grid_columnconfigure(self, index, cnf={}, **kw)" />
+        <scope doc="Return a list of all slaves of this widget in its packing&#xA;order." ilk="function" name="grid_slaves" signature="grid_slaves(self, row=None, column=None)" />
+        <scope doc="Position a widget in the parent widget in a grid." ilk="function" name="grid" signature="grid(self, cnf={}, **kw)" />
+        <scope doc="Return a tuple of integer coordinates for the bounding box&#xA;of this widget controlled by the geometry manager grid." ilk="function" name="bbox" signature="bbox(self, column=None, row=None, col2=None, row2=None)" />
+        <scope doc="Return a tuple of integer coordinates for the bounding box&#xA;of this widget controlled by the geometry manager grid." ilk="function" name="grid_bbox" signature="grid_bbox(self, column=None, row=None, col2=None, row2=None)" />
+        <scope doc="Position a widget in the parent widget in a grid." ilk="function" name="grid_configure" signature="grid_configure(self, cnf={}, **kw)" />
+        <scope doc="Configure row INDEX of a grid." ilk="function" name="grid_rowconfigure" signature="grid_rowconfigure(self, index, cnf={}, **kw)" />
+        <scope doc="Return a tuple of the number of column and rows in the grid." ilk="function" name="size" signature="size(self)" />
+        <scope doc="Return information about the options for positioning this&#xA;widget in a grid." ilk="function" name="info" signature="info(self)" />
+        <scope doc="Return a tuple of the number of column and rows in the grid." ilk="function" name="grid_size" signature="grid_size(self)" />
+        <scope doc="Unmap this widget." ilk="function" name="grid_forget" signature="grid_forget(self)" />
+        <scope doc="Configure row INDEX of a grid." ilk="function" name="rowconfigure" signature="rowconfigure(self, index, cnf={}, **kw)" />
+        <scope doc="Return a tuple of column and row which identify the cell at&#xA;which the pixel at position X and Y inside the master widget&#xA;is located." ilk="function" name="location" signature="location(self, x, y)" />
+        <scope doc="Position a widget in the parent widget in a grid." ilk="function" name="configure" signature="configure(self, cnf={}, **kw)" />
+        <scope doc="Return a tuple of column and row which identify the cell at&#xA;which the pixel at position X and Y inside the master widget&#xA;is located." ilk="function" name="grid_location" signature="grid_location(self, x, y)" />
+        <scope doc="Return a list of all slaves of this widget in its packing&#xA;order." ilk="function" name="slaves" signature="slaves(self, row=None, column=None)" />
+        <scope doc="Position a widget in the parent widget in a grid." ilk="function" name="config" signature="config(self, cnf={}, **kw)" />
+      </scope>
+      <variable citdl="str" name="LEFT" />
+      <scope classrefs="object" doc="Geometry manager Pack.&#xA;Base class to use the methods pack_* in every widget." ilk="class" name="Pack">
+        <scope doc="Return information about the packing options for this&#xA;widget." ilk="function" name="info" signature="info(self)" />
+        <scope doc="Unmap this widget and do not use it for the packing order." ilk="function" name="forget" signature="forget(self)" />
+        <scope doc="Pack a widget in the parent widget." ilk="function" name="pack_configure" signature="pack_configure(self, cnf={}, **kw)" />
+        <scope doc="Return a list of all slaves of this widget in its packing&#xA;order." ilk="function" name="pack_slaves" signature="pack_slaves(self)" />
+        <scope doc="Unmap this widget and do not use it for the packing order." ilk="function" name="pack_forget" signature="pack_forget(self)" />
+        <scope doc="Pack a widget in the parent widget." ilk="function" name="pack" signature="pack(self, cnf={}, **kw)" />
+        <scope doc="Set or get the status for propagation of geometry&#xA;information." ilk="function" name="propagate" signature="propagate(self, flag=[&apos;_noarg_&apos;])" />
+        <scope doc="Return a list of all slaves of this widget in its packing&#xA;order." ilk="function" name="slaves" signature="slaves(self)" />
+        <scope doc="Return information about the packing options for this&#xA;widget." ilk="function" name="pack_info" signature="pack_info(self)" />
+        <scope doc="Pack a widget in the parent widget." ilk="function" name="config" signature="config(self, cnf={}, **kw)" />
+        <scope doc="Set or get the status for propagation of geometry&#xA;information." ilk="function" name="pack_propagate" signature="pack_propagate(self, flag=[&apos;_noarg_&apos;])" />
+        <scope doc="Pack a widget in the parent widget." ilk="function" name="configure" signature="configure(self, cnf={}, **kw)" />
+      </scope>
+      <scope classrefs="object" doc="Geometry manager Place.&#xA;Base class to use the methods place_* in every widget." ilk="class" name="Place">
+        <scope doc="Return information about the placing options for this&#xA;widget." ilk="function" name="info" signature="info(self)" />
+        <scope doc="Place a widget in the parent widget." ilk="function" name="configure" signature="configure(self, cnf={}, **kw)" />
+        <scope doc="Unmap this widget." ilk="function" name="place_forget" signature="place_forget(self)" />
+        <scope doc="Place a widget in the parent widget." ilk="function" name="place_configure" signature="place_configure(self, cnf={}, **kw)" />
+        <scope doc="Return information about the placing options for this&#xA;widget." ilk="function" name="place_info" signature="place_info(self)" />
+        <scope doc="Place a widget in the parent widget." ilk="function" name="place" signature="place(self, cnf={}, **kw)" />
+        <scope doc="Return a list of all slaves of this widget in its packing&#xA;order." ilk="function" name="slaves" signature="slaves(self)" />
+        <scope doc="Return a list of all slaves of this widget in its packing&#xA;order." ilk="function" name="place_slaves" signature="place_slaves(self)" />
+        <scope doc="Place a widget in the parent widget." ilk="function" name="config" signature="config(self, cnf={}, **kw)" />
+        <scope doc="Unmap this widget." ilk="function" name="forget" signature="forget(self)" />
+      </scope>
+      <variable citdl="str" name="RIGHT" />
+      <scope classrefs="Widget" doc="Scrollbar widget which displays a slider at a certain position.&#xA;" ilk="class" name="Scrollbar">
+        <scope doc="Display the element at INDEX with activebackground and&#xA;activerelief." ilk="function" name="activate" signature="activate(self, index)" />
+        <scope doc="Return the current fractional values (upper and lower end)&#xA;of the slider position." ilk="function" name="get" signature="get(self)" />
+        <scope doc="Set the fractional values of the slider position (upper and&#xA;lower ends as value between 0 and 1)." ilk="function" name="set" signature="set(self, *args)" />
+        <scope doc="Return the element under position X,Y as one of&#xA;&quot;arrow1&quot;,&quot;slider&quot;,&quot;arrow2&quot; or &quot;&quot;." ilk="function" name="identify" signature="identify(self, x, y)" />
+        <scope doc="Return the fractional value which corresponds to a slider&#xA;position of X,Y." ilk="function" name="fraction" signature="fraction(self, x, y)" />
+        <scope doc="Return the fractional change of the scrollbar setting if it&#xA;would be moved by DELTAX or DELTAY pixels." ilk="function" name="delta" signature="delta(self, deltax, deltay)" />
+        <scope doc="Construct a scrollbar widget with the parent MASTER." ilk="function" name="__init__" signature="__init__(self, master=None, cnf={}, **kw)" />
+      </scope>
+      <scope classrefs="Text" doc="&#xA;" ilk="class" line="19" lineend="41" name="ScrolledText">
+        <scope ilk="function" line="40" lineend="41" name="__str__" returns="str()" signature="__str__(self)">
+          <variable citdl="ScrolledText" ilk="argument" name="self" />
+        </scope>
+        <scope ilk="function" line="20" lineend="38" name="__init__" signature="__init__(self, master=None, **kw)">
+          <variable attributes="kwargs" ilk="argument" name="kw" />
+          <variable citdl="ScrolledText" ilk="argument" name="self" />
+          <variable line="32" name="text_meths" />
+          <variable ilk="argument" name="master" />
+          <variable citdl="int" line="33" name="methods" />
+        </scope>
+        <variable attributes="__instancevar__" citdl="Frame()" line="21" name="frame" />
+        <variable attributes="__instancevar__" citdl="Scrollbar()" line="22" name="vbar" />
+      </scope>
+      <scope classrefs="Widget XView YView" doc="Text widget which can display text in various forms.&#xA;" ilk="class" name="Text">
+        <scope doc="Undoes the last edit action" ilk="function" name="edit_undo" signature="edit_undo(self)" />
+        <scope doc="Remember the current X, Y coordinates." ilk="function" name="scan_mark" signature="scan_mark(self, x, y)" />
+        <scope doc="Add tag TAGNAME to all characters between INDEX1 and index2&#xA;in ARGS." ilk="function" name="tag_add" signature="tag_add(self, tagName, index1, *args)" />
+        <scope doc="Return the contents of the widget between index1 and index2." ilk="function" name="dump" signature="dump(self, index1, index2=None, command=None, **kw)" />
+        <scope doc="Create an embedded image at INDEX." ilk="function" name="image_create" signature="image_create(self, index, cnf={}, **kw)" />
+        <scope doc="Adjust the view of the text to 10 times the difference&#xA;between X and Y and the coordinates given in scan_mark." ilk="function" name="scan_dragto" signature="scan_dragto(self, x, y)" />
+        <scope doc="Return whether between index INDEX1 and index INDEX2 the&#xA;relation OP is satisfied." ilk="function" name="compare" signature="compare(self, index1, op, index2)" />
+        <scope doc="Return all names of embedded images in this widget." ilk="function" name="image_names" signature="image_names(self)" />
+        <scope ilk="function" name="tk_textResetAnchor" signature="tk_textResetAnchor(self, index)" />
+        <scope doc="Scroll such that the character at INDEX is visible." ilk="function" name="see" signature="see(self, index)" />
+        <scope doc="Return tuple (x,y,width,height,baseline) giving the bounding&#xA;box and baseline position of the visible part of the line&#xA;containing the character at INDEX." ilk="function" name="dlineinfo" signature="dlineinfo(self, index)" />
+        <scope doc="Return a list of all tag names." ilk="function" name="tag_names" signature="tag_names(self, index=None)" />
+        <scope doc="Return the value of OPTION of an embedded image at INDEX." ilk="function" name="image_cget" signature="image_cget(self, index, option)" />
+        <scope doc="Return the value of OPTION for tag TAGNAME." ilk="function" name="tag_cget" signature="tag_cget(self, tagName, option)" />
+        <scope doc="Change the gravity of a mark MARKNAME to DIRECTION (LEFT or&#xA;RIGHT)." ilk="function" name="mark_gravity" signature="mark_gravity(self, markName, direction=None)" />
+        <scope doc="Configure an embedded image at INDEX." ilk="function" name="image_configure" signature="image_configure(self, index, cnf=None, **kw)" />
+        <scope doc="Clears the undo and redo stacks" ilk="function" name="edit_reset" signature="edit_reset(self)" />
+        <scope doc="Change the priority of tag TAGNAME such that it is higher&#xA;than the priority of ABOVETHIS." ilk="function" name="tag_raise" signature="tag_raise(self, tagName, aboveThis=None)" />
+        <scope doc="Return the index in the form line.char for INDEX." ilk="function" name="index" signature="index(self, index)" />
+        <scope doc="Delete the characters between INDEX1 and INDEX2 (not&#xA;included)." ilk="function" name="delete" signature="delete(self, index1, index2=None)" />
+        <scope doc="Inserts a separator (boundary) on the undo stack." ilk="function" name="edit_separator" signature="edit_separator(self)" />
+        <scope doc="Redo the last undone edit" ilk="function" name="edit_redo" signature="edit_redo(self)" />
+        <scope doc="Bind to all characters with TAGNAME at event SEQUENCE a call&#xA;to function FUNC." ilk="function" name="tag_bind" signature="tag_bind(self, tagName, sequence, func, add=None)" />
+        <scope ilk="function" name="tk_textBackspace" signature="tk_textBackspace(self)" />
+        <scope doc="Construct a text widget with the parent MASTER." ilk="function" name="__init__" signature="__init__(self, master=None, cnf={}, **kw)" />
+        <scope ilk="function" name="tk_textIndexCloser" signature="tk_textIndexCloser(self, a, b, c)" />
+        <scope doc="Return a list of ranges of text which have tag TAGNAME." ilk="function" name="tag_ranges" signature="tag_ranges(self, tagName)" />
+        <scope doc="Return the name of the next mark after INDEX." ilk="function" name="mark_next" signature="mark_next(self, index)" />
+        <scope doc="Return the text from INDEX1 to INDEX2 (not included)." ilk="function" name="get" signature="get(self, index1, index2=None)" />
+        <scope doc="Return the name of the previous mark before INDEX." ilk="function" name="mark_previous" signature="mark_previous(self, index)" />
+        <scope doc="Configure a tag TAGNAME." ilk="function" name="tag_configure" signature="tag_configure(self, tagName, cnf=None, **kw)" />
+        <scope doc="Remove tag TAGNAME from all characters between INDEX1 and&#xA;INDEX2." ilk="function" name="tag_remove" signature="tag_remove(self, tagName, index1, index2=None)" />
+        <scope doc="Turn on the internal consistency checks of the B-Tree inside&#xA;the text widget according to BOOLEAN." ilk="function" name="debug" signature="debug(self, boolean=None)" />
+        <scope doc="Return a tuple of (x,y,width,height) which gives the&#xA;bounding box of the visible part of the character at the&#xA;index in ARGS." ilk="function" name="bbox" signature="bbox(self, *args)" />
+        <scope doc="Configure an embedded window at INDEX." ilk="function" name="window_config" signature="window_config(self, index, cnf=None, **kw)" />
+        <scope doc="Return a list of start and end index for the first sequence&#xA;of characters between INDEX1 and INDEX2 which all have tag&#xA;TAGNAME." ilk="function" name="tag_nextrange" signature="tag_nextrange(self, tagName, index1, index2=None)" />
+        <scope doc="Configure an embedded window at INDEX." ilk="function" name="window_configure" signature="window_configure(self, index, cnf=None, **kw)" />
+        <scope doc="Create a window at INDEX." ilk="function" name="window_create" signature="window_create(self, index, cnf={}, **kw)" />
+        <scope doc="Unbind for all characters with TAGNAME for event SEQUENCE&#xA;the function identified with FUNCID." ilk="function" name="tag_unbind" signature="tag_unbind(self, tagName, sequence, funcid=None)" />
+        <scope doc="Insert CHARS before the characters at INDEX." ilk="function" name="insert" signature="insert(self, index, chars, *args)" />
+        <scope doc="Search PATTERN beginning from INDEX until STOPINDEX." ilk="function" name="search" signature="search(self, pattern, index, stopindex=None, forwards=None, backwards=None, exact=None, regexp=None, nocase=None, count=None, elide=None)" />
+        <scope ilk="function" name="tk_textSelectTo" signature="tk_textSelectTo(self, index)" />
+        <scope doc="Set mark MARKNAME before the character at INDEX." ilk="function" name="mark_set" signature="mark_set(self, markName, index)" />
+        <scope doc="Internal method" ilk="function" name="edit" signature="edit(self, *args)" />
+        <scope doc="Delete all tags in TAGNAMES." ilk="function" name="tag_delete" signature="tag_delete(self, *tagNames)" />
+        <scope doc="Return a list of start and end index for the first sequence&#xA;of characters between INDEX1 and INDEX2 which all have tag&#xA;TAGNAME." ilk="function" name="tag_prevrange" signature="tag_prevrange(self, tagName, index1, index2=None)" />
+        <scope doc="Change the priority of tag TAGNAME such that it is lower&#xA;than the priority of BELOWTHIS." ilk="function" name="tag_lower" signature="tag_lower(self, tagName, belowThis=None)" />
+        <scope doc="Return the value of OPTION of an embedded window at INDEX." ilk="function" name="window_cget" signature="window_cget(self, index, option)" />
+        <scope doc="Get or Set the modified flag" ilk="function" name="edit_modified" signature="edit_modified(self, arg=None)" />
+        <scope doc="Return all mark names." ilk="function" name="mark_names" signature="mark_names(self)" />
+        <scope doc="Delete all marks in MARKNAMES." ilk="function" name="mark_unset" signature="mark_unset(self, *markNames)" />
+        <scope doc="Obsolete function, use see." ilk="function" name="yview_pickplace" signature="yview_pickplace(self, *what)" />
+        <scope doc="Return all names of embedded windows in this widget." ilk="function" name="window_names" signature="window_names(self)" />
+        <scope doc="Configure a tag TAGNAME." ilk="function" name="tag_config" signature="tag_config(self, tagName, cnf=None, **kw)" />
+      </scope>
+      <variable citdl="str" name="Y" />
+      <variable citdl="list" line="14" name="__all__" />
+      <scope ilk="function" line="44" lineend="51" name="example" signature="example()">
+        <variable citdl="ScrolledText" line="47" name="stext" />
+      </scope>
+    </scope>
+    

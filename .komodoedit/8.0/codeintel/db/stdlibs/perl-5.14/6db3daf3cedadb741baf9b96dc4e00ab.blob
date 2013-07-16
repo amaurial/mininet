@@ -1,0 +1,24 @@
+<scope ilk="blob" lang="Perl" name="HTTP::Headers::ETag">
+      <scope ilk="class" line="1" lineend="9" name="HTTP::Headers::ETag">
+        <import line="7" module="HTTP::Date" />
+        <import line="9" module="HTTP::Headers" />
+        <variable line="4" name="$VERSION" />
+      </scope>
+      <scope ilk="class" line="10" lineend="94" name="HTTP::Headers">
+        <scope ilk="function" line="12" lineend="21" name="_etags" signature="_etags($self, $header)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$header" />
+        </scope>
+        <scope ilk="function" line="23" lineend="23" name="etag" signature="etag()" />
+        <scope ilk="function" line="24" lineend="24" name="if_match" signature="if_match()" />
+        <scope ilk="function" line="25" lineend="25" name="if_none_match" signature="if_none_match()" />
+        <scope ilk="function" line="27" lineend="49" name="if_range" signature="if_range($self, $new)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$new" />
+        </scope>
+        <scope ilk="function" line="63" lineend="92" name="_split_etag_list" signature="_split_etag_list(@val)">
+          <variable ilk="argument" name="@val" />
+        </scope>
+      </scope>
+    </scope>
+    

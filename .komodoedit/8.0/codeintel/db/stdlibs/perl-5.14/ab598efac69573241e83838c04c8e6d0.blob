@@ -1,0 +1,111 @@
+<scope ilk="blob" lang="Perl" name="HTTP::Headers">
+      <scope ilk="class" line="1" lineend="446" name="HTTP::Headers">
+        <import line="4" module="Carp" />
+        <variable line="6" name="$TRANSLATE_UNDERSCORE" />
+        <variable line="6" name="$VERSION" />
+        <variable line="283" name="*clone" />
+        <variable line="349" name="$ct" />
+        <variable line="404" name="*referrer" />
+        <scope attributes="__ctor__" ilk="function" line="66" lineend="72" name="new" signature="new()">
+          </scope>
+        <scope ilk="function" line="75" lineend="89" name="header" signature="header($self, $field)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$field" />
+        </scope>
+        <scope ilk="function" line="91" lineend="95" name="clear" signature="clear($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="98" lineend="105" name="push_header" signature="push_header($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="108" lineend="112" name="init_header" signature="init_header()" />
+        <scope ilk="function" line="115" lineend="126" name="remove_header" signature="remove_header($self, @fields)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="@fields" />
+        </scope>
+        <scope ilk="function" line="128" lineend="142" name="remove_content_headers" signature="remove_content_headers($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="145" lineend="196" name="_header" signature="_header($self, $field, $val, $op)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$field" />
+          <variable ilk="argument" name="$val" />
+          <variable ilk="argument" name="$op" />
+        </scope>
+        <scope ilk="function" line="199" lineend="206" name="_sorted_field_names" signature="_sorted_field_names($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="209" lineend="214" name="header_field_names" signature="header_field_names($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="217" lineend="234" name="scan" signature="scan($self, $sub)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$sub" />
+        </scope>
+        <scope ilk="function" line="237" lineend="267" name="as_string" signature="as_string($self, $endl)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$endl" />
+        </scope>
+        <scope ilk="function" line="269" lineend="278" name="_process_newline" signature="_process_newline($endl)">
+          <variable ilk="argument" name="$endl" />
+        </scope>
+        <scope ilk="function" line="294" lineend="304" name="_date_header" signature="_date_header($self, $header, $time)">
+          <import line="296" module="HTTP::Date" />
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$header" />
+          <variable ilk="argument" name="$time" />
+          <import line="296" module="HTTP::Date" />
+        </scope>
+        <scope ilk="function" line="307" lineend="307" name="date" signature="date()" />
+        <scope ilk="function" line="308" lineend="308" name="expires" signature="expires()" />
+        <scope ilk="function" line="309" lineend="309" name="if_modified_since" signature="if_modified_since()" />
+        <scope ilk="function" line="310" lineend="310" name="if_unmodified_since" signature="if_unmodified_since()" />
+        <scope ilk="function" line="311" lineend="311" name="last_modified" signature="last_modified()" />
+        <scope ilk="function" line="315" lineend="315" name="client_date" signature="client_date()" />
+        <scope ilk="function" line="324" lineend="336" name="content_type" signature="content_type($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="338" lineend="362" name="content_type_charset" signature="content_type_charset($self)">
+          <import line="340" module="HTTP::Headers::Util" />
+          <variable ilk="argument" name="$self" />
+          <import line="340" module="HTTP::Headers::Util" />
+        </scope>
+        <scope ilk="function" line="364" lineend="367" name="content_is_text" signature="content_is_text($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="369" lineend="372" name="content_is_html" signature="content_is_html($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="374" lineend="378" name="content_is_xhtml" signature="content_is_xhtml()">
+          </scope>
+        <scope ilk="function" line="380" lineend="386" name="content_is_xml" signature="content_is_xml()">
+          </scope>
+        <scope ilk="function" line="388" lineend="403" name="referer" signature="referer($self, $uri)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$uri" />
+        </scope>
+        <scope ilk="function" line="406" lineend="406" name="title" signature="title()" />
+        <scope ilk="function" line="407" lineend="407" name="content_encoding" signature="content_encoding()" />
+        <scope ilk="function" line="408" lineend="408" name="content_language" signature="content_language()" />
+        <scope ilk="function" line="409" lineend="409" name="content_length" signature="content_length()" />
+        <scope ilk="function" line="411" lineend="411" name="user_agent" signature="user_agent()" />
+        <scope ilk="function" line="412" lineend="412" name="server" signature="server()" />
+        <scope ilk="function" line="414" lineend="414" name="from" signature="from()" />
+        <scope ilk="function" line="415" lineend="415" name="warning" signature="warning()" />
+        <scope ilk="function" line="417" lineend="417" name="www_authenticate" signature="www_authenticate()" />
+        <scope ilk="function" line="418" lineend="418" name="authorization" signature="authorization()" />
+        <scope ilk="function" line="420" lineend="420" name="proxy_authenticate" signature="proxy_authenticate()" />
+        <scope ilk="function" line="421" lineend="421" name="proxy_authorization" signature="proxy_authorization()" />
+        <scope ilk="function" line="423" lineend="423" name="authorization_basic" signature="authorization_basic()" />
+        <scope ilk="function" line="424" lineend="424" name="proxy_authorization_basic" signature="proxy_authorization_basic()" />
+        <scope ilk="function" line="426" lineend="443" name="_basic_auth" signature="_basic_auth($self, $h, $user, $passwd)">
+          <import line="427" module="MIME::Base64" />
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$h" />
+          <variable ilk="argument" name="$user" />
+          <variable ilk="argument" name="$passwd" />
+          <import line="427" module="MIME::Base64" />
+        </scope>
+      </scope>
+    </scope>
+    

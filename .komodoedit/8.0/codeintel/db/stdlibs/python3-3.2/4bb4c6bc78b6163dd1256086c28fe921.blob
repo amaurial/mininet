@@ -1,0 +1,160 @@
+<scope doc="# Module providing the `Process` class which emulates `threading.Thread`&#xA;# # multiprocessing/process.py # # Copyright (c) 2006-2008, R Oudkerk # All rights reserved. # # Redistribution and use in source and binary forms, with or without # modification, are permitted provided that the following conditions # are met: #" ilk="blob" lang="Python" name="multiprocessing.process">
+      <scope classrefs="bytes" doc="&#xA;" ilk="class" line="294" lineend="302" name="AuthenticationString">
+        <scope ilk="function" line="295" lineend="302" name="__reduce__" returns="tuple" signature="__reduce__(self)">
+          <variable citdl="AuthenticationString" ilk="argument" name="self" />
+        </scope>
+      </scope>
+      <variable citdl="str" line="52" name="ORIGINAL_DIR" />
+      <scope classrefs="object" doc="Process objects represent activity that is run in a separate process&#xA;The class is analagous to `threading.Thread`" ilk="class" line="87" lineend="288" name="Process">
+        <scope doc="Method to be run in sub-process; can be overridden in sub-&#xA;class" ilk="function" line="111" lineend="116" name="run" signature="run(self)">
+          <variable citdl="Process" ilk="argument" name="self" />
+        </scope>
+        <scope doc="Terminate process; sends SIGTERM signal or uses&#xA;TerminateProcess()" ilk="function" line="135" lineend="139" name="terminate" signature="terminate(self)">
+          <variable citdl="Process" ilk="argument" name="self" />
+        </scope>
+        <scope ilk="function" line="95" lineend="109" name="__init__" signature="__init__(self, group=None, target=None, name=None, args=(), kwargs={})">
+          <variable citdl="next()" line="97" name="count" />
+          <variable ilk="argument" name="group" />
+          <variable ilk="argument" name="target" />
+          <variable citdl="dict" ilk="argument" name="kwargs" />
+          <variable citdl="Process" ilk="argument" name="self" />
+          <variable citdl="tuple" ilk="argument" name="args" />
+          <variable ilk="argument" name="name" />
+        </scope>
+        <scope doc="Wait until child process terminates" ilk="function" line="141" lineend="149" name="join" signature="join(self, timeout=None)">
+          <variable citdl="self._popen.wait()" line="147" name="res" />
+          <variable citdl="Process" ilk="argument" name="self" />
+          <variable ilk="argument" name="timeout" />
+        </scope>
+        <scope doc="Start child process" ilk="function" line="118" lineend="133" name="start" signature="start(self)">
+          <variable citdl="Process" ilk="argument" name="self" />
+          <variable line="129" name="Popen" />
+        </scope>
+        <scope ilk="function" line="243" lineend="288" name="_bootstrap" returns="int" signature="_bootstrap(self)">
+          <variable citdl="Process" ilk="argument" name="self" />
+          <variable attributes="protected" citdl="Process" line="257" name="_current_process" />
+          <variable citdl="_current_process" line="256" name="old_process" />
+          <variable citdl="int" line="268" name="exitcode" />
+        </scope>
+        <scope ilk="function" line="219" lineend="239" name="__repr__" returns="tuple" signature="__repr__(self)">
+          <variable citdl="str" line="221" name="status" />
+          <variable citdl="Process" ilk="argument" name="self" />
+        </scope>
+        <scope doc="Return whether process is alive" ilk="function" line="151" lineend="161" name="is_alive" returns="bool" signature="is_alive(self)">
+          <variable citdl="Process" ilk="argument" name="self" />
+        </scope>
+        <scope attributes="__hidden__" doc="Return identifier (PID) of process or `None` if it has yet to start" ilk="function" line="208" lineend="215" name="ident (property getter)" returns="os.getpid()" signature="ident (property getter)()">
+          <variable citdl="Process" ilk="argument" name="self" />
+        </scope>
+        <variable attributes="protected __instancevar__" citdl="set()" line="248" name="_children" />
+        <variable citdl="start.Popen()" line="217" name="pid" />
+        <scope attributes="__hidden__" doc="Return whether process is a daemon" ilk="function" line="173" lineend="177" name="daemon (property getter)" returns="_current_process._daemonic" signature="daemon (property getter)()">
+          <variable citdl="Process" ilk="argument" name="self" />
+        </scope>
+        <variable attributes="protected __instancevar__" line="104" name="_target" />
+        <variable attributes="protected __instancevar__" citdl="tuple()" line="105" name="_args" />
+        <variable attributes="protected __instancevar__" citdl="_current_process._authkey" line="99" name="_authkey" />
+        <variable attributes="protected __instancevar__" citdl="tuple" line="98" name="_identity" />
+        <scope attributes="__hidden__" ilk="function" line="168" lineend="170" name="name (property setter)" signature="name (property setter)(name)">
+          <variable citdl="Process" ilk="argument" name="self" />
+          <variable ilk="argument" name="name" />
+        </scope>
+        <variable attributes="protected" line="93" name="_Popen" />
+        <scope attributes="__hidden__" doc="Return exit code of process or `None` if it has yet to stop" ilk="function" line="199" lineend="205" name="exitcode (property getter)" returns="self._popen.poll()" signature="exitcode (property getter)()">
+          <variable citdl="Process" ilk="argument" name="self" />
+        </scope>
+        <variable attributes="protected __instancevar__" citdl="_current_process._daemonic" line="100" name="_daemonic" />
+        <variable attributes="property" citdl="_current_process._authkey" line="188" name="authkey" />
+        <scope attributes="__hidden__" doc="Set whether process is a daemon" ilk="function" line="180" lineend="185" name="daemon (property setter)" signature="daemon (property setter)(daemonic)">
+          <variable citdl="Process" ilk="argument" name="self" />
+          <variable ilk="argument" name="daemonic" />
+        </scope>
+        <variable attributes="protected __instancevar__" citdl="_current_process._tempdir" line="101" name="_tempdir" />
+        <variable attributes="protected __instancevar__" citdl="start.Popen()" line="103" name="_popen" />
+        <variable attributes="protected __instancevar__" citdl="itertools.count()" line="249" name="_counter" />
+        <variable attributes="property" citdl="_current_process._daemonic" line="173" name="daemon" />
+        <variable attributes="property" citdl="start.Popen()" line="208" name="ident" />
+        <variable attributes="property" citdl="str.join()" line="164" name="name" />
+        <scope attributes="__hidden__" ilk="function" line="188" lineend="189" name="authkey (property getter)" returns="_current_process._authkey" signature="authkey (property getter)()">
+          <variable citdl="Process" ilk="argument" name="self" />
+        </scope>
+        <variable attributes="protected __instancevar__" citdl="str" line="107" name="_name" />
+        <scope attributes="__hidden__" ilk="function" line="164" lineend="165" name="name (property getter)" returns="str" signature="name (property getter)()">
+          <variable citdl="Process" ilk="argument" name="self" />
+        </scope>
+        <scope attributes="__hidden__" doc="Set authorization key of process" ilk="function" line="192" lineend="196" name="authkey (property setter)" signature="authkey (property setter)(authkey)">
+          <variable citdl="Process" ilk="argument" name="self" />
+          <variable ilk="argument" name="authkey" />
+        </scope>
+        <variable attributes="protected __instancevar__" citdl="os.getpid()" line="102" name="_parent_pid" />
+        <variable attributes="protected __instancevar__" citdl="dict()" line="106" name="_kwargs" />
+        <variable attributes="property" citdl="start.Popen()" line="199" name="exitcode" />
+      </scope>
+      <scope classrefs="object" doc="&#xA;" ilk="class" name="WeakSet">
+        <scope ilk="function" name="difference_update" signature="difference_update(self, other)" />
+        <scope ilk="function" name="symmetric_difference" signature="symmetric_difference(self, other)" />
+        <scope ilk="function" name="__reduce__" signature="__reduce__(self)" />
+        <scope ilk="function" name="pop" signature="pop(self)" />
+        <scope ilk="function" name="issuperset" signature="issuperset(self, other)" />
+        <scope ilk="function" name="remove" signature="remove(self, item)" />
+        <scope ilk="function" name="__and__" signature="__and__(self, other)" />
+        <scope ilk="function" name="__lt__" signature="__lt__(self, other)" />
+        <scope ilk="function" name="__init__" signature="__init__(self, data=None)" />
+        <scope ilk="function" name="_commit_removals" signature="_commit_removals(self)" />
+        <scope ilk="function" name="intersection" signature="intersection(self, other)" />
+        <scope ilk="function" name="__iand__" signature="__iand__(self, other)" />
+        <scope ilk="function" name="issubset" signature="issubset(self, other)" />
+        <scope ilk="function" name="__contains__" signature="__contains__(self, item)" />
+        <scope ilk="function" name="union" signature="union(self, other)" />
+        <scope ilk="function" name="discard" signature="discard(self, item)" />
+        <scope ilk="function" name="add" signature="add(self, item)" />
+        <scope ilk="function" name="__ixor__" signature="__ixor__(self, other)" />
+        <scope ilk="function" name="__len__" signature="__len__(self)" />
+        <scope ilk="function" name="__isub__" signature="__isub__(self, other)" />
+        <scope ilk="function" name="symmetric_difference_update" signature="symmetric_difference_update(self, other)" />
+        <scope ilk="function" name="update" signature="update(self, other)" />
+        <scope ilk="function" name="difference" signature="difference(self, other)" />
+        <scope ilk="function" name="__iter__" signature="__iter__(self)" />
+        <scope ilk="function" name="__or__" signature="__or__(self, other)" />
+        <scope ilk="function" name="__gt__" signature="__gt__(self, other)" />
+        <scope ilk="function" name="copy" signature="copy(self)" />
+        <scope ilk="function" name="__eq__" signature="__eq__(self, other)" />
+        <scope ilk="function" name="isdisjoint" signature="isdisjoint(self, other)" />
+        <scope ilk="function" name="clear" signature="clear(self)" />
+        <scope ilk="function" name="intersection_update" signature="intersection_update(self, other)" />
+        <scope ilk="function" name="__xor__" signature="__xor__(self, other)" />
+        <scope ilk="function" name="__ior__" signature="__ior__(self, other)" />
+        <scope ilk="function" name="__le__" signature="__le__(self, other)" />
+        <scope doc="# Helper functions for simple delegating methods." ilk="function" name="_apply" signature="_apply(self, other, method)" />
+        <scope ilk="function" name="__sub__" signature="__sub__(self, other)" />
+        <scope ilk="function" name="__ge__" signature="__ge__(self, other)" />
+      </scope>
+      <variable citdl="list" line="35" name="__all__" />
+      <scope doc="Return list of process objects corresponding to live child&#xA;processes" ilk="function" line="66" lineend="71" name="active_children" returns="list()" signature="active_children()" />
+      <scope doc="Return process object representing the current process" ilk="function" line="60" lineend="64" name="current_process" returns="_current_process" signature="current_process()" />
+      <import module="itertools" />
+      <variable citdl="str" name="name" />
+      <import module="os" />
+      <import module="signal" />
+      <scope doc="The default handler for SIGINT installed by Python." ilk="function" name="signum" signature="default_int_handler(...)" />
+      <import module="sys" />
+      <scope attributes="protected __hidden__" ilk="function" line="77" lineend="81" name="_cleanup" signature="_cleanup()" />
+      <scope attributes="protected __hidden__" classrefs="Process" ilk="class" line="308" lineend="319" name="_MainProcess">
+        <scope attributes="__ctor__" ilk="function" line="310" lineend="319" name="__init__" signature="_MainProcess()">
+          <variable citdl="_MainProcess" ilk="argument" name="self" />
+        </scope>
+        <variable attributes="protected __instancevar__" citdl="tuple" line="311" name="_identity" />
+        <variable attributes="protected __instancevar__" citdl="False" line="312" name="_daemonic" />
+        <variable attributes="protected __instancevar__" citdl="str" line="313" name="_name" />
+        <variable attributes="protected __instancevar__" line="314" name="_parent_pid" />
+        <variable attributes="protected __instancevar__" line="315" name="_popen" />
+        <variable attributes="protected __instancevar__" citdl="itertools.count()" line="316" name="_counter" />
+        <variable attributes="protected __instancevar__" citdl="set()" line="317" name="_children" />
+        <variable attributes="protected __instancevar__" citdl="AuthenticationString" line="318" name="_authkey" />
+        <variable attributes="protected __instancevar__" line="319" name="_tempdir" />
+      </scope>
+      <variable attributes="protected __hidden__" citdl="_MainProcess" line="321" name="_current_process" />
+      <variable attributes="protected __hidden__" citdl="WeakSet()" line="335" name="_dangling" />
+      <variable attributes="protected __hidden__" citdl="dict" line="328" name="_exitcode_to_name" />
+    </scope>
+    

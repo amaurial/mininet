@@ -1,0 +1,33 @@
+<scope doc="Interface to the Expat non-validating XML parser.&#xA;" ilk="blob" lang="Python" name="xml.parsers.expat">
+      <variable citdl="str" name="EXPAT_VERSION" />
+      <scope doc="Returns string error for given number." ilk="function" name="ErrorString" returns="str" signature="ErrorString(errno) -&gt; string" />
+      <scope classrefs="Exception" doc="&#xA;" ilk="class" name="ExpatError" />
+      <scope doc="Return a new XML parser object." ilk="function" name="ParserCreate" signature="ParserCreate([encoding[, namespace_separator]]) -&gt; parser" />
+      <scope classrefs="object" doc="XML parser&#xA;" ilk="class" name="XMLParserType">
+        <scope doc="Set the base URL for the parser." ilk="function" name="SetBase" signature="SetBase(base_url)" />
+        <scope doc="x.__setattr__(&apos;name&apos;, value) &lt;==&gt; x.name = value" ilk="function" name="__setattr__" signature="x.__setattr__(&apos;name&apos;, value) &lt;==&gt; x.name = value" />
+        <scope doc="x.__getattribute__(&apos;name&apos;) &lt;==&gt; x.name" ilk="function" name="__getattribute__" signature="x.__getattribute__(&apos;name&apos;) &lt;==&gt; x.name" />
+        <scope doc="Return the untranslated text of the input that caused the&#xA;current event." ilk="function" name="GetInputContext" returns="str" signature="GetInputContext() -&gt; string" />
+        <scope doc="Create a parser for parsing an external entity based on the&#xA;information passed to the ExternalEntityRefHandler." ilk="function" name="ExternalEntityParserCreate" signature="ExternalEntityParserCreate(context[, encoding])" />
+        <scope doc="Parse XML data. `isfinal&apos; should be true at end of input." ilk="function" name="Parse" signature="Parse(data[, isfinal])" />
+        <scope doc="x.__delattr__(&apos;name&apos;) &lt;==&gt; del x.name" ilk="function" name="__delattr__" signature="x.__delattr__(&apos;name&apos;) &lt;==&gt; del x.name" />
+        <scope doc="Parse XML data from file-like object." ilk="function" name="ParseFile" signature="ParseFile(file)" />
+        <scope doc="Return base URL string for the parser." ilk="function" name="GetBase" signature="GetBase() -&gt; url" />
+        <scope doc="Allows the application to provide an artificial external&#xA;subset if one is not specified as part of the document&#xA;instance." ilk="function" name="UseForeignDTD" signature="UseForeignDTD([flag])" />
+        <scope doc="Controls parsing of parameter entities (including the&#xA;external DTD subset)." ilk="function" name="SetParamEntityParsing" signature="SetParamEntityParsing(flag) -&gt; success" />
+        <scope ilk="function" name="__dir__" />
+      </scope>
+      <variable citdl="int" name="XML_PARAM_ENTITY_PARSING_ALWAYS" />
+      <variable citdl="int" name="XML_PARAM_ENTITY_PARSING_NEVER" />
+      <variable citdl="int" name="XML_PARAM_ENTITY_PARSING_UNLESS_STANDALONE" />
+      <scope classrefs="Exception" doc="&#xA;" ilk="class" name="error" />
+      <import module="errors" />
+      <variable citdl="PyCapsule" name="expat_CAPI" />
+      <variable citdl="list" name="features" />
+      <import module="model" />
+      <variable citdl="str" name="native_encoding" />
+      <import module="sys" />
+      <variable citdl="tuple" name="version_info" />
+      <variable attributes="__hidden__" citdl="str" line="2" name="__version__" />
+    </scope>
+    

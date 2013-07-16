@@ -1,0 +1,270 @@
+<scope ilk="blob" lang="Perl" name="Moose::Meta::Attribute">
+      <scope ilk="class" line="2" lineend="1149" name="Moose::Meta::Attribute">
+        <import line="13" module="Class::MOP" />
+        <import line="14" module="Scalar::Util" symbol="blessed" />
+        <import line="15" module="List::MoreUtils" symbol="any" />
+        <import line="16" module="Try::Tiny" symbol="*" />
+        <import line="19" module="Moose::Deprecated" symbol="*" />
+        <import line="20" module="Moose::Meta::Method::Accessor" symbol="*" />
+        <import line="21" module="Moose::Meta::Method::Delegation" symbol="*" />
+        <import line="22" module="Moose::Util" />
+        <import line="23" module="Moose::Util::TypeConstraints" />
+        <import line="24" module="Class::MOP::MiniTrait" symbol="*" />
+        <variable line="4" name="$Moose::Meta::Attribute::AUTHORITY" />
+        <variable line="7" name="$Moose::Meta::Attribute::VERSION" />
+        <scope ilk="function" line="39" lineend="43" name="does" signature="does($self, $role_name)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$role_name" />
+        </scope>
+        <scope ilk="function" line="48" lineend="56" name="throw_error" signature="throw_error($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="58" lineend="61" name="_inline_throw_error" signature="_inline_throw_error($self, $msg, $args)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$msg" />
+          <variable ilk="argument" name="$args" />
+        </scope>
+        <scope ilk="function" line="63" lineend="84" name="new" signature="new($class, $name, %options)">
+          <variable ilk="argument" name="$class" />
+          <variable ilk="argument" name="$name" />
+          <variable ilk="argument" name="%options" />
+        </scope>
+        <scope ilk="function" line="86" lineend="92" name="interpolate_class_and_new" signature="interpolate_class_and_new($class, $name, %args)">
+          <variable ilk="argument" name="$class" />
+          <variable ilk="argument" name="$name" />
+          <variable ilk="argument" name="%args" />
+        </scope>
+        <scope ilk="function" line="94" lineend="143" name="interpolate_class" signature="interpolate_class($class, $options)">
+          <variable ilk="argument" name="$class" />
+          <variable ilk="argument" name="$options" />
+        </scope>
+        <scope ilk="function" line="148" lineend="150" name="illegal_options_for_inheritance" signature="illegal_options_for_inheritance()" />
+        <scope ilk="function" line="166" lineend="230" name="clone_and_inherit_options" signature="clone_and_inherit_options($self, %options)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="%options" />
+        </scope>
+        <scope ilk="function" line="232" lineend="254" name="clone" signature="clone($self, %params)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="%params" />
+        </scope>
+        <scope ilk="function" line="256" lineend="268" name="_process_options" signature="_process_options($class, $name, $options)">
+          <variable ilk="argument" name="$class" />
+          <variable ilk="argument" name="$name" />
+          <variable ilk="argument" name="$options" />
+        </scope>
+        <scope ilk="function" line="270" lineend="306" name="_process_is_option" signature="_process_is_option($class, $name, $options)">
+          <variable ilk="argument" name="$class" />
+          <variable ilk="argument" name="$name" />
+          <variable ilk="argument" name="$options" />
+        </scope>
+        <scope ilk="function" line="308" lineend="337" name="_process_isa_option" signature="_process_isa_option($class, $name, $options)">
+          <variable ilk="argument" name="$class" />
+          <variable ilk="argument" name="$name" />
+          <variable ilk="argument" name="$options" />
+        </scope>
+        <scope ilk="function" line="339" lineend="354" name="_process_does_option" signature="_process_does_option($class, $name, $options)">
+          <variable ilk="argument" name="$class" />
+          <variable ilk="argument" name="$name" />
+          <variable ilk="argument" name="$options" />
+        </scope>
+        <scope ilk="function" line="356" lineend="380" name="_process_coerce_option" signature="_process_coerce_option($class, $name, $options)">
+          <variable ilk="argument" name="$class" />
+          <variable ilk="argument" name="$name" />
+          <variable ilk="argument" name="$options" />
+        </scope>
+        <scope ilk="function" line="382" lineend="389" name="_process_trigger_option" signature="_process_trigger_option($class, $name, $options)">
+          <variable ilk="argument" name="$class" />
+          <variable ilk="argument" name="$name" />
+          <variable ilk="argument" name="$options" />
+        </scope>
+        <scope ilk="function" line="391" lineend="406" name="_process_auto_deref_option" signature="_process_auto_deref_option($class, $name, $options)">
+          <variable ilk="argument" name="$class" />
+          <variable ilk="argument" name="$name" />
+          <variable ilk="argument" name="$options" />
+        </scope>
+        <scope ilk="function" line="408" lineend="429" name="_process_lazy_build_option" signature="_process_lazy_build_option($class, $name, $options)">
+          <variable ilk="argument" name="$class" />
+          <variable ilk="argument" name="$name" />
+          <variable ilk="argument" name="$options" />
+        </scope>
+        <scope ilk="function" line="431" lineend="440" name="_process_lazy_option" signature="_process_lazy_option($class, $name, $options)">
+          <variable ilk="argument" name="$class" />
+          <variable ilk="argument" name="$name" />
+          <variable ilk="argument" name="$options" />
+        </scope>
+        <scope ilk="function" line="442" lineend="457" name="_process_required_option" signature="_process_required_option($class, $name, $options)">
+          <variable ilk="argument" name="$class" />
+          <variable ilk="argument" name="$name" />
+          <variable ilk="argument" name="$options" />
+        </scope>
+        <scope ilk="function" line="459" lineend="498" name="initialize_instance_slot" signature="initialize_instance_slot($self, $meta_instance, $instance, $params)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$meta_instance" />
+          <variable ilk="argument" name="$instance" />
+          <variable ilk="argument" name="$params" />
+        </scope>
+        <scope ilk="function" line="500" lineend="516" name="_call_builder" signature="_call_builder($self, $instance)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$instance" />
+        </scope>
+        <scope ilk="function" line="520" lineend="527" name="_make_initializer_writer_callback" signature="_make_initializer_writer_callback($self, $meta_instance, $instance, $slot_name)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$meta_instance" />
+          <variable ilk="argument" name="$instance" />
+          <variable ilk="argument" name="$slot_name" />
+        </scope>
+        <scope ilk="function" line="529" lineend="555" name="set_value" signature="set_value($self, $instance, @args)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$instance" />
+          <variable ilk="argument" name="@args" />
+        </scope>
+        <scope ilk="function" line="557" lineend="592" name="_inline_set_value" signature="_inline_set_value($self, $instance, $value, $tc, $tc_obj, $for_constructor)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$instance" />
+          <variable ilk="argument" name="$value" />
+          <variable ilk="argument" name="$tc" />
+          <variable ilk="argument" name="$tc_obj" />
+          <variable ilk="argument" name="$for_constructor" />
+        </scope>
+        <scope ilk="function" line="594" lineend="597" name="_writer_value_needs_copy" signature="_writer_value_needs_copy($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="599" lineend="604" name="_inline_copy_value" signature="_inline_copy_value($self, $value, $copy)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$value" />
+          <variable ilk="argument" name="$copy" />
+        </scope>
+        <scope ilk="function" line="606" lineend="621" name="_inline_check_required" signature="_inline_check_required($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="623" lineend="629" name="_inline_tc_code" signature="_inline_tc_code($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="631" lineend="638" name="_inline_check_coercion" signature="_inline_check_coercion($self, $value, $tc, $tc_obj)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$value" />
+          <variable ilk="argument" name="$tc" />
+          <variable ilk="argument" name="$tc_obj" />
+        </scope>
+        <scope ilk="function" line="640" lineend="658" name="_inline_check_constraint" signature="_inline_check_constraint($self, $value, $tc, $tc_obj)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$value" />
+          <variable ilk="argument" name="$tc" />
+          <variable ilk="argument" name="$tc_obj" />
+        </scope>
+        <scope ilk="function" line="660" lineend="671" name="_inline_get_old_value_for_trigger" signature="_inline_get_old_value_for_trigger($self, $instance, $old)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$instance" />
+          <variable ilk="argument" name="$old" />
+        </scope>
+        <scope ilk="function" line="673" lineend="684" name="_inline_weaken_value" signature="_inline_weaken_value($self, $instance, $value)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$instance" />
+          <variable ilk="argument" name="$value" />
+        </scope>
+        <scope ilk="function" line="686" lineend="693" name="_inline_trigger" signature="_inline_trigger($self, $instance, $value, $old)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$instance" />
+          <variable ilk="argument" name="$value" />
+          <variable ilk="argument" name="$old" />
+        </scope>
+        <scope ilk="function" line="695" lineend="702" name="_weaken_value" signature="_weaken_value($self, $instance)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$instance" />
+        </scope>
+        <scope ilk="function" line="704" lineend="745" name="get_value" signature="get_value($self, $instance, $for_trigger)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$instance" />
+          <variable ilk="argument" name="$for_trigger" />
+        </scope>
+        <scope ilk="function" line="747" lineend="759" name="_inline_get_value" signature="_inline_get_value($self, $instance, $tc, $tc_obj)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$instance" />
+          <variable ilk="argument" name="$tc" />
+          <variable ilk="argument" name="$tc_obj" />
+        </scope>
+        <scope ilk="function" line="761" lineend="774" name="_inline_check_lazy" signature="_inline_check_lazy($self, $instance, $tc, $tc_obj)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$instance" />
+          <variable ilk="argument" name="$tc" />
+          <variable ilk="argument" name="$tc_obj" />
+        </scope>
+        <scope ilk="function" line="776" lineend="800" name="_inline_init_from_default" signature="_inline_init_from_default($self, $instance, $default, $tc, $tc_obj, $for_lazy)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$instance" />
+          <variable ilk="argument" name="$default" />
+          <variable ilk="argument" name="$tc" />
+          <variable ilk="argument" name="$tc_obj" />
+          <variable ilk="argument" name="$for_lazy" />
+        </scope>
+        <scope ilk="function" line="802" lineend="832" name="_inline_generate_default" signature="_inline_generate_default($self, $instance, $default)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$instance" />
+          <variable ilk="argument" name="$default" />
+        </scope>
+        <scope ilk="function" line="834" lineend="844" name="_inline_init_slot" signature="_inline_init_slot($self, $inv, $value)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$inv" />
+          <variable ilk="argument" name="$value" />
+        </scope>
+        <scope ilk="function" line="846" lineend="850" name="_inline_return_auto_deref" signature="_inline_return_auto_deref($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="852" lineend="879" name="_auto_deref" signature="_auto_deref($self, $ref_value)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$ref_value" />
+        </scope>
+        <scope ilk="function" line="883" lineend="883" name="accessor_metaclass" signature="accessor_metaclass()" />
+        <scope ilk="function" line="885" lineend="890" name="install_accessors" signature="install_accessors($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="892" lineend="906" name="_check_associated_methods" signature="_check_associated_methods($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="908" lineend="948" name="_process_accessors" signature="_process_accessors($self, $type, $accessor, $generate_as_inline_methods)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$type" />
+          <variable ilk="argument" name="$accessor" />
+          <variable ilk="argument" name="$generate_as_inline_methods" />
+        </scope>
+        <scope ilk="function" line="950" lineend="955" name="remove_accessors" signature="remove_accessors($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="957" lineend="993" name="install_delegation" signature="install_delegation($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="995" lineend="1005" name="remove_delegation" signature="remove_delegation($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="1009" lineend="1051" name="_canonicalize_handles" signature="_canonicalize_handles($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="1053" lineend="1067" name="_get_delegate_method_list" signature="_get_delegate_method_list($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="1069" lineend="1100" name="_find_delegate_metaclass" signature="_find_delegate_metaclass($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="1102" lineend="1102" name="delegation_metaclass" signature="delegation_metaclass()" />
+        <scope ilk="function" line="1104" lineend="1119" name="_make_delegation_method" signature="_make_delegation_method($self, $handle_name, $method_to_call)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$handle_name" />
+          <variable ilk="argument" name="$method_to_call" />
+        </scope>
+        <scope ilk="function" line="1121" lineend="1134" name="_coerce_and_verify" signature="_coerce_and_verify($self, $val, $instance)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$val" />
+          <variable ilk="argument" name="$instance" />
+        </scope>
+        <scope ilk="function" line="1136" lineend="1149" name="verify_against_type_constraint" signature="verify_against_type_constraint($self, $val)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$val" />
+        </scope>
+      </scope>
+      <scope ilk="class" line="1151" lineend="1564" name="Moose::Meta::Attribute::Custom::Moose">
+        <variable line="1153" name="$Moose::Meta::Attribute::Custom::Moose::AUTHORITY" />
+        <variable line="1156" name="$Moose::Meta::Attribute::Custom::Moose::VERSION" />
+        <scope ilk="function" line="1158" lineend="1158" name="register_implementation" signature="register_implementation()" />
+      </scope>
+    </scope>
+    

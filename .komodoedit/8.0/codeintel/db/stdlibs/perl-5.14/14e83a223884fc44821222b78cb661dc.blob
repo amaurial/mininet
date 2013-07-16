@@ -1,0 +1,21 @@
+<scope ilk="blob" lang="Perl" name="Module::Loaded">
+      <scope ilk="class" line="1" lineend="142" name="Module::Loaded">
+        <import line="4" module="Carp" symbol="carp" />
+        <variable line="7" name="$VERSION" />
+        <variable line="7" name="@EXPORT" />
+        <scope attributes="__exported__" ilk="function" line="50" lineend="64" name="mark_as_loaded" signature="mark_as_loaded($pm)">
+          <variable ilk="argument" name="$pm" />
+        </scope>
+        <scope attributes="__exported__" ilk="function" line="76" lineend="88" name="mark_as_unloaded" signature="mark_as_unloaded($pm)">
+          <variable ilk="argument" name="$pm" />
+        </scope>
+        <scope attributes="__exported__" ilk="function" line="100" lineend="107" name="is_loaded" signature="is_loaded($pm)">
+          <variable ilk="argument" name="$pm" />
+        </scope>
+        <scope ilk="function" line="110" lineend="118" name="_pm_to_file" signature="_pm_to_file($pkg, $pm)">
+          <variable ilk="argument" name="$pkg" />
+          <variable ilk="argument" name="$pm" />
+        </scope>
+      </scope>
+    </scope>
+    

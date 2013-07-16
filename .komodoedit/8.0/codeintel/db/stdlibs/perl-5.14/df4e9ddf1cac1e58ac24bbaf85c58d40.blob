@@ -1,0 +1,132 @@
+<scope ilk="blob" lang="Perl" name="ExtUtils::Install">
+      <scope classrefs="Exporter" ilk="class" line="1" lineend="1251" name="ExtUtils::Install">
+        <import line="6" module="AutoSplit" symbol="*" />
+        <import line="7" module="Carp" />
+        <import line="8" module="Config" symbol="%Config" />
+        <import line="9" module="Cwd" symbol="cwd" />
+        <import line="10" module="Exporter" symbol="*" />
+        <import line="11" module="ExtUtils::Packlist" symbol="*" />
+        <import line="12" module="File::Basename" symbol="dirname" />
+        <import line="13" module="File::Compare" symbol="compare" />
+        <import line="14" module="File::Copy" symbol="*" />
+        <import line="15" module="File::Find" symbol="find" />
+        <import line="16" module="File::Path" symbol="*" />
+        <import line="17" module="File::Spec" symbol="*" />
+        <import line="130" module="Win32API::File" />
+        <variable line="4" name="$MUST_REBOOT" />
+        <variable line="4" name="$VERSION" />
+        <variable line="4" name="%Config" />
+        <variable line="4" name="@EXPORT" />
+        <variable line="4" name="@ISA" />
+        <scope ilk="function" line="143" lineend="145" name="_estr" signature="_estr()" />
+        <scope ilk="function" line="148" lineend="152" name="_warnonce" signature="_warnonce($first)">
+          <variable ilk="argument" name="$first" />
+        </scope>
+        <scope ilk="function" line="154" lineend="158" name="_choke" signature="_choke($first)">
+          <variable ilk="argument" name="$first" />
+        </scope>
+        <scope ilk="function" line="161" lineend="172" name="_chmod" signature="_chmod($mode, $item, $verbose)">
+          <variable ilk="argument" name="$mode" />
+          <variable ilk="argument" name="$item" />
+          <variable ilk="argument" name="$verbose" />
+        </scope>
+        <scope ilk="function" line="200" lineend="239" name="_move_file_at_boot" signature="_move_file_at_boot($file, $target, $moan)">
+          <variable ilk="argument" name="$file" />
+          <variable ilk="argument" name="$target" />
+          <variable ilk="argument" name="$moan" />
+        </scope>
+        <scope ilk="function" line="280" lineend="316" name="_unlink_or_rename" signature="_unlink_or_rename($file, $tryhard, $installing)">
+          <variable ilk="argument" name="$file" />
+          <variable ilk="argument" name="$tryhard" />
+          <variable ilk="argument" name="$installing" />
+        </scope>
+        <scope ilk="function" line="335" lineend="382" name="_get_install_skip" signature="_get_install_skip($skip, $verbose)">
+          <variable ilk="argument" name="$skip" />
+          <variable ilk="argument" name="$verbose" />
+        </scope>
+        <scope ilk="function" line="394" lineend="405" name="_have_write_access" signature="_have_write_access($dir)">
+          <variable ilk="argument" name="$dir" />
+        </scope>
+        <scope ilk="function" line="430" lineend="467" name="_can_write_dir" signature="_can_write_dir($dir)">
+          <variable ilk="argument" name="$dir" />
+        </scope>
+        <scope ilk="function" line="487" lineend="515" name="_mkpath" signature="_mkpath($dir, $show, $mode, $verbose, $dry_run)">
+          <variable ilk="argument" name="$dir" />
+          <variable ilk="argument" name="$show" />
+          <variable ilk="argument" name="$mode" />
+          <variable ilk="argument" name="$verbose" />
+          <variable ilk="argument" name="$dry_run" />
+        </scope>
+        <scope ilk="function" line="532" lineend="541" name="_copy" signature="_copy($from, $to, $verbose, $dry_run)">
+          <variable ilk="argument" name="$from" />
+          <variable ilk="argument" name="$to" />
+          <variable ilk="argument" name="$verbose" />
+          <variable ilk="argument" name="$dry_run" />
+        </scope>
+        <scope ilk="function" line="555" lineend="564" name="_chdir" signature="_chdir($dir)">
+          <variable ilk="argument" name="$dir" />
+        </scope>
+        <scope attributes="__exported__" ilk="function" line="684" lineend="860" name="install" signature="install($from_to, $verbose, $dry_run, $uninstall_shadows, $skip, $always_copy, $result)">
+          <variable ilk="argument" name="$from_to" />
+          <variable ilk="argument" name="$verbose" />
+          <variable ilk="argument" name="$dry_run" />
+          <variable ilk="argument" name="$uninstall_shadows" />
+          <variable ilk="argument" name="$skip" />
+          <variable ilk="argument" name="$always_copy" />
+          <variable ilk="argument" name="$result" />
+        </scope>
+        <scope ilk="function" line="873" lineend="883" name="_do_cleanup" signature="_do_cleanup($verbose)">
+          <variable ilk="argument" name="$verbose" />
+        </scope>
+        <scope ilk="function" line="902" lineend="908" name="install_rooted_file" signature="install_rooted_file()" />
+        <scope ilk="function" line="911" lineend="917" name="install_rooted_dir" signature="install_rooted_dir()" />
+        <scope ilk="function" line="933" lineend="936" name="forceunlink" signature="forceunlink($file, $tryhard)">
+          <variable ilk="argument" name="$file" />
+          <variable ilk="argument" name="$tryhard" />
+        </scope>
+        <scope ilk="function" line="949" lineend="960" name="directory_not_empty" signature="directory_not_empty($dir)">
+          <variable ilk="argument" name="$dir" />
+        </scope>
+        <scope attributes="__exported__" ilk="function" line="985" lineend="1015" name="install_default" signature="install_default()">
+          </scope>
+        <scope attributes="__exported__" ilk="function" line="1033" lineend="1051" name="uninstall" signature="uninstall($fil, $verbose, $dry_run)">
+          <variable ilk="argument" name="$fil" />
+          <variable ilk="argument" name="$verbose" />
+          <variable ilk="argument" name="$dry_run" />
+        </scope>
+        <scope ilk="function" line="1072" lineend="1144" name="inc_uninstall" signature="inc_uninstall($filepath, $libdir, $verbose, $dry_run, $ignore, $results)">
+          <variable ilk="argument" name="$filepath" />
+          <variable ilk="argument" name="$libdir" />
+          <variable ilk="argument" name="$verbose" />
+          <variable ilk="argument" name="$dry_run" />
+          <variable ilk="argument" name="$ignore" />
+          <variable ilk="argument" name="$results" />
+        </scope>
+        <scope ilk="function" line="1156" lineend="1168" name="run_filter" signature="run_filter($cmd, $src, $dest)">
+          <variable ilk="argument" name="$cmd" />
+          <variable ilk="argument" name="$src" />
+          <variable ilk="argument" name="$dest" />
+        </scope>
+        <scope attributes="__exported__" ilk="function" line="1190" lineend="1231" name="pm_to_blib" signature="pm_to_blib($fromto, $autodir, $pm_filter)">
+          <variable ilk="argument" name="$fromto" />
+          <variable ilk="argument" name="$autodir" />
+          <variable ilk="argument" name="$pm_filter" />
+        </scope>
+        <scope ilk="function" line="1246" lineend="1251" name="_autosplit" signature="_autosplit()">
+          </scope>
+      </scope>
+      <scope ilk="class" line="1254" lineend="1365" name="ExtUtils::Install::Warn">
+        <scope attributes="__ctor__" ilk="function" line="1256" lineend="1256" name="new" signature="new()" />
+        <scope ilk="function" line="1258" lineend="1261" name="add" signature="add($self, $file, $targetfile)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$file" />
+          <variable ilk="argument" name="$targetfile" />
+        </scope>
+        <scope ilk="function" line="1263" lineend="1282" name="DESTROY" signature="DESTROY($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="1296" lineend="1311" name="_invokant" signature="_invokant()">
+          </scope>
+      </scope>
+    </scope>
+    

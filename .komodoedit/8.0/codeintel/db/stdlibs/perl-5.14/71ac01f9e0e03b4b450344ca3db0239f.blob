@@ -1,0 +1,21 @@
+<scope ilk="blob" lang="Perl" name="Log::Message::Item">
+      <scope ilk="class" line="1" lineend="65" name="Log::Message::Item">
+        <import line="5" module="Params::Check" symbol="check" />
+        <import line="6" module="Log::Message::Handlers" symbol="*" />
+        <import line="9" module="Carp" />
+        <variable line="4" name="$VERSION" />
+        <variable line="12" name="$AUTOLOAD" />
+        <scope attributes="__ctor__" ilk="function" line="20" lineend="38" name="new" signature="new($class, %hash)">
+          <variable ilk="argument" name="$class" />
+          <variable ilk="argument" name="%hash" />
+        </scope>
+        <scope ilk="function" line="40" lineend="40" name="_clean" signature="_clean()" />
+        <scope ilk="function" line="42" lineend="47" name="remove" signature="remove($item)">
+          <variable ilk="argument" name="$item" />
+        </scope>
+        <scope ilk="function" line="49" lineend="61" name="AUTOLOAD" signature="AUTOLOAD()">
+          </scope>
+        <scope ilk="function" line="63" lineend="63" name="DESTROY" signature="DESTROY()" />
+      </scope>
+    </scope>
+    

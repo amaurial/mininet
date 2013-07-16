@@ -1,0 +1,89 @@
+<scope ilk="blob" lang="Perl" name="ActivePerl::PPM::Package">
+      <scope ilk="class" line="1" lineend="414" name="ActivePerl::PPM::Package">
+        <import line="4" module="Carp" symbol="croak" />
+        <import line="5" module="ActiveState::Version" symbol="vcmp" />
+        <import line="6" module="ActivePerl::PPM::Logger" symbol="ppm_status" />
+        <import line="6" module="ActivePerl::PPM::Logger" symbol="ppm_log" />
+        <variable line="23" name="$COMPARE_FEATURES" />
+        <scope ilk="function" line="8" lineend="21" name="BASE_FIELDS" signature="BASE_FIELDS()" />
+        <scope attributes="__ctor__" ilk="function" line="30" lineend="36" name="new" signature="new($class)">
+          <variable ilk="argument" name="$class" />
+        </scope>
+        <scope ilk="function" line="38" lineend="44" name="clone" signature="clone($self)">
+          <import line="40" module="Storable" />
+          <variable ilk="argument" name="$self" />
+          <import line="40" module="Storable" />
+        </scope>
+        <scope ilk="function" line="50" lineend="65" name="AUTOLOAD" signature="AUTOLOAD($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="67" lineend="74" name="name_version" signature="name_version($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="76" lineend="79" name="provides" signature="provides($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="81" lineend="84" name="requires" signature="requires($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="86" lineend="90" name="features_declared" signature="features_declared($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="92" lineend="96" name="codebase_abs" signature="codebase_abs($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="102" lineend="149" name="compare" signature="compare($a, $b)">
+          <variable ilk="argument" name="$a" />
+          <variable ilk="argument" name="$b" />
+        </scope>
+        <scope ilk="function" line="151" lineend="159" name="better_than" signature="better_than($self, $other)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$other" />
+        </scope>
+        <scope ilk="function" line="161" lineend="176" name="best" signature="best($best)">
+          <variable ilk="argument" name="$best" />
+        </scope>
+        <scope ilk="function" line="182" lineend="207" name="sql_create_tables" signature="sql_create_tables($class, %opt)">
+          <variable ilk="argument" name="$class" />
+          <variable ilk="argument" name="%opt" />
+        </scope>
+        <scope ilk="function" line="214" lineend="261" name="new_dbi" signature="new_dbi($class, $dbh, $id_or_name, $version)">
+          <variable ilk="argument" name="$class" />
+          <variable ilk="argument" name="$dbh" />
+          <variable ilk="argument" name="$id_or_name" />
+          <variable ilk="argument" name="$version" />
+        </scope>
+        <scope ilk="function" line="263" lineend="299" name="dbi_store" signature="dbi_store($self, $dbh)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$dbh" />
+        </scope>
+        <scope ilk="function" line="305" lineend="308" name="has_script" signature="has_script($self, $kind)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$kind" />
+        </scope>
+        <scope ilk="function" line="310" lineend="393" name="run_script" signature="run_script($self, $kind, $area, $tmpdir, $pkg_info, $run_cb)">
+          <import line="316" module="File::Temp" />
+          <import line="320" module="ActivePerl::PPM::Web" />
+          <import line="361" module="Cwd" />
+          <import line="366" module="ActivePerl::PPM" />
+          <import line="378" module="ActiveState::Run" />
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$kind" />
+          <variable ilk="argument" name="$area" />
+          <variable ilk="argument" name="$tmpdir" />
+          <variable ilk="argument" name="$pkg_info" />
+          <variable ilk="argument" name="$run_cb" />
+          <import line="316" module="File::Temp" />
+          <import line="320" module="ActivePerl::PPM::Web" />
+          <import line="361" module="Cwd" />
+          <import line="366" module="ActivePerl::PPM" />
+          <import line="378" module="ActiveState::Run" />
+        </scope>
+        <scope ilk="function" line="395" lineend="411" name="_expand_exec" signature="_expand_exec($exec)">
+          <import line="399" module="Text::ParseWords" />
+          <variable ilk="argument" name="$exec" />
+          <import line="399" module="Text::ParseWords" />
+        </scope>
+      </scope>
+    </scope>
+    

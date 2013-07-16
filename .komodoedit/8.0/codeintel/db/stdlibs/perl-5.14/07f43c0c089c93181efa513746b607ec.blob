@@ -1,0 +1,45 @@
+<scope ilk="blob" lang="Perl" name="Pod::Select">
+      <scope classrefs="Pod::Parser" ilk="class" line="10" lineend="746" name="Pod::Select">
+        <import line="241" module="Carp" symbol="*" />
+        <import line="242" module="Pod::Parser" symbol="*" />
+        <variable line="13" name="$MAX_HEADING_LEVEL" />
+        <variable line="13" name="$VERSION" />
+        <variable line="13" name="%myData" />
+        <variable line="13" name="@EXPORT" />
+        <variable line="13" name="@ISA" />
+        <variable line="13" name="@section_headings" />
+        <variable line="13" name="@selected_sections" />
+        <variable line="248" name="*MAX_HEADING_LEVEL" />
+        <scope ilk="function" line="271" lineend="282" name="_init_headings" signature="_init_headings($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="302" lineend="307" name="curr_headings" signature="curr_headings($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="334" lineend="373" name="select" signature="select($self, @sections)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="@sections" />
+        </scope>
+        <scope ilk="function" line="394" lineend="397" name="add_selection" signature="add_selection($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="410" lineend="413" name="clear_selections" signature="clear_selections($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="435" lineend="470" name="match_section" signature="match_section($self, @headings)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="@headings" />
+        </scope>
+        <scope ilk="function" line="491" lineend="514" name="is_selected" signature="is_selected($self, $paragraph)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$paragraph" />
+        </scope>
+        <scope attributes="__exported__" ilk="function" line="575" lineend="621" name="podselect" signature="podselect(@argv)">
+          <variable ilk="argument" name="@argv" />
+        </scope>
+        <scope ilk="function" line="660" lineend="697" name="_compile_section_spec" signature="_compile_section_spec($section_spec)">
+          <variable ilk="argument" name="$section_spec" />
+        </scope>
+      </scope>
+    </scope>
+    

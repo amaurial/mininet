@@ -1,0 +1,74 @@
+<scope ilk="blob" lang="Perl" name="URI::URL">
+      <scope classrefs="URI::WithBase" ilk="class" line="1" lineend="38" name="URI::URL">
+        <import line="3" module="URI::WithBase" />
+        <import line="14" module="Exporter" />
+        <import line="21" module="URI::Escape" symbol="uri_unescape" />
+        <variable line="7" name="$VERSION" />
+        <variable line="7" name="@EXPORT" />
+        <variable line="15" name="*import" />
+        <scope attributes="__exported__" ilk="function" line="19" lineend="19" name="url" signature="url()" />
+        <scope ilk="function" line="23" lineend="29" name="new" signature="new($class)">
+          <variable ilk="argument" name="$class" />
+        </scope>
+        <scope attributes="__ctor__" ilk="function" line="31" lineend="36" name="newlocal" signature="newlocal($class)">
+          <import line="34" module="URI::file" />
+          <variable ilk="argument" name="$class" />
+          <import line="34" module="URI::file" />
+        </scope>
+      </scope>
+      <scope ilk="class" line="38" lineend="186" name="URI::_foreign">
+        <variable line="50" name="$URI::URL::STRICT" />
+        <scope ilk="function" line="39" lineend="44" name="_init" signature="_init($class)">
+          <variable ilk="argument" name="$class" />
+        </scope>
+        <scope ilk="function" line="47" lineend="52" name="strict" signature="strict()">
+          </scope>
+        <scope ilk="function" line="54" lineend="59" name="print_on" signature="print_on($self)">
+          <import line="57" module="Data::Dumper" />
+          <variable ilk="argument" name="$self" />
+          <import line="57" module="Data::Dumper" />
+        </scope>
+        <scope ilk="function" line="61" lineend="66" name="_try" signature="_try($self, $method)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$method" />
+        </scope>
+        <scope ilk="function" line="68" lineend="82" name="crack" signature="crack($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="84" lineend="90" name="full_path" signature="full_path($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="92" lineend="95" name="netloc" signature="netloc()" />
+        <scope ilk="function" line="97" lineend="102" name="epath" signature="epath()">
+          </scope>
+        <scope ilk="function" line="104" lineend="112" name="eparams" signature="eparams($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="114" lineend="114" name="params" signature="params()" />
+        <scope ilk="function" line="116" lineend="125" name="path" signature="path($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="127" lineend="129" name="path_components" signature="path_components()" />
+        <scope ilk="function" line="131" lineend="153" name="query" signature="query($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="155" lineend="165" name="abs" signature="abs($self, $base, $allow_scheme)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$base" />
+          <variable ilk="argument" name="$allow_scheme" />
+        </scope>
+        <scope ilk="function" line="167" lineend="167" name="frag" signature="frag()" />
+        <scope ilk="function" line="168" lineend="168" name="keywords" signature="keywords()" />
+        <scope ilk="function" line="171" lineend="171" name="local_path" signature="local_path()" />
+        <scope ilk="function" line="172" lineend="172" name="unix_path" signature="unix_path()" />
+        <scope ilk="function" line="173" lineend="173" name="dos_path" signature="dos_path()" />
+        <scope ilk="function" line="174" lineend="174" name="mac_path" signature="mac_path()" />
+        <scope ilk="function" line="175" lineend="175" name="vms_path" signature="vms_path()" />
+        <scope ilk="function" line="178" lineend="178" name="address" signature="address()" />
+        <scope ilk="function" line="179" lineend="179" name="encoded822addr" signature="encoded822addr()" />
+        <scope ilk="function" line="180" lineend="180" name="URI::mailto::authority" signature="URI::mailto::authority()" />
+        <scope ilk="function" line="183" lineend="183" name="groupart" signature="groupart()" />
+        <scope ilk="function" line="184" lineend="184" name="article" signature="article()" />
+      </scope>
+    </scope>
+    

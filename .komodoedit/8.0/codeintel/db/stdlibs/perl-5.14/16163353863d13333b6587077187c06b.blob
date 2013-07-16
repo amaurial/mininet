@@ -1,0 +1,232 @@
+<scope ilk="blob" lang="Perl" name="IO::Socket::SSL">
+      <scope classrefs="IO::Socket::INET" ilk="class" line="15" lineend="1275" name="IO::Socket::SSL">
+        <import line="17" module="IO::Socket" symbol="*" />
+        <import line="18" module="Net::SSLeay" symbol="*" />
+        <import line="19" module="Exporter" />
+        <import line="20" module="Errno" symbol="EAGAIN" />
+        <import line="20" module="Errno" symbol="ETIMEDOUT" />
+        <import line="21" module="Carp" symbol="*" />
+        <import line="38" module="Scalar::Util" symbol="dualvar" />
+        <variable line="43" name="$DEBUG" />
+        <variable line="43" name="$GLOBAL_CONTEXT_ARGS" />
+        <variable attributes="__exported__" line="43" name="$SSL_ERROR" />
+        <variable line="43" name="$VERSION" />
+        <variable line="43" name="@EXPORT" />
+        <variable line="43" name="@ISA" />
+        <variable line="85" name="*DEBUG" />
+        <variable line="88" name="*ERROR" />
+        <variable line="100" name="$file" />
+        <variable line="621" name="$length" />
+        <scope ilk="function" line="96" lineend="103" name="DEBUG" signature="DEBUG($msg)">
+          <variable ilk="argument" name="$msg" />
+        </scope>
+        <scope ilk="function" line="139" lineend="170" name="import" signature="import($class)">
+          <variable ilk="argument" name="$class" />
+        </scope>
+        <scope ilk="function" line="178" lineend="217" name="configure" signature="configure($self, $arg_hash)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$arg_hash" />
+        </scope>
+        <scope ilk="function" line="219" lineend="307" name="configure_SSL" signature="configure_SSL($self, $arg_hash, $ok, $ctx_store, $certname, $error, $cert)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$arg_hash" />
+          <variable ilk="argument" name="$ok" />
+          <variable ilk="argument" name="$ctx_store" />
+          <variable ilk="argument" name="$certname" />
+          <variable ilk="argument" name="$error" />
+          <variable ilk="argument" name="$cert" />
+        </scope>
+        <scope ilk="function" line="310" lineend="320" name="_set_rw_error" signature="_set_rw_error($self, $ssl, $rv)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$ssl" />
+          <variable ilk="argument" name="$rv" />
+        </scope>
+        <scope ilk="function" line="325" lineend="339" name="connect" signature="connect($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="342" lineend="465" name="connect_SSL" signature="connect_SSL($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="470" lineend="478" name="_update_peer" signature="_update_peer($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="482" lineend="498" name="accept" signature="accept($self, $class)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$class" />
+        </scope>
+        <scope ilk="function" line="500" lineend="604" name="accept_SSL" signature="accept_SSL($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="609" lineend="630" name="generic_read" signature="generic_read()">
+          </scope>
+        <scope ilk="function" line="632" lineend="638" name="read" signature="read($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="641" lineend="644" name="sysread" signature="sysread($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="646" lineend="653" name="peek" signature="peek($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="656" lineend="687" name="generic_write" signature="generic_write()">
+          </scope>
+        <scope ilk="function" line="691" lineend="694" name="write" signature="write($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="698" lineend="701" name="syswrite" signature="syswrite($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="703" lineend="707" name="print" signature="print($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="709" lineend="712" name="printf" signature="printf()">
+          </scope>
+        <scope ilk="function" line="714" lineend="717" name="getc" signature="getc()">
+          </scope>
+        <scope ilk="function" line="719" lineend="792" name="readline" signature="readline($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="794" lineend="810" name="close" signature="close($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope attributes="__ctor__" ilk="function" line="812" lineend="883" name="stop_SSL" signature="stop_SSL($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="886" lineend="890" name="fileno" signature="fileno($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="895" lineend="900" name="_get_ssl_object" signature="_get_ssl_object($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="903" lineend="905" name="_invalid_object" signature="_invalid_object()" />
+        <scope ilk="function" line="908" lineend="911" name="pending" signature="pending()">
+          </scope>
+        <scope attributes="__ctor__" ilk="function" line="913" lineend="944" name="start_SSL" signature="start_SSL()">
+          </scope>
+        <scope ilk="function" line="946" lineend="960" name="new_from_fd" signature="new_from_fd()">
+          </scope>
+        <scope ilk="function" line="963" lineend="966" name="dump_peer_certificate" signature="dump_peer_certificate()">
+          </scope>
+        <scope ilk="function" line="1001" lineend="1017" name="peer_certificate" signature="peer_certificate($self, $field)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$field" />
+        </scope>
+        <scope ilk="function" line="1067" lineend="1152" name="verify_hostname_of_cert" signature="verify_hostname_of_cert($identity, $cert, $scheme, $name, $identity, $wtyp)">
+          <variable ilk="argument" name="$identity" />
+          <variable ilk="argument" name="$cert" />
+          <variable ilk="argument" name="$scheme" />
+          <variable ilk="argument" name="$name" />
+          <variable ilk="argument" name="$identity" />
+          <variable ilk="argument" name="$wtyp" />
+        </scope>
+        <scope ilk="function" line="1155" lineend="1160" name="verify_hostname" signature="verify_hostname($self, $host)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$host" />
+        </scope>
+        <scope ilk="function" line="1163" lineend="1166" name="get_cipher" signature="get_cipher()">
+          </scope>
+        <scope ilk="function" line="1168" lineend="1171" name="errstr" signature="errstr($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="1173" lineend="1187" name="fatal_ssl_error" signature="fatal_ssl_error($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="1189" lineend="1194" name="get_ssleay_error" signature="get_ssleay_error()" />
+        <scope ilk="function" line="1196" lineend="1203" name="error" signature="error($self, $error, $destroy_socket)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$error" />
+          <variable ilk="argument" name="$destroy_socket" />
+        </scope>
+        <scope ilk="function" line="1206" lineend="1211" name="DESTROY" signature="DESTROY($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="1215" lineend="1215" name="socket_to_SSL" signature="socket_to_SSL()" />
+        <scope ilk="function" line="1216" lineend="1216" name="socketToSSL" signature="socketToSSL()" />
+        <scope ilk="function" line="1217" lineend="1217" name="kill_socket" signature="kill_socket()" />
+        <scope ilk="function" line="1219" lineend="1219" name="issuer_name" signature="issuer_name()" />
+        <scope ilk="function" line="1220" lineend="1220" name="subject_name" signature="subject_name()" />
+        <scope ilk="function" line="1221" lineend="1221" name="get_peer_certificate" signature="get_peer_certificate()" />
+        <scope ilk="function" line="1223" lineend="1225" name="context_init" signature="context_init()" />
+        <scope ilk="function" line="1227" lineend="1229" name="set_default_context" signature="set_default_context()" />
+        <scope ilk="function" line="1231" lineend="1233" name="set_default_session_cache" signature="set_default_session_cache()" />
+        <scope ilk="function" line="1235" lineend="1241" name="set_ctx_defaults" signature="set_ctx_defaults(%args)">
+          <variable ilk="argument" name="%args" />
+        </scope>
+        <scope ilk="function" line="1244" lineend="1247" name="opened" signature="opened($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="1249" lineend="1252" name="opening" signature="opening($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="1254" lineend="1254" name="want_read" signature="want_read()" />
+        <scope ilk="function" line="1255" lineend="1255" name="want_write" signature="want_write()" />
+        <scope ilk="function" line="1259" lineend="1259" name="getline" signature="getline()" />
+        <scope ilk="function" line="1260" lineend="1263" name="getlines" signature="getlines()" />
+        <scope ilk="function" line="1266" lineend="1266" name="truncate" signature="truncate()" />
+        <scope ilk="function" line="1267" lineend="1267" name="stat" signature="stat()" />
+        <scope ilk="function" line="1268" lineend="1268" name="setbuf" signature="setbuf()" />
+        <scope ilk="function" line="1269" lineend="1269" name="setvbuf" signature="setvbuf()" />
+        <scope ilk="function" line="1270" lineend="1270" name="fdopen" signature="fdopen()" />
+        <scope ilk="function" line="1273" lineend="1273" name="ungetc" signature="ungetc()" />
+        <scope ilk="function" line="1274" lineend="1274" name="send" signature="send()" />
+        <scope ilk="function" line="1275" lineend="1275" name="recv" signature="recv()" />
+      </scope>
+      <scope ilk="class" line="1277" lineend="1315" name="IO::Socket::SSL::SSL_HANDLE">
+        <import line="1280" module="Errno" symbol="EBADF" />
+        <variable line="1279" name="$HAVE_WEAKREF" />
+        <scope attributes="__ctor__" ilk="function" line="1292" lineend="1296" name="TIEHANDLE" signature="TIEHANDLE($class, $handle)">
+          <variable ilk="argument" name="$class" />
+          <variable ilk="argument" name="$handle" />
+        </scope>
+        <scope ilk="function" line="1298" lineend="1298" name="READ" signature="READ()" />
+        <scope ilk="function" line="1299" lineend="1299" name="READLINE" signature="READLINE()" />
+        <scope ilk="function" line="1300" lineend="1300" name="GETC" signature="GETC()" />
+        <scope ilk="function" line="1302" lineend="1302" name="PRINT" signature="PRINT()" />
+        <scope ilk="function" line="1303" lineend="1303" name="PRINTF" signature="PRINTF()" />
+        <scope ilk="function" line="1304" lineend="1304" name="WRITE" signature="WRITE()" />
+        <scope ilk="function" line="1306" lineend="1306" name="FILENO" signature="FILENO()" />
+        <scope ilk="function" line="1308" lineend="1308" name="TELL" signature="TELL()" />
+        <scope ilk="function" line="1309" lineend="1309" name="BINMODE" signature="BINMODE()" />
+        <scope ilk="function" line="1311" lineend="1315" name="CLOSE" signature="CLOSE()">
+          </scope>
+      </scope>
+      <scope ilk="class" line="1318" lineend="1513" name="IO::Socket::SSL::SSL_Context">
+        <import line="1319" module="Carp" symbol="*" />
+        <variable line="1323" name="*DEBUG" />
+        <scope attributes="__ctor__" ilk="function" line="1333" lineend="1477" name="new" signature="new($class, $ok, $ctx_store)">
+          <variable ilk="argument" name="$class" />
+          <variable ilk="argument" name="$ok" />
+          <variable ilk="argument" name="$ctx_store" />
+        </scope>
+        <scope ilk="function" line="1480" lineend="1489" name="session_cache" signature="session_cache($ctx, $addr, $port, $session)">
+          <variable ilk="argument" name="$ctx" />
+          <variable ilk="argument" name="$addr" />
+          <variable ilk="argument" name="$port" />
+          <variable ilk="argument" name="$session" />
+        </scope>
+        <scope ilk="function" line="1491" lineend="1493" name="has_session_cache" signature="has_session_cache()" />
+        <scope ilk="function" line="1496" lineend="1496" name="CLONE" signature="CLONE()" />
+        <scope ilk="function" line="1497" lineend="1513" name="DESTROY" signature="DESTROY($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+      </scope>
+      <scope ilk="class" line="1515" lineend="2323" name="IO::Socket::SSL::Session_Cache">
+        <scope attributes="__ctor__" ilk="function" line="1518" lineend="1522" name="new" signature="new($class, $size)">
+          <variable ilk="argument" name="$class" />
+          <variable ilk="argument" name="$size" />
+        </scope>
+        <scope ilk="function" line="1525" lineend="1536" name="get_session" signature="get_session($self, $key)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$key" />
+        </scope>
+        <scope ilk="function" line="1538" lineend="1562" name="add_session" signature="add_session($self, $key, $val)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$key" />
+          <variable ilk="argument" name="$val" />
+        </scope>
+        <scope ilk="function" line="1564" lineend="1570" name="DESTROY" signature="DESTROY($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+      </scope>
+    </scope>
+    

@@ -1,0 +1,82 @@
+<scope ilk="blob" lang="Perl" name="Net::HTTP::Methods">
+      <scope ilk="class" line="1" lineend="593" name="Net::HTTP::Methods">
+        <import line="15" module="Carp" />
+        <variable line="6" name="$VERSION" />
+        <variable line="12" name="*_bytes" />
+        <scope attributes="__ctor__" ilk="function" line="26" lineend="33" name="new" signature="new($class, %cnf)">
+          <import line="30" module="Symbol" />
+          <variable ilk="argument" name="$class" />
+          <variable ilk="argument" name="%cnf" />
+          <import line="30" module="Symbol" />
+        </scope>
+        <scope ilk="function" line="35" lineend="89" name="http_configure" signature="http_configure($self, $cnf)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$cnf" />
+        </scope>
+        <scope ilk="function" line="91" lineend="93" name="http_default_port" signature="http_default_port()" />
+        <scope ilk="function" line="108" lineend="121" name="http_version" signature="http_version($self, $v)">
+          <import line="115" module="Carp" />
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$v" />
+          <import line="115" module="Carp" />
+        </scope>
+        <scope ilk="function" line="123" lineend="191" name="format_request" signature="format_request($self, $method, $uri)">
+          <import line="131" module="Carp" />
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$method" />
+          <variable ilk="argument" name="$uri" />
+          <import line="131" module="Carp" />
+        </scope>
+        <scope ilk="function" line="194" lineend="197" name="write_request" signature="write_request($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="199" lineend="203" name="format_chunk" signature="format_chunk($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="205" lineend="209" name="write_chunk" signature="write_chunk($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="211" lineend="218" name="format_chunk_eof" signature="format_chunk_eof($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="220" lineend="223" name="write_chunk_eof" signature="write_chunk_eof($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="226" lineend="239" name="my_read" signature="my_read($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="242" lineend="284" name="my_readline" signature="my_readline($self, $what)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$what" />
+        </scope>
+        <scope ilk="function" line="287" lineend="300" name="_rbuf" signature="_rbuf($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="302" lineend="305" name="_rbuf_length" signature="_rbuf_length($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="308" lineend="336" name="_read_header_lines" signature="_read_header_lines($self, $junk_out)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$junk_out" />
+        </scope>
+        <scope ilk="function" line="339" lineend="392" name="read_response_headers" signature="read_response_headers($self, %opt)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="%opt" />
+        </scope>
+        <scope ilk="function" line="395" lineend="548" name="read_entity_body" signature="read_entity_body($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="550" lineend="553" name="get_trailers" signature="get_trailers($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="559" lineend="573" name="gunzip_ok" signature="gunzip_ok()">
+          <import line="568" module="IO::Uncompress::Gunzip" />
+          <import line="568" module="IO::Uncompress::Gunzip" />
+        </scope>
+        <scope ilk="function" line="575" lineend="589" name="inflate_ok" signature="inflate_ok()">
+          <import line="584" module="Compress::Raw::Zlib" />
+          <import line="584" module="Compress::Raw::Zlib" />
+        </scope>
+      </scope>
+    </scope>
+    

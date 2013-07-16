@@ -1,0 +1,36 @@
+<scope ilk="blob" lang="Perl" name="Locale::Maketext::Simple">
+      <scope ilk="class" line="1" lineend="341" name="Locale::Maketext::Simple">
+        <variable line="2" name="$Locale::Maketext::Simple::VERSION" />
+        <scope ilk="function" line="111" lineend="125" name="import" signature="import($class, %args)">
+          <variable ilk="argument" name="$class" />
+          <variable ilk="argument" name="%args" />
+        </scope>
+        <scope ilk="function" line="129" lineend="129" name="reload_loc" signature="reload_loc()" />
+        <scope ilk="function" line="131" lineend="201" name="load_loc" signature="load_loc($class, %args, $str)">
+          <import line="137" module="Locale::Maketext::Lexicon" />
+          <import line="139" module="File::Spec" />
+          <variable ilk="argument" name="$class" />
+          <variable ilk="argument" name="%args" />
+          <variable ilk="argument" name="$str" />
+          <import line="137" module="Locale::Maketext::Lexicon" />
+          <import line="139" module="File::Spec" />
+        </scope>
+        <scope ilk="function" line="203" lineend="222" name="default_loc" signature="default_loc($self, %args, $str)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="%args" />
+          <variable ilk="argument" name="$str" />
+        </scope>
+        <scope ilk="function" line="224" lineend="259" name="_default_gettext" signature="_default_gettext($str)">
+          <variable ilk="argument" name="$str" />
+        </scope>
+        <scope ilk="function" line="261" lineend="265" name="_escape" signature="_escape($text)">
+          <variable ilk="argument" name="$text" />
+        </scope>
+        <scope ilk="function" line="267" lineend="271" name="_unescape" signature="_unescape()" />
+        <scope ilk="function" line="273" lineend="295" name="auto_path" signature="auto_path($self, $calldir)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$calldir" />
+        </scope>
+      </scope>
+    </scope>
+    

@@ -1,0 +1,27 @@
+<scope ilk="blob" lang="Perl" name="Perl::Critic::Policy::InputOutput::RequireEncodingWithUTF8Layer">
+      <scope ilk="class" line="8" lineend="101" name="Perl::Critic::Policy::InputOutput::RequireEncodingWithUTF8Layer">
+        <import line="14" module="Readonly" symbol="*" />
+        <import line="16" module="version" symbol="*" />
+        <import line="18" module="Perl::Critic::Utils" symbol="**" />
+        <variable line="21" name="$VERSION" />
+        <scope ilk="function" line="36" lineend="36" name="supported_parameters" signature="supported_parameters()" />
+        <scope ilk="function" line="37" lineend="37" name="default_severity" signature="default_severity()" />
+        <scope ilk="function" line="38" lineend="38" name="default_themes" signature="default_themes()" />
+        <scope ilk="function" line="39" lineend="39" name="applies_to" signature="applies_to()" />
+        <scope ilk="function" line="43" lineend="53" name="violates" signature="violates($self, $elem, $document)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$elem" />
+          <variable ilk="argument" name="$document" />
+        </scope>
+        <scope ilk="function" line="64" lineend="70" name="_get_argument_string" signature="_get_argument_string($arg)">
+          <variable ilk="argument" name="$arg" />
+        </scope>
+        <scope ilk="function" line="79" lineend="82" name="_recover_binmode_encoding" signature="_recover_binmode_encoding(@args)">
+          <variable ilk="argument" name="@args" />
+        </scope>
+        <scope ilk="function" line="91" lineend="99" name="_recover_open_encoding" signature="_recover_open_encoding(@args)">
+          <variable ilk="argument" name="@args" />
+        </scope>
+      </scope>
+    </scope>
+    

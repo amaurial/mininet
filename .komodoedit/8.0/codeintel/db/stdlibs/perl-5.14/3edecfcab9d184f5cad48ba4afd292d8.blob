@@ -1,0 +1,28 @@
+<scope ilk="blob" lang="Perl" name="Exporter">
+      <scope ilk="class" line="1" lineend="97" name="Exporter">
+        <variable line="9" name="$Debug" />
+        <variable line="10" name="$ExportLevel" />
+        <variable line="11" name="$Verbose" />
+        <variable line="12" name="$VERSION" />
+        <variable line="13" name="%Cache" />
+        <scope ilk="function" line="15" lineend="22" name="as_heavy" signature="as_heavy()">
+          <import line="16" module="Exporter::Heavy" />
+          <import line="16" module="Exporter::Heavy" />
+        </scope>
+        <scope ilk="function" line="24" lineend="26" name="export" signature="export()" />
+        <scope ilk="function" line="28" lineend="68" name="import" signature="import($pkg, $args)">
+          <import line="65" module="Carp" />
+          <variable ilk="argument" name="$pkg" />
+          <variable ilk="argument" name="$args" />
+          <import line="65" module="Carp" />
+        </scope>
+        <scope ilk="function" line="72" lineend="75" name="export_fail" signature="export_fail($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="81" lineend="83" name="export_to_level" signature="export_to_level()" />
+        <scope ilk="function" line="85" lineend="87" name="export_tags" signature="export_tags()" />
+        <scope ilk="function" line="89" lineend="91" name="export_ok_tags" signature="export_ok_tags()" />
+        <scope ilk="function" line="93" lineend="95" name="require_version" signature="require_version()" />
+      </scope>
+    </scope>
+    

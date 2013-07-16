@@ -1,0 +1,519 @@
+<scope doc="codecs -- Python Codec Registry, API and helpers.&#xA; Written by Marc-Andre Lemburg (mal@lemburg.com).  (c) Copyright CNRI, All Rights Reserved. NO WARRANTY." ilk="blob" lang="Python" name="codecs">
+      <variable citdl="bytes" line="53" name="BOM" />
+      <variable citdl="bytes" line="68" name="BOM32_BE" />
+      <variable citdl="bytes" line="67" name="BOM32_LE" />
+      <variable citdl="bytes" line="70" name="BOM64_BE" />
+      <variable citdl="bytes" line="69" name="BOM64_LE" />
+      <variable citdl="bytes" line="42" name="BOM_BE" />
+      <variable citdl="bytes" line="39" name="BOM_LE" />
+      <variable citdl="bytes" name="BOM_UTF16" />
+      <variable citdl="bytes" name="BOM_UTF16_BE" />
+      <variable citdl="bytes" name="BOM_UTF16_LE" />
+      <variable citdl="bytes" line="56" name="BOM_UTF32" />
+      <variable citdl="bytes" line="48" name="BOM_UTF32_BE" />
+      <variable citdl="bytes" line="45" name="BOM_UTF32_LE" />
+      <variable citdl="bytes" line="36" name="BOM_UTF8" />
+      <scope classrefs="IncrementalDecoder" doc="This subclass of IncrementalDecoder can be used as the baseclass for an&#xA;incremental decoder if the decoder must be able to handle incomplete byte sequences." ilk="class" line="281" lineend="315" name="BufferedIncrementalDecoder">
+        <scope ilk="function" line="305" lineend="307" name="reset" signature="reset(self)">
+          <variable citdl="BufferedIncrementalDecoder" ilk="argument" name="self" />
+        </scope>
+        <scope ilk="function" line="309" lineend="311" name="getstate" returns="tuple" signature="getstate(self)">
+          <variable citdl="BufferedIncrementalDecoder" ilk="argument" name="self" />
+        </scope>
+        <scope ilk="function" line="297" lineend="303" name="decode" signature="decode(self, input, final=False)">
+          <variable line="300" name="result" />
+          <variable ilk="argument" name="input" />
+          <variable citdl="BufferedIncrementalDecoder" ilk="argument" name="self" />
+          <variable citdl="str" line="299" name="data" />
+          <variable line="300" name="consumed" />
+          <variable citdl="False" ilk="argument" name="final" />
+        </scope>
+        <scope ilk="function" line="292" lineend="295" name="_buffer_decode" signature="_buffer_decode(self, input, errors, final)">
+          <variable ilk="argument" name="input" />
+          <variable citdl="BufferedIncrementalDecoder" ilk="argument" name="self" />
+          <variable ilk="argument" name="errors" />
+          <variable ilk="argument" name="final" />
+        </scope>
+        <scope ilk="function" line="287" lineend="290" name="__init__" signature="__init__(self, errors=&apos;strict&apos;)">
+          <variable citdl="BufferedIncrementalDecoder" ilk="argument" name="self" />
+          <variable citdl="str" ilk="argument" name="errors" />
+        </scope>
+        <scope ilk="function" line="313" lineend="315" name="setstate" signature="setstate(self, state)">
+          <variable citdl="BufferedIncrementalDecoder" ilk="argument" name="self" />
+          <variable ilk="argument" name="state" />
+        </scope>
+        <variable attributes="__instancevar__" citdl="str" line="290" name="buffer" />
+      </scope>
+      <scope classrefs="IncrementalEncoder" doc="This subclass of IncrementalEncoder can be used as the baseclass for an&#xA;incremental encoder if the encoder must keep some of the output in a buffer between calls to encode()." ilk="class" line="198" lineend="230" name="BufferedIncrementalEncoder">
+        <scope ilk="function" line="222" lineend="224" name="reset" signature="reset(self)">
+          <variable citdl="BufferedIncrementalEncoder" ilk="argument" name="self" />
+        </scope>
+        <scope ilk="function" line="226" lineend="227" name="getstate" returns="str" signature="getstate(self)">
+          <variable citdl="BufferedIncrementalEncoder" ilk="argument" name="self" />
+        </scope>
+        <scope ilk="function" line="214" lineend="220" name="encode" signature="encode(self, input, final=False)">
+          <variable line="217" name="result" />
+          <variable ilk="argument" name="input" />
+          <variable citdl="BufferedIncrementalEncoder" ilk="argument" name="self" />
+          <variable citdl="str" line="216" name="data" />
+          <variable line="217" name="consumed" />
+          <variable citdl="False" ilk="argument" name="final" />
+        </scope>
+        <scope ilk="function" line="209" lineend="212" name="_buffer_encode" signature="_buffer_encode(self, input, errors, final)">
+          <variable ilk="argument" name="input" />
+          <variable citdl="BufferedIncrementalEncoder" ilk="argument" name="self" />
+          <variable ilk="argument" name="errors" />
+          <variable ilk="argument" name="final" />
+        </scope>
+        <scope ilk="function" line="204" lineend="207" name="__init__" signature="__init__(self, errors=&apos;strict&apos;)">
+          <variable citdl="BufferedIncrementalEncoder" ilk="argument" name="self" />
+          <variable citdl="str" ilk="argument" name="errors" />
+        </scope>
+        <scope ilk="function" line="229" lineend="230" name="setstate" signature="setstate(self, state)">
+          <variable citdl="BufferedIncrementalEncoder" ilk="argument" name="self" />
+          <variable ilk="argument" name="state" />
+        </scope>
+        <variable attributes="__instancevar__" citdl="str" line="207" name="buffer" />
+      </scope>
+      <scope classrefs="object" doc="Defines the interface for stateless encoders/decoders.&#xA;The .encode()/.decode() methods may use different error handling schemes by providing the errors argument. These string values are predefined:  &apos;strict&apos; - raise a ValueError error (or a subclass) &apos;ignore&apos; - ignore the character and continue with the next &apos;replace&apos; - replace with a suitable replacement character; Python will use the official U+FFFD REPLACEMENT CHARACTER for the builtin Unicode codecs on decoding and &apos;?&apos; on encoding." ilk="class" line="94" lineend="156" name="Codec">
+        <scope doc="Decodes the object input and returns a tuple (output object,&#xA;length consumed)." ilk="function" line="135" lineend="156" name="decode" signature="decode(self, input, errors=&apos;strict&apos;)">
+          <variable ilk="argument" name="input" />
+          <variable citdl="Codec" ilk="argument" name="self" />
+          <variable citdl="str" ilk="argument" name="errors" />
+        </scope>
+        <scope doc="Encodes the object input and returns a tuple (output object,&#xA;length consumed)." ilk="function" line="116" lineend="133" name="encode" signature="encode(self, input, errors=&apos;strict&apos;)">
+          <variable ilk="argument" name="input" />
+          <variable citdl="Codec" ilk="argument" name="self" />
+          <variable citdl="str" ilk="argument" name="errors" />
+        </scope>
+      </scope>
+      <scope classrefs="tuple" doc="&#xA;" ilk="class" line="75" lineend="92" name="CodecInfo">
+        <scope ilk="function" line="77" lineend="87" name="__new__" returns="tuple.__new__()" signature="__new__(cls, encode, decode, streamreader=None, streamwriter=None, incrementalencoder=None, incrementaldecoder=None, name=None)">
+          <variable ilk="argument" name="streamwriter" />
+          <variable ilk="argument" name="incrementalencoder" />
+          <variable ilk="argument" name="name" />
+          <variable citdl="tuple.__new__()" line="79" name="self" />
+          <variable ilk="argument" name="decode" />
+          <variable ilk="argument" name="encode" />
+          <variable ilk="argument" name="incrementaldecoder" />
+          <variable ilk="argument" name="streamreader" />
+          <variable citdl="CodecInfo" ilk="argument" name="cls" />
+        </scope>
+        <scope ilk="function" line="89" lineend="92" name="__repr__" returns="tuple" signature="__repr__(self)">
+          <variable citdl="CodecInfo" ilk="argument" name="self" />
+        </scope>
+      </scope>
+      <scope doc="Return a wrapped version of file which provides transparent&#xA;encoding translation." ilk="function" line="893" lineend="927" name="EncodedFile" returns="StreamRecoder" signature="EncodedFile(file, data_encoding, file_encoding=None, errors=&apos;strict&apos;)">
+        <variable citdl="str" ilk="argument" name="errors" />
+        <variable ilk="argument" name="file_encoding" />
+        <variable ilk="argument" name="file" />
+        <variable citdl="StreamRecoder" line="922" name="sr" />
+        <variable citdl="lookup()" line="921" name="file_info" />
+        <variable ilk="argument" name="data_encoding" />
+        <variable citdl="lookup()" line="920" name="data_info" />
+      </scope>
+      <scope classrefs="object" doc="An IncrementalDecoder decodes an input in multiple steps. The input can&#xA;be passed piece by piece to the decode() method. The IncrementalDecoder remembers the state of the decoding process between calls to decode()." ilk="class" line="232" name="IncrementalDecoder">
+        <scope doc="Reset the decoder to the initial state." ilk="function" line="254" name="reset" signature="reset(self)">
+          <variable citdl="IncrementalDecoder" ilk="argument" name="self" />
+        </scope>
+        <scope doc="Decode input and returns the resulting object." ilk="function" line="248" lineend="252" name="decode" signature="decode(self, input, final=False)">
+          <variable ilk="argument" name="input" />
+          <variable citdl="IncrementalDecoder" ilk="argument" name="self" />
+          <variable citdl="False" ilk="argument" name="final" />
+        </scope>
+        <scope doc="Return the current state of the decoder." ilk="function" line="259" lineend="271" name="getstate" returns="tuple" signature="getstate(self)">
+          <variable citdl="IncrementalDecoder" ilk="argument" name="self" />
+        </scope>
+        <scope doc="Create a IncrementalDecoder instance." ilk="function" line="238" lineend="246" name="__init__" signature="__init__(self, errors=&apos;strict&apos;)">
+          <variable citdl="IncrementalDecoder" ilk="argument" name="self" />
+          <variable citdl="str" ilk="argument" name="errors" />
+        </scope>
+        <scope doc="Set the current state of the decoder." ilk="function" line="273" name="setstate" signature="setstate(self, state)">
+          <variable citdl="IncrementalDecoder" ilk="argument" name="self" />
+          <variable ilk="argument" name="state" />
+        </scope>
+        <variable attributes="__instancevar__" citdl="str" line="246" name="errors" />
+      </scope>
+      <scope classrefs="object" doc="An IncrementalEncoder encodes an input in multiple steps. The input can&#xA;be passed piece by piece to the encode() method. The IncrementalEncoder remembers the state of the encoding process between calls to encode()." ilk="class" line="158" name="IncrementalEncoder">
+        <scope doc="Resets the encoder to the initial state." ilk="function" line="181" name="reset" signature="reset(self)">
+          <variable citdl="IncrementalEncoder" ilk="argument" name="self" />
+        </scope>
+        <scope doc="Return the current state of the encoder." ilk="function" line="186" lineend="190" name="getstate" returns="int" signature="getstate(self)">
+          <variable citdl="IncrementalEncoder" ilk="argument" name="self" />
+        </scope>
+        <scope doc="Encodes input and returns the resulting object." ilk="function" line="175" lineend="179" name="encode" signature="encode(self, input, final=False)">
+          <variable ilk="argument" name="input" />
+          <variable citdl="IncrementalEncoder" ilk="argument" name="self" />
+          <variable citdl="False" ilk="argument" name="final" />
+        </scope>
+        <scope doc="Creates an IncrementalEncoder instance." ilk="function" line="164" lineend="173" name="__init__" signature="__init__(self, errors=&apos;strict&apos;)">
+          <variable citdl="IncrementalEncoder" ilk="argument" name="self" />
+          <variable citdl="str" ilk="argument" name="errors" />
+        </scope>
+        <scope doc="Set the current state of the encoder." ilk="function" line="192" name="setstate" signature="setstate(self, state)">
+          <variable citdl="IncrementalEncoder" ilk="argument" name="self" />
+          <variable ilk="argument" name="state" />
+        </scope>
+        <variable attributes="__instancevar__" citdl="str" line="173" name="buffer" />
+        <variable attributes="__instancevar__" citdl="str" line="172" name="errors" />
+      </scope>
+      <scope classrefs="Codec" doc="&#xA;" ilk="class" line="397" lineend="642" name="StreamReader">
+        <scope doc="Resets the codec buffers used for keeping state." ilk="function" line="599" lineend="610" name="reset" signature="reset(self)">
+          <variable citdl="StreamReader" ilk="argument" name="self" />
+        </scope>
+        <scope doc="Return the next decoded line from the input stream." ilk="function" line="620" lineend="626" name="__next__" returns="readline()" signature="__next__(self)">
+          <variable citdl="StreamReader" ilk="argument" name="self" />
+          <variable citdl="readline()" line="623" name="line" />
+        </scope>
+        <scope ilk="function" line="641" lineend="642" name="__exit__" signature="__exit__(self, type, value, tb)">
+          <variable ilk="argument" name="tb" />
+          <variable citdl="StreamReader" ilk="argument" name="self" />
+          <variable ilk="argument" name="type" />
+          <variable ilk="argument" name="value" />
+        </scope>
+        <scope doc="Decodes data from the stream self.stream and returns the&#xA;resulting object." ilk="function" line="429" lineend="507" name="read" returns="charbuffertype()" signature="read(self, size=-1, chars=-1, firstline=False)">
+          <variable citdl="False" ilk="argument" name="firstline" />
+          <variable line="482" name="decodedbytes" />
+          <variable citdl="int" ilk="argument" name="chars" />
+          <variable citdl="newchars.splitlines()" line="487" name="lines" />
+          <variable citdl="StreamReader" ilk="argument" name="self" />
+          <variable citdl="self._empty_charbuffer.join()" line="501" name="result" />
+          <variable line="482" name="newchars" />
+          <variable citdl="self.stream.read()" line="480" name="data" />
+          <variable citdl="self.stream.read()" line="476" name="newdata" />
+          <variable citdl="int" ilk="argument" name="size" />
+        </scope>
+        <scope ilk="function" line="638" lineend="639" name="__enter__" returns="StreamReader" signature="__enter__(self)">
+          <variable citdl="StreamReader" ilk="argument" name="self" />
+        </scope>
+        <scope doc="Read all lines available on the input stream and return them&#xA;as list of lines." ilk="function" line="584" lineend="597" name="readlines" returns="data.splitlines()" signature="readlines(self, sizehint=None, keepends=True)">
+          <variable citdl="read()" line="596" name="data" />
+          <variable citdl="StreamReader" ilk="argument" name="self" />
+          <variable ilk="argument" name="sizehint" />
+          <variable citdl="True" ilk="argument" name="keepends" />
+        </scope>
+        <scope doc="Inherit all other methods from the underlying stream." ilk="function" line="631" lineend="636" name="__getattr__" returns="StreamReader.__getattr__.getattr()" signature="__getattr__(self, name, getattr=&lt;built-in function getattr&gt;)">
+          <variable citdl="StreamReader" ilk="argument" name="self" />
+          <variable ilk="argument" name="name" />
+          <variable citdl="getattr" ilk="argument" name="getattr" />
+        </scope>
+        <scope ilk="function" line="426" lineend="427" name="decode" signature="decode(self, input, errors=&apos;strict&apos;)">
+          <variable ilk="argument" name="input" />
+          <variable citdl="StreamReader" ilk="argument" name="self" />
+          <variable citdl="str" ilk="argument" name="errors" />
+        </scope>
+        <scope ilk="function" line="628" lineend="629" name="__iter__" returns="StreamReader" signature="__iter__(self)">
+          <variable citdl="StreamReader" ilk="argument" name="self" />
+        </scope>
+        <scope doc="Read one line from the input stream and return the decoded&#xA;data." ilk="function" line="509" lineend="582" name="readline" returns="charbuffertype()" signature="readline(self, size=None, keepends=True)">
+          <variable line="564" name="line0withend" />
+          <variable line="565" name="line0withoutend" />
+          <variable citdl="StreamReader" ilk="argument" name="self" />
+          <variable citdl="line.splitlines()" line="546" name="lines" />
+          <variable citdl="int" line="532" name="readsize" />
+          <variable citdl="charbuffertype()" line="521" name="line" />
+          <variable citdl="read()" line="536" name="data" />
+          <variable citdl="True" ilk="argument" name="keepends" />
+          <variable ilk="argument" name="size" />
+        </scope>
+        <scope doc="Set the input stream&apos;s current position." ilk="function" line="612" lineend="618" name="seek" signature="seek(self, offset, whence=0)">
+          <variable citdl="StreamReader" ilk="argument" name="self" />
+          <variable citdl="int" ilk="argument" name="whence" />
+          <variable ilk="argument" name="offset" />
+        </scope>
+        <scope doc="Creates a StreamReader instance." ilk="function" line="401" lineend="424" name="__init__" signature="__init__(self, stream, errors=&apos;strict&apos;)">
+          <variable citdl="StreamReader" ilk="argument" name="self" />
+          <variable citdl="str" ilk="argument" name="errors" />
+          <variable ilk="argument" name="stream" />
+        </scope>
+        <variable attributes="__instancevar__" citdl="str" line="420" name="errors" />
+        <variable attributes="__instancevar__" citdl="line.splitlines()" line="424" name="linebuffer" />
+        <variable attributes="__instancevar__" line="419" name="stream" />
+        <variable attributes="__instancevar__" citdl="charbuffertype()" line="423" name="charbuffer" />
+        <variable attributes="protected __instancevar__" citdl="charbuffertype()" line="422" name="_empty_charbuffer" />
+        <variable attributes="__instancevar__" citdl="str" line="421" name="bytebuffer" />
+        <variable citdl="str" line="399" name="charbuffertype" />
+      </scope>
+      <scope classrefs="object" doc="StreamReaderWriter instances allow wrapping streams which&#xA;work in both read and write modes.  The design is such that one can use the factory functions returned by the codec.lookup() function to construct the instance." ilk="class" line="646" lineend="729" name="StreamReaderWriter">
+        <scope ilk="function" line="728" lineend="729" name="__exit__" signature="__exit__(self, type, value, tb)">
+          <variable ilk="argument" name="tb" />
+          <variable citdl="StreamReaderWriter" ilk="argument" name="self" />
+          <variable ilk="argument" name="type" />
+          <variable ilk="argument" name="value" />
+        </scope>
+        <scope ilk="function" line="677" lineend="679" name="read" returns="self.reader.read()" signature="read(self, size=-1)">
+          <variable citdl="StreamReaderWriter" ilk="argument" name="self" />
+          <variable citdl="int" ilk="argument" name="size" />
+        </scope>
+        <scope doc="Return the next decoded line from the input stream." ilk="function" line="689" lineend="692" name="__next__" returns="next()" signature="__next__(self)">
+          <variable citdl="StreamReaderWriter" ilk="argument" name="self" />
+        </scope>
+        <scope ilk="function" line="685" lineend="687" name="readlines" returns="self.reader.readlines()" signature="readlines(self, sizehint=None)">
+          <variable citdl="StreamReaderWriter" ilk="argument" name="self" />
+          <variable ilk="argument" name="sizehint" />
+        </scope>
+        <scope ilk="function" line="694" lineend="695" name="__iter__" returns="StreamReaderWriter" signature="__iter__(self)">
+          <variable citdl="StreamReaderWriter" ilk="argument" name="self" />
+        </scope>
+        <scope ilk="function" line="681" lineend="683" name="readline" returns="self.reader.readline()" signature="readline(self, size=None)">
+          <variable citdl="StreamReaderWriter" ilk="argument" name="self" />
+          <variable ilk="argument" name="size" />
+        </scope>
+        <scope ilk="function" line="710" lineend="714" name="seek" signature="seek(self, offset, whence=0)">
+          <variable citdl="StreamReaderWriter" ilk="argument" name="self" />
+          <variable citdl="int" ilk="argument" name="whence" />
+          <variable ilk="argument" name="offset" />
+        </scope>
+        <scope doc="Creates a StreamReaderWriter instance." ilk="function" line="659" lineend="675" name="__init__" signature="__init__(self, stream, Reader, Writer, errors=&apos;strict&apos;)">
+          <variable citdl="StreamReaderWriter" ilk="argument" name="self" />
+          <variable ilk="argument" name="Writer" />
+          <variable citdl="str" ilk="argument" name="errors" />
+          <variable ilk="argument" name="stream" />
+          <variable ilk="argument" name="Reader" />
+        </scope>
+        <scope ilk="function" line="705" lineend="708" name="reset" signature="reset(self)">
+          <variable citdl="StreamReaderWriter" ilk="argument" name="self" />
+        </scope>
+        <scope ilk="function" line="701" lineend="703" name="writelines" returns="self.writer.writelines()" signature="writelines(self, list)">
+          <variable citdl="StreamReaderWriter" ilk="argument" name="self" />
+          <variable ilk="argument" name="list" />
+        </scope>
+        <scope ilk="function" line="725" lineend="726" name="__enter__" returns="StreamReaderWriter" signature="__enter__(self)">
+          <variable citdl="StreamReaderWriter" ilk="argument" name="self" />
+        </scope>
+        <scope doc="Inherit all other methods from the underlying stream." ilk="function" line="716" lineend="721" name="__getattr__" returns="StreamReaderWriter.__getattr__.getattr()" signature="__getattr__(self, name, getattr=&lt;built-in function getattr&gt;)">
+          <variable citdl="StreamReaderWriter" ilk="argument" name="self" />
+          <variable ilk="argument" name="name" />
+          <variable citdl="getattr" ilk="argument" name="getattr" />
+        </scope>
+        <scope ilk="function" line="697" lineend="699" name="write" returns="self.writer.write()" signature="write(self, data)">
+          <variable citdl="StreamReaderWriter" ilk="argument" name="self" />
+          <variable ilk="argument" name="data" />
+        </scope>
+        <variable attributes="__instancevar__" citdl="__init__.Writer()" line="674" name="writer" />
+        <variable attributes="__instancevar__" citdl="str" line="675" name="errors" />
+        <variable attributes="__instancevar__" citdl="__init__.Reader()" line="673" name="reader" />
+        <variable attributes="__instancevar__" line="672" name="stream" />
+        <variable citdl="str" line="657" name="encoding" />
+      </scope>
+      <scope classrefs="object" doc="StreamRecoder instances provide a frontend - backend&#xA;view of encoding data.  They use the complete set of APIs returned by the codecs.lookup() function to implement their task.  Data written to the stream is first decoded into an intermediate format (which is dependent on the given codec combination) and then written to the stream using an instance of the provided Writer class. " ilk="class" line="733" lineend="845" name="StreamRecoder">
+        <scope ilk="function" line="844" lineend="845" name="__exit__" signature="__exit__(self, type, value, tb)">
+          <variable ilk="argument" name="tb" />
+          <variable citdl="StreamRecoder" ilk="argument" name="self" />
+          <variable ilk="argument" name="type" />
+          <variable ilk="argument" name="value" />
+        </scope>
+        <scope ilk="function" line="787" lineend="791" name="read" returns="self.reader.read()" signature="read(self, size=-1)">
+          <variable line="790" name="bytesencoded" />
+          <variable citdl="StreamRecoder" ilk="argument" name="self" />
+          <variable citdl="self.reader.read()" line="789" name="data" />
+          <variable citdl="int" ilk="argument" name="size" />
+        </scope>
+        <scope doc="Return the next decoded line from the input stream." ilk="function" line="808" lineend="813" name="__next__" returns="next()" signature="__next__(self)">
+          <variable line="812" name="bytesencoded" />
+          <variable citdl="StreamRecoder" ilk="argument" name="self" />
+          <variable citdl="next()" line="811" name="data" />
+        </scope>
+        <scope ilk="function" line="802" lineend="806" name="readlines" returns="data.splitlines()" signature="readlines(self, sizehint=None)">
+          <variable citdl="self.reader.read()" line="804" name="data" />
+          <variable citdl="StreamRecoder" ilk="argument" name="self" />
+          <variable ilk="argument" name="sizehint" />
+          <variable line="805" name="bytesencoded" />
+        </scope>
+        <scope ilk="function" line="815" lineend="816" name="__iter__" returns="StreamRecoder" signature="__iter__(self)">
+          <variable citdl="StreamRecoder" ilk="argument" name="self" />
+        </scope>
+        <scope ilk="function" line="793" lineend="800" name="readline" returns="self.reader.readline()" signature="readline(self, size=None)">
+          <variable line="799" name="bytesencoded" />
+          <variable citdl="StreamRecoder" ilk="argument" name="self" />
+          <variable citdl="self.reader.readline()" line="796" name="data" />
+          <variable ilk="argument" name="size" />
+        </scope>
+        <scope doc="Creates a StreamRecoder instance which implements a two-way&#xA;conversion: encode and decode work on the frontend (the&#xA;input to .read() and output of .write()) while Reader and&#xA;Writer work on the backend (reading and" ilk="function" line="754" lineend="785" name="__init__" signature="__init__(self, stream, encode, decode, Reader, Writer, errors=&apos;strict&apos;)">
+          <variable ilk="argument" name="decode" />
+          <variable citdl="str" ilk="argument" name="errors" />
+          <variable ilk="argument" name="stream" />
+          <variable ilk="argument" name="Reader" />
+          <variable ilk="argument" name="encode" />
+          <variable citdl="StreamRecoder" ilk="argument" name="self" />
+          <variable ilk="argument" name="Writer" />
+        </scope>
+        <scope ilk="function" line="829" lineend="832" name="reset" signature="reset(self)">
+          <variable citdl="StreamRecoder" ilk="argument" name="self" />
+        </scope>
+        <scope ilk="function" line="823" lineend="827" name="writelines" returns="self.writer.write()" signature="writelines(self, list)">
+          <variable citdl="str.join()" line="825" name="data" />
+          <variable citdl="StreamRecoder" ilk="argument" name="self" />
+          <variable ilk="argument" name="list" />
+          <variable line="826" name="bytesdecoded" />
+        </scope>
+        <scope ilk="function" line="841" lineend="842" name="__enter__" returns="StreamRecoder" signature="__enter__(self)">
+          <variable citdl="StreamRecoder" ilk="argument" name="self" />
+        </scope>
+        <scope doc="Inherit all other methods from the underlying stream." ilk="function" line="834" lineend="839" name="__getattr__" returns="StreamRecoder.__getattr__.getattr()" signature="__getattr__(self, name, getattr=&lt;built-in function getattr&gt;)">
+          <variable citdl="StreamRecoder" ilk="argument" name="self" />
+          <variable ilk="argument" name="name" />
+          <variable citdl="getattr" ilk="argument" name="getattr" />
+        </scope>
+        <scope ilk="function" line="818" lineend="821" name="write" returns="self.writer.write()" signature="write(self, data)">
+          <variable citdl="StreamRecoder" ilk="argument" name="self" />
+          <variable ilk="argument" name="data" />
+          <variable line="820" name="bytesdecoded" />
+        </scope>
+        <variable attributes="__instancevar__" citdl="str" line="785" name="errors" />
+        <variable attributes="__instancevar__" line="780" name="stream" />
+        <variable attributes="__instancevar__" citdl="__init__.Writer()" line="784" name="writer" />
+        <variable citdl="str" line="751" name="data_encoding" />
+        <variable attributes="__instancevar__" line="782" name="decode" />
+        <variable citdl="str" line="752" name="file_encoding" />
+        <variable attributes="__instancevar__" citdl="__init__.Reader()" line="783" name="reader" />
+        <variable attributes="__instancevar__" line="781" name="encode" />
+      </scope>
+      <scope classrefs="Codec" doc="&#xA;" ilk="class" line="324" lineend="393" name="StreamWriter">
+        <scope doc="Flushes and resets the codec buffers used for keeping state." ilk="function" line="365" lineend="375" name="reset" signature="reset(self)">
+          <variable citdl="StreamWriter" ilk="argument" name="self" />
+        </scope>
+        <scope doc="Writes the concatenated list of strings to the stream using&#xA;.write()." ilk="function" line="358" lineend="363" name="writelines" signature="writelines(self, list)">
+          <variable citdl="StreamWriter" ilk="argument" name="self" />
+          <variable ilk="argument" name="list" />
+        </scope>
+        <scope ilk="function" line="389" lineend="390" name="__enter__" returns="StreamWriter" signature="__enter__(self)">
+          <variable citdl="StreamWriter" ilk="argument" name="self" />
+        </scope>
+        <scope doc="Inherit all other methods from the underlying stream." ilk="function" line="382" lineend="387" name="__getattr__" returns="StreamWriter.__getattr__.getattr()" signature="__getattr__(self, name, getattr=&lt;built-in function getattr&gt;)">
+          <variable citdl="StreamWriter" ilk="argument" name="self" />
+          <variable ilk="argument" name="name" />
+          <variable citdl="getattr" ilk="argument" name="getattr" />
+        </scope>
+        <scope doc="Writes the object&apos;s contents encoded to self.stream." ilk="function" line="351" lineend="356" name="write" signature="write(self, object)">
+          <variable citdl="StreamWriter" ilk="argument" name="self" />
+          <variable ilk="argument" name="object" />
+          <variable line="355" name="data" />
+          <variable line="355" name="consumed" />
+        </scope>
+        <scope ilk="function" line="392" lineend="393" name="__exit__" signature="__exit__(self, type, value, tb)">
+          <variable ilk="argument" name="tb" />
+          <variable citdl="StreamWriter" ilk="argument" name="self" />
+          <variable ilk="argument" name="type" />
+          <variable ilk="argument" name="value" />
+        </scope>
+        <scope ilk="function" line="377" lineend="380" name="seek" signature="seek(self, offset, whence=0)">
+          <variable citdl="StreamWriter" ilk="argument" name="self" />
+          <variable citdl="int" ilk="argument" name="whence" />
+          <variable ilk="argument" name="offset" />
+        </scope>
+        <scope doc="Creates a StreamWriter instance." ilk="function" line="326" lineend="349" name="__init__" signature="__init__(self, stream, errors=&apos;strict&apos;)">
+          <variable citdl="StreamWriter" ilk="argument" name="self" />
+          <variable citdl="str" ilk="argument" name="errors" />
+          <variable ilk="argument" name="stream" />
+        </scope>
+        <variable attributes="__instancevar__" citdl="str" line="349" name="errors" />
+        <variable attributes="__instancevar__" line="348" name="stream" />
+      </scope>
+      <variable citdl="list" line="19" name="__all__" />
+      <scope ilk="function" name="ascii_decode" />
+      <scope ilk="function" name="ascii_encode" />
+      <scope doc="Implements the &apos;backslashreplace&apos; error handling, which&#xA;replaces an unencodable character with a backslashed escape&#xA;sequence." ilk="function" line="1078" name="backslashreplace_errors" />
+      <import module="builtins" />
+      <scope ilk="function" name="charmap_build" />
+      <scope ilk="function" name="charmap_decode" />
+      <scope ilk="function" name="charmap_encode" />
+      <scope doc="Decodes obj using the codec registered for encoding." ilk="function" name="decode" returns="object" signature="decode(obj, [encoding[,errors]]) -&gt; object" />
+      <scope doc="Encodes obj using the codec registered for encoding." ilk="function" name="encode" returns="object" signature="encode(obj, [encoding[,errors]]) -&gt; object" />
+      <scope ilk="function" name="escape_decode" />
+      <scope ilk="function" name="escape_encode" />
+      <scope doc="Lookup up the codec for the given encoding and return its&#xA;decoder function." ilk="function" line="941" lineend="949" name="getdecoder" signature="getdecoder(encoding)">
+        <variable ilk="argument" name="encoding" />
+      </scope>
+      <scope doc="Lookup up the codec for the given encoding and return its&#xA;encoder function." ilk="function" line="931" lineend="939" name="getencoder" signature="getencoder(encoding)">
+        <variable ilk="argument" name="encoding" />
+      </scope>
+      <scope doc="Lookup up the codec for the given encoding and return its&#xA;IncrementalDecoder class or factory function." ilk="function" line="965" lineend="977" name="getincrementaldecoder" signature="getincrementaldecoder(encoding)">
+        <variable line="974" name="decoder" />
+        <variable ilk="argument" name="encoding" />
+      </scope>
+      <scope doc="Lookup up the codec for the given encoding and return its&#xA;IncrementalEncoder class or factory function." ilk="function" line="951" lineend="963" name="getincrementalencoder" signature="getincrementalencoder(encoding)">
+        <variable line="960" name="encoder" />
+        <variable ilk="argument" name="encoding" />
+      </scope>
+      <scope doc="Lookup up the codec for the given encoding and return its&#xA;StreamReader class or factory function." ilk="function" line="979" lineend="987" name="getreader" signature="getreader(encoding)">
+        <variable ilk="argument" name="encoding" />
+      </scope>
+      <scope doc="Lookup up the codec for the given encoding and return its&#xA;StreamWriter class or factory function." ilk="function" line="989" lineend="997" name="getwriter" signature="getwriter(encoding)">
+        <variable ilk="argument" name="encoding" />
+      </scope>
+      <scope doc="Implements the &apos;ignore&apos; error handling, which ignores&#xA;malformed data and continues." ilk="function" line="1075" name="ignore_errors" />
+      <scope doc="Decoding iterator." ilk="function" line="1017" lineend="1033" name="iterdecode" signature="iterdecode(iterator, encoding, errors=&apos;strict&apos;, **kwargs)">
+        <variable citdl="str" ilk="argument" name="errors" />
+        <variable ilk="argument" name="iterator" />
+        <variable ilk="argument" name="encoding" />
+        <variable attributes="kwargs" ilk="argument" name="kwargs" />
+        <variable citdl="getincrementaldecoder()()" line="1026" name="decoder" />
+        <variable citdl="decoder.decode()" line="1028" name="output" />
+      </scope>
+      <scope doc="Encoding iterator." ilk="function" line="999" lineend="1015" name="iterencode" signature="iterencode(iterator, encoding, errors=&apos;strict&apos;, **kwargs)">
+        <variable citdl="str" ilk="argument" name="errors" />
+        <variable ilk="argument" name="iterator" />
+        <variable ilk="argument" name="encoding" />
+        <variable citdl="encoder.encode()" line="1010" name="output" />
+        <variable attributes="kwargs" ilk="argument" name="kwargs" />
+        <variable citdl="getincrementalencoder()()" line="1008" name="encoder" />
+      </scope>
+      <scope ilk="function" name="latin_1_decode" />
+      <scope ilk="function" name="latin_1_encode" />
+      <scope doc="Looks up a codec tuple in the Python codec registry and&#xA;returns a CodecInfo object." ilk="function" name="lookup" signature="lookup(encoding) -&gt; CodecInfo" />
+      <scope doc="Return the error handler for the specified error handling&#xA;name or raise a LookupError, if no handler exists under this&#xA;name." ilk="function" name="lookup_error" signature="lookup_error(errors) -&gt; handler" />
+      <scope doc="Creates an encoding map from a decoding map." ilk="function" line="1050" lineend="1069" name="make_encoding_map" returns="dict" signature="make_encoding_map(decoding_map)">
+        <variable citdl="dict" line="1063" name="m" />
+        <variable ilk="argument" name="decoding_map" />
+      </scope>
+      <scope doc="Return a dictionary where elements of the rng sequence are&#xA;mapped to themselves." ilk="function" line="1037" lineend="1048" name="make_identity_dict" returns="dict" signature="make_identity_dict(rng) -&gt; dict">
+        <variable citdl="dict" line="1045" name="res" />
+        <variable ilk="argument" name="rng" />
+      </scope>
+      <scope ilk="function" name="mbcs_decode" />
+      <scope ilk="function" name="mbcs_encode" />
+      <scope doc="Open an encoded file using the given mode and return a&#xA;wrapped version providing transparent encoding/decoding." ilk="function" line="849" lineend="891" name="open" returns="StreamReaderWriter" signature="open(filename, mode=&apos;rb&apos;, encoding=None, errors=&apos;strict&apos;, buffering=1)">
+        <variable citdl="lookup()" line="887" name="info" />
+        <variable citdl="str" ilk="argument" name="errors" />
+        <variable ilk="argument" name="encoding" />
+        <variable ilk="argument" name="filename" />
+        <variable citdl="str" ilk="argument" name="mode" />
+        <variable citdl="builtins.open()" line="884" name="file" />
+        <variable citdl="int" ilk="argument" name="buffering" />
+        <variable citdl="StreamReaderWriter" line="888" name="srw" />
+      </scope>
+      <scope ilk="function" name="raw_unicode_escape_decode" />
+      <scope ilk="function" name="raw_unicode_escape_encode" />
+      <scope ilk="function" name="readbuffer_encode" />
+      <scope doc="Register a codec search function." ilk="function" name="register" signature="register(search_function)" />
+      <scope doc="Register the specified error handler under the name errors." ilk="function" name="register_error" signature="register_error(errors, handler)" />
+      <scope doc="Implements the &apos;replace&apos; error handling, which replaces&#xA;malformed data with a replacement marker." ilk="function" line="1076" name="replace_errors" />
+      <scope doc="Implements the &apos;strict&apos; error handling, which raises a&#xA;UnicodeError on coding errors." ilk="function" line="1074" name="strict_errors" />
+      <import module="sys" />
+      <scope ilk="function" name="unicode_escape_decode" />
+      <scope ilk="function" name="unicode_escape_encode" />
+      <scope ilk="function" name="unicode_internal_decode" />
+      <scope ilk="function" name="unicode_internal_encode" />
+      <scope ilk="function" name="utf_16_be_decode" />
+      <scope ilk="function" name="utf_16_be_encode" />
+      <scope ilk="function" name="utf_16_decode" />
+      <scope ilk="function" name="utf_16_encode" />
+      <scope ilk="function" name="utf_16_ex_decode" />
+      <scope ilk="function" name="utf_16_le_decode" />
+      <scope ilk="function" name="utf_16_le_encode" />
+      <scope ilk="function" name="utf_32_be_decode" />
+      <scope ilk="function" name="utf_32_be_encode" />
+      <scope ilk="function" name="utf_32_decode" />
+      <scope ilk="function" name="utf_32_encode" />
+      <scope ilk="function" name="utf_32_ex_decode" />
+      <scope ilk="function" name="utf_32_le_decode" />
+      <scope ilk="function" name="utf_32_le_encode" />
+      <scope ilk="function" name="utf_7_decode" />
+      <scope ilk="function" name="utf_7_encode" />
+      <scope ilk="function" name="utf_8_decode" />
+      <scope ilk="function" name="utf_8_encode" />
+      <scope doc="Implements the &apos;xmlcharrefreplace&apos; error handling, which&#xA;replaces an unencodable character with the appropriate XML&#xA;character reference." ilk="function" line="1077" name="xmlcharrefreplace_errors" />
+      <variable attributes="protected __hidden__" citdl="int" line="1089" name="_false" />
+    </scope>
+    

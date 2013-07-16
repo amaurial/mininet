@@ -1,0 +1,50 @@
+<scope ilk="blob" lang="Perl" name="IO::Uncompress::Gunzip">
+      <scope classrefs="Exporter IO::Uncompress::RawInflate" ilk="class" line="2" lineend="274" name="IO::Uncompress::Gunzip">
+        <import line="12" module="IO::Uncompress::RawInflate" symbol="*" />
+        <import line="14" module="Compress::Raw::Zlib" symbol="*" />
+        <import line="15" module="IO::Compress::Base::Common" symbol="*" />
+        <import line="16" module="IO::Compress::Gzip::Constants" symbol="*" />
+        <import line="17" module="IO::Compress::Zlib::Extra" symbol="*" />
+        <import line="19" module="Exporter" />
+        <variable attributes="__exportable__" line="21" name="$GunzipError" />
+        <variable line="21" name="$VERSION" />
+        <variable line="21" name="%EXPORT_TAGS" />
+        <variable line="21" name="@EXPORT_OK" />
+        <variable line="21" name="@ISA" />
+        <scope ilk="function" line="33" lineend="40" name="new" signature="new($class)">
+          <variable ilk="argument" name="$class" />
+        </scope>
+        <scope attributes="__exportable__" ilk="function" line="42" lineend="46" name="gunzip" signature="gunzip()">
+          </scope>
+        <scope ilk="function" line="48" lineend="52" name="getExtraParams" signature="getExtraParams()">
+          <import line="50" module="IO::Compress::Base::Common" symbol="*" />
+          <import line="50" module="IO::Compress::Base::Common" symbol="*" />
+        </scope>
+        <scope ilk="function" line="54" lineend="63" name="ckParams" signature="ckParams($self, $got)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$got" />
+        </scope>
+        <scope ilk="function" line="65" lineend="84" name="ckMagic" signature="ckMagic($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="86" lineend="92" name="readHeader" signature="readHeader($self, $magic)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$magic" />
+        </scope>
+        <scope ilk="function" line="94" lineend="115" name="chkTrailer" signature="chkTrailer($self, $trailer)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$trailer" />
+        </scope>
+        <scope ilk="function" line="117" lineend="123" name="isGzipMagic" signature="isGzipMagic($buffer)">
+          <variable ilk="argument" name="$buffer" />
+        </scope>
+        <scope ilk="function" line="125" lineend="145" name="_readFullGzipHeader" signature="_readFullGzipHeader($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="147" lineend="271" name="_readGzipHeader" signature="_readGzipHeader($self, $magic)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$magic" />
+        </scope>
+      </scope>
+    </scope>
+    

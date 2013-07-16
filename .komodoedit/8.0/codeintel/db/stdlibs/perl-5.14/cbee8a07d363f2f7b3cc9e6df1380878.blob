@@ -1,0 +1,120 @@
+<scope ilk="blob" lang="Perl" name="Archive::Extract">
+      <scope ilk="class" line="1" lineend="1667" name="Archive::Extract">
+        <import line="5" module="Cwd" symbol="cwd" />
+        <import line="5" module="Cwd" symbol="chdir" />
+        <import line="6" module="Carp" symbol="carp" />
+        <import line="7" module="IPC::Cmd" symbol="run" />
+        <import line="7" module="IPC::Cmd" symbol="can_run" />
+        <import line="8" module="FileHandle" symbol="*" />
+        <import line="9" module="File::Path" symbol="mkpath" />
+        <import line="10" module="File::Spec" symbol="*" />
+        <import line="11" module="File::Basename" symbol="dirname" />
+        <import line="11" module="File::Basename" symbol="basename" />
+        <import line="12" module="Params::Check" symbol="check" />
+        <import line="13" module="Module::Load::Conditional" symbol="can_load" />
+        <import line="13" module="Module::Load::Conditional" symbol="check_install" />
+        <import line="14" module="Locale::Maketext::Simple" symbol="Style" />
+        <variable line="43" name="$DEBUG" />
+        <variable line="43" name="$PREFER_BIN" />
+        <variable line="43" name="$PROGRAMS" />
+        <variable line="43" name="$VERSION" />
+        <variable line="43" name="$WARN" />
+        <variable line="44" name="$_ALLOW_BIN" />
+        <variable line="44" name="$_ALLOW_PURE_PERL" />
+        <variable line="44" name="$_ALLOW_TAR_ITER" />
+        <variable line="853" name="$Archive::Tar::WARN" />
+        <scope attributes="__ctor__" ilk="function" line="244" lineend="281" name="new" signature="new($class, %hash)">
+          <variable ilk="argument" name="$class" />
+          <variable ilk="argument" name="%hash" />
+        </scope>
+        <scope ilk="function" line="328" lineend="450" name="extract" signature="extract($self, %hash)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="%hash" />
+        </scope>
+        <scope ilk="function" line="489" lineend="489" name="types" signature="types()" />
+        <scope ilk="function" line="529" lineend="529" name="is_tgz" signature="is_tgz()" />
+        <scope ilk="function" line="530" lineend="530" name="is_tar" signature="is_tar()" />
+        <scope ilk="function" line="531" lineend="531" name="is_gz" signature="is_gz()" />
+        <scope ilk="function" line="532" lineend="532" name="is_zip" signature="is_zip()" />
+        <scope ilk="function" line="533" lineend="533" name="is_tbz" signature="is_tbz()" />
+        <scope ilk="function" line="534" lineend="534" name="is_bz2" signature="is_bz2()" />
+        <scope ilk="function" line="535" lineend="535" name="is_Z" signature="is_Z()" />
+        <scope ilk="function" line="536" lineend="536" name="is_lzma" signature="is_lzma()" />
+        <scope ilk="function" line="537" lineend="537" name="is_xz" signature="is_xz()" />
+        <scope ilk="function" line="538" lineend="538" name="is_txz" signature="is_txz()" />
+        <scope ilk="function" line="565" lineend="565" name="bin_gzip" signature="bin_gzip()" />
+        <scope ilk="function" line="566" lineend="566" name="bin_unzip" signature="bin_unzip()" />
+        <scope ilk="function" line="567" lineend="567" name="bin_tar" signature="bin_tar()" />
+        <scope ilk="function" line="568" lineend="568" name="bin_bunzip2" signature="bin_bunzip2()" />
+        <scope ilk="function" line="569" lineend="570" name="bin_uncompress" signature="bin_uncompress()" />
+        <scope ilk="function" line="571" lineend="571" name="bin_unlzma" signature="bin_unlzma()" />
+        <scope ilk="function" line="572" lineend="572" name="bin_unxz" signature="bin_unxz()" />
+        <scope ilk="function" line="583" lineend="621" name="have_old_bunzip2" signature="have_old_bunzip2($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="643" lineend="760" name="_untar_bin" signature="_untar_bin($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="765" lineend="928" name="_untar_at" signature="_untar_at($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="936" lineend="974" name="_gunzip_bin" signature="_gunzip_bin($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="976" lineend="1003" name="_gunzip_cz" signature="_gunzip_cz($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="1011" lineend="1049" name="_uncompress_bin" signature="_uncompress_bin($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="1059" lineend="1114" name="_unzip_bin" signature="_unzip_bin($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="1116" lineend="1170" name="_unzip_az" signature="_unzip_az($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="1172" lineend="1211" name="__get_extract_dir" signature="__get_extract_dir($self, $files)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$files" />
+        </scope>
+        <scope ilk="function" line="1219" lineend="1265" name="_bunzip2_bin" signature="_bunzip2_bin($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="1299" lineend="1320" name="_bunzip2_bz2" signature="_bunzip2_bz2($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="1328" lineend="1366" name="_unxz_bin" signature="_unxz_bin($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="1368" lineend="1389" name="_unxz_cz" signature="_unxz_cz($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="1398" lineend="1436" name="_unlzma_bin" signature="_unlzma_bin($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="1438" lineend="1478" name="_unlzma_cz" signature="_unlzma_cz($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="1487" lineend="1493" name="_print" signature="_print($self, $fh)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$fh" />
+        </scope>
+        <scope ilk="function" line="1495" lineend="1510" name="_error" signature="_error($self, $error)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$error" />
+        </scope>
+        <scope ilk="function" line="1512" lineend="1523" name="error" signature="error($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="1534" lineend="1538" name="debug" signature="debug()" />
+        <scope ilk="function" line="1540" lineend="1545" name="_no_buffer_files" signature="_no_buffer_files($self, $file)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$file" />
+        </scope>
+        <scope ilk="function" line="1547" lineend="1551" name="_no_buffer_content" signature="_no_buffer_content($self, $file)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$file" />
+        </scope>
+      </scope>
+    </scope>
+    

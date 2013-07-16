@@ -1,0 +1,723 @@
+<scope doc="Module doctest -- a framework for running examples in docstrings.&#xA;In simplest use, end each module M to be tested with:  def _test(): import doctest doctest.testmod()  if __name__ == &quot;__main__&quot;: _test()  Then running the module as a script will cause the examples in the" ilk="blob" lang="Python" name="doctest">
+      <variable citdl="str" line="160" name="BLANKLINE_MARKER" />
+      <variable citdl="int" line="142" name="COMPARISON_FLAGS" />
+      <variable citdl="int" line="136" name="DONT_ACCEPT_BLANKLINE" />
+      <variable citdl="int" line="135" name="DONT_ACCEPT_TRUE_FOR_1" />
+      <scope classrefs="DocTestRunner" doc="Run doc tests but raise an exception as soon as there is a failure.&#xA;If an unexpected exception occurs, an UnexpectedException is raised. It contains the test, the example, and the original exception:  &gt;&gt;&gt; runner = DebugRunner(verbose=False) &gt;&gt;&gt; test = DocTestParser().get_doctest(&apos;&gt;&gt;&gt; raise KeyError\n42&apos;, ...                                    {}, &apos;foo&apos;, &apos;foo.py&apos;, 0) &gt;&gt;&gt; try: ...     runner.run(test) ... except UnexpectedException as f: ...     failure = f" ilk="class" line="1666" lineend="1767" name="DebugRunner">
+        <scope ilk="function" line="1763" lineend="1764" name="report_unexpected_exception" signature="report_unexpected_exception(self, out, test, example, exc_info)">
+          <variable ilk="argument" name="test" />
+          <variable ilk="argument" name="exc_info" />
+          <variable citdl="DebugRunner" ilk="argument" name="self" />
+          <variable ilk="argument" name="example" />
+          <variable ilk="argument" name="out" />
+        </scope>
+        <scope ilk="function" line="1766" lineend="1767" name="report_failure" signature="report_failure(self, out, test, example, got)">
+          <variable ilk="argument" name="test" />
+          <variable ilk="argument" name="got" />
+          <variable citdl="DebugRunner" ilk="argument" name="self" />
+          <variable ilk="argument" name="example" />
+          <variable ilk="argument" name="out" />
+        </scope>
+        <scope ilk="function" line="1757" lineend="1761" name="run" returns="DocTestRunner.run()" signature="run(self, test, compileflags=None, out=None, clear_globs=True)">
+          <variable ilk="argument" name="compileflags" />
+          <variable citdl="DocTestRunner.run()" line="1758" name="r" />
+          <variable citdl="True" ilk="argument" name="clear_globs" />
+          <variable ilk="argument" name="test" />
+          <variable citdl="DebugRunner" ilk="argument" name="self" />
+          <variable ilk="argument" name="out" />
+        </scope>
+      </scope>
+      <scope classrefs="DocTestCase" doc="&#xA;" ilk="class" line="2297" lineend="2308" name="DocFileCase">
+        <scope ilk="function" line="2304" name="__str__" signature="__str__(self)" />
+        <scope ilk="function" line="2299" lineend="2300" name="id" returns="str.join()" signature="id(self)">
+          <variable citdl="DocFileCase" ilk="argument" name="self" />
+        </scope>
+        <scope ilk="function" line="2306" lineend="2308" name="format_failure" returns="tuple" signature="format_failure(self, err)">
+          <variable citdl="DocFileCase" ilk="argument" name="self" />
+          <variable ilk="argument" name="err" />
+        </scope>
+        <scope ilk="function" line="2302" lineend="2303" name="__repr__" returns="self._dt_test.filename" signature="__repr__(self)">
+          <variable citdl="DocFileCase" ilk="argument" name="self" />
+        </scope>
+      </scope>
+      <scope doc="A unittest suite for one or more doctest files." ilk="function" line="2337" lineend="2404" name="DocFileSuite" returns="unittest.TestSuite()" signature="DocFileSuite(*paths, **kw)">
+        <variable attributes="varargs" ilk="argument" name="paths" />
+        <variable attributes="kwargs" ilk="argument" name="kw" />
+        <variable citdl="unittest.TestSuite()" line="2393" name="suite" />
+      </scope>
+      <scope ilk="function" line="2311" lineend="2335" name="DocFileTest" returns="DocFileCase" signature="DocFileTest(path, module_relative=True, package=None, globs=None, parser=&lt;doctest.DocTestParser object at 0x042E7030&gt;, encoding=None, **options)">
+        <variable citdl="True" ilk="argument" name="module_relative" />
+        <variable citdl="os.path.basename()" line="2331" name="name" />
+        <variable ilk="argument" name="package" />
+        <variable line="2324" name="doc" />
+        <variable citdl="DocTestParser" ilk="argument" name="parser" />
+        <variable ilk="argument" name="encoding" />
+        <variable citdl="parser.get_doctest()" line="2334" name="test" />
+        <variable ilk="argument" name="path" />
+        <variable citdl="globs.copy()" ilk="argument" name="globs" />
+        <variable attributes="kwargs" ilk="argument" name="options" />
+      </scope>
+      <scope classrefs="object" doc="A collection of doctest examples that should be run in a single&#xA;namespace.  Each `DocTest` defines the following attributes:  - examples: the list of examples.  - globs: The namespace (aka globals) that the examples should be run in.  - name: A name identifying the DocTest (typically, the name of the object whose docstring this DocTest was extracted from). " ilk="class" line="443" lineend="498" name="DocTest">
+        <scope ilk="function" line="481" lineend="489" name="__repr__" returns="tuple" signature="__repr__(self)">
+          <variable citdl="DocTest" ilk="argument" name="self" />
+          <variable citdl="str" line="483" name="examples" />
+        </scope>
+        <scope doc="# This lets us sort tests by name:" ilk="function" line="493" lineend="498" name="__lt__" returns="NotImplemented" signature="__lt__(self, other)">
+          <variable citdl="DocTest" ilk="argument" name="self" />
+          <variable ilk="argument" name="other" />
+        </scope>
+        <scope doc="Create a new DocTest containing the given examples." ilk="function" line="467" lineend="479" name="__init__" signature="__init__(self, examples, globs, name, filename, lineno, docstring)">
+          <variable ilk="argument" name="examples" />
+          <variable ilk="argument" name="lineno" />
+          <variable ilk="argument" name="name" />
+          <variable ilk="argument" name="globs" />
+          <variable citdl="DocTest" ilk="argument" name="self" />
+          <variable ilk="argument" name="docstring" />
+          <variable ilk="argument" name="filename" />
+        </scope>
+        <variable attributes="__instancevar__" line="477" name="name" />
+        <variable attributes="__instancevar__" line="475" name="docstring" />
+        <variable attributes="__instancevar__" line="478" name="filename" />
+        <variable attributes="__instancevar__" line="474" name="examples" />
+        <variable attributes="__instancevar__" citdl="globs.copy()" line="476" name="globs" />
+        <variable attributes="__instancevar__" line="479" name="lineno" />
+      </scope>
+      <scope classrefs="TestCase" doc="&#xA;" ilk="class" line="2070" lineend="2214" name="DocTestCase">
+        <scope ilk="function" line="2088" lineend="2094" name="tearDown" signature="tearDown(self)">
+          <variable line="2089" name="test" />
+          <variable citdl="DocTestCase" ilk="argument" name="self" />
+        </scope>
+        <scope ilk="function" line="2082" lineend="2086" name="setUp" signature="setUp(self)">
+          <variable line="2083" name="test" />
+          <variable citdl="DocTestCase" ilk="argument" name="self" />
+        </scope>
+        <scope ilk="function" line="2204" lineend="2205" name="id" returns="self._dt_test.name" signature="id(self)">
+          <variable citdl="DocTestCase" ilk="argument" name="self" />
+        </scope>
+        <scope ilk="function" line="2096" lineend="2118" name="runTest" signature="runTest(self)">
+          <variable citdl="sys.stdout" line="2098" name="old" />
+          <variable citdl="DocTestRunner" line="2107" name="runner" />
+          <variable citdl="DocTestCase" ilk="argument" name="self" />
+          <variable line="2112" name="tries" />
+          <variable line="2112" name="failures" />
+          <variable line="2097" name="test" />
+          <variable citdl="StringIO()" line="2099" name="new" />
+          <variable citdl="int" line="2100" name="optionflags" />
+        </scope>
+        <scope ilk="function" line="2120" lineend="2129" name="format_failure" returns="tuple" signature="format_failure(self, err)">
+          <variable line="2121" name="test" />
+          <variable citdl="str.join()" line="2126" name="lname" />
+          <variable citdl="DocTestCase" ilk="argument" name="self" />
+          <variable citdl="str" line="2123" name="lineno" />
+          <variable ilk="argument" name="err" />
+        </scope>
+        <scope ilk="function" line="2207" lineend="2209" name="__repr__" returns="tuple" signature="__repr__(self)">
+          <variable citdl="DocTestCase" ilk="argument" name="self" />
+          <variable citdl="self._dt_test.name.split()" line="2208" name="name" />
+        </scope>
+        <scope doc="Run the test case without results and without catching&#xA;exceptions" ilk="function" line="2132" lineend="2202" name="debug" signature="debug(self)">
+          <variable citdl="DebugRunner" line="2199" name="runner" />
+          <variable citdl="DocTestCase" ilk="argument" name="self" />
+        </scope>
+        <scope ilk="function" line="2213" lineend="2214" name="shortDescription" returns="self._dt_test.name" signature="shortDescription(self)">
+          <variable citdl="DocTestCase" ilk="argument" name="self" />
+        </scope>
+        <scope ilk="function" line="2211" name="__str__" signature="__str__(self)" />
+        <scope ilk="function" line="2072" lineend="2080" name="__init__" signature="__init__(self, test, optionflags=0, setUp=None, tearDown=None, checker=None)">
+          <variable ilk="argument" name="test" />
+          <variable ilk="argument" name="checker" />
+          <variable ilk="argument" name="tearDown" />
+          <variable citdl="DocTestCase" ilk="argument" name="self" />
+          <variable citdl="int" ilk="argument" name="optionflags" />
+          <variable ilk="argument" name="setUp" />
+        </scope>
+        <variable attributes="protected __instancevar__" line="2077" name="_dt_checker" />
+        <variable attributes="protected __instancevar__" line="2079" name="_dt_setUp" />
+        <variable attributes="protected __instancevar__" line="2078" name="_dt_test" />
+        <variable attributes="protected __instancevar__" line="2080" name="_dt_tearDown" />
+        <variable attributes="protected __instancevar__" citdl="int" line="2076" name="_dt_optionflags" />
+      </scope>
+      <scope classrefs="Exception" doc="A DocTest example has failed in debugging mode.&#xA;The exception instance has variables:  - test: the DocTest object being run  - example: the Example object that failed  - got: the actual output" ilk="class" line="1628" lineend="1645" name="DocTestFailure">
+        <scope ilk="function" line="1644" lineend="1645" name="__str__" returns="str()" signature="__str__(self)">
+          <variable citdl="DocTestFailure" ilk="argument" name="self" />
+        </scope>
+        <scope ilk="function" line="1639" lineend="1642" name="__init__" signature="__init__(self, test, example, got)">
+          <variable ilk="argument" name="test" />
+          <variable ilk="argument" name="got" />
+          <variable citdl="DocTestFailure" ilk="argument" name="self" />
+          <variable ilk="argument" name="example" />
+        </scope>
+        <variable attributes="__instancevar__" line="1640" name="test" />
+        <variable attributes="__instancevar__" line="1642" name="got" />
+        <variable attributes="__instancevar__" line="1641" name="example" />
+      </scope>
+      <scope classrefs="object" doc="A class used to extract the DocTests that are relevant to a given&#xA;object, from its docstring and the docstrings of its contained objects.  Doctests can currently be extracted from the following object types: modules, functions, classes, methods, staticmethods, classmethods, and properties." ilk="class" line="739" lineend="1038" name="DocTestFinder">
+        <scope doc="Return a line number of the given object&apos;s docstring." ilk="function" line="992" lineend="1038" name="_find_lineno" returns="getattr()" signature="_find_lineno(self, obj, source_lines)">
+          <variable citdl="re.compile()" line="1009" name="pat" />
+          <variable citdl="DocTestFinder" ilk="argument" name="self" />
+          <variable ilk="argument" name="source_lines" />
+          <variable citdl="obj.tb_frame" ilk="argument" name="obj" />
+          <variable citdl="int" line="997" name="lineno" />
+        </scope>
+        <scope doc="Find tests for the given object and any contained objects,&#xA;and add them to `tests`." ilk="function" line="892" lineend="953" name="_find" signature="_find(self, tests, obj, name, module, source_lines, globs, seen)">
+          <variable ilk="argument" name="tests" />
+          <variable citdl="str" line="913" name="valname" />
+          <variable ilk="argument" name="obj" />
+          <variable ilk="argument" name="name" />
+          <variable citdl="getattr()" line="943" name="val" />
+          <variable citdl="DocTestFinder" ilk="argument" name="self" />
+          <variable ilk="argument" name="module" />
+          <variable citdl="self._get_test()" line="906" name="test" />
+          <variable ilk="argument" name="seen" />
+          <variable ilk="argument" name="source_lines" />
+          <variable ilk="argument" name="globs" />
+        </scope>
+        <scope doc="Return a DocTest for the given object, if it defines a&#xA;docstring; otherwise, return None." ilk="function" line="955" lineend="990" name="_get_test" returns="self._parser.get_doctest()" signature="_get_test(self, obj, name, module, globs, source_lines)">
+          <variable ilk="argument" name="obj" />
+          <variable ilk="argument" name="name" />
+          <variable citdl="DocTestFinder" ilk="argument" name="self" />
+          <variable citdl="str" line="963" name="docstring" />
+          <variable ilk="argument" name="module" />
+          <variable citdl="list" line="984" name="filename" />
+          <variable citdl="self._find_lineno()" line="976" name="lineno" />
+          <variable ilk="argument" name="source_lines" />
+          <variable ilk="argument" name="globs" />
+        </scope>
+        <scope doc="Return true if the given object is defined in the given&#xA;module." ilk="function" line="872" lineend="890" name="_from_module" returns="bool" signature="_from_module(self, module, object)">
+          <variable citdl="DocTestFinder" ilk="argument" name="self" />
+          <variable ilk="argument" name="object" />
+          <variable ilk="argument" name="module" />
+        </scope>
+        <scope doc="Return a list of the DocTests that are defined by the given&#xA;object&apos;s docstring, or by any of its contained objects&apos;&#xA;docstrings." ilk="function" line="770" lineend="870" name="find" returns="list" signature="find(self, obj, name=None, module=None, globs=None, extraglobs=None)">
+          <variable citdl="list" line="863" name="tests" />
+          <variable ilk="argument" name="obj" />
+          <variable citdl="getattr()" ilk="argument" name="name" />
+          <variable citdl="DocTestFinder" ilk="argument" name="self" />
+          <variable citdl="inspect.getmodule()" ilk="argument" name="module" />
+          <variable ilk="argument" name="extraglobs" />
+          <variable citdl="inspect.getsourcefile()" line="825" name="file" />
+          <variable citdl="linecache.getlines()" line="827" name="source_lines" />
+          <variable citdl="module.__dict__.copy()" ilk="argument" name="globs" />
+        </scope>
+        <scope doc="Create a new doctest finder." ilk="function" line="748" lineend="768" name="__init__" signature="__init__(self, verbose=False, parser=&lt;doctest.DocTestParser object at 0x042E1DF0&gt;, recurse=True, exclude_empty=True)">
+          <variable citdl="True" ilk="argument" name="exclude_empty" />
+          <variable citdl="DocTestFinder" ilk="argument" name="self" />
+          <variable citdl="DocTestParser" ilk="argument" name="parser" />
+          <variable citdl="True" ilk="argument" name="recurse" />
+          <variable citdl="False" ilk="argument" name="verbose" />
+        </scope>
+        <variable attributes="protected __instancevar__" citdl="DocTestParser" line="765" name="_parser" />
+        <variable attributes="protected __instancevar__" citdl="True" line="768" name="_exclude_empty" />
+        <variable attributes="protected __instancevar__" citdl="True" line="767" name="_recurse" />
+        <variable attributes="protected __instancevar__" citdl="False" line="766" name="_verbose" />
+      </scope>
+      <scope classrefs="object" doc="A class used to parse strings containing doctest examples.&#xA;" ilk="class" line="504" lineend="732" name="DocTestParser">
+        <scope doc="Extract all doctest examples from the given string, and&#xA;return them as a list of `Example` objects." ilk="function" line="603" lineend="615" name="get_examples" returns="list" signature="get_examples(self, string, name=&apos;&lt;string&gt;&apos;)">
+          <variable citdl="DocTestParser" ilk="argument" name="self" />
+          <variable ilk="argument" name="string" />
+          <variable citdl="str" ilk="argument" name="name" />
+        </scope>
+        <scope doc="Extract all doctest examples from the given string, and&#xA;collect them into a `DocTest` object." ilk="function" line="591" lineend="601" name="get_doctest" returns="DocTest" signature="get_doctest(self, string, globs, name, filename, lineno)">
+          <variable ilk="argument" name="lineno" />
+          <variable ilk="argument" name="string" />
+          <variable ilk="argument" name="name" />
+          <variable citdl="DocTestParser" ilk="argument" name="self" />
+          <variable ilk="argument" name="globs" />
+          <variable ilk="argument" name="filename" />
+        </scope>
+        <scope doc="Given a regular expression match from `_EXAMPLE_RE` (`m`),&#xA;return a pair `(source, want)`, where `source` is the&#xA;matched example&apos;s source code (with prompts and indentation&#xA;stripped); and `want` is the example&apos;s expected output (with&#xA;indentation" ilk="function" line="617" lineend="659" name="_parse_example" returns="tuple" signature="_parse_example(self, m, name, lineno)">
+          <variable citdl="len()" line="629" name="indent" />
+          <variable ilk="argument" name="name" />
+          <variable citdl="m.group()" line="652" name="exc_msg" />
+          <variable citdl="want.split()" line="642" name="want_lines" />
+          <variable citdl="DocTestParser" ilk="argument" name="self" />
+          <variable citdl="self._EXCEPTION_RE.match()" ilk="argument" name="m" />
+          <variable citdl="str.join()" line="636" name="source" />
+          <variable ilk="argument" name="lineno" />
+          <variable citdl="m.group()" line="641" name="want" />
+          <variable line="633" name="source_lines" />
+          <variable citdl="self._find_options()" line="657" name="options" />
+        </scope>
+        <scope doc="Return a dictionary containing option overrides extracted&#xA;from option directives in the given source string." ilk="function" line="671" lineend="695" name="_find_options" returns="dict" signature="_find_options(self, source, name, lineno)">
+          <variable ilk="argument" name="source" />
+          <variable line="689" name="flag" />
+          <variable ilk="argument" name="name" />
+          <variable line="682" name="option_strings" />
+          <variable citdl="DocTestParser" ilk="argument" name="self" />
+          <variable citdl="dict" line="679" name="options" />
+          <variable ilk="argument" name="lineno" />
+        </scope>
+        <scope doc="Divide the given string into examples and intervening text,&#xA;and return them as a list of alternating Examples and&#xA;strings." ilk="function" line="552" lineend="589" name="parse" returns="list" signature="parse(self, string, name=&apos;&lt;string&gt;&apos;)">
+          <variable citdl="string.expandtabs()" ilk="argument" name="string" />
+          <variable line="575" name="exc_msg" />
+          <variable citdl="DocTestParser" ilk="argument" name="self" />
+          <variable citdl="self._min_indent()" line="562" name="min_indent" />
+          <variable line="575" name="source" />
+          <variable citdl="int" line="567" name="lineno" />
+          <variable line="575" name="want" />
+          <variable citdl="list" line="566" name="output" />
+          <variable citdl="int" line="567" name="charno" />
+          <variable line="575" name="options" />
+          <variable citdl="str" ilk="argument" name="name" />
+        </scope>
+        <scope doc="Given the lines of a source string (including prompts and&#xA;leading indentation), check to make sure that every prompt&#xA;is followed by a space character." ilk="function" line="709" lineend="721" name="_check_prompt_blank" signature="_check_prompt_blank(self, lines, indent, name, lineno)">
+          <variable ilk="argument" name="indent" />
+          <variable citdl="DocTestParser" ilk="argument" name="self" />
+          <variable ilk="argument" name="lines" />
+          <variable ilk="argument" name="name" />
+          <variable ilk="argument" name="lineno" />
+        </scope>
+        <scope doc="Check that every line in the given list starts with the&#xA;given prefix; if any line does not, then raise a ValueError." ilk="function" line="723" lineend="732" name="_check_prefix" signature="_check_prefix(self, lines, prefix, name, lineno)">
+          <variable citdl="DocTestParser" ilk="argument" name="self" />
+          <variable ilk="argument" name="lines" />
+          <variable ilk="argument" name="prefix" />
+          <variable ilk="argument" name="name" />
+          <variable ilk="argument" name="lineno" />
+        </scope>
+        <scope doc="Return the minimum indentation of any non-blank line in `s`" ilk="function" line="701" lineend="707" name="_min_indent" returns="int" signature="_min_indent(self, s)">
+          <variable ilk="argument" name="s" />
+          <variable citdl="list" line="703" name="indents" />
+          <variable citdl="DocTestParser" ilk="argument" name="self" />
+        </scope>
+        <variable attributes="protected" citdl="re.compile()" line="668" name="_OPTION_DIRECTIVE_RE" />
+        <variable attributes="protected" citdl="re.compile()" line="535" name="_EXCEPTION_RE" />
+        <variable attributes="protected" citdl="re.compile()" line="699" name="_INDENT_RE" />
+        <variable attributes="protected" citdl="re.compile()" line="513" name="_EXAMPLE_RE" />
+        <variable attributes="protected" line="550" name="_IS_BLANK_OR_COMMENT" />
+      </scope>
+      <scope classrefs="object" doc="A class used to run DocTest test cases, and accumulate statistics.&#xA;The `run` method is used to process a single DocTest case.  It returns a tuple `(f, t)`, where `t` is the number of test cases tried, and `f` is the number of test cases that failed.  &gt;&gt;&gt; tests = DocTestFinder().find(_TestClass) &gt;&gt;&gt; runner = DocTestRunner(verbose=False) &gt;&gt;&gt; tests.sort(key = lambda test: test.name) &gt;&gt;&gt; for test in tests: ...     print(test.name, &apos;-&gt;&apos;, runner.run(test)) _TestClass -&gt; TestResults(failed=0, attempted=2)" ilk="class" line="1044" lineend="1478" name="DocTestRunner">
+        <scope doc="Run the examples in `test`, and display the results using&#xA;the writer function `out`." ilk="function" line="1339" lineend="1405" name="run" returns="DocTestRunner.__run()" signature="run(self, test, compileflags=None, out=None, clear_globs=True)">
+          <variable citdl="sys.stdout" line="1364" name="save_stdout" />
+          <variable citdl="sys.displayhook" line="1392" name="save_displayhook" />
+          <variable citdl="True" ilk="argument" name="clear_globs" />
+          <variable citdl="save_stdout.encoding" line="1366" name="encoding" />
+          <variable citdl="DocTestRunner" ilk="argument" name="self" />
+          <variable citdl="_extract_future_flags()" ilk="argument" name="compileflags" />
+          <variable citdl="pdb.set_trace" line="1381" name="save_set_trace" />
+          <variable ilk="argument" name="test" />
+          <variable citdl="save_stdout.write" ilk="argument" name="out" />
+        </scope>
+        <scope doc="Record the fact that the given DocTest (`test`) generated&#xA;`f` failures out of `t` tried examples." ilk="function" name="_DocTestRunner__record_outcome" signature="_DocTestRunner__record_outcome(self, test, f, t)" />
+        <scope doc="Report that the test runner is about to process the given&#xA;example." ilk="function" line="1140" lineend="1151" name="report_start" signature="report_start(self, out, test, example)">
+          <variable ilk="argument" name="test" />
+          <variable citdl="DocTestRunner" ilk="argument" name="self" />
+          <variable ilk="argument" name="example" />
+          <variable ilk="argument" name="out" />
+        </scope>
+        <scope doc="Report that the given example ran successfully." ilk="function" line="1153" lineend="1159" name="report_success" signature="report_success(self, out, test, example, got)">
+          <variable ilk="argument" name="test" />
+          <variable ilk="argument" name="got" />
+          <variable citdl="DocTestRunner" ilk="argument" name="self" />
+          <variable ilk="argument" name="example" />
+          <variable ilk="argument" name="out" />
+        </scope>
+        <scope doc="Run the examples in `test`." ilk="function" name="_DocTestRunner__run" signature="_DocTestRunner__run(self, test, compileflags, out)" />
+        <scope doc="Print a summary of all the test cases that have been run by&#xA;this DocTestRunner, and return a tuple `(f, t)`, where `f`&#xA;is the total number of failed examples, and `t` is the total&#xA;number of tried examples." ilk="function" line="1410" lineend="1462" name="summarize" returns="TestResults()" signature="summarize(self, verbose=None)">
+          <variable citdl="list" line="1425" name="failed" />
+          <variable citdl="bool" ilk="argument" name="verbose" />
+          <variable citdl="list" line="1424" name="passed" />
+          <variable citdl="int" line="1426" name="totalt" />
+          <variable citdl="DocTestRunner" ilk="argument" name="self" />
+          <variable citdl="list" line="1423" name="notests" />
+        </scope>
+        <scope doc="Create a new test runner." ilk="function" line="1104" lineend="1134" name="__init__" signature="__init__(self, checker=None, verbose=None, optionflags=0)">
+          <variable citdl="DocTestRunner" ilk="argument" name="self" />
+          <variable citdl="int" ilk="argument" name="optionflags" />
+          <variable ilk="argument" name="checker" />
+          <variable citdl="bool" ilk="argument" name="verbose" />
+        </scope>
+        <scope doc="Report that the given example raised an unexpected&#xA;exception." ilk="function" line="1168" lineend="1173" name="report_unexpected_exception" signature="report_unexpected_exception(self, out, test, example, exc_info)">
+          <variable ilk="argument" name="test" />
+          <variable ilk="argument" name="exc_info" />
+          <variable citdl="DocTestRunner" ilk="argument" name="self" />
+          <variable ilk="argument" name="example" />
+          <variable ilk="argument" name="out" />
+        </scope>
+        <scope ilk="function" line="1175" lineend="1189" name="_failure_header" returns="str.join()" signature="_failure_header(self, test, example)">
+          <variable citdl="example.source" line="1187" name="source" />
+          <variable citdl="example.lineno" line="1179" name="lineno" />
+          <variable ilk="argument" name="test" />
+          <variable citdl="DocTestRunner" ilk="argument" name="self" />
+          <variable ilk="argument" name="example" />
+          <variable citdl="list" line="1176" name="out" />
+        </scope>
+        <scope ilk="function" name="_DocTestRunner__patched_linecache_getlines" signature="_DocTestRunner__patched_linecache_getlines(self, filename, module_globals=None)" />
+        <scope doc="#///////////////////////////////////////////////////////////&#xA;////// # Backward compatibility cruft to maintain&#xA;doctest.master." ilk="function" line="1467" lineend="1478" name="merge" signature="merge(self, other)">
+          <variable citdl="dict" line="1468" name="d" />
+          <variable citdl="DocTestRunner" ilk="argument" name="self" />
+          <variable ilk="argument" name="other" />
+          <variable citdl="t2" line="1477" name="t" />
+          <variable citdl="f2" line="1476" name="f" />
+        </scope>
+        <scope doc="Report that the given example failed." ilk="function" line="1161" lineend="1166" name="report_failure" signature="report_failure(self, out, test, example, got)">
+          <variable ilk="argument" name="test" />
+          <variable ilk="argument" name="got" />
+          <variable citdl="DocTestRunner" ilk="argument" name="self" />
+          <variable ilk="argument" name="example" />
+          <variable ilk="argument" name="out" />
+        </scope>
+        <scope attributes="private" doc="Record the fact that the given DocTest (`test`) generated `f`&#xA;failures out of `t` tried examples." ilk="function" line="1318" lineend="1326" name="__record_outcome" signature="__record_outcome(test, f, t)">
+          <variable citdl="DocTestRunner" ilk="argument" name="self" />
+          <variable ilk="argument" name="test" />
+          <variable ilk="argument" name="f" />
+          <variable ilk="argument" name="t" />
+          <variable line="1323" name="f2" />
+          <variable line="1323" name="t2" />
+        </scope>
+        <variable attributes="protected __instancevar__" citdl="OutputChecker()" line="1121" name="_checker" />
+        <variable attributes="__instancevar__" citdl="_OutputRedirectingPdb" line="1382" name="debugger" />
+        <scope attributes="private" ilk="function" line="1331" lineend="1337" name="__patched_linecache_getlines" returns="self.save_linecache_getlines()" signature="__patched_linecache_getlines(filename, module_globals=None)">
+          <variable citdl="DocTestRunner" ilk="argument" name="self" />
+          <variable ilk="argument" name="filename" />
+          <variable ilk="argument" name="module_globals" />
+          <variable citdl="self.__LINECACHE_FILENAME_RE.match()" line="1332" name="m" />
+          <variable line="1334" name="example" />
+        </scope>
+        <variable attributes="private" citdl="re.compile()" line="1328" name="__LINECACHE_FILENAME_RE" />
+        <scope attributes="private" doc="Run the examples in `test`.  Write the outcome of each example&#xA;with one of the `DocTestRunner.report_*` methods, using the&#xA;writer function `out`.  `compileflags` is the set of compiler&#xA;flags that should be used to execute examples.  Return a tuple&#xA;`(f, t)`, where `t` is the number of examples tried, and `f`&#xA;is the number of examples that failed.  The examples are run&#xA;in the namespace `test.globs`." ilk="function" line="1195" lineend="1316" name="__run" returns="TestResults()" signature="__run(test, compileflags, out)">
+          <variable citdl="DocTestRunner" ilk="argument" name="self" />
+          <variable ilk="argument" name="test" />
+          <variable ilk="argument" name="compileflags" />
+          <variable ilk="argument" name="out" />
+          <variable citdl="int" line="1206" name="failures" />
+          <variable citdl="int" line="1210" name="original_optionflags" />
+          <variable line="1212" name="SUCCESS" />
+          <variable line="1212" name="FAILURE" />
+          <variable line="1212" name="BOOM" />
+          <variable citdl="self._checker.check_output" line="1214" name="check" />
+          <variable citdl="int" line="1221" name="quiet" />
+          <variable citdl="str" line="1245" name="filename" />
+          <variable citdl="sys.exc_info()" line="1255" name="exception" />
+          <variable citdl="self._fakeout.getvalue()" line="1262" name="got" />
+          <variable line="1264" name="outcome" />
+          <variable line="1274" name="exc_msg" />
+          <variable citdl="re.match()" line="1289" name="m1" />
+          <variable citdl="re.match()" line="1290" name="m2" />
+        </scope>
+        <variable attributes="protected __instancevar__" citdl="_SpoofOut" line="1134" name="_fakeout" />
+        <variable attributes="__instancevar__" citdl="int" line="1129" name="tries" />
+        <variable attributes="__instancevar__" citdl="linecache.getlines" line="1388" name="save_linecache_getlines" />
+        <variable attributes="__instancevar__" citdl="int" line="1130" name="failures" />
+        <variable attributes="__instancevar__" line="1359" name="test" />
+        <variable attributes="__instancevar__" citdl="int" line="1126" name="original_optionflags" />
+        <variable attributes="protected __instancevar__" citdl="dict" line="1131" name="_name2ft" />
+        <variable attributes="__instancevar__" citdl="int" line="1125" name="optionflags" />
+        <variable citdl="str" line="1102" name="DIVIDER" />
+        <variable attributes="protected __instancevar__" citdl="bool" line="1124" name="_verbose" />
+      </scope>
+      <scope doc="Convert doctest tests for a module to a unittest test suite." ilk="function" line="2229" lineend="2295" name="DocTestSuite" returns="unittest.TestSuite()" signature="DocTestSuite(module=None, globs=None, extraglobs=None, test_finder=None, **options)">
+        <variable citdl="test_finder.find()" line="2270" name="tests" />
+        <variable citdl="DocTestFinder" ilk="argument" name="test_finder" />
+        <variable citdl="_normalize_module()" ilk="argument" name="module" />
+        <variable citdl="list" line="2289" name="filename" />
+        <variable ilk="argument" name="extraglobs" />
+        <variable citdl="unittest.TestSuite()" line="2274" name="suite" />
+        <variable ilk="argument" name="globs" />
+        <variable attributes="kwargs" ilk="argument" name="options" />
+      </scope>
+      <variable citdl="int" line="138" name="ELLIPSIS" />
+      <variable citdl="str" line="161" name="ELLIPSIS_MARKER" />
+      <scope classrefs="object" doc="A single doctest example, consisting of source code and expected&#xA;output.  `Example` defines the following attributes:  - source: A single Python statement, always ending with a newline. The constructor adds a newline if needed.  - want: The expected output from running the source code (either from stdout, or a traceback in case of exception).  `want` ends with a newline unless it&apos;s empty, in which case it&apos;s an empty string.  The constructor adds a newline if needed. " ilk="class" line="390" lineend="441" name="Example">
+        <scope ilk="function" line="425" lineend="441" name="__init__" signature="__init__(self, source, want, exc_msg=None, lineno=0, indent=0, options=None)">
+          <variable ilk="argument" name="source" />
+          <variable citdl="int" ilk="argument" name="indent" />
+          <variable citdl="int" ilk="argument" name="lineno" />
+          <variable ilk="argument" name="want" />
+          <variable ilk="argument" name="exc_msg" />
+          <variable citdl="Example" ilk="argument" name="self" />
+          <variable citdl="dict" ilk="argument" name="options" />
+        </scope>
+        <variable attributes="__instancevar__" citdl="int" line="438" name="indent" />
+        <variable attributes="__instancevar__" line="441" name="exc_msg" />
+        <variable attributes="__instancevar__" line="435" name="source" />
+        <variable attributes="__instancevar__" citdl="int" line="437" name="lineno" />
+        <variable attributes="__instancevar__" line="436" name="want" />
+        <variable attributes="__instancevar__" citdl="dict" line="440" name="options" />
+      </scope>
+      <variable citdl="int" line="140" name="IGNORE_EXCEPTION_DETAIL" />
+      <variable citdl="int" line="137" name="NORMALIZE_WHITESPACE" />
+      <variable citdl="dict" line="130" name="OPTIONFLAGS_BY_NAME" />
+      <scope classrefs="object" doc="A class used to check the whether the actual output from a doctest&#xA;example matches the expected output.  `OutputChecker` defines two methods: `check_output`, which compares a given pair of outputs, and returns true if they match; and `output_difference`, which returns a string describing the differences between two outputs." ilk="class" line="1480" lineend="1626" name="OutputChecker">
+        <scope doc="# Should we do a fancy diff?" ilk="function" line="1557" lineend="1578" name="_do_a_fancy_diff" returns="bool" signature="_do_a_fancy_diff(self, want, got, optionflags)">
+          <variable ilk="argument" name="got" />
+          <variable citdl="OutputChecker" ilk="argument" name="self" />
+          <variable ilk="argument" name="optionflags" />
+          <variable ilk="argument" name="want" />
+        </scope>
+        <scope doc="Return True iff the actual output from an example (`got`)&#xA;matches the expected output (`want`)." ilk="function" line="1494" lineend="1554" name="check_output" returns="bool" signature="check_output(self, want, got, optionflags)">
+          <variable citdl="re.sub()" ilk="argument" name="got" />
+          <variable citdl="OutputChecker" ilk="argument" name="self" />
+          <variable ilk="argument" name="optionflags" />
+          <variable citdl="re.sub()" ilk="argument" name="want" />
+        </scope>
+        <scope doc="Return a string describing the differences between the&#xA;expected output for a given example (`example`) and the&#xA;actual output (`got`)." ilk="function" line="1580" lineend="1626" name="output_difference" returns="tuple" signature="output_difference(self, example, got, optionflags)">
+          <variable citdl="difflib.Differ()" line="1608" name="engine" />
+          <variable citdl="str" line="1602" name="kind" />
+          <variable citdl="got.splitlines()" line="1597" name="got_lines" />
+          <variable citdl="want.splitlines()" line="1596" name="want_lines" />
+          <variable citdl="OutputChecker" ilk="argument" name="self" />
+          <variable citdl="example.want" line="1587" name="want" />
+          <variable citdl="list" line="1600" name="diff" />
+          <variable citdl="re.sub()" ilk="argument" name="got" />
+          <variable ilk="argument" name="optionflags" />
+          <variable ilk="argument" name="example" />
+        </scope>
+        <scope doc="Convert string to hex-escaped ASCII string." ilk="function" line="1488" lineend="1492" name="_toAscii" returns="str()" signature="_toAscii(self, s)">
+          <variable citdl="OutputChecker" ilk="argument" name="self" />
+          <variable ilk="argument" name="s" />
+        </scope>
+      </scope>
+      <variable citdl="int" line="154" name="REPORTING_FLAGS" />
+      <variable citdl="int" line="150" name="REPORT_CDIFF" />
+      <variable citdl="int" line="151" name="REPORT_NDIFF" />
+      <variable citdl="int" line="152" name="REPORT_ONLY_FIRST_FAILURE" />
+      <variable citdl="int" line="149" name="REPORT_UDIFF" />
+      <variable citdl="int" line="139" name="SKIP" />
+      <scope classrefs="DocTestCase" doc="&#xA;" ilk="class" line="2216" lineend="2227" name="SkipDocTestCase">
+        <scope ilk="function" line="2223" lineend="2224" name="test_skip" signature="test_skip(self)">
+          <variable citdl="SkipDocTestCase" ilk="argument" name="self" />
+        </scope>
+        <scope ilk="function" line="2220" lineend="2221" name="setUp" signature="setUp(self)">
+          <variable citdl="SkipDocTestCase" ilk="argument" name="self" />
+        </scope>
+        <scope ilk="function" line="2226" lineend="2227" name="shortDescription" returns="str" signature="shortDescription(self)">
+          <variable citdl="SkipDocTestCase" ilk="argument" name="self" />
+        </scope>
+        <scope ilk="function" line="2217" lineend="2218" name="__init__" signature="__init__(self)">
+          <variable citdl="SkipDocTestCase" ilk="argument" name="self" />
+        </scope>
+      </scope>
+      <scope classrefs="_TextIOBase" doc="Text I/O implementation using an in-memory buffer.&#xA;The initial_value argument sets the value of object.  The newline argument is like the one of TextIOWrapper&apos;s constructor." ilk="class" name="StringIO">
+        <scope ilk="function" name="writable" />
+        <scope doc="Truncate size to pos." ilk="function" name="truncate" />
+        <scope ilk="function" name="__setstate__" />
+        <scope doc="Read at most n characters, returned as a string." ilk="function" name="read" />
+        <scope doc="x.__next__() &lt;==&gt; next(x)" ilk="function" name="__next__" signature="x.__next__() &lt;==&gt; next(x)" />
+        <scope ilk="function" name="readable" />
+        <scope doc="Retrieve the entire contents of the object." ilk="function" name="getvalue" />
+        <scope doc="Write string to file." ilk="function" name="write" />
+        <scope ilk="function" name="seekable" />
+        <scope doc="Close the IO object." ilk="function" name="close" />
+        <scope doc="Read until newline or EOF." ilk="function" name="readline" />
+        <scope ilk="function" name="__getstate__" />
+        <scope doc="Change stream position." ilk="function" name="seek" />
+        <scope doc="Tell the current file position." ilk="function" name="tell" />
+        <scope ilk="function" name="__init__" />
+      </scope>
+      <scope classrefs="tuple" doc="TestResults(failed, attempted)&#xA;" ilk="class" line="107" name="TestResults">
+        <scope doc="Create new instance of TestResults(failed, attempted)" ilk="function" name="__new__" signature="__new__(_cls, failed, attempted)" />
+        <scope doc="Return a new TestResults object replacing specified fields&#xA;with new values" ilk="function" name="_replace" signature="_replace(_self, **kwds)" />
+        <scope doc="Make a new TestResults object from a sequence or iterable" ilk="function" name="_make" />
+        <scope doc="Return a new OrderedDict which maps field names to their&#xA;values" ilk="function" name="_asdict" signature="_asdict(self)" />
+        <scope doc="Return a nicely formatted representation string" ilk="function" name="__repr__" signature="__repr__(self)" />
+        <scope doc="Return self as a plain tuple. Used by copy and pickle." ilk="function" name="__getnewargs__" signature="__getnewargs__(self)" />
+      </scope>
+      <scope classrefs="Exception" doc="A DocTest example has encountered an unexpected exception&#xA;The exception instance has variables:  - test: the DocTest object being run  - example: the Example object that failed  - exc_info: the exception info" ilk="class" line="1647" lineend="1664" name="UnexpectedException">
+        <scope ilk="function" line="1663" lineend="1664" name="__str__" returns="str()" signature="__str__(self)">
+          <variable citdl="UnexpectedException" ilk="argument" name="self" />
+        </scope>
+        <scope ilk="function" line="1658" lineend="1661" name="__init__" signature="__init__(self, test, example, exc_info)">
+          <variable ilk="argument" name="test" />
+          <variable ilk="argument" name="exc_info" />
+          <variable citdl="UnexpectedException" ilk="argument" name="self" />
+          <variable ilk="argument" name="example" />
+        </scope>
+        <variable attributes="__instancevar__" line="1659" name="test" />
+        <variable attributes="__instancevar__" line="1661" name="exc_info" />
+        <variable attributes="__instancevar__" line="1660" name="example" />
+      </scope>
+      <variable citdl="list" line="50" name="__all__" />
+      <variable citdl="str" line="48" name="__docformat__" />
+      <import module="__future__" />
+      <variable citdl="dict" line="2591" name="__test__" />
+      <scope doc="Debug a single doctest docstring." ilk="function" line="2533" lineend="2542" name="debug" signature="debug(module, name, pm=False)">
+        <variable citdl="testsource()" line="2541" name="testsrc" />
+        <variable ilk="argument" name="name" />
+        <variable citdl="_normalize_module()" ilk="argument" name="module" />
+        <variable citdl="False" ilk="argument" name="pm" />
+      </scope>
+      <scope doc="Debug a test script. `src` is the script, as a string." ilk="function" line="2513" lineend="2531" name="debug_script" signature="debug_script(src, pm=False, globs=None)">
+        <variable ilk="argument" name="src" />
+        <variable citdl="globs.copy()" ilk="argument" name="globs" />
+        <variable citdl="pdb.Pdb()" line="2527" name="p" />
+        <variable citdl="False" ilk="argument" name="pm" />
+        <variable citdl="open()" line="2536" name="fp" />
+        <variable citdl="tempfile.mktemp()" line="2515" name="srcfilename" />
+        <variable citdl="open()" line="2516" name="f" />
+        <variable citdl="fp.read()" line="2538" name="script" />
+      </scope>
+      <scope doc="Debug a single doctest docstring, in argument `src`&apos;" ilk="function" line="2508" lineend="2511" name="debug_src" signature="debug_src(src, pm=False, globs=None)">
+        <variable ilk="argument" name="src" />
+        <variable citdl="script_from_examples()" line="2510" name="testsrc" />
+        <variable ilk="argument" name="globs" />
+        <variable citdl="False" ilk="argument" name="pm" />
+      </scope>
+      <import module="difflib" />
+      <import module="inspect" />
+      <import module="linecache" />
+      <variable citdl="NoneType" line="1776" name="master" />
+      <scope doc="Returns a new subclass of tuple with named fields." ilk="function" name="namedtuple" signature="namedtuple(typename, field_names, verbose=False, rename=False)" />
+      <import module="os" />
+      <import module="pdb" />
+      <import module="re" />
+      <scope ilk="function" line="131" lineend="133" name="register_optionflag" returns="OPTIONFLAGS_BY_NAME.setdefault()" signature="register_optionflag(name)">
+        <variable ilk="argument" name="name" />
+      </scope>
+      <scope doc="Test examples in the given object&apos;s docstring (`f`), using&#xA;`globs` as globals." ilk="function" line="2005" lineend="2026" name="run_docstring_examples" signature="run_docstring_examples(f, globs, verbose=False, name=&apos;NoName&apos;, compileflags=None, optionflags=0)">
+        <variable citdl="False" ilk="argument" name="verbose" />
+        <variable ilk="argument" name="f" />
+        <variable citdl="DocTestRunner" line="2024" name="runner" />
+        <variable ilk="argument" name="compileflags" />
+        <variable citdl="int" ilk="argument" name="optionflags" />
+        <variable ilk="argument" name="globs" />
+        <variable citdl="DocTestFinder" line="2023" name="finder" />
+        <variable citdl="str" ilk="argument" name="name" />
+      </scope>
+      <scope doc="Extract script from text with examples." ilk="function" line="2410" lineend="2490" name="script_from_examples" returns="str" signature="script_from_examples(s)">
+        <variable citdl="list" line="2468" name="output" />
+        <variable ilk="argument" name="s" />
+        <variable citdl="piece.want" line="2474" name="want" />
+      </scope>
+      <scope doc="Sets the unittest option flags." ilk="function" line="2034" lineend="2067" name="set_unittest_reportflags" returns="int" signature="set_unittest_reportflags(flags)">
+        <variable citdl="int" line="2065" name="old" />
+        <variable ilk="argument" name="flags" />
+        <variable attributes="protected" line="2066" name="_unittest_reportflags" />
+      </scope>
+      <import module="sys" />
+      <scope doc="Test examples in the given file. Return (#failures, #tests)." ilk="function" line="1882" lineend="2003" name="testfile" returns="TestResults()" signature="testfile(filename, module_relative=True, name=None, package=None, globs=None, verbose=None, report=True, optionflags=0, extraglobs=None, raise_on_error=False, parser=&lt;doctest.DocTestParser object at 0x042E1F50&gt;, encoding=None)">
+        <variable citdl="True" ilk="argument" name="module_relative" />
+        <variable ilk="argument" name="verbose" />
+        <variable ilk="argument" name="encoding" />
+        <variable citdl="DebugRunner" line="1987" name="runner" />
+        <variable line="1969" name="text" />
+        <variable citdl="DocTestParser" ilk="argument" name="parser" />
+        <variable ilk="argument" name="extraglobs" />
+        <variable citdl="True" ilk="argument" name="report" />
+        <variable citdl="int" ilk="argument" name="optionflags" />
+        <variable citdl="dict" ilk="argument" name="globs" />
+        <variable citdl="os.path.basename()" ilk="argument" name="name" />
+        <variable ilk="argument" name="package" />
+        <variable ilk="argument" name="filename" />
+        <variable citdl="DebugRunner" line="1999" name="master" />
+        <variable citdl="parser.get_doctest()" line="1992" name="test" />
+        <variable citdl="False" ilk="argument" name="raise_on_error" />
+      </scope>
+      <scope doc="m=None, name=None, globs=None, verbose=None, report=True,&#xA;optionflags=0, extraglobs=None, raise_on_error=False,&#xA;exclude_empty=False" ilk="function" line="1778" lineend="1880" name="testmod" returns="TestResults()" signature="testmod(m=None, name=None, globs=None, verbose=None, report=True, optionflags=0, extraglobs=None, raise_on_error=False, exclude_empty=False)">
+        <variable ilk="argument" name="verbose" />
+        <variable citdl="DebugRunner" line="1865" name="runner" />
+        <variable ilk="argument" name="extraglobs" />
+        <variable citdl="sys.modules.get()" ilk="argument" name="m" />
+        <variable citdl="DebugRunner" line="1876" name="master" />
+        <variable citdl="False" ilk="argument" name="raise_on_error" />
+        <variable citdl="True" ilk="argument" name="report" />
+        <variable citdl="False" ilk="argument" name="exclude_empty" />
+        <variable citdl="int" ilk="argument" name="optionflags" />
+        <variable ilk="argument" name="globs" />
+        <variable citdl="DocTestFinder" line="1862" name="finder" />
+        <variable citdl="m.__name__" ilk="argument" name="name" />
+      </scope>
+      <scope doc="Extract the test sources from a doctest docstring as a&#xA;script." ilk="function" line="2492" lineend="2506" name="testsource" returns="script_from_examples()" signature="testsource(module, name)">
+        <variable citdl="list" line="2501" name="test" />
+        <variable citdl="script_from_examples()" line="2505" name="testsrc" />
+        <variable line="2500" name="tests" />
+        <variable ilk="argument" name="name" />
+        <variable citdl="_normalize_module()" ilk="argument" name="module" />
+      </scope>
+      <import module="traceback" />
+      <import module="unittest" />
+      <scope attributes="protected __hidden__" ilk="function" line="354" lineend="376" name="_module_relative_path" returns="os.path.join()" signature="_module_relative_path(module, path)">
+        <variable ilk="argument" name="module" />
+        <variable ilk="argument" name="path" />
+        <variable citdl="os.curdir" line="363" name="basedir" />
+      </scope>
+      <scope attributes="protected __hidden__" doc="Return a commented form of the given line" ilk="function" line="309" lineend="315" name="_comment_line" returns="str" signature="_comment_line(line)">
+        <variable citdl="line.rstrip()" ilk="argument" name="line" />
+      </scope>
+      <variable attributes="protected __hidden__" citdl="int" line="2032" name="_unittest_reportflags" />
+      <scope attributes="protected __hidden__" doc="A pointless class, for sanity-checking of docstring testing.&#xA;&#xA;Methods:&#xA;    square()&#xA;    get()&#xA;&#xA;&gt;&gt;&gt; _TestClass(13).get() + _TestClass(-12).get()&#xA;1&#xA;&gt;&gt;&gt; hex(_TestClass(13).square().get())&#xA;&apos;0xa9&apos;" ilk="class" line="2547" lineend="2589" name="_TestClass">
+        <scope attributes="__ctor__" doc="val -&gt; _TestClass object with associated value val.&#xA;&#xA;&gt;&gt;&gt; t = _TestClass(123)&#xA;&gt;&gt;&gt; print(t.get())&#xA;123" ilk="function" line="2561" lineend="2569" name="__init__" signature="_TestClass(val)">
+          <variable citdl="_TestClass" ilk="argument" name="self" />
+          <variable ilk="argument" name="val" />
+        </scope>
+        <variable attributes="__instancevar__" citdl="int" line="2569" name="val" />
+        <scope doc="&gt;&gt;&gt; _TestClass(13).square().get()&#xA;169" ilk="function" line="2571" lineend="2579" name="square" returns="_TestClass" signature="square() -&gt; square TestClass&apos;s associated value">
+          <variable citdl="_TestClass" ilk="argument" name="self" />
+        </scope>
+        <scope doc="&gt;&gt;&gt; x = _TestClass(-42)&#xA;&gt;&gt;&gt; print(x.get())&#xA;-42" ilk="function" line="2581" lineend="2589" name="get" returns="int" signature="get() -&gt; return TestClass&apos;s associated value.">
+          <variable citdl="_TestClass" ilk="argument" name="self" />
+        </scope>
+      </scope>
+      <scope attributes="protected __hidden__" ilk="function" line="2642" lineend="2664" name="_test" returns="int" signature="_test()">
+        <variable citdl="list" line="2643" name="testfiles" />
+        <variable citdl="os.path.basename()" line="2645" name="name" />
+        <variable attributes="protected" line="2647" name="_" />
+        <variable line="2655" name="filename" />
+        <variable line="2655" name="dirname" />
+        <variable citdl="__import__()" line="2657" name="m" />
+        <variable line="2659" name="failures" />
+      </scope>
+      <scope attributes="protected __hidden__" classrefs="StringIO" ilk="class" line="245" lineend="257" name="_SpoofOut">
+        <scope ilk="function" line="246" lineend="253" name="getvalue" returns="StringIO.getvalue()" signature="getvalue()">
+          <variable citdl="_SpoofOut" ilk="argument" name="self" />
+          <variable citdl="StringIO.getvalue()" line="247" name="result" />
+        </scope>
+        <scope ilk="function" line="255" lineend="257" name="truncate" signature="truncate(size=None)">
+          <variable citdl="_SpoofOut" ilk="argument" name="self" />
+          <variable ilk="argument" name="size" />
+        </scope>
+      </scope>
+      <scope attributes="protected __hidden__" doc="Return the module specified by `module`.  In particular:&#xA;  - If `module` is a module, then return module.&#xA;  - If `module` is a string, then import and return the&#xA;    module with that name.&#xA;  - If `module` is None, then return the calling module.&#xA;    The calling module is assumed to be the module of&#xA;    the stack frame at the given depth in the call stack." ilk="function" line="192" lineend="209" name="_normalize_module" returns="__import__()" signature="_normalize_module(module, depth=2)">
+        <variable ilk="argument" name="module" />
+        <variable citdl="int" ilk="argument" name="depth" />
+      </scope>
+      <scope attributes="protected __hidden__" doc="Return a string containing a traceback message for the given&#xA;exc_info tuple (as returned by sys.exc_info())." ilk="function" line="233" lineend="242" name="_exception_traceback" returns="excout.getvalue()" signature="_exception_traceback(exc_info)">
+        <variable ilk="argument" name="exc_info" />
+        <variable citdl="StringIO()" line="239" name="excout" />
+      </scope>
+      <scope attributes="protected __hidden__" doc="Add the given number of space characters to the beginning of&#xA;every non-blank line in `s`, and return the result." ilk="function" line="225" lineend="231" name="_indent" returns="re.sub()" signature="_indent(s, indent=4)">
+        <variable ilk="argument" name="s" />
+        <variable citdl="int" ilk="argument" name="indent" />
+      </scope>
+      <scope attributes="protected __hidden__" doc="Essentially the only subtle case:&#xA;&gt;&gt;&gt; _ellipsis_match(&apos;aa...aa&apos;, &apos;aaa&apos;)&#xA;False" ilk="function" line="260" lineend="307" name="_ellipsis_match" returns="bool" signature="_ellipsis_match(want, got)">
+        <variable ilk="argument" name="want" />
+        <variable ilk="argument" name="got" />
+        <variable citdl="want.split()" line="270" name="ws" />
+        <variable citdl="int" line="274" name="startpos" />
+        <variable citdl="len()" line="274" name="endpos" />
+        <variable line="275" name="w" />
+      </scope>
+      <scope attributes="protected __hidden__" ilk="function" line="211" lineend="223" name="_load_testfile" returns="tuple" signature="_load_testfile(filename, package, module_relative, encoding)">
+        <variable citdl="_module_relative_path()" ilk="argument" name="filename" />
+        <variable citdl="_normalize_module()" ilk="argument" name="package" />
+        <variable ilk="argument" name="module_relative" />
+        <variable ilk="argument" name="encoding" />
+        <variable citdl="file_contents.decode()" line="217" name="file_contents" />
+      </scope>
+      <scope attributes="protected __hidden__" doc="Return the compiler-flags associated with the future features that&#xA;have been imported into the given namespace (globs)." ilk="function" line="180" lineend="190" name="_extract_future_flags" returns="int" signature="_extract_future_flags(globs)">
+        <variable ilk="argument" name="globs" />
+        <variable citdl="int" line="185" name="flags" />
+        <variable citdl="globs.get()" line="187" name="feature" />
+      </scope>
+      <scope attributes="protected __hidden__" classrefs="pdb.Pdb" doc="A specialized version of the python debugger that redirects stdout&#xA;to a given stream when interacting with the user.  Stdout is *not*&#xA;redirected when traced code is executed." ilk="class" line="317" lineend="351" name="_OutputRedirectingPdb">
+        <scope attributes="__ctor__" ilk="function" line="323" lineend="329" name="__init__" signature="_OutputRedirectingPdb(out)">
+          <variable citdl="_OutputRedirectingPdb" ilk="argument" name="self" />
+          <variable ilk="argument" name="out" />
+        </scope>
+        <variable attributes="private __instancevar__" line="324" name="__out" />
+        <variable attributes="private __instancevar__" citdl="False" line="325" name="__debugger_used" />
+        <variable attributes="__instancevar__" citdl="int" line="329" name="use_rawinput" />
+        <scope ilk="function" line="331" lineend="335" name="set_trace" signature="set_trace(frame=None)">
+          <variable citdl="_OutputRedirectingPdb" ilk="argument" name="self" />
+          <variable ilk="argument" name="frame" />
+        </scope>
+        <scope ilk="function" line="337" lineend="341" name="set_continue" signature="set_continue()">
+          <variable citdl="_OutputRedirectingPdb" ilk="argument" name="self" />
+        </scope>
+        <scope ilk="function" line="343" lineend="351" name="trace_dispatch" returns="pdb.Pdb.trace_dispatch()" signature="trace_dispatch(*args)">
+          <variable citdl="_OutputRedirectingPdb" ilk="argument" name="self" />
+          <variable attributes="varargs" ilk="argument" name="args" />
+          <variable citdl="sys.stdout" line="345" name="save_stdout" />
+        </scope>
+      </scope>
+    </scope>
+    

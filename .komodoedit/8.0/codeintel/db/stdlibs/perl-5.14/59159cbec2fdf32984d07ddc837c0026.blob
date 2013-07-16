@@ -1,0 +1,101 @@
+<scope ilk="blob" lang="Perl" name="B::Debug">
+      <scope ilk="class" line="1" lineend="366" name="B::Debug">
+        <import line="7" module="B" symbol="peekop" />
+        <import line="7" module="B" symbol="class" />
+        <import line="7" module="B" symbol="walkoptree" />
+        <import line="7" module="B" symbol="walkoptree_exec" />
+        <import line="8" module="B" symbol="main_start" />
+        <import line="8" module="B" symbol="main_root" />
+        <import line="8" module="B" symbol="cstring" />
+        <import line="8" module="B" symbol="sv_undef" />
+        <import line="8" module="B" symbol="SVf_NOK" />
+        <import line="8" module="B" symbol="SVf_IOK" />
+        <import line="9" module="Config" symbol="*" />
+        <import line="11" module="B" />
+        <import line="13" module="B::Asmdata" />
+        <import line="30" module="B::Flags" />
+        <variable line="3" name="$VERSION" />
+        <scope ilk="function" line="35" lineend="40" name="_printop" signature="_printop($op)">
+          <variable ilk="argument" name="$op" />
+        </scope>
+        <scope ilk="function" line="42" lineend="72" name="B::OP::debug" signature="B::OP::debug($op)">
+          <variable ilk="argument" name="$op" />
+        </scope>
+        <scope ilk="function" line="74" lineend="78" name="B::UNOP::debug" signature="B::UNOP::debug($op)">
+          <variable ilk="argument" name="$op" />
+        </scope>
+        <scope ilk="function" line="80" lineend="84" name="B::BINOP::debug" signature="B::BINOP::debug($op)">
+          <variable ilk="argument" name="$op" />
+        </scope>
+        <scope ilk="function" line="86" lineend="94" name="B::LOOP::debug" signature="B::LOOP::debug($op)">
+          <variable ilk="argument" name="$op" />
+        </scope>
+        <scope ilk="function" line="96" lineend="100" name="B::LOGOP::debug" signature="B::LOGOP::debug($op)">
+          <variable ilk="argument" name="$op" />
+        </scope>
+        <scope ilk="function" line="102" lineend="106" name="B::LISTOP::debug" signature="B::LISTOP::debug($op)">
+          <variable ilk="argument" name="$op" />
+        </scope>
+        <scope ilk="function" line="108" lineend="126" name="B::PMOP::debug" signature="B::PMOP::debug($op)">
+          <variable ilk="argument" name="$op" />
+        </scope>
+        <scope ilk="function" line="128" lineend="145" name="B::COP::debug" signature="B::COP::debug($op)">
+          <variable ilk="argument" name="$op" />
+        </scope>
+        <scope ilk="function" line="147" lineend="152" name="B::SVOP::debug" signature="B::SVOP::debug($op)">
+          <variable ilk="argument" name="$op" />
+        </scope>
+        <scope ilk="function" line="154" lineend="158" name="B::PVOP::debug" signature="B::PVOP::debug($op)">
+          <variable ilk="argument" name="$op" />
+        </scope>
+        <scope ilk="function" line="160" lineend="164" name="B::PADOP::debug" signature="B::PADOP::debug($op)">
+          <variable ilk="argument" name="$op" />
+        </scope>
+        <scope ilk="function" line="166" lineend="173" name="B::NULL::debug" signature="B::NULL::debug($sv)">
+          <variable ilk="argument" name="$sv" />
+        </scope>
+        <scope ilk="function" line="175" lineend="191" name="B::SV::debug" signature="B::SV::debug($sv)">
+          <variable ilk="argument" name="$sv" />
+        </scope>
+        <scope ilk="function" line="193" lineend="200" name="B::RV::debug" signature="B::RV::debug($rv)">
+          <variable ilk="argument" name="$rv" />
+        </scope>
+        <scope ilk="function" line="202" lineend="210" name="B::PV::debug" signature="B::PV::debug($sv)">
+          <variable ilk="argument" name="$sv" />
+        </scope>
+        <scope ilk="function" line="212" lineend="216" name="B::IV::debug" signature="B::IV::debug($sv)">
+          <variable ilk="argument" name="$sv" />
+        </scope>
+        <scope ilk="function" line="218" lineend="222" name="B::NV::debug" signature="B::NV::debug($sv)">
+          <variable ilk="argument" name="$sv" />
+        </scope>
+        <scope ilk="function" line="224" lineend="228" name="B::PVIV::debug" signature="B::PVIV::debug($sv)">
+          <variable ilk="argument" name="$sv" />
+        </scope>
+        <scope ilk="function" line="230" lineend="234" name="B::PVNV::debug" signature="B::PVNV::debug($sv)">
+          <variable ilk="argument" name="$sv" />
+        </scope>
+        <scope ilk="function" line="236" lineend="242" name="B::PVLV::debug" signature="B::PVLV::debug($sv)">
+          <variable ilk="argument" name="$sv" />
+        </scope>
+        <scope ilk="function" line="244" lineend="250" name="B::BM::debug" signature="B::BM::debug($sv)">
+          <variable ilk="argument" name="$sv" />
+        </scope>
+        <scope ilk="function" line="252" lineend="283" name="B::CV::debug" signature="B::CV::debug($sv)">
+          <variable ilk="argument" name="$sv" />
+        </scope>
+        <scope ilk="function" line="285" lineend="312" name="B::AV::debug" signature="B::AV::debug($av)">
+          <variable ilk="argument" name="$av" />
+        </scope>
+        <scope ilk="function" line="314" lineend="348" name="B::GV::debug" signature="B::GV::debug($gv)">
+          <variable ilk="argument" name="$gv" />
+        </scope>
+        <scope ilk="function" line="350" lineend="354" name="B::SPECIAL::debug" signature="B::SPECIAL::debug($sv)">
+          <variable ilk="argument" name="$sv" />
+        </scope>
+        <scope ilk="function" line="356" lineend="364" name="compile" signature="compile($order)">
+          <variable ilk="argument" name="$order" />
+        </scope>
+      </scope>
+    </scope>
+    

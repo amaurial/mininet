@@ -1,0 +1,78 @@
+<scope ilk="blob" lang="Perl" name="B::Xref">
+      <scope ilk="class" line="1" lineend="431" name="B::Xref">
+        <import line="94" module="Config" symbol="*" />
+        <import line="95" module="B" symbol="peekop" />
+        <import line="95" module="B" symbol="class" />
+        <import line="95" module="B" symbol="comppadlist" />
+        <import line="95" module="B" symbol="main_start" />
+        <import line="95" module="B" symbol="svref_2object" />
+        <import line="95" module="B" symbol="walksymtable" />
+        <import line="96" module="B" symbol="OPpLVAL_INTRO" />
+        <import line="96" module="B" symbol="SVf_POK" />
+        <import line="96" module="B" symbol="OPpOUR_INTRO" />
+        <import line="96" module="B" symbol="cstring" />
+        <variable line="3" name="$VERSION" />
+        <scope ilk="function" line="99" lineend="99" name="UNKNOWN" signature="UNKNOWN()" />
+        <scope ilk="function" line="120" lineend="139" name="process" signature="process($var, $event)">
+          <variable ilk="argument" name="$var" />
+          <variable ilk="argument" name="$event" />
+        </scope>
+        <scope ilk="function" line="141" lineend="166" name="load_pad" signature="load_pad($padlist)">
+          <variable ilk="argument" name="$padlist" />
+        </scope>
+        <scope ilk="function" line="168" lineend="196" name="xref" signature="xref($start)">
+          <variable ilk="argument" name="$start" />
+        </scope>
+        <scope ilk="function" line="198" lineend="205" name="xref_cv" signature="xref_cv($cv)">
+          <variable ilk="argument" name="$cv" />
+        </scope>
+        <scope ilk="function" line="207" lineend="210" name="xref_object" signature="xref_object($cvref)">
+          <variable ilk="argument" name="$cvref" />
+        </scope>
+        <scope ilk="function" line="212" lineend="219" name="xref_main" signature="xref_main()" />
+        <scope ilk="function" line="221" lineend="226" name="pp_nextstate" signature="pp_nextstate($op)">
+          <variable ilk="argument" name="$op" />
+        </scope>
+        <scope ilk="function" line="228" lineend="232" name="pp_padsv" signature="pp_padsv($op)">
+          <variable ilk="argument" name="$op" />
+        </scope>
+        <scope ilk="function" line="234" lineend="234" name="pp_padav" signature="pp_padav()" />
+        <scope ilk="function" line="235" lineend="235" name="pp_padhv" signature="pp_padhv()" />
+        <scope ilk="function" line="237" lineend="241" name="deref" signature="deref($op, $var, $as)">
+          <variable ilk="argument" name="$op" />
+          <variable ilk="argument" name="$var" />
+          <variable ilk="argument" name="$as" />
+        </scope>
+        <scope ilk="function" line="243" lineend="243" name="pp_rv2cv" signature="pp_rv2cv()" />
+        <scope ilk="function" line="244" lineend="244" name="pp_rv2hv" signature="pp_rv2hv()" />
+        <scope ilk="function" line="245" lineend="245" name="pp_rv2sv" signature="pp_rv2sv()" />
+        <scope ilk="function" line="246" lineend="246" name="pp_rv2av" signature="pp_rv2av()" />
+        <scope ilk="function" line="247" lineend="247" name="pp_rv2gv" signature="pp_rv2gv()" />
+        <scope ilk="function" line="249" lineend="263" name="pp_gvsv" signature="pp_gvsv($op)">
+          <variable ilk="argument" name="$op" />
+        </scope>
+        <scope ilk="function" line="265" lineend="278" name="pp_gv" signature="pp_gv($op)">
+          <variable ilk="argument" name="$op" />
+        </scope>
+        <scope ilk="function" line="280" lineend="293" name="pp_const" signature="pp_const($op)">
+          <variable ilk="argument" name="$op" />
+        </scope>
+        <scope ilk="function" line="295" lineend="298" name="pp_method" signature="pp_method($op)">
+          <variable ilk="argument" name="$op" />
+        </scope>
+        <scope ilk="function" line="300" lineend="308" name="pp_entersub" signature="pp_entersub($op)">
+          <variable ilk="argument" name="$op" />
+        </scope>
+        <scope ilk="function" line="314" lineend="331" name="B::GV::xref" signature="B::GV::xref($gv)">
+          <variable ilk="argument" name="$gv" />
+        </scope>
+        <scope ilk="function" line="333" lineend="344" name="xref_definitions" signature="xref_definitions()">
+          </scope>
+        <scope ilk="function" line="346" lineend="374" name="output" signature="output()">
+          </scope>
+        <scope ilk="function" line="376" lineend="429" name="compile" signature="compile(@options)">
+          <variable ilk="argument" name="@options" />
+        </scope>
+      </scope>
+    </scope>
+    

@@ -1,0 +1,142 @@
+<scope doc="distutils.command.bdist_rpm&#xA;Implements the Distutils &apos;bdist_rpm&apos; command (create RPM source and binary distributions)." ilk="blob" lang="Python" name="distutils.command.bdist_rpm">
+      <scope doc="Abstract base class for defining command classes, the &quot;worker bees&quot;&#xA;of the Distutils.  A useful analogy for command classes is to think of them as subroutines with local variables called &quot;options&quot;.  The options are &quot;declared&quot; in &apos;initialize_options()&apos; and &quot;defined&quot; (given their final values, aka &quot;finalized&quot;) in &apos;finalize_options()&apos;, both of which must be defined by every command class.  The distinction between the two is necessary because option values might come from the outside world (command line, config file, ...), and any options dependent on other options must be computed *after* these outside influences have been processed -- hence &apos;finalize_options()&apos;.  The &quot;body&quot; of the subroutine, where it does all its work based on the values of its" ilk="class" name="Command">
+        <scope ilk="function" name="_ensure_tested_string" />
+        <scope doc="Spawn an external command respecting dry-run flag." ilk="function" name="spawn" />
+        <scope ilk="function" name="ensure_finalized" />
+        <scope doc="Create and initialize a new Command object." ilk="function" name="__init__" />
+        <scope doc="Set default values for all the options that this command&#xA;supports." ilk="function" name="initialize_options" />
+        <scope ilk="function" name="dump_options" />
+        <scope doc="# XXX A more explicit way to customize dry_run would be&#xA;better." ilk="function" name="__getattr__" />
+        <scope doc="Determine the sub-commands that are relevant in the current&#xA;distribution (ie., that need to be run)." ilk="function" name="get_sub_commands" />
+        <scope doc="Copy an entire directory tree respecting verbose, dry-run,&#xA;and force flags." ilk="function" name="copy_tree" />
+        <scope doc="If the current verbosity level is of greater than or equal&#xA;to &apos;level&apos; print &apos;msg&apos; to stdout." ilk="function" name="announce" />
+        <scope doc="Run some other command: uses the &apos;run_command()&apos; method of&#xA;Distribution, which creates and finalizes the command object&#xA;if necessary and then invokes its &apos;run()&apos; method." ilk="function" name="run_command" />
+        <scope doc="Set the values of any &quot;undefined&quot; options from corresponding&#xA;option values in some other command object." ilk="function" name="set_undefined_options" />
+        <scope doc="A command&apos;s raison d&apos;etre: carry out the action it exists to&#xA;perform, controlled by the options initialized in&#xA;&apos;initialize_options()&apos;, customized by other commands, the&#xA;setup script, the command-line, and config files, and&#xA;finalized in" ilk="function" name="run" />
+        <scope doc="# XXX rename to &apos;get_reinitialized_command()&apos;? (should do&#xA;the # same in dist.py, if so)" ilk="function" name="reinitialize_command" />
+        <scope doc="Copy a file respecting verbose, dry-run and force flags." ilk="function" name="copy_file" />
+        <scope ilk="function" name="warn" />
+        <scope ilk="function" name="ensure_dirname" />
+        <scope doc="Move a file respecting dry-run flag." ilk="function" name="move_file" />
+        <scope doc="Ensure that &apos;option&apos; is a list of strings." ilk="function" name="ensure_string_list" />
+        <scope ilk="function" name="_ensure_stringlike" />
+        <scope doc="Wrapper around Distribution&apos;s &apos;get_command_obj()&apos; method:&#xA;find (create if necessary and &apos;create&apos; is true) the command&#xA;object for &apos;command&apos;, call its &apos;ensure_finalized()&apos; method,&#xA;and return the finalized command object." ilk="function" name="get_finalized_command" />
+        <scope ilk="function" name="execute" />
+        <scope doc="Ensure that &apos;option&apos; is a string; if not defined, set it to&#xA;&apos;default&apos;." ilk="function" name="ensure_string" />
+        <scope ilk="function" name="mkpath" />
+        <scope ilk="function" name="make_archive" />
+        <scope ilk="function" name="get_command_name" />
+        <scope doc="Special case of &apos;execute()&apos; for operations that process one&#xA;or more input files and generate one output file." ilk="function" name="make_file" />
+        <scope doc="Set final values for all the options that this command&#xA;supports." ilk="function" name="finalize_options" />
+        <scope doc="Ensure that &apos;option&apos; is the name of an existing file." ilk="function" name="ensure_filename" />
+        <scope doc="Print &apos;msg&apos; to stdout if the global DEBUG (taken from the&#xA;DISTUTILS_DEBUG environment variable) flag is true." ilk="function" name="debug_print" />
+      </scope>
+      <variable citdl="NoneType" name="DEBUG" />
+      <scope classrefs="DistutilsError" doc="Any problems executing an external program (such as the C&#xA;compiler, when compiling C files)." ilk="class" name="DistutilsExecError" />
+      <scope classrefs="DistutilsError" doc="Any problems in the filesystem: expected file not found, etc.&#xA;Typically this is for problems that we detect before IOError or OSError could be raised." ilk="class" name="DistutilsFileError" />
+      <scope classrefs="DistutilsError" doc="Syntactic/semantic errors in command options, such as use of&#xA;mutually conflicting options, or inconsistent options, badly-spelled values, etc.  No distinction is made between option values originating in the setup script, the command line, config files, or what-have-you -- but if we *know* something originated in the setup script, we&apos;ll raise DistutilsSetupError instead." ilk="class" name="DistutilsOptionError" />
+      <scope classrefs="DistutilsError" doc="We don&apos;t know how to do something on the current platform (but&#xA;we do know how to do it on some platform) -- eg. trying to compile C files on a platform not supported by a CCompiler subclass." ilk="class" name="DistutilsPlatformError" />
+      <variable citdl="str" line="6" name="__revision__" />
+      <scope classrefs="Command" doc="&#xA;" ilk="class" line="19" lineend="571" name="bdist_rpm">
+        <scope ilk="function" line="269" lineend="391" name="run" signature="run()">
+          <variable citdl="out.close()" line="372" name="status" />
+          <variable citdl="list" line="359" name="binary_rpms" />
+          <variable citdl="list" line="326" name="rpm_cmd" />
+          <variable citdl="str" line="354" name="q_cmd" />
+          <variable citdl="bdist_rpm" ilk="argument" name="self" />
+          <variable line="360" name="source_rpm" />
+          <variable citdl="str" line="351" name="nvr_string" />
+          <variable citdl="string.split()" line="365" name="l" />
+          <variable citdl="str" line="353" name="non_src_rpm" />
+          <variable line="313" name="source_dir" />
+          <variable citdl="os.path.join()" line="291" name="spec_path" />
+          <variable line="312" name="source" />
+          <variable citdl="os.path.join()" line="389" name="rpm" />
+          <variable citdl="dict" line="283" name="rpm_dir" />
+          <variable line="280" name="spec_dir" />
+          <variable citdl="out.readline()" line="362" name="line" />
+          <variable citdl="str" line="352" name="src_rpm" />
+          <variable citdl="list" line="303" name="saved_dist_files" />
+          <variable citdl="os.path.join()" line="383" name="srpm" />
+          <variable citdl="self.reinitialize_command()" line="304" name="sdist" />
+          <variable citdl="os.popen()" line="357" name="out" />
+        </scope>
+        <scope ilk="function" line="140" lineend="183" name="initialize_options" signature="initialize_options()">
+          <variable citdl="bdist_rpm" ilk="argument" name="self" />
+        </scope>
+        <scope doc="Generate the text of an RPM spec file and return it as a&#xA;list of strings (one per line)." ilk="function" line="397" lineend="548" name="_make_spec_file" returns="list" signature="_make_spec_file()">
+          <variable citdl="str" line="493" name="def_build" />
+          <variable citdl="getattr()" line="451" name="val" />
+          <variable citdl="str" line="503" name="install_cmd" />
+          <variable citdl="str" line="492" name="def_setup_call" />
+          <variable citdl="bdist_rpm" ilk="argument" name="self" />
+          <variable citdl="list" line="402" name="spec_file" />
+          <variable citdl="list" line="506" name="script_options" />
+        </scope>
+        <scope ilk="function" line="394" lineend="395" name="_dist_path" returns="os.path.join()" signature="_dist_path(path)">
+          <variable ilk="argument" name="path" />
+          <variable citdl="bdist_rpm" ilk="argument" name="self" />
+        </scope>
+        <scope doc="Format the changelog correctly and convert it to a list of&#xA;strings" ilk="function" line="552" lineend="571" name="_format_changelog" returns="list" signature="_format_changelog(changelog)">
+          <variable citdl="list" line="557" name="new_changelog" />
+          <variable citdl="bdist_rpm" ilk="argument" name="self" />
+          <variable citdl="string.strip()" line="559" name="line" />
+          <variable ilk="argument" name="changelog" />
+        </scope>
+        <scope ilk="function" line="188" lineend="218" name="finalize_options" signature="finalize_options()">
+          <variable citdl="bdist_rpm" ilk="argument" name="self" />
+        </scope>
+        <scope ilk="function" line="222" lineend="265" name="finalize_package_data" signature="finalize_package_data()">
+          <variable citdl="bdist_rpm" ilk="argument" name="self" />
+        </scope>
+        <variable attributes="__instancevar__" line="166" name="pre_install" />
+        <variable attributes="__instancevar__" line="147" name="binary_only" />
+        <variable attributes="__instancevar__" line="157" name="doc_files" />
+        <variable attributes="__instancevar__" line="182" name="force_arch" />
+        <variable attributes="__instancevar__" line="145" name="fix_python" />
+        <variable attributes="__instancevar__" citdl="int" line="177" name="keep_temp" />
+        <variable attributes="__instancevar__" line="154" name="serial" />
+        <variable attributes="__instancevar__" citdl="int" line="180" name="no_autoreq" />
+        <variable citdl="list" line="23" name="user_options" />
+        <variable attributes="__instancevar__" line="152" name="group" />
+        <variable attributes="__instancevar__" line="174" name="build_requires" />
+        <variable attributes="__instancevar__" line="168" name="pre_uninstall" />
+        <variable attributes="__instancevar__" line="175" name="obsoletes" />
+        <variable attributes="__instancevar__" line="171" name="provides" />
+        <variable attributes="__instancevar__" line="162" name="build_script" />
+        <variable citdl="dict" line="135" name="negative_opt" />
+        <variable attributes="__instancevar__" line="141" name="bdist_base" />
+        <variable attributes="__instancevar__" line="170" name="prep" />
+        <variable attributes="__instancevar__" line="155" name="vendor" />
+        <variable citdl="str" line="21" name="description" />
+        <variable attributes="__instancevar__" citdl="str" line="144" name="python" />
+        <variable attributes="__instancevar__" line="165" name="verify_script" />
+        <variable attributes="__instancevar__" line="149" name="use_bzip2" />
+        <variable attributes="__instancevar__" line="151" name="distribution_name" />
+        <variable attributes="__instancevar__" citdl="os.path.join()" line="142" name="rpm_base" />
+        <variable citdl="list" line="132" name="boolean_options" />
+        <variable attributes="__instancevar__" line="173" name="conflicts" />
+        <variable attributes="__instancevar__" line="156" name="packager" />
+        <variable attributes="__instancevar__" line="163" name="install_script" />
+        <variable attributes="__instancevar__" line="159" name="icon" />
+        <variable attributes="__instancevar__" citdl="int" line="179" name="rpm3_mode" />
+        <variable attributes="__instancevar__" line="161" name="prep_script" />
+        <variable attributes="__instancevar__" citdl="self._format_changelog()" line="158" name="changelog" />
+        <variable attributes="__instancevar__" line="172" name="requires" />
+        <variable attributes="__instancevar__" line="146" name="spec_only" />
+        <variable attributes="__instancevar__" citdl="int" line="183" name="quiet" />
+        <variable attributes="__instancevar__" line="164" name="clean_script" />
+        <variable attributes="__instancevar__" line="148" name="source_only" />
+        <variable attributes="__instancevar__" citdl="int" line="178" name="use_rpm_opt_flags" />
+        <variable attributes="__instancevar__" line="153" name="release" />
+        <variable attributes="__instancevar__" line="143" name="dist_dir" />
+        <variable attributes="__instancevar__" line="167" name="post_install" />
+        <variable attributes="__instancevar__" line="169" name="post_uninstall" />
+      </scope>
+      <import module="log" />
+      <import module="os" />
+      <import module="string" />
+      <import module="sys" />
+      <scope doc="Create a file with the specified name and write &apos;contents&apos;&#xA;(a sequence of strings without line terminators) to it." ilk="function" name="write_file" signature="write_file(filename, contents)" />
+    </scope>
+    

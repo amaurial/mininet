@@ -1,0 +1,42 @@
+<scope doc="Module for parsing and testing package version predicate strings.&#xA;" ilk="blob" lang="Python" name="distutils.versionpredicate">
+      <scope classrefs="object" doc="Parse and test package version predicates.&#xA;&gt;&gt;&gt; v = VersionPredicate(&apos;pyepat.abc (&gt;1.0, &lt;3333.3a1, !=1555.1b3)&apos;)  The `name` attribute provides the full dotted name that is given::  &gt;&gt;&gt; v.name &apos;pyepat.abc&apos;  The str() of a `VersionPredicate` provides a normalized human-readable version of the expression:: " ilk="class" line="31" lineend="138" name="VersionPredicate">
+        <scope doc="True if version is compatible with all the predicates in&#xA;self." ilk="function" line="130" lineend="138" name="satisfied_by" returns="bool" signature="satisfied_by(self, version)">
+          <variable citdl="VersionPredicate" ilk="argument" name="self" />
+          <variable ilk="argument" name="version" />
+        </scope>
+        <scope ilk="function" line="123" lineend="128" name="__str__" returns="str" signature="__str__(self)">
+          <variable citdl="VersionPredicate" ilk="argument" name="self" />
+          <variable citdl="list" line="125" name="seq" />
+        </scope>
+        <scope doc="Parse a version predicate string." ilk="function" line="96" lineend="121" name="__init__" signature="__init__(self, versionPredicateStr)">
+          <variable citdl="paren.strip()" line="109" name="paren" />
+          <variable citdl="VersionPredicate" ilk="argument" name="self" />
+          <variable citdl="versionPredicateStr.strip()" ilk="argument" name="versionPredicateStr" />
+          <variable line="115" name="str" />
+          <variable citdl="re_validPackage.match()" line="106" name="match" />
+        </scope>
+        <variable attributes="__instancevar__" citdl="list" line="116" name="pred" />
+        <variable attributes="__instancevar__" line="109" name="name" />
+      </scope>
+      <variable citdl="dict" line="28" name="compmap" />
+      <import module="distutils" />
+      <import module="operator" />
+      <import module="re" />
+      <variable citdl="SRE_Pattern" line="12" name="re_paren" />
+      <variable citdl="SRE_Pattern" line="13" name="re_splitComparison" />
+      <variable citdl="SRE_Pattern" line="8" name="re_validPackage" />
+      <scope doc="Parse a single version comparison." ilk="function" line="17" lineend="26" name="splitUp" returns="tuple" signature="splitUp(pred)">
+        <variable ilk="argument" name="pred" />
+        <variable line="25" name="comp" />
+        <variable line="25" name="verStr" />
+        <variable citdl="re_splitComparison.match()" line="22" name="res" />
+      </scope>
+      <scope doc="Return the name and optional version number of a provision." ilk="function" line="143" lineend="166" name="split_provision" returns="tuple" signature="split_provision(value)">
+        <variable attributes="protected" citdl="re.compile()" line="156" name="_provision_rx" />
+        <variable citdl="m.group()" line="163" name="ver" />
+        <variable citdl="_provision_rx.match()" line="160" name="m" />
+        <variable citdl="value.strip()" ilk="argument" name="value" />
+      </scope>
+      <variable attributes="protected __hidden__" line="141" name="_provision_rx" />
+    </scope>
+    

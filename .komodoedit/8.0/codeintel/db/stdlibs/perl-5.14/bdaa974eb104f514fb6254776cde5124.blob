@@ -1,0 +1,107 @@
+<scope ilk="blob" lang="Perl" name="ExtUtils::Manifest">
+      <scope classrefs="Exporter" ilk="class" line="1" lineend="881" name="ExtUtils::Manifest">
+        <import line="3" module="Exporter" />
+        <import line="4" module="Config" symbol="*" />
+        <import line="5" module="File::Basename" symbol="*" />
+        <import line="6" module="File::Copy" symbol="copy" />
+        <import line="7" module="File::Find" symbol="*" />
+        <import line="8" module="File::Spec" symbol="*" />
+        <import line="9" module="Carp" symbol="*" />
+        <import line="31" module="VMS::Filespec" />
+        <variable line="12" name="$VERSION" />
+        <variable line="12" name="@EXPORT_OK" />
+        <variable line="12" name="@ISA" />
+        <variable line="13" name="$Is_MacOS" />
+        <variable line="13" name="$Is_VMS" />
+        <variable line="13" name="$Is_VMS_lc" />
+        <variable line="13" name="$Is_VMS_mode" />
+        <variable line="13" name="$Is_VMS_nodot" />
+        <variable line="14" name="$Debug" />
+        <variable line="14" name="$DEFAULT_MSKIP" />
+        <variable line="14" name="$MANIFEST" />
+        <variable line="14" name="$Quiet" />
+        <variable line="14" name="$Verbose" />
+        <scope ilk="function" line="114" lineend="116" name="_sort" signature="_sort()" />
+        <scope attributes="__exportable__" ilk="function" line="118" lineend="156" name="mkmanifest" signature="mkmanifest()">
+          </scope>
+        <scope ilk="function" line="160" lineend="165" name="clean_up_filename" signature="clean_up_filename($filename)">
+          <variable ilk="argument" name="$filename" />
+        </scope>
+        <scope attributes="__exportable__" ilk="function" line="177" lineend="201" name="manifind" signature="manifind($p)">
+          <variable ilk="argument" name="$p" />
+        </scope>
+        <scope attributes="__exportable__" ilk="function" line="217" lineend="219" name="manicheck" signature="manicheck()" />
+        <scope attributes="__exportable__" ilk="function" line="235" lineend="237" name="filecheck" signature="filecheck()" />
+        <scope attributes="__exportable__" ilk="function" line="249" lineend="251" name="fullcheck" signature="fullcheck()" />
+        <scope attributes="__exportable__" ilk="function" line="263" lineend="278" name="skipcheck" signature="skipcheck($p)">
+          <variable ilk="argument" name="$p" />
+        </scope>
+        <scope ilk="function" line="281" lineend="302" name="_check_files" signature="_check_files($p)">
+          <variable ilk="argument" name="$p" />
+        </scope>
+        <scope ilk="function" line="305" lineend="323" name="_check_manifest" signature="_check_manifest($p)">
+          <variable ilk="argument" name="$p" />
+        </scope>
+        <scope attributes="__exportable__" ilk="function" line="338" lineend="389" name="maniread" signature="maniread($mfile)">
+          <import line="369" module="File::Basename" />
+          <variable ilk="argument" name="$mfile" />
+          <import line="369" module="File::Basename" />
+        </scope>
+        <scope attributes="__exportable__" ilk="function" line="405" lineend="434" name="maniskip" signature="maniskip($mfile)">
+          <variable ilk="argument" name="$mfile" />
+        </scope>
+        <scope ilk="function" line="442" lineend="484" name="_check_mskip_directives" signature="_check_mskip_directives($mfile)">
+          <variable ilk="argument" name="$mfile" />
+        </scope>
+        <scope ilk="function" line="488" lineend="505" name="_include_mskip_file" signature="_include_mskip_file($mskip)">
+          <variable ilk="argument" name="$mskip" />
+        </scope>
+        <scope attributes="__exportable__" ilk="function" line="528" lineend="555" name="manicopy" signature="manicopy($read, $target, $how)">
+          <import line="532" module="File::Path" />
+          <import line="533" module="File::Basename" />
+          <variable ilk="argument" name="$read" />
+          <variable ilk="argument" name="$target" />
+          <variable ilk="argument" name="$how" />
+          <import line="532" module="File::Path" />
+          <import line="533" module="File::Basename" />
+        </scope>
+        <scope ilk="function" line="557" lineend="587" name="cp_if_diff" signature="cp_if_diff($from, $to, $how)">
+          <variable ilk="argument" name="$from" />
+          <variable ilk="argument" name="$to" />
+          <variable ilk="argument" name="$how" />
+        </scope>
+        <scope ilk="function" line="589" lineend="596" name="cp" signature="cp($srcFile, $dstFile)">
+          <variable ilk="argument" name="$srcFile" />
+          <variable ilk="argument" name="$dstFile" />
+        </scope>
+        <scope ilk="function" line="599" lineend="610" name="ln" signature="ln($srcFile, $dstFile)">
+          <variable ilk="argument" name="$srcFile" />
+          <variable ilk="argument" name="$dstFile" />
+        </scope>
+        <scope ilk="function" line="615" lineend="620" name="_manicopy_chmod" signature="_manicopy_chmod($srcFile, $dstFile)">
+          <variable ilk="argument" name="$srcFile" />
+          <variable ilk="argument" name="$dstFile" />
+        </scope>
+        <scope ilk="function" line="624" lineend="633" name="best" signature="best($srcFile, $dstFile)">
+          <variable ilk="argument" name="$srcFile" />
+          <variable ilk="argument" name="$dstFile" />
+        </scope>
+        <scope ilk="function" line="635" lineend="647" name="_macify" signature="_macify($file)">
+          <variable ilk="argument" name="$file" />
+        </scope>
+        <scope ilk="function" line="649" lineend="657" name="_maccat" signature="_maccat($f1, $f2)">
+          <variable ilk="argument" name="$f1" />
+          <variable ilk="argument" name="$f2" />
+        </scope>
+        <scope ilk="function" line="659" lineend="669" name="_unmacify" signature="_unmacify($file)">
+          <variable ilk="argument" name="$file" />
+        </scope>
+        <scope attributes="__exportable__" ilk="function" line="682" lineend="706" name="maniadd" signature="maniadd()">
+          </scope>
+        <scope ilk="function" line="710" lineend="725" name="_fix_manifest" signature="_fix_manifest($manifest_file)">
+          <variable ilk="argument" name="$manifest_file" />
+        </scope>
+        <scope ilk="function" line="729" lineend="731" name="_normalize" signature="_normalize()" />
+      </scope>
+    </scope>
+    

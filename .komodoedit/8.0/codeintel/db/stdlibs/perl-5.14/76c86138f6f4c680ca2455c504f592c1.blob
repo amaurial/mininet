@@ -1,0 +1,336 @@
+<scope ilk="blob" lang="Perl" name="Test::Builder">
+      <scope ilk="class" line="1" lineend="2576" name="Test::Builder">
+        <import line="12" module="Test::Builder::IO::Scalar" />
+        <import line="19" module="Config" symbol="*" />
+        <import line="23" module="threads::shared" />
+        <variable line="7" name="$VERSION" />
+        <variable line="28" name="*share" />
+        <variable line="67" name="*lock" />
+        <variable citdl="Test::Builder" line="119" name="$Test" />
+        <variable line="397" name="$Level" />
+        <variable line="1222" name="*BAILOUT" />
+        <scope ilk="function" line="121" lineend="125" name="new" signature="new()">
+          </scope>
+        <scope attributes="__ctor__" ilk="function" line="141" lineend="148" name="create" signature="create($class)">
+          <variable ilk="argument" name="$class" />
+        </scope>
+        <scope attributes="__ctor__" ilk="function" line="170" lineend="202" name="child" signature="child($self, $name)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$name" />
+        </scope>
+        <scope ilk="function" line="213" lineend="256" name="subtest" signature="subtest($self, $name, $subtests)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$name" />
+          <variable ilk="argument" name="$subtests" />
+        </scope>
+        <scope ilk="function" line="283" lineend="286" name="_plan_handled" signature="_plan_handled($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="308" lineend="338" name="finalize" signature="finalize($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="340" lineend="348" name="_indent" signature="_indent($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="361" lineend="361" name="parent" signature="parent()" />
+        <scope ilk="function" line="373" lineend="373" name="name" signature="name()" />
+        <scope ilk="function" line="375" lineend="385" name="DESTROY" signature="DESTROY($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="399" lineend="440" name="reset" signature="reset($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="482" lineend="501" name="plan" signature="plan($self, $cmd, $arg)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$cmd" />
+          <variable ilk="argument" name="$arg" />
+        </scope>
+        <scope ilk="function" line="504" lineend="519" name="_plan_tests" signature="_plan_tests($self, $arg)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$arg" />
+        </scope>
+        <scope ilk="function" line="531" lineend="545" name="expected_tests" signature="expected_tests($self, $max)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$max" />
+        </scope>
+        <scope ilk="function" line="555" lineend="564" name="no_plan" signature="no_plan($self, $arg)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$arg" />
+        </scope>
+        <scope ilk="function" line="588" lineend="602" name="_output_plan" signature="_output_plan($self, $max, $directive, $reason)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$max" />
+          <variable ilk="argument" name="$directive" />
+          <variable ilk="argument" name="$reason" />
+        </scope>
+        <scope ilk="function" line="640" lineend="678" name="done_testing" signature="done_testing($self, $num_tests)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$num_tests" />
+        </scope>
+        <scope ilk="function" line="691" lineend="697" name="has_plan" signature="has_plan($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="708" lineend="718" name="skip_all" signature="skip_all($self, $reason)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$reason" />
+        </scope>
+        <scope ilk="function" line="733" lineend="740" name="exported_to" signature="exported_to($self, $pack)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$pack" />
+        </scope>
+        <scope ilk="function" line="763" lineend="852" name="ok" signature="ok($self, $test, $name)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$test" />
+          <variable ilk="argument" name="$name" />
+        </scope>
+        <scope ilk="function" line="857" lineend="864" name="_check_is_passing_plan" signature="_check_is_passing_plan($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="867" lineend="882" name="_unoverload" signature="_unoverload($self, $type)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$type" />
+        </scope>
+        <scope ilk="function" line="884" lineend="888" name="_is_object" signature="_is_object($self, $thing)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$thing" />
+        </scope>
+        <scope ilk="function" line="890" lineend="894" name="_unoverload_str" signature="_unoverload_str($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="896" lineend="907" name="_unoverload_num" signature="_unoverload_num($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="910" lineend="919" name="_is_dualvar" signature="_is_dualvar($self, $val)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$val" />
+        </scope>
+        <scope ilk="function" line="941" lineend="955" name="is_eq" signature="is_eq($self, $got, $expect, $name)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$got" />
+          <variable ilk="argument" name="$expect" />
+          <variable ilk="argument" name="$name" />
+        </scope>
+        <scope ilk="function" line="957" lineend="971" name="is_num" signature="is_num($self, $got, $expect, $name)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$got" />
+          <variable ilk="argument" name="$expect" />
+          <variable ilk="argument" name="$name" />
+        </scope>
+        <scope ilk="function" line="973" lineend="991" name="_diag_fmt" signature="_diag_fmt($self, $type, $val)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$type" />
+          <variable ilk="argument" name="$val" />
+        </scope>
+        <scope ilk="function" line="993" lineend="1004" name="_is_diag" signature="_is_diag($self, $got, $type, $expect)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$got" />
+          <variable ilk="argument" name="$type" />
+          <variable ilk="argument" name="$expect" />
+        </scope>
+        <scope ilk="function" line="1006" lineend="1016" name="_isnt_diag" signature="_isnt_diag($self, $got, $type)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$got" />
+          <variable ilk="argument" name="$type" />
+        </scope>
+        <scope ilk="function" line="1034" lineend="1048" name="isnt_eq" signature="isnt_eq($self, $got, $dont_expect, $name)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$got" />
+          <variable ilk="argument" name="$dont_expect" />
+          <variable ilk="argument" name="$name" />
+        </scope>
+        <scope ilk="function" line="1050" lineend="1064" name="isnt_num" signature="isnt_num($self, $got, $dont_expect, $name)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$got" />
+          <variable ilk="argument" name="$dont_expect" />
+          <variable ilk="argument" name="$name" />
+        </scope>
+        <scope ilk="function" line="1083" lineend="1088" name="like" signature="like($self, $this, $regex, $name)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$this" />
+          <variable ilk="argument" name="$regex" />
+          <variable ilk="argument" name="$name" />
+        </scope>
+        <scope ilk="function" line="1090" lineend="1095" name="unlike" signature="unlike($self, $this, $regex, $name)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$this" />
+          <variable ilk="argument" name="$regex" />
+          <variable ilk="argument" name="$name" />
+        </scope>
+        <scope ilk="function" line="1109" lineend="1159" name="cmp_ok" signature="cmp_ok($self, $got, $type, $expect, $name)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$got" />
+          <variable ilk="argument" name="$type" />
+          <variable ilk="argument" name="$expect" />
+          <variable ilk="argument" name="$name" />
+        </scope>
+        <scope ilk="function" line="1161" lineend="1173" name="_cmp_diag" signature="_cmp_diag($self, $got, $type, $expect)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$got" />
+          <variable ilk="argument" name="$type" />
+          <variable ilk="argument" name="$expect" />
+        </scope>
+        <scope ilk="function" line="1175" lineend="1184" name="_caller_context" signature="_caller_context($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="1207" lineend="1213" name="BAIL_OUT" signature="BAIL_OUT($self, $reason)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$reason" />
+        </scope>
+        <scope ilk="function" line="1234" lineend="1261" name="skip" signature="skip($self, $why)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$why" />
+        </scope>
+        <scope ilk="function" line="1275" lineend="1299" name="todo_skip" signature="todo_skip($self, $why)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$why" />
+        </scope>
+        <scope ilk="function" line="1355" lineend="1376" name="maybe_regex" signature="maybe_regex($self, $regex)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$regex" />
+        </scope>
+        <scope ilk="function" line="1378" lineend="1385" name="_is_qr" signature="_is_qr($regex)">
+          <variable ilk="argument" name="$regex" />
+        </scope>
+        <scope ilk="function" line="1387" lineend="1428" name="_regex_ok" signature="_regex_ok($self, $this, $regex, $cmp, $name)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$this" />
+          <variable ilk="argument" name="$regex" />
+          <variable ilk="argument" name="$cmp" />
+          <variable ilk="argument" name="$name" />
+        </scope>
+        <scope ilk="function" line="1451" lineend="1467" name="_try" signature="_try($self, $code, %opts)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$code" />
+          <variable ilk="argument" name="%opts" />
+        </scope>
+        <scope ilk="function" line="1480" lineend="1490" name="is_fh" signature="is_fh($self, $maybe_fh)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$maybe_fh" />
+        </scope>
+        <scope ilk="function" line="1523" lineend="1530" name="level" signature="level($self, $level)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$level" />
+        </scope>
+        <scope ilk="function" line="1555" lineend="1562" name="use_numbers" signature="use_numbers($self, $use_nums)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$use_nums" />
+        </scope>
+        <scope ilk="function" line="1641" lineend="1645" name="diag" signature="diag($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="1656" lineend="1660" name="note" signature="note($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="1662" lineend="1667" name="_diag_fh" signature="_diag_fh($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="1669" lineend="1689" name="_print_comment" signature="_print_comment($self, $fh, @msgs)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$fh" />
+          <variable ilk="argument" name="@msgs" />
+        </scope>
+        <scope ilk="function" line="1706" lineend="1721" name="explain" signature="explain($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="1735" lineend="1738" name="_print" signature="_print($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="1740" lineend="1760" name="_print_to_fh" signature="_print_to_fh($self, $fh, @msgs)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$fh" />
+          <variable ilk="argument" name="@msgs" />
+        </scope>
+        <scope ilk="function" line="1795" lineend="1802" name="output" signature="output($self, $fh)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$fh" />
+        </scope>
+        <scope ilk="function" line="1804" lineend="1811" name="failure_output" signature="failure_output($self, $fh)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$fh" />
+        </scope>
+        <scope ilk="function" line="1813" lineend="1820" name="todo_output" signature="todo_output($self, $fh)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$fh" />
+        </scope>
+        <scope ilk="function" line="1822" lineend="1849" name="_new_fh" signature="_new_fh($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="1851" lineend="1858" name="_autoflush" signature="_autoflush()">
+          </scope>
+        <scope ilk="function" line="1862" lineend="1877" name="_dup_stdhandles" signature="_dup_stdhandles($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="1879" lineend="1895" name="_open_testhandles" signature="_open_testhandles($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="1897" lineend="1910" name="_copy_io_layers" signature="_copy_io_layers($self, $src, $dst)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$src" />
+          <variable ilk="argument" name="$dst" />
+        </scope>
+        <scope ilk="function" line="1912" lineend="1917" name="_apply_layers" signature="_apply_layers($fh, @layers)">
+          <variable ilk="argument" name="$fh" />
+          <variable ilk="argument" name="@layers" />
+        </scope>
+        <scope ilk="function" line="1928" lineend="1936" name="reset_outputs" signature="reset_outputs($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="1954" lineend="1960" name="_message_at_caller" signature="_message_at_caller($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="1962" lineend="1965" name="carp" signature="carp($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="1967" lineend="1970" name="croak" signature="croak($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="1994" lineend="2023" name="current_test" signature="current_test($self, $num)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$num" />
+        </scope>
+        <scope ilk="function" line="2042" lineend="2050" name="is_passing" signature="is_passing($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="2064" lineend="2068" name="summary" signature="summary()">
+          </scope>
+        <scope ilk="function" line="2119" lineend="2122" name="details" signature="details($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="2148" lineend="2158" name="todo" signature="todo($self, $pack)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$pack" />
+        </scope>
+        <scope ilk="function" line="2175" lineend="2185" name="find_TODO" signature="find_TODO($self, $pack, $set, $new_value)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$pack" />
+          <variable ilk="argument" name="$set" />
+          <variable ilk="argument" name="$new_value" />
+        </scope>
+        <scope ilk="function" line="2195" lineend="2200" name="in_todo" signature="in_todo($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="2245" lineend="2256" name="todo_start" signature="todo_start($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="2267" lineend="2284" name="todo_end" signature="todo_end($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="2300" lineend="2311" name="caller" signature="caller($self, $height)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$height" />
+        </scope>
+        <scope ilk="function" line="2332" lineend="2340" name="_sanity_check" signature="_sanity_check($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="2352" lineend="2363" name="_whoa" signature="_whoa($self, $check, $desc)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$check" />
+          <variable ilk="argument" name="$desc" />
+        </scope>
+        <scope ilk="function" line="2376" lineend="2380" name="_my_exit" signature="_my_exit()" />
+        <scope ilk="function" line="2388" lineend="2499" name="_ending" signature="_ending($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+      </scope>
+    </scope>
+    

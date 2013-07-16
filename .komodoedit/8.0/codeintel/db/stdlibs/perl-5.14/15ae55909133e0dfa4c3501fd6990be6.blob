@@ -1,0 +1,29 @@
+<scope ilk="blob" lang="Perl" name="Text::Diff::Table">
+      <scope classrefs="Text::Diff::Base Exporter" ilk="class" line="1" lineend="308" name="Text::Diff::Table">
+        <import line="5" module="Carp" symbol="*" />
+        <variable line="6" name="$VERSION" />
+        <variable line="6" name="@EXPORT_OK" />
+        <variable line="6" name="@ISA" />
+        <scope attributes="__exportable__" ilk="function" line="30" lineend="46" name="expand_tabs" signature="expand_tabs($s)">
+          <variable ilk="argument" name="$s" />
+        </scope>
+        <scope ilk="function" line="48" lineend="52" name="trim_trailing_line_ends" signature="trim_trailing_line_ends($s)">
+          <variable ilk="argument" name="$s" />
+        </scope>
+        <scope attributes="__ctor__" ilk="function" line="77" lineend="80" name="new" signature="new($proto)">
+          <variable ilk="argument" name="$proto" />
+        </scope>
+        <scope ilk="function" line="84" lineend="201" name="hunk" signature="hunk($self, $ops, $options)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$ops" />
+          <variable ilk="argument" name="$options" />
+        </scope>
+        <scope ilk="function" line="203" lineend="205" name="_glean_formats" signature="_glean_formats($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="207" lineend="306" name="file_footer" signature="file_footer($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+      </scope>
+    </scope>
+    

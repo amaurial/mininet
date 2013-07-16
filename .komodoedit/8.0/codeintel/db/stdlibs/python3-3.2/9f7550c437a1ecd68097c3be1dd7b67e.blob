@@ -1,0 +1,52 @@
+<scope doc="An object-oriented interface to .netrc files.&#xA;" ilk="blob" lang="Python" name="netrc">
+      <scope classrefs="Exception" doc="Exception raised on syntax errors in the .netrc file.&#xA;" ilk="class" line="10" lineend="19" name="NetrcParseError">
+        <scope ilk="function" line="18" lineend="19" name="__str__" returns="tuple" signature="__str__(self)">
+          <variable citdl="NetrcParseError" ilk="argument" name="self" />
+        </scope>
+        <scope ilk="function" line="12" lineend="16" name="__init__" signature="__init__(self, msg, filename=None, lineno=None)">
+          <variable ilk="argument" name="msg" />
+          <variable citdl="NetrcParseError" ilk="argument" name="self" />
+          <variable ilk="argument" name="lineno" />
+          <variable ilk="argument" name="filename" />
+        </scope>
+        <variable attributes="__instancevar__" line="15" name="msg" />
+        <variable attributes="__instancevar__" line="14" name="lineno" />
+        <variable attributes="__instancevar__" line="13" name="filename" />
+      </scope>
+      <variable citdl="list" line="7" name="__all__" />
+      <import module="io" />
+      <scope classrefs="object" doc="&#xA;" ilk="class" line="22" lineend="117" name="netrc">
+        <scope doc="Return a (user, account, password) tuple for given host." ilk="function" line="94" lineend="101" name="authenticators" signature="authenticators(self, host)">
+          <variable citdl="netrc" ilk="argument" name="self" />
+          <variable ilk="argument" name="host" />
+        </scope>
+        <scope doc="Dump the class data in the format of a .netrc file." ilk="function" line="103" lineend="117" name="__repr__" returns="str" signature="__repr__(self)">
+          <variable citdl="netrc" ilk="argument" name="self" />
+          <variable citdl="str" line="105" name="rep" />
+          <variable line="107" name="attrs" />
+        </scope>
+        <scope ilk="function" line="34" lineend="92" name="_parse" signature="_parse(self, file, fp)">
+          <variable ilk="argument" name="fp" />
+          <variable citdl="lexer.get_token()" line="69" name="account" />
+          <variable citdl="lexer.get_token()" line="72" name="tt" />
+          <variable citdl="shlex.shlex()" line="35" name="lexer" />
+          <variable citdl="lexer.get_token()" line="49" name="entryname" />
+          <variable citdl="lexer.get_token()" line="41" name="toplevel" />
+          <variable citdl="lexer.lineno" line="40" name="saved_lineno" />
+          <variable ilk="argument" name="file" />
+          <variable citdl="lexer.get_token()" line="68" name="login" />
+          <variable citdl="lexer.instream.readline()" line="57" name="line" />
+          <variable citdl="lexer.get_token()" line="89" name="password" />
+          <variable citdl="netrc" ilk="argument" name="self" />
+        </scope>
+        <scope ilk="function" line="23" lineend="32" name="__init__" signature="__init__(self, file=None)">
+          <variable citdl="netrc" ilk="argument" name="self" />
+          <variable citdl="os.path.join()" ilk="argument" name="file" />
+        </scope>
+        <variable attributes="__instancevar__" citdl="dict" line="30" name="macros" />
+        <variable attributes="__instancevar__" citdl="dict" line="29" name="hosts" />
+      </scope>
+      <import module="os" />
+      <import module="shlex" />
+    </scope>
+    

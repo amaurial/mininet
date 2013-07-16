@@ -1,0 +1,85 @@
+<scope ilk="blob" lang="Perl" name="Sys::Syslog">
+      <scope classrefs="Exporter" ilk="class" line="1" lineend="822" name="Sys::Syslog">
+        <import line="4" module="warnings::register" symbol="*" />
+        <import line="5" module="Carp" symbol="*" />
+        <import line="6" module="Exporter" />
+        <import line="7" module="Fcntl" symbol="O_WRONLY" />
+        <import line="8" module="File::Basename" symbol="*" />
+        <import line="9" module="POSIX" symbol="strftime" />
+        <import line="9" module="POSIX" symbol="setlocale" />
+        <import line="9" module="POSIX" symbol="LC_TIME" />
+        <import line="10" module="Socket" symbol="**" />
+        <import line="64" module="XSLoader" />
+        <import line="68" module="DynaLoader" />
+        <variable line="14" name="$VERSION" />
+        <variable line="78" name="$host" />
+        <variable line="88" name="$facility" />
+        <scope ilk="function" line="147" lineend="159" name="AUTOLOAD" signature="AUTOLOAD()">
+          </scope>
+        <scope ilk="function" line="162" lineend="177" name="openlog" signature="openlog()">
+          </scope>
+        <scope ilk="function" line="179" lineend="182" name="closelog" signature="closelog()" />
+        <scope ilk="function" line="184" lineend="188" name="setlogmask" signature="setlogmask()">
+          </scope>
+        <scope ilk="function" line="190" lineend="303" name="setlogsock" signature="setlogsock($setsock, $setpath, $settime)">
+          <variable ilk="argument" name="$setsock" />
+          <variable ilk="argument" name="$setpath" />
+          <variable ilk="argument" name="$settime" />
+        </scope>
+        <scope ilk="function" line="305" lineend="435" name="syslog" signature="syslog($priority, $mask)">
+          <variable ilk="argument" name="$priority" />
+          <variable ilk="argument" name="$mask" />
+        </scope>
+        <scope ilk="function" line="437" lineend="464" name="_syslog_send_console" signature="_syslog_send_console($buf)">
+          <variable ilk="argument" name="$buf" />
+        </scope>
+        <scope ilk="function" line="466" lineend="473" name="_syslog_send_stream" signature="_syslog_send_stream($buf)">
+          <variable ilk="argument" name="$buf" />
+        </scope>
+        <scope ilk="function" line="475" lineend="478" name="_syslog_send_pipe" signature="_syslog_send_pipe($buf)">
+          <variable ilk="argument" name="$buf" />
+        </scope>
+        <scope ilk="function" line="480" lineend="484" name="_syslog_send_socket" signature="_syslog_send_socket($buf)">
+          <variable ilk="argument" name="$buf" />
+        </scope>
+        <scope ilk="function" line="486" lineend="490" name="_syslog_send_native" signature="_syslog_send_native($buf, $numpri)">
+          <variable ilk="argument" name="$buf" />
+          <variable ilk="argument" name="$numpri" />
+        </scope>
+        <scope ilk="function" line="497" lineend="521" name="xlate" signature="xlate($name)">
+          <variable ilk="argument" name="$name" />
+        </scope>
+        <scope ilk="function" line="530" lineend="558" name="connect_log" signature="connect_log()">
+          </scope>
+        <scope ilk="function" line="560" lineend="606" name="connect_tcp" signature="connect_tcp($errs)">
+          <variable ilk="argument" name="$errs" />
+        </scope>
+        <scope ilk="function" line="608" lineend="655" name="connect_udp" signature="connect_udp($errs)">
+          <variable ilk="argument" name="$errs" />
+        </scope>
+        <scope ilk="function" line="657" lineend="672" name="connect_stream" signature="connect_stream($errs)">
+          <variable ilk="argument" name="$errs" />
+        </scope>
+        <scope ilk="function" line="674" lineend="692" name="connect_pipe" signature="connect_pipe($errs)">
+          <variable ilk="argument" name="$errs" />
+        </scope>
+        <scope ilk="function" line="694" lineend="733" name="connect_unix" signature="connect_unix($errs)">
+          <variable ilk="argument" name="$errs" />
+        </scope>
+        <scope ilk="function" line="735" lineend="748" name="connect_native" signature="connect_native($errs)">
+          <variable ilk="argument" name="$errs" />
+        </scope>
+        <scope ilk="function" line="750" lineend="757" name="connect_eventlog" signature="connect_eventlog($errs)">
+          <variable ilk="argument" name="$errs" />
+        </scope>
+        <scope ilk="function" line="759" lineend="767" name="connect_console" signature="connect_console($errs)">
+          <variable ilk="argument" name="$errs" />
+        </scope>
+        <scope ilk="function" line="775" lineend="785" name="connection_ok" signature="connection_ok()">
+          </scope>
+        <scope ilk="function" line="787" lineend="801" name="disconnect_log" signature="disconnect_log()" />
+        <scope ilk="function" line="811" lineend="814" name="silent_eval" signature="silent_eval()" />
+        <scope ilk="function" line="816" lineend="819" name="can_load" signature="can_load()" />
+      </scope>
+    </scope>
+    

@@ -1,0 +1,19 @@
+<scope ilk="blob" lang="Perl" name="Perl::Critic::Policy::CodeLayout::ProhibitTrailingWhitespace">
+      <scope ilk="class" line="8" lineend="96" name="Perl::Critic::Policy::CodeLayout::ProhibitTrailingWhitespace">
+        <import line="13" module="English" symbol="-no_match_vars" />
+        <import line="14" module="Readonly" symbol="*" />
+        <import line="18" module="PPI::Token::Whitespace" symbol="*" />
+        <import line="19" module="Perl::Critic::Utils" symbol="**" />
+        <variable line="23" name="$VERSION" />
+        <scope ilk="function" line="44" lineend="44" name="supported_parameters" signature="supported_parameters()" />
+        <scope ilk="function" line="45" lineend="45" name="default_severity" signature="default_severity()" />
+        <scope ilk="function" line="46" lineend="46" name="default_themes" signature="default_themes()" />
+        <scope ilk="function" line="47" lineend="47" name="applies_to" signature="applies_to()" />
+        <scope ilk="function" line="51" lineend="68" name="violates" signature="violates()">
+          </scope>
+        <scope ilk="function" line="70" lineend="92" name="_escape" signature="_escape($character)">
+          <variable ilk="argument" name="$character" />
+        </scope>
+      </scope>
+    </scope>
+    

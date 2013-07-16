@@ -1,0 +1,63 @@
+<scope ilk="blob" lang="Perl" name="CPANPLUS::Selfupdate">
+      <scope ilk="class" line="1" lineend="550" name="CPANPLUS::Selfupdate">
+        <import line="4" module="Params::Check" symbol="check" />
+        <import line="5" module="IPC::Cmd" symbol="can_run" />
+        <import line="6" module="CPANPLUS::Error" symbol="error" />
+        <import line="6" module="CPANPLUS::Error" symbol="msg" />
+        <import line="7" module="Module::Load::Conditional" symbol="check_install" />
+        <import line="8" module="Locale::Maketext::Simple" symbol="Class" />
+        <import line="10" module="CPANPLUS::Internals::Constants" symbol="*" />
+        <variable line="12" name="$Params::Check::VERBOSE" />
+        <scope ilk="function" line="183" lineend="183" name="_get_config" signature="_get_config()" />
+        <scope attributes="__ctor__" ilk="function" line="195" lineend="199" name="new" signature="new($class, $cb)">
+          <variable ilk="argument" name="$class" />
+          <variable ilk="argument" name="$cb" />
+        </scope>
+        <scope ilk="function" line="236" lineend="236" name="list_categories" signature="list_categories()" />
+        <scope ilk="function" line="259" lineend="292" name="list_modules_to_update" signature="list_modules_to_update($self, %hash)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="%hash" />
+        </scope>
+        <scope ilk="function" line="308" lineend="338" name="selfupdate" signature="selfupdate($self, %hash)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="%hash" />
+        </scope>
+        <scope ilk="function" line="348" lineend="351" name="list_features" signature="list_features($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="360" lineend="371" name="list_enabled_features" signature="list_enabled_features($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="386" lineend="407" name="modules_for_feature" signature="modules_for_feature($self, $feature, $as_hash)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$feature" />
+          <variable ilk="argument" name="$as_hash" />
+        </scope>
+        <scope ilk="function" line="421" lineend="429" name="list_core_dependencies" signature="list_core_dependencies($self, $as_hash)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$as_hash" />
+        </scope>
+        <scope ilk="function" line="442" lineend="450" name="list_core_modules" signature="list_core_modules($self, $as_hash)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$as_hash" />
+        </scope>
+        <scope ilk="function" line="452" lineend="462" name="_hashref_to_module" signature="_hashref_to_module($self, $href)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$href" />
+        </scope>
+      </scope>
+      <scope ilk="class" line="475" lineend="519" name="CPANPLUS::Selfupdate::Module">
+        <scope attributes="__ctor__" ilk="function" line="483" lineend="494" name="new" signature="new($class, $mod, $ver)">
+          <variable ilk="argument" name="$class" />
+          <variable ilk="argument" name="$mod" />
+          <variable ilk="argument" name="$ver" />
+        </scope>
+        <scope ilk="function" line="502" lineend="506" name="version_required" signature="version_required($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="516" lineend="519" name="is_installed_version_sufficient" signature="is_installed_version_sufficient($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+      </scope>
+    </scope>
+    

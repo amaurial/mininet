@@ -1,0 +1,89 @@
+<scope ilk="blob" lang="Perl" name="Math::Trig">
+      <import line="7" module="Exporter" />
+      <scope classrefs="Exporter" ilk="class" line="8" lineend="237" name="Math::Trig">
+        <import line="13" module="Math::Complex" symbol="*" />
+        <import line="14" module="Math::Complex" symbol="**" />
+        <variable line="16" name="$PACKAGE" />
+        <variable line="16" name="$VERSION" />
+        <variable line="16" name="%EXPORT_TAGS" />
+        <variable line="16" name="@EXPORT" />
+        <variable line="16" name="@EXPORT_OK" />
+        <variable line="16" name="@ISA" />
+        <variable line="184" name="*great_circle_bearing" />
+        <scope ilk="function" line="59" lineend="59" name="_DR" signature="_DR()" />
+        <scope ilk="function" line="60" lineend="60" name="_RD" signature="_RD()" />
+        <scope ilk="function" line="61" lineend="61" name="_DG" signature="_DG()" />
+        <scope ilk="function" line="62" lineend="62" name="_GD" signature="_GD()" />
+        <scope ilk="function" line="63" lineend="63" name="_RG" signature="_RG()" />
+        <scope ilk="function" line="64" lineend="64" name="_GR" signature="_GR()" />
+        <scope ilk="function" line="70" lineend="73" name="_remt" signature="_remt()" />
+        <scope ilk="function" line="79" lineend="79" name="rad2rad" signature="rad2rad()" />
+        <scope ilk="function" line="81" lineend="81" name="deg2deg" signature="deg2deg()" />
+        <scope ilk="function" line="83" lineend="83" name="grad2grad" signature="grad2grad()" />
+        <scope ilk="function" line="85" lineend="85" name="rad2deg" signature="rad2deg()">
+          </scope>
+        <scope ilk="function" line="87" lineend="87" name="deg2rad" signature="deg2rad()">
+          </scope>
+        <scope ilk="function" line="89" lineend="89" name="grad2deg" signature="grad2deg()">
+          </scope>
+        <scope ilk="function" line="91" lineend="91" name="deg2grad" signature="deg2grad()">
+          </scope>
+        <scope ilk="function" line="93" lineend="93" name="rad2grad" signature="rad2grad()">
+          </scope>
+        <scope ilk="function" line="95" lineend="95" name="grad2rad" signature="grad2rad()">
+          </scope>
+        <scope ilk="function" line="101" lineend="105" name="acos_real" signature="acos_real()" />
+        <scope ilk="function" line="107" lineend="111" name="asin_real" signature="asin_real()" />
+        <scope ilk="function" line="113" lineend="121" name="cartesian_to_spherical" signature="cartesian_to_spherical($x, $y, $z)">
+          <variable ilk="argument" name="$x" />
+          <variable ilk="argument" name="$y" />
+          <variable ilk="argument" name="$z" />
+        </scope>
+        <scope ilk="function" line="123" lineend="129" name="spherical_to_cartesian" signature="spherical_to_cartesian($rho, $theta, $phi)">
+          <variable ilk="argument" name="$rho" />
+          <variable ilk="argument" name="$theta" />
+          <variable ilk="argument" name="$phi" />
+        </scope>
+        <scope ilk="function" line="131" lineend="135" name="spherical_to_cylindrical" signature="spherical_to_cylindrical()">
+          </scope>
+        <scope ilk="function" line="137" lineend="141" name="cartesian_to_cylindrical" signature="cartesian_to_cylindrical($x, $y, $z)">
+          <variable ilk="argument" name="$x" />
+          <variable ilk="argument" name="$y" />
+          <variable ilk="argument" name="$z" />
+        </scope>
+        <scope ilk="function" line="143" lineend="147" name="cylindrical_to_cartesian" signature="cylindrical_to_cartesian($rho, $theta, $z)">
+          <variable ilk="argument" name="$rho" />
+          <variable ilk="argument" name="$theta" />
+          <variable ilk="argument" name="$z" />
+        </scope>
+        <scope ilk="function" line="149" lineend="151" name="cylindrical_to_spherical" signature="cylindrical_to_spherical()" />
+        <scope ilk="function" line="153" lineend="164" name="great_circle_distance" signature="great_circle_distance($theta0, $phi0, $theta1, $phi1, $rho)">
+          <variable ilk="argument" name="$theta0" />
+          <variable ilk="argument" name="$phi0" />
+          <variable ilk="argument" name="$theta1" />
+          <variable ilk="argument" name="$phi1" />
+          <variable ilk="argument" name="$rho" />
+        </scope>
+        <scope ilk="function" line="166" lineend="182" name="great_circle_direction" signature="great_circle_direction($theta0, $phi0, $theta1, $phi1)">
+          <variable ilk="argument" name="$theta0" />
+          <variable ilk="argument" name="$phi0" />
+          <variable ilk="argument" name="$theta1" />
+          <variable ilk="argument" name="$phi1" />
+        </scope>
+        <scope ilk="function" line="186" lineend="213" name="great_circle_waypoint" signature="great_circle_waypoint($theta0, $phi0, $theta1, $phi1, $point)">
+          <variable ilk="argument" name="$theta0" />
+          <variable ilk="argument" name="$phi0" />
+          <variable ilk="argument" name="$theta1" />
+          <variable ilk="argument" name="$phi1" />
+          <variable ilk="argument" name="$point" />
+        </scope>
+        <scope ilk="function" line="215" lineend="217" name="great_circle_midpoint" signature="great_circle_midpoint()" />
+        <scope ilk="function" line="219" lineend="235" name="great_circle_destination" signature="great_circle_destination($theta0, $phi0, $dir0, $dst)">
+          <variable ilk="argument" name="$theta0" />
+          <variable ilk="argument" name="$phi0" />
+          <variable ilk="argument" name="$dir0" />
+          <variable ilk="argument" name="$dst" />
+        </scope>
+      </scope>
+    </scope>
+    

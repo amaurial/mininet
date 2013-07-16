@@ -1,0 +1,71 @@
+<scope ilk="blob" lang="Perl" name="Storable">
+      <import line="8" module="XSLoader" />
+      <import line="9" module="Exporter" />
+      <scope classrefs="Exporter" ilk="class" line="10" lineend="422" name="Storable">
+        <import line="35" module="Carp" />
+        <variable line="22" name="$canonical" />
+        <variable line="22" name="$forgive_me" />
+        <variable line="22" name="$VERSION" />
+        <variable line="37" name="*logcroak" />
+        <variable line="41" name="*logcarp" />
+        <variable line="69" name="$Storable::downgrade_restricted" />
+        <variable line="70" name="$Storable::accept_future_minor" />
+        <scope ilk="function" line="62" lineend="65" name="CLONE" signature="CLONE()" />
+        <scope ilk="function" line="78" lineend="85" name="CAN_FLOCK" signature="CAN_FLOCK()">
+          <import line="80" module="Config" />
+          <import line="80" module="Config" />
+        </scope>
+        <scope ilk="function" line="87" lineend="107" name="show_file_magic" signature="show_file_magic()" />
+        <scope attributes="__exportable__" ilk="function" line="109" lineend="122" name="file_magic" signature="file_magic($file)">
+          <import line="110" module="IO::File" />
+          <variable ilk="argument" name="$file" />
+          <import line="110" module="IO::File" />
+        </scope>
+        <scope attributes="__exportable__" ilk="function" line="124" lineend="182" name="read_magic" signature="read_magic($buf, $file)">
+          <variable ilk="argument" name="$buf" />
+          <variable ilk="argument" name="$file" />
+        </scope>
+        <scope ilk="function" line="184" lineend="186" name="BIN_VERSION_NV" signature="BIN_VERSION_NV()" />
+        <scope ilk="function" line="188" lineend="190" name="BIN_WRITE_VERSION_NV" signature="BIN_WRITE_VERSION_NV()" />
+        <scope attributes="__exported__" ilk="function" line="200" lineend="202" name="store" signature="store()" />
+        <scope attributes="__exportable__" ilk="function" line="209" lineend="211" name="nstore" signature="nstore()" />
+        <scope attributes="__exportable__" ilk="function" line="218" lineend="220" name="lock_store" signature="lock_store()" />
+        <scope attributes="__exportable__" ilk="function" line="227" lineend="229" name="lock_nstore" signature="lock_nstore()" />
+        <scope ilk="function" line="232" lineend="269" name="_store" signature="_store($xsptr, $self, $file, $use_locking)">
+          <variable ilk="argument" name="$xsptr" />
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$file" />
+          <variable ilk="argument" name="$use_locking" />
+        </scope>
+        <scope attributes="__exportable__" ilk="function" line="277" lineend="279" name="store_fd" signature="store_fd()" />
+        <scope attributes="__exportable__" ilk="function" line="286" lineend="289" name="nstore_fd" signature="nstore_fd($self, $file)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$file" />
+        </scope>
+        <scope ilk="function" line="292" lineend="308" name="_store_fd" signature="_store_fd($xsptr, $self, $file)">
+          <variable ilk="argument" name="$xsptr" />
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$file" />
+        </scope>
+        <scope attributes="__exportable__" ilk="function" line="316" lineend="318" name="freeze" signature="freeze()" />
+        <scope attributes="__exportable__" ilk="function" line="325" lineend="327" name="nfreeze" signature="nfreeze()" />
+        <scope ilk="function" line="330" lineend="342" name="_freeze" signature="_freeze($xsptr, $self)">
+          <variable ilk="argument" name="$xsptr" />
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope attributes="__exported__" ilk="function" line="350" lineend="352" name="retrieve" signature="retrieve()" />
+        <scope attributes="__exportable__" ilk="function" line="359" lineend="361" name="lock_retrieve" signature="lock_retrieve()" />
+        <scope ilk="function" line="364" lineend="384" name="_retrieve" signature="_retrieve($file, $use_locking)">
+          <variable ilk="argument" name="$file" />
+          <variable ilk="argument" name="$use_locking" />
+        </scope>
+        <scope attributes="__exportable__" ilk="function" line="391" lineend="401" name="fd_retrieve" signature="fd_retrieve($file)">
+          <variable ilk="argument" name="$file" />
+        </scope>
+        <scope attributes="__exportable__" ilk="function" line="403" lineend="403" name="retrieve_fd" signature="retrieve_fd()" />
+        <scope attributes="__exportable__" ilk="function" line="411" lineend="420" name="thaw" signature="thaw($frozen)">
+          <variable ilk="argument" name="$frozen" />
+        </scope>
+      </scope>
+    </scope>
+    

@@ -1,0 +1,199 @@
+<scope ilk="blob" lang="Perl" name="XML::Simple">
+      <scope classrefs="Exporter" ilk="class" line="3" lineend="1860" name="XML::Simple">
+        <import line="43" module="Carp" symbol="*" />
+        <import line="44" module="Exporter" />
+        <variable line="51" name="$PREFERRED_PARSER" />
+        <variable line="51" name="$VERSION" />
+        <variable line="51" name="@EXPORT" />
+        <variable line="51" name="@EXPORT_OK" />
+        <variable line="51" name="@ISA" />
+        <variable line="356" name="$XML::SAX::ParserPackage" />
+        <variable line="1857" name="*xml_in" />
+        <variable line="1858" name="*xml_out" />
+        <scope ilk="function" line="92" lineend="101" name="import" signature="import()">
+          </scope>
+        <scope ilk="function" line="108" lineend="129" name="new" signature="new($class, %raw_opt)">
+          <variable ilk="argument" name="$class" />
+          <variable ilk="argument" name="%raw_opt" />
+        </scope>
+        <scope ilk="function" line="139" lineend="149" name="_get_object" signature="_get_object()">
+          </scope>
+        <scope attributes="__exported__" ilk="function" line="163" lineend="197" name="XMLin" signature="XMLin($target)">
+          <variable ilk="argument" name="$target" />
+        </scope>
+        <scope ilk="function" line="206" lineend="235" name="parse_file" signature="parse_file($filename)">
+          <variable ilk="argument" name="$filename" />
+        </scope>
+        <scope ilk="function" line="244" lineend="254" name="parse_fh" signature="parse_fh($fh)">
+          <variable ilk="argument" name="$fh" />
+        </scope>
+        <scope ilk="function" line="263" lineend="271" name="parse_string" signature="parse_string($string)">
+          <variable ilk="argument" name="$string" />
+        </scope>
+        <scope ilk="function" line="281" lineend="295" name="default_config_file" signature="default_config_file($self)">
+          <import line="284" module="File::Basename" />
+          <variable ilk="argument" name="$self" />
+          <import line="284" module="File::Basename" />
+        </scope>
+        <scope ilk="function" line="305" lineend="313" name="build_simple_tree" signature="build_simple_tree($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="334" lineend="375" name="build_tree" signature="build_tree($self, $filename, $string)">
+          <import line="348" module="XML::SAX" />
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$filename" />
+          <variable ilk="argument" name="$string" />
+          <import line="348" module="XML::SAX" />
+        </scope>
+        <scope ilk="function" line="386" lineend="418" name="build_tree_xml_parser" signature="build_tree_xml_parser($self, $filename, $string)">
+          <import line="394" module="XML::Parser" />
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$filename" />
+          <variable ilk="argument" name="$string" />
+          <import line="394" module="XML::Parser" />
+        </scope>
+        <scope ilk="function" line="428" lineend="443" name="cache_write_storable" signature="cache_write_storable($self, $data, $filename)">
+          <import line="433" module="Storable" />
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$data" />
+          <variable ilk="argument" name="$filename" />
+          <import line="433" module="Storable" />
+        </scope>
+        <scope ilk="function" line="454" lineend="471" name="cache_read_storable" signature="cache_read_storable($self, $filename)">
+          <import line="462" module="Storable" />
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$filename" />
+          <import line="462" module="Storable" />
+        </scope>
+        <scope ilk="function" line="482" lineend="487" name="storable_filename" signature="storable_filename($self, $cachefile)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$cachefile" />
+        </scope>
+        <scope ilk="function" line="497" lineend="501" name="cache_write_memshare" signature="cache_write_memshare($self, $data, $filename)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$data" />
+          <variable ilk="argument" name="$filename" />
+        </scope>
+        <scope ilk="function" line="510" lineend="518" name="cache_read_memshare" signature="cache_read_memshare($self, $filename)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$filename" />
+        </scope>
+        <scope ilk="function" line="528" lineend="534" name="cache_write_memcopy" signature="cache_write_memcopy($self, $data, $filename)">
+          <import line="531" module="Storable" />
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$data" />
+          <variable ilk="argument" name="$filename" />
+          <import line="531" module="Storable" />
+        </scope>
+        <scope ilk="function" line="544" lineend="552" name="cache_read_memcopy" signature="cache_read_memcopy($self, $filename)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$filename" />
+        </scope>
+        <scope attributes="__exported__" ilk="function" line="564" lineend="655" name="XMLout" signature="XMLout($ref)">
+          <import line="576" module="XML::NamespaceSupport" />
+          <import line="631" module="IO::Handle" />
+          <import line="646" module="XML::SAX" />
+          <variable ilk="argument" name="$ref" />
+          <import line="576" module="XML::NamespaceSupport" />
+          <import line="631" module="IO::Handle" />
+          <import line="646" module="XML::SAX" />
+        </scope>
+        <scope ilk="function" line="674" lineend="902" name="handle_options" signature="handle_options($self, $dirn, %raw_opt)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$dirn" />
+          <variable ilk="argument" name="%raw_opt" />
+        </scope>
+        <scope ilk="function" line="914" lineend="944" name="find_xml_file" signature="find_xml_file($self, $file, @search_path)">
+          <import line="920" module="File::Basename" />
+          <import line="921" module="File::Spec" />
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$file" />
+          <variable ilk="argument" name="@search_path" />
+          <import line="920" module="File::Basename" />
+          <import line="921" module="File::Spec" />
+        </scope>
+        <scope ilk="function" line="974" lineend="1154" name="collapse" signature="collapse($self, $attr)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$attr" />
+        </scope>
+        <scope ilk="function" line="1165" lineend="1169" name="set_var" signature="set_var($self, $name, $value)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$name" />
+          <variable ilk="argument" name="$value" />
+        </scope>
+        <scope ilk="function" line="1178" lineend="1185" name="get_var" signature="get_var($self, $name)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$name" />
+        </scope>
+        <scope ilk="function" line="1195" lineend="1203" name="normalise_space" signature="normalise_space($self, $text)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$text" />
+        </scope>
+        <scope ilk="function" line="1215" lineend="1293" name="array_to_hash" signature="array_to_hash($self, $name, $arrayref)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$name" />
+          <variable ilk="argument" name="$arrayref" />
+        </scope>
+        <scope ilk="function" line="1306" lineend="1312" name="die_or_warn" signature="die_or_warn($self, $msg)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$msg" />
+        </scope>
+        <scope ilk="function" line="1322" lineend="1326" name="new_hashref" signature="new_hashref($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="1348" lineend="1368" name="collapse_content" signature="collapse_content($self, $hashref)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$hashref" />
+        </scope>
+        <scope ilk="function" line="1383" lineend="1623" name="value_to_xml" signature="value_to_xml($self, $ref, $name, $indent)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$ref" />
+          <variable ilk="argument" name="$name" />
+          <variable ilk="argument" name="$indent" />
+        </scope>
+        <scope ilk="function" line="1633" lineend="1660" name="sorted_keys" signature="sorted_keys($self, $name, $ref)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$name" />
+          <variable ilk="argument" name="$ref" />
+        </scope>
+        <scope ilk="function" line="1669" lineend="1682" name="escape_value" signature="escape_value($self, $data)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$data" />
+        </scope>
+        <scope ilk="function" line="1684" lineend="1697" name="numeric_escape" signature="numeric_escape($self, $data, $level)">
+          <import line="1687" module="utf8" symbol="*" />
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$data" />
+          <variable ilk="argument" name="$level" />
+          <import line="1687" module="utf8" symbol="*" />
+        </scope>
+        <scope ilk="function" line="1709" lineend="1735" name="hash_to_array" signature="hash_to_array($self, $parent, $hashref)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$parent" />
+          <variable ilk="argument" name="$hashref" />
+        </scope>
+        <scope ilk="function" line="1748" lineend="1752" name="copy_hash" signature="copy_hash($self, $orig, @extra)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$orig" />
+          <variable ilk="argument" name="@extra" />
+        </scope>
+        <scope ilk="function" line="1758" lineend="1765" name="start_document" signature="start_document($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="1768" lineend="1799" name="start_element" signature="start_element($self, $element)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$element" />
+        </scope>
+        <scope ilk="function" line="1802" lineend="1816" name="characters" signature="characters($self, $chars)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$chars" />
+        </scope>
+        <scope ilk="function" line="1819" lineend="1823" name="end_element" signature="end_element($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="1826" lineend="1855" name="end_document" signature="end_document($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+      </scope>
+    </scope>
+    

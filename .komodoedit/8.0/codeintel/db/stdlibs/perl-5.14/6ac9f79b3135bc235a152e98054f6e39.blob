@@ -1,0 +1,29 @@
+<scope ilk="blob" lang="Perl" name="Digest::base">
+      <scope ilk="class" line="1" lineend="67" name="Digest::base">
+        <variable line="4" name="$VERSION" />
+        <scope ilk="function" line="13" lineend="16" name="reset" signature="reset($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="18" lineend="33" name="addfile" signature="addfile($self, $handle)">
+          <import line="28" module="Carp" />
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$handle" />
+          <import line="28" module="Carp" />
+        </scope>
+        <scope ilk="function" line="35" lineend="52" name="add_bits" signature="add_bits($self, $arg)">
+          <import line="48" module="Carp" />
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$arg" />
+          <import line="48" module="Carp" />
+        </scope>
+        <scope ilk="function" line="54" lineend="57" name="hexdigest" signature="hexdigest($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="59" lineend="65" name="b64digest" signature="b64digest($self)">
+          <import line="61" module="MIME::Base64" />
+          <variable ilk="argument" name="$self" />
+          <import line="61" module="MIME::Base64" />
+        </scope>
+      </scope>
+    </scope>
+    

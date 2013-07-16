@@ -1,0 +1,48 @@
+<scope ilk="blob" lang="Perl" name="GD::Graph::Error">
+      <scope ilk="class" line="12" lineend="346" name="GD::Graph::Error">
+        <import line="17" module="Carp" symbol="*" />
+        <variable line="20" name="$CriticalLevel" />
+        <variable line="20" name="$Debug" />
+        <variable line="20" name="$ErrorLevel" />
+        <scope ilk="function" line="82" lineend="108" name="_error" signature="_error($self, $min_level, $max_level)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$min_level" />
+          <variable ilk="argument" name="$max_level" />
+        </scope>
+        <scope ilk="function" line="110" lineend="115" name="error" signature="error($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="117" lineend="122" name="warning" signature="warning($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="153" lineend="158" name="has_error" signature="has_error($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="160" lineend="165" name="has_warning" signature="has_warning($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="173" lineend="177" name="clear_errors" signature="clear_errors($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="208" lineend="243" name="__error_hash" signature="__error_hash($caller, $default, $msg)">
+          <variable ilk="argument" name="$caller" />
+          <variable ilk="argument" name="$default" />
+          <variable ilk="argument" name="$msg" />
+        </scope>
+        <scope ilk="function" line="245" lineend="257" name="_set_error" signature="_set_error($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="259" lineend="271" name="_set_warning" signature="_set_warning($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="283" lineend="289" name="_move_errors" signature="_move_errors($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="291" lineend="297" name="_dump" signature="_dump($self)">
+          <import line="294" module="Data::Dumper" />
+          <variable ilk="argument" name="$self" />
+          <import line="294" module="Data::Dumper" />
+        </scope>
+      </scope>
+    </scope>
+    

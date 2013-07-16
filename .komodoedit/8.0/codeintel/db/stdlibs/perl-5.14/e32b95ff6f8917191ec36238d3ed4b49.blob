@@ -1,0 +1,54 @@
+<scope ilk="blob" lang="Perl" name="CGI::Util">
+      <scope classrefs="Exporter" ilk="class" line="1" lineend="361" name="CGI::Util">
+        <import line="5" module="Exporter" />
+        <variable line="4" name="$VERSION" />
+        <variable line="4" name="@A2E" />
+        <variable line="4" name="@E2A" />
+        <variable line="4" name="@EXPORT_OK" />
+        <variable line="4" name="@ISA" />
+        <scope attributes="__exportable__" ilk="function" line="77" lineend="83" name="rearrange" signature="rearrange($order, @param)">
+          <variable ilk="argument" name="$order" />
+          <variable ilk="argument" name="@param" />
+        </scope>
+        <scope attributes="__exportable__" ilk="function" line="85" lineend="92" name="rearrange_header" signature="rearrange_header($order, @param)">
+          <variable ilk="argument" name="$order" />
+          <variable ilk="argument" name="@param" />
+        </scope>
+        <scope ilk="function" line="94" lineend="126" name="_rearrange_params" signature="_rearrange_params($order, @param)">
+          <variable ilk="argument" name="$order" />
+          <variable ilk="argument" name="@param" />
+        </scope>
+        <scope attributes="__exportable__" ilk="function" line="128" lineend="150" name="make_attributes" signature="make_attributes($attr, $escape, $do_not_quote)">
+          <variable ilk="argument" name="$attr" />
+          <variable ilk="argument" name="$escape" />
+          <variable ilk="argument" name="$do_not_quote" />
+        </scope>
+        <scope ilk="function" line="152" lineend="162" name="simple_escape" signature="simple_escape()" />
+        <scope ilk="function" line="164" lineend="206" name="utf8_chr" signature="utf8_chr()">
+          <import line="167" module="utf8" />
+          <import line="167" module="utf8" />
+        </scope>
+        <scope attributes="__exportable__" ilk="function" line="209" lineend="232" name="unescape" signature="unescape($todecode)">
+          <variable ilk="argument" name="$todecode" />
+        </scope>
+        <scope attributes="__exportable__" ilk="function" line="275" lineend="287" name="escape" signature="escape($toencode)">
+          <variable ilk="argument" name="$toencode" />
+        </scope>
+        <scope attributes="__exportable__" ilk="function" line="292" lineend="311" name="expires" signature="expires($time, $format)">
+          <variable ilk="argument" name="$time" />
+          <variable ilk="argument" name="$format" />
+        </scope>
+        <scope ilk="function" line="316" lineend="347" name="expire_calc" signature="expire_calc($time)">
+          <variable ilk="argument" name="$time" />
+        </scope>
+        <scope attributes="__exportable__" ilk="function" line="349" lineend="353" name="ebcdic2ascii" signature="ebcdic2ascii($data)">
+          <variable ilk="argument" name="$data" />
+        </scope>
+        <scope attributes="__exportable__" ilk="function" line="355" lineend="359" name="ascii2ebcdic" signature="ascii2ebcdic($data)">
+          <variable ilk="argument" name="$data" />
+        </scope>
+      </scope>
+      <scope ilk="class" line="249" lineend="272" name="utf8">
+        </scope>
+    </scope>
+    

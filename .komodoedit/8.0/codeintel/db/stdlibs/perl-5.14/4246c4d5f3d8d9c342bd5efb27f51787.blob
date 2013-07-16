@@ -1,0 +1,28 @@
+<scope ilk="blob" lang="Perl" name="Text::Wrap">
+      <scope classrefs="Exporter" ilk="class" line="1" lineend="120" name="Text::Wrap">
+        <import line="3" module="warnings::register" symbol="*" />
+        <import line="4" module="Exporter" />
+        <import line="27" module="Text::Tabs" symbol="expand" />
+        <import line="27" module="Text::Tabs" symbol="unexpand" />
+        <variable line="10" name="$VERSION" />
+        <variable attributes="__exportable__" line="12" name="$break" />
+        <variable attributes="__exportable__" line="12" name="$columns" />
+        <variable line="12" name="$debug" />
+        <variable attributes="__exportable__" line="12" name="$huge" />
+        <variable line="12" name="$tabstop" />
+        <variable line="12" name="$unexpand" />
+        <variable line="13" name="$separator" />
+        <variable line="13" name="$separator2" />
+        <scope attributes="__exported__" ilk="function" line="29" lineend="99" name="wrap" signature="wrap($ip, $xp, @t)">
+          <variable ilk="argument" name="$ip" />
+          <variable ilk="argument" name="$xp" />
+          <variable ilk="argument" name="@t" />
+        </scope>
+        <scope attributes="__exported__" ilk="function" line="101" lineend="118" name="fill" signature="fill($ip, $xp, @raw)">
+          <variable ilk="argument" name="$ip" />
+          <variable ilk="argument" name="$xp" />
+          <variable ilk="argument" name="@raw" />
+        </scope>
+      </scope>
+    </scope>
+    

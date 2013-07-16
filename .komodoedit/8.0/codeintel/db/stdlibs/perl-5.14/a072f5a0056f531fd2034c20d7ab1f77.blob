@@ -1,0 +1,86 @@
+<scope ilk="blob" lang="Perl" name="GD::Polygon">
+      <scope ilk="class" line="1" lineend="183" name="GD::Polygon">
+        <import line="4" module="Carp" symbol="carp" />
+        <import line="5" module="GD" symbol="*" />
+        <variable line="8" name="*GD::Polygon::delete" />
+        <scope attributes="__ctor__" ilk="function" line="44" lineend="47" name="new" signature="new($class)">
+          <variable ilk="argument" name="$class" />
+        </scope>
+        <scope ilk="function" line="50" lineend="53" name="DESTROY" signature="DESTROY($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="55" lineend="58" name="clear" signature="clear($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="61" lineend="65" name="addPt" signature="addPt($self, $x, $y)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$x" />
+          <variable ilk="argument" name="$y" />
+        </scope>
+        <scope ilk="function" line="68" lineend="72" name="getPt" signature="getPt($self, $index)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$index" />
+        </scope>
+        <scope ilk="function" line="75" lineend="83" name="setPt" signature="setPt($self, $index, $x, $y)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$index" />
+          <variable ilk="argument" name="$x" />
+          <variable ilk="argument" name="$y" />
+        </scope>
+        <scope ilk="function" line="86" lineend="89" name="length" signature="length($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="93" lineend="96" name="vertices" signature="vertices($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="100" lineend="115" name="bounds" signature="bounds($self, $top, $bottom, $left, $right)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$top" />
+          <variable ilk="argument" name="$bottom" />
+          <variable ilk="argument" name="$left" />
+          <variable ilk="argument" name="$right" />
+        </scope>
+        <scope ilk="function" line="118" lineend="127" name="deletePt" signature="deletePt($self, $index)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$index" />
+        </scope>
+        <scope ilk="function" line="130" lineend="138" name="offset" signature="offset($self, $dh, $dv)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$dh" />
+          <variable ilk="argument" name="$dv" />
+        </scope>
+        <scope ilk="function" line="142" lineend="154" name="map" signature="map($self, $srcL, $srcT, $srcR, $srcB, $destL, $destT, $destR, $destB)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$srcL" />
+          <variable ilk="argument" name="$srcT" />
+          <variable ilk="argument" name="$srcR" />
+          <variable ilk="argument" name="$srcB" />
+          <variable ilk="argument" name="$destL" />
+          <variable ilk="argument" name="$destT" />
+          <variable ilk="argument" name="$destR" />
+          <variable ilk="argument" name="$destB" />
+        </scope>
+        <scope ilk="function" line="157" lineend="165" name="toPt" signature="toPt($self, $dx, $dy)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$dx" />
+          <variable ilk="argument" name="$dy" />
+        </scope>
+        <scope ilk="function" line="167" lineend="175" name="transform" signature="transform($self, $a, $b, $c, $d, $tx, $ty)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$a" />
+          <variable ilk="argument" name="$b" />
+          <variable ilk="argument" name="$c" />
+          <variable ilk="argument" name="$d" />
+          <variable ilk="argument" name="$tx" />
+          <variable ilk="argument" name="$ty" />
+        </scope>
+        <scope ilk="function" line="177" lineend="181" name="scale" signature="scale($self, $sx, $sy, $cx, $cy)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$sx" />
+          <variable ilk="argument" name="$sy" />
+          <variable ilk="argument" name="$cx" />
+          <variable ilk="argument" name="$cy" />
+        </scope>
+      </scope>
+    </scope>
+    

@@ -1,0 +1,42 @@
+<scope ilk="blob" lang="Perl" name="ExtUtils::Constant::ProxySubs">
+      <scope classrefs="ExtUtils::Constant::XS" ilk="class" line="1" lineend="682" name="ExtUtils::Constant::ProxySubs">
+        <import line="7" module="Carp" symbol="*" />
+        <import line="8" module="ExtUtils::Constant::XS" />
+        <import line="9" module="ExtUtils::Constant::Utils" symbol="C_stringify" />
+        <import line="10" module="ExtUtils::Constant::XS" symbol="%XS_TypeSet" />
+        <variable line="4" name="$VERSION" />
+        <variable line="4" name="%type_from_struct" />
+        <variable line="4" name="%type_to_struct" />
+        <variable line="4" name="%type_to_sv" />
+        <variable line="4" name="@ISA" />
+        <variable line="5" name="%type_is_a_problem" />
+        <variable line="5" name="%type_num_args" />
+        <variable line="5" name="%type_to_C_value" />
+        <variable line="6" name="%type_temporary" />
+        <scope ilk="function" line="63" lineend="66" name="type_to_C_value" signature="type_to_C_value($self, $type)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$type" />
+        </scope>
+        <scope ilk="function" line="91" lineend="123" name="partition_names" signature="partition_names($self, $default_type, @items)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$default_type" />
+          <variable ilk="argument" name="@items" />
+        </scope>
+        <scope ilk="function" line="125" lineend="154" name="boottime_iterator" signature="boottime_iterator($self, $type, $iterator, $hash, $subname, $push)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$type" />
+          <variable ilk="argument" name="$iterator" />
+          <variable ilk="argument" name="$hash" />
+          <variable ilk="argument" name="$subname" />
+          <variable ilk="argument" name="$push" />
+        </scope>
+        <scope ilk="function" line="156" lineend="172" name="name_len_value_macro" signature="name_len_value_macro($self, $item)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$item" />
+        </scope>
+        <scope ilk="function" line="174" lineend="502" name="WriteConstants" signature="WriteConstants($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+      </scope>
+    </scope>
+    

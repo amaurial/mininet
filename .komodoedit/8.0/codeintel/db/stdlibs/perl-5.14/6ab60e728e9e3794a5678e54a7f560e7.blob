@@ -1,0 +1,25 @@
+<scope ilk="blob" lang="Perl" name="CPANPLUS::Shell::Default::Plugins::Remote">
+      <scope ilk="class" line="1" lineend="185" name="CPANPLUS::Shell::Default::Plugins::Remote">
+        <import line="5" module="Module::Load" symbol="*" />
+        <import line="6" module="Params::Check" symbol="check" />
+        <import line="7" module="CPANPLUS::Error" symbol="error" />
+        <import line="7" module="CPANPLUS::Error" symbol="msg" />
+        <import line="8" module="Locale::Maketext::Simple" symbol="Class" />
+        <scope ilk="function" line="52" lineend="52" name="plugins" signature="plugins()" />
+        <scope ilk="function" line="54" lineend="126" name="connect" signature="connect($class, $shell, $cb, $cmd, $input, $opts)">
+          <variable ilk="argument" name="$class" />
+          <variable ilk="argument" name="$shell" />
+          <variable ilk="argument" name="$cb" />
+          <variable ilk="argument" name="$cmd" />
+          <variable ilk="argument" name="$input" />
+          <variable ilk="argument" name="$opts" />
+        </scope>
+        <scope ilk="function" line="128" lineend="139" name="disconnect" signature="disconnect($class, $shell)">
+          <variable ilk="argument" name="$class" />
+          <variable ilk="argument" name="$shell" />
+        </scope>
+        <scope ilk="function" line="141" lineend="147" name="connect_help" signature="connect_help()" />
+        <scope ilk="function" line="149" lineend="152" name="disconnect_help" signature="disconnect_help()" />
+      </scope>
+    </scope>
+    

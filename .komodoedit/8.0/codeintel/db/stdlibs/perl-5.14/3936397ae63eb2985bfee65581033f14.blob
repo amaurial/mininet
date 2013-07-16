@@ -1,0 +1,43 @@
+<scope ilk="blob" lang="Perl" name="IO::Uncompress::Bunzip2">
+      <scope classrefs="Exporter IO::Uncompress::Base" ilk="class" line="1" lineend="140" name="IO::Uncompress::Bunzip2">
+        <import line="7" module="IO::Compress::Base::Common" symbol="*" />
+        <import line="9" module="IO::Uncompress::Base" symbol="*" />
+        <import line="10" module="IO::Uncompress::Adapter::Bunzip2" symbol="*" />
+        <import line="12" module="Exporter" />
+        <variable attributes="__exportable__" line="13" name="$Bunzip2Error" />
+        <variable line="13" name="$VERSION" />
+        <variable line="13" name="%EXPORT_TAGS" />
+        <variable line="13" name="@EXPORT_OK" />
+        <variable line="13" name="@ISA" />
+        <scope ilk="function" line="25" lineend="31" name="new" signature="new($class)">
+          <variable ilk="argument" name="$class" />
+        </scope>
+        <scope attributes="__exportable__" ilk="function" line="33" lineend="37" name="bunzip2" signature="bunzip2()">
+          </scope>
+        <scope ilk="function" line="39" lineend="49" name="getExtraParams" signature="getExtraParams($self)">
+          <import line="43" module="IO::Compress::Base::Common" symbol="*" />
+          <variable ilk="argument" name="$self" />
+          <import line="43" module="IO::Compress::Base::Common" symbol="*" />
+        </scope>
+        <scope ilk="function" line="52" lineend="58" name="ckParams" signature="ckParams($self, $got)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$got" />
+        </scope>
+        <scope ilk="function" line="60" lineend="84" name="mkUncomp" signature="mkUncomp($self, $got)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$got" />
+        </scope>
+        <scope ilk="function" line="87" lineend="106" name="ckMagic" signature="ckMagic($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="108" lineend="125" name="readHeader" signature="readHeader($self, $magic)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$magic" />
+        </scope>
+        <scope ilk="function" line="127" lineend="130" name="chkTrailer" signature="chkTrailer()" />
+        <scope ilk="function" line="134" lineend="138" name="isBzip2Magic" signature="isBzip2Magic($buffer)">
+          <variable ilk="argument" name="$buffer" />
+        </scope>
+      </scope>
+    </scope>
+    

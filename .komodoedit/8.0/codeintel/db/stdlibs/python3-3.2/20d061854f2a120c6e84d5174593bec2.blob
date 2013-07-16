@@ -1,0 +1,248 @@
+<scope doc="SAX driver for the pyexpat C module.  This driver works with&#xA;pyexpat.__version__ == &apos;2.22&apos;." ilk="blob" lang="Python" name="xml.sax.expatreader">
+      <scope classrefs="object" doc="&#xA;" ilk="class" line="30" name="AttributesImpl">
+        <scope ilk="function" name="getQNameByName" signature="getQNameByName(self, name)" />
+        <scope ilk="function" name="getType" signature="getType(self, name)" />
+        <scope ilk="function" name="__getitem__" signature="__getitem__(self, name)" />
+        <scope ilk="function" name="get" signature="get(self, name, alternative=None)" />
+        <scope ilk="function" name="keys" signature="keys(self)" />
+        <scope ilk="function" name="getValueByQName" signature="getValueByQName(self, name)" />
+        <scope ilk="function" name="copy" signature="copy(self)" />
+        <scope doc="Non-NS-aware implementation." ilk="function" name="__init__" signature="__init__(self, attrs)" />
+        <scope ilk="function" name="__contains__" signature="__contains__(self, name)" />
+        <scope ilk="function" name="getNameByQName" signature="getNameByQName(self, name)" />
+        <scope ilk="function" name="getLength" signature="getLength(self)" />
+        <scope ilk="function" name="getQNames" signature="getQNames(self)" />
+        <scope ilk="function" name="getValue" signature="getValue(self, name)" />
+        <scope ilk="function" name="values" signature="values(self)" />
+        <scope ilk="function" name="items" signature="items(self)" />
+        <scope ilk="function" name="getNames" signature="getNames(self)" />
+        <scope ilk="function" name="__len__" signature="__len__(self)" />
+      </scope>
+      <scope classrefs="AttributesImpl" doc="&#xA;" ilk="class" line="31" name="AttributesNSImpl">
+        <scope ilk="function" name="getQNameByName" signature="getQNameByName(self, name)" />
+        <scope ilk="function" name="copy" signature="copy(self)" />
+        <scope doc="NS-aware implementation." ilk="function" name="__init__" signature="__init__(self, attrs, qnames)" />
+        <scope ilk="function" name="getNameByQName" signature="getNameByQName(self, name)" />
+        <scope ilk="function" name="getValueByQName" signature="getValueByQName(self, name)" />
+        <scope ilk="function" name="getQNames" signature="getQNames(self)" />
+      </scope>
+      <scope classrefs="Locator" doc="Locator for use with the ExpatParser class.&#xA;This uses a weak reference to the parser object to avoid creating a circular reference between the parser and the content handler." ilk="class" line="48" lineend="79" name="ExpatLocator">
+        <scope ilk="function" line="69" lineend="73" name="getPublicId" returns="parser._source.getPublicId()" signature="getPublicId(self)">
+          <variable citdl="ExpatLocator" ilk="argument" name="self" />
+          <variable citdl="_mkproxy()" line="70" name="parser" />
+        </scope>
+        <scope ilk="function" line="63" lineend="67" name="getLineNumber" returns="parser._parser.ErrorLineNumber" signature="getLineNumber(self)">
+          <variable citdl="ExpatLocator" ilk="argument" name="self" />
+          <variable citdl="_mkproxy()" line="64" name="parser" />
+        </scope>
+        <scope ilk="function" line="57" lineend="61" name="getColumnNumber" returns="parser._parser.ErrorColumnNumber" signature="getColumnNumber(self)">
+          <variable citdl="ExpatLocator" ilk="argument" name="self" />
+          <variable citdl="_mkproxy()" line="58" name="parser" />
+        </scope>
+        <scope ilk="function" line="75" lineend="79" name="getSystemId" returns="parser._source.getSystemId()" signature="getSystemId(self)">
+          <variable citdl="ExpatLocator" ilk="argument" name="self" />
+          <variable citdl="_mkproxy()" line="76" name="parser" />
+        </scope>
+        <scope ilk="function" line="54" lineend="55" name="__init__" signature="__init__(self, parser)">
+          <variable citdl="ExpatLocator" ilk="argument" name="self" />
+          <variable ilk="argument" name="parser" />
+        </scope>
+        <variable attributes="protected __instancevar__" citdl="_mkproxy()" line="55" name="_ref" />
+      </scope>
+      <scope classrefs="IncrementalParser Locator" doc="SAX driver for the pyexpat C module.&#xA;" ilk="class" line="84" lineend="403" name="ExpatParser">
+        <scope ilk="function" line="132" lineend="160" name="setFeature" signature="setFeature(self, name, state)">
+          <variable citdl="ExpatParser" ilk="argument" name="self" />
+          <variable ilk="argument" name="name" />
+          <variable ilk="argument" name="state" />
+        </scope>
+        <scope ilk="function" line="196" lineend="211" name="feed" signature="feed(self, data, isFinal=0)">
+          <variable citdl="ExpatParser" ilk="argument" name="self" />
+          <variable ilk="argument" name="data" />
+          <variable citdl="SAXParseException()" line="209" name="exc" />
+          <variable citdl="int" ilk="argument" name="isFinal" />
+        </scope>
+        <scope ilk="function" line="286" lineend="289" name="getColumnNumber" returns="self._parser.ErrorColumnNumber" signature="getColumnNumber(self)">
+          <variable citdl="ExpatParser" ilk="argument" name="self" />
+        </scope>
+        <scope doc="Parse an XML document from a URL or an InputSource." ilk="function" line="100" lineend="107" name="parse" signature="parse(self, source)">
+          <variable citdl="saxutils.prepare_input_source()" ilk="argument" name="source" />
+          <variable citdl="ExpatParser" ilk="argument" name="self" />
+        </scope>
+        <scope ilk="function" line="399" lineend="403" name="skipped_entity_handler" signature="skipped_entity_handler(self, name, is_pe)">
+          <variable citdl="ExpatParser" ilk="argument" name="self" />
+          <variable citdl="str" ilk="argument" name="name" />
+          <variable ilk="argument" name="is_pe" />
+        </scope>
+        <scope doc="# event handlers" ilk="function" line="303" lineend="304" name="start_element" signature="start_element(self, name, attrs)">
+          <variable citdl="ExpatParser" ilk="argument" name="self" />
+          <variable ilk="argument" name="name" />
+          <variable ilk="argument" name="attrs" />
+        </scope>
+        <scope ilk="function" line="213" lineend="224" name="close" signature="close(self)">
+          <variable citdl="ExpatParser" ilk="argument" name="self" />
+          <variable citdl="self._source.getByteStream()" line="222" name="bs" />
+        </scope>
+        <scope ilk="function" line="87" lineend="96" name="__init__" signature="__init__(self, namespaceHandling=0, bufsize=65516)">
+          <variable citdl="ExpatParser" ilk="argument" name="self" />
+          <variable citdl="int" ilk="argument" name="bufsize" />
+          <variable citdl="int" ilk="argument" name="namespaceHandling" />
+        </scope>
+        <scope ilk="function" line="226" lineend="229" name="_reset_cont_handler" signature="_reset_cont_handler(self)">
+          <variable citdl="ExpatParser" ilk="argument" name="self" />
+        </scope>
+        <scope ilk="function" line="120" lineend="130" name="getFeature" returns="bool" signature="getFeature(self, name)">
+          <variable citdl="ExpatParser" ilk="argument" name="self" />
+          <variable ilk="argument" name="name" />
+        </scope>
+        <scope ilk="function" line="306" lineend="307" name="end_element" signature="end_element(self, name)">
+          <variable citdl="ExpatParser" ilk="argument" name="self" />
+          <variable ilk="argument" name="name" />
+        </scope>
+        <scope ilk="function" line="299" lineend="300" name="getSystemId" returns="self._source.getSystemId()" signature="getSystemId(self)">
+          <variable citdl="ExpatParser" ilk="argument" name="self" />
+        </scope>
+        <scope ilk="function" line="371" lineend="372" name="unparsed_entity_decl" signature="unparsed_entity_decl(self, name, base, sysid, pubid, notation_name)">
+          <variable ilk="argument" name="sysid" />
+          <variable ilk="argument" name="base" />
+          <variable ilk="argument" name="name" />
+          <variable ilk="argument" name="notation_name" />
+          <variable citdl="ExpatParser" ilk="argument" name="self" />
+          <variable ilk="argument" name="pubid" />
+        </scope>
+        <scope ilk="function" line="115" lineend="118" name="setContentHandler" signature="setContentHandler(self, handler)">
+          <variable citdl="ExpatParser" ilk="argument" name="self" />
+          <variable ilk="argument" name="handler" />
+        </scope>
+        <scope ilk="function" line="343" lineend="352" name="end_element_ns" signature="end_element_ns(self, name)">
+          <variable citdl="tuple" line="344" name="pair" />
+          <variable citdl="ExpatParser" ilk="argument" name="self" />
+          <variable ilk="argument" name="name" />
+        </scope>
+        <scope ilk="function" line="374" lineend="375" name="notation_decl" signature="notation_decl(self, name, base, sysid, pubid)">
+          <variable ilk="argument" name="sysid" />
+          <variable citdl="ExpatParser" ilk="argument" name="self" />
+          <variable ilk="argument" name="base" />
+          <variable ilk="argument" name="pubid" />
+          <variable ilk="argument" name="name" />
+        </scope>
+        <scope ilk="function" line="296" lineend="297" name="getPublicId" returns="self._source.getPublicId()" signature="getPublicId(self)">
+          <variable citdl="ExpatParser" ilk="argument" name="self" />
+        </scope>
+        <scope ilk="function" line="365" lineend="366" name="end_namespace_decl" signature="end_namespace_decl(self, prefix)">
+          <variable citdl="ExpatParser" ilk="argument" name="self" />
+          <variable ilk="argument" name="prefix" />
+        </scope>
+        <scope ilk="function" line="109" lineend="111" name="prepareParser" signature="prepareParser(self, source)">
+          <variable ilk="argument" name="source" />
+          <variable citdl="ExpatParser" ilk="argument" name="self" />
+        </scope>
+        <scope ilk="function" line="231" lineend="245" name="_reset_lex_handler_prop" signature="_reset_lex_handler_prop(self)">
+          <variable line="232" name="lex" />
+          <variable citdl="ExpatParser" ilk="argument" name="self" />
+          <variable line="233" name="parser" />
+        </scope>
+        <scope ilk="function" line="377" lineend="397" name="external_entity_ref" returns="int" signature="external_entity_ref(self, context, base, sysid, pubid)">
+          <variable ilk="argument" name="sysid" />
+          <variable ilk="argument" name="base" />
+          <variable ilk="argument" name="context" />
+          <variable citdl="self._ent_handler.resolveEntity()" line="381" name="source" />
+          <variable citdl="ExpatParser" ilk="argument" name="self" />
+          <variable ilk="argument" name="pubid" />
+        </scope>
+        <scope ilk="function" line="291" lineend="294" name="getLineNumber" returns="self._parser.ErrorLineNumber" signature="getLineNumber(self)">
+          <variable citdl="ExpatParser" ilk="argument" name="self" />
+        </scope>
+        <scope ilk="function" line="309" lineend="341" name="start_element_ns" signature="start_element_ns(self, name, attrs)">
+          <variable ilk="argument" name="name" />
+          <variable citdl="ExpatParser" ilk="argument" name="self" />
+          <variable citdl="aname" line="327" name="qname" />
+          <variable citdl="dict" line="321" name="qnames" />
+          <variable citdl="len()" line="324" name="length" />
+          <variable citdl="aname.split()" line="323" name="parts" />
+          <variable citdl="tuple" line="328" name="apair" />
+          <variable ilk="argument" name="attrs" />
+          <variable citdl="dict" line="320" name="newattrs" />
+          <variable citdl="tuple" line="310" name="pair" />
+        </scope>
+        <scope ilk="function" line="362" lineend="363" name="start_namespace_decl" signature="start_namespace_decl(self, prefix, uri)">
+          <variable citdl="ExpatParser" ilk="argument" name="self" />
+          <variable ilk="argument" name="prefix" />
+          <variable ilk="argument" name="uri" />
+        </scope>
+        <scope ilk="function" line="180" lineend="192" name="setProperty" signature="setProperty(self, name, value)">
+          <variable citdl="ExpatParser" ilk="argument" name="self" />
+          <variable ilk="argument" name="name" />
+          <variable ilk="argument" name="value" />
+        </scope>
+        <scope ilk="function" line="368" lineend="369" name="start_doctype_decl" signature="start_doctype_decl(self, name, sysid, pubid, has_internal_subset)">
+          <variable ilk="argument" name="sysid" />
+          <variable ilk="argument" name="has_internal_subset" />
+          <variable ilk="argument" name="pubid" />
+          <variable citdl="ExpatParser" ilk="argument" name="self" />
+          <variable ilk="argument" name="name" />
+        </scope>
+        <scope ilk="function" line="247" lineend="282" name="reset" signature="reset(self)">
+          <variable citdl="ExpatParser" ilk="argument" name="self" />
+        </scope>
+        <scope ilk="function" line="162" lineend="178" name="getProperty" returns="self._parser.GetInputContext()" signature="getProperty(self, name)">
+          <variable citdl="ExpatParser" ilk="argument" name="self" />
+          <variable ilk="argument" name="name" />
+        </scope>
+        <scope doc="# this is not used (call directly to ContentHandler)" ilk="function" line="359" lineend="360" name="character_data" signature="character_data(self, data)">
+          <variable citdl="ExpatParser" ilk="argument" name="self" />
+          <variable ilk="argument" name="data" />
+        </scope>
+        <scope doc="# this is not used (call directly to ContentHandler)" ilk="function" line="355" lineend="356" name="processing_instruction" signature="processing_instruction(self, target, data)">
+          <variable citdl="ExpatParser" ilk="argument" name="self" />
+          <variable ilk="argument" name="data" />
+          <variable ilk="argument" name="target" />
+        </scope>
+        <variable attributes="protected __instancevar__" citdl="int" line="91" name="_namespaces" />
+        <variable attributes="protected __instancevar__" citdl="expat.ParserCreate()" line="90" name="_parser" />
+        <variable attributes="protected __instancevar__" citdl="int" line="95" name="_external_ges" />
+        <variable attributes="protected __instancevar__" citdl="self._ent_handler.resolveEntity()" line="89" name="_source" />
+        <variable attributes="protected __instancevar__" line="266" name="_decl_handler_prop" />
+        <variable attributes="protected __instancevar__" citdl="list" line="94" name="_entity_stack" />
+        <variable attributes="protected __instancevar__" line="92" name="_lex_handler_prop" />
+        <variable attributes="protected __instancevar__" citdl="int" line="93" name="_parsing" />
+        <variable attributes="protected __instancevar__" citdl="dict" line="96" name="_interning" />
+      </scope>
+      <scope classrefs="Exception" doc="Encapsulate an XML error or warning. This class can contain&#xA;basic error or warning information from either the XML parser or the application: you can subclass it to provide additional functionality, or to add localization. Note that although you will receive a SAXException as the argument to the handlers in the ErrorHandler interface, you are not actually required to throw the exception; instead, you can simply read the information in it." ilk="class" name="SAXException">
+        <scope doc="Return a message for this exception." ilk="function" name="getMessage" signature="getMessage(self)" />
+        <scope doc="Return the embedded exception, or None if there was none." ilk="function" name="getException" signature="getException(self)" />
+        <scope doc="Avoids weird error messages if someone does exception[ix] by&#xA;mistake, since Exception has __getitem__ defined." ilk="function" name="__getitem__" signature="__getitem__(self, ix)" />
+        <scope doc="Create a string representation of the exception." ilk="function" name="__str__" signature="__str__(self)" />
+        <scope doc="Creates an exception." ilk="function" name="__init__" signature="__init__(self, msg, exception=None)" />
+      </scope>
+      <scope classrefs="SAXException" doc="Exception class for an unrecognized identifier.&#xA;An XMLReader will raise this exception when it is confronted with an unrecognized feature or property. SAX applications and extensions may use this class for similar purposes." ilk="class" name="SAXNotRecognizedException" />
+      <scope classrefs="SAXException" doc="Exception class for an unsupported operation.&#xA;An XMLReader will raise this exception when a service it cannot perform is requested (specifically setting a state or value). SAX applications and extensions may use this class for similar purposes." ilk="class" name="SAXNotSupportedException" />
+      <scope classrefs="SAXException" doc="Encapsulate an XML parse error or warning.&#xA;This exception will include information for locating the error in the original XML document. Note that although the application will receive a SAXParseException as the argument to the handlers in the ErrorHandler interface, the application is not actually required to throw the exception; instead, it can simply read the information in it and take a different action.  Since this exception is a subclass of SAXException, it inherits the ability to wrap another exception." ilk="class" name="SAXParseException">
+        <scope doc="Get the public identifier of the entity where the exception&#xA;occurred." ilk="function" name="getPublicId" signature="getPublicId(self)" />
+        <scope doc="The column number of the end of the text where the exception&#xA;occurred." ilk="function" name="getColumnNumber" signature="getColumnNumber(self)" />
+        <scope doc="Create a string representation of the exception." ilk="function" name="__str__" signature="__str__(self)" />
+        <scope doc="Get the system identifier of the entity where the exception&#xA;occurred." ilk="function" name="getSystemId" signature="getSystemId(self)" />
+        <scope doc="The line number of the end of the text where the exception&#xA;occurred." ilk="function" name="getLineNumber" signature="getLineNumber(self)" />
+        <scope doc="Creates the exception." ilk="function" name="__init__" signature="__init__(self, msg, exception, locator)" />
+      </scope>
+      <scope classrefs="SAXNotSupportedException" doc="Exception class for a missing driver.&#xA;An XMLReader module (driver) should raise this exception when it is first imported, e.g. when a support module cannot be imported. It also may be raised during parsing, e.g. if executing an external program is not permitted." ilk="class" name="SAXReaderNotAvailable" />
+      <scope ilk="function" line="407" lineend="408" name="create_parser" returns="ExpatParser" signature="create_parser(*args, **kwargs)">
+        <variable attributes="varargs" ilk="argument" name="args" />
+        <variable attributes="kwargs" ilk="argument" name="kwargs" />
+      </scope>
+      <import module="expat" />
+      <variable citdl="str" name="feature_external_ges" />
+      <variable citdl="str" name="feature_external_pes" />
+      <variable citdl="str" name="feature_namespace_prefixes" />
+      <variable citdl="str" name="feature_namespaces" />
+      <variable citdl="str" name="feature_string_interning" />
+      <variable citdl="str" name="feature_validation" />
+      <import module="handler" />
+      <variable citdl="str" name="property_interning_dict" />
+      <variable citdl="str" name="property_xml_string" />
+      <import module="saxutils" />
+      <variable citdl="str" line="6" name="version" />
+      <import module="xmlreader" />
+      <variable attributes="__hidden__" citdl="create_parser()" line="414" name="p" />
+      <variable attributes="protected __hidden__" citdl="function" line="39" name="_mkproxy" />
+    </scope>
+    

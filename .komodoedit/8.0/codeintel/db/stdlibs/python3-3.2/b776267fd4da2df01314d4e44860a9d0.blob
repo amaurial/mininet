@@ -1,0 +1,882 @@
+<scope doc="# dialog.py -- Tkinter interface to the tk_dialog script.&#xA;" ilk="blob" lang="Python" name="tkinter.dialog">
+      <variable citdl="str" name="ACTIVE" />
+      <variable citdl="str" name="ALL" />
+      <variable citdl="str" name="ANCHOR" />
+      <variable citdl="str" name="ARC" />
+      <scope ilk="function" name="At" signature="At(x, y=None)" />
+      <scope doc="# Indices: # XXX I don&apos;t like these -- take them away" ilk="function" name="AtEnd" signature="AtEnd()" />
+      <scope ilk="function" name="AtInsert" signature="AtInsert(*args)" />
+      <scope ilk="function" name="AtSelFirst" signature="AtSelFirst()" />
+      <scope ilk="function" name="AtSelLast" signature="AtSelLast()" />
+      <variable citdl="str" name="BASELINE" />
+      <variable citdl="str" name="BEVEL" />
+      <variable citdl="str" name="BOTH" />
+      <variable citdl="str" name="BOTTOM" />
+      <variable citdl="str" name="BROWSE" />
+      <variable citdl="str" name="BUTT" />
+      <scope classrefs="Misc" doc="Internal class.&#xA;" ilk="class" name="BaseWidget">
+        <scope ilk="function" name="_do" signature="_do(self, name, args=())" />
+        <scope doc="Destroy this and all descendants widgets." ilk="function" name="destroy" signature="destroy(self)" />
+        <scope doc="Internal function. Sets up information about children." ilk="function" name="_setup" signature="_setup(self, master, cnf)" />
+        <scope doc="Construct a widget with the parent widget MASTER, a name&#xA;WIDGETNAME and appropriate options." ilk="function" name="__init__" signature="__init__(self, master, widgetName, cnf={}, kw={}, extra=())" />
+      </scope>
+      <scope classrefs="Image" doc="Widget which can display a bitmap.&#xA;" ilk="class" name="BitmapImage">
+        <scope doc="Create a bitmap with NAME." ilk="function" name="__init__" signature="__init__(self, name=None, cnf={}, master=None, **kw)" />
+      </scope>
+      <scope classrefs="Variable" doc="Value holder for boolean variables.&#xA;" ilk="class" name="BooleanVar">
+        <scope doc="Construct a boolean variable." ilk="function" name="__init__" signature="__init__(self, master=None, value=None, name=None)" />
+        <scope doc="Return the value of the variable as a bool." ilk="function" name="get" signature="get(self)" />
+      </scope>
+      <scope classrefs="Widget" doc="Button widget.&#xA;" ilk="class" name="Button">
+        <scope ilk="function" name="tkButtonLeave" signature="tkButtonLeave(self, *dummy)" />
+        <scope ilk="function" name="tkButtonEnter" signature="tkButtonEnter(self, *dummy)" />
+        <scope ilk="function" name="tkButtonUp" signature="tkButtonUp(self, *dummy)" />
+        <scope ilk="function" name="tkButtonDown" signature="tkButtonDown(self, *dummy)" />
+        <scope doc="Flash the button." ilk="function" name="flash" signature="flash(self)" />
+        <scope doc="Invoke the command associated with the button." ilk="function" name="invoke" signature="invoke(self)" />
+        <scope ilk="function" name="tkButtonInvoke" signature="tkButtonInvoke(self, *dummy)" />
+        <scope doc="Construct a button widget with the parent MASTER." ilk="function" name="__init__" signature="__init__(self, master=None, cnf={}, **kw)" />
+      </scope>
+      <variable citdl="str" name="CASCADE" />
+      <variable citdl="str" name="CENTER" />
+      <variable citdl="str" name="CHAR" />
+      <variable citdl="str" name="CHECKBUTTON" />
+      <variable citdl="str" name="CHORD" />
+      <variable citdl="str" name="COMMAND" />
+      <variable citdl="str" name="CURRENT" />
+      <scope classrefs="object" doc="Internal class. Stores function to call when some user&#xA;defined Tcl function is called e.g. after an event occurred." ilk="class" name="CallWrapper">
+        <scope doc="Apply first function SUBST to arguments, than FUNC." ilk="function" name="__call__" signature="__call__(self, *args)" />
+        <scope doc="Store FUNC, SUBST and WIDGET as members." ilk="function" name="__init__" signature="__init__(self, func, subst, widget)" />
+      </scope>
+      <scope classrefs="Widget XView YView" doc="Canvas widget to display graphical elements like lines or text.&#xA;" ilk="class" name="Canvas">
+        <scope doc="Return tags associated with the first item specified in&#xA;ARGS." ilk="function" name="gettags" signature="gettags(self, *args)" />
+        <scope doc="Add tag NEWTAG to all items." ilk="function" name="addtag_all" signature="addtag_all(self, newtag)" />
+        <scope doc="Create window with coordinates x1,y1,x2,y2." ilk="function" name="create_window" signature="create_window(self, *args, **kw)" />
+        <scope doc="Configure resources of an item TAGORID." ilk="function" name="itemconfigure" signature="itemconfigure(self, tagOrId, cnf=None, **kw)" />
+        <scope doc="Create polygon with coordinates x1,y1,...,xn,yn." ilk="function" name="create_polygon" signature="create_polygon(self, *args, **kw)" />
+        <scope doc="Move an item TAGORID given in ARGS." ilk="function" name="move" signature="move(self, *args)" />
+        <scope doc="Adjust the view of the canvas to GAIN times the difference&#xA;between X and Y and the coordinates given in scan_mark." ilk="function" name="scan_dragto" signature="scan_dragto(self, x, y, gain=10)" />
+        <scope doc="Create text with coordinates x1,y1." ilk="function" name="create_text" signature="create_text(self, *args, **kw)" />
+        <scope doc="Add tag NEWTAG to all items which overlap the rectangle&#xA;defined by X1,Y1,X2,Y2." ilk="function" name="addtag_overlapping" signature="addtag_overlapping(self, newtag, x1, y1, x2, y2)" />
+        <scope doc="Return the canvas y coordinate of pixel position SCREENY&#xA;rounded to nearest multiple of GRIDSPACING units." ilk="function" name="canvasy" signature="canvasy(self, screeny, gridspacing=None)" />
+        <scope doc="Return the canvas x coordinate of pixel position SCREENX&#xA;rounded to nearest multiple of GRIDSPACING units." ilk="function" name="canvasx" signature="canvasx(self, screenx, gridspacing=None)" />
+        <scope doc="Raise an item TAGORID given in ARGS (optional above another&#xA;item)." ilk="function" name="tkraise" signature="tkraise(self, *args)" />
+        <scope doc="Delete tag or id given as last arguments in ARGS from items&#xA;identified by first argument in ARGS." ilk="function" name="dtag" signature="dtag(self, *args)" />
+        <scope doc="Remember the current X, Y coordinates." ilk="function" name="scan_mark" signature="scan_mark(self, x, y)" />
+        <scope doc="Set the fixed end of a selection in item TAGORID to INDEX." ilk="function" name="select_from" signature="select_from(self, tagOrId, index)" />
+        <scope doc="Internal function." ilk="function" name="addtag" signature="addtag(self, *args)" />
+        <scope doc="Construct a canvas widget with the parent MASTER." ilk="function" name="__init__" signature="__init__(self, master=None, cnf={}, **kw)" />
+        <scope doc="Add tag NEWTAG to item which is closest to pixel at X, Y." ilk="function" name="addtag_closest" signature="addtag_closest(self, newtag, x, y, halo=None, start=None)" />
+        <scope doc="Raise an item TAGORID given in ARGS (optional above another&#xA;item)." ilk="function" name="tag_raise" signature="tag_raise(self, *args)" />
+        <scope doc="Unbind for all items with TAGORID for event SEQUENCE  the&#xA;function identified with FUNCID." ilk="function" name="tag_unbind" signature="tag_unbind(self, tagOrId, sequence, funcid=None)" />
+        <scope doc="Scale item TAGORID with XORIGIN, YORIGIN, XSCALE, YSCALE." ilk="function" name="scale" signature="scale(self, *args)" />
+        <scope doc="Set cursor at position POS in the item identified by&#xA;TAGORID." ilk="function" name="icursor" signature="icursor(self, *args)" />
+        <scope doc="Create oval with coordinates x1,y1,x2,y2." ilk="function" name="create_oval" signature="create_oval(self, *args, **kw)" />
+        <scope doc="Return all items below TAGORID." ilk="function" name="find_below" signature="find_below(self, tagOrId)" />
+        <scope doc="Bind to all items with TAGORID at event SEQUENCE a call to&#xA;function FUNC." ilk="function" name="tag_bind" signature="tag_bind(self, tagOrId, sequence=None, func=None, add=None)" />
+        <scope doc="Return item which is closest to pixel at X, Y." ilk="function" name="find_closest" signature="find_closest(self, x, y, halo=None, start=None)" />
+        <scope doc="Create image item with coordinates x1,y1." ilk="function" name="create_image" signature="create_image(self, *args, **kw)" />
+        <scope doc="Internal function." ilk="function" name="find" signature="find(self, *args)" />
+        <scope doc="Return all items which overlap the rectangle defined by&#xA;X1,Y1,X2,Y2." ilk="function" name="find_overlapping" signature="find_overlapping(self, x1, y1, x2, y2)" />
+        <scope doc="Adjust the end of the selection near the cursor of an item&#xA;TAGORID to index." ilk="function" name="select_adjust" signature="select_adjust(self, tagOrId, index)" />
+        <scope doc="Return all items with TAGORID." ilk="function" name="find_withtag" signature="find_withtag(self, tagOrId)" />
+        <scope doc="Return the type of the item TAGORID." ilk="function" name="type" signature="type(self, tagOrId)" />
+        <scope doc="Internal function." ilk="function" name="_create" signature="_create(self, itemType, args, kw)" />
+        <scope doc="Add tag NEWTAG to all items below TAGORID." ilk="function" name="addtag_below" signature="addtag_below(self, newtag, tagOrId)" />
+        <scope doc="Configure resources of an item TAGORID." ilk="function" name="itemconfig" signature="itemconfig(self, tagOrId, cnf=None, **kw)" />
+        <scope doc="Return position of cursor as integer in item specified in&#xA;ARGS." ilk="function" name="index" signature="index(self, *args)" />
+        <scope doc="Add tag NEWTAG to all items with TAGORID." ilk="function" name="addtag_withtag" signature="addtag_withtag(self, newtag, tagOrId)" />
+        <scope doc="Add tag NEWTAG to all items in the rectangle defined by&#xA;X1,Y1,X2,Y2." ilk="function" name="addtag_enclosed" signature="addtag_enclosed(self, newtag, x1, y1, x2, y2)" />
+        <scope doc="Create arc shaped region with coordinates x1,y1,x2,y2." ilk="function" name="create_arc" signature="create_arc(self, *args, **kw)" />
+        <scope doc="Return items above TAGORID." ilk="function" name="find_above" signature="find_above(self, tagOrId)" />
+        <scope doc="Raise an item TAGORID given in ARGS (optional above another&#xA;item)." ilk="function" name="lift" signature="lift(self, *args)" />
+        <scope doc="Return a tuple of X1,Y1,X2,Y2 coordinates for a rectangle&#xA;which encloses all items with tags specified as arguments." ilk="function" name="bbox" signature="bbox(self, *args)" />
+        <scope doc="Set focus to the first item specified in ARGS." ilk="function" name="focus" signature="focus(self, *args)" />
+        <scope doc="Create bitmap with coordinates x1,y1." ilk="function" name="create_bitmap" signature="create_bitmap(self, *args, **kw)" />
+        <scope doc="Return all items in rectangle defined by X1,Y1,X2,Y2." ilk="function" name="find_enclosed" signature="find_enclosed(self, x1, y1, x2, y2)" />
+        <scope doc="Delete characters of text items identified by tag or id in&#xA;ARGS (possibly several times) from FIRST to LAST character&#xA;(including)." ilk="function" name="dchars" signature="dchars(self, *args)" />
+        <scope doc="Insert TEXT in item TAGORID at position POS." ilk="function" name="insert" signature="insert(self, *args)" />
+        <scope doc="Lower an item TAGORID given in ARGS (optional below another&#xA;item)." ilk="function" name="lower" signature="lower(self, *args)" />
+        <scope doc="Add tag NEWTAG to all items above TAGORID." ilk="function" name="addtag_above" signature="addtag_above(self, newtag, tagOrId)" />
+        <scope doc="Create rectangle with coordinates x1,y1,x2,y2." ilk="function" name="create_rectangle" signature="create_rectangle(self, *args, **kw)" />
+        <scope doc="Print the contents of the canvas to a postscript file." ilk="function" name="postscript" signature="postscript(self, cnf={}, **kw)" />
+        <scope doc="Clear the selection if it is in this widget." ilk="function" name="select_clear" signature="select_clear(self)" />
+        <scope doc="Lower an item TAGORID given in ARGS (optional below another&#xA;item)." ilk="function" name="tag_lower" signature="tag_lower(self, *args)" />
+        <scope doc="Return the resource value for an OPTION for item TAGORID." ilk="function" name="itemcget" signature="itemcget(self, tagOrId, option)" />
+        <scope doc="Create line with coordinates x1,y1,...,xn,yn." ilk="function" name="create_line" signature="create_line(self, *args, **kw)" />
+        <scope doc="Return a list of coordinates for the item given in ARGS." ilk="function" name="coords" signature="coords(self, *args)" />
+        <scope doc="Set the variable end of a selection in item TAGORID to&#xA;INDEX." ilk="function" name="select_to" signature="select_to(self, tagOrId, index)" />
+        <scope doc="Return the item which has the selection." ilk="function" name="select_item" signature="select_item(self)" />
+        <scope doc="Delete items identified by all tag or ids contained in ARGS." ilk="function" name="delete" signature="delete(self, *args)" />
+        <scope doc="Return all items." ilk="function" name="find_all" signature="find_all(self)" />
+      </scope>
+      <scope classrefs="Widget" doc="Checkbutton widget which is either in on- or off-state.&#xA;" ilk="class" name="Checkbutton">
+        <scope doc="Put the button in off-state." ilk="function" name="deselect" signature="deselect(self)" />
+        <scope doc="Toggle the button and invoke a command if given as resource." ilk="function" name="invoke" signature="invoke(self)" />
+        <scope doc="Flash the button." ilk="function" name="flash" signature="flash(self)" />
+        <scope doc="Toggle the button." ilk="function" name="toggle" signature="toggle(self)" />
+        <scope doc="Construct a checkbutton widget with the parent MASTER." ilk="function" name="__init__" signature="__init__(self, master=None, cnf={}, **kw)" />
+        <scope doc="Put the button in on-state." ilk="function" name="select" signature="select(self)" />
+      </scope>
+      <variable citdl="str" line="7" name="DIALOG_ICON" />
+      <variable citdl="str" name="DISABLED" />
+      <variable citdl="str" name="DOTBOX" />
+      <scope classrefs="Widget" doc="&#xA;" ilk="class" line="12" lineend="25" name="Dialog">
+        <scope ilk="function" line="25" lineend="25" name="destroy" signature="destroy(self)">
+          <variable citdl="Dialog" ilk="argument" name="self" />
+        </scope>
+        <scope ilk="function" line="13" lineend="24" name="__init__" signature="__init__(self, master=None, cnf={}, **kw)">
+          <variable citdl="_cnfmerge()" ilk="argument" name="cnf" />
+          <variable attributes="kwargs" ilk="argument" name="kw" />
+          <variable citdl="Dialog" ilk="argument" name="self" />
+          <variable ilk="argument" name="master" />
+        </scope>
+        <variable attributes="__instancevar__" citdl="self.tk.getint()" line="17" name="num" />
+        <variable attributes="__instancevar__" citdl="str" line="15" name="widgetName" />
+      </scope>
+      <scope classrefs="Variable" doc="Value holder for float variables.&#xA;" ilk="class" name="DoubleVar">
+        <scope doc="Construct a float variable." ilk="function" name="__init__" signature="__init__(self, master=None, value=None, name=None)" />
+        <scope doc="Return the value of the variable as a float." ilk="function" name="get" signature="get(self)" />
+      </scope>
+      <variable citdl="str" name="E" />
+      <variable citdl="str" name="END" />
+      <variable citdl="str" name="EW" />
+      <variable citdl="int" name="EXCEPTION" />
+      <variable citdl="str" name="EXTENDED" />
+      <scope classrefs="Widget XView" doc="Entry widget which allows to display simple text.&#xA;" ilk="class" name="Entry">
+        <scope doc="Remember the current X, Y coordinates." ilk="function" name="scan_mark" signature="scan_mark(self, x)" />
+        <scope doc="Adjust the end of the selection near the cursor to INDEX." ilk="function" name="selection_adjust" signature="selection_adjust(self, index)" />
+        <scope doc="Set the variable end of a selection to INDEX." ilk="function" name="selection_to" signature="selection_to(self, index)" />
+        <scope doc="Set the selection from START to END (not included)." ilk="function" name="selection_range" signature="selection_range(self, start, end)" />
+        <scope doc="Set the fixed end of a selection to INDEX." ilk="function" name="selection_from" signature="selection_from(self, index)" />
+        <scope doc="Adjust the view of the canvas to 10 times the difference&#xA;between X and Y and the coordinates given in scan_mark." ilk="function" name="scan_dragto" signature="scan_dragto(self, x)" />
+        <scope doc="Clear the selection if it is in this widget." ilk="function" name="select_clear" signature="select_clear(self)" />
+        <scope doc="Insert STRING at INDEX." ilk="function" name="insert" signature="insert(self, index, string)" />
+        <scope doc="Return True if there are characters selected in the entry,&#xA;False otherwise." ilk="function" name="select_present" signature="select_present(self)" />
+        <scope doc="Clear the selection if it is in this widget." ilk="function" name="selection_clear" signature="selection_clear(self)" />
+        <scope doc="Set the fixed end of a selection to INDEX." ilk="function" name="select_from" signature="select_from(self, index)" />
+        <scope doc="Construct an entry widget with the parent MASTER." ilk="function" name="__init__" signature="__init__(self, master=None, cnf={}, **kw)" />
+        <scope doc="Return position of cursor." ilk="function" name="index" signature="index(self, index)" />
+        <scope doc="Insert cursor at INDEX." ilk="function" name="icursor" signature="icursor(self, index)" />
+        <scope doc="Set the selection from START to END (not included)." ilk="function" name="select_range" signature="select_range(self, start, end)" />
+        <scope doc="Return the text." ilk="function" name="get" signature="get(self)" />
+        <scope doc="Return True if there are characters selected in the entry,&#xA;False otherwise." ilk="function" name="selection_present" signature="selection_present(self)" />
+        <scope doc="Set the variable end of a selection to INDEX." ilk="function" name="select_to" signature="select_to(self, index)" />
+        <scope doc="Adjust the end of the selection near the cursor to INDEX." ilk="function" name="select_adjust" signature="select_adjust(self, index)" />
+        <scope doc="Delete text from FIRST to LAST (not included)." ilk="function" name="delete" signature="delete(self, first, last=None)" />
+      </scope>
+      <scope classrefs="object" doc="Container for the properties of an event.&#xA;Instances of this type are generated if one of the following events occurs:  KeyPress, KeyRelease - for keyboard events ButtonPress, ButtonRelease, Motion, Enter, Leave, MouseWheel - for mouse events Visibility, Unmap, Map, Expose, FocusIn, FocusOut, Circulate, Colormap, Gravity, Reparent, Property, Destroy, Activate, Deactivate - for window events.  If a callback function for one of these events is registered using bind, bind_all, bind_class, or tag_bind, the callback is" ilk="class" name="Event" />
+      <variable citdl="int" name="FALSE" />
+      <variable citdl="str" name="FIRST" />
+      <variable citdl="str" name="FLAT" />
+      <scope classrefs="Widget" doc="Frame widget which may contain other widgets and can have a 3D border.&#xA;" ilk="class" name="Frame">
+        <scope doc="Construct a frame widget with the parent MASTER." ilk="function" name="__init__" signature="__init__(self, master=None, cnf={}, **kw)" />
+      </scope>
+      <variable citdl="str" name="GROOVE" />
+      <scope classrefs="object" doc="Geometry manager Grid.&#xA;Base class to use the methods grid_* in every widget." ilk="class" name="Grid">
+        <scope doc="Set or get the status for propagation of geometry&#xA;information." ilk="function" name="propagate" signature="propagate(self, flag=[&apos;_noarg_&apos;])" />
+        <scope doc="Unmap this widget." ilk="function" name="forget" signature="forget(self)" />
+        <scope doc="Return information about the options for positioning this&#xA;widget in a grid." ilk="function" name="grid_info" signature="grid_info(self)" />
+        <scope doc="Configure column INDEX of a grid." ilk="function" name="columnconfigure" signature="columnconfigure(self, index, cnf={}, **kw)" />
+        <scope doc="Unmap this widget but remember the grid options." ilk="function" name="grid_remove" signature="grid_remove(self)" />
+        <scope doc="Set or get the status for propagation of geometry&#xA;information." ilk="function" name="grid_propagate" signature="grid_propagate(self, flag=[&apos;_noarg_&apos;])" />
+        <scope doc="Configure column INDEX of a grid." ilk="function" name="grid_columnconfigure" signature="grid_columnconfigure(self, index, cnf={}, **kw)" />
+        <scope doc="Return a list of all slaves of this widget in its packing&#xA;order." ilk="function" name="grid_slaves" signature="grid_slaves(self, row=None, column=None)" />
+        <scope doc="Position a widget in the parent widget in a grid." ilk="function" name="grid" signature="grid(self, cnf={}, **kw)" />
+        <scope doc="Return a tuple of integer coordinates for the bounding box&#xA;of this widget controlled by the geometry manager grid." ilk="function" name="bbox" signature="bbox(self, column=None, row=None, col2=None, row2=None)" />
+        <scope doc="Return a tuple of integer coordinates for the bounding box&#xA;of this widget controlled by the geometry manager grid." ilk="function" name="grid_bbox" signature="grid_bbox(self, column=None, row=None, col2=None, row2=None)" />
+        <scope doc="Position a widget in the parent widget in a grid." ilk="function" name="grid_configure" signature="grid_configure(self, cnf={}, **kw)" />
+        <scope doc="Configure row INDEX of a grid." ilk="function" name="grid_rowconfigure" signature="grid_rowconfigure(self, index, cnf={}, **kw)" />
+        <scope doc="Return a tuple of the number of column and rows in the grid." ilk="function" name="size" signature="size(self)" />
+        <scope doc="Return information about the options for positioning this&#xA;widget in a grid." ilk="function" name="info" signature="info(self)" />
+        <scope doc="Return a tuple of the number of column and rows in the grid." ilk="function" name="grid_size" signature="grid_size(self)" />
+        <scope doc="Unmap this widget." ilk="function" name="grid_forget" signature="grid_forget(self)" />
+        <scope doc="Configure row INDEX of a grid." ilk="function" name="rowconfigure" signature="rowconfigure(self, index, cnf={}, **kw)" />
+        <scope doc="Return a tuple of column and row which identify the cell at&#xA;which the pixel at position X and Y inside the master widget&#xA;is located." ilk="function" name="location" signature="location(self, x, y)" />
+        <scope doc="Position a widget in the parent widget in a grid." ilk="function" name="configure" signature="configure(self, cnf={}, **kw)" />
+        <scope doc="Return a tuple of column and row which identify the cell at&#xA;which the pixel at position X and Y inside the master widget&#xA;is located." ilk="function" name="grid_location" signature="grid_location(self, x, y)" />
+        <scope doc="Return a list of all slaves of this widget in its packing&#xA;order." ilk="function" name="slaves" signature="slaves(self, row=None, column=None)" />
+        <scope doc="Position a widget in the parent widget in a grid." ilk="function" name="config" signature="config(self, cnf={}, **kw)" />
+      </scope>
+      <variable citdl="str" name="HIDDEN" />
+      <variable citdl="str" name="HORIZONTAL" />
+      <variable citdl="str" name="INSERT" />
+      <variable citdl="str" name="INSIDE" />
+      <scope classrefs="object" doc="Base class for images.&#xA;" ilk="class" name="Image">
+        <scope ilk="function" name="__getitem__" signature="__getitem__(self, key)" />
+        <scope ilk="function" name="__del__" signature="__del__(self)" />
+        <scope doc="Configure the image." ilk="function" name="config" signature="config(self, **kw)" />
+        <scope ilk="function" name="__str__" signature="__str__(self)" />
+        <scope doc="Return the height of the image." ilk="function" name="height" signature="height(self)" />
+        <scope doc="Return the width of the image." ilk="function" name="width" signature="width(self)" />
+        <scope ilk="function" name="__setitem__" signature="__setitem__(self, key, value)" />
+        <scope doc="Return the type of the imgage, e.g. &quot;photo&quot; or &quot;bitmap&quot;." ilk="function" name="type" signature="type(self)" />
+        <scope ilk="function" name="__init__" signature="__init__(self, imgtype, name=None, cnf={}, master=None, **kw)" />
+        <scope doc="Configure the image." ilk="function" name="configure" signature="configure(self, **kw)" />
+      </scope>
+      <scope classrefs="Variable" doc="Value holder for integer variables.&#xA;" ilk="class" name="IntVar">
+        <scope doc="Set the variable to value, converting booleans to integers." ilk="function" name="set" signature="set(self, value)" />
+        <scope doc="Return the value of the variable as an integer." ilk="function" name="get" signature="get(self)" />
+        <scope doc="Construct an integer variable." ilk="function" name="__init__" signature="__init__(self, master=None, value=None, name=None)" />
+      </scope>
+      <variable citdl="str" name="LAST" />
+      <variable citdl="str" name="LEFT" />
+      <scope classrefs="Widget" doc="Label widget which can display text and bitmaps.&#xA;" ilk="class" name="Label">
+        <scope doc="Construct a label widget with the parent MASTER." ilk="function" name="__init__" signature="__init__(self, master=None, cnf={}, **kw)" />
+      </scope>
+      <scope classrefs="Widget" doc="labelframe widget.&#xA;" ilk="class" name="LabelFrame">
+        <scope doc="Construct a labelframe widget with the parent MASTER." ilk="function" name="__init__" signature="__init__(self, master=None, cnf={}, **kw)" />
+      </scope>
+      <scope classrefs="Widget XView YView" doc="Listbox widget which can display a list of strings.&#xA;" ilk="class" name="Listbox">
+        <scope doc="Remember the current X, Y coordinates." ilk="function" name="scan_mark" signature="scan_mark(self, x, y)" />
+        <scope doc="Return 1 if INDEX is part of the selection." ilk="function" name="selection_includes" signature="selection_includes(self, index)" />
+        <scope doc="Activate item identified by INDEX." ilk="function" name="activate" signature="activate(self, index)" />
+        <scope doc="Configure resources of an ITEM." ilk="function" name="itemconfig" signature="itemconfig(self, index, cnf=None, **kw)" />
+        <scope doc="Configure resources of an ITEM." ilk="function" name="itemconfigure" signature="itemconfigure(self, index, cnf=None, **kw)" />
+        <scope doc="Get index of item which is nearest to y coordinate Y." ilk="function" name="nearest" signature="nearest(self, y)" />
+        <scope doc="Adjust the view of the listbox to 10 times the difference&#xA;between X and Y and the coordinates given in scan_mark." ilk="function" name="scan_dragto" signature="scan_dragto(self, x, y)" />
+        <scope doc="Set the fixed end oft the selection to INDEX." ilk="function" name="selection_anchor" signature="selection_anchor(self, index)" />
+        <scope doc="Set the fixed end oft the selection to INDEX." ilk="function" name="select_anchor" signature="select_anchor(self, index)" />
+        <scope doc="Scroll such that INDEX is visible." ilk="function" name="see" signature="see(self, index)" />
+        <scope doc="Return a tuple of X1,Y1,X2,Y2 coordinates for a rectangle&#xA;which encloses the item identified by index in ARGS." ilk="function" name="bbox" signature="bbox(self, *args)" />
+        <scope doc="Insert ELEMENTS at INDEX." ilk="function" name="insert" signature="insert(self, index, *elements)" />
+        <scope doc="Clear the selection from FIRST to LAST (not included)." ilk="function" name="selection_clear" signature="selection_clear(self, first, last=None)" />
+        <scope doc="Construct a listbox widget with the parent MASTER." ilk="function" name="__init__" signature="__init__(self, master=None, cnf={}, **kw)" />
+        <scope doc="Return the number of elements in the listbox." ilk="function" name="size" signature="size(self)" />
+        <scope doc="Return index of item identified with INDEX." ilk="function" name="index" signature="index(self, index)" />
+        <scope doc="Set the selection from FIRST to LAST (not included) without&#xA;changing the currently selected elements." ilk="function" name="selection_set" signature="selection_set(self, first, last=None)" />
+        <scope doc="Return the resource value for an ITEM and an OPTION." ilk="function" name="itemcget" signature="itemcget(self, index, option)" />
+        <scope doc="Clear the selection from FIRST to LAST (not included)." ilk="function" name="select_clear" signature="select_clear(self, first, last=None)" />
+        <scope doc="Set the selection from FIRST to LAST (not included) without&#xA;changing the currently selected elements." ilk="function" name="select_set" signature="select_set(self, first, last=None)" />
+        <scope doc="Return list of indices of currently selected item." ilk="function" name="curselection" signature="curselection(self)" />
+        <scope doc="Get list of items from FIRST to LAST (not included)." ilk="function" name="get" signature="get(self, first, last=None)" />
+        <scope doc="Return 1 if INDEX is part of the selection." ilk="function" name="select_includes" signature="select_includes(self, index)" />
+        <scope doc="Delete items from FIRST to LAST (not included)." ilk="function" name="delete" signature="delete(self, first, last=None)" />
+      </scope>
+      <variable citdl="str" name="MITER" />
+      <variable citdl="str" name="MOVETO" />
+      <variable citdl="str" name="MULTIPLE" />
+      <scope classrefs="Widget" doc="Menu widget which allows to display menu bars, pull-down menus and pop-up menus.&#xA;" ilk="class" name="Menu">
+        <scope doc="Add hierarchical menu item." ilk="function" name="add_cascade" signature="add_cascade(self, cnf={}, **kw)" />
+        <scope doc="Activate entry at INDEX." ilk="function" name="activate" signature="activate(self, index)" />
+        <scope ilk="function" name="tk_nextMenu" signature="tk_nextMenu(self, count)" />
+        <scope ilk="function" name="tk_mbPost" signature="tk_mbPost(self)" />
+        <scope ilk="function" name="tk_getMenuButtons" signature="tk_getMenuButtons(self)" />
+        <scope doc="Post the menu at position X,Y with entry ENTRY." ilk="function" name="tk_popup" signature="tk_popup(self, x, y, entry=&apos;&apos;)" />
+        <scope doc="Unmap a menu." ilk="function" name="unpost" signature="unpost(self)" />
+        <scope ilk="function" name="tk_mbButtonDown" signature="tk_mbButtonDown(self)" />
+        <scope doc="Add separator." ilk="function" name="add_separator" signature="add_separator(self, cnf={}, **kw)" />
+        <scope doc="Add command menu item at INDEX." ilk="function" name="insert_command" signature="insert_command(self, index, cnf={}, **kw)" />
+        <scope doc="Construct menu widget with the parent MASTER." ilk="function" name="__init__" signature="__init__(self, master=None, cnf={}, **kw)" />
+        <scope ilk="function" name="tk_traverseToMenu" signature="tk_traverseToMenu(self, char)" />
+        <scope doc="Return the index of a menu item identified by INDEX." ilk="function" name="index" signature="index(self, index)" />
+        <scope doc="Addd radio menu item." ilk="function" name="add_radiobutton" signature="add_radiobutton(self, cnf={}, **kw)" />
+        <scope doc="Configure a menu item at INDEX." ilk="function" name="entryconfig" signature="entryconfig(self, index, cnf=None, **kw)" />
+        <scope doc="Add hierarchical menu item at INDEX." ilk="function" name="insert_cascade" signature="insert_cascade(self, index, cnf={}, **kw)" />
+        <scope doc="Add checkbutton menu item at INDEX." ilk="function" name="insert_checkbutton" signature="insert_checkbutton(self, index, cnf={}, **kw)" />
+        <scope doc="Internal function." ilk="function" name="add" signature="add(self, itemType, cnf={}, **kw)" />
+        <scope doc="Add command menu item." ilk="function" name="add_command" signature="add_command(self, cnf={}, **kw)" />
+        <scope doc="Configure a menu item at INDEX." ilk="function" name="entryconfigure" signature="entryconfigure(self, index, cnf=None, **kw)" />
+        <scope doc="Addd radio menu item at INDEX." ilk="function" name="insert_radiobutton" signature="insert_radiobutton(self, index, cnf={}, **kw)" />
+        <scope doc="Return the type of the menu item at INDEX." ilk="function" name="type" signature="type(self, index)" />
+        <scope ilk="function" name="tk_traverseWithinMenu" signature="tk_traverseWithinMenu(self, char)" />
+        <scope doc="Invoke a menu item identified by INDEX and execute the&#xA;associated command." ilk="function" name="invoke" signature="invoke(self, index)" />
+        <scope doc="Internal function." ilk="function" name="insert" signature="insert(self, index, itemType, cnf={}, **kw)" />
+        <scope doc="Add separator at INDEX." ilk="function" name="insert_separator" signature="insert_separator(self, index, cnf={}, **kw)" />
+        <scope doc="Display a menu at position X,Y." ilk="function" name="post" signature="post(self, x, y)" />
+        <scope ilk="function" name="tk_bindForTraversal" signature="tk_bindForTraversal(self)" />
+        <scope ilk="function" name="tk_nextMenuEntry" signature="tk_nextMenuEntry(self, count)" />
+        <scope doc="Return the y-position of the topmost pixel of the menu item&#xA;at INDEX." ilk="function" name="yposition" signature="yposition(self, index)" />
+        <scope ilk="function" name="tk_firstMenu" signature="tk_firstMenu(self)" />
+        <scope ilk="function" name="tk_mbUnpost" signature="tk_mbUnpost(self)" />
+        <scope doc="Return the resource value of an menu item for OPTION at&#xA;INDEX." ilk="function" name="entrycget" signature="entrycget(self, index, option)" />
+        <scope ilk="function" name="tk_invokeMenu" signature="tk_invokeMenu(self)" />
+        <scope doc="Add checkbutton menu item." ilk="function" name="add_checkbutton" signature="add_checkbutton(self, cnf={}, **kw)" />
+        <scope doc="Delete menu items between INDEX1 and INDEX2 (included)." ilk="function" name="delete" signature="delete(self, index1, index2=None)" />
+      </scope>
+      <scope classrefs="Widget" doc="Menubutton widget, obsolete since Tk8.0.&#xA;" ilk="class" name="Menubutton">
+        <scope ilk="function" name="__init__" signature="__init__(self, master=None, cnf={}, **kw)" />
+      </scope>
+      <scope classrefs="Widget" doc="Message widget to display multiline text. Obsolete since Label does it too.&#xA;" ilk="class" name="Message">
+        <scope ilk="function" name="__init__" signature="__init__(self, master=None, cnf={}, **kw)" />
+      </scope>
+      <scope classrefs="object" doc="Internal class.&#xA;Base class which defines methods common for interior widgets." ilk="class" name="Misc">
+        <scope doc="Return the number of bits per pixel of the root window of&#xA;the screen of this widget." ilk="function" name="winfo_screendepth" signature="winfo_screendepth(self)" />
+        <scope doc="Return x coordinate of upper left corner of this widget on&#xA;the root window." ilk="function" name="winfo_rootx" signature="winfo_rootx(self)" />
+        <scope doc="Return the window path name of this widget." ilk="function" name="__str__" signature="__str__(self)" />
+        <scope doc="Direct input focus to this widget." ilk="function" name="focus" signature="focus(self)" />
+        <scope doc="Clear the option database." ilk="function" name="option_clear" signature="option_clear(self)" />
+        <scope doc="Configure column INDEX of a grid." ilk="function" name="grid_columnconfigure" signature="grid_columnconfigure(self, index, cnf={}, **kw)" />
+        <scope doc="Internal function." ilk="function" name="destroy" signature="destroy(self)" />
+        <scope doc="Raise this widget in the stacking order." ilk="function" name="tkraise" signature="tkraise(self, aboveThis=None)" />
+        <scope doc="Internal function." ilk="function" name="_bind" signature="_bind(self, what, sequence, func, add, needcleanup=1)" />
+        <scope doc="Internal function." ilk="function" name="_displayof" signature="_displayof(self, displayof)" />
+        <scope doc="Cancel scheduling of function identified with ID." ilk="function" name="after_cancel" signature="after_cancel(self, id)" />
+        <scope doc="Return the y coordinate of the pointer on the root window." ilk="function" name="winfo_pointery" signature="winfo_pointery(self)" />
+        <scope doc="Return the x coordinate of the pointer on the root window." ilk="function" name="winfo_pointerx" signature="winfo_pointerx(self)" />
+        <scope doc="Return a boolean value for Tcl boolean values true and false&#xA;given as parameter." ilk="function" name="getboolean" signature="getboolean(self, s)" />
+        <scope doc="Return the widget which has currently the focus in the&#xA;application." ilk="function" name="focus_get" signature="focus_get(self)" />
+        <scope doc="The widget under mouse will get automatically focus." ilk="function" name="tk_focusFollowsMouse" signature="tk_focusFollowsMouse(self)" />
+        <scope doc="Ring a display&apos;s bell." ilk="function" name="bell" signature="bell(self, displayof=0)" />
+        <scope doc="Return true if this widget exists." ilk="function" name="winfo_exists" signature="winfo_exists(self)" />
+        <scope doc="Return y coordinate of upper left corner of this widget on&#xA;the root window." ilk="function" name="winfo_rooty" signature="winfo_rooty(self)" />
+        <scope doc="Lower this widget in the stacking order." ilk="function" name="lower" signature="lower(self, belowThis=None)" />
+        <scope doc="Rounded integer value of winfo_fpixels." ilk="function" name="winfo_pixels" signature="winfo_pixels(self, number)" />
+        <scope doc="Internal function." ilk="function" name="_report_exception" signature="_report_exception(self)" />
+        <scope doc="Call the mainloop of Tk." ilk="function" name="mainloop" signature="mainloop(self, n=0)" />
+        <scope doc="Return a tuple of x and y coordinates of the pointer on the&#xA;root window." ilk="function" name="winfo_pointerxy" signature="winfo_pointerxy(self)" />
+        <scope doc="Return the window mananger name for this widget." ilk="function" name="winfo_manager" signature="winfo_manager(self)" />
+        <scope doc="Return the resource value for a KEY given as string." ilk="function" name="__getitem__" signature="__getitem__(self, key)" />
+        <scope doc="Return the widget which would have the focus if top level&#xA;for this widget gets the focus from the window manager." ilk="function" name="focus_lastfor" signature="focus_lastfor(self)" />
+        <scope doc="Return the number of pixels of the height of the screen of&#xA;this widget in mm." ilk="function" name="winfo_screenmmheight" signature="winfo_screenmmheight(self)" />
+        <scope doc="Return geometry string for this widget in the form&#xA;&quot;widthxheight+X+Y&quot;." ilk="function" name="winfo_geometry" signature="winfo_geometry(self)" />
+        <scope doc="Return the name of this widget." ilk="function" name="winfo_name" signature="winfo_name(self)" />
+        <scope doc="Return the number of pixels of the width of the screen of&#xA;this widget in mm." ilk="function" name="winfo_screenmmwidth" signature="winfo_screenmmwidth(self)" />
+        <scope doc="Return the resource value for a KEY given as string." ilk="function" name="cget" signature="cget(self, key)" />
+        <scope doc="Generate an event SEQUENCE." ilk="function" name="event_generate" signature="event_generate(self, sequence, **kw)" />
+        <scope doc="Return the X identifier for the visual for this widget." ilk="function" name="winfo_visualid" signature="winfo_visualid(self)" />
+        <scope doc="Return a list of all existing image names." ilk="function" name="image_names" signature="image_names(self)" />
+        <scope doc="Return the widget which is at the root coordinates ROOTX,&#xA;ROOTY." ilk="function" name="winfo_containing" signature="winfo_containing(self, rootX, rootY, displayof=0)" />
+        <scope doc="Return the name of the parent of this widget." ilk="function" name="winfo_parent" signature="winfo_parent(self)" />
+        <scope doc="Return None, &quot;local&quot; or &quot;global&quot; if this widget has no, a&#xA;local or a global grab." ilk="function" name="grab_status" signature="grab_status(self)" />
+        <scope doc="Wait until the variable is modified." ilk="function" name="waitvar" signature="waitvar(self, name=&apos;PY_VAR&apos;)" />
+        <scope doc="Set global grab for this widget." ilk="function" name="grab_set_global" signature="grab_set_global(self)" />
+        <scope doc="Return the number of the cells in the colormap of the screen&#xA;of this widget." ilk="function" name="winfo_screencells" signature="winfo_screencells(self)" />
+        <scope doc="Return window class name of this widget." ilk="function" name="winfo_class" signature="winfo_class(self)" />
+        <scope doc="Unbind a virtual event VIRTUAL from SEQUENCE." ilk="function" name="event_delete" signature="event_delete(self, virtual, *sequences)" />
+        <scope doc="Internal function." ilk="function" name="deletecommand" signature="deletecommand(self, name)" />
+        <scope doc="Return the number of pixels of the width of the screen of&#xA;this widget in pixel." ilk="function" name="winfo_screenwidth" signature="winfo_screenwidth(self)" />
+        <scope doc="Set or get the status for propagation of geometry&#xA;information." ilk="function" name="pack_propagate" signature="pack_propagate(self, flag=[&apos;_noarg_&apos;])" />
+        <scope doc="Return a list of all available image types (e.g." ilk="function" name="image_types" signature="image_types(self)" />
+        <scope doc="Useless. Not implemented in Tk." ilk="function" name="colormodel" signature="colormodel(self, value=None)" />
+        <scope doc="Internal function." ilk="function" name="_Misc__winfo_parseitem" signature="_Misc__winfo_parseitem(self, t)" />
+        <scope doc="Set Tcl internal variable, whether the look and feel should&#xA;adhere to Motif." ilk="function" name="tk_strictMotif" signature="tk_strictMotif(self, boolean=None)" />
+        <scope doc="Return identifier ID for this widget." ilk="function" name="winfo_id" signature="winfo_id(self)" />
+        <scope doc="Direct input focus to this widget." ilk="function" name="focus_set" signature="focus_set(self)" />
+        <scope doc="Return owner of X selection." ilk="function" name="selection_own_get" signature="selection_own_get(self, **kw)" />
+        <scope doc="Call function once after given time." ilk="function" name="after" signature="after(self, ms, func=None, *args)" />
+        <scope doc="Configure column INDEX of a grid." ilk="function" name="columnconfigure" signature="columnconfigure(self, index, cnf={}, **kw)" />
+        <scope ilk="function" name="__setitem__" signature="__setitem__(self, key, value)" />
+        <scope doc="Direct input focus to this widget even if the application&#xA;does not have the focus." ilk="function" name="focus_force" signature="focus_force(self)" />
+        <scope doc="Return a list of all slaves of this widget in its packing&#xA;order." ilk="function" name="place_slaves" signature="place_slaves(self)" />
+        <scope doc="Return one of the strings directcolor, grayscale,&#xA;pseudocolor, staticcolor, staticgray, or truecolor for the&#xA;colormodel of this widget." ilk="function" name="winfo_visual" signature="winfo_visual(self)" />
+        <scope doc="Return the value for an option NAME for this widget with&#xA;CLASSNAME." ilk="function" name="option_get" signature="option_get(self, name, className)" />
+        <scope doc="Return the x coordinate of the upper left corner of this&#xA;widget in the parent." ilk="function" name="winfo_x" signature="winfo_x(self)" />
+        <scope doc="Return a tuple of the number of column and rows in the grid." ilk="function" name="grid_size" signature="grid_size(self)" />
+        <scope doc="Internal function." ilk="function" name="_options" signature="_options(self, cnf, kw=None)" />
+        <scope doc="Return the screen name of this widget." ilk="function" name="winfo_screen" signature="winfo_screen(self)" />
+        <scope doc="Set grab for this widget." ilk="function" name="grab_set" signature="grab_set(self)" />
+        <scope doc="Return the y offset of the virtual root relative to the root&#xA;window of the screen of this widget." ilk="function" name="winfo_vrooty" signature="winfo_vrooty(self)" />
+        <scope doc="Return the next widget in the focus order which follows&#xA;widget which has currently the focus." ilk="function" name="tk_focusNext" signature="tk_focusNext(self)" />
+        <scope doc="Return true if the widget and all its higher ancestors are&#xA;mapped." ilk="function" name="winfo_viewable" signature="winfo_viewable(self)" />
+        <scope doc="Enter event loop until all idle callbacks have been called." ilk="function" name="update_idletasks" signature="update_idletasks(self)" />
+        <scope doc="Return a list of all widgets which are children of this&#xA;widget." ilk="function" name="winfo_children" signature="winfo_children(self)" />
+        <scope doc="Return the number of pixels for the given distance NUMBER&#xA;(e.g." ilk="function" name="winfo_fpixels" signature="winfo_fpixels(self, number)" />
+        <scope doc="Return a tuple of integer coordinates for the bounding box&#xA;of this widget controlled by the geometry manager grid." ilk="function" name="grid_bbox" signature="grid_bbox(self, column=None, row=None, col2=None, row2=None)" />
+        <scope doc="Return the Tkinter instance of a widget identified by its&#xA;Tcl name NAME." ilk="function" name="nametowidget" signature="nametowidget(self, name)" />
+        <scope doc="Return number of cells in the colormap for this widget." ilk="function" name="winfo_cells" signature="winfo_cells(self)" />
+        <scope doc="Return a tuple of the number of column and rows in the grid." ilk="function" name="size" signature="size(self)" />
+        <scope doc="Do not use. Needed in Tk 3.6 and earlier." ilk="function" name="tk_menuBar" signature="tk_menuBar(self, *args)" />
+        <scope doc="Quit the Tcl interpreter. All widgets will be destroyed." ilk="function" name="quit" signature="quit(self)" />
+        <scope doc="Read file FILENAME into the option database." ilk="function" name="option_readfile" signature="option_readfile(self, fileName, priority=None)" />
+        <scope doc="Return name of atom with identifier ID." ilk="function" name="winfo_atomname" signature="winfo_atomname(self, id, displayof=0)" />
+        <scope doc="Specify a function COMMAND to call if the X selection owned&#xA;by this widget is queried by another application." ilk="function" name="selection_handle" signature="selection_handle(self, command, **kw)" />
+        <scope doc="Internal function." ilk="function" name="_substitute" signature="_substitute(self, *args)" />
+        <scope doc="Return a list of all slaves of this widget in its packing&#xA;order." ilk="function" name="pack_slaves" signature="pack_slaves(self)" />
+        <scope doc="Return a list of all virtual events or the information about&#xA;the SEQUENCE bound to the virtual event VIRTUAL." ilk="function" name="event_info" signature="event_info(self, virtual=None)" />
+        <scope doc="Return the x offset of the virtual root relative to the root&#xA;window of the screen of this widget." ilk="function" name="winfo_vrootx" signature="winfo_vrootx(self)" />
+        <scope doc="Bind a virtual event VIRTUAL (of the form &lt;&lt;Name&gt;&gt;) to an&#xA;event SEQUENCE such that the virtual event is triggered&#xA;whenever SEQUENCE occurs." ilk="function" name="event_add" signature="event_add(self, virtual, *sequences)" />
+        <scope doc="Return the number of bits per pixel." ilk="function" name="winfo_depth" signature="winfo_depth(self)" />
+        <scope doc="Internal function." ilk="function" name="_Misc__winfo_getint" signature="_Misc__winfo_getint(self, x)" />
+        <scope doc="Return the toplevel widget of this widget." ilk="function" name="winfo_toplevel" signature="winfo_toplevel(self)" />
+        <scope doc="Return the y coordinate of the upper left corner of this&#xA;widget in the parent." ilk="function" name="winfo_y" signature="winfo_y(self)" />
+        <scope doc="Configure resources of a widget." ilk="function" name="configure" signature="configure(self, cnf=None, **kw)" />
+        <scope doc="Return requested width of this widget." ilk="function" name="winfo_reqwidth" signature="winfo_reqwidth(self)" />
+        <scope doc="Return true if this widget is mapped." ilk="function" name="winfo_ismapped" signature="winfo_ismapped(self)" />
+        <scope doc="Return the contents of the current X selection." ilk="function" name="selection_get" signature="selection_get(self, **kw)" />
+        <scope doc="Return previous widget in the focus order." ilk="function" name="tk_focusPrev" signature="tk_focusPrev(self)" />
+        <scope doc="Raise this widget in the stacking order." ilk="function" name="lift" signature="lift(self, aboveThis=None)" />
+        <scope doc="Call FUNC once if the Tcl main loop has no event to process." ilk="function" name="after_idle" signature="after_idle(self, func, *args)" />
+        <scope doc="Return value of Tcl variable NAME." ilk="function" name="getvar" signature="getvar(self, name=&apos;PY_VAR&apos;)" />
+        <scope doc="Bind to all widgets at an event SEQUENCE a call to function&#xA;FUNC." ilk="function" name="bind_all" signature="bind_all(self, sequence=None, func=None, add=None)" />
+        <scope doc="Return the width of the virtual root window associated with&#xA;this widget in pixel." ilk="function" name="winfo_vrootwidth" signature="winfo_vrootwidth(self)" />
+        <scope doc="Wait until the variable is modified." ilk="function" name="wait_variable" signature="wait_variable(self, name=&apos;PY_VAR&apos;)" />
+        <scope doc="Release grab for this widget if currently set." ilk="function" name="grab_release" signature="grab_release(self)" />
+        <scope doc="Internal function." ilk="function" name="_grid_configure" signature="_grid_configure(self, command, index, cnf, kw)" />
+        <scope doc="Set a new color scheme for all widget elements." ilk="function" name="tk_setPalette" signature="tk_setPalette(self, *args, **kw)" />
+        <scope doc="Bind to widgets with bindtag CLASSNAME at event SEQUENCE a&#xA;call of function FUNC." ilk="function" name="bind_class" signature="bind_class(self, className, sequence=None, func=None, add=None)" />
+        <scope doc="Return the Tkinter instance of a widget identified by its&#xA;Tcl name NAME." ilk="function" name="_nametowidget" signature="_nametowidget(self, name)" />
+        <scope doc="Set or get the status for propagation of geometry&#xA;information." ilk="function" name="grid_propagate" signature="grid_propagate(self, flag=[&apos;_noarg_&apos;])" />
+        <scope doc="Internal function." ilk="function" name="_getints" signature="_getints(self, string)" />
+        <scope doc="Internal function." ilk="function" name="_getboolean" signature="_getboolean(self, string)" />
+        <scope doc="Return the widget which has currently the focus on the&#xA;display where this widget is located." ilk="function" name="focus_displayof" signature="focus_displayof(self)" />
+        <scope doc="Set a VALUE (second parameter) for an option PATTERN (first&#xA;parameter)." ilk="function" name="option_add" signature="option_add(self, pattern, value, priority=None)" />
+        <scope doc="Clear the data in the Tk clipboard." ilk="function" name="clipboard_clear" signature="clipboard_clear(self, **kw)" />
+        <scope doc="Return requested height of this widget." ilk="function" name="winfo_reqheight" signature="winfo_reqheight(self)" />
+        <scope doc="Retrieve data from the clipboard on window&apos;s display." ilk="function" name="clipboard_get" signature="clipboard_get(self, **kw)" />
+        <scope doc="Set or get the list of bindtags for this widget." ilk="function" name="bindtags" signature="bindtags(self, tagList=None)" />
+        <scope doc="Change the color scheme to light brown as used in Tk 3.6 and&#xA;before." ilk="function" name="tk_bisque" signature="tk_bisque(self)" />
+        <scope doc="Clear the current X selection." ilk="function" name="selection_clear" signature="selection_clear(self, **kw)" />
+        <scope doc="Return widget which has currently the grab in this&#xA;application or None." ilk="function" name="grab_current" signature="grab_current(self)" />
+        <scope doc="Append STRING to the Tk clipboard." ilk="function" name="clipboard_append" signature="clipboard_append(self, string, **kw)" />
+        <scope doc="Internal function." ilk="function" name="_root" signature="_root(self)" />
+        <scope doc="Wait until a WIDGET is destroyed." ilk="function" name="wait_window" signature="wait_window(self, window=None)" />
+        <scope doc="Return a list of all visuals available for the screen of&#xA;this widget." ilk="function" name="winfo_visualsavailable" signature="winfo_visualsavailable(self, includeids=0)" />
+        <scope doc="Return the number of pixels of the height of the screen of&#xA;this widget in pixel." ilk="function" name="winfo_screenheight" signature="winfo_screenheight(self)" />
+        <scope doc="Become owner of X selection." ilk="function" name="selection_own" signature="selection_own(self, **kw)" />
+        <scope doc="Return integer which represents atom NAME." ilk="function" name="winfo_atom" signature="winfo_atom(self, name, displayof=0)" />
+        <scope doc="Configure resources of a widget." ilk="function" name="config" signature="config(self, cnf=None, **kw)" />
+        <scope doc="Set Tcl variable NAME to VALUE." ilk="function" name="setvar" signature="setvar(self, name=&apos;PY_VAR&apos;, value=&apos;1&apos;)" />
+        <scope doc="Return tuple of decimal values for red, green, blue for&#xA;COLOR in this widget." ilk="function" name="winfo_rgb" signature="winfo_rgb(self, color)" />
+        <scope doc="Return a list of all resource names of this widget." ilk="function" name="keys" signature="keys(self)" />
+        <scope doc="Internal function." ilk="function" name="_getdoubles" signature="_getdoubles(self, string)" />
+        <scope doc="Return height of this widget." ilk="function" name="winfo_height" signature="winfo_height(self)" />
+        <scope doc="Enter event loop until all pending events have been&#xA;processed by Tcl." ilk="function" name="update" signature="update(self)" />
+        <scope doc="Return information of the X-Server of the screen of this&#xA;widget in the form &quot;XmajorRminor vendor vendorVersion&quot;." ilk="function" name="winfo_server" signature="winfo_server(self)" />
+        <scope doc="Set or get the status for propagation of geometry&#xA;information." ilk="function" name="propagate" signature="propagate(self, flag=[&apos;_noarg_&apos;])" />
+        <scope doc="Wait until the visibility of a WIDGET changes (e.g." ilk="function" name="wait_visibility" signature="wait_visibility(self, window=None)" />
+        <scope doc="Return the height of the virtual root window associated with&#xA;this widget in pixels." ilk="function" name="winfo_vrootheight" signature="winfo_vrootheight(self)" />
+        <scope doc="Internal function." ilk="function" name="_configure" signature="_configure(self, cmd, cnf, kw)" />
+        <scope doc="Return a list of all slaves of this widget in its packing&#xA;order." ilk="function" name="grid_slaves" signature="grid_slaves(self, row=None, column=None)" />
+        <scope doc="Configure row INDEX of a grid." ilk="function" name="grid_rowconfigure" signature="grid_rowconfigure(self, index, cnf={}, **kw)" />
+        <scope doc="Unbind for this widget for event SEQUENCE  the function&#xA;identified with FUNCID." ilk="function" name="unbind" signature="unbind(self, sequence, funcid=None)" />
+        <scope doc="Return the width of this widget." ilk="function" name="winfo_width" signature="winfo_width(self)" />
+        <scope doc="Return a newly created Tcl function." ilk="function" name="_register" signature="_register(self, func, subst=None, needcleanup=1)" />
+        <scope doc="Bind to this widget at event SEQUENCE a call to function&#xA;FUNC." ilk="function" name="bind" signature="bind(self, sequence=None, func=None, add=None)" />
+        <scope doc="Unbind for all widgets for event SEQUENCE all functions." ilk="function" name="unbind_all" signature="unbind_all(self, sequence)" />
+        <scope doc="Return a newly created Tcl function." ilk="function" name="register" signature="register(self, func, subst=None, needcleanup=1)" />
+        <scope doc="Return the pathname of the widget given by ID." ilk="function" name="winfo_pathname" signature="winfo_pathname(self, id, displayof=0)" />
+        <scope doc="Unbind for a all widgets with bindtag CLASSNAME for event&#xA;SEQUENCE all functions." ilk="function" name="unbind_class" signature="unbind_class(self, className, sequence)" />
+        <scope doc="Return true if at the last color request the colormap was&#xA;full." ilk="function" name="winfo_colormapfull" signature="winfo_colormapfull(self)" />
+        <scope doc="Return the name of all Tcl interpreters for this display." ilk="function" name="winfo_interps" signature="winfo_interps(self, displayof=0)" />
+        <scope doc="Return a list of all slaves of this widget in its packing&#xA;order." ilk="function" name="slaves" signature="slaves(self)" />
+        <scope doc="Return a tuple of column and row which identify the cell at&#xA;which the pixel at position X and Y inside the master widget&#xA;is located." ilk="function" name="grid_location" signature="grid_location(self, x, y)" />
+        <scope doc="Return one of the strings directcolor, grayscale,&#xA;pseudocolor, staticcolor, staticgray, or truecolor for the&#xA;default colormodel of this screen." ilk="function" name="winfo_screenvisual" signature="winfo_screenvisual(self)" />
+        <scope doc="Configure row INDEX of a grid." ilk="function" name="rowconfigure" signature="rowconfigure(self, index, cnf={}, **kw)" />
+        <scope doc="Send Tcl command CMD to different interpreter INTERP to be&#xA;executed." ilk="function" name="send" signature="send(self, interp, cmd, *args)" />
+        <scope doc="Return a tuple of integer coordinates for the bounding box&#xA;of this widget controlled by the geometry manager grid." ilk="function" name="bbox" signature="bbox(self, column=None, row=None, col2=None, row2=None)" />
+      </scope>
+      <variable citdl="str" name="N" />
+      <variable citdl="str" name="NE" />
+      <variable citdl="int" name="NO" />
+      <variable citdl="str" name="NONE" />
+      <variable citdl="str" name="NORMAL" />
+      <variable citdl="str" name="NS" />
+      <variable citdl="str" name="NSEW" />
+      <variable citdl="str" name="NUMERIC" />
+      <variable citdl="str" name="NW" />
+      <scope doc="Inhibit setting of default root window." ilk="function" name="NoDefaultRoot" signature="NoDefaultRoot()" />
+      <variable citdl="int" name="OFF" />
+      <variable citdl="int" name="ON" />
+      <variable citdl="str" name="OUTSIDE" />
+      <scope classrefs="Menubutton" doc="OptionMenu which allows the user to select a value from a menu.&#xA;" ilk="class" name="OptionMenu">
+        <scope doc="Construct an optionmenu widget with the parent MASTER, with&#xA;the resource textvariable set to VARIABLE, the initially&#xA;selected value VALUE, the other menu values VALUES and an&#xA;additional keyword argument command." ilk="function" name="__init__" signature="__init__(self, master, variable, value, *values, **kwargs)" />
+        <scope doc="Destroy this widget and the associated menu." ilk="function" name="destroy" signature="destroy(self)" />
+        <scope ilk="function" name="__getitem__" signature="__getitem__(self, name)" />
+      </scope>
+      <variable citdl="str" name="PAGES" />
+      <variable citdl="str" name="PIESLICE" />
+      <variable citdl="str" name="PROJECTING" />
+      <scope classrefs="object" doc="Geometry manager Pack.&#xA;Base class to use the methods pack_* in every widget." ilk="class" name="Pack">
+        <scope doc="Return information about the packing options for this&#xA;widget." ilk="function" name="info" signature="info(self)" />
+        <scope doc="Unmap this widget and do not use it for the packing order." ilk="function" name="forget" signature="forget(self)" />
+        <scope doc="Pack a widget in the parent widget." ilk="function" name="pack_configure" signature="pack_configure(self, cnf={}, **kw)" />
+        <scope doc="Return a list of all slaves of this widget in its packing&#xA;order." ilk="function" name="pack_slaves" signature="pack_slaves(self)" />
+        <scope doc="Unmap this widget and do not use it for the packing order." ilk="function" name="pack_forget" signature="pack_forget(self)" />
+        <scope doc="Pack a widget in the parent widget." ilk="function" name="pack" signature="pack(self, cnf={}, **kw)" />
+        <scope doc="Set or get the status for propagation of geometry&#xA;information." ilk="function" name="propagate" signature="propagate(self, flag=[&apos;_noarg_&apos;])" />
+        <scope doc="Return a list of all slaves of this widget in its packing&#xA;order." ilk="function" name="slaves" signature="slaves(self)" />
+        <scope doc="Return information about the packing options for this&#xA;widget." ilk="function" name="pack_info" signature="pack_info(self)" />
+        <scope doc="Pack a widget in the parent widget." ilk="function" name="config" signature="config(self, cnf={}, **kw)" />
+        <scope doc="Set or get the status for propagation of geometry&#xA;information." ilk="function" name="pack_propagate" signature="pack_propagate(self, flag=[&apos;_noarg_&apos;])" />
+        <scope doc="Pack a widget in the parent widget." ilk="function" name="configure" signature="configure(self, cnf={}, **kw)" />
+      </scope>
+      <scope classrefs="Widget" doc="panedwindow widget.&#xA;" ilk="class" name="PanedWindow">
+        <scope doc="Returns an ordered list of the child panes." ilk="function" name="panes" signature="panes(self)" />
+        <scope doc="Remove the pane containing child from the panedwindow" ilk="function" name="forget" signature="forget(self, child)" />
+        <scope doc="Records x and y for the sash given by index;" ilk="function" name="sash_mark" signature="sash_mark(self, index)" />
+        <scope doc="Identify the panedwindow component at point x, y" ilk="function" name="identify" signature="identify(self, x, y)" />
+        <scope doc="Internal function." ilk="function" name="proxy" signature="proxy(self, *args)" />
+        <scope doc="Place the sash given by index at the given coordinates" ilk="function" name="sash_place" signature="sash_place(self, index, x, y)" />
+        <scope doc="Construct a panedwindow widget with the parent MASTER." ilk="function" name="__init__" signature="__init__(self, master=None, cnf={}, **kw)" />
+        <scope doc="Return the current x and y pair for the sash given by index." ilk="function" name="sash_coord" signature="sash_coord(self, index)" />
+        <scope doc="Remove the proxy from the display." ilk="function" name="proxy_forget" signature="proxy_forget(self)" />
+        <scope doc="Remove the pane containing child from the panedwindow" ilk="function" name="remove" signature="remove(self, child)" />
+        <scope doc="Add a child widget to the panedwindow in a new pane." ilk="function" name="add" signature="add(self, child, **kw)" />
+        <scope doc="Place the proxy at the given x and y coordinates." ilk="function" name="proxy_place" signature="proxy_place(self, x, y)" />
+        <scope doc="Return the x and y pair of the most recent proxy location" ilk="function" name="proxy_coord" signature="proxy_coord(self)" />
+        <scope doc="Query or modify the management options for window." ilk="function" name="paneconfig" signature="paneconfig(self, tagOrId, cnf=None, **kw)" />
+        <scope doc="Query a management option for window." ilk="function" name="panecget" signature="panecget(self, child, option)" />
+        <scope doc="Internal function." ilk="function" name="sash" signature="sash(self, *args)" />
+        <scope doc="Query or modify the management options for window." ilk="function" name="paneconfigure" signature="paneconfigure(self, tagOrId, cnf=None, **kw)" />
+      </scope>
+      <scope classrefs="Image" doc="Widget which can display colored images in GIF, PPM/PGM format.&#xA;" ilk="class" name="PhotoImage">
+        <scope doc="# XXX config" ilk="function" name="__getitem__" signature="__getitem__(self, key)" />
+        <scope doc="Return the color (red, green, blue) of the pixel at X,Y." ilk="function" name="get" signature="get(self, x, y)" />
+        <scope doc="Return a new PhotoImage with the same image as this widget&#xA;but zoom it with X and Y." ilk="function" name="zoom" signature="zoom(self, x, y=&apos;&apos;)" />
+        <scope doc="Return the value of OPTION." ilk="function" name="cget" signature="cget(self, option)" />
+        <scope doc="Write image to file FILENAME in FORMAT starting from&#xA;position FROM_COORDS." ilk="function" name="write" signature="write(self, filename, format=None, from_coords=None)" />
+        <scope doc="Return a new PhotoImage based on the same image as this&#xA;widget but use only every Xth or Yth pixel." ilk="function" name="subsample" signature="subsample(self, x, y=&apos;&apos;)" />
+        <scope doc="Display a transparent image." ilk="function" name="blank" signature="blank(self)" />
+        <scope doc="Put row formatted colors to image starting from position TO,&#xA;e.g." ilk="function" name="put" signature="put(self, data, to=None)" />
+        <scope doc="Return a new PhotoImage with the same image as this widget." ilk="function" name="copy" signature="copy(self)" />
+        <scope doc="Create an image with NAME." ilk="function" name="__init__" signature="__init__(self, name=None, cnf={}, master=None, **kw)" />
+      </scope>
+      <scope classrefs="object" doc="Geometry manager Place.&#xA;Base class to use the methods place_* in every widget." ilk="class" name="Place">
+        <scope doc="Return information about the placing options for this&#xA;widget." ilk="function" name="info" signature="info(self)" />
+        <scope doc="Place a widget in the parent widget." ilk="function" name="configure" signature="configure(self, cnf={}, **kw)" />
+        <scope doc="Unmap this widget." ilk="function" name="place_forget" signature="place_forget(self)" />
+        <scope doc="Place a widget in the parent widget." ilk="function" name="place_configure" signature="place_configure(self, cnf={}, **kw)" />
+        <scope doc="Return information about the placing options for this&#xA;widget." ilk="function" name="place_info" signature="place_info(self)" />
+        <scope doc="Place a widget in the parent widget." ilk="function" name="place" signature="place(self, cnf={}, **kw)" />
+        <scope doc="Return a list of all slaves of this widget in its packing&#xA;order." ilk="function" name="slaves" signature="slaves(self)" />
+        <scope doc="Return a list of all slaves of this widget in its packing&#xA;order." ilk="function" name="place_slaves" signature="place_slaves(self)" />
+        <scope doc="Place a widget in the parent widget." ilk="function" name="config" signature="config(self, cnf={}, **kw)" />
+        <scope doc="Unmap this widget." ilk="function" name="forget" signature="forget(self)" />
+      </scope>
+      <variable citdl="str" name="RADIOBUTTON" />
+      <variable citdl="str" name="RAISED" />
+      <variable citdl="int" name="READABLE" />
+      <variable citdl="str" name="RIDGE" />
+      <variable citdl="str" name="RIGHT" />
+      <variable citdl="str" name="ROUND" />
+      <scope classrefs="Widget" doc="Radiobutton widget which shows only one of several buttons in on-state.&#xA;" ilk="class" name="Radiobutton">
+        <scope doc="Put the button in off-state." ilk="function" name="deselect" signature="deselect(self)" />
+        <scope doc="Construct a radiobutton widget with the parent MASTER." ilk="function" name="__init__" signature="__init__(self, master=None, cnf={}, **kw)" />
+        <scope doc="Toggle the button and invoke a command if given as resource." ilk="function" name="invoke" signature="invoke(self)" />
+        <scope doc="Flash the button." ilk="function" name="flash" signature="flash(self)" />
+        <scope doc="Put the button in on-state." ilk="function" name="select" signature="select(self)" />
+      </scope>
+      <variable citdl="str" name="S" />
+      <variable citdl="str" name="SCROLL" />
+      <variable citdl="str" name="SE" />
+      <variable citdl="str" name="SEL" />
+      <variable citdl="str" name="SEL_FIRST" />
+      <variable citdl="str" name="SEL_LAST" />
+      <variable citdl="str" name="SEPARATOR" />
+      <variable citdl="str" name="SINGLE" />
+      <variable citdl="str" name="SOLID" />
+      <variable citdl="str" name="SUNKEN" />
+      <variable citdl="str" name="SW" />
+      <scope classrefs="Widget" doc="Scale widget which can display a numerical scale.&#xA;" ilk="class" name="Scale">
+        <scope doc="Set the value to VALUE." ilk="function" name="set" signature="set(self, value)" />
+        <scope doc="Return a tuple (X,Y) of the point along the centerline of&#xA;the trough that corresponds to VALUE or the current value if&#xA;None is given." ilk="function" name="coords" signature="coords(self, value=None)" />
+        <scope doc="Get the current value as integer or float." ilk="function" name="get" signature="get(self)" />
+        <scope doc="Return where the point X,Y lies." ilk="function" name="identify" signature="identify(self, x, y)" />
+        <scope doc="Construct a scale widget with the parent MASTER." ilk="function" name="__init__" signature="__init__(self, master=None, cnf={}, **kw)" />
+      </scope>
+      <scope classrefs="Widget" doc="Scrollbar widget which displays a slider at a certain position.&#xA;" ilk="class" name="Scrollbar">
+        <scope doc="Display the element at INDEX with activebackground and&#xA;activerelief." ilk="function" name="activate" signature="activate(self, index)" />
+        <scope doc="Return the current fractional values (upper and lower end)&#xA;of the slider position." ilk="function" name="get" signature="get(self)" />
+        <scope doc="Set the fractional values of the slider position (upper and&#xA;lower ends as value between 0 and 1)." ilk="function" name="set" signature="set(self, *args)" />
+        <scope doc="Return the element under position X,Y as one of&#xA;&quot;arrow1&quot;,&quot;slider&quot;,&quot;arrow2&quot; or &quot;&quot;." ilk="function" name="identify" signature="identify(self, x, y)" />
+        <scope doc="Return the fractional value which corresponds to a slider&#xA;position of X,Y." ilk="function" name="fraction" signature="fraction(self, x, y)" />
+        <scope doc="Return the fractional change of the scrollbar setting if it&#xA;would be moved by DELTAX or DELTAY pixels." ilk="function" name="delta" signature="delta(self, deltax, deltay)" />
+        <scope doc="Construct a scrollbar widget with the parent MASTER." ilk="function" name="__init__" signature="__init__(self, master=None, cnf={}, **kw)" />
+      </scope>
+      <scope classrefs="Widget XView" doc="spinbox widget.&#xA;" ilk="class" name="Spinbox">
+        <scope doc="Records x and the current view in the spinbox window;" ilk="function" name="scan_mark" signature="scan_mark(self, x)" />
+        <scope doc="Internal function." ilk="function" name="selection" signature="selection(self, *args)" />
+        <scope doc="Locate the end of the selection nearest to the character&#xA;given by index," ilk="function" name="selection_adjust" signature="selection_adjust(self, index)" />
+        <scope doc="Causes the specified element to be invoked" ilk="function" name="invoke" signature="invoke(self, element)" />
+        <scope doc="Returns the spinbox&apos;s string" ilk="function" name="get" signature="get(self)" />
+        <scope doc="Compute the difference between the given x argument and the&#xA;x argument to the last scan mark command" ilk="function" name="scan_dragto" signature="scan_dragto(self, x)" />
+        <scope doc="Returns the name of the widget at position x, y" ilk="function" name="identify" signature="identify(self, x, y)" />
+        <scope doc="Return a tuple of X1,Y1,X2,Y2 coordinates for a rectangle&#xA;which encloses the character given by index." ilk="function" name="bbox" signature="bbox(self, index)" />
+        <scope doc="Sets or gets the currently selected element." ilk="function" name="selection_element" signature="selection_element(self, element=None)" />
+        <scope doc="Insert string s at index" ilk="function" name="insert" signature="insert(self, index, s)" />
+        <scope doc="Clear the selection" ilk="function" name="selection_clear" signature="selection_clear(self)" />
+        <scope doc="Construct a spinbox widget with the parent MASTER." ilk="function" name="__init__" signature="__init__(self, master=None, cnf={}, **kw)" />
+        <scope doc="Returns the numerical index corresponding to index" ilk="function" name="index" signature="index(self, index)" />
+        <scope doc="Alter the position of the insertion cursor." ilk="function" name="icursor" signature="icursor(self, index)" />
+        <scope doc="Internal function." ilk="function" name="scan" signature="scan(self, *args)" />
+        <scope doc="Delete one or more elements of the spinbox." ilk="function" name="delete" signature="delete(self, first, last=None)" />
+      </scope>
+      <scope classrefs="Variable" doc="Value holder for strings variables.&#xA;" ilk="class" name="StringVar">
+        <scope doc="Construct a string variable." ilk="function" name="__init__" signature="__init__(self, master=None, value=None, name=None)" />
+        <scope doc="Return value of variable as string." ilk="function" name="get" signature="get(self)" />
+      </scope>
+      <scope classrefs="Button" doc="&#xA;" ilk="class" name="Studbutton">
+        <scope ilk="function" name="__init__" signature="__init__(self, master=None, cnf={}, **kw)" />
+      </scope>
+      <variable citdl="str" name="TOP" />
+      <variable citdl="int" name="TRUE" />
+      <scope ilk="function" name="Tcl" signature="Tcl(screenName=None, baseName=None, className=&apos;Tk&apos;, useTk=0)" />
+      <scope classrefs="Exception" doc="&#xA;" ilk="class" name="TclError" />
+      <variable citdl="float" name="TclVersion" />
+      <scope classrefs="Widget XView YView" doc="Text widget which can display text in various forms.&#xA;" ilk="class" name="Text">
+        <scope doc="Undoes the last edit action" ilk="function" name="edit_undo" signature="edit_undo(self)" />
+        <scope doc="Remember the current X, Y coordinates." ilk="function" name="scan_mark" signature="scan_mark(self, x, y)" />
+        <scope doc="Add tag TAGNAME to all characters between INDEX1 and index2&#xA;in ARGS." ilk="function" name="tag_add" signature="tag_add(self, tagName, index1, *args)" />
+        <scope doc="Return the contents of the widget between index1 and index2." ilk="function" name="dump" signature="dump(self, index1, index2=None, command=None, **kw)" />
+        <scope doc="Create an embedded image at INDEX." ilk="function" name="image_create" signature="image_create(self, index, cnf={}, **kw)" />
+        <scope doc="Adjust the view of the text to 10 times the difference&#xA;between X and Y and the coordinates given in scan_mark." ilk="function" name="scan_dragto" signature="scan_dragto(self, x, y)" />
+        <scope doc="Return whether between index INDEX1 and index INDEX2 the&#xA;relation OP is satisfied." ilk="function" name="compare" signature="compare(self, index1, op, index2)" />
+        <scope doc="Return all names of embedded images in this widget." ilk="function" name="image_names" signature="image_names(self)" />
+        <scope ilk="function" name="tk_textResetAnchor" signature="tk_textResetAnchor(self, index)" />
+        <scope doc="Scroll such that the character at INDEX is visible." ilk="function" name="see" signature="see(self, index)" />
+        <scope doc="Return tuple (x,y,width,height,baseline) giving the bounding&#xA;box and baseline position of the visible part of the line&#xA;containing the character at INDEX." ilk="function" name="dlineinfo" signature="dlineinfo(self, index)" />
+        <scope doc="Return a list of all tag names." ilk="function" name="tag_names" signature="tag_names(self, index=None)" />
+        <scope doc="Return the value of OPTION of an embedded image at INDEX." ilk="function" name="image_cget" signature="image_cget(self, index, option)" />
+        <scope doc="Return the value of OPTION for tag TAGNAME." ilk="function" name="tag_cget" signature="tag_cget(self, tagName, option)" />
+        <scope doc="Change the gravity of a mark MARKNAME to DIRECTION (LEFT or&#xA;RIGHT)." ilk="function" name="mark_gravity" signature="mark_gravity(self, markName, direction=None)" />
+        <scope doc="Configure an embedded image at INDEX." ilk="function" name="image_configure" signature="image_configure(self, index, cnf=None, **kw)" />
+        <scope doc="Clears the undo and redo stacks" ilk="function" name="edit_reset" signature="edit_reset(self)" />
+        <scope doc="Change the priority of tag TAGNAME such that it is higher&#xA;than the priority of ABOVETHIS." ilk="function" name="tag_raise" signature="tag_raise(self, tagName, aboveThis=None)" />
+        <scope doc="Return the index in the form line.char for INDEX." ilk="function" name="index" signature="index(self, index)" />
+        <scope doc="Delete the characters between INDEX1 and INDEX2 (not&#xA;included)." ilk="function" name="delete" signature="delete(self, index1, index2=None)" />
+        <scope doc="Inserts a separator (boundary) on the undo stack." ilk="function" name="edit_separator" signature="edit_separator(self)" />
+        <scope doc="Redo the last undone edit" ilk="function" name="edit_redo" signature="edit_redo(self)" />
+        <scope doc="Bind to all characters with TAGNAME at event SEQUENCE a call&#xA;to function FUNC." ilk="function" name="tag_bind" signature="tag_bind(self, tagName, sequence, func, add=None)" />
+        <scope ilk="function" name="tk_textBackspace" signature="tk_textBackspace(self)" />
+        <scope doc="Construct a text widget with the parent MASTER." ilk="function" name="__init__" signature="__init__(self, master=None, cnf={}, **kw)" />
+        <scope ilk="function" name="tk_textIndexCloser" signature="tk_textIndexCloser(self, a, b, c)" />
+        <scope doc="Return a list of ranges of text which have tag TAGNAME." ilk="function" name="tag_ranges" signature="tag_ranges(self, tagName)" />
+        <scope doc="Return the name of the next mark after INDEX." ilk="function" name="mark_next" signature="mark_next(self, index)" />
+        <scope doc="Return the text from INDEX1 to INDEX2 (not included)." ilk="function" name="get" signature="get(self, index1, index2=None)" />
+        <scope doc="Return the name of the previous mark before INDEX." ilk="function" name="mark_previous" signature="mark_previous(self, index)" />
+        <scope doc="Configure a tag TAGNAME." ilk="function" name="tag_configure" signature="tag_configure(self, tagName, cnf=None, **kw)" />
+        <scope doc="Remove tag TAGNAME from all characters between INDEX1 and&#xA;INDEX2." ilk="function" name="tag_remove" signature="tag_remove(self, tagName, index1, index2=None)" />
+        <scope doc="Turn on the internal consistency checks of the B-Tree inside&#xA;the text widget according to BOOLEAN." ilk="function" name="debug" signature="debug(self, boolean=None)" />
+        <scope doc="Return a tuple of (x,y,width,height) which gives the&#xA;bounding box of the visible part of the character at the&#xA;index in ARGS." ilk="function" name="bbox" signature="bbox(self, *args)" />
+        <scope doc="Configure an embedded window at INDEX." ilk="function" name="window_config" signature="window_config(self, index, cnf=None, **kw)" />
+        <scope doc="Return a list of start and end index for the first sequence&#xA;of characters between INDEX1 and INDEX2 which all have tag&#xA;TAGNAME." ilk="function" name="tag_nextrange" signature="tag_nextrange(self, tagName, index1, index2=None)" />
+        <scope doc="Configure an embedded window at INDEX." ilk="function" name="window_configure" signature="window_configure(self, index, cnf=None, **kw)" />
+        <scope doc="Create a window at INDEX." ilk="function" name="window_create" signature="window_create(self, index, cnf={}, **kw)" />
+        <scope doc="Unbind for all characters with TAGNAME for event SEQUENCE&#xA;the function identified with FUNCID." ilk="function" name="tag_unbind" signature="tag_unbind(self, tagName, sequence, funcid=None)" />
+        <scope doc="Insert CHARS before the characters at INDEX." ilk="function" name="insert" signature="insert(self, index, chars, *args)" />
+        <scope doc="Search PATTERN beginning from INDEX until STOPINDEX." ilk="function" name="search" signature="search(self, pattern, index, stopindex=None, forwards=None, backwards=None, exact=None, regexp=None, nocase=None, count=None, elide=None)" />
+        <scope ilk="function" name="tk_textSelectTo" signature="tk_textSelectTo(self, index)" />
+        <scope doc="Set mark MARKNAME before the character at INDEX." ilk="function" name="mark_set" signature="mark_set(self, markName, index)" />
+        <scope doc="Internal method" ilk="function" name="edit" signature="edit(self, *args)" />
+        <scope doc="Delete all tags in TAGNAMES." ilk="function" name="tag_delete" signature="tag_delete(self, *tagNames)" />
+        <scope doc="Return a list of start and end index for the first sequence&#xA;of characters between INDEX1 and INDEX2 which all have tag&#xA;TAGNAME." ilk="function" name="tag_prevrange" signature="tag_prevrange(self, tagName, index1, index2=None)" />
+        <scope doc="Change the priority of tag TAGNAME such that it is lower&#xA;than the priority of BELOWTHIS." ilk="function" name="tag_lower" signature="tag_lower(self, tagName, belowThis=None)" />
+        <scope doc="Return the value of OPTION of an embedded window at INDEX." ilk="function" name="window_cget" signature="window_cget(self, index, option)" />
+        <scope doc="Get or Set the modified flag" ilk="function" name="edit_modified" signature="edit_modified(self, arg=None)" />
+        <scope doc="Return all mark names." ilk="function" name="mark_names" signature="mark_names(self)" />
+        <scope doc="Delete all marks in MARKNAMES." ilk="function" name="mark_unset" signature="mark_unset(self, *markNames)" />
+        <scope doc="Obsolete function, use see." ilk="function" name="yview_pickplace" signature="yview_pickplace(self, *what)" />
+        <scope doc="Return all names of embedded windows in this widget." ilk="function" name="window_names" signature="window_names(self)" />
+        <scope doc="Configure a tag TAGNAME." ilk="function" name="tag_config" signature="tag_config(self, tagName, cnf=None, **kw)" />
+      </scope>
+      <scope classrefs="Misc Wm" doc="Toplevel widget of Tk which represents mostly the main window&#xA;of an application. It has an associated Tcl interpreter." ilk="class" name="Tk">
+        <scope doc="Internal function." ilk="function" name="readprofile" signature="readprofile(self, baseName, className)" />
+        <scope ilk="function" name="_loadtk" signature="_loadtk(self)" />
+        <scope ilk="function" name="loadtk" signature="loadtk(self)" />
+        <scope doc="Internal function. It reports exception on sys.stderr." ilk="function" name="report_callback_exception" signature="report_callback_exception(self, exc, val, tb)" />
+        <scope doc="Delegate attribute access to the interpreter object" ilk="function" name="__getattr__" signature="__getattr__(self, attr)" />
+        <scope doc="Destroy this and all descendants widgets." ilk="function" name="destroy" signature="destroy(self)" />
+        <scope doc="Return a new Toplevel widget on screen SCREENNAME." ilk="function" name="__init__" signature="__init__(self, screenName=None, baseName=None, className=&apos;Tk&apos;, useTk=1, sync=0, use=None)" />
+      </scope>
+      <variable citdl="float" name="TkVersion" />
+      <scope classrefs="BaseWidget Wm" doc="Toplevel widget, e.g. for dialogs.&#xA;" ilk="class" name="Toplevel">
+        <scope doc="Construct a toplevel widget with the parent MASTER." ilk="function" name="__init__" signature="__init__(self, master=None, cnf={}, **kw)" />
+      </scope>
+      <scope classrefs="Button" doc="&#xA;" ilk="class" name="Tributton">
+        <scope ilk="function" name="__init__" signature="__init__(self, master=None, cnf={}, **kw)" />
+      </scope>
+      <variable citdl="str" name="UNDERLINE" />
+      <variable citdl="str" name="UNITS" />
+      <variable citdl="str" name="VERTICAL" />
+      <scope classrefs="object" doc="Class to define value holders for e.g. buttons.&#xA;Subclasses StringVar, IntVar, DoubleVar, BooleanVar are specializations that constrain the type of the value returned from get()." ilk="class" name="Variable">
+        <scope doc="Delete the trace callback for a variable." ilk="function" name="trace_vdelete" signature="trace_vdelete(self, mode, cbname)" />
+        <scope doc="Set the variable to VALUE." ilk="function" name="set" signature="set(self, value)" />
+        <scope doc="Define a trace callback for the variable." ilk="function" name="trace" signature="trace(self, mode, callback)" />
+        <scope doc="Return value of variable." ilk="function" name="get" signature="get(self)" />
+        <scope doc="Unset the variable in Tcl." ilk="function" name="__del__" signature="__del__(self)" />
+        <scope doc="Define a trace callback for the variable." ilk="function" name="trace_variable" signature="trace_variable(self, mode, callback)" />
+        <scope doc="Return the name of the variable in Tcl." ilk="function" name="__str__" signature="__str__(self)" />
+        <scope doc="Return all trace callback information." ilk="function" name="trace_vinfo" signature="trace_vinfo(self)" />
+        <scope doc="Comparison for equality (==)." ilk="function" name="__eq__" signature="__eq__(self, other)" />
+        <scope doc="Construct a variable" ilk="function" name="__init__" signature="__init__(self, master=None, value=None, name=None)" />
+      </scope>
+      <variable citdl="str" name="W" />
+      <variable citdl="str" name="WORD" />
+      <variable citdl="int" name="WRITABLE" />
+      <scope classrefs="BaseWidget Pack Place Grid" doc="Internal class.&#xA;Base class for a widget which can be positioned with the geometry managers Pack, Place or Grid." ilk="class" name="Widget" />
+      <scope classrefs="object" doc="Provides functions for the communication with the window manager.&#xA;" ilk="class" name="Wm">
+        <scope doc="Set min WIDTH and HEIGHT for this widget." ilk="function" name="wm_minsize" signature="wm_minsize(self, width=None, height=None)" />
+        <scope doc="Bind function FUNC to command NAME for this widget." ilk="function" name="protocol" signature="protocol(self, name=None, func=None)" />
+        <scope doc="Set the name of the icon for this widget." ilk="function" name="iconname" signature="iconname(self, newName=None)" />
+        <scope doc="Set mask for the icon bitmap of this widget." ilk="function" name="iconmask" signature="iconmask(self, bitmap=None)" />
+        <scope doc="Set widget PATHNAME to be displayed instead of icon." ilk="function" name="wm_iconwindow" signature="wm_iconwindow(self, pathName=None)" />
+        <scope doc="Return identifier for decorative frame of this widget if&#xA;present." ilk="function" name="frame" signature="frame(self)" />
+        <scope doc="Set the group leader widgets for related widgets to&#xA;PATHNAME." ilk="function" name="wm_group" signature="wm_group(self, pathName=None)" />
+        <scope doc="Instruct the window manager to set the aspect ratio&#xA;(width/height) of this widget to be between&#xA;MINNUMER/MINDENOM and MAXNUMER/MAXDENOM." ilk="function" name="wm_aspect" signature="wm_aspect(self, minNumer=None, minDenom=None, maxNumer=None, maxDenom=None)" />
+        <scope doc="Set min WIDTH and HEIGHT for this widget." ilk="function" name="minsize" signature="minsize(self, width=None, height=None)" />
+        <scope doc="Set widget PATHNAME to be displayed instead of icon." ilk="function" name="iconwindow" signature="iconwindow(self, pathName=None)" />
+        <scope doc="Store NAME in WM_CLIENT_MACHINE property of this widget." ilk="function" name="wm_client" signature="wm_client(self, name=None)" />
+        <scope doc="Display widget as icon." ilk="function" name="iconify" signature="iconify(self)" />
+        <scope doc="Set the position of the icon of this widget to X and Y." ilk="function" name="wm_iconposition" signature="wm_iconposition(self, x=None, y=None)" />
+        <scope doc="Instruct the window manager to set the aspect ratio&#xA;(width/height) of this widget to be between&#xA;MINNUMER/MINDENOM and MAXNUMER/MAXDENOM." ilk="function" name="aspect" signature="aspect(self, minNumer=None, minDenom=None, maxNumer=None, maxDenom=None)" />
+        <scope doc="Deiconify this widget." ilk="function" name="wm_deiconify" signature="wm_deiconify(self)" />
+        <scope doc="Instruct the window manager that the size of this widget&#xA;shall be defined by the user if WHO is &quot;user&quot;, and by its&#xA;own policy if WHO is &quot;program&quot;." ilk="function" name="sizefrom" signature="sizefrom(self, who=None)" />
+        <scope doc="Instruct the window manager that this widget shall only be&#xA;resized on grid boundaries." ilk="function" name="wm_grid" signature="wm_grid(self, baseWidth=None, baseHeight=None, widthInc=None, heightInc=None)" />
+        <scope doc="Set the group leader widgets for related widgets to&#xA;PATHNAME." ilk="function" name="group" signature="group(self, pathName=None)" />
+        <scope doc="Withdraw this widget from the screen such that it is&#xA;unmapped and forgotten by the window manager." ilk="function" name="wm_withdraw" signature="wm_withdraw(self)" />
+        <scope doc="Set the title of this widget." ilk="function" name="title" signature="title(self, string=None)" />
+        <scope doc="Instruct the window manager to ignore this widget if BOOLEAN&#xA;is given with 1." ilk="function" name="overrideredirect" signature="overrideredirect(self, boolean=None)" />
+        <scope doc="Store list of window names (WLIST) into WM_COLORMAPWINDOWS&#xA;property of this widget." ilk="function" name="colormapwindows" signature="colormapwindows(self, *wlist)" />
+        <scope doc="Set max WIDTH and HEIGHT for this widget." ilk="function" name="maxsize" signature="maxsize(self, width=None, height=None)" />
+        <scope doc="Set the position of the icon of this widget to X and Y." ilk="function" name="iconposition" signature="iconposition(self, x=None, y=None)" />
+        <scope doc="Store NAME in WM_CLIENT_MACHINE property of this widget." ilk="function" name="client" signature="client(self, name=None)" />
+        <scope doc="Query or set the state of this widget as one of normal,&#xA;icon, iconic (see wm_iconwindow), withdrawn, or zoomed&#xA;(Windows only)." ilk="function" name="state" signature="state(self, newstate=None)" />
+        <scope doc="Store list of window names (WLIST) into WM_COLORMAPWINDOWS&#xA;property of this widget." ilk="function" name="wm_colormapwindows" signature="wm_colormapwindows(self, *wlist)" />
+        <scope doc="Display widget as icon." ilk="function" name="wm_iconify" signature="wm_iconify(self)" />
+        <scope doc="Store VALUE in WM_COMMAND property." ilk="function" name="wm_command" signature="wm_command(self, value=None)" />
+        <scope doc="Return identifier for decorative frame of this widget if&#xA;present." ilk="function" name="wm_frame" signature="wm_frame(self)" />
+        <scope doc="Instruct the window manager to ignore this widget if BOOLEAN&#xA;is given with 1." ilk="function" name="wm_overrideredirect" signature="wm_overrideredirect(self, boolean=None)" />
+        <scope doc="Set max WIDTH and HEIGHT for this widget." ilk="function" name="wm_maxsize" signature="wm_maxsize(self, width=None, height=None)" />
+        <scope doc="Instruct the window manager that this widget is transient&#xA;with regard to widget MASTER." ilk="function" name="wm_transient" signature="wm_transient(self, master=None)" />
+        <scope doc="Instruct the window manager whether this width can be&#xA;resized in WIDTH or HEIGHT." ilk="function" name="resizable" signature="resizable(self, width=None, height=None)" />
+        <scope doc="Instruct the window manager whether this width can be&#xA;resized in WIDTH or HEIGHT." ilk="function" name="wm_resizable" signature="wm_resizable(self, width=None, height=None)" />
+        <scope doc="Set focus model to MODEL." ilk="function" name="focusmodel" signature="focusmodel(self, model=None)" />
+        <scope doc="Set geometry to NEWGEOMETRY of the form =widthxheight+x+y." ilk="function" name="wm_geometry" signature="wm_geometry(self, newGeometry=None)" />
+        <scope doc="Instruct the window manager that this widget is transient&#xA;with regard to widget MASTER." ilk="function" name="transient" signature="transient(self, master=None)" />
+        <scope doc="Instruct the window manager that this widget shall only be&#xA;resized on grid boundaries." ilk="function" name="grid" signature="grid(self, baseWidth=None, baseHeight=None, widthInc=None, heightInc=None)" />
+        <scope doc="This subcommand returns or sets platform specific attributes" ilk="function" name="attributes" signature="attributes(self, *args)" />
+        <scope doc="Instruct the window manager that the position of this widget&#xA;shall be defined by the user if WHO is &quot;user&quot;, and by its&#xA;own policy if WHO is &quot;program&quot;." ilk="function" name="positionfrom" signature="positionfrom(self, who=None)" />
+        <scope doc="Set the title of this widget." ilk="function" name="wm_title" signature="wm_title(self, string=None)" />
+        <scope doc="Set bitmap for the iconified widget to BITMAP." ilk="function" name="iconbitmap" signature="iconbitmap(self, bitmap=None, default=None)" />
+        <scope doc="Set focus model to MODEL." ilk="function" name="wm_focusmodel" signature="wm_focusmodel(self, model=None)" />
+        <scope doc="Instruct the window manager that the position of this widget&#xA;shall be defined by the user if WHO is &quot;user&quot;, and by its&#xA;own policy if WHO is &quot;program&quot;." ilk="function" name="wm_positionfrom" signature="wm_positionfrom(self, who=None)" />
+        <scope doc="Instruct the window manager that the size of this widget&#xA;shall be defined by the user if WHO is &quot;user&quot;, and by its&#xA;own policy if WHO is &quot;program&quot;." ilk="function" name="wm_sizefrom" signature="wm_sizefrom(self, who=None)" />
+        <scope doc="Set geometry to NEWGEOMETRY of the form =widthxheight+x+y." ilk="function" name="geometry" signature="geometry(self, newGeometry=None)" />
+        <scope doc="Query or set the state of this widget as one of normal,&#xA;icon, iconic (see wm_iconwindow), withdrawn, or zoomed&#xA;(Windows only)." ilk="function" name="wm_state" signature="wm_state(self, newstate=None)" />
+        <scope doc="Bind function FUNC to command NAME for this widget." ilk="function" name="wm_protocol" signature="wm_protocol(self, name=None, func=None)" />
+        <scope doc="Deiconify this widget." ilk="function" name="deiconify" signature="deiconify(self)" />
+        <scope doc="This subcommand returns or sets platform specific attributes" ilk="function" name="wm_attributes" signature="wm_attributes(self, *args)" />
+        <scope doc="Set mask for the icon bitmap of this widget." ilk="function" name="wm_iconmask" signature="wm_iconmask(self, bitmap=None)" />
+        <scope doc="Store VALUE in WM_COMMAND property." ilk="function" name="command" signature="command(self, value=None)" />
+        <scope doc="Withdraw this widget from the screen such that it is&#xA;unmapped and forgotten by the window manager." ilk="function" name="withdraw" signature="withdraw(self)" />
+        <scope doc="Set bitmap for the iconified widget to BITMAP." ilk="function" name="wm_iconbitmap" signature="wm_iconbitmap(self, bitmap=None, default=None)" />
+        <scope doc="Set the name of the icon for this widget." ilk="function" name="wm_iconname" signature="wm_iconname(self, newName=None)" />
+      </scope>
+      <variable citdl="str" name="X" />
+      <scope classrefs="object" doc="Mix-in class for querying and changing the horizontal position&#xA;of a widget&apos;s window." ilk="class" name="XView">
+        <scope doc="Shift the x-view according to NUMBER which is measured in&#xA;&quot;units&quot; or &quot;pages&quot; (WHAT)." ilk="function" name="xview_scroll" signature="xview_scroll(self, number, what)" />
+        <scope doc="Query and change the horizontal position of the view." ilk="function" name="xview" signature="xview(self, *args)" />
+        <scope doc="Adjusts the view in the window so that FRACTION of the total&#xA;width of the canvas is off-screen to the left." ilk="function" name="xview_moveto" signature="xview_moveto(self, fraction)" />
+      </scope>
+      <variable citdl="str" name="Y" />
+      <variable citdl="int" name="YES" />
+      <scope classrefs="object" doc="Mix-in class for querying and changing the vertical position&#xA;of a widget&apos;s window." ilk="class" name="YView">
+        <scope doc="Query and change the vertical position of the view." ilk="function" name="yview" signature="yview(self, *args)" />
+        <scope doc="Shift the y-view according to NUMBER which is measured in&#xA;&quot;units&quot; or &quot;pages&quot; (WHAT)." ilk="function" name="yview_scroll" signature="yview_scroll(self, number, what)" />
+        <scope doc="Adjusts the view in the window so that FRACTION of the total&#xA;height of the canvas is off-screen to the top." ilk="function" name="yview_moveto" signature="yview_moveto(self, fraction)" />
+      </scope>
+      <import module="colorchooser" />
+      <import module="commondialog" />
+      <import module="constants" />
+      <scope doc="Convert true and false to integer values 1 and 0." ilk="function" name="getboolean" signature="getboolean(s)" />
+      <scope classrefs="object" doc="float(x) -&gt; floating point number&#xA;Convert a string or number to a floating point number, if possible." ilk="class" name="getdouble">
+        <scope doc="x.__int__() &lt;==&gt; int(x)" ilk="function" name="__int__" signature="x.__int__() &lt;==&gt; int(x)" />
+        <scope doc="x.__rtruediv__(y) &lt;==&gt; y/x" ilk="function" name="__rtruediv__" signature="x.__rtruediv__(y) &lt;==&gt; y/x" />
+        <scope doc="x.__str__() &lt;==&gt; str(x)" ilk="function" name="__str__" signature="x.__str__() &lt;==&gt; str(x)" />
+        <scope doc="x.__getattribute__(&apos;name&apos;) &lt;==&gt; x.name" ilk="function" name="__getattribute__" signature="x.__getattribute__(&apos;name&apos;) &lt;==&gt; x.name" />
+        <scope doc="x.__radd__(y) &lt;==&gt; y+x" ilk="function" name="__radd__" signature="x.__radd__(y) &lt;==&gt; y+x" />
+        <scope doc="Returns the Integral closest to x between 0 and x." ilk="function" name="__trunc__" />
+        <scope doc="x.__truediv__(y) &lt;==&gt; x/y" ilk="function" name="__truediv__" signature="x.__truediv__(y) &lt;==&gt; x/y" />
+        <scope doc="x.__rsub__(y) &lt;==&gt; y-x" ilk="function" name="__rsub__" signature="x.__rsub__(y) &lt;==&gt; y-x" />
+        <scope doc="Returns self, the complex conjugate of any float." ilk="function" name="conjugate" />
+        <scope doc="x.__rmul__(y) &lt;==&gt; y*x" ilk="function" name="__rmul__" signature="x.__rmul__(y) &lt;==&gt; y*x" />
+        <scope doc="x.__lt__(y) &lt;==&gt; x&lt;y" ilk="function" name="__lt__" signature="x.__lt__(y) &lt;==&gt; x&lt;y" />
+        <scope doc="Returns a pair of integers, whose ratio is exactly equal to&#xA;the original float and with a positive denominator." ilk="function" name="as_integer_ratio" signature="float.as_integer_ratio() -&gt; (int, int)" />
+        <scope doc="x.__rmod__(y) &lt;==&gt; y%x" ilk="function" name="__rmod__" signature="x.__rmod__(y) &lt;==&gt; y%x" />
+        <scope doc="x.__float__() &lt;==&gt; float(x)" ilk="function" name="__float__" signature="x.__float__() &lt;==&gt; float(x)" />
+        <scope doc="y.__rpow__(x[, z]) &lt;==&gt; pow(x, y[, z])" ilk="function" name="__rpow__" signature="y.__rpow__(x[, z]) &lt;==&gt; pow(x, y[, z])" />
+        <scope ilk="function" name="__getnewargs__" />
+        <scope doc="Formats the float according to format_spec." ilk="function" name="__format__" returns="str" signature="float.__format__(format_spec) -&gt; string" />
+        <scope doc="Return a hexadecimal representation of a floating-point&#xA;number." ilk="function" name="hex" returns="str" signature="float.hex() -&gt; string" />
+        <scope doc="x.__abs__() &lt;==&gt; abs(x)" ilk="function" name="__abs__" signature="x.__abs__() &lt;==&gt; abs(x)" />
+        <scope doc="x.__pos__() &lt;==&gt; +x" ilk="function" name="__pos__" signature="x.__pos__() &lt;==&gt; +x" />
+        <scope doc="x.__rfloordiv__(y) &lt;==&gt; y//x" ilk="function" name="__rfloordiv__" signature="x.__rfloordiv__(y) &lt;==&gt; y//x" />
+        <scope doc="x.__mul__(y) &lt;==&gt; x*y" ilk="function" name="__mul__" signature="x.__mul__(y) &lt;==&gt; x*y" />
+        <scope doc="x.__ne__(y) &lt;==&gt; x!=y" ilk="function" name="__ne__" signature="x.__ne__(y) &lt;==&gt; x!=y" />
+        <scope doc="x.__rdivmod__(y) &lt;==&gt; divmod(y, x)" ilk="function" name="__rdivmod__" signature="x.__rdivmod__(y) &lt;==&gt; divmod(y, x)" />
+        <scope doc="x.__divmod__(y) &lt;==&gt; divmod(x, y)" ilk="function" name="__divmod__" signature="x.__divmod__(y) &lt;==&gt; divmod(x, y)" />
+        <scope doc="x.__add__(y) &lt;==&gt; x+y" ilk="function" name="__add__" signature="x.__add__(y) &lt;==&gt; x+y" />
+        <scope doc="x.__gt__(y) &lt;==&gt; x&gt;y" ilk="function" name="__gt__" signature="x.__gt__(y) &lt;==&gt; x&gt;y" />
+        <scope doc="x.__bool__() &lt;==&gt; x != 0" ilk="function" name="__bool__" signature="x.__bool__() &lt;==&gt; x != 0" />
+        <scope doc="x.__eq__(y) &lt;==&gt; x==y" ilk="function" name="__eq__" signature="x.__eq__(y) &lt;==&gt; x==y" />
+        <scope doc="Returns True if the float is an integer." ilk="function" name="is_integer" />
+        <scope doc="Returns the Integral closest to x, rounding half toward&#xA;even." ilk="function" name="__round__" />
+        <scope doc="x.__mod__(y) &lt;==&gt; x%y" ilk="function" name="__mod__" signature="x.__mod__(y) &lt;==&gt; x%y" />
+        <scope doc="x.__neg__() &lt;==&gt; -x" ilk="function" name="__neg__" signature="x.__neg__() &lt;==&gt; -x" />
+        <scope doc="x.__le__(y) &lt;==&gt; x&lt;=y" ilk="function" name="__le__" signature="x.__le__(y) &lt;==&gt; x&lt;=y" />
+        <scope doc="x.__repr__() &lt;==&gt; repr(x)" ilk="function" name="__repr__" signature="x.__repr__() &lt;==&gt; repr(x)" />
+        <scope doc="x.__floordiv__(y) &lt;==&gt; x//y" ilk="function" name="__floordiv__" signature="x.__floordiv__(y) &lt;==&gt; x//y" />
+        <scope doc="x.__hash__() &lt;==&gt; hash(x)" ilk="function" name="__hash__" signature="x.__hash__() &lt;==&gt; hash(x)" />
+        <scope doc="x.__sub__(y) &lt;==&gt; x-y" ilk="function" name="__sub__" signature="x.__sub__(y) &lt;==&gt; x-y" />
+        <scope doc="x.__ge__(y) &lt;==&gt; x&gt;=y" ilk="function" name="__ge__" signature="x.__ge__(y) &lt;==&gt; x&gt;=y" />
+        <scope doc="x.__pow__(y[, z]) &lt;==&gt; pow(x, y[, z])" ilk="function" name="__pow__" signature="x.__pow__(y[, z]) &lt;==&gt; pow(x, y[, z])" />
+      </scope>
+      <scope classrefs="object" doc="int(x[, base]) -&gt; integer&#xA;Convert a string or number to an integer, if possible.  A floating point argument will be truncated towards zero (this does not include a string representation of a floating point number!)  When converting a string, use the optional base.  It is an error to supply a base when converting a non-string." ilk="class" name="getint">
+        <scope doc="x.__int__() &lt;==&gt; int(x)" ilk="function" name="__int__" signature="x.__int__() &lt;==&gt; int(x)" />
+        <scope doc="x.__ror__(y) &lt;==&gt; y|x" ilk="function" name="__ror__" signature="x.__ror__(y) &lt;==&gt; y|x" />
+        <scope doc="x.__rtruediv__(y) &lt;==&gt; y/x" ilk="function" name="__rtruediv__" signature="x.__rtruediv__(y) &lt;==&gt; y/x" />
+        <scope doc="x.__lshift__(y) &lt;==&gt; x&lt;&lt;y" ilk="function" name="__lshift__" signature="x.__lshift__(y) &lt;==&gt; x&lt;&lt;y" />
+        <scope doc="x.__rshift__(y) &lt;==&gt; x&gt;&gt;y" ilk="function" name="__rshift__" signature="x.__rshift__(y) &lt;==&gt; x&gt;&gt;y" />
+        <scope doc="x.__str__() &lt;==&gt; str(x)" ilk="function" name="__str__" signature="x.__str__() &lt;==&gt; str(x)" />
+        <scope doc="x.__getattribute__(&apos;name&apos;) &lt;==&gt; x.name" ilk="function" name="__getattribute__" signature="x.__getattribute__(&apos;name&apos;) &lt;==&gt; x.name" />
+        <scope doc="x.__radd__(y) &lt;==&gt; y+x" ilk="function" name="__radd__" signature="x.__radd__(y) &lt;==&gt; y+x" />
+        <scope doc="x.__and__(y) &lt;==&gt; x&amp;y" ilk="function" name="__and__" signature="x.__and__(y) &lt;==&gt; x&amp;y" />
+        <scope doc="x.__truediv__(y) &lt;==&gt; x/y" ilk="function" name="__truediv__" signature="x.__truediv__(y) &lt;==&gt; x/y" />
+        <scope doc="x.__rrshift__(y) &lt;==&gt; y&gt;&gt;x" ilk="function" name="__rrshift__" signature="x.__rrshift__(y) &lt;==&gt; y&gt;&gt;x" />
+        <scope doc="x.__rsub__(y) &lt;==&gt; y-x" ilk="function" name="__rsub__" signature="x.__rsub__(y) &lt;==&gt; y-x" />
+        <scope doc="Returns self, the complex conjugate of any int." ilk="function" name="conjugate" />
+        <scope doc="x.__rmul__(y) &lt;==&gt; y*x" ilk="function" name="__rmul__" signature="x.__rmul__(y) &lt;==&gt; y*x" />
+        <scope doc="x.__lt__(y) &lt;==&gt; x&lt;y" ilk="function" name="__lt__" signature="x.__lt__(y) &lt;==&gt; x&lt;y" />
+        <scope doc="Ceiling of an Integral returns itself." ilk="function" name="__ceil__" />
+        <scope doc="x.__rmod__(y) &lt;==&gt; y%x" ilk="function" name="__rmod__" signature="x.__rmod__(y) &lt;==&gt; y%x" />
+        <scope doc="x.__float__() &lt;==&gt; float(x)" ilk="function" name="__float__" signature="x.__float__() &lt;==&gt; float(x)" />
+        <scope doc="y.__rpow__(x[, z]) &lt;==&gt; pow(x, y[, z])" ilk="function" name="__rpow__" signature="y.__rpow__(x[, z]) &lt;==&gt; pow(x, y[, z])" />
+        <scope doc="x.__rand__(y) &lt;==&gt; y&amp;x" ilk="function" name="__rand__" signature="x.__rand__(y) &lt;==&gt; y&amp;x" />
+        <scope doc="Return an array of bytes representing an integer." ilk="function" name="to_bytes" signature="int.to_bytes(length, byteorder, *, signed=False) -&gt; bytes" />
+        <scope ilk="function" name="__getnewargs__" />
+        <scope doc="x.__or__(y) &lt;==&gt; x|y" ilk="function" name="__or__" signature="x.__or__(y) &lt;==&gt; x|y" />
+        <scope doc="x.__rlshift__(y) &lt;==&gt; y&lt;&lt;x" ilk="function" name="__rlshift__" signature="x.__rlshift__(y) &lt;==&gt; y&lt;&lt;x" />
+        <scope doc="x.__abs__() &lt;==&gt; abs(x)" ilk="function" name="__abs__" signature="x.__abs__() &lt;==&gt; abs(x)" />
+        <scope doc="x.__pos__() &lt;==&gt; +x" ilk="function" name="__pos__" signature="x.__pos__() &lt;==&gt; +x" />
+        <scope doc="x[y:z] &lt;==&gt; x[y.__index__():z.__index__()]" ilk="function" name="__index__" />
+        <scope doc="x.__rfloordiv__(y) &lt;==&gt; y//x" ilk="function" name="__rfloordiv__" signature="x.__rfloordiv__(y) &lt;==&gt; y//x" />
+        <scope doc="Number of bits necessary to represent self in binary." ilk="function" name="bit_length" returns="int" signature="int.bit_length() -&gt; int" />
+        <scope doc="Flooring an Integral returns itself." ilk="function" name="__floor__" />
+        <scope doc="x.__mul__(y) &lt;==&gt; x*y" ilk="function" name="__mul__" signature="x.__mul__(y) &lt;==&gt; x*y" />
+        <scope doc="x.__ne__(y) &lt;==&gt; x!=y" ilk="function" name="__ne__" signature="x.__ne__(y) &lt;==&gt; x!=y" />
+        <scope doc="x.__rdivmod__(y) &lt;==&gt; divmod(y, x)" ilk="function" name="__rdivmod__" signature="x.__rdivmod__(y) &lt;==&gt; divmod(y, x)" />
+        <scope doc="x.__invert__() &lt;==&gt; ~x" ilk="function" name="__invert__" signature="x.__invert__() &lt;==&gt; ~x" />
+        <scope ilk="function" name="__format__" />
+        <scope doc="x.__divmod__(y) &lt;==&gt; divmod(x, y)" ilk="function" name="__divmod__" signature="x.__divmod__(y) &lt;==&gt; divmod(x, y)" />
+        <scope doc="x.__add__(y) &lt;==&gt; x+y" ilk="function" name="__add__" signature="x.__add__(y) &lt;==&gt; x+y" />
+        <scope doc="x.__gt__(y) &lt;==&gt; x&gt;y" ilk="function" name="__gt__" signature="x.__gt__(y) &lt;==&gt; x&gt;y" />
+        <scope doc="x.__bool__() &lt;==&gt; x != 0" ilk="function" name="__bool__" signature="x.__bool__() &lt;==&gt; x != 0" />
+        <scope doc="x.__eq__(y) &lt;==&gt; x==y" ilk="function" name="__eq__" signature="x.__eq__(y) &lt;==&gt; x==y" />
+        <scope doc="x.__rxor__(y) &lt;==&gt; y^x" ilk="function" name="__rxor__" signature="x.__rxor__(y) &lt;==&gt; y^x" />
+        <scope doc="Returns size in memory, in bytes" ilk="function" name="__sizeof__" />
+        <scope doc="Rounding an Integral returns itself." ilk="function" name="__round__" />
+        <scope doc="x.__mod__(y) &lt;==&gt; x%y" ilk="function" name="__mod__" signature="x.__mod__(y) &lt;==&gt; x%y" />
+        <scope doc="x.__neg__() &lt;==&gt; -x" ilk="function" name="__neg__" signature="x.__neg__() &lt;==&gt; -x" />
+        <scope doc="Truncating an Integral returns itself." ilk="function" name="__trunc__" />
+        <scope doc="x.__xor__(y) &lt;==&gt; x^y" ilk="function" name="__xor__" signature="x.__xor__(y) &lt;==&gt; x^y" />
+        <scope doc="x.__le__(y) &lt;==&gt; x&lt;=y" ilk="function" name="__le__" signature="x.__le__(y) &lt;==&gt; x&lt;=y" />
+        <scope doc="x.__repr__() &lt;==&gt; repr(x)" ilk="function" name="__repr__" signature="x.__repr__() &lt;==&gt; repr(x)" />
+        <scope doc="x.__floordiv__(y) &lt;==&gt; x//y" ilk="function" name="__floordiv__" signature="x.__floordiv__(y) &lt;==&gt; x//y" />
+        <scope doc="x.__hash__() &lt;==&gt; hash(x)" ilk="function" name="__hash__" signature="x.__hash__() &lt;==&gt; hash(x)" />
+        <scope doc="x.__sub__(y) &lt;==&gt; x-y" ilk="function" name="__sub__" signature="x.__sub__(y) &lt;==&gt; x-y" />
+        <scope doc="x.__ge__(y) &lt;==&gt; x&gt;=y" ilk="function" name="__ge__" signature="x.__ge__(y) &lt;==&gt; x&gt;=y" />
+        <scope doc="x.__pow__(y[, z]) &lt;==&gt; pow(x, y[, z])" ilk="function" name="__pow__" signature="x.__pow__(y[, z]) &lt;==&gt; pow(x, y[, z])" />
+      </scope>
+      <scope ilk="function" name="image_names" signature="image_names()" />
+      <scope ilk="function" name="image_types" signature="image_types()" />
+      <scope doc="Run the main loop of Tcl." ilk="function" name="mainloop" signature="mainloop(n=0)" />
+      <import module="sys" />
+      <variable citdl="int" name="wantobjects" />
+      <variable attributes="__hidden__" citdl="Button()" line="46" name="q" />
+      <scope attributes="protected __hidden__" ilk="function" line="27" lineend="39" name="_test" signature="_test()">
+        <variable citdl="Dialog" line="28" name="d" />
+      </scope>
+      <variable attributes="__hidden__" citdl="Button()" line="43" name="t" />
+    </scope>
+    

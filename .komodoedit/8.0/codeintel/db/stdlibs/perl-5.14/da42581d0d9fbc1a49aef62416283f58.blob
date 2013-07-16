@@ -1,0 +1,77 @@
+<scope ilk="blob" lang="Perl" name="Locale::Country">
+      <scope classrefs="Exporter" ilk="class" line="1" lineend="310" name="Locale::Country">
+        <import line="12" module="Exporter" />
+        <import line="13" module="Carp" symbol="*" />
+        <import line="14" module="Locale::Codes" symbol="*" />
+        <import line="15" module="Locale::Constants" symbol="*" />
+        <import line="16" module="Locale::Codes::Country" symbol="*" />
+        <variable line="22" name="$VERSION" />
+        <variable line="22" name="@EXPORT" />
+        <variable line="22" name="@EXPORT_OK" />
+        <variable line="22" name="@ISA" />
+        <scope ilk="function" line="38" lineend="76" name="_code" signature="_code($code, $codeset)">
+          <variable ilk="argument" name="$code" />
+          <variable ilk="argument" name="$codeset" />
+        </scope>
+        <scope attributes="__exported__" ilk="function" line="84" lineend="90" name="code2country" signature="code2country()">
+          </scope>
+        <scope attributes="__exported__" ilk="function" line="98" lineend="106" name="country2code" signature="country2code($country, $codeset)">
+          <variable ilk="argument" name="$country" />
+          <variable ilk="argument" name="$codeset" />
+        </scope>
+        <scope attributes="__exported__" ilk="function" line="114" lineend="124" name="country_code2code" signature="country_code2code($code, $inset, $outset)">
+          <variable ilk="argument" name="$code" />
+          <variable ilk="argument" name="$inset" />
+          <variable ilk="argument" name="$outset" />
+        </scope>
+        <scope attributes="__exported__" ilk="function" line="132" lineend="139" name="all_country_codes" signature="all_country_codes($codeset)">
+          <variable ilk="argument" name="$codeset" />
+        </scope>
+        <scope attributes="__exported__" ilk="function" line="148" lineend="155" name="all_country_names" signature="all_country_names($codeset)">
+          <variable ilk="argument" name="$codeset" />
+        </scope>
+        <scope ilk="function" line="163" lineend="172" name="rename_country" signature="rename_country($code, $new_name, @args)">
+          <variable ilk="argument" name="$code" />
+          <variable ilk="argument" name="$new_name" />
+          <variable ilk="argument" name="@args" />
+        </scope>
+        <scope ilk="function" line="180" lineend="189" name="add_country" signature="add_country($code, $name, @args)">
+          <variable ilk="argument" name="$code" />
+          <variable ilk="argument" name="$name" />
+          <variable ilk="argument" name="@args" />
+        </scope>
+        <scope ilk="function" line="197" lineend="206" name="delete_country" signature="delete_country($code, @args)">
+          <variable ilk="argument" name="$code" />
+          <variable ilk="argument" name="@args" />
+        </scope>
+        <scope ilk="function" line="214" lineend="219" name="add_country_alias" signature="add_country_alias($name, $new_name, $nowarn)">
+          <variable ilk="argument" name="$name" />
+          <variable ilk="argument" name="$new_name" />
+          <variable ilk="argument" name="$nowarn" />
+        </scope>
+        <scope ilk="function" line="227" lineend="232" name="delete_country_alias" signature="delete_country_alias($name, $nowarn)">
+          <variable ilk="argument" name="$name" />
+          <variable ilk="argument" name="$nowarn" />
+        </scope>
+        <scope ilk="function" line="240" lineend="250" name="rename_country_code" signature="rename_country_code($code, $new_code, @args)">
+          <variable ilk="argument" name="$code" />
+          <variable ilk="argument" name="$new_code" />
+          <variable ilk="argument" name="@args" />
+        </scope>
+        <scope ilk="function" line="258" lineend="268" name="add_country_code_alias" signature="add_country_code_alias($code, $new_code, @args)">
+          <variable ilk="argument" name="$code" />
+          <variable ilk="argument" name="$new_code" />
+          <variable ilk="argument" name="@args" />
+        </scope>
+        <scope ilk="function" line="276" lineend="285" name="delete_country_code_alias" signature="delete_country_code_alias($code, @args)">
+          <variable ilk="argument" name="$code" />
+          <variable ilk="argument" name="@args" />
+        </scope>
+        <scope ilk="function" line="293" lineend="298" name="alias_code" signature="alias_code($alias, $code, @args)">
+          <variable ilk="argument" name="$alias" />
+          <variable ilk="argument" name="$code" />
+          <variable ilk="argument" name="@args" />
+        </scope>
+      </scope>
+    </scope>
+    

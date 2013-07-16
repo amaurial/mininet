@@ -1,0 +1,27 @@
+<scope ilk="blob" lang="Perl" name="Tie::Scalar">
+      <scope ilk="class" line="1" lineend="135" name="Tie::Scalar">
+        <import line="95" module="Carp" symbol="*" />
+        <import line="96" module="warnings::register" symbol="*" />
+        <variable line="3" name="$VERSION" />
+        <scope ilk="function" line="98" lineend="101" name="new" signature="new($pkg)">
+          <variable ilk="argument" name="$pkg" />
+        </scope>
+        <scope ilk="function" line="105" lineend="125" name="TIESCALAR" signature="TIESCALAR($pkg)">
+          <variable ilk="argument" name="$pkg" />
+        </scope>
+        <scope ilk="function" line="127" lineend="130" name="FETCH" signature="FETCH()">
+          </scope>
+        <scope ilk="function" line="132" lineend="135" name="STORE" signature="STORE()">
+          </scope>
+      </scope>
+      <scope classrefs="Tie::Scalar" ilk="class" line="142" lineend="163" name="Tie::StdScalar">
+        <scope attributes="__ctor__" ilk="function" line="145" lineend="149" name="TIESCALAR" signature="TIESCALAR($class, $instance)">
+          <variable ilk="argument" name="$class" />
+          <variable ilk="argument" name="$instance" />
+        </scope>
+        <scope ilk="function" line="151" lineend="153" name="FETCH" signature="FETCH()" />
+        <scope ilk="function" line="155" lineend="157" name="STORE" signature="STORE()" />
+        <scope ilk="function" line="159" lineend="161" name="DESTROY" signature="DESTROY()" />
+      </scope>
+    </scope>
+    

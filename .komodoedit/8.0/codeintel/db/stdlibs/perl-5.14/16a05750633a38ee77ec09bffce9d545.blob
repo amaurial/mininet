@@ -1,0 +1,28 @@
+<scope ilk="blob" lang="Perl" name="File::Basename">
+      <scope classrefs="Exporter" ilk="class" line="38" lineend="397" name="File::Basename">
+        <import line="44" module="re" />
+        <import line="54" module="Exporter" />
+        <variable line="53" name="$Fileparse_fstype" />
+        <variable line="53" name="$Fileparse_igncase" />
+        <variable line="53" name="$VERSION" />
+        <variable line="53" name="@EXPORT" />
+        <variable line="53" name="@ISA" />
+        <scope attributes="__exported__" ilk="function" line="104" lineend="177" name="fileparse" signature="fileparse($fullname, @suffices)">
+          <import line="108" module="Carp" />
+          <variable ilk="argument" name="$fullname" />
+          <variable ilk="argument" name="@suffices" />
+          <import line="108" module="Carp" />
+        </scope>
+        <scope attributes="__exported__" ilk="function" line="214" lineend="237" name="basename" signature="basename()">
+          </scope>
+        <scope attributes="__exported__" ilk="function" line="283" lineend="327" name="dirname" signature="dirname($path)">
+          <variable ilk="argument" name="$path" />
+        </scope>
+        <scope ilk="function" line="331" lineend="343" name="_strip_trailing_sep" signature="_strip_trailing_sep()">
+          </scope>
+        <scope attributes="__exported__" ilk="function" line="376" lineend="392" name="fileparse_set_fstype" signature="fileparse_set_fstype($new_type)">
+          <variable ilk="argument" name="$new_type" />
+        </scope>
+      </scope>
+    </scope>
+    

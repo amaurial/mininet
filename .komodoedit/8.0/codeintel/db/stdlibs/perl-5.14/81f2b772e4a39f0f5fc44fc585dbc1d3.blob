@@ -1,0 +1,404 @@
+<scope ilk="blob" lang="Perl" name="Tie::File">
+      <scope ilk="class" line="2" lineend="2002" name="Tie::File">
+        <import line="4" module="Carp" symbol="**" />
+        <import line="5" module="POSIX" symbol="SEEK_SET" />
+        <import line="6" module="Fcntl" symbol="O_CREAT" />
+        <variable line="10" name="$VERSION" />
+        <variable line="1451" name="$Tie::File::Cache::VERSION" />
+        <variable line="1742" name="$Tie::File::Heap::VERSION" />
+        <variable line="1939" name="*_ci_warn" />
+        <scope ilk="function" line="7" lineend="7" name="O_ACCMODE" signature="O_ACCMODE()" />
+        <scope attributes="__ctor__" ilk="function" line="19" lineend="121" name="TIEARRAY" signature="TIEARRAY($pack, $file, %opts)">
+          <import line="104" module="Symbol" />
+          <variable ilk="argument" name="$pack" />
+          <variable ilk="argument" name="$file" />
+          <variable ilk="argument" name="%opts" />
+          <import line="104" module="Symbol" />
+        </scope>
+        <scope ilk="function" line="123" lineend="135" name="FETCH" signature="FETCH($self, $n)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$n" />
+        </scope>
+        <scope ilk="function" line="138" lineend="147" name="_chomp" signature="_chomp($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="150" lineend="156" name="_chomp1" signature="_chomp1($self, $rec)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$rec" />
+        </scope>
+        <scope ilk="function" line="158" lineend="191" name="_fetch" signature="_fetch($self, $n)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$n" />
+        </scope>
+        <scope ilk="function" line="193" lineend="224" name="STORE" signature="STORE($self, $n, $rec)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$n" />
+          <variable ilk="argument" name="$rec" />
+        </scope>
+        <scope ilk="function" line="226" lineend="245" name="_store_deferred" signature="_store_deferred($self, $n, $rec)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$n" />
+          <variable ilk="argument" name="$rec" />
+        </scope>
+        <scope ilk="function" line="249" lineend="261" name="_delete_deferred" signature="_delete_deferred($self, $n)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$n" />
+        </scope>
+        <scope ilk="function" line="263" lineend="270" name="FETCHSIZE" signature="FETCHSIZE($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="272" lineend="309" name="STORESIZE" signature="STORESIZE($self, $len)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$len" />
+        </scope>
+        <scope ilk="function" line="314" lineend="320" name="PUSH" signature="PUSH($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="322" lineend="328" name="POP" signature="POP($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="330" lineend="333" name="SHIFT" signature="SHIFT($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="335" lineend="339" name="UNSHIFT" signature="UNSHIFT($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="341" lineend="356" name="CLEAR" signature="CLEAR($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="358" lineend="366" name="EXTEND" signature="EXTEND($self, $n)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$n" />
+        </scope>
+        <scope ilk="function" line="368" lineend="392" name="DELETE" signature="DELETE($self, $n)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$n" />
+        </scope>
+        <scope ilk="function" line="394" lineend="398" name="EXISTS" signature="EXISTS($self, $n)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$n" />
+        </scope>
+        <scope ilk="function" line="400" lineend="414" name="SPLICE" signature="SPLICE($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="416" lineend="424" name="DESTROY" signature="DESTROY($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="426" lineend="526" name="_splice" signature="_splice($self, $pos, $nrecs, @data)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$pos" />
+          <variable ilk="argument" name="$nrecs" />
+          <variable ilk="argument" name="@data" />
+        </scope>
+        <scope ilk="function" line="536" lineend="579" name="_twrite" signature="_twrite($self, $data, $pos, $len)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$data" />
+          <variable ilk="argument" name="$pos" />
+          <variable ilk="argument" name="$len" />
+        </scope>
+        <scope ilk="function" line="589" lineend="608" name="_iwrite" signature="_iwrite($self, $D, $s, $e)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$D" />
+          <variable ilk="argument" name="$s" />
+          <variable ilk="argument" name="$e" />
+        </scope>
+        <scope ilk="function" line="613" lineend="664" name="_mtwrite" signature="_mtwrite($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="671" lineend="698" name="_upcopy" signature="_upcopy($self, $spos, $dpos, $len)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$spos" />
+          <variable ilk="argument" name="$dpos" />
+          <variable ilk="argument" name="$len" />
+        </scope>
+        <scope ilk="function" line="706" lineend="735" name="_downcopy" signature="_downcopy($self, $data, $pos, $len)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$data" />
+          <variable ilk="argument" name="$pos" />
+          <variable ilk="argument" name="$len" />
+        </scope>
+        <scope ilk="function" line="744" lineend="814" name="_oadjust" signature="_oadjust($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="818" lineend="825" name="_fixrecs" signature="_fixrecs($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="840" lineend="847" name="_seek" signature="_seek($self, $n)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$n" />
+        </scope>
+        <scope ilk="function" line="850" lineend="854" name="_seekb" signature="_seekb($self, $b)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$b" />
+        </scope>
+        <scope ilk="function" line="858" lineend="881" name="_fill_offsets_to" signature="_fill_offsets_to($self, $n)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$n" />
+        </scope>
+        <scope ilk="function" line="883" lineend="900" name="_fill_offsets" signature="_fill_offsets($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="903" lineend="910" name="_write_record" signature="_write_record($self, $rec)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$rec" />
+        </scope>
+        <scope ilk="function" line="912" lineend="934" name="_read_record" signature="_read_record($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="936" lineend="939" name="_rw_stats" signature="_rw_stats($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="945" lineend="948" name="_cache_flush" signature="_cache_flush($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="950" lineend="953" name="_cache_too_full" signature="_cache_too_full($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="968" lineend="981" name="_extend_file_to" signature="_extend_file_to($self, $n)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$n" />
+        </scope>
+        <scope ilk="function" line="984" lineend="987" name="_chop_file" signature="_chop_file($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="994" lineend="1000" name="_bufsize" signature="_bufsize($n)">
+          <variable ilk="argument" name="$n" />
+        </scope>
+        <scope ilk="function" line="1008" lineend="1028" name="flock" signature="flock($self, $op)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$op" />
+        </scope>
+        <scope ilk="function" line="1031" lineend="1040" name="autochomp" signature="autochomp($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="1043" lineend="1054" name="offset" signature="offset($self, $n)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$n" />
+        </scope>
+        <scope ilk="function" line="1056" lineend="1059" name="discard_offsets" signature="discard_offsets($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="1067" lineend="1072" name="defer" signature="defer($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="1079" lineend="1084" name="flush" signature="flush($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="1086" lineend="1103" name="_old_flush" signature="_old_flush($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="1140" lineend="1144" name="discard" signature="discard($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="1147" lineend="1153" name="_discard" signature="_discard($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="1157" lineend="1160" name="_is_deferring" signature="_is_deferring($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="1163" lineend="1172" name="_defer_max" signature="_defer_max($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="1180" lineend="1193" name="autodefer" signature="autodefer($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="1218" lineend="1246" name="_annotate_ad_history" signature="_annotate_ad_history($self, $n)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$n" />
+        </scope>
+        <scope ilk="function" line="1249" lineend="1255" name="_stop_autodeferring" signature="_stop_autodeferring($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="1264" lineend="1274" name="_default_recsep" signature="_default_recsep()">
+          </scope>
+        <scope ilk="function" line="1277" lineend="1282" name="_ci_warn" signature="_ci_warn($msg)">
+          <variable ilk="argument" name="$msg" />
+        </scope>
+        <scope ilk="function" line="1290" lineend="1442" name="_check_integrity" signature="_check_integrity($self, $file, $warn)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$file" />
+          <variable ilk="argument" name="$warn" />
+        </scope>
+        <scope ilk="function" line="1454" lineend="1454" name="HEAP" signature="HEAP()" />
+        <scope ilk="function" line="1455" lineend="1455" name="HASH" signature="HASH()" />
+        <scope ilk="function" line="1456" lineend="1456" name="MAX" signature="MAX()" />
+        <scope ilk="function" line="1457" lineend="1457" name="BYTES" signature="BYTES()" />
+        <scope attributes="__ctor__" ilk="function" line="1463" lineend="1471" name="new" signature="new($pack, $max)">
+          <variable ilk="argument" name="$pack" />
+          <variable ilk="argument" name="$max" />
+        </scope>
+        <scope ilk="function" line="1473" lineend="1476" name="adj_limit" signature="adj_limit($self, $n)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$n" />
+        </scope>
+        <scope ilk="function" line="1478" lineend="1481" name="set_limit" signature="set_limit($self, $n)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$n" />
+        </scope>
+        <scope ilk="function" line="1489" lineend="1496" name="_heap_move" signature="_heap_move($self, $k, $n)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$k" />
+          <variable ilk="argument" name="$n" />
+        </scope>
+        <scope ilk="function" line="1498" lineend="1522" name="insert" signature="insert($self, $key, $val)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$key" />
+          <variable ilk="argument" name="$val" />
+        </scope>
+        <scope ilk="function" line="1524" lineend="1530" name="expire" signature="expire($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="1532" lineend="1550" name="remove" signature="remove($self, @keys)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="@keys" />
+        </scope>
+        <scope ilk="function" line="1552" lineend="1570" name="lookup" signature="lookup($self, $key)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$key" />
+        </scope>
+        <scope ilk="function" line="1573" lineend="1578" name="_produce" signature="_produce($self, $key)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$key" />
+        </scope>
+        <scope ilk="function" line="1581" lineend="1584" name="_promote" signature="_promote($self, $key)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$key" />
+        </scope>
+        <scope ilk="function" line="1586" lineend="1594" name="empty" signature="empty($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="1596" lineend="1599" name="is_empty" signature="is_empty($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="1601" lineend="1617" name="update" signature="update($self, $key, $val)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$key" />
+          <variable ilk="argument" name="$val" />
+        </scope>
+        <scope ilk="function" line="1619" lineend="1636" name="rekey" signature="rekey($self, $okeys, $nkeys)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$okeys" />
+          <variable ilk="argument" name="$nkeys" />
+        </scope>
+        <scope ilk="function" line="1638" lineend="1642" name="ckeys" signature="ckeys($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="1645" lineend="1648" name="bytes" signature="bytes($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="1651" lineend="1659" name="reduce_size_to" signature="reduce_size_to($self, $max)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$max" />
+        </scope>
+        <scope ilk="function" line="1664" lineend="1667" name="flush" signature="flush($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="1670" lineend="1673" name="_produce_lru" signature="_produce_lru($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="1677" lineend="1727" name="_check_integrity" signature="_check_integrity($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="1729" lineend="1732" name="delink" signature="delink($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="1743" lineend="1743" name="SEQ" signature="SEQ()" />
+        <scope ilk="function" line="1744" lineend="1744" name="KEY" signature="KEY()" />
+        <scope ilk="function" line="1745" lineend="1745" name="DAT" signature="DAT()" />
+        <scope attributes="__ctor__" ilk="function" line="1747" lineend="1753" name="new" signature="new($pack, $cache)">
+          <variable ilk="argument" name="$pack" />
+          <variable ilk="argument" name="$cache" />
+        </scope>
+        <scope ilk="function" line="1756" lineend="1759" name="_nseq" signature="_nseq($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="1761" lineend="1764" name="_cache" signature="_cache($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="1766" lineend="1769" name="_nelts" signature="_nelts($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="1771" lineend="1774" name="_nelts_inc" signature="_nelts_inc($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="1776" lineend="1779" name="_nelts_dec" signature="_nelts_dec($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="1781" lineend="1784" name="is_empty" signature="is_empty($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="1786" lineend="1791" name="empty" signature="empty($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="1794" lineend="1797" name="_heap_move" signature="_heap_move($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="1803" lineend="1807" name="insert" signature="insert($self, $key, $data, $seq)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$key" />
+          <variable ilk="argument" name="$data" />
+          <variable ilk="argument" name="$seq" />
+        </scope>
+        <scope ilk="function" line="1810" lineend="1817" name="_insert_new" signature="_insert_new($self, $item)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$item" />
+        </scope>
+        <scope ilk="function" line="1821" lineend="1840" name="_insert" signature="_insert($self, $item, $i)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$item" />
+          <variable ilk="argument" name="$i" />
+        </scope>
+        <scope ilk="function" line="1846" lineend="1867" name="remove" signature="remove($self, $i)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$i" />
+          <variable line="1858" name="$ii" />
+        </scope>
+        <scope ilk="function" line="1105" lineend="1872" name="_flush" signature="_flush($self)">
+          <import line="1452" module="Carp" symbol="**" />
+          <import line="1741" module="Carp" symbol="**" />
+          <variable ilk="argument" name="$self" />
+          <import line="1452" module="Carp" symbol="**" />
+          <import line="1741" module="Carp" symbol="**" />
+        </scope>
+        <scope ilk="function" line="1874" lineend="1877" name="popheap" signature="popheap($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="1882" lineend="1902" name="promote" signature="promote($self, $n)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$n" />
+        </scope>
+        <scope ilk="function" line="1905" lineend="1911" name="lookup" signature="lookup($self, $n)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$n" />
+        </scope>
+        <scope ilk="function" line="1915" lineend="1922" name="set_val" signature="set_val($self, $n, $val)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$n" />
+          <variable ilk="argument" name="$val" />
+        </scope>
+        <scope ilk="function" line="1926" lineend="1930" name="rekey" signature="rekey($self, $n, $new_key)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$n" />
+          <variable ilk="argument" name="$new_key" />
+        </scope>
+        <scope ilk="function" line="1932" lineend="1937" name="_check_loc" signature="_check_loc($self, $n)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$n" />
+        </scope>
+        <scope ilk="function" line="1941" lineend="1970" name="_check_integrity" signature="_check_integrity($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="1972" lineend="1986" name="_satisfies_heap_condition" signature="_satisfies_heap_condition($self, $n)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$n" />
+        </scope>
+        <scope ilk="function" line="1989" lineend="1993" name="expire_order" signature="expire_order($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="1995" lineend="2000" name="_nodes" signature="_nodes($self, $i)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$i" />
+        </scope>
+      </scope>
+    </scope>
+    

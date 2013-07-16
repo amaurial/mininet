@@ -1,0 +1,70 @@
+<scope ilk="blob" lang="Perl" name="Perl::Critic::Statistics">
+      <scope ilk="class" line="8" lineend="255" name="Perl::Critic::Statistics">
+        <import line="14" module="English" symbol="-no_match_vars" />
+        <import line="16" module="Perl::Critic::Utils::McCabe" symbol="calculate_mccabe_of_sub" />
+        <variable line="20" name="$VERSION" />
+        <scope attributes="__ctor__" ilk="function" line="24" lineend="43" name="new" signature="new($class)">
+          <variable ilk="argument" name="$class" />
+        </scope>
+        <scope ilk="function" line="47" lineend="97" name="accumulate" signature="accumulate($self, $doc, $violations)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$doc" />
+          <variable ilk="argument" name="$violations" />
+        </scope>
+        <scope ilk="function" line="101" lineend="105" name="modules" signature="modules($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="109" lineend="113" name="subs" signature="subs($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="117" lineend="121" name="statements" signature="statements($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="125" lineend="129" name="lines" signature="lines($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="133" lineend="137" name="lines_of_blank" signature="lines_of_blank($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="141" lineend="145" name="lines_of_comment" signature="lines_of_comment($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="149" lineend="153" name="lines_of_data" signature="lines_of_data($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="157" lineend="161" name="lines_of_perl" signature="lines_of_perl($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="165" lineend="169" name="lines_of_pod" signature="lines_of_pod($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="173" lineend="177" name="_subs_total_mccabe" signature="_subs_total_mccabe($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="181" lineend="185" name="violations_by_severity" signature="violations_by_severity($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="189" lineend="193" name="violations_by_policy" signature="violations_by_policy($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="197" lineend="201" name="total_violations" signature="total_violations($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="205" lineend="209" name="statements_other_than_subs" signature="statements_other_than_subs($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="213" lineend="219" name="average_sub_mccabe" signature="average_sub_mccabe($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="223" lineend="229" name="violations_per_file" signature="violations_per_file($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="233" lineend="241" name="violations_per_statement" signature="violations_per_statement($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="245" lineend="251" name="violations_per_line_of_code" signature="violations_per_line_of_code($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+      </scope>
+    </scope>
+    

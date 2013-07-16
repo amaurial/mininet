@@ -1,0 +1,29 @@
+<scope ilk="blob" lang="Perl" name="Try::Tiny">
+      <scope classrefs="Exporter" ilk="class" line="1" lineend="132" name="Try::Tiny">
+        <import line="9" module="Exporter" />
+        <variable line="6" name="$VERSION" />
+        <variable line="6" name="@EXPORT" />
+        <variable line="6" name="@EXPORT_OK" />
+        <variable line="6" name="@ISA" />
+        <scope ilk="function" line="25" lineend="112" name="try" signature="try($try, @code_refs)">
+          <import line="46" module="Carp" symbol="*" />
+          <variable ilk="argument" name="$try" />
+          <variable ilk="argument" name="@code_refs" />
+          <import line="46" module="Carp" symbol="*" />
+        </scope>
+        <scope ilk="function" line="114" lineend="121" name="catch" signature="catch($block, @rest)">
+          <variable ilk="argument" name="$block" />
+          <variable ilk="argument" name="@rest" />
+        </scope>
+        <scope ilk="function" line="123" lineend="130" name="finally" signature="finally($block, @rest)">
+          <variable ilk="argument" name="$block" />
+          <variable ilk="argument" name="@rest" />
+        </scope>
+      </scope>
+      <scope ilk="class" line="134" lineend="148" name="Try::Tiny::ScopeGuard">
+        <scope attributes="__ctor__" ilk="function" line="136" lineend="139" name="_new" signature="_new()" />
+        <scope ilk="function" line="141" lineend="145" name="DESTROY" signature="DESTROY()">
+          </scope>
+      </scope>
+    </scope>
+    

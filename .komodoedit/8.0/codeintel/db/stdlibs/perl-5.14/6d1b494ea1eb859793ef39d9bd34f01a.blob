@@ -1,0 +1,33 @@
+<scope ilk="blob" lang="Perl" name="PPIx::Utilities::Node">
+      <scope ilk="class" line="1" lineend="180" name="PPIx::Utilities::Node">
+        <import line="9" module="Readonly" symbol="*" />
+        <import line="12" module="PPI::Document::Fragment" symbol="*" />
+        <import line="13" module="Scalar::Util" symbol="refaddr" />
+        <import line="16" module="PPIx::Utilities::Exception::Bug" />
+        <variable line="7" name="$VERSION" />
+        <variable line="21" name="@EXPORT_OK" />
+        <scope ilk="function" line="26" lineend="46" name="split_ppi_node_by_namespace" signature="split_ppi_node_by_namespace($node)">
+          <variable ilk="argument" name="$node" />
+        </scope>
+        <scope ilk="function" line="50" lineend="74" name="_split_ppi_node_by_namespace_single" signature="_split_ppi_node_by_namespace_single($node)">
+          <variable ilk="argument" name="$node" />
+        </scope>
+        <scope ilk="function" line="77" lineend="147" name="_split_ppi_node_by_namespace_in_lexical_scope" signature="_split_ppi_node_by_namespace_in_lexical_scope($node, $initial_namespace, $initial_fragment, $nodes_by_namespace)">
+          <variable ilk="argument" name="$node" />
+          <variable ilk="argument" name="$initial_namespace" />
+          <variable ilk="argument" name="$initial_fragment" />
+          <variable ilk="argument" name="$nodes_by_namespace" />
+        </scope>
+        <scope ilk="function" line="150" lineend="161" name="_get_fragment_for_split_ppi_node" signature="_get_fragment_for_split_ppi_node($nodes_by_namespace, $scope_fragments_by_namespace, $namespace)">
+          <variable ilk="argument" name="$nodes_by_namespace" />
+          <variable ilk="argument" name="$scope_fragments_by_namespace" />
+          <variable ilk="argument" name="$namespace" />
+        </scope>
+        <scope ilk="function" line="167" lineend="177" name="_push_fragment" signature="_push_fragment($nodes_by_namespace, $namespace, $fragment)">
+          <variable ilk="argument" name="$nodes_by_namespace" />
+          <variable ilk="argument" name="$namespace" />
+          <variable ilk="argument" name="$fragment" />
+        </scope>
+      </scope>
+    </scope>
+    

@@ -1,0 +1,44 @@
+<scope ilk="blob" lang="Perl" name="Perl::Critic::Utils::PPI">
+      <scope ilk="class" line="8" lineend="239" name="Perl::Critic::Utils::PPI">
+        <import line="14" module="Readonly" symbol="*" />
+        <import line="16" module="Scalar::Util" symbol="blessed" />
+        <import line="16" module="Scalar::Util" symbol="readonly" />
+        <variable line="20" name="$VERSION" />
+        <variable line="24" name="@EXPORT_OK" />
+        <variable line="37" name="%EXPORT_TAGS" />
+        <scope ilk="function" line="43" lineend="54" name="is_ppi_expression_or_generic_statement" signature="is_ppi_expression_or_generic_statement($element)">
+          <variable ilk="argument" name="$element" />
+        </scope>
+        <scope ilk="function" line="58" lineend="67" name="is_ppi_generic_statement" signature="is_ppi_generic_statement($element)">
+          <variable ilk="argument" name="$element" />
+        </scope>
+        <scope ilk="function" line="71" lineend="80" name="is_ppi_statement_subclass" signature="is_ppi_statement_subclass($element)">
+          <variable ilk="argument" name="$element" />
+        </scope>
+        <scope ilk="function" line="95" lineend="101" name="is_ppi_simple_statement" signature="is_ppi_simple_statement($element)">
+          <variable ilk="argument" name="$element" />
+        </scope>
+        <scope ilk="function" line="105" lineend="122" name="is_ppi_constant_element" signature="is_ppi_constant_element($element)">
+          <variable ilk="argument" name="$element" />
+        </scope>
+        <scope ilk="function" line="126" lineend="143" name="is_subroutine_declaration" signature="is_subroutine_declaration($element)">
+          <variable ilk="argument" name="$element" />
+        </scope>
+        <scope ilk="function" line="147" lineend="158" name="is_in_subroutine" signature="is_in_subroutine($element)">
+          <variable ilk="argument" name="$element" />
+        </scope>
+        <scope ilk="function" line="162" lineend="187" name="get_constant_name_element_from_declaring_statement" signature="get_constant_name_element_from_declaring_statement($element)">
+          <variable ilk="argument" name="$element" />
+        </scope>
+        <scope ilk="function" line="189" lineend="198" name="_constant_name_from_constant_pragma" signature="_constant_name_from_constant_pragma($include)">
+          <variable ilk="argument" name="$include" />
+        </scope>
+        <scope ilk="function" line="202" lineend="215" name="get_next_element_in_same_simple_statement" signature="get_next_element_in_same_simple_statement($element)">
+          <variable ilk="argument" name="$element" />
+        </scope>
+        <scope ilk="function" line="219" lineend="235" name="get_previous_module_used_on_same_line" signature="get_previous_module_used_on_same_line($element)">
+          <variable ilk="argument" name="$element" />
+        </scope>
+      </scope>
+    </scope>
+    

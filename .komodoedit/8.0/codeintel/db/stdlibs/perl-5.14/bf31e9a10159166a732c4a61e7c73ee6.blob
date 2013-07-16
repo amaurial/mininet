@@ -1,0 +1,45 @@
+<scope ilk="blob" lang="Perl" name="Class::C3">
+      <scope ilk="class" line="2" lineend="218" name="Class::C3">
+        <import line="15" module="mro" />
+        <import line="25" module="Algorithm::C3" />
+        <import line="26" module="Class::C3::next" />
+        <variable line="7" name="$VERSION" />
+        <variable line="9" name="$C3_IN_CORE" />
+        <variable line="10" name="$C3_XS" />
+        <variable line="45" name="%MRO" />
+        <variable line="49" name="$TURN_OFF_C3" />
+        <variable line="52" name="$_initialized" />
+        <variable line="209" name="*Class::C3::calculateMRO" />
+        <variable line="214" name="*Class::C3::_calculate_method_dispatch_table" />
+        <scope ilk="function" line="48" lineend="48" name="_dump_MRO_table" signature="_dump_MRO_table()" />
+        <scope ilk="function" line="54" lineend="66" name="import" signature="import()">
+          </scope>
+        <scope ilk="function" line="75" lineend="91" name="initialize" signature="initialize()">
+          </scope>
+        <scope ilk="function" line="93" lineend="104" name="uninitialize" signature="uninitialize()">
+          </scope>
+        <scope ilk="function" line="106" lineend="106" name="reinitialize" signature="reinitialize()" />
+        <scope ilk="function" line="112" lineend="118" name="_calculate_method_dispatch_tables" signature="_calculate_method_dispatch_tables()">
+          </scope>
+        <scope ilk="function" line="120" lineend="150" name="_calculate_method_dispatch_table" signature="_calculate_method_dispatch_table($class, $merge_cache)">
+          <variable ilk="argument" name="$class" />
+          <variable ilk="argument" name="$merge_cache" />
+        </scope>
+        <scope ilk="function" line="152" lineend="157" name="_apply_method_dispatch_tables" signature="_apply_method_dispatch_tables()">
+          </scope>
+        <scope ilk="function" line="159" lineend="173" name="_apply_method_dispatch_table" signature="_apply_method_dispatch_table($class)">
+          <variable ilk="argument" name="$class" />
+        </scope>
+        <scope ilk="function" line="175" lineend="180" name="_remove_method_dispatch_tables" signature="_remove_method_dispatch_tables()">
+          </scope>
+        <scope ilk="function" line="182" lineend="192" name="_remove_method_dispatch_table" signature="_remove_method_dispatch_table($class)">
+          <variable ilk="argument" name="$class" />
+        </scope>
+        <scope ilk="function" line="194" lineend="201" name="calculateMRO" signature="calculateMRO($class, $merge_cache)">
+          <variable ilk="argument" name="$class" />
+          <variable ilk="argument" name="$merge_cache" />
+        </scope>
+        <scope ilk="function" line="205" lineend="205" name="_core_calculateMRO" signature="_core_calculateMRO()" />
+      </scope>
+    </scope>
+    

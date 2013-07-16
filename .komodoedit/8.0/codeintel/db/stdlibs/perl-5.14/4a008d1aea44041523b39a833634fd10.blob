@@ -1,0 +1,52 @@
+<scope ilk="blob" lang="Perl" name="DBD::Gofer::Transport::Base">
+      <scope ilk="class" line="1" lineend="289" name="DBD::Gofer::Transport::Base">
+        <variable line="15" name="$VERSION" />
+        <scope ilk="function" line="35" lineend="41" name="new" signature="new($class, $args)">
+          <variable ilk="argument" name="$class" />
+          <variable ilk="argument" name="$args" />
+        </scope>
+        <scope ilk="function" line="44" lineend="44" name="_init_trace" signature="_init_trace()" />
+        <scope ilk="function" line="47" lineend="50" name="new_response" signature="new_response($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="53" lineend="118" name="transmit_request" signature="transmit_request($self, $request)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$request" />
+        </scope>
+        <scope ilk="function" line="121" lineend="128" name="_transmit_request_with_retries" signature="_transmit_request_with_retries($self, $request, $transmit_sub)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$request" />
+          <variable ilk="argument" name="$transmit_sub" />
+        </scope>
+        <scope ilk="function" line="131" lineend="170" name="receive_response" signature="receive_response($self, $request, $retransmit_sub)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$request" />
+          <variable ilk="argument" name="$retransmit_sub" />
+        </scope>
+        <scope ilk="function" line="173" lineend="196" name="response_retry_preference" signature="response_retry_preference($self, $request, $response)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$request" />
+          <variable ilk="argument" name="$response" />
+        </scope>
+        <scope ilk="function" line="199" lineend="244" name="response_needs_retransmit" signature="response_needs_retransmit($self, $request, $response)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$request" />
+          <variable ilk="argument" name="$response" />
+        </scope>
+        <scope ilk="function" line="247" lineend="251" name="transport_timedout" signature="transport_timedout($self, $method, $timeout)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$method" />
+          <variable ilk="argument" name="$timeout" />
+        </scope>
+        <scope ilk="function" line="256" lineend="269" name="get_cache_key_for_request" signature="get_cache_key_for_request($self, $request)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$request" />
+        </scope>
+        <scope ilk="function" line="272" lineend="287" name="_store_response_in_cache" signature="_store_response_in_cache($self, $frozen_response, $request_cache_key)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$frozen_response" />
+          <variable ilk="argument" name="$request_cache_key" />
+        </scope>
+      </scope>
+    </scope>
+    

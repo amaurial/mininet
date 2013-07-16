@@ -1,0 +1,203 @@
+<scope ilk="blob" lang="Perl" name="CPAN">
+      <scope ilk="class" line="4" lineend="1370" name="CPAN">
+        <import line="10" module="File::Spec" />
+        <import line="18" module="CPAN::Author" symbol="*" />
+        <import line="19" module="CPAN::HandleConfig" symbol="*" />
+        <import line="20" module="CPAN::Version" symbol="*" />
+        <import line="21" module="CPAN::Bundle" symbol="*" />
+        <import line="22" module="CPAN::CacheMgr" symbol="*" />
+        <import line="23" module="CPAN::Complete" symbol="*" />
+        <import line="24" module="CPAN::Debug" symbol="*" />
+        <import line="25" module="CPAN::Distribution" symbol="*" />
+        <import line="26" module="CPAN::Distrostatus" symbol="*" />
+        <import line="27" module="CPAN::FTP" symbol="*" />
+        <import line="28" module="CPAN::Index" symbol="*" />
+        <import line="29" module="CPAN::InfoObj" symbol="*" />
+        <import line="30" module="CPAN::Module" symbol="*" />
+        <import line="31" module="CPAN::Prompt" symbol="*" />
+        <import line="32" module="CPAN::URL" symbol="*" />
+        <import line="33" module="CPAN::Queue" symbol="*" />
+        <import line="34" module="CPAN::Tarzip" symbol="*" />
+        <import line="35" module="CPAN::DeferredCode" symbol="*" />
+        <import line="36" module="CPAN::Shell" symbol="*" />
+        <import line="37" module="CPAN::LWP::UserAgent" symbol="*" />
+        <import line="38" module="CPAN::Exception::RecursiveDependency" symbol="*" />
+        <import line="39" module="CPAN::Exception::yaml_not_installed" symbol="*" />
+        <import line="41" module="Carp" />
+        <import line="42" module="Config" />
+        <import line="43" module="Cwd" symbol="chdir" />
+        <import line="44" module="DirHandle" />
+        <import line="45" module="Exporter" />
+        <import line="46" module="ExtUtils::MakeMaker" symbol="prompt" />
+        <import line="49" module="File::Basename" />
+        <import line="50" module="File::Copy" />
+        <import line="51" module="File::Find" symbol="*" />
+        <import line="52" module="File::Path" />
+        <import line="53" module="FileHandle" />
+        <import line="54" module="Fcntl" symbol="**" />
+        <import line="55" module="Safe" />
+        <import line="56" module="Sys::Hostname" symbol="hostname" />
+        <import line="57" module="Text::ParseWords" />
+        <import line="58" module="Text::Wrap" />
+        <import line="67" module="Mac::BuildTools" />
+        <variable line="5" name="$CPAN::VERSION" />
+        <variable line="105" name="@CPAN::Defaultsites" />
+        <variable line="120" name="$AUTOLOAD" />
+        <variable line="121" name="$Be_Silent" />
+        <variable line="122" name="$CONFIG_DIRTY" />
+        <variable line="123" name="$Defaultdocs" />
+        <variable line="124" name="$Echo_readline" />
+        <variable line="125" name="$Frontend" />
+        <variable line="126" name="$GOTOSHELL" />
+        <variable line="127" name="$HAS_USABLE" />
+        <variable line="128" name="$Have_warned" />
+        <variable line="129" name="$MAX_RECURSION" />
+        <variable line="130" name="$META" />
+        <variable line="131" name="$RUN_DEGRADED" />
+        <variable line="132" name="$Signal" />
+        <variable line="133" name="$SQLite" />
+        <variable line="134" name="$Suppress_readline" />
+        <variable line="135" name="$VERSION" />
+        <variable line="136" name="$autoload_recursion" />
+        <variable citdl="Term::ReadLine" line="137" name="$term" />
+        <variable line="138" name="@Defaultsites" />
+        <variable line="139" name="@EXPORT" />
+        <variable line="144" name="@CPAN::ISA" />
+        <variable line="280" name="$readline::rl_completion_function" />
+        <variable line="1095" name="$ret" />
+        <scope ilk="function" line="180" lineend="205" name="AUTOLOAD" signature="AUTOLOAD()">
+          </scope>
+        <scope ilk="function" line="212" lineend="236" name="_redirect" signature="_redirect()">
+          </scope>
+        <scope ilk="function" line="237" lineend="245" name="_unredirect" signature="_unredirect()" />
+        <scope ilk="function" line="248" lineend="252" name="_uniq" signature="_uniq(@list)">
+          <variable ilk="argument" name="@list" />
+        </scope>
+        <scope attributes="__exported__" ilk="function" line="255" lineend="477" name="shell" signature="shell($self, $oprompt, $commandline)">
+          <import line="267" module="Term::ReadLine" />
+          <import line="388" module="Carp" />
+          <import line="389" module="Dumpvalue" />
+          <import line="440" module="Term::ReadLine" />
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$oprompt" />
+          <variable ilk="argument" name="$commandline" />
+          <import line="267" module="Term::ReadLine" />
+          <import line="388" module="Carp" />
+          <import line="389" module="Dumpvalue" />
+          <import line="440" module="Term::ReadLine" />
+          <variable line="357" name="$import_done" />
+        </scope>
+        <scope ilk="function" line="480" lineend="503" name="soft_chdir_with_alternatives" signature="soft_chdir_with_alternatives($cwd)">
+          <variable ilk="argument" name="$cwd" />
+        </scope>
+        <scope ilk="function" line="505" lineend="516" name="_flock" signature="_flock($fh, $mode)">
+          <variable ilk="argument" name="$fh" />
+          <variable ilk="argument" name="$mode" />
+        </scope>
+        <scope ilk="function" line="518" lineend="542" name="_yaml_module" signature="_yaml_module()">
+          </scope>
+        <scope ilk="function" line="545" lineend="582" name="_yaml_loadfile" signature="_yaml_loadfile($self, $local_file)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$local_file" />
+        </scope>
+        <scope ilk="function" line="585" lineend="610" name="_yaml_dumpfile" signature="_yaml_dumpfile($self, $local_file, @what)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$local_file" />
+          <variable ilk="argument" name="@what" />
+        </scope>
+        <scope ilk="function" line="612" lineend="620" name="_init_sqlite" signature="_init_sqlite()">
+          <import line="618" module="CPAN::SQLite::META" />
+          <import line="618" module="CPAN::SQLite::META" />
+        </scope>
+        <scope ilk="function" line="624" lineend="635" name="_sqlite_running" signature="_sqlite_running()">
+          </scope>
+        <scope ilk="function" line="643" lineend="669" name="_perl_fingerprint" signature="_perl_fingerprint($self, $other_fingerprint)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$other_fingerprint" />
+        </scope>
+        <scope ilk="function" line="671" lineend="685" name="suggest_myconfig" signature="suggest_myconfig()">
+          </scope>
+        <scope ilk="function" line="688" lineend="694" name="all_objects" signature="all_objects($mgr, $class)">
+          <variable ilk="argument" name="$mgr" />
+          <variable ilk="argument" name="$class" />
+        </scope>
+        <scope ilk="function" line="702" lineend="898" name="checklock" signature="checklock($self, $sig, $sig)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$sig" />
+          <variable ilk="argument" name="$sig" />
+        </scope>
+        <scope ilk="function" line="901" lineend="903" name="DESTROY" signature="DESTROY()" />
+        <scope ilk="function" line="906" lineend="910" name="anycwd" signature="anycwd()">
+          </scope>
+        <scope ilk="function" line="913" lineend="913" name="cwd" signature="cwd()" />
+        <scope ilk="function" line="916" lineend="916" name="getcwd" signature="getcwd()" />
+        <scope ilk="function" line="919" lineend="919" name="fastcwd" signature="fastcwd()" />
+        <scope ilk="function" line="922" lineend="922" name="backtickcwd" signature="backtickcwd()">
+          </scope>
+        <scope ilk="function" line="926" lineend="930" name="_perl_is_same" signature="_perl_is_same($perl)">
+          <variable ilk="argument" name="$perl" />
+        </scope>
+        <scope ilk="function" line="934" lineend="969" name="find_perl" signature="find_perl()">
+          </scope>
+        <scope ilk="function" line="972" lineend="987" name="exists" signature="exists($mgr, $class, $id)">
+          <variable ilk="argument" name="$mgr" />
+          <variable ilk="argument" name="$class" />
+          <variable ilk="argument" name="$id" />
+        </scope>
+        <scope ilk="function" line="990" lineend="994" name="delete" signature="delete($mgr, $class, $id)">
+          <variable ilk="argument" name="$mgr" />
+          <variable ilk="argument" name="$class" />
+          <variable ilk="argument" name="$id" />
+        </scope>
+        <scope ilk="function" line="999" lineend="1103" name="has_usable" signature="has_usable($self, $mod, $message)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$mod" />
+          <variable ilk="argument" name="$message" />
+        </scope>
+        <scope ilk="function" line="1106" lineend="1197" name="has_inst" signature="has_inst($self, $mod, $message)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$mod" />
+          <variable ilk="argument" name="$message" />
+        </scope>
+        <scope ilk="function" line="1200" lineend="1207" name="instance" signature="instance($mgr, $class, $id)">
+          <variable ilk="argument" name="$mgr" />
+          <variable ilk="argument" name="$class" />
+          <variable ilk="argument" name="$id" />
+        </scope>
+        <scope attributes="__ctor__" ilk="function" line="1210" lineend="1212" name="new" signature="new()" />
+        <scope ilk="function" line="1215" lineend="1218" name="_exit_messages" signature="_exit_messages($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="1221" lineend="1248" name="cleanup" signature="cleanup($message)">
+          <variable ilk="argument" name="$message" />
+        </scope>
+        <scope ilk="function" line="1251" lineend="1263" name="readhist" signature="readhist($self, $term, $histfile)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$term" />
+          <variable ilk="argument" name="$histfile" />
+        </scope>
+        <scope ilk="function" line="1266" lineend="1289" name="savehist" signature="savehist($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope attributes="__exported__" ilk="function" line="1292" lineend="1299" name="is_tested" signature="is_tested($self, $what, $when)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$what" />
+          <variable ilk="argument" name="$when" />
+        </scope>
+        <scope ilk="function" line="1303" lineend="1306" name="reset_tested" signature="reset_tested($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="1311" lineend="1314" name="is_installed" signature="is_installed($self, $what)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$what" />
+        </scope>
+        <scope ilk="function" line="1316" lineend="1321" name="_list_sorted_descending_is_tested" signature="_list_sorted_descending_is_tested($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="1328" lineend="1367" name="set_perl5lib" signature="set_perl5lib($self, $for)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$for" />
+        </scope>
+      </scope>
+    </scope>
+    

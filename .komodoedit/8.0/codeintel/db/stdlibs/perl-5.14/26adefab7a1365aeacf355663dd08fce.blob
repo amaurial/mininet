@@ -1,0 +1,69 @@
+<scope ilk="blob" lang="Perl" name="TAP::Parser::SourceHandler::Perl">
+      <scope classrefs="TAP::Parser::SourceHandler::Executable" ilk="class" line="1" lineend="322" name="TAP::Parser::SourceHandler::Perl">
+        <import line="4" module="Config" symbol="*" />
+        <import line="10" module="TAP::Parser::SourceHandler::Executable" />
+        <import line="11" module="TAP::Parser::IteratorFactory" />
+        <import line="12" module="TAP::Parser::Iterator::Process" />
+        <import line="13" module="TAP::Parser::Utils" symbol="split_shell" />
+        <variable line="5" name="$VERSION" />
+        <variable line="5" name="@ISA" />
+        <scope ilk="function" line="74" lineend="97" name="can_handle" signature="can_handle($class, $source)">
+          <variable ilk="argument" name="$class" />
+          <variable ilk="argument" name="$source" />
+        </scope>
+        <scope ilk="function" line="130" lineend="135" name="_autoflush_stdhandles" signature="_autoflush_stdhandles($class)">
+          <variable ilk="argument" name="$class" />
+        </scope>
+        <scope ilk="function" line="137" lineend="152" name="make_iterator" signature="make_iterator($class, $source)">
+          <variable ilk="argument" name="$class" />
+          <variable ilk="argument" name="$source" />
+        </scope>
+        <scope ilk="function" line="154" lineend="171" name="_mangle_switches" signature="_mangle_switches($class, $libs, $switches)">
+          <variable ilk="argument" name="$class" />
+          <variable ilk="argument" name="$libs" />
+          <variable ilk="argument" name="$switches" />
+        </scope>
+        <scope ilk="function" line="173" lineend="199" name="_filter_libs" signature="_filter_libs($class, @switches)">
+          <variable ilk="argument" name="$class" />
+          <variable ilk="argument" name="@switches" />
+        </scope>
+        <scope ilk="function" line="201" lineend="226" name="_iterator_hooks" signature="_iterator_hooks($class, $source, $libs)">
+          <variable ilk="argument" name="$class" />
+          <variable ilk="argument" name="$source" />
+          <variable ilk="argument" name="$libs" />
+        </scope>
+        <scope ilk="function" line="228" lineend="237" name="_run" signature="_run($class, $source, $libs, $switches)">
+          <variable ilk="argument" name="$class" />
+          <variable ilk="argument" name="$source" />
+          <variable ilk="argument" name="$libs" />
+          <variable ilk="argument" name="$switches" />
+        </scope>
+        <scope ilk="function" line="239" lineend="249" name="_create_iterator" signature="_create_iterator($class, $source, $command, $setup, $teardown)">
+          <variable ilk="argument" name="$class" />
+          <variable ilk="argument" name="$source" />
+          <variable ilk="argument" name="$command" />
+          <variable ilk="argument" name="$setup" />
+          <variable ilk="argument" name="$teardown" />
+        </scope>
+        <scope ilk="function" line="251" lineend="261" name="_get_command_for_switches" signature="_get_command_for_switches($class, $source, $switches)">
+          <variable ilk="argument" name="$class" />
+          <variable ilk="argument" name="$source" />
+          <variable ilk="argument" name="$switches" />
+        </scope>
+        <scope ilk="function" line="263" lineend="266" name="_libs2switches" signature="_libs2switches($class)">
+          <variable ilk="argument" name="$class" />
+        </scope>
+        <scope ilk="function" line="280" lineend="286" name="get_taint" signature="get_taint($class, $shebang)">
+          <variable ilk="argument" name="$class" />
+          <variable ilk="argument" name="$shebang" />
+        </scope>
+        <scope ilk="function" line="288" lineend="307" name="_switches" signature="_switches($class, $source)">
+          <variable ilk="argument" name="$class" />
+          <variable ilk="argument" name="$source" />
+        </scope>
+        <scope ilk="function" line="315" lineend="320" name="get_perl" signature="get_perl($class)">
+          <variable ilk="argument" name="$class" />
+        </scope>
+      </scope>
+    </scope>
+    

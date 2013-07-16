@@ -1,0 +1,45 @@
+<scope ilk="blob" lang="Perl" name="Perl::Critic::Policy::Subroutines::RequireArgUnpacking">
+      <scope ilk="class" line="8" lineend="286" name="Perl::Critic::Policy::Subroutines::RequireArgUnpacking">
+        <import line="14" module="Carp" symbol="*" />
+        <import line="15" module="English" symbol="-no_match_vars" />
+        <import line="16" module="Readonly" symbol="*" />
+        <import line="18" module="File::Spec" symbol="*" />
+        <import line="19" module="List::Util" symbol="first" />
+        <import line="20" module="List::MoreUtils" symbol="uniq" />
+        <import line="20" module="List::MoreUtils" symbol="any" />
+        <import line="22" module="Perl::Critic::Utils" symbol="**" />
+        <variable line="27" name="$VERSION" />
+        <scope ilk="function" line="41" lineend="66" name="supported_parameters" signature="supported_parameters()" />
+        <scope ilk="function" line="68" lineend="68" name="default_severity" signature="default_severity()" />
+        <scope ilk="function" line="69" lineend="69" name="default_themes" signature="default_themes()" />
+        <scope ilk="function" line="70" lineend="70" name="applies_to" signature="applies_to()" />
+        <scope ilk="function" line="74" lineend="136" name="violates" signature="violates()">
+          </scope>
+        <scope ilk="function" line="138" lineend="161" name="_is_unpack" signature="_is_unpack($self, $magic)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$magic" />
+        </scope>
+        <scope ilk="function" line="163" lineend="187" name="_is_size_check" signature="_is_size_check($magic)">
+          <variable ilk="argument" name="$magic" />
+        </scope>
+        <scope ilk="function" line="189" lineend="200" name="_is_postfix_foreach" signature="_is_postfix_foreach($magic)">
+          <variable ilk="argument" name="$magic" />
+        </scope>
+        <scope ilk="function" line="202" lineend="211" name="_is_cast_of_array" signature="_is_cast_of_array($magic)">
+          <variable ilk="argument" name="$magic" />
+        </scope>
+        <scope ilk="function" line="216" lineend="226" name="_is_cast_of_scalar" signature="_is_cast_of_scalar($magic)">
+          <variable ilk="argument" name="$magic" />
+        </scope>
+        <scope ilk="function" line="232" lineend="257" name="_is_delegation" signature="_is_delegation($self, $magic)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$magic" />
+        </scope>
+        <scope ilk="function" line="260" lineend="264" name="_get_arg_symbols" signature="_get_arg_symbols($statement)">
+          <variable ilk="argument" name="$statement" />
+        </scope>
+        <scope ilk="function" line="266" lineend="283" name="_magic_finder" signature="_magic_finder()">
+          </scope>
+      </scope>
+    </scope>
+    

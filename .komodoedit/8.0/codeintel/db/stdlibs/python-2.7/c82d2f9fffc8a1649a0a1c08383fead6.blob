@@ -1,0 +1,168 @@
+<scope doc="Python&apos;s standard exception class hierarchy.&#xA;Exceptions found here are defined both in the exceptions module and the built-in namespace.  It is recommended that user-defined exceptions inherit from Exception.  See the documentation for the exception inheritance hierarchy." ilk="blob" lang="Python" name="exceptions">
+      <scope classrefs="StandardError" doc="Base class for arithmetic errors.&#xA;" ilk="class" name="ArithmeticError">
+        <scope ilk="function" name="__init__" />
+      </scope>
+      <scope classrefs="StandardError" doc="Assertion failed.&#xA;" ilk="class" name="AssertionError">
+        <scope ilk="function" name="__init__" />
+      </scope>
+      <scope classrefs="StandardError" doc="Attribute not found.&#xA;" ilk="class" name="AttributeError">
+        <scope ilk="function" name="__init__" />
+      </scope>
+      <scope classrefs="object" doc="Common base class for all exceptions&#xA;" ilk="class" name="BaseException">
+        <scope doc="x.__setattr__(&apos;name&apos;, value) &lt;==&gt; x.name = value" ilk="function" name="__setattr__" signature="x.__setattr__(&apos;name&apos;, value) &lt;==&gt; x.name = value" />
+        <scope doc="Use of negative indices is not supported." ilk="function" name="__getslice__" signature="x.__getslice__(i, j) &lt;==&gt; x[i:j]" />
+        <scope doc="x.__getitem__(y) &lt;==&gt; x[y]" ilk="function" name="__getitem__" signature="x.__getitem__(y) &lt;==&gt; x[y]" />
+        <scope ilk="function" name="__setstate__" />
+        <scope ilk="function" name="__reduce__" />
+        <scope doc="x.__str__() &lt;==&gt; str(x)" ilk="function" name="__str__" signature="x.__str__() &lt;==&gt; str(x)" />
+        <scope doc="x.__getattribute__(&apos;name&apos;) &lt;==&gt; x.name" ilk="function" name="__getattribute__" signature="x.__getattribute__(&apos;name&apos;) &lt;==&gt; x.name" />
+        <scope ilk="function" name="__unicode__" />
+        <scope doc="x.__delattr__(&apos;name&apos;) &lt;==&gt; del x.name" ilk="function" name="__delattr__" signature="x.__delattr__(&apos;name&apos;) &lt;==&gt; del x.name" />
+        <scope doc="x.__repr__() &lt;==&gt; repr(x)" ilk="function" name="__repr__" signature="x.__repr__() &lt;==&gt; repr(x)" />
+        <scope ilk="function" name="__init__" />
+      </scope>
+      <scope classrefs="StandardError" doc="Buffer error.&#xA;" ilk="class" name="BufferError">
+        <scope ilk="function" name="__init__" />
+      </scope>
+      <scope classrefs="Warning" doc="Base class for warnings about bytes and buffer related problems, mostly&#xA;related to conversion from str or comparing to str." ilk="class" name="BytesWarning">
+        <scope ilk="function" name="__init__" />
+      </scope>
+      <scope classrefs="Warning" doc="Base class for warnings about deprecated features.&#xA;" ilk="class" name="DeprecationWarning">
+        <scope ilk="function" name="__init__" />
+      </scope>
+      <scope classrefs="StandardError" doc="Read beyond end of file.&#xA;" ilk="class" name="EOFError">
+        <scope ilk="function" name="__init__" />
+      </scope>
+      <scope classrefs="StandardError" doc="Base class for I/O related errors.&#xA;" ilk="class" name="EnvironmentError">
+        <scope doc="x.__str__() &lt;==&gt; str(x)" ilk="function" name="__str__" signature="x.__str__() &lt;==&gt; str(x)" />
+        <scope ilk="function" name="__reduce__" />
+        <scope ilk="function" name="__init__" />
+      </scope>
+      <scope classrefs="BaseException" doc="Common base class for all non-exit exceptions.&#xA;" ilk="class" name="Exception">
+        <scope ilk="function" name="__init__" />
+      </scope>
+      <scope classrefs="ArithmeticError" doc="Floating point operation failed.&#xA;" ilk="class" name="FloatingPointError">
+        <scope ilk="function" name="__init__" />
+      </scope>
+      <scope classrefs="Warning" doc="Base class for warnings about constructs that will change semantically&#xA;in the future." ilk="class" name="FutureWarning">
+        <scope ilk="function" name="__init__" />
+      </scope>
+      <scope classrefs="BaseException" doc="Request that a generator exit.&#xA;" ilk="class" name="GeneratorExit">
+        <scope ilk="function" name="__init__" />
+      </scope>
+      <scope classrefs="EnvironmentError" doc="I/O operation failed.&#xA;" ilk="class" name="IOError">
+        <scope ilk="function" name="__init__" />
+      </scope>
+      <scope classrefs="StandardError" doc="Import can&apos;t find module, or can&apos;t find name in module.&#xA;" ilk="class" name="ImportError">
+        <scope ilk="function" name="__init__" />
+      </scope>
+      <scope classrefs="Warning" doc="Base class for warnings about probable mistakes in module imports&#xA;" ilk="class" name="ImportWarning">
+        <scope ilk="function" name="__init__" />
+      </scope>
+      <scope classrefs="SyntaxError" doc="Improper indentation.&#xA;" ilk="class" name="IndentationError">
+        <scope ilk="function" name="__init__" />
+      </scope>
+      <scope classrefs="LookupError" doc="Sequence index out of range.&#xA;" ilk="class" name="IndexError">
+        <scope ilk="function" name="__init__" />
+      </scope>
+      <scope classrefs="LookupError" doc="Mapping key not found.&#xA;" ilk="class" name="KeyError">
+        <scope doc="x.__str__() &lt;==&gt; str(x)" ilk="function" name="__str__" signature="x.__str__() &lt;==&gt; str(x)" />
+        <scope ilk="function" name="__init__" />
+      </scope>
+      <scope classrefs="BaseException" doc="Program interrupted by user.&#xA;" ilk="class" name="KeyboardInterrupt">
+        <scope ilk="function" name="__init__" />
+      </scope>
+      <scope classrefs="StandardError" doc="Base class for lookup errors.&#xA;" ilk="class" name="LookupError">
+        <scope ilk="function" name="__init__" />
+      </scope>
+      <scope classrefs="StandardError" doc="Out of memory.&#xA;" ilk="class" name="MemoryError">
+        <scope ilk="function" name="__init__" />
+      </scope>
+      <scope classrefs="StandardError" doc="Name not found globally.&#xA;" ilk="class" name="NameError">
+        <scope ilk="function" name="__init__" />
+      </scope>
+      <scope classrefs="RuntimeError" doc="Method or function hasn&apos;t been implemented yet.&#xA;" ilk="class" name="NotImplementedError">
+        <scope ilk="function" name="__init__" />
+      </scope>
+      <scope classrefs="EnvironmentError" doc="OS system call failed.&#xA;" ilk="class" name="OSError">
+        <scope ilk="function" name="__init__" />
+      </scope>
+      <scope classrefs="ArithmeticError" doc="Result too large to be represented.&#xA;" ilk="class" name="OverflowError">
+        <scope ilk="function" name="__init__" />
+      </scope>
+      <scope classrefs="Warning" doc="Base class for warnings about features which will be deprecated&#xA;in the future." ilk="class" name="PendingDeprecationWarning">
+        <scope ilk="function" name="__init__" />
+      </scope>
+      <scope classrefs="StandardError" doc="Weak ref proxy used after referent went away.&#xA;" ilk="class" name="ReferenceError">
+        <scope ilk="function" name="__init__" />
+      </scope>
+      <scope classrefs="StandardError" doc="Unspecified run-time error.&#xA;" ilk="class" name="RuntimeError">
+        <scope ilk="function" name="__init__" />
+      </scope>
+      <scope classrefs="Warning" doc="Base class for warnings about dubious runtime behavior.&#xA;" ilk="class" name="RuntimeWarning">
+        <scope ilk="function" name="__init__" />
+      </scope>
+      <scope classrefs="Exception" doc="Base class for all standard Python exceptions that do not represent&#xA;interpreter exiting." ilk="class" name="StandardError">
+        <scope ilk="function" name="__init__" />
+      </scope>
+      <scope classrefs="Exception" doc="Signal the end from iterator.next().&#xA;" ilk="class" name="StopIteration">
+        <scope ilk="function" name="__init__" />
+      </scope>
+      <scope classrefs="StandardError" doc="Invalid syntax.&#xA;" ilk="class" name="SyntaxError">
+        <scope doc="x.__str__() &lt;==&gt; str(x)" ilk="function" name="__str__" signature="x.__str__() &lt;==&gt; str(x)" />
+        <scope ilk="function" name="__init__" />
+      </scope>
+      <scope classrefs="Warning" doc="Base class for warnings about dubious syntax.&#xA;" ilk="class" name="SyntaxWarning">
+        <scope ilk="function" name="__init__" />
+      </scope>
+      <scope classrefs="StandardError" doc="Internal error in the Python interpreter.&#xA;Please report this to the Python maintainer, along with the traceback, the Python version, and the hardware/OS platform and version." ilk="class" name="SystemError">
+        <scope ilk="function" name="__init__" />
+      </scope>
+      <scope classrefs="BaseException" doc="Request to exit from the interpreter.&#xA;" ilk="class" name="SystemExit">
+        <scope ilk="function" name="__init__" />
+      </scope>
+      <scope classrefs="IndentationError" doc="Improper mixture of spaces and tabs.&#xA;" ilk="class" name="TabError">
+        <scope ilk="function" name="__init__" />
+      </scope>
+      <scope classrefs="StandardError" doc="Inappropriate argument type.&#xA;" ilk="class" name="TypeError">
+        <scope ilk="function" name="__init__" />
+      </scope>
+      <scope classrefs="NameError" doc="Local name referenced but not bound to a value.&#xA;" ilk="class" name="UnboundLocalError">
+        <scope ilk="function" name="__init__" />
+      </scope>
+      <scope classrefs="UnicodeError" doc="Unicode decoding error.&#xA;" ilk="class" name="UnicodeDecodeError">
+        <scope doc="x.__str__() &lt;==&gt; str(x)" ilk="function" name="__str__" signature="x.__str__() &lt;==&gt; str(x)" />
+        <scope ilk="function" name="__init__" />
+      </scope>
+      <scope classrefs="UnicodeError" doc="Unicode encoding error.&#xA;" ilk="class" name="UnicodeEncodeError">
+        <scope doc="x.__str__() &lt;==&gt; str(x)" ilk="function" name="__str__" signature="x.__str__() &lt;==&gt; str(x)" />
+        <scope ilk="function" name="__init__" />
+      </scope>
+      <scope classrefs="ValueError" doc="Unicode related error.&#xA;" ilk="class" name="UnicodeError">
+        <scope ilk="function" name="__init__" />
+      </scope>
+      <scope classrefs="UnicodeError" doc="Unicode translation error.&#xA;" ilk="class" name="UnicodeTranslateError">
+        <scope doc="x.__str__() &lt;==&gt; str(x)" ilk="function" name="__str__" signature="x.__str__() &lt;==&gt; str(x)" />
+        <scope ilk="function" name="__init__" />
+      </scope>
+      <scope classrefs="Warning" doc="Base class for warnings about Unicode related problems, mostly&#xA;related to conversion problems." ilk="class" name="UnicodeWarning">
+        <scope ilk="function" name="__init__" />
+      </scope>
+      <scope classrefs="Warning" doc="Base class for warnings generated by user code.&#xA;" ilk="class" name="UserWarning">
+        <scope ilk="function" name="__init__" />
+      </scope>
+      <scope classrefs="StandardError" doc="Inappropriate argument value (of correct type).&#xA;" ilk="class" name="ValueError">
+        <scope ilk="function" name="__init__" />
+      </scope>
+      <scope classrefs="Exception" doc="Base class for warning categories.&#xA;" ilk="class" name="Warning">
+        <scope ilk="function" name="__init__" />
+      </scope>
+      <scope classrefs="OSError" doc="MS-Windows OS system call failed.&#xA;" ilk="class" name="WindowsError">
+        <scope doc="x.__str__() &lt;==&gt; str(x)" ilk="function" name="__str__" signature="x.__str__() &lt;==&gt; str(x)" />
+        <scope ilk="function" name="__init__" />
+      </scope>
+      <scope classrefs="ArithmeticError" doc="Second argument to a division or modulo operation was zero.&#xA;" ilk="class" name="ZeroDivisionError">
+        <scope ilk="function" name="__init__" />
+      </scope>
+    </scope>
+    

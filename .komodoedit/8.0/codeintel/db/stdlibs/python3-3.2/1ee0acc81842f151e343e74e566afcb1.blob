@@ -1,0 +1,50 @@
+<scope doc="Class representing audio/* type MIME documents.&#xA;" ilk="blob" lang="Python" name="email.mime.audio">
+      <scope classrefs="_BufferedIOBase" doc="BytesIO([buffer]) -&gt; object&#xA;Create a buffered I/O implementation using an in-memory bytes buffer, ready for reading and writing." ilk="class" name="BytesIO">
+        <scope doc="Call readline() repeatedly and return a list of the lines so&#xA;read." ilk="function" name="readlines" returns="list" signature="readlines([size]) -&gt; list of strings, each a line from the file." />
+        <scope doc="Retrieve the entire contents of the BytesIO object." ilk="function" name="getvalue" signature="getvalue() -&gt; bytes." />
+        <scope ilk="function" name="writable" />
+        <scope doc="flush() -&gt; None.  Does nothing." ilk="function" name="flush" signature="flush() -&gt; None.  Does nothing." />
+        <scope doc="close() -&gt; None.  Disable all I/O operations." ilk="function" name="close" signature="close() -&gt; None.  Disable all I/O operations." />
+        <scope doc="Seek to byte offset pos relative to position indicated by&#xA;whence: 0  Start of stream (the default)." ilk="function" name="seek" signature="seek(pos, whence=0) -&gt; int.  Change stream position." />
+        <scope ilk="function" name="__init__" />
+        <scope doc="Returns number of bytes read (0 for EOF), or None if the&#xA;object is set not to block as has no data to read." ilk="function" name="readinto" signature="readinto(bytearray) -&gt; int.  Read up to len(b) bytes into b." />
+        <scope ilk="function" name="readable" />
+        <scope doc="Return the number of bytes written." ilk="function" name="write" signature="write(bytes) -&gt; int.  Write bytes to file." />
+        <scope ilk="function" name="__getstate__" />
+        <scope doc="tell() -&gt; current file position, an integer" ilk="function" name="tell" signature="tell() -&gt; current file position, an integer" />
+        <scope doc="Always returns False since BytesIO objects are not connected&#xA;to a tty-like device." ilk="function" name="isatty" signature="isatty() -&gt; False." />
+        <scope doc="Size defaults to the current file position, as returned by&#xA;tell()." ilk="function" name="truncate" signature="truncate([size]) -&gt; int.  Truncate the file to at most size bytes." />
+        <scope ilk="function" name="__setstate__" />
+        <scope doc="If the size argument is negative, read until EOF is reached." ilk="function" name="read" signature="read([size]) -&gt; read at most size bytes, returned as a string." />
+        <scope doc="x.__next__() &lt;==&gt; next(x)" ilk="function" name="__next__" signature="x.__next__() &lt;==&gt; next(x)" />
+        <scope doc="If the size argument is negative or omitted, read until EOF&#xA;is reached." ilk="function" name="read1" signature="read1(size) -&gt; read at most size bytes, returned as a string." />
+        <scope doc="x.__iter__() &lt;==&gt; iter(x)" ilk="function" name="__iter__" signature="x.__iter__() &lt;==&gt; iter(x)" />
+        <scope ilk="function" name="seekable" />
+        <scope doc="Retain newline." ilk="function" name="readline" signature="readline([size]) -&gt; next line from the file, as a string." />
+        <scope doc="Note that newlines are not added." ilk="function" name="writelines" signature="writelines(sequence_of_strings) -&gt; None.  Write strings to the file." />
+        <scope doc="Get a read-write view over the contents of the BytesIO&#xA;object." ilk="function" name="getbuffer" signature="getbuffer() -&gt; bytes." />
+      </scope>
+      <scope classrefs="MIMENonMultipart" doc="Class for generating audio/* MIME documents.&#xA;" ilk="class" line="42" lineend="73" name="MIMEAudio">
+        <scope doc="Create an audio/* type MIME document." ilk="function" line="45" lineend="73" name="__init__" signature="__init__(self, _audiodata, _subtype=None, _encoder=&lt;function encode_base64 at 0x02D08C00&gt;, **_params)">
+          <variable ilk="argument" name="_audiodata" />
+          <variable citdl="MIMEAudio" ilk="argument" name="self" />
+          <variable citdl="encoders.encode_base64" ilk="argument" name="_encoder" />
+          <variable attributes="kwargs" ilk="argument" name="_params" />
+          <variable citdl="_whatsnd()" ilk="argument" name="_subtype" />
+        </scope>
+      </scope>
+      <scope classrefs="MIMEBase" doc="Base class for MIME multipart/* type messages.&#xA;" ilk="class" name="MIMENonMultipart">
+        <scope ilk="function" name="attach" signature="attach(self, payload)" />
+      </scope>
+      <variable citdl="list" line="7" name="__all__" />
+      <import module="encoders" />
+      <import module="sndhdr" />
+      <variable attributes="protected __hidden__" citdl="dict" line="17" name="_sndhdr_MIMEmap" />
+      <scope attributes="protected __hidden__" doc="Try to identify a sound file type.&#xA;&#xA;sndhdr.what() has a pretty cruddy interface, unfortunately.  This is why&#xA;we re-do it here.  It would be easier to reverse engineer the Unix &apos;file&apos;&#xA;command and use the standard &apos;magic&apos; file, as shipped with a modern Unix." ilk="function" line="25" lineend="38" name="_whatsnd" returns="_sndhdr_MIMEmap.get()" signature="_whatsnd(data)">
+        <variable ilk="argument" name="data" />
+        <variable citdl="list" line="32" name="hdr" />
+        <variable citdl="BytesIO()" line="33" name="fakefile" />
+        <variable citdl="testfn()" line="35" name="res" />
+      </scope>
+    </scope>
+    

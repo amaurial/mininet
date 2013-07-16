@@ -1,0 +1,190 @@
+<scope ilk="blob" lang="Perl" name="XML::Parser::Expat">
+      <scope classrefs="DynaLoader" ilk="class" line="1" lineend="495" name="XML::Parser::Expat">
+        <import line="8" module="Carp" symbol="*" />
+        <import line="10" module="DynaLoader" />
+        <variable line="6" name="$VERSION" />
+        <variable line="6" name="%Encoding_Table" />
+        <variable line="6" name="%Handler_Setters" />
+        <variable line="6" name="@Encoding_Path" />
+        <variable line="6" name="@ISA" />
+        <variable line="7" name="$have_File_Spec" />
+        <scope attributes="__ctor__" ilk="function" line="52" lineend="69" name="new" signature="new($class, %args)">
+          <variable ilk="argument" name="$class" />
+          <variable ilk="argument" name="%args" />
+        </scope>
+        <scope ilk="function" line="71" lineend="102" name="load_encoding" signature="load_encoding($file)">
+          <variable ilk="argument" name="$file" />
+        </scope>
+        <scope ilk="function" line="104" lineend="130" name="setHandlers" signature="setHandlers($self, @handler_pairs)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="@handler_pairs" />
+        </scope>
+        <scope ilk="function" line="132" lineend="142" name="xpcroak" signature="xpcroak($self, $message)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$message" />
+        </scope>
+        <scope ilk="function" line="144" lineend="153" name="xpcarp" signature="xpcarp($self, $message)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$message" />
+        </scope>
+        <scope ilk="function" line="155" lineend="160" name="default_current" signature="default_current($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="162" lineend="167" name="recognized_string" signature="recognized_string($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="169" lineend="174" name="original_string" signature="original_string($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="176" lineend="181" name="current_line" signature="current_line($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="183" lineend="188" name="current_column" signature="current_column($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="190" lineend="195" name="current_byte" signature="current_byte($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="197" lineend="203" name="base" signature="base($self, $newbase)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$newbase" />
+        </scope>
+        <scope ilk="function" line="205" lineend="208" name="context" signature="context()">
+          </scope>
+        <scope ilk="function" line="210" lineend="213" name="current_element" signature="current_element($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="215" lineend="219" name="in_element" signature="in_element($self, $element)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$element" />
+        </scope>
+        <scope ilk="function" line="221" lineend="228" name="within_element" signature="within_element($self, $element)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$element" />
+        </scope>
+        <scope ilk="function" line="230" lineend="233" name="depth" signature="depth($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="235" lineend="241" name="element_index" signature="element_index($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="246" lineend="250" name="namespace" signature="namespace($self, $name)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$name" />
+        </scope>
+        <scope ilk="function" line="252" lineend="257" name="eq_name" signature="eq_name($self, $nm1, $nm2)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$nm1" />
+          <variable ilk="argument" name="$nm2" />
+        </scope>
+        <scope ilk="function" line="259" lineend="266" name="generate_ns_name" signature="generate_ns_name($self, $name, $namespace)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$name" />
+          <variable ilk="argument" name="$namespace" />
+        </scope>
+        <scope ilk="function" line="268" lineend="274" name="new_ns_prefixes" signature="new_ns_prefixes($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="276" lineend="285" name="expand_ns_prefix" signature="expand_ns_prefix($self, $prefix)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$prefix" />
+        </scope>
+        <scope ilk="function" line="287" lineend="301" name="current_ns_prefixes" signature="current_ns_prefixes($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="308" lineend="325" name="NamespaceStart" signature="NamespaceStart($self, $prefix, $uri)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$prefix" />
+          <variable ilk="argument" name="$uri" />
+        </scope>
+        <scope ilk="function" line="327" lineend="339" name="NamespaceEnd" signature="NamespaceEnd($self, $prefix)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$prefix" />
+        </scope>
+        <scope ilk="function" line="343" lineend="349" name="specified_attr" signature="specified_attr($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="351" lineend="357" name="finish" signature="finish($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="359" lineend="383" name="position_in_context" signature="position_in_context($self, $lines)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$lines" />
+        </scope>
+        <scope ilk="function" line="385" lineend="416" name="xml_escape" signature="xml_escape($self, $text)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$text" />
+        </scope>
+        <scope ilk="function" line="418" lineend="423" name="skip_until" signature="skip_until($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="425" lineend="428" name="release" signature="release($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="430" lineend="433" name="DESTROY" signature="DESTROY($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="435" lineend="479" name="parse" signature="parse($self, $arg)">
+          <import line="453" module="IO::Handle" />
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$arg" />
+          <import line="453" module="IO::Handle" />
+        </scope>
+        <scope ilk="function" line="481" lineend="484" name="parsestring" signature="parsestring($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="486" lineend="495" name="parsefile" signature="parsefile($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+      </scope>
+      <scope ilk="class" line="499" lineend="583" name="XML::Parser::ContentModel">
+        <scope ilk="function" line="502" lineend="502" name="EMPTY" signature="EMPTY()" />
+        <scope ilk="function" line="503" lineend="503" name="ANY" signature="ANY()" />
+        <scope ilk="function" line="504" lineend="504" name="MIXED" signature="MIXED()" />
+        <scope ilk="function" line="505" lineend="505" name="NAME" signature="NAME()" />
+        <scope ilk="function" line="506" lineend="506" name="CHOICE" signature="CHOICE()" />
+        <scope ilk="function" line="507" lineend="507" name="SEQ" signature="SEQ()" />
+        <scope ilk="function" line="510" lineend="512" name="isempty" signature="isempty()" />
+        <scope ilk="function" line="514" lineend="516" name="isany" signature="isany()" />
+        <scope ilk="function" line="518" lineend="520" name="ismixed" signature="ismixed()" />
+        <scope ilk="function" line="522" lineend="524" name="isname" signature="isname()" />
+        <scope ilk="function" line="526" lineend="528" name="name" signature="name()" />
+        <scope ilk="function" line="530" lineend="532" name="ischoice" signature="ischoice()" />
+        <scope ilk="function" line="534" lineend="536" name="isseq" signature="isseq()" />
+        <scope ilk="function" line="538" lineend="540" name="quant" signature="quant()" />
+        <scope ilk="function" line="542" lineend="548" name="children" signature="children()">
+          </scope>
+        <scope ilk="function" line="550" lineend="577" name="asString" signature="asString($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="579" lineend="583" name="thiseq" signature="thiseq($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+      </scope>
+      <scope classrefs="XML::Parser::Expat" ilk="class" line="587" lineend="649" name="XML::Parser::ExpatNB">
+        <import line="590" module="Carp" symbol="*" />
+        <variable line="589" name="@ISA" />
+        <scope ilk="function" line="594" lineend="598" name="parse" signature="parse($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="600" lineend="604" name="parsestring" signature="parsestring($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="606" lineend="610" name="parsefile" signature="parsefile($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="612" lineend="619" name="parse_more" signature="parse_more($self, $data)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$data" />
+        </scope>
+        <scope ilk="function" line="621" lineend="649" name="parse_done" signature="parse_done($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+      </scope>
+      <scope ilk="class" line="654" lineend="661" name="XML::Parser::Encinfo">
+        <scope ilk="function" line="656" lineend="659" name="DESTROY" signature="DESTROY($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+      </scope>
+    </scope>
+    

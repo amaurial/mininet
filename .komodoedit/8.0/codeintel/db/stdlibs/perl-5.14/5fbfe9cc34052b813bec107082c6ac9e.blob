@@ -1,0 +1,21 @@
+<scope ilk="blob" lang="Perl" name="URI::news">
+      <scope classrefs="URI::_server" ilk="class" line="1" lineend="68" name="URI::news">
+        <import line="3" module="URI::_server" />
+        <import line="7" module="URI::Escape" symbol="uri_unescape" />
+        <import line="8" module="Carp" />
+        <scope ilk="function" line="10" lineend="10" name="default_port" signature="default_port()" />
+        <scope ilk="function" line="18" lineend="43" name="_group" signature="_group($self, $group, $from, $to)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$group" />
+          <variable ilk="argument" name="$from" />
+          <variable ilk="argument" name="$to" />
+        </scope>
+        <scope ilk="function" line="46" lineend="55" name="group" signature="group($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="57" lineend="66" name="message" signature="message($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+      </scope>
+    </scope>
+    

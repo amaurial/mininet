@@ -1,0 +1,102 @@
+<scope ilk="blob" lang="Perl" name="DBD::ExampleP">
+      <scope ilk="class" line="2" lineend="54" name="DBD::ExampleP">
+        <import line="4" module="Symbol" symbol="*" />
+        <import line="6" module="DBI" symbol="**" />
+        <import line="8" module="File::Spec" />
+        <variable line="11" name="$VERSION" />
+        <variable line="21" name="@statnames" />
+        <variable line="27" name="@stattypes" />
+        <variable line="32" name="@statprec" />
+        <variable line="37" name="$drh" />
+        <scope ilk="function" line="40" lineend="50" name="driver" signature="driver($class, $attr)">
+          <variable ilk="argument" name="$class" />
+          <variable ilk="argument" name="$attr" />
+        </scope>
+        <scope ilk="function" line="52" lineend="54" name="CLONE" signature="CLONE()" />
+      </scope>
+      <scope ilk="class" line="58" lineend="85" name="DBD::ExampleP::dr">
+        <variable line="59" name="$imp_data_size" />
+        <scope ilk="function" line="62" lineend="76" name="connect" signature="connect($drh, $dbname, $user, $auth)">
+          <variable ilk="argument" name="$drh" />
+          <variable ilk="argument" name="$dbname" />
+          <variable ilk="argument" name="$user" />
+          <variable ilk="argument" name="$auth" />
+        </scope>
+        <scope ilk="function" line="78" lineend="80" name="data_sources" signature="data_sources()" />
+      </scope>
+      <scope ilk="class" line="85" lineend="292" name="DBD::ExampleP::db">
+        <variable line="86" name="$imp_data_size" />
+        <scope ilk="function" line="89" lineend="130" name="prepare" signature="prepare($dbh, $statement)">
+          <variable ilk="argument" name="$dbh" />
+          <variable ilk="argument" name="$statement" />
+        </scope>
+        <scope ilk="function" line="133" lineend="188" name="table_info" signature="table_info($dbh, $catalog, $schema, $table, $type)">
+          <variable ilk="argument" name="$dbh" />
+          <variable ilk="argument" name="$catalog" />
+          <variable ilk="argument" name="$schema" />
+          <variable ilk="argument" name="$table" />
+          <variable ilk="argument" name="$type" />
+        </scope>
+        <scope ilk="function" line="191" lineend="214" name="type_info_all" signature="type_info_all($dbh)">
+          <variable ilk="argument" name="$dbh" />
+        </scope>
+        <scope ilk="function" line="217" lineend="219" name="ping" signature="ping()" />
+        <scope ilk="function" line="222" lineend="225" name="disconnect" signature="disconnect()" />
+        <scope ilk="function" line="228" lineend="231" name="get_info" signature="get_info($dbh, $info_type)">
+          <variable ilk="argument" name="$dbh" />
+          <variable ilk="argument" name="$info_type" />
+        </scope>
+        <scope ilk="function" line="234" lineend="242" name="FETCH" signature="FETCH($dbh, $attrib)">
+          <variable ilk="argument" name="$dbh" />
+          <variable ilk="argument" name="$attrib" />
+        </scope>
+        <scope ilk="function" line="245" lineend="256" name="STORE" signature="STORE($dbh, $attrib, $value)">
+          <variable ilk="argument" name="$dbh" />
+          <variable ilk="argument" name="$attrib" />
+          <variable ilk="argument" name="$value" />
+        </scope>
+        <scope ilk="function" line="258" lineend="262" name="DESTROY" signature="DESTROY($dbh)">
+          <variable ilk="argument" name="$dbh" />
+        </scope>
+        <scope ilk="function" line="271" lineend="274" name="examplep_tables" signature="examplep_tables($dbh, $re)">
+          <variable ilk="argument" name="$dbh" />
+          <variable ilk="argument" name="$re" />
+        </scope>
+        <scope ilk="function" line="276" lineend="284" name="parse_trace_flag" signature="parse_trace_flag($h, $name)">
+          <variable ilk="argument" name="$h" />
+          <variable ilk="argument" name="$name" />
+        </scope>
+        <scope ilk="function" line="286" lineend="288" name="private_attribute_info" signature="private_attribute_info()" />
+      </scope>
+      <scope ilk="class" line="292" lineend="428" name="DBD::ExampleP::st">
+        <variable line="293" name="$imp_data_size" />
+        <variable line="381" name="*fetchrow_arrayref" />
+        <variable line="424" name="*parse_trace_flag" />
+        <scope ilk="function" line="296" lineend="300" name="bind_param" signature="bind_param($sth, $param, $value, $attribs)">
+          <variable ilk="argument" name="$sth" />
+          <variable ilk="argument" name="$param" />
+          <variable ilk="argument" name="$value" />
+          <variable ilk="argument" name="$attribs" />
+        </scope>
+        <scope ilk="function" line="303" lineend="342" name="execute" signature="execute($sth, @dir)">
+          <variable ilk="argument" name="$sth" />
+          <variable ilk="argument" name="@dir" />
+        </scope>
+        <scope ilk="function" line="345" lineend="380" name="fetch" signature="fetch($sth)">
+          <variable ilk="argument" name="$sth" />
+        </scope>
+        <scope ilk="function" line="384" lineend="391" name="finish" signature="finish($sth)">
+          <variable ilk="argument" name="$sth" />
+        </scope>
+        <scope ilk="function" line="394" lineend="412" name="FETCH" signature="FETCH($sth, $attrib)">
+          <variable ilk="argument" name="$sth" />
+          <variable ilk="argument" name="$attrib" />
+        </scope>
+        <scope ilk="function" line="415" lineend="422" name="STORE" signature="STORE($sth, $attrib, $value)">
+          <variable ilk="argument" name="$sth" />
+          <variable ilk="argument" name="$attrib" />
+          <variable ilk="argument" name="$value" />
+        </scope>
+      </scope>
+    </scope>
+    

@@ -1,0 +1,52 @@
+<scope ilk="blob" lang="Perl" name="Archive::Zip::MemberRead">
+      <scope ilk="class" line="1" lineend="333" name="Archive::Zip::MemberRead">
+        <import line="36" module="Archive::Zip" symbol="**" />
+        <variable line="38" name="$VERSION" />
+        <scope ilk="function" line="64" lineend="66" name="Archive::Zip::Member::readFileHandle" signature="Archive::Zip::Member::readFileHandle()" />
+        <scope attributes="__ctor__" ilk="function" line="80" lineend="102" name="new" signature="new($class, $zip, $file)">
+          <variable ilk="argument" name="$class" />
+          <variable ilk="argument" name="$zip" />
+          <variable ilk="argument" name="$file" />
+        </scope>
+        <scope ilk="function" line="104" lineend="110" name="set_member" signature="set_member($self, $member)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$member" />
+        </scope>
+        <scope ilk="function" line="112" lineend="115" name="set_compression" signature="set_compression($self, $compression)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$compression" />
+        </scope>
+        <scope ilk="function" line="127" lineend="130" name="setLineEnd" signature="setLineEnd()" />
+        <scope ilk="function" line="139" lineend="144" name="rewind" signature="rewind($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="146" lineend="153" name="_reset_vars" signature="_reset_vars($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="163" lineend="170" name="input_record_separator" signature="input_record_separator($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="177" lineend="181" name="_sep_re" signature="_sep_re($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="184" lineend="196" name="_sep_as_re" signature="_sep_as_re($sep)">
+          <variable ilk="argument" name="$sep" />
+        </scope>
+        <scope ilk="function" line="205" lineend="208" name="input_line_number" signature="input_line_number($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="216" lineend="221" name="close" signature="close($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="230" lineend="239" name="buffer_size" signature="buffer_size($self, $size)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$size" />
+        </scope>
+        <scope ilk="function" line="252" lineend="275" name="getline" signature="getline($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="297" lineend="312" name="read" signature="read()">
+          </scope>
+      </scope>
+    </scope>
+    

@@ -1,0 +1,117 @@
+<scope ilk="blob" lang="Perl" name="ActiveState::CPAN">
+      <scope ilk="class" line="1" lineend="525" name="ActiveState::CPAN">
+        <import line="4" module="Carp" />
+        <import line="5" module="ActiveState::Handy" symbol="file_content" />
+        <import line="6" module="ActiveState::CPAN::Utils" symbol="$PKG_EXT" />
+        <import line="7" module="IO::Handle" />
+        <variable line="9" name="$VERSION" />
+        <scope attributes="__ctor__" ilk="function" line="19" lineend="104" name="new" signature="new($class, %opt)">
+          <import line="67" module="File::Path" />
+          <variable ilk="argument" name="$class" />
+          <variable ilk="argument" name="%opt" />
+          <import line="67" module="File::Path" />
+        </scope>
+        <scope ilk="function" line="106" lineend="116" name="clear_cache" signature="clear_cache($self)">
+          <import line="109" module="File::Path" />
+          <variable ilk="argument" name="$self" />
+          <import line="109" module="File::Path" />
+        </scope>
+        <scope ilk="function" line="118" lineend="123" name="_cache_expire" signature="_cache_expire($self, $path)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$path" />
+        </scope>
+        <scope ilk="function" line="125" lineend="128" name="local_mirror" signature="local_mirror($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="130" lineend="133" name="author" signature="author($self, $id)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$id" />
+        </scope>
+        <scope ilk="function" line="135" lineend="148" name="authors" signature="authors($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="150" lineend="158" name="packages" signature="packages($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="160" lineend="227" name="packages_iter" signature="packages_iter($self, %opt)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="%opt" />
+        </scope>
+        <scope ilk="function" line="229" lineend="232" name="package_info" signature="package_info()" />
+        <scope ilk="function" line="234" lineend="253" name="modules_iter" signature="modules_iter($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="255" lineend="321" name="files_iter" signature="files_iter($self, %opt)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="%opt" />
+        </scope>
+        <scope ilk="function" line="323" lineend="331" name="files" signature="files($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="333" lineend="356" name="get" signature="get($self, $path)">
+          <import line="337" module="Compress::Zlib" />
+          <import line="347" module="Compress::Zlib" />
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$path" />
+          <import line="337" module="Compress::Zlib" />
+          <import line="347" module="Compress::Zlib" />
+        </scope>
+        <scope ilk="function" line="358" lineend="393" name="get_file" signature="get_file($self, $path)">
+          <import line="378" module="File::Path" />
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$path" />
+          <import line="378" module="File::Path" />
+        </scope>
+        <scope ilk="function" line="395" lineend="468" name="unpack" signature="unpack($self, $path, $dir)">
+          <import line="409" module="Archive::Tar" />
+          <import line="410" module="Cwd" />
+          <import line="430" module="Archive::Zip" />
+          <import line="431" module="Cwd" />
+          <import line="463" module="File::Path" />
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$path" />
+          <variable ilk="argument" name="$dir" />
+          <import line="409" module="Archive::Tar" />
+          <import line="410" module="Cwd" />
+          <import line="430" module="Archive::Zip" />
+          <import line="431" module="Cwd" />
+          <import line="463" module="File::Path" />
+        </scope>
+        <scope ilk="function" line="470" lineend="476" name="_user_agent" signature="_user_agent($self)">
+          <import line="473" module="LWP::UserAgent" />
+          <variable ilk="argument" name="$self" />
+          <import line="473" module="LWP::UserAgent" />
+        </scope>
+        <scope ilk="function" line="478" lineend="499" name="_get_remote" signature="_get_remote($self, $path, $save_as)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$path" />
+          <variable ilk="argument" name="$save_as" />
+        </scope>
+        <scope ilk="function" line="501" lineend="525" name="open" signature="open($self, $path)">
+          <import line="517" module="Compress::Zlib" />
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$path" />
+          <import line="517" module="Compress::Zlib" />
+        </scope>
+      </scope>
+      <scope classrefs="LWP::UserAgent" ilk="class" line="527" lineend="838" name="ActiveState::CPAN::UA">
+        <import line="531" module="Time::HiRes" symbol="time" />
+        <scope ilk="function" line="533" lineend="542" name="new" signature="new($class, $mgr)">
+          <variable ilk="argument" name="$class" />
+          <variable ilk="argument" name="$mgr" />
+        </scope>
+        <scope ilk="function" line="544" lineend="562" name="save" signature="save($self, $uri, $file)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$uri" />
+          <variable ilk="argument" name="$file" />
+        </scope>
+        <scope ilk="function" line="564" lineend="590" name="progress" signature="progress($self, $status, $res)">
+          <import line="577" module="ActiveState::Duration" />
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$status" />
+          <variable ilk="argument" name="$res" />
+          <import line="577" module="ActiveState::Duration" />
+        </scope>
+      </scope>
+    </scope>
+    

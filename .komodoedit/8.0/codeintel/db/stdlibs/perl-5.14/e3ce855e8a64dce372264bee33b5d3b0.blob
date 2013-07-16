@@ -1,0 +1,27 @@
+<scope ilk="blob" lang="Perl" name="TAP::Parser::Scheduler::Job">
+      <scope ilk="class" line="1" lineend="107" name="TAP::Parser::Scheduler::Job">
+        <import line="5" module="Carp" symbol="*" />
+        <variable line="4" name="$VERSION" />
+        <scope attributes="__ctor__" ilk="function" line="41" lineend="48" name="new" signature="new($class, $name, $desc, @ctx)">
+          <variable ilk="argument" name="$class" />
+          <variable ilk="argument" name="$name" />
+          <variable ilk="argument" name="$desc" />
+          <variable ilk="argument" name="@ctx" />
+        </scope>
+        <scope ilk="function" line="56" lineend="59" name="on_finish" signature="on_finish($self, $cb)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$cb" />
+        </scope>
+        <scope ilk="function" line="67" lineend="72" name="finish" signature="finish($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="82" lineend="82" name="filename" signature="filename()" />
+        <scope ilk="function" line="83" lineend="83" name="description" signature="description()" />
+        <scope ilk="function" line="84" lineend="84" name="context" signature="context()" />
+        <scope ilk="function" line="92" lineend="95" name="as_array_ref" signature="as_array_ref($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="105" lineend="105" name="is_spinner" signature="is_spinner()" />
+      </scope>
+    </scope>
+    

@@ -1,0 +1,53 @@
+<scope ilk="blob" lang="Perl" name="TAP::Parser::Aggregator">
+      <scope classrefs="TAP::Object" ilk="class" line="1" lineend="416" name="TAP::Parser::Aggregator">
+        <import line="4" module="Benchmark" symbol="*" />
+        <import line="7" module="TAP::Object" />
+        <variable line="5" name="$VERSION" />
+        <variable line="5" name="@ISA" />
+        <scope ilk="function" line="89" lineend="99" name="_initialize" signature="_initialize($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="117" lineend="141" name="add" signature="add($self, $description, $parser)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$description" />
+          <variable ilk="argument" name="$parser" />
+        </scope>
+        <scope ilk="function" line="164" lineend="173" name="parsers" signature="parsers($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="175" lineend="184" name="_get_parsers" signature="_get_parsers($self, @descriptions)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="@descriptions" />
+        </scope>
+        <scope ilk="function" line="193" lineend="193" name="descriptions" signature="descriptions()" />
+        <scope ilk="function" line="202" lineend="205" name="start" signature="start($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="213" lineend="216" name="stop" signature="stop($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="227" lineend="235" name="elapsed" signature="elapsed($self)">
+          <import line="230" module="Carp" />
+          <variable ilk="argument" name="$self" />
+          <import line="230" module="Carp" />
+        </scope>
+        <scope ilk="function" line="244" lineend="250" name="elapsed_timestr" signature="elapsed_timestr($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="258" lineend="264" name="all_passed" signature="all_passed($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="274" lineend="284" name="get_status" signature="get_status($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="339" lineend="339" name="total" signature="total()" />
+        <scope ilk="function" line="354" lineend="358" name="has_problems" signature="has_problems($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="382" lineend="389" name="has_errors" signature="has_errors($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="402" lineend="406" name="todo_failed" signature="todo_failed()" />
+      </scope>
+    </scope>
+    

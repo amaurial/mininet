@@ -1,0 +1,35 @@
+<scope ilk="blob" lang="Perl" name="Exception::Class::Base">
+      <scope ilk="class" line="1" lineend="518" name="Exception::Class::Base">
+        <import line="9" module="Class::Data::Inheritable" symbol="*" />
+        <import line="10" module="Devel::StackTrace" symbol="*" />
+        <import line="11" module="Scalar::Util" symbol="blessed" />
+        <variable line="3" name="$Exception::Class::Base::VERSION" />
+        <variable line="46" name="*error" />
+        <scope ilk="function" line="29" lineend="29" name="Fields" signature="Fields()" />
+        <scope ilk="function" line="70" lineend="70" name="Classes" signature="Classes()" />
+        <scope ilk="function" line="72" lineend="78" name="throw" signature="throw($proto)">
+          <variable ilk="argument" name="$proto" />
+        </scope>
+        <scope ilk="function" line="80" lineend="84" name="rethrow" signature="rethrow($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope attributes="__ctor__" ilk="function" line="86" lineend="95" name="new" signature="new($proto)">
+          <variable ilk="argument" name="$proto" />
+        </scope>
+        <scope ilk="function" line="97" lineend="152" name="_initialize" signature="_initialize($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="154" lineend="156" name="description" signature="description()" />
+        <scope ilk="function" line="158" lineend="168" name="show_trace" signature="show_trace($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="170" lineend="178" name="as_string" signature="as_string($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="180" lineend="180" name="full_message" signature="full_message()" />
+        <scope ilk="function" line="203" lineend="210" name="caught" signature="caught($class)">
+          <variable ilk="argument" name="$class" />
+        </scope>
+      </scope>
+    </scope>
+    

@@ -1,0 +1,28 @@
+<scope doc="Disassembler of Python byte code into mnemonics.&#xA;" ilk="blob" lang="Python" name="dis">
+      <variable citdl="dict" name="COMPILER_FLAG_NAMES" />
+      <variable citdl="int" name="EXTENDED_ARG" />
+      <variable citdl="int" name="HAVE_ARGUMENT" />
+      <variable citdl="list" name="__all__" />
+      <variable citdl="tuple" name="cmp_op" />
+      <scope doc="Formatted details of methods, functions, or code." ilk="function" name="code_info" signature="code_info(x)" />
+      <scope doc="Disassemble classes, methods, functions, or code." ilk="function" name="dis" signature="dis(x=None)" />
+      <scope doc="Disassemble a code object." ilk="function" name="disassemble" signature="disassemble(co, lasti=-1)" />
+      <scope doc="Disassemble a code object." ilk="function" name="disco" signature="disco(co, lasti=-1)" />
+      <scope doc="Disassemble a traceback (default: last traceback)." ilk="function" name="distb" signature="distb(tb=None)" />
+      <scope doc="Detect all offsets in a byte code which are jump targets." ilk="function" name="findlabels" signature="findlabels(code)" />
+      <scope doc="Find the offsets in a byte code which are start of lines in&#xA;the source." ilk="function" name="findlinestarts" signature="findlinestarts(code)" />
+      <variable citdl="list" name="hascompare" />
+      <variable citdl="list" name="hasconst" />
+      <variable citdl="list" name="hasfree" />
+      <variable citdl="list" name="hasjabs" />
+      <variable citdl="list" name="hasjrel" />
+      <variable citdl="list" name="haslocal" />
+      <variable citdl="list" name="hasname" />
+      <variable citdl="dict" name="opmap" />
+      <variable citdl="list" name="opname" />
+      <scope doc="Return pretty representation of code flags." ilk="function" name="pretty_flags" signature="pretty_flags(flags)" />
+      <scope doc="Print details of methods, functions, or code to stdout." ilk="function" name="show_code" signature="show_code(co)" />
+      <import module="sys" />
+      <import module="types" />
+    </scope>
+    

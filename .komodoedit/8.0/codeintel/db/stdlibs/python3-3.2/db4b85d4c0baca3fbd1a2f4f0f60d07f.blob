@@ -1,0 +1,121 @@
+<scope doc="Running tests&#xA;" ilk="blob" lang="Python" name="unittest.runner">
+      <scope classrefs="TestResult" doc="A test result class that can print formatted text results to a stream.&#xA;Used by TextTestRunner." ilk="class" line="29" lineend="117" name="TextTestResult">
+        <scope ilk="function" line="58" lineend="64" name="addSuccess" signature="addSuccess(self, test)">
+          <variable ilk="argument" name="test" />
+          <variable citdl="TextTestResult" ilk="argument" name="self" />
+        </scope>
+        <scope ilk="function" line="66" lineend="72" name="addError" signature="addError(self, test, err)">
+          <variable ilk="argument" name="test" />
+          <variable citdl="TextTestResult" ilk="argument" name="self" />
+          <variable ilk="argument" name="err" />
+        </scope>
+        <scope ilk="function" line="112" lineend="117" name="printErrorList" signature="printErrorList(self, flavour, errors)">
+          <variable citdl="TextTestResult" ilk="argument" name="self" />
+          <variable ilk="argument" name="errors" />
+          <variable ilk="argument" name="flavour" />
+        </scope>
+        <scope ilk="function" line="44" lineend="49" name="getDescription" returns="str.join()" signature="getDescription(self, test)">
+          <variable ilk="argument" name="test" />
+          <variable citdl="test.shortDescription()" line="45" name="doc_first_line" />
+          <variable citdl="TextTestResult" ilk="argument" name="self" />
+        </scope>
+        <scope ilk="function" line="74" lineend="80" name="addFailure" signature="addFailure(self, test, err)">
+          <variable ilk="argument" name="test" />
+          <variable citdl="TextTestResult" ilk="argument" name="self" />
+          <variable ilk="argument" name="err" />
+        </scope>
+        <scope ilk="function" line="51" lineend="56" name="startTest" signature="startTest(self, test)">
+          <variable ilk="argument" name="test" />
+          <variable citdl="TextTestResult" ilk="argument" name="self" />
+        </scope>
+        <scope ilk="function" line="37" lineend="42" name="__init__" signature="__init__(self, stream, descriptions, verbosity)">
+          <variable citdl="TextTestResult" ilk="argument" name="self" />
+          <variable ilk="argument" name="verbosity" />
+          <variable ilk="argument" name="stream" />
+          <variable ilk="argument" name="descriptions" />
+        </scope>
+        <scope ilk="function" line="98" lineend="104" name="addUnexpectedSuccess" signature="addUnexpectedSuccess(self, test)">
+          <variable ilk="argument" name="test" />
+          <variable citdl="TextTestResult" ilk="argument" name="self" />
+        </scope>
+        <scope ilk="function" line="90" lineend="96" name="addExpectedFailure" signature="addExpectedFailure(self, test, err)">
+          <variable ilk="argument" name="test" />
+          <variable citdl="TextTestResult" ilk="argument" name="self" />
+          <variable ilk="argument" name="err" />
+        </scope>
+        <scope ilk="function" line="82" lineend="88" name="addSkip" signature="addSkip(self, test, reason)">
+          <variable ilk="argument" name="test" />
+          <variable citdl="TextTestResult" ilk="argument" name="self" />
+          <variable ilk="argument" name="reason" />
+        </scope>
+        <scope ilk="function" line="106" lineend="110" name="printErrors" signature="printErrors(self)">
+          <variable citdl="TextTestResult" ilk="argument" name="self" />
+        </scope>
+        <variable attributes="__instancevar__" citdl="bool" line="41" name="dots" />
+        <variable attributes="__instancevar__" line="39" name="stream" />
+        <variable citdl="str" line="34" name="separator1" />
+        <variable citdl="str" line="35" name="separator2" />
+        <variable attributes="__instancevar__" line="42" name="descriptions" />
+        <variable attributes="__instancevar__" citdl="bool" line="40" name="showAll" />
+      </scope>
+      <scope classrefs="object" doc="A test runner class that displays results in textual form.&#xA;It prints out the names of tests as they are run, errors as they occur, and a summary of the results at the end of the test run." ilk="class" line="120" lineend="213" name="TextTestRunner">
+        <scope ilk="function" line="141" lineend="142" name="_makeResult" returns="TextTestRunner.resultclass()" signature="_makeResult(self)">
+          <variable citdl="TextTestRunner" ilk="argument" name="self" />
+        </scope>
+        <scope doc="Run the given test case or test suite." ilk="function" line="144" lineend="213" name="run" returns="_makeResult()" signature="run(self, test)">
+          <variable citdl="getattr()" line="164" name="startTestRun" />
+          <variable citdl="result.testsRun" line="178" name="run" />
+          <variable citdl="getattr()" line="170" name="stopTestRun" />
+          <variable citdl="TextTestRunner" ilk="argument" name="self" />
+          <variable citdl="map()" line="185" name="results" />
+          <variable citdl="time.time()" line="174" name="timeTaken" />
+          <variable citdl="len()" line="196" name="failed" />
+          <variable citdl="time.time()" line="173" name="stopTime" />
+          <variable citdl="_makeResult()" line="146" name="result" />
+          <variable citdl="time.time()" line="163" name="startTime" />
+          <variable citdl="len()" line="196" name="errored" />
+          <variable ilk="argument" name="test" />
+          <variable citdl="int" line="183" name="expectedFails" />
+          <variable citdl="list" line="193" name="infos" />
+        </scope>
+        <scope ilk="function" line="128" lineend="139" name="__init__" signature="__init__(self, stream=None, descriptions=True, verbosity=1, failfast=False, buffer=False, resultclass=None, warnings=None)">
+          <variable citdl="sys.stderr" ilk="argument" name="stream" />
+          <variable ilk="argument" name="warnings" />
+          <variable citdl="False" ilk="argument" name="buffer" />
+          <variable citdl="TextTestRunner" ilk="argument" name="self" />
+          <variable ilk="argument" name="resultclass" />
+          <variable citdl="True" ilk="argument" name="descriptions" />
+          <variable citdl="int" ilk="argument" name="verbosity" />
+          <variable citdl="False" ilk="argument" name="failfast" />
+        </scope>
+        <variable attributes="__instancevar__" citdl="_WritelnDecorator" line="132" name="stream" />
+        <variable attributes="__instancevar__" line="137" name="warnings" />
+        <variable attributes="__instancevar__" citdl="False" line="136" name="buffer" />
+        <variable citdl="TextTestResult" line="126" name="resultclass" />
+        <variable attributes="__instancevar__" citdl="True" line="133" name="descriptions" />
+        <variable attributes="__instancevar__" citdl="int" line="134" name="verbosity" />
+        <variable attributes="__instancevar__" citdl="False" line="135" name="failfast" />
+      </scope>
+      <scope ilk="function" name="registerResult" signature="registerResult(result)" />
+      <import module="result" />
+      <import module="sys" />
+      <import module="time" />
+      <import module="warnings" />
+      <scope attributes="protected __hidden__" classrefs="object" doc="Used to decorate file-like objects with a handy &apos;writeln&apos; method" ilk="class" line="13" lineend="26" name="_WritelnDecorator">
+        <scope attributes="__ctor__" ilk="function" line="15" lineend="16" name="__init__" signature="_WritelnDecorator(stream)">
+          <variable citdl="_WritelnDecorator" ilk="argument" name="self" />
+          <variable ilk="argument" name="stream" />
+        </scope>
+        <variable attributes="__instancevar__" line="16" name="stream" />
+        <scope ilk="function" line="18" lineend="21" name="__getattr__" returns="getattr()" signature="__getattr__(attr)">
+          <variable citdl="_WritelnDecorator" ilk="argument" name="self" />
+          <variable ilk="argument" name="attr" />
+        </scope>
+        <scope ilk="function" line="23" lineend="26" name="writeln" signature="writeln(arg=None)">
+          <variable citdl="_WritelnDecorator" ilk="argument" name="self" />
+          <variable ilk="argument" name="arg" />
+        </scope>
+      </scope>
+      <variable attributes="private __hidden__" citdl="True" line="10" name="__unittest" />
+    </scope>
+    

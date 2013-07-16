@@ -1,0 +1,76 @@
+<scope doc="Parser driver.&#xA;This provides a high-level interface to parse a file into a syntax tree." ilk="blob" lang="Python" name="lib2to3.pgen2.driver">
+      <scope classrefs="object" doc="&#xA;" ilk="class" line="28" lineend="105" name="Driver">
+        <scope doc="Parse a stream and return the syntax tree." ilk="function" line="85" lineend="88" name="parse_stream_raw" returns="Driver.parse_tokens()" signature="parse_stream_raw(self, stream, debug=False)">
+          <variable citdl="False" ilk="argument" name="debug" />
+          <variable citdl="tokenize.generate_tokens()" line="87" name="tokens" />
+          <variable citdl="Driver" ilk="argument" name="self" />
+          <variable ilk="argument" name="stream" />
+        </scope>
+        <scope doc="Parse a file and return the syntax tree." ilk="function" line="94" lineend="100" name="parse_file" returns="Driver.parse_stream()" signature="parse_file(self, filename, encoding=None, debug=False)">
+          <variable citdl="False" ilk="argument" name="debug" />
+          <variable citdl="Driver" ilk="argument" name="self" />
+          <variable ilk="argument" name="encoding" />
+          <variable citdl="codecs.open()" line="96" name="stream" />
+          <variable ilk="argument" name="filename" />
+        </scope>
+        <scope doc="Parse a series of tokens and return the syntax tree." ilk="function" line="37" lineend="83" name="parse_tokens" returns="p.rootnode" signature="parse_tokens(self, tokens, debug=False)">
+          <variable citdl="int" line="43" name="column" />
+          <variable citdl="Driver" ilk="argument" name="self" />
+          <variable ilk="argument" name="tokens" />
+          <variable citdl="parse.Parser()" line="40" name="p" />
+          <variable citdl="str" line="45" name="prefix" />
+          <variable citdl="int" line="42" name="lineno" />
+          <variable citdl="False" ilk="argument" name="debug" />
+          <variable line="44" name="type" />
+        </scope>
+        <scope doc="Parse a stream and return the syntax tree." ilk="function" line="90" lineend="92" name="parse_stream" returns="Driver.parse_stream_raw()" signature="parse_stream(self, stream, debug=False)">
+          <variable citdl="False" ilk="argument" name="debug" />
+          <variable citdl="Driver" ilk="argument" name="self" />
+          <variable ilk="argument" name="stream" />
+        </scope>
+        <scope ilk="function" line="30" lineend="35" name="__init__" signature="__init__(self, grammar, convert=None, logger=None)">
+          <variable ilk="argument" name="convert" />
+          <variable citdl="logging.getLogger()" ilk="argument" name="logger" />
+          <variable ilk="argument" name="grammar" />
+          <variable citdl="Driver" ilk="argument" name="self" />
+        </scope>
+        <scope doc="Parse a string and return the syntax tree." ilk="function" line="102" lineend="105" name="parse_string" returns="Driver.parse_tokens()" signature="parse_string(self, text, debug=False)">
+          <variable citdl="False" ilk="argument" name="debug" />
+          <variable ilk="argument" name="text" />
+          <variable citdl="Driver" ilk="argument" name="self" />
+          <variable citdl="tokenize.generate_tokens()" line="104" name="tokens" />
+        </scope>
+        <variable attributes="__instancevar__" line="35" name="convert" />
+        <variable attributes="__instancevar__" line="31" name="grammar" />
+        <variable attributes="__instancevar__" citdl="logging.getLogger()" line="34" name="logger" />
+      </scope>
+      <variable citdl="list" line="16" name="__all__" />
+      <import module="codecs" />
+      <scope doc="Generator that behaves like readline without using StringIO." ilk="function" line="108" lineend="113" name="generate_lines" signature="generate_lines(text)">
+        <variable ilk="argument" name="text" />
+      </scope>
+      <import module="grammar" />
+      <scope doc="Load the grammar (maybe from a pickle)." ilk="function" line="116" lineend="138" name="load_grammar" returns="grammar.Grammar()" signature="load_grammar(gt=&apos;Grammar.txt&apos;, gp=None, save=True, force=False, logger=None)">
+        <variable line="122" name="head" />
+        <variable citdl="str" ilk="argument" name="gt" />
+        <variable citdl="False" ilk="argument" name="force" />
+        <variable citdl="pgen.generate_grammar()" line="128" name="g" />
+        <variable citdl="str" ilk="argument" name="gp" />
+        <variable citdl="str" line="122" name="tail" />
+        <variable citdl="logging.getLogger()" ilk="argument" name="logger" />
+        <variable citdl="True" ilk="argument" name="save" />
+      </scope>
+      <import module="logging" />
+      <import module="os" />
+      <import module="parse" />
+      <import module="pgen" />
+      <import module="sys" />
+      <import module="token" />
+      <import module="tokenize" />
+      <scope attributes="protected __hidden__" doc="Inquire whether file a was written since file b." ilk="function" line="141" lineend="147" name="_newer" returns="bool" signature="_newer(a, b)">
+        <variable ilk="argument" name="a" />
+        <variable ilk="argument" name="b" />
+      </scope>
+      <variable attributes="__hidden__" citdl="str" line="14" name="__author__" />
+    </scope>
+    

@@ -1,0 +1,69 @@
+<scope ilk="blob" lang="Perl" name="GD::Polyline">
+      <scope classrefs="GD::Polygon" ilk="class" line="17" lineend="34" name="GD::Polyline">
+        <variable line="32" name="$VERSION" />
+        <variable line="32" name="@ISA" />
+      </scope>
+      <scope ilk="class" line="37" lineend="404" name="GD::Polygon">
+        <import line="45" module="GD" symbol="*" />
+        <import line="46" module="Carp" symbol="croak" />
+        <import line="310" module="Math::Trig" symbol="*" />
+        <variable line="48" name="$bezSegs" />
+        <variable line="48" name="$csr" />
+        <scope ilk="function" line="53" lineend="57" name="rotate" signature="rotate($self, $angle, $cx, $cy)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$angle" />
+          <variable ilk="argument" name="$cx" />
+          <variable ilk="argument" name="$cy" />
+        </scope>
+        <scope ilk="function" line="59" lineend="70" name="centroid" signature="centroid($self, $scale)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$scale" />
+        </scope>
+        <scope ilk="function" line="73" lineend="94" name="segLength" signature="segLength($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="96" lineend="113" name="segAngle" signature="segAngle($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="115" lineend="136" name="vertexAngle" signature="vertexAngle($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="140" lineend="190" name="toSpline" signature="toSpline($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="192" lineend="291" name="addControlPoints" signature="addControlPoints($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="303" lineend="308" name="_len" signature="_len()">
+          </scope>
+        <scope ilk="function" line="319" lineend="331" name="_angle" signature="_angle($p1, $p2, $p3)">
+          <variable ilk="argument" name="$p1" />
+          <variable ilk="argument" name="$p2" />
+          <variable ilk="argument" name="$p3" />
+        </scope>
+        <scope ilk="function" line="337" lineend="341" name="_subtract" signature="_subtract($p1, $p2)">
+          <variable ilk="argument" name="$p1" />
+          <variable ilk="argument" name="$p2" />
+        </scope>
+        <scope ilk="function" line="347" lineend="350" name="_print_point" signature="_print_point($p1)">
+          <variable ilk="argument" name="$p1" />
+        </scope>
+        <scope ilk="function" line="356" lineend="361" name="_angle_reduce1" signature="_angle_reduce1($angle)">
+          <variable ilk="argument" name="$angle" />
+        </scope>
+        <scope ilk="function" line="367" lineend="372" name="_angle_reduce2" signature="_angle_reduce2($angle)">
+          <variable ilk="argument" name="$angle" />
+        </scope>
+        <scope ilk="function" line="380" lineend="392" name="GD::Image::polyline" signature="GD::Image::polyline($self, $p, $c)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$p" />
+          <variable ilk="argument" name="$c" />
+        </scope>
+        <scope ilk="function" line="394" lineend="401" name="GD::Image::polydraw" signature="GD::Image::polydraw($self, $p, $c)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$p" />
+          <variable ilk="argument" name="$c" />
+        </scope>
+      </scope>
+    </scope>
+    

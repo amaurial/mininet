@@ -1,0 +1,83 @@
+<scope ilk="blob" lang="Perl" name="Perl::Critic::UserProfile">
+      <scope ilk="class" line="8" lineend="304" name="Perl::Critic::UserProfile">
+        <import line="14" module="English" symbol="-no_match_vars" />
+        <import line="15" module="Readonly" symbol="*" />
+        <import line="17" module="Config::Tiny" />
+        <import line="18" module="File::Spec" />
+        <import line="20" module="Perl::Critic::OptionsProcessor" />
+        <import line="21" module="Perl::Critic::Utils" symbol="**" />
+        <import line="22" module="Perl::Critic::Exception::Fatal::Internal" symbol="throw_internal" />
+        <import line="23" module="Perl::Critic::Exception::Configuration::Generic" symbol="throw_generic" />
+        <import line="24" module="Perl::Critic::PolicyConfig" symbol="*" />
+        <variable line="26" name="$VERSION" />
+        <scope attributes="__ctor__" ilk="function" line="30" lineend="36" name="new" signature="new($class, %args)">
+          <variable ilk="argument" name="$class" />
+          <variable ilk="argument" name="%args" />
+        </scope>
+        <scope ilk="function" line="40" lineend="48" name="_init" signature="_init($self, %args)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="%args" />
+        </scope>
+        <scope ilk="function" line="52" lineend="56" name="options_processor" signature="options_processor($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="60" lineend="70" name="policy_params" signature="policy_params($self, $policy)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$policy" />
+        </scope>
+        <scope ilk="function" line="74" lineend="87" name="raw_policy_params" signature="raw_policy_params($self, $policy)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$policy" />
+        </scope>
+        <scope ilk="function" line="91" lineend="100" name="policy_is_disabled" signature="policy_is_disabled($self, $policy)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$policy" />
+        </scope>
+        <scope ilk="function" line="104" lineend="113" name="policy_is_enabled" signature="policy_is_enabled($self, $policy)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$policy" />
+        </scope>
+        <scope ilk="function" line="117" lineend="129" name="listed_policies" signature="listed_policies($self, $policy)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$policy" />
+        </scope>
+        <scope ilk="function" line="133" lineend="137" name="source" signature="source($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="139" lineend="145" name="_set_source" signature="_set_source($self, $source)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$source" />
+        </scope>
+        <scope ilk="function" line="157" lineend="170" name="_load_profile" signature="_load_profile($self, $profile)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$profile" />
+        </scope>
+        <scope ilk="function" line="174" lineend="182" name="_set_options_processor" signature="_set_options_processor($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="186" lineend="207" name="_load_profile_from_file" signature="_load_profile_from_file($self, $file)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$file" />
+        </scope>
+        <scope ilk="function" line="211" lineend="223" name="_load_profile_from_array" signature="_load_profile_from_array($self, $array_ref)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$array_ref" />
+        </scope>
+        <scope ilk="function" line="227" lineend="238" name="_load_profile_from_string" signature="_load_profile_from_string($self, $string)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$string" />
+        </scope>
+        <scope ilk="function" line="242" lineend="245" name="_load_profile_from_hash" signature="_load_profile_from_hash($self, $hash_ref)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$hash_ref" />
+        </scope>
+        <scope ilk="function" line="249" lineend="268" name="_find_profile_path" signature="_find_profile_path()">
+          </scope>
+        <scope ilk="function" line="272" lineend="287" name="_find_home_dir" signature="_find_home_dir()">
+          </scope>
+        <scope ilk="function" line="293" lineend="302" name="_fix_defaults_key" signature="_fix_defaults_key($profile)">
+          <variable ilk="argument" name="$profile" />
+        </scope>
+      </scope>
+    </scope>
+    

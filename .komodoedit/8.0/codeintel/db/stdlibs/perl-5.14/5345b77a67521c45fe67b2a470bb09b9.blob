@@ -1,0 +1,205 @@
+<scope ilk="blob" lang="Perl" name="ExtUtils::ParseXS">
+      <scope classrefs="Exporter" ilk="class" line="1" lineend="1987" name="ExtUtils::ParseXS">
+        <import line="4" module="Cwd" symbol="*" />
+        <import line="5" module="Config" symbol="*" />
+        <import line="6" module="File::Basename" symbol="*" />
+        <import line="7" module="File::Spec" symbol="*" />
+        <import line="8" module="Symbol" symbol="*" />
+        <import line="10" module="Exporter" />
+        <variable line="20" name="$VERSION" />
+        <variable line="24" name="$errors" />
+        <variable line="24" name="$Fallback" />
+        <variable line="24" name="$FH" />
+        <variable line="24" name="$Overload" />
+        <variable line="24" name="$proto_re" />
+        <variable line="24" name="$ProtoUsed" />
+        <variable line="24" name="%input_expr" />
+        <variable line="24" name="%output_expr" />
+        <variable line="24" name="@InitFileCode" />
+        <variable line="25" name="$cplusplus" />
+        <variable line="25" name="$except" />
+        <variable line="25" name="$hiertype" />
+        <variable line="25" name="$WantLineNumbers" />
+        <variable line="25" name="$WantPrototypes" />
+        <variable line="25" name="$WantVersionChk" />
+        <variable line="26" name="$process_argtypes" />
+        <variable line="26" name="$process_inout" />
+        <variable line="26" name="$WantOptimize" />
+        <variable line="26" name="@tm" />
+        <variable line="27" name="$dir" />
+        <variable line="27" name="$filename" />
+        <variable line="27" name="$filepathname" />
+        <variable line="27" name="%IncludedFiles" />
+        <variable line="28" name="%proto_letter" />
+        <variable line="28" name="%type_kind" />
+        <variable line="29" name="$BLOCK_re" />
+        <variable line="29" name="$lastline" />
+        <variable line="29" name="$lastline_no" />
+        <variable line="29" name="%targetable" />
+        <variable line="30" name="$Package" />
+        <variable line="30" name="$Prefix" />
+        <variable line="30" name="%arg_list" />
+        <variable line="30" name="%args_match" />
+        <variable line="30" name="%defaults" />
+        <variable line="30" name="%var_types" />
+        <variable line="30" name="@BootCode" />
+        <variable line="30" name="@line" />
+        <variable line="30" name="@proto_arg" />
+        <variable line="31" name="$processing_arg_with_types" />
+        <variable line="31" name="%argtype_seen" />
+        <variable line="31" name="%in_out" />
+        <variable line="31" name="%lengthof" />
+        <variable line="31" name="@outlist" />
+        <variable line="32" name="$interface" />
+        <variable line="32" name="$interface_macro" />
+        <variable line="32" name="$interface_macro_set" />
+        <variable line="32" name="$prepush_done" />
+        <variable line="32" name="$proto_in_this_xsub" />
+        <variable line="32" name="$scope_in_this_xsub" />
+        <variable line="33" name="$ProtoThisXSUB" />
+        <variable line="33" name="$ScopeThisXSUB" />
+        <variable line="33" name="$xsreturn" />
+        <variable line="34" name="$func_header" />
+        <variable line="34" name="$orig_args" />
+        <variable line="34" name="$ret_type" />
+        <variable line="34" name="@line_no" />
+        <variable line="242" name="$C_group_rex" />
+        <variable line="246" name="$C_arg" />
+        <variable line="491" name="$Full_func_name" />
+        <variable line="504" name="$DoSetMagic" />
+        <variable line="574" name="$num_args" />
+        <variable line="599" name="$min_args" />
+        <variable line="608" name="$func_args" />
+        <variable line="611" name="$PPCODE" />
+        <variable line="612" name="$CODE" />
+        <variable line="615" name="$EXPLICIT_RETURN" />
+        <variable line="617" name="$ALIAS" />
+        <variable line="618" name="$INTERFACE" />
+        <variable line="643" name="$cond" />
+        <variable line="682" name="$condnum" />
+        <variable line="695" name="$thisdone" />
+        <variable line="696" name="$retvaldone" />
+        <variable line="697" name="$deferred" />
+        <variable line="699" name="$gotRETVAL" />
+        <variable line="764" name="$func_name" />
+        <variable line="890" name="$newXS" />
+        <variable line="1209" name="$name_printed" />
+        <variable line="1214" name="$var_num" />
+        <variable line="1250" name="$RETVAL_code" />
+        <variable line="1288" name="$Interfaces" />
+        <variable line="1326" name="$orig_alias" />
+        <variable line="1339" name="$XsubAliases" />
+        <variable line="1729" name="$Module" />
+        <variable line="1735" name="$Packprefix" />
+        <variable line="1832" name="$type" />
+        <variable line="1838" name="$tk" />
+        <variable line="1850" name="$expr" />
+        <variable line="1856" name="$subexpr" />
+        <variable line="1961" name="$arg" />
+        <scope attributes="__exportable__" ilk="function" line="38" lineend="1071" name="process_file" signature="process_file()">
+          <import line="70" module="ExtUtils::XSSymSet" />
+          <import line="70" module="ExtUtils::XSSymSet" />
+        </scope>
+        <scope ilk="function" line="1073" lineend="1073" name="errors" signature="errors()" />
+        <scope ilk="function" line="1075" lineend="1091" name="standard_typemap_locations" signature="standard_typemap_locations()">
+          </scope>
+        <scope ilk="function" line="1093" lineend="1096" name="TrimWhitespace" signature="TrimWhitespace()" />
+        <scope ilk="function" line="1098" lineend="1113" name="TidyType" signature="TidyType()" />
+        <scope ilk="function" line="1118" lineend="1121" name="check_keyword" signature="check_keyword()" />
+        <scope ilk="function" line="1123" lineend="1133" name="print_section" signature="print_section()" />
+        <scope ilk="function" line="1135" lineend="1147" name="merge_section" signature="merge_section()">
+          </scope>
+        <scope ilk="function" line="1149" lineend="1156" name="process_keyword" signature="process_keyword($pattern)">
+          <variable ilk="argument" name="$pattern" />
+        </scope>
+        <scope ilk="function" line="1158" lineend="1165" name="CASE_handler" signature="CASE_handler()" />
+        <scope ilk="function" line="1167" lineend="1236" name="INPUT_handler" signature="INPUT_handler()">
+          </scope>
+        <scope ilk="function" line="1238" lineend="1268" name="OUTPUT_handler" signature="OUTPUT_handler()">
+          </scope>
+        <scope ilk="function" line="1270" lineend="1275" name="C_ARGS_handler" signature="C_ARGS_handler()">
+          </scope>
+        <scope ilk="function" line="1277" lineend="1289" name="INTERFACE_MACRO_handler" signature="INTERFACE_MACRO_handler()">
+          </scope>
+        <scope ilk="function" line="1291" lineend="1306" name="INTERFACE_handler" signature="INTERFACE_handler()">
+          </scope>
+        <scope ilk="function" line="1308" lineend="1308" name="CLEANUP_handler" signature="CLEANUP_handler()" />
+        <scope ilk="function" line="1309" lineend="1309" name="PREINIT_handler" signature="PREINIT_handler()" />
+        <scope ilk="function" line="1310" lineend="1310" name="POSTCALL_handler" signature="POSTCALL_handler()" />
+        <scope ilk="function" line="1311" lineend="1311" name="INIT_handler" signature="INIT_handler()" />
+        <scope ilk="function" line="1313" lineend="1346" name="GetAliases" signature="GetAliases($line)">
+          <variable ilk="argument" name="$line" />
+        </scope>
+        <scope ilk="function" line="1348" lineend="1355" name="ATTRS_handler" signature="ATTRS_handler()" />
+        <scope ilk="function" line="1357" lineend="1364" name="ALIAS_handler" signature="ALIAS_handler()" />
+        <scope ilk="function" line="1366" lineend="1378" name="OVERLOAD_handler" signature="OVERLOAD_handler()">
+          </scope>
+        <scope ilk="function" line="1380" lineend="1396" name="FALLBACK_handler" signature="FALLBACK_handler()">
+          </scope>
+        <scope ilk="function" line="1399" lineend="1415" name="REQUIRE_handler" signature="REQUIRE_handler()">
+          </scope>
+        <scope ilk="function" line="1417" lineend="1431" name="VERSIONCHECK_handler" signature="VERSIONCHECK_handler()" />
+        <scope ilk="function" line="1433" lineend="1462" name="PROTOTYPE_handler" signature="PROTOTYPE_handler()">
+          </scope>
+        <scope ilk="function" line="1464" lineend="1473" name="SCOPE_handler" signature="SCOPE_handler()" />
+        <scope ilk="function" line="1475" lineend="1490" name="PROTOTYPES_handler" signature="PROTOTYPES_handler()" />
+        <scope ilk="function" line="1492" lineend="1509" name="PushXSStack" signature="PushXSStack(%args)">
+          <variable ilk="argument" name="%args" />
+        </scope>
+        <scope ilk="function" line="1511" lineend="1564" name="INCLUDE_handler" signature="INCLUDE_handler()" />
+        <scope ilk="function" line="1566" lineend="1574" name="QuoteArgs" signature="QuoteArgs($cmd)">
+          <variable ilk="argument" name="$cmd" />
+        </scope>
+        <scope ilk="function" line="1576" lineend="1622" name="INCLUDE_COMMAND_handler" signature="INCLUDE_COMMAND_handler()" />
+        <scope ilk="function" line="1624" lineend="1661" name="PopFile" signature="PopFile()">
+          </scope>
+        <scope ilk="function" line="1663" lineend="1672" name="ValidProtoString" signature="ValidProtoString($string)">
+          <variable ilk="argument" name="$string" />
+        </scope>
+        <scope ilk="function" line="1674" lineend="1680" name="C_string" signature="C_string($string)">
+          <variable ilk="argument" name="$string" />
+        </scope>
+        <scope ilk="function" line="1682" lineend="1687" name="ProtoString" signature="ProtoString($type)">
+          <variable ilk="argument" name="$type" />
+        </scope>
+        <scope ilk="function" line="1689" lineend="1707" name="check_cpp" signature="check_cpp()">
+          </scope>
+        <scope ilk="function" line="1710" lineend="1716" name="Q" signature="Q($text)">
+          <variable ilk="argument" name="$text" />
+        </scope>
+        <scope ilk="function" line="1719" lineend="1776" name="fetch_para" signature="fetch_para()">
+          </scope>
+        <scope ilk="function" line="1778" lineend="1803" name="output_init" signature="output_init()" />
+        <scope ilk="function" line="1805" lineend="1811" name="Warn" signature="Warn()">
+          </scope>
+        <scope ilk="function" line="1813" lineend="1817" name="blurt" signature="blurt()" />
+        <scope ilk="function" line="1819" lineend="1823" name="death" signature="death()" />
+        <scope ilk="function" line="1825" lineend="1898" name="generate_init" signature="generate_init()" />
+        <scope ilk="function" line="1900" lineend="1971" name="generate_output" signature="generate_output()" />
+        <scope ilk="function" line="1973" lineend="1987" name="map_type" signature="map_type($type, $varname)">
+          <variable ilk="argument" name="$type" />
+          <variable ilk="argument" name="$varname" />
+        </scope>
+      </scope>
+      <scope ilk="class" line="1992" lineend="2041" name="ExtUtils::ParseXS::CountLines">
+        <variable line="1994" name="$SECTION_END_MARKER" />
+        <scope attributes="__ctor__" ilk="function" line="1996" lineend="2005" name="TIEHANDLE" signature="TIEHANDLE($class, $cfile, $fh)">
+          <variable ilk="argument" name="$class" />
+          <variable ilk="argument" name="$cfile" />
+          <variable ilk="argument" name="$fh" />
+        </scope>
+        <scope ilk="function" line="2007" lineend="2018" name="PRINT" signature="PRINT($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="2020" lineend="2024" name="PRINTF" signature="PRINTF($self, $fmt)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$fmt" />
+        </scope>
+        <scope ilk="function" line="2026" lineend="2030" name="DESTROY" signature="DESTROY($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="2032" lineend="2034" name="UNTIE" signature="UNTIE()" />
+        <scope ilk="function" line="2036" lineend="2038" name="end_marker" signature="end_marker()" />
+      </scope>
+    </scope>
+    

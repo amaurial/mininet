@@ -1,0 +1,55 @@
+<scope ilk="blob" lang="Perl" name="Net::SSLeay::Handle">
+      <scope classrefs="Exporter" ilk="class" line="1" lineend="301" name="Net::SSLeay::Handle">
+        <import line="6" module="Socket" symbol="*" />
+        <import line="7" module="Net::SSLeay" symbol="*" />
+        <import line="9" module="Exporter" />
+        <variable line="54" name="$VERSION" />
+        <variable line="54" name="@EXPORT_OK" />
+        <variable line="54" name="@ISA" />
+        <scope attributes="__ctor__" ilk="function" line="69" lineend="96" name="TIEHANDLE" signature="TIEHANDLE($class, $socket, $port)">
+          <variable ilk="argument" name="$class" />
+          <variable ilk="argument" name="$socket" />
+          <variable ilk="argument" name="$port" />
+        </scope>
+        <scope ilk="function" line="98" lineend="108" name="PRINT" signature="PRINT($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="110" lineend="123" name="READLINE" signature="READLINE($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="125" lineend="138" name="READ" signature="READ()">
+          </scope>
+        <scope ilk="function" line="140" lineend="149" name="WRITE" signature="WRITE($self, $buf, $len, $offset)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$buf" />
+          <variable ilk="argument" name="$len" />
+          <variable ilk="argument" name="$offset" />
+        </scope>
+        <scope ilk="function" line="151" lineend="158" name="CLOSE" signature="CLOSE($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="160" lineend="160" name="FILENO" signature="FILENO()" />
+        <scope attributes="__exportable__" ilk="function" line="177" lineend="183" name="shutdown" signature="shutdown($obj, @params)">
+          <variable ilk="argument" name="$obj" />
+          <variable ilk="argument" name="@params" />
+        </scope>
+        <scope ilk="function" line="195" lineend="200" name="debug" signature="debug($class, $debug)">
+          <variable ilk="argument" name="$class" />
+          <variable ilk="argument" name="$debug" />
+        </scope>
+        <scope ilk="function" line="215" lineend="239" name="make_socket" signature="make_socket($class, $host, $port)">
+          <variable ilk="argument" name="$class" />
+          <variable ilk="argument" name="$host" />
+          <variable ilk="argument" name="$port" />
+        </scope>
+        <scope ilk="function" line="253" lineend="269" name="_glob_ref" signature="_glob_ref($class)">
+          <variable ilk="argument" name="$class" />
+        </scope>
+        <scope ilk="function" line="271" lineend="276" name="_initialize" signature="_initialize()" />
+        <scope ilk="function" line="278" lineend="282" name="__dummy" signature="__dummy()">
+          </scope>
+        <scope ilk="function" line="289" lineend="289" name="_get_self" signature="_get_self()" />
+        <scope ilk="function" line="297" lineend="299" name="_get_ssl" signature="_get_ssl()" />
+      </scope>
+    </scope>
+    

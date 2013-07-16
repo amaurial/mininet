@@ -1,0 +1,260 @@
+<scope doc="An extensible library for opening URLs using a variety of protocols&#xA;The simplest way to use this module is to call the urlopen function, which accepts a string containing a URL or a Request object (described below).  It opens the URL and returns the results as file-like object; the returned object has some extra methods described below.  The OpenerDirector manages a collection of Handler objects that do all the actual work.  Each Handler implements a particular protocol or option.  The OpenerDirector is a composite object that invokes the Handlers needed to open the requested URL.  For example, the HTTPHandler performs HTTP GET and POST requests and deals with" ilk="blob" lang="Python" name="urllib.request">
+      <scope classrefs="object" doc="&#xA;" ilk="class" name="AbstractBasicAuthHandler">
+        <scope ilk="function" name="http_error_auth_reqed" signature="http_error_auth_reqed(self, authreq, host, req, headers)" />
+        <scope ilk="function" name="retry_http_basic_auth" signature="retry_http_basic_auth(self, host, req, realm)" />
+        <scope ilk="function" name="reset_retry_count" signature="reset_retry_count(self)" />
+        <scope ilk="function" name="__init__" signature="__init__(self, password_mgr=None)" />
+      </scope>
+      <scope classrefs="object" doc="&#xA;" ilk="class" name="AbstractDigestAuthHandler">
+        <scope ilk="function" name="get_entity_digest" signature="get_entity_digest(self, data, chal)" />
+        <scope ilk="function" name="http_error_auth_reqed" signature="http_error_auth_reqed(self, auth_header, host, req, headers)" />
+        <scope ilk="function" name="get_algorithm_impls" signature="get_algorithm_impls(self, algorithm)" />
+        <scope ilk="function" name="get_cnonce" signature="get_cnonce(self, nonce)" />
+        <scope ilk="function" name="retry_http_digest_auth" signature="retry_http_digest_auth(self, req, auth)" />
+        <scope ilk="function" name="reset_retry_count" signature="reset_retry_count(self)" />
+        <scope ilk="function" name="__init__" signature="__init__(self, passwd=None)" />
+        <scope ilk="function" name="get_authorization" signature="get_authorization(self, req, chal)" />
+      </scope>
+      <scope classrefs="BaseHandler" doc="&#xA;" ilk="class" name="AbstractHTTPHandler">
+        <scope ilk="function" name="set_http_debuglevel" signature="set_http_debuglevel(self, level)" />
+        <scope doc="Return an HTTPResponse object for the request, using&#xA;http_class." ilk="function" name="do_open" signature="do_open(self, http_class, req, **http_conn_args)" />
+        <scope ilk="function" name="do_request_" signature="do_request_(self, request)" />
+        <scope ilk="function" name="__init__" signature="__init__(self, debuglevel=0)" />
+      </scope>
+      <scope classrefs="object" doc="&#xA;" ilk="class" name="BaseHandler">
+        <scope ilk="function" name="add_parent" signature="add_parent(self, parent)" />
+        <scope ilk="function" name="close" signature="close(self)" />
+        <scope ilk="function" name="__lt__" signature="__lt__(self, other)" />
+      </scope>
+      <scope classrefs="FTPHandler" doc="&#xA;" ilk="class" name="CacheFTPHandler">
+        <scope ilk="function" name="clear_cache" signature="clear_cache(self)" />
+        <scope ilk="function" name="check_cache" signature="check_cache(self)" />
+        <scope ilk="function" name="setTimeout" signature="setTimeout(self, t)" />
+        <scope ilk="function" name="setMaxConns" signature="setMaxConns(self, m)" />
+        <scope ilk="function" name="connect_ftp" signature="connect_ftp(self, user, passwd, host, port, dirs, timeout)" />
+        <scope doc="# XXX would be nice to have pluggable cache strategies # XXX&#xA;this stuff is definitely not thread safe" ilk="function" name="__init__" signature="__init__(self)" />
+      </scope>
+      <scope classrefs="URLError" doc="# exception raised when downloaded size does not match content-length&#xA;" ilk="class" name="ContentTooShortError">
+        <scope ilk="function" name="__init__" signature="__init__(self, message, content)" />
+      </scope>
+      <scope classrefs="BaseHandler" doc="&#xA;" ilk="class" name="FTPHandler">
+        <scope ilk="function" name="connect_ftp" signature="connect_ftp(self, user, passwd, host, port, dirs, timeout)" />
+        <scope ilk="function" name="ftp_open" signature="ftp_open(self, req)" />
+      </scope>
+      <scope classrefs="URLopener" doc="Derived class with handlers for errors we can handle (perhaps).&#xA;" ilk="class" name="FancyURLopener">
+        <scope doc="Default error handling -- don&apos;t raise an exception." ilk="function" name="http_error_default" signature="http_error_default(self, url, fp, errcode, errmsg, headers)" />
+        <scope ilk="function" name="retry_https_basic_auth" signature="retry_https_basic_auth(self, url, realm, data=None)" />
+        <scope ilk="function" name="retry_http_basic_auth" signature="retry_http_basic_auth(self, url, realm, data=None)" />
+        <scope ilk="function" name="__init__" signature="__init__(self, *args, **kwargs)" />
+        <scope ilk="function" name="retry_proxy_http_basic_auth" signature="retry_proxy_http_basic_auth(self, url, realm, data=None)" />
+        <scope doc="Error 307 -- relocated, but turn POST into error." ilk="function" name="http_error_307" signature="http_error_307(self, url, fp, errcode, errmsg, headers, data=None)" />
+        <scope ilk="function" name="retry_proxy_https_basic_auth" signature="retry_proxy_https_basic_auth(self, url, realm, data=None)" />
+        <scope doc="Error 401 -- authentication required." ilk="function" name="http_error_401" signature="http_error_401(self, url, fp, errcode, errmsg, headers, data=None, retry=False)" />
+        <scope doc="Override this in a GUI environment!" ilk="function" name="prompt_user_passwd" signature="prompt_user_passwd(self, host, realm)" />
+        <scope doc="Error 407 -- proxy authentication required." ilk="function" name="http_error_407" signature="http_error_407(self, url, fp, errcode, errmsg, headers, data=None, retry=False)" />
+        <scope ilk="function" name="get_user_passwd" signature="get_user_passwd(self, host, realm, clear_cache=0)" />
+        <scope ilk="function" name="redirect_internal" signature="redirect_internal(self, url, fp, errcode, errmsg, headers, data)" />
+        <scope doc="Error 303 -- also relocated (essentially identical to 302)." ilk="function" name="http_error_303" signature="http_error_303(self, url, fp, errcode, errmsg, headers, data=None)" />
+        <scope doc="Error 302 -- relocated (temporarily)." ilk="function" name="http_error_302" signature="http_error_302(self, url, fp, errcode, errmsg, headers, data=None)" />
+        <scope doc="Error 301 -- also relocated (permanently)." ilk="function" name="http_error_301" signature="http_error_301(self, url, fp, errcode, errmsg, headers, data=None)" />
+      </scope>
+      <scope classrefs="BaseHandler" doc="&#xA;" ilk="class" name="FileHandler">
+        <scope doc="# Use local file or FTP depending on form of URL" ilk="function" name="file_open" signature="file_open(self, req)" />
+        <scope ilk="function" name="get_names" signature="get_names(self)" />
+        <scope doc="# not entirely sure what the rules are here" ilk="function" name="open_local_file" signature="open_local_file(self, req)" />
+      </scope>
+      <scope classrefs="AbstractBasicAuthHandler BaseHandler" doc="&#xA;" ilk="class" name="HTTPBasicAuthHandler">
+        <scope ilk="function" name="http_error_401" signature="http_error_401(self, req, fp, code, msg, headers)" />
+      </scope>
+      <scope classrefs="BaseHandler" doc="&#xA;" ilk="class" name="HTTPCookieProcessor">
+        <scope ilk="function" name="https_request" signature="https_request(self, request)" />
+        <scope ilk="function" name="https_response" signature="https_response(self, request, response)" />
+        <scope ilk="function" name="http_request" signature="http_request(self, request)" />
+        <scope ilk="function" name="__init__" signature="__init__(self, cookiejar=None)" />
+        <scope ilk="function" name="http_response" signature="http_response(self, request, response)" />
+      </scope>
+      <scope classrefs="BaseHandler" doc="&#xA;" ilk="class" name="HTTPDefaultErrorHandler">
+        <scope ilk="function" name="http_error_default" signature="http_error_default(self, req, fp, code, msg, hdrs)" />
+      </scope>
+      <scope classrefs="BaseHandler AbstractDigestAuthHandler" doc="An authentication protocol defined by RFC 2069&#xA;Digest authentication improves on basic authentication because it does not transmit passwords in the clear." ilk="class" name="HTTPDigestAuthHandler">
+        <scope ilk="function" name="http_error_401" signature="http_error_401(self, req, fp, code, msg, headers)" />
+      </scope>
+      <scope classrefs="URLError addinfourl" doc="Raised when HTTP error occurs, but also acts like non-error return&#xA;" ilk="class" name="HTTPError">
+        <scope ilk="function" name="_HTTPError__super_init" signature="_HTTPError__super_init(self, fp, headers, url, code=None)" />
+        <scope ilk="function" name="__str__" signature="__str__(self)" />
+        <scope ilk="function" name="__init__" signature="__init__(self, url, code, msg, hdrs, fp)" />
+      </scope>
+      <scope classrefs="BaseHandler" doc="Process HTTP error responses.&#xA;" ilk="class" name="HTTPErrorProcessor">
+        <scope ilk="function" name="https_response" signature="https_response(self, request, response)" />
+        <scope ilk="function" name="http_response" signature="http_response(self, request, response)" />
+      </scope>
+      <scope classrefs="AbstractHTTPHandler" doc="&#xA;" ilk="class" name="HTTPHandler">
+        <scope ilk="function" name="http_open" signature="http_open(self, req)" />
+      </scope>
+      <scope classrefs="object" doc="&#xA;" ilk="class" name="HTTPPasswordMgr">
+        <scope ilk="function" name="find_user_password" signature="find_user_password(self, realm, authuri)" />
+        <scope doc="Accept authority or URI and extract only the authority and&#xA;path." ilk="function" name="reduce_uri" signature="reduce_uri(self, uri, default_port=True)" />
+        <scope doc="Check if test is below base in a URI tree" ilk="function" name="is_suburi" signature="is_suburi(self, base, test)" />
+        <scope ilk="function" name="add_password" signature="add_password(self, realm, uri, user, passwd)" />
+        <scope ilk="function" name="__init__" signature="__init__(self)" />
+      </scope>
+      <scope classrefs="HTTPPasswordMgr" doc="&#xA;" ilk="class" name="HTTPPasswordMgrWithDefaultRealm">
+        <scope ilk="function" name="find_user_password" signature="find_user_password(self, realm, authuri)" />
+      </scope>
+      <scope classrefs="BaseHandler" doc="&#xA;" ilk="class" name="HTTPRedirectHandler">
+        <scope doc="# Implementation note: To avoid the server sending us into&#xA;an # infinite loop, the request object needs to track what&#xA;URLs we # have already seen." ilk="function" name="http_error_301" signature="http_error_301(self, req, fp, code, msg, headers)" />
+        <scope doc="# Implementation note: To avoid the server sending us into&#xA;an # infinite loop, the request object needs to track what&#xA;URLs we # have already seen." ilk="function" name="http_error_307" signature="http_error_307(self, req, fp, code, msg, headers)" />
+        <scope doc="# Implementation note: To avoid the server sending us into&#xA;an # infinite loop, the request object needs to track what&#xA;URLs we # have already seen." ilk="function" name="http_error_302" signature="http_error_302(self, req, fp, code, msg, headers)" />
+        <scope doc="Return a Request or None in response to a redirect." ilk="function" name="redirect_request" signature="redirect_request(self, req, fp, code, msg, headers, newurl)" />
+        <scope doc="# Implementation note: To avoid the server sending us into&#xA;an # infinite loop, the request object needs to track what&#xA;URLs we # have already seen." ilk="function" name="http_error_303" signature="http_error_303(self, req, fp, code, msg, headers)" />
+      </scope>
+      <scope classrefs="AbstractHTTPHandler" doc="&#xA;" ilk="class" name="HTTPSHandler">
+        <scope ilk="function" name="https_open" signature="https_open(self, req)" />
+        <scope ilk="function" name="__init__" signature="__init__(self, debuglevel=0, context=None, check_hostname=None)" />
+      </scope>
+      <variable citdl="int" name="MAXFTPCACHE" />
+      <scope classrefs="object" doc="&#xA;" ilk="class" name="OpenerDirector">
+        <scope ilk="function" name="_call_chain" signature="_call_chain(self, chain, kind, meth_name, *args)" />
+        <scope ilk="function" name="_open" signature="_open(self, req, data=None)" />
+        <scope ilk="function" name="add_handler" signature="add_handler(self, handler)" />
+        <scope ilk="function" name="error" signature="error(self, proto, *args)" />
+        <scope ilk="function" name="close" signature="close(self)" />
+        <scope ilk="function" name="open" signature="open(self, fullurl, data=None, timeout=&lt;object object at 0x02AC9038&gt;)" />
+        <scope ilk="function" name="__init__" signature="__init__(self)" />
+      </scope>
+      <scope classrefs="AbstractBasicAuthHandler BaseHandler" doc="&#xA;" ilk="class" name="ProxyBasicAuthHandler">
+        <scope ilk="function" name="http_error_407" signature="http_error_407(self, req, fp, code, msg, headers)" />
+      </scope>
+      <scope classrefs="BaseHandler AbstractDigestAuthHandler" doc="&#xA;" ilk="class" name="ProxyDigestAuthHandler">
+        <scope ilk="function" name="http_error_407" signature="http_error_407(self, req, fp, code, msg, headers)" />
+      </scope>
+      <scope classrefs="BaseHandler" doc="&#xA;" ilk="class" name="ProxyHandler">
+        <scope ilk="function" name="proxy_open" signature="proxy_open(self, req, proxy, type)" />
+        <scope ilk="function" name="__init__" signature="__init__(self, proxies=None)" />
+      </scope>
+      <scope classrefs="object" doc="&#xA;" ilk="class" name="Request">
+        <scope ilk="function" name="set_proxy" signature="set_proxy(self, host, type)" />
+        <scope ilk="function" name="get_host" signature="get_host(self)" />
+        <scope ilk="function" name="is_unverifiable" signature="is_unverifiable(self)" />
+        <scope ilk="function" name="has_proxy" signature="has_proxy(self)" />
+        <scope ilk="function" name="add_header" signature="add_header(self, key, val)" />
+        <scope ilk="function" name="get_type" signature="get_type(self)" />
+        <scope ilk="function" name="get_origin_req_host" signature="get_origin_req_host(self)" />
+        <scope ilk="function" name="_parse" signature="_parse(self)" />
+        <scope ilk="function" name="__init__" signature="__init__(self, url, data=None, headers={}, origin_req_host=None, unverifiable=False)" />
+        <scope ilk="function" name="has_data" signature="has_data(self)" />
+        <scope ilk="function" name="header_items" signature="header_items(self)" />
+        <scope ilk="function" name="add_unredirected_header" signature="add_unredirected_header(self, key, val)" />
+        <scope ilk="function" name="get_data" signature="get_data(self)" />
+        <scope ilk="function" name="add_data" signature="add_data(self, data)" />
+        <scope ilk="function" name="get_full_url" signature="get_full_url(self)" />
+        <scope ilk="function" name="get_selector" signature="get_selector(self)" />
+        <scope ilk="function" name="get_method" signature="get_method(self)" />
+        <scope ilk="function" name="has_header" signature="has_header(self, header_name)" />
+        <scope ilk="function" name="get_header" signature="get_header(self, header_name, default=None)" />
+      </scope>
+      <scope classrefs="IOError" doc="&#xA;" ilk="class" name="URLError">
+        <scope ilk="function" name="__str__" signature="__str__(self)" />
+        <scope doc="# URLError is a sub-type of IOError, but it doesn&apos;t share&#xA;any of # the implementation." ilk="function" name="__init__" signature="__init__(self, reason, filename=None)" />
+      </scope>
+      <scope classrefs="object" doc="Class to open URLs.&#xA;This is a class rather than just a subroutine because we may need more than one set of global protocol-specific options. Note -- this is a base class for those who don&apos;t want the automatic handling of errors type 302 (relocated) and 401 (authorization needed)." ilk="class" name="URLopener">
+        <scope doc="retrieve(url) returns (filename, headers) for a local object&#xA;or (tempfilename, headers) for a remote object." ilk="function" name="retrieve" signature="retrieve(url) returns (filename, headers) for a local object&#xA;or (tempfilename, headers) for a remote object." />
+        <scope doc="Default error handler: close the connection and raise&#xA;IOError." ilk="function" name="http_error_default" signature="http_error_default(self, url, fp, errcode, errmsg, headers)" />
+        <scope ilk="function" name="__del__" signature="__del__(self)" />
+        <scope ilk="function" name="_https_connection" signature="_https_connection(self, host)" />
+        <scope doc="Use HTTP protocol." ilk="function" name="open_http" signature="open_http(self, url, data=None)" />
+        <scope doc="Add a header to be used by the HTTP interface only e.g." ilk="function" name="addheader" signature="addheader(self, *args)" />
+        <scope ilk="function" name="close" signature="close(self)" />
+        <scope doc="Use FTP protocol." ilk="function" name="open_ftp" signature="open_ftp(self, url)" />
+        <scope doc="Use URLopener().open(file) instead of open(file, &apos;r&apos;)." ilk="function" name="open" signature="open(self, fullurl, data=None)" />
+        <scope doc="# Constructor" ilk="function" name="__init__" signature="__init__(self, proxies=None, **x509)" />
+        <scope doc="Use local file or FTP depending on form of URL." ilk="function" name="open_file" signature="open_file(self, url)" />
+        <scope doc="Use local file." ilk="function" name="open_local_file" signature="open_local_file(self, url)" />
+        <scope doc="Overridable interface to open unknown URL type." ilk="function" name="open_unknown_proxy" signature="open_unknown_proxy(self, proxy, fullurl, data=None)" />
+        <scope doc="Make an HTTP connection using connection_class." ilk="function" name="_open_generic_http" signature="_open_generic_http(self, connection_factory, url, data)" />
+        <scope doc="Handle http errors." ilk="function" name="http_error" signature="http_error(self, url, fp, errcode, errmsg, headers, data=None)" />
+        <scope doc="Use HTTPS protocol." ilk="function" name="open_https" signature="open_https(self, url, data=None)" />
+        <scope ilk="function" name="cleanup" signature="cleanup(self)" />
+        <scope doc="Use &quot;data&quot; URL." ilk="function" name="open_data" signature="open_data(self, url, data=None)" />
+        <scope doc="Overridable interface to open unknown URL type." ilk="function" name="open_unknown" signature="open_unknown(self, fullurl, data=None)" />
+      </scope>
+      <scope classrefs="BaseHandler" doc="&#xA;" ilk="class" name="UnknownHandler">
+        <scope ilk="function" name="unknown_open" signature="unknown_open(self, req)" />
+      </scope>
+      <scope classrefs="addbase" doc="Class to add a close hook to an open file.&#xA;" ilk="class" name="addclosehook">
+        <scope ilk="function" name="close" signature="close(self)" />
+        <scope ilk="function" name="__init__" signature="__init__(self, fp, closehook, *hookargs)" />
+      </scope>
+      <scope classrefs="addbase" doc="class to add info() and geturl() methods to an open file.&#xA;" ilk="class" name="addinfourl">
+        <scope ilk="function" name="info" signature="info(self)" />
+        <scope ilk="function" name="geturl" signature="geturl(self)" />
+        <scope ilk="function" name="getcode" signature="getcode(self)" />
+        <scope ilk="function" name="__init__" signature="__init__(self, fp, headers, url, code=None)" />
+      </scope>
+      <import module="base64" />
+      <import module="bisect" />
+      <scope doc="Create an opener object from a list of handlers." ilk="function" name="build_opener" signature="build_opener(*handlers)" />
+      <import module="collections" />
+      <import module="email" />
+      <variable citdl="dict" name="ftpcache" />
+      <scope doc="Return the set of errors raised by the FTP class." ilk="function" name="ftperrors" signature="ftperrors()" />
+      <scope classrefs="object" doc="Class used by open_ftp() for cache of open FTP connections.&#xA;" ilk="class" name="ftpwrapper">
+        <scope ilk="function" name="file_close" signature="file_close(self)" />
+        <scope ilk="function" name="endtransfer" signature="endtransfer(self)" />
+        <scope ilk="function" name="init" signature="init(self)" />
+        <scope ilk="function" name="retrfile" signature="retrfile(self, file, type)" />
+        <scope ilk="function" name="real_close" signature="real_close(self)" />
+        <scope ilk="function" name="close" signature="close(self)" />
+        <scope ilk="function" name="__init__" signature="__init__(self, user, passwd, host, port, dirs, timeout=None, persistent=True)" />
+      </scope>
+      <scope doc="Return a dictionary of scheme -&gt; proxy server URL mappings." ilk="function" name="getproxies" signature="getproxies()" />
+      <scope doc="Return a dictionary of scheme -&gt; proxy server URL mappings." ilk="function" name="getproxies_environment" signature="getproxies_environment()" />
+      <scope doc="Return a dictionary of scheme -&gt; proxy server URL mappings." ilk="function" name="getproxies_registry" signature="getproxies_registry()" />
+      <import module="hashlib" />
+      <import module="http" />
+      <scope ilk="function" name="install_opener" signature="install_opener(opener)" />
+      <import module="io" />
+      <scope doc="Return the IP address of the magic hostname &apos;localhost&apos;." ilk="function" name="localhost" signature="localhost()" />
+      <scope doc="Return an empty email Message object." ilk="function" name="noheaders" signature="noheaders()" />
+      <import module="os" />
+      <scope doc="Parse lists as described by RFC 2068 Section 2." ilk="function" name="parse_http_list" signature="parse_http_list(s)" />
+      <scope doc="Parse list of key=value strings where keys are not&#xA;duplicated." ilk="function" name="parse_keqv_list" signature="parse_keqv_list(l)" />
+      <scope doc="OS-specific conversion from a file system path to a relative&#xA;URL of the &apos;file&apos; scheme; not recommended for general use." ilk="function" name="pathname2url" signature="pathname2url(p)" />
+      <import module="posixpath" />
+      <scope doc="Return a dictionary of scheme -&gt; proxy server URL mappings." ilk="function" name="proxy_bypass" signature="proxy_bypass(host)" />
+      <scope doc="Test if proxies should not be used for a particular host." ilk="function" name="proxy_bypass_environment" signature="proxy_bypass_environment(host)" />
+      <scope ilk="function" name="proxy_bypass_registry" signature="proxy_bypass_registry(host)" />
+      <scope doc="Each part of a URL, e.g." ilk="function" name="quote" signature="quote(&apos;abc def&apos;) -&gt; &apos;abc%20def&apos;" />
+      <import module="random" />
+      <scope doc="Return n random bytes." ilk="function" name="randombytes" signature="randombytes(n)" />
+      <import module="re" />
+      <scope doc="Return request-host, as defined by RFC 2965." ilk="function" name="request_host" signature="request_host(request)" />
+      <import module="socket" />
+      <scope doc="&apos;/path&apos;, [&apos;attr1=value1&apos;, &apos;attr2=value2&apos;, ...]." ilk="function" name="splitattr" signature="splitattr(&apos;/path;attr1=value1;attr2=value2;...&apos;) -&gt;" />
+      <scope doc="splithost(&apos;//host[:port]/path&apos;) --&gt; &apos;host[:port]&apos;, &apos;/path&apos;." ilk="function" name="splithost" signature="splithost(&apos;//host[:port]/path&apos;) --&gt; &apos;host[:port]&apos;, &apos;/path&apos;." />
+      <scope doc="splitpasswd(&apos;user:passwd&apos;) -&gt; &apos;user&apos;, &apos;passwd&apos;." ilk="function" name="splitpasswd" signature="splitpasswd(&apos;user:passwd&apos;) -&gt; &apos;user&apos;, &apos;passwd&apos;." />
+      <scope doc="splitport(&apos;host:port&apos;) --&gt; &apos;host&apos;, &apos;port&apos;." ilk="function" name="splitport" signature="splitport(&apos;host:port&apos;) --&gt; &apos;host&apos;, &apos;port&apos;." />
+      <scope doc="splitquery(&apos;/path?query&apos;) --&gt; &apos;/path&apos;, &apos;query&apos;." ilk="function" name="splitquery" signature="splitquery(&apos;/path?query&apos;) --&gt; &apos;/path&apos;, &apos;query&apos;." />
+      <scope doc="splittag(&apos;/path#tag&apos;) --&gt; &apos;/path&apos;, &apos;tag&apos;." ilk="function" name="splittag" signature="splittag(&apos;/path#tag&apos;) --&gt; &apos;/path&apos;, &apos;tag&apos;." />
+      <scope doc="splittype(&apos;type:opaquestring&apos;) --&gt; &apos;type&apos;, &apos;opaquestring&apos;." ilk="function" name="splittype" signature="splittype(&apos;type:opaquestring&apos;) --&gt; &apos;type&apos;, &apos;opaquestring&apos;." />
+      <scope doc="splituser(&apos;user[:passwd]@host[:port]&apos;) --&gt; &apos;user[:passwd]&apos;, &apos;host[:port]&apos;." ilk="function" name="splituser" signature="splituser(&apos;user[:passwd]@host[:port]&apos;) --&gt; &apos;user[:passwd]&apos;, &apos;host[:port]&apos;." />
+      <scope doc="splitvalue(&apos;attr=value&apos;) --&gt; &apos;attr&apos;, &apos;value&apos;." ilk="function" name="splitvalue" signature="splitvalue(&apos;attr=value&apos;) --&gt; &apos;attr&apos;, &apos;value&apos;." />
+      <import module="ssl" />
+      <import module="sys" />
+      <scope doc="Return the IP addresses of the current host." ilk="function" name="thishost" signature="thishost()" />
+      <import module="time" />
+      <scope doc="to_bytes(u&quot;URL&quot;) --&gt; &apos;URL&apos;." ilk="function" name="to_bytes" signature="to_bytes(u&quot;URL&quot;) --&gt; &apos;URL&apos;." />
+      <scope doc="Replace %xx escapes by their single-character equivalent." ilk="function" name="unquote" signature="unquote(string, encoding=&apos;utf-8&apos;, errors=&apos;replace&apos;)" />
+      <scope doc="unwrap(&apos;&lt;URL:type://host/path&gt;&apos;) --&gt; &apos;type://host/path&apos;." ilk="function" name="unwrap" signature="unwrap(&apos;&lt;URL:type://host/path&gt;&apos;) --&gt; &apos;type://host/path&apos;." />
+      <scope doc="OS-specific conversion from a relative URL of the &apos;file&apos;&#xA;scheme to a file system path; not recommended for general&#xA;use." ilk="function" name="url2pathname" signature="url2pathname(url)" />
+      <scope ilk="function" name="urlcleanup" signature="urlcleanup()" />
+      <scope doc="Join a base URL and a possibly relative URL to form an&#xA;absolute interpretation of the latter." ilk="function" name="urljoin" signature="urljoin(base, url, allow_fragments=True)" />
+      <scope ilk="function" name="urlopen" signature="urlopen(url, data=None, timeout=&lt;object object at 0x02AC9038&gt;, *, cafile=None, capath=None)" />
+      <scope doc="Parse a URL into 6 components:&#xA;&lt;scheme&gt;://&lt;netloc&gt;/&lt;path&gt;;&lt;params&gt;?&lt;query&gt;#&lt;fragment&gt;&#xA;Return a 6-tuple: (scheme, netloc, path, params, query,&#xA;fragment)." ilk="function" name="urlparse" signature="urlparse(url, scheme=&apos;&apos;, allow_fragments=True)" />
+      <scope ilk="function" name="urlretrieve" signature="urlretrieve(url, filename=None, reporthook=None, data=None)" />
+      <scope doc="Parse a URL into 5 components:&#xA;&lt;scheme&gt;://&lt;netloc&gt;/&lt;path&gt;?&lt;query&gt;#&lt;fragment&gt; Return a&#xA;5-tuple: (scheme, netloc, path, query, fragment)." ilk="function" name="urlsplit" signature="urlsplit(url, scheme=&apos;&apos;, allow_fragments=True)" />
+      <scope doc="Put a parsed URL back together again." ilk="function" name="urlunparse" signature="urlunparse(components)" />
+      <scope doc="Return True iff this host shouldn&apos;t be accessed using a&#xA;proxy" ilk="function" name="proxy_bypass_macosx_sysconf" signature="proxy_bypass_macosx_sysconf(host)" />
+      <scope doc="Return a dictionary of scheme -&gt; proxy server URL mappings." ilk="function" name="getproxies_macosx_sysconf" signature="getproxies_macosx_sysconf()" />
+    </scope>
+    

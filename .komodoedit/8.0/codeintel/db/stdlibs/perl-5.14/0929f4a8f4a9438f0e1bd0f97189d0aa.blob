@@ -1,0 +1,95 @@
+<scope ilk="blob" lang="Perl" name="ExtUtils::MM_Win32">
+      <scope classrefs="ExtUtils::MM_Any ExtUtils::MM_Unix" ilk="class" line="1" lineend="567" name="ExtUtils::MM_Win32">
+        <import line="22" module="ExtUtils::MakeMaker::Config" symbol="*" />
+        <import line="23" module="File::Basename" symbol="*" />
+        <import line="24" module="File::Spec" symbol="*" />
+        <import line="25" module="ExtUtils::MakeMaker" symbol="neatvalue" />
+        <import line="27" module="ExtUtils::MM_Any" />
+        <import line="28" module="ExtUtils::MM_Unix" />
+        <variable line="30" name="$VERSION" />
+        <scope ilk="function" line="47" lineend="74" name="dlsyms" signature="dlsyms($self, %attribs)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="%attribs" />
+        </scope>
+        <scope ilk="function" line="82" lineend="86" name="replace_manpage_separator" signature="replace_manpage_separator($self, $man)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$man" />
+        </scope>
+        <scope ilk="function" line="100" lineend="118" name="maybe_command" signature="maybe_command($self, $file)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$file" />
+        </scope>
+        <scope ilk="function" line="127" lineend="134" name="init_DIRFILESEP" signature="init_DIRFILESEP()">
+          </scope>
+        <scope ilk="function" line="150" lineend="183" name="init_others" signature="init_others($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="194" lineend="198" name="init_platform" signature="init_platform()">
+          </scope>
+        <scope ilk="function" line="200" lineend="211" name="platform_constants" signature="platform_constants()">
+          </scope>
+        <scope ilk="function" line="220" lineend="230" name="special_targets" signature="special_targets($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="242" lineend="272" name="static_lib" signature="static_lib($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="281" lineend="330" name="dynamic_lib" signature="dynamic_lib($self, %attribs)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="%attribs" />
+        </scope>
+        <scope ilk="function" line="339" lineend="343" name="extra_clean_files" signature="extra_clean_files($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="349" lineend="355" name="init_linker" signature="init_linker($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="364" lineend="371" name="perl_script" signature="perl_script($self, $file)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$file" />
+        </scope>
+        <scope ilk="function" line="380" lineend="382" name="xs_o" signature="xs_o()" />
+        <scope ilk="function" line="392" lineend="395" name="pasthru" signature="pasthru()">
+          </scope>
+        <scope ilk="function" line="404" lineend="411" name="arch_check" signature="arch_check($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="413" lineend="420" name="_normalize_path_name" signature="_normalize_path_name($self, $file)">
+          <import line="417" module="Win32" />
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$file" />
+          <import line="417" module="Win32" />
+        </scope>
+        <scope ilk="function" line="430" lineend="444" name="oneliner" signature="oneliner($self, $cmd, $switches)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$cmd" />
+          <variable ilk="argument" name="$switches" />
+        </scope>
+        <scope ilk="function" line="447" lineend="464" name="quote_literal" signature="quote_literal($self, $text)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$text" />
+        </scope>
+        <scope ilk="function" line="467" lineend="474" name="escape_newlines" signature="escape_newlines($self, $text)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$text" />
+        </scope>
+        <scope ilk="function" line="489" lineend="508" name="cd" signature="cd($self, $dir, @cmds)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$dir" />
+          <variable ilk="argument" name="@cmds" />
+        </scope>
+        <scope ilk="function" line="517" lineend="521" name="max_exec_len" signature="max_exec_len($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="530" lineend="532" name="os_flavor" signature="os_flavor()" />
+        <scope ilk="function" line="543" lineend="560" name="cflags" signature="cflags($self, $libperl)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$libperl" />
+        </scope>
+        <scope ilk="function" line="562" lineend="565" name="is_make_type" signature="is_make_type($self, $type)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$type" />
+        </scope>
+      </scope>
+    </scope>
+    

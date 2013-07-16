@@ -1,0 +1,60 @@
+<scope ilk="blob" lang="Perl" name="Package::Stash::PP">
+      <scope ilk="class" line="1" lineend="337" name="Package::Stash::PP">
+        <import line="9" module="Carp" symbol="confess" />
+        <import line="10" module="Scalar::Util" symbol="blessed" />
+        <import line="10" module="Scalar::Util" symbol="reftype" />
+        <import line="10" module="Scalar::Util" symbol="weaken" />
+        <import line="11" module="Symbol" symbol="*" />
+        <variable line="3" name="$Package::Stash::PP::VERSION" />
+        <scope attributes="__ctor__" ilk="function" line="20" lineend="27" name="new" signature="new($class, $package)">
+          <variable ilk="argument" name="$class" />
+          <variable ilk="argument" name="$package" />
+        </scope>
+        <scope ilk="function" line="29" lineend="33" name="name" signature="name()" />
+        <scope ilk="function" line="35" lineend="55" name="namespace" signature="namespace()" />
+        <scope ilk="function" line="66" lineend="80" name="_deconstruct_variable_name" signature="_deconstruct_variable_name($self, $variable)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$variable" />
+        </scope>
+        <scope ilk="function" line="83" lineend="94" name="_valid_for_type" signature="_valid_for_type($self, $value, $type)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$value" />
+          <variable ilk="argument" name="$type" />
+        </scope>
+        <scope ilk="function" line="96" lineend="127" name="add_symbol" signature="add_symbol($self, $variable, $initial_value, %opts)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$variable" />
+          <variable ilk="argument" name="$initial_value" />
+          <variable ilk="argument" name="%opts" />
+        </scope>
+        <scope ilk="function" line="129" lineend="133" name="remove_glob" signature="remove_glob($self, $name)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$name" />
+        </scope>
+        <scope ilk="function" line="135" lineend="164" name="has_symbol" signature="has_symbol($self, $variable)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$variable" />
+        </scope>
+        <scope ilk="function" line="166" lineend="223" name="get_symbol" signature="get_symbol($self, $variable, %opts)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$variable" />
+          <variable ilk="argument" name="%opts" />
+        </scope>
+        <scope ilk="function" line="225" lineend="228" name="get_or_add_symbol" signature="get_or_add_symbol($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="230" lineend="291" name="remove_symbol" signature="remove_symbol($self, $variable)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$variable" />
+        </scope>
+        <scope ilk="function" line="293" lineend="322" name="list_all_symbols" signature="list_all_symbols($self, $type_filter)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$type_filter" />
+        </scope>
+        <scope ilk="function" line="324" lineend="334" name="get_all_symbols" signature="get_all_symbols($self, $type_filter)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$type_filter" />
+        </scope>
+      </scope>
+    </scope>
+    

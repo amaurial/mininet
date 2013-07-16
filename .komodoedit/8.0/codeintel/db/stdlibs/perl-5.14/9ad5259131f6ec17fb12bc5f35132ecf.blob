@@ -1,0 +1,71 @@
+<scope ilk="blob" lang="Perl" name="Pod::Simple::Search">
+      <scope ilk="class" line="3" lineend="675" name="Pod::Simple::Search">
+        <import line="10" module="Carp" />
+        <import line="20" module="File::Spec" />
+        <import line="21" module="File::Basename" symbol="basename" />
+        <import line="22" module="Config" />
+        <import line="23" module="Cwd" symbol="cwd" />
+        <variable line="6" name="$MAX_VERSION_WITHIN" />
+        <variable line="6" name="$SLEEPY" />
+        <variable line="6" name="$VERSION" />
+        <variable line="9" name="*DEBUG" />
+        <variable line="630" name="$Carp::CarpLevel" />
+        <scope attributes="__ctor__" ilk="function" line="32" lineend="37" name="new" signature="new($class)">
+          <variable ilk="argument" name="$class" />
+        </scope>
+        <scope ilk="function" line="39" lineend="44" name="init" signature="init($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="48" lineend="122" name="survey" signature="survey($self, @search_dirs)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="@search_dirs" />
+        </scope>
+        <scope ilk="function" line="126" lineend="227" name="_make_search_callback" signature="_make_search_callback()">
+          </scope>
+        <scope ilk="function" line="231" lineend="291" name="_path2modname" signature="_path2modname($self, $file, $shortname, $modname_bits)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$file" />
+          <variable ilk="argument" name="$shortname" />
+          <variable ilk="argument" name="$modname_bits" />
+        </scope>
+        <scope ilk="function" line="295" lineend="364" name="_recurse_dir" signature="_recurse_dir($self, $startdir, $callback, $modname_bits, $dir_long, $dir_bare)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$startdir" />
+          <variable ilk="argument" name="$callback" />
+          <variable ilk="argument" name="$modname_bits" />
+          <variable ilk="argument" name="$dir_long" />
+          <variable ilk="argument" name="$dir_bare" />
+        </scope>
+        <scope ilk="function" line="369" lineend="426" name="run" signature="run()">
+          </scope>
+        <scope ilk="function" line="430" lineend="441" name="simplify_name" signature="simplify_name($self, $str)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$str" />
+        </scope>
+        <scope ilk="function" line="445" lineend="457" name="_simplify_base" signature="_simplify_base()" />
+        <scope ilk="function" line="461" lineend="476" name="_expand_inc" signature="_expand_inc($self, $search_dirs)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$search_dirs" />
+        </scope>
+        <scope ilk="function" line="480" lineend="493" name="_mac_whammy" signature="_mac_whammy()">
+          </scope>
+        <scope ilk="function" line="497" lineend="518" name="_limit_glob_to_limit_re" signature="_limit_glob_to_limit_re()">
+          </scope>
+        <scope ilk="function" line="524" lineend="590" name="find" signature="find($self, $pod, @search_dirs)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$pod" />
+          <variable ilk="argument" name="@search_dirs" />
+        </scope>
+        <scope ilk="function" line="594" lineend="620" name="contains_pod" signature="contains_pod($self, $file)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$file" />
+        </scope>
+        <scope ilk="function" line="624" lineend="644" name="_accessorize" signature="_accessorize()">
+          </scope>
+        <scope ilk="function" line="647" lineend="658" name="_state_as_string" signature="_state_as_string()">
+          </scope>
+        <scope ilk="function" line="660" lineend="667" name="_esc" signature="_esc()">
+          </scope>
+      </scope>
+    </scope>
+    

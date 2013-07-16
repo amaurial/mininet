@@ -1,0 +1,37 @@
+<scope ilk="blob" lang="Perl" name="autodie::hints">
+      <scope ilk="class" line="1" lineend="535" name="autodie::hints">
+        <import line="364" module="Sub::Identify" />
+        <import line="371" module="B" />
+        <variable line="8" name="$VERSION" />
+        <variable line="350" name="$DEBUG" />
+        <variable line="375" name="*get_code_info" />
+        <scope ilk="function" line="389" lineend="391" name="sub_fullname" signature="sub_fullname()" />
+        <scope ilk="function" line="395" lineend="446" name="load_hints" signature="load_hints($class, $sub)">
+          <import line="401" module="Carp" />
+          <variable ilk="argument" name="$class" />
+          <variable ilk="argument" name="$sub" />
+          <import line="401" module="Carp" />
+        </scope>
+        <scope ilk="function" line="448" lineend="483" name="normalise_hints" signature="normalise_hints($class, $hints, $sub)">
+          <import line="457" module="Carp" />
+          <import line="476" module="Carp" />
+          <variable ilk="argument" name="$class" />
+          <variable ilk="argument" name="$hints" />
+          <variable ilk="argument" name="$sub" />
+          <import line="457" module="Carp" />
+          <import line="476" module="Carp" />
+        </scope>
+        <scope ilk="function" line="485" lineend="511" name="get_hints_for" signature="get_hints_for($class, $sub)">
+          <variable ilk="argument" name="$class" />
+          <variable ilk="argument" name="$sub" />
+        </scope>
+        <scope ilk="function" line="513" lineend="533" name="set_hints_for" signature="set_hints_for($class, $sub, $hints)">
+          <import line="519" module="Carp" />
+          <variable ilk="argument" name="$class" />
+          <variable ilk="argument" name="$sub" />
+          <variable ilk="argument" name="$hints" />
+          <import line="519" module="Carp" />
+        </scope>
+      </scope>
+    </scope>
+    

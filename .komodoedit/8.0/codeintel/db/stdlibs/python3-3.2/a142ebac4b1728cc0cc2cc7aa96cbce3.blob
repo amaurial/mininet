@@ -1,0 +1,242 @@
+<scope doc="Internationalization and localization support.&#xA;This module provides internationalization (I18N) and localization (L10N) support for your Python programs by providing an interface to the GNU gettext message catalog library.  I18N refers to the operation by which a program is made aware of multiple languages.  L10N refers to the adaptation of your program, once internationalized, to the local language and cultural habits." ilk="blob" lang="Python" name="gettext">
+      <scope ilk="function" line="523" name="Catalog" signature="Catalog(domain, localedir=None, languages=None, class_=None, fallback=False, codeset=None)" />
+      <variable citdl="int" name="ENOENT" />
+      <scope classrefs="NullTranslations" doc="&#xA;" ilk="class" line="223" lineend="349" name="GNUTranslations">
+        <scope ilk="function" line="316" lineend="328" name="lngettext" returns="self._fallback.lngettext()" signature="lngettext(self, msgid1, msgid2, n)">
+          <variable ilk="argument" name="msgid2" />
+          <variable citdl="GNUTranslations" ilk="argument" name="self" />
+          <variable ilk="argument" name="msgid1" />
+          <variable line="318" name="tmsg" />
+          <variable ilk="argument" name="n" />
+        </scope>
+        <scope ilk="function" line="330" lineend="337" name="gettext" returns="self._catalog.get()" signature="gettext(self, message)">
+          <variable citdl="GNUTranslations" ilk="argument" name="self" />
+          <variable citdl="self._catalog.get()" line="332" name="tmsg" />
+          <variable ilk="argument" name="message" />
+          <variable citdl="object()" line="331" name="missing" />
+        </scope>
+        <scope ilk="function" line="305" lineend="314" name="lgettext" returns="tmsg.encode()" signature="lgettext(self, message)">
+          <variable citdl="GNUTranslations" ilk="argument" name="self" />
+          <variable citdl="self._catalog.get()" line="307" name="tmsg" />
+          <variable ilk="argument" name="message" />
+          <variable citdl="object()" line="306" name="missing" />
+        </scope>
+        <scope doc="Override this method to support alternative .mo formats." ilk="function" line="228" lineend="303" name="_parse" signature="_parse(self, fp)">
+          <variable line="241" name="msgcount" />
+          <variable ilk="argument" name="fp" />
+          <variable citdl="list" line="257" name="tmsg" />
+          <variable line="241" name="version" />
+          <variable line="251" name="mlen" />
+          <variable citdl="len()" line="237" name="buflen" />
+          <variable line="251" name="moff" />
+          <variable line="263" name="lastk" />
+          <variable citdl="str" line="242" name="ii" />
+          <variable line="252" name="mend" />
+          <variable line="254" name="tend" />
+          <variable citdl="fp.read()" line="236" name="buf" />
+          <variable line="253" name="toff" />
+          <variable line="239" name="magic" />
+          <variable line="241" name="transidx" />
+          <variable citdl="struct.unpack" line="230" name="unpack" />
+          <variable citdl="GNUTranslations" ilk="argument" name="self" />
+          <variable citdl="str" line="291" name="charset" />
+          <variable citdl="getattr()" line="231" name="filename" />
+          <variable line="294" name="msgid2" />
+          <variable line="265" name="item" />
+          <variable citdl="str()" line="294" name="msgid1" />
+          <variable line="253" name="tlen" />
+          <variable citdl="v.split()" line="269" name="v" />
+          <variable citdl="list" line="256" name="msg" />
+          <variable line="241" name="masteridx" />
+          <variable line="280" name="plural" />
+          <variable line="269" name="k" />
+        </scope>
+        <scope ilk="function" line="339" lineend="349" name="ngettext" returns="self._fallback.ngettext()" signature="ngettext(self, msgid1, msgid2, n)">
+          <variable ilk="argument" name="msgid2" />
+          <variable citdl="GNUTranslations" ilk="argument" name="self" />
+          <variable ilk="argument" name="msgid1" />
+          <variable line="341" name="tmsg" />
+          <variable ilk="argument" name="n" />
+        </scope>
+        <variable attributes="protected __instancevar__" citdl="dict" line="234" name="_catalog" />
+        <variable attributes="protected __instancevar__" line="277" name="_charset" />
+        <variable citdl="long" line="226" name="BE_MAGIC" />
+        <variable attributes="__instancevar__" citdl="c2py()" line="235" name="plural" />
+        <variable citdl="long" line="225" name="LE_MAGIC" />
+      </scope>
+      <scope classrefs="object" doc="&#xA;" ilk="class" line="153" lineend="220" name="NullTranslations">
+        <scope ilk="function" line="197" lineend="198" name="info" returns="dict" signature="info(self)">
+          <variable citdl="NullTranslations" ilk="argument" name="self" />
+        </scope>
+        <scope ilk="function" line="165" lineend="169" name="add_fallback" signature="add_fallback(self, fallback)">
+          <variable citdl="NullTranslations" ilk="argument" name="self" />
+          <variable ilk="argument" name="fallback" />
+        </scope>
+        <scope ilk="function" line="200" lineend="201" name="charset" signature="charset(self)">
+          <variable citdl="NullTranslations" ilk="argument" name="self" />
+        </scope>
+        <scope ilk="function" line="189" lineend="195" name="lngettext" returns="self._fallback.lngettext()" signature="lngettext(self, msgid1, msgid2, n)">
+          <variable ilk="argument" name="msgid2" />
+          <variable citdl="NullTranslations" ilk="argument" name="self" />
+          <variable ilk="argument" name="msgid1" />
+          <variable ilk="argument" name="n" />
+        </scope>
+        <scope ilk="function" line="171" lineend="174" name="gettext" returns="self._fallback.gettext()" signature="gettext(self, message)">
+          <variable citdl="NullTranslations" ilk="argument" name="self" />
+          <variable ilk="argument" name="message" />
+        </scope>
+        <scope ilk="function" line="181" lineend="187" name="ngettext" returns="self._fallback.ngettext()" signature="ngettext(self, msgid1, msgid2, n)">
+          <variable ilk="argument" name="msgid2" />
+          <variable citdl="NullTranslations" ilk="argument" name="self" />
+          <variable ilk="argument" name="msgid1" />
+          <variable ilk="argument" name="n" />
+        </scope>
+        <scope ilk="function" line="203" lineend="204" name="output_charset" signature="output_charset(self)">
+          <variable citdl="NullTranslations" ilk="argument" name="self" />
+        </scope>
+        <scope ilk="function" line="176" lineend="179" name="lgettext" returns="self._fallback.lgettext()" signature="lgettext(self, message)">
+          <variable citdl="NullTranslations" ilk="argument" name="self" />
+          <variable ilk="argument" name="message" />
+        </scope>
+        <scope ilk="function" line="209" lineend="220" name="install" signature="install(self, names=None)">
+          <variable citdl="NullTranslations" ilk="argument" name="self" />
+          <variable ilk="argument" name="names" />
+        </scope>
+        <scope ilk="function" line="162" lineend="163" name="_parse" signature="_parse(self, fp)">
+          <variable ilk="argument" name="fp" />
+          <variable citdl="NullTranslations" ilk="argument" name="self" />
+        </scope>
+        <scope ilk="function" line="206" lineend="207" name="set_output_charset" signature="set_output_charset(self, charset)">
+          <variable citdl="NullTranslations" ilk="argument" name="self" />
+          <variable ilk="argument" name="charset" />
+        </scope>
+        <scope ilk="function" line="154" lineend="160" name="__init__" signature="__init__(self, fp=None)">
+          <variable ilk="argument" name="fp" />
+          <variable citdl="NullTranslations" ilk="argument" name="self" />
+        </scope>
+        <variable attributes="protected __instancevar__" line="158" name="_fallback" />
+        <variable attributes="protected __instancevar__" line="156" name="_charset" />
+        <variable attributes="protected __instancevar__" line="157" name="_output_charset" />
+        <variable attributes="protected __instancevar__" citdl="dict" line="155" name="_info" />
+      </scope>
+      <variable citdl="list" line="53" name="__all__" />
+      <scope ilk="function" line="452" lineend="456" name="bind_textdomain_codeset" returns="_localecodesets.get()" signature="bind_textdomain_codeset(domain, codeset=None)">
+        <variable ilk="argument" name="domain" />
+        <variable ilk="argument" name="codeset" />
+      </scope>
+      <scope ilk="function" line="445" lineend="449" name="bindtextdomain" returns="_localedirs.get()" signature="bindtextdomain(domain, localedir=None)">
+        <variable ilk="argument" name="domain" />
+        <variable ilk="argument" name="localedir" />
+      </scope>
+      <scope doc="Gets a C expression as used in PO files for plural forms and&#xA;returns a Python lambda function that implements an&#xA;equivalent expression." ilk="function" line="61" lineend="107" name="c2py" returns="eval()" signature="c2py(plural)">
+        <variable citdl="tokenize.generate_tokens()" line="67" name="tokens" />
+        <variable citdl="expr.sub()" line="101" name="s" />
+        <scope ilk="function" line="86" lineend="88" name="repl" returns="tuple" signature="repl(x)">
+          <variable ilk="argument" name="x" />
+        </scope>
+        <variable citdl="list" line="69" name="danger" />
+        <variable citdl="re.compile()" line="80" name="expr" />
+        <variable citdl="plural.replace()" ilk="argument" name="plural" />
+        <variable citdl="list" line="91" name="stack" />
+      </scope>
+      <import module="copy" />
+      <scope ilk="function" line="459" lineend="465" name="dgettext" returns="t.gettext()" signature="dgettext(domain, message)">
+        <variable ilk="argument" name="domain" />
+        <variable ilk="argument" name="message" />
+        <variable citdl="translation()" line="461" name="t" />
+      </scope>
+      <scope ilk="function" line="475" lineend="484" name="dngettext" returns="t.ngettext()" signature="dngettext(domain, msgid1, msgid2, n)">
+        <variable ilk="argument" name="msgid2" />
+        <variable ilk="argument" name="domain" />
+        <variable ilk="argument" name="msgid1" />
+        <variable citdl="translation()" line="477" name="t" />
+        <variable ilk="argument" name="n" />
+      </scope>
+      <scope doc="# Locate a .mo file using the gettext strategy" ilk="function" line="353" lineend="386" name="find" returns="list" signature="find(domain, localedir=None, languages=None, all=False)">
+        <variable ilk="argument" name="domain" />
+        <variable citdl="os.environ.get()" line="360" name="val" />
+        <variable citdl="list" line="367" name="nelangs" />
+        <variable citdl="False" ilk="argument" name="all" />
+        <variable citdl="list" ilk="argument" name="languages" />
+        <variable citdl="os.path.join()" ilk="argument" name="localedir" />
+        <variable citdl="list" line="374" name="result" />
+        <variable citdl="os.path.join()" line="380" name="mofile" />
+      </scope>
+      <scope ilk="function" line="497" lineend="498" name="gettext" returns="dgettext()" signature="gettext(message)">
+        <variable ilk="argument" name="message" />
+      </scope>
+      <scope ilk="function" line="424" lineend="426" name="install" signature="install(domain, localedir=None, codeset=None, names=None)">
+        <variable ilk="argument" name="localedir" />
+        <variable ilk="argument" name="domain" />
+        <variable ilk="argument" name="names" />
+        <variable ilk="argument" name="codeset" />
+        <variable citdl="translation()" line="425" name="t" />
+      </scope>
+      <import module="io" />
+      <scope ilk="function" line="467" lineend="473" name="ldgettext" returns="t.lgettext()" signature="ldgettext(domain, message)">
+        <variable ilk="argument" name="domain" />
+        <variable ilk="argument" name="message" />
+        <variable citdl="translation()" line="469" name="t" />
+      </scope>
+      <scope ilk="function" line="486" lineend="495" name="ldngettext" returns="t.lngettext()" signature="ldngettext(domain, msgid1, msgid2, n)">
+        <variable ilk="argument" name="msgid2" />
+        <variable ilk="argument" name="domain" />
+        <variable ilk="argument" name="msgid1" />
+        <variable citdl="translation()" line="488" name="t" />
+        <variable ilk="argument" name="n" />
+      </scope>
+      <scope ilk="function" line="500" lineend="501" name="lgettext" returns="ldgettext()" signature="lgettext(message)">
+        <variable ilk="argument" name="message" />
+      </scope>
+      <scope ilk="function" line="506" lineend="507" name="lngettext" returns="ldngettext()" signature="lngettext(msgid1, msgid2, n)">
+        <variable ilk="argument" name="msgid2" />
+        <variable ilk="argument" name="msgid1" />
+        <variable ilk="argument" name="n" />
+      </scope>
+      <import module="locale" />
+      <scope ilk="function" line="503" lineend="504" name="ngettext" returns="dngettext()" signature="ngettext(msgid1, msgid2, n)">
+        <variable ilk="argument" name="msgid2" />
+        <variable ilk="argument" name="msgid1" />
+        <variable ilk="argument" name="n" />
+      </scope>
+      <import module="os" />
+      <import module="re" />
+      <import module="struct" />
+      <import module="sys" />
+      <scope ilk="function" line="438" lineend="442" name="textdomain" signature="textdomain(domain=None)">
+        <variable ilk="argument" name="domain" />
+        <variable attributes="protected" line="441" name="_current_domain" />
+      </scope>
+      <scope ilk="function" line="393" lineend="421" name="translation" returns="NullTranslations" signature="translation(domain, localedir=None, languages=None, class_=None, fallback=False, codeset=None)">
+        <variable ilk="argument" name="domain" />
+        <variable citdl="tuple" line="406" name="key" />
+        <variable ilk="argument" name="languages" />
+        <variable citdl="GNUTranslations" ilk="argument" name="class_" />
+        <variable ilk="argument" name="localedir" />
+        <variable citdl="_translations.get()" line="404" name="result" />
+        <variable ilk="argument" name="codeset" />
+        <variable citdl="False" ilk="argument" name="fallback" />
+        <variable citdl="find()" line="397" name="mofiles" />
+        <variable citdl="_translations.setdefault()" line="407" name="t" />
+      </scope>
+      <variable attributes="protected __hidden__" citdl="dict" line="431" name="_localedirs" />
+      <scope attributes="protected __hidden__" ilk="function" line="111" lineend="149" name="_expand_lang" returns="list" signature="_expand_lang(loc)">
+        <variable citdl="list" ilk="argument" name="loc" />
+        <variable citdl="int" line="113" name="COMPONENT_CODESET" />
+        <variable citdl="int" line="114" name="COMPONENT_TERRITORY" />
+        <variable citdl="int" line="115" name="COMPONENT_MODIFIER" />
+        <variable citdl="int" line="117" name="mask" />
+        <variable citdl="loc.find()" line="118" name="pos" />
+        <variable citdl="list" line="120" name="modifier" />
+        <variable citdl="list" line="127" name="codeset" />
+        <variable citdl="list" line="134" name="territory" />
+        <variable citdl="locale.normalize()" line="139" name="language" />
+        <variable citdl="list" line="140" name="ret" />
+        <variable citdl="locale.normalize()" line="143" name="val" />
+      </scope>
+      <variable attributes="protected __hidden__" citdl="str" line="435" name="_current_domain" />
+      <variable attributes="protected __hidden__" citdl="dict" line="433" name="_localecodesets" />
+      <variable attributes="protected __hidden__" citdl="os.path.join()" line="58" name="_default_localedir" />
+      <variable attributes="protected __hidden__" citdl="dict" line="391" name="_translations" />
+    </scope>
+    

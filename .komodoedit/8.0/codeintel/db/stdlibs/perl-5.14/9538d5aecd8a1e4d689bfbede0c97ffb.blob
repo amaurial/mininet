@@ -1,0 +1,76 @@
+<scope ilk="blob" lang="Perl" name="CPAN::Meta::YAML">
+      <scope ilk="class" line="1" lineend="706" name="CPAN::Meta::YAML">
+        <import line="19" module="Exporter" />
+        <import line="20" module="Carp" />
+        <import line="614" module="Scalar::Util" />
+        <variable line="3" name="$CPAN::Meta::YAML::VERSION" />
+        <variable line="21" name="@CPAN::Meta::YAML::ISA" />
+        <variable line="22" name="@CPAN::Meta::YAML::EXPORT" />
+        <variable line="23" name="@CPAN::Meta::YAML::EXPORT_OK" />
+        <variable line="26" name="$CPAN::Meta::YAML::errstr" />
+        <variable line="583" name="*freeze" />
+        <variable line="584" name="*thaw" />
+        <variable line="615" name="*refaddr" />
+        <scope ilk="function" line="9" lineend="9" name="HAVE_UTF8" signature="HAVE_UTF8()" />
+        <scope attributes="__ctor__" ilk="function" line="65" lineend="68" name="new" signature="new($class)">
+          <variable ilk="argument" name="$class" />
+        </scope>
+        <scope ilk="function" line="71" lineend="92" name="read" signature="read($file)">
+          <variable ilk="argument" name="$file" />
+        </scope>
+        <scope attributes="__ctor__" ilk="function" line="95" lineend="180" name="read_string" signature="read_string()">
+          <import line="175" module="Carp" />
+          <import line="175" module="Carp" />
+        </scope>
+        <scope ilk="function" line="183" lineend="255" name="_read_scalar" signature="_read_scalar($self, $string, $indent, $lines)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$string" />
+          <variable ilk="argument" name="$indent" />
+          <variable ilk="argument" name="$lines" />
+        </scope>
+        <scope ilk="function" line="258" lineend="331" name="_read_array" signature="_read_array($self, $array, $indent, $lines)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$array" />
+          <variable ilk="argument" name="$indent" />
+          <variable ilk="argument" name="$lines" />
+        </scope>
+        <scope ilk="function" line="334" lineend="391" name="_read_hash" signature="_read_hash($self, $hash, $indent, $lines)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$hash" />
+          <variable ilk="argument" name="$indent" />
+          <variable ilk="argument" name="$lines" />
+        </scope>
+        <scope ilk="function" line="394" lineend="406" name="write" signature="write($self, $file)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$file" />
+        </scope>
+        <scope ilk="function" line="409" lineend="449" name="write_string" signature="write_string($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="451" lineend="466" name="_write_scalar" signature="_write_scalar()">
+          </scope>
+        <scope ilk="function" line="468" lineend="505" name="_write_array" signature="_write_array($self, $array, $indent, $seen)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$array" />
+          <variable ilk="argument" name="$indent" />
+          <variable ilk="argument" name="$seen" />
+        </scope>
+        <scope ilk="function" line="507" lineend="545" name="_write_hash" signature="_write_hash($self, $hash, $indent, $seen)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$hash" />
+          <variable ilk="argument" name="$indent" />
+          <variable ilk="argument" name="$seen" />
+        </scope>
+        <scope ilk="function" line="548" lineend="551" name="_error" signature="_error()" />
+        <scope ilk="function" line="554" lineend="556" name="errstr" signature="errstr()" />
+        <scope ilk="function" line="565" lineend="567" name="Dump" signature="Dump()" />
+        <scope ilk="function" line="569" lineend="580" name="Load" signature="Load()">
+          </scope>
+        <scope ilk="function" line="587" lineend="590" name="DumpFile" signature="DumpFile($file)">
+          <variable ilk="argument" name="$file" />
+        </scope>
+        <scope ilk="function" line="592" lineend="603" name="LoadFile" signature="LoadFile()">
+          </scope>
+      </scope>
+    </scope>
+    

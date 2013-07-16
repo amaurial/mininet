@@ -1,0 +1,47 @@
+<scope ilk="blob" lang="Perl" name="File::Copy">
+      <scope classrefs="Exporter" ilk="class" line="8" lineend="432" name="File::Copy">
+        <import line="13" module="File::Spec" symbol="*" />
+        <import line="14" module="Config" symbol="*" />
+        <import line="27" module="Exporter" />
+        <variable line="19" name="$Syscopy_is_copy" />
+        <variable line="19" name="$Too_Big" />
+        <variable line="19" name="$VERSION" />
+        <variable line="19" name="@EXPORT" />
+        <variable line="19" name="@EXPORT_OK" />
+        <variable line="19" name="@ISA" />
+        <variable line="348" name="$unix_mode" />
+        <variable line="361" name="$rename_to" />
+        <variable line="412" name="*syscopy" />
+        <scope ilk="function" line="34" lineend="37" name="croak" signature="croak()">
+          <import line="35" module="Carp" />
+          <import line="35" module="Carp" />
+        </scope>
+        <scope ilk="function" line="39" lineend="42" name="carp" signature="carp()">
+          <import line="40" module="Carp" />
+          <import line="40" module="Carp" />
+        </scope>
+        <scope ilk="function" line="57" lineend="66" name="_vms_unix_rpt" signature="_vms_unix_rpt()">
+          </scope>
+        <scope ilk="function" line="70" lineend="79" name="_vms_efs" signature="_vms_efs()">
+          </scope>
+        <scope ilk="function" line="82" lineend="90" name="_catname" signature="_catname($from, $to)">
+          <import line="85" module="File::Basename" />
+          <variable ilk="argument" name="$from" />
+          <variable ilk="argument" name="$to" />
+          <import line="85" module="File::Basename" />
+        </scope>
+        <scope ilk="function" line="93" lineend="103" name="_eq" signature="_eq()">
+          </scope>
+        <scope attributes="__exported__" ilk="function" line="105" lineend="273" name="copy" signature="copy($from, $to)">
+          <variable ilk="argument" name="$from" />
+          <variable ilk="argument" name="$to" />
+        </scope>
+        <scope attributes="__exportable__" ilk="function" line="275" lineend="372" name="cp" signature="cp($from, $to)">
+          <variable ilk="argument" name="$from" />
+          <variable ilk="argument" name="$to" />
+        </scope>
+        <scope attributes="__exported__" ilk="function" line="406" lineend="406" name="move" signature="move()" />
+        <scope attributes="__exportable__" ilk="function" line="407" lineend="407" name="mv" signature="mv()" />
+      </scope>
+    </scope>
+    

@@ -1,0 +1,152 @@
+<scope doc="distutils.fancy_getopt&#xA;Wrapper around the standard getopt module that provides the following additional features: * short and long options are tied together * options have help strings, so fancy_getopt could potentially create a complete usage summary * options set attributes of a passed-in object" ilk="blob" lang="Python" name="distutils.fancy_getopt">
+      <scope classrefs="Exception" doc="Some compile/link operation failed.&#xA;" ilk="class" name="CCompilerError" />
+      <scope classrefs="CCompilerError" doc="Failure to compile one or more C/C++ source files.&#xA;" ilk="class" name="CompileError" />
+      <scope classrefs="DistutilsError" doc="Raised by fancy_getopt in response to getopt.error -- ie. an&#xA;error in the command line usage." ilk="class" name="DistutilsArgError" />
+      <scope classrefs="DistutilsError" doc="Byte compile error.&#xA;" ilk="class" name="DistutilsByteCompileError" />
+      <scope classrefs="DistutilsError" doc="Some command class (or possibly distribution class, if anyone&#xA;feels a need to subclass Distribution) is found not to be holding up its end of the bargain, ie. implementing some part of the &quot;command &quot;interface." ilk="class" name="DistutilsClassError" />
+      <scope classrefs="Exception" doc="The root of all Distutils evil.&#xA;" ilk="class" name="DistutilsError" />
+      <scope classrefs="DistutilsError" doc="Any problems executing an external program (such as the C&#xA;compiler, when compiling C files)." ilk="class" name="DistutilsExecError" />
+      <scope classrefs="DistutilsError" doc="Any problems in the filesystem: expected file not found, etc.&#xA;Typically this is for problems that we detect before IOError or OSError could be raised." ilk="class" name="DistutilsFileError" />
+      <scope classrefs="DistutilsError" doc="The option table provided to &apos;fancy_getopt()&apos; is bogus.&#xA;" ilk="class" name="DistutilsGetoptError" />
+      <scope classrefs="DistutilsError" doc="Internal inconsistencies or impossibilities (obviously, this&#xA;should never be seen if the code is working!)." ilk="class" name="DistutilsInternalError" />
+      <scope classrefs="DistutilsError" doc="Unable to load an expected module, or to find an expected class&#xA;within some module (in particular, command modules and classes)." ilk="class" name="DistutilsModuleError" />
+      <scope classrefs="DistutilsError" doc="Syntactic/semantic errors in command options, such as use of&#xA;mutually conflicting options, or inconsistent options, badly-spelled values, etc.  No distinction is made between option values originating in the setup script, the command line, config files, or what-have-you -- but if we *know* something originated in the setup script, we&apos;ll raise DistutilsSetupError instead." ilk="class" name="DistutilsOptionError" />
+      <scope classrefs="DistutilsError" doc="We don&apos;t know how to do something on the current platform (but&#xA;we do know how to do it on some platform) -- eg. trying to compile C files on a platform not supported by a CCompiler subclass." ilk="class" name="DistutilsPlatformError" />
+      <scope classrefs="DistutilsError" doc="For errors that can be definitely blamed on the setup script,&#xA;such as invalid keyword arguments to &apos;setup()&apos;." ilk="class" name="DistutilsSetupError" />
+      <scope classrefs="DistutilsError" doc="Syntax error in a file list template.&#xA;" ilk="class" name="DistutilsTemplateError" />
+      <scope classrefs="object" doc="Wrapper around the standard &apos;getopt()&apos; module that provides some&#xA;handy extra functionality: * short and long options are tied together * options have help strings, and help text can be assembled from them * options set attributes of a passed-in object * boolean options can have &quot;negative aliases&quot; -- eg. if --quiet is the &quot;negative alias&quot; of --verbose, then &quot;--quiet&quot; on the command line sets &apos;verbose&apos; to false" ilk="class" line="29" lineend="364" name="FancyGetopt">
+        <scope ilk="function" line="360" lineend="364" name="print_help" signature="print_help(self, header=None, file=None)">
+          <variable ilk="argument" name="header" />
+          <variable citdl="FancyGetopt" ilk="argument" name="self" />
+          <variable citdl="sys.stdout" ilk="argument" name="file" />
+        </scope>
+        <scope doc="Populate the various data structures that keep tabs on the&#xA;option table." ilk="function" line="133" lineend="208" name="_grok_option_table" signature="_grok_option_table(self)">
+          <variable citdl="self.negative_alias.get()" line="174" name="alias_to" />
+          <variable citdl="FancyGetopt" ilk="argument" name="self" />
+          <variable citdl="int" line="146" name="repeat" />
+          <variable citdl="list" line="169" name="long" />
+          <variable citdl="str" line="168" name="short" />
+        </scope>
+        <scope ilk="function" line="110" lineend="118" name="_check_alias_dict" signature="_check_alias_dict(self, aliases, what)">
+          <variable citdl="FancyGetopt" ilk="argument" name="self" />
+          <variable ilk="argument" name="what" />
+          <variable ilk="argument" name="aliases" />
+        </scope>
+        <scope ilk="function" line="86" lineend="88" name="set_option_table" signature="set_option_table(self, option_table)">
+          <variable citdl="FancyGetopt" ilk="argument" name="self" />
+          <variable ilk="argument" name="option_table" />
+        </scope>
+        <scope ilk="function" line="81" lineend="84" name="_build_index" signature="_build_index(self)">
+          <variable citdl="FancyGetopt" ilk="argument" name="self" />
+        </scope>
+        <scope doc="Set the aliases for this option parser." ilk="function" line="120" lineend="123" name="set_aliases" signature="set_aliases(self, alias)">
+          <variable ilk="argument" name="alias" />
+          <variable citdl="FancyGetopt" ilk="argument" name="self" />
+        </scope>
+        <scope doc="Set the negative aliases for this option parser." ilk="function" line="125" lineend="131" name="set_negative_aliases" signature="set_negative_aliases(self, negative_alias)">
+          <variable citdl="FancyGetopt" ilk="argument" name="self" />
+          <variable ilk="argument" name="negative_alias" />
+        </scope>
+        <scope doc="Returns the list of (option, value) tuples processed by the&#xA;previous run of &apos;getopt()&apos;." ilk="function" line="271" lineend="279" name="get_option_order" returns="list" signature="get_option_order(self)">
+          <variable citdl="FancyGetopt" ilk="argument" name="self" />
+        </scope>
+        <scope ilk="function" line="41" lineend="79" name="__init__" signature="__init__(self, option_table=None)">
+          <variable citdl="FancyGetopt" ilk="argument" name="self" />
+          <variable ilk="argument" name="option_table" />
+        </scope>
+        <scope doc="Return true if the option table for this parser has an&#xA;option with long name &apos;long_option&apos;." ilk="function" line="99" lineend="102" name="has_option" returns="bool" signature="has_option(self, long_option)">
+          <variable ilk="argument" name="long_option" />
+          <variable citdl="FancyGetopt" ilk="argument" name="self" />
+        </scope>
+        <scope doc="Generate help text (a list of strings, one per suggested&#xA;line of output) from the option table for this FancyGetopt&#xA;object." ilk="function" line="281" lineend="358" name="generate_help" returns="list" signature="generate_help(self, header=None)">
+          <variable citdl="int" line="325" name="line_width" />
+          <variable line="292" name="short" />
+          <variable citdl="str" line="349" name="opt_names" />
+          <variable citdl="len()" line="327" name="big_indent" />
+          <variable citdl="wrap_text()" line="335" name="text" />
+          <variable citdl="FancyGetopt" ilk="argument" name="self" />
+          <variable citdl="list" line="329" name="lines" />
+          <variable citdl="len()" line="293" name="l" />
+          <variable citdl="list" line="291" name="long" />
+          <variable citdl="int" line="289" name="max_opt" />
+          <variable ilk="argument" name="header" />
+          <variable citdl="len()" line="301" name="opt_width" />
+          <variable citdl="len()" line="326" name="text_width" />
+        </scope>
+        <scope doc="Translate long option name &apos;long_option&apos; to the form it has&#xA;as an attribute of some object: ie., translate hyphens to&#xA;underscores." ilk="function" line="104" lineend="108" name="get_attr_name" returns="long_option.translate()" signature="get_attr_name(self, long_option)">
+          <variable ilk="argument" name="long_option" />
+          <variable citdl="FancyGetopt" ilk="argument" name="self" />
+        </scope>
+        <scope ilk="function" line="90" lineend="97" name="add_option" signature="add_option(self, long_option, short_option=None, help_string=None)">
+          <variable ilk="argument" name="long_option" />
+          <variable citdl="FancyGetopt" ilk="argument" name="self" />
+          <variable ilk="argument" name="help_string" />
+          <variable ilk="argument" name="short_option" />
+          <variable citdl="tuple" line="95" name="option" />
+        </scope>
+        <scope doc="Parse command-line options in args." ilk="function" line="210" lineend="269" name="getopt" returns="tuple" signature="getopt(self, args=None, object=None)">
+          <variable citdl="self.alias.get()" line="239" name="opt" />
+          <variable citdl="list" ilk="argument" name="args" />
+          <variable line="257" name="attr" />
+          <variable citdl="int" line="253" name="val" />
+          <variable citdl="FancyGetopt" ilk="argument" name="self" />
+          <variable citdl="OptionDummy()" ilk="argument" name="object" />
+          <variable citdl="self.negative_alias.get()" line="244" name="alias" />
+          <variable citdl="True" line="225" name="created_object" />
+          <variable citdl="str.join()" line="231" name="short_opts" />
+          <variable line="233" name="opts" />
+        </scope>
+        <variable attributes="__instancevar__" citdl="dict" line="72" name="short2long" />
+        <variable attributes="__instancevar__" citdl="list" line="79" name="option_order" />
+        <variable attributes="__instancevar__" citdl="dict" line="141" name="repeat" />
+        <variable attributes="__instancevar__" citdl="dict" line="64" name="negative_alias" />
+        <variable attributes="__instancevar__" citdl="dict" line="73" name="attr_name" />
+        <variable attributes="__instancevar__" citdl="list" line="71" name="long_opts" />
+        <variable attributes="__instancevar__" line="50" name="option_table" />
+        <variable attributes="__instancevar__" citdl="dict" line="60" name="alias" />
+        <variable attributes="__instancevar__" citdl="dict" line="54" name="option_index" />
+        <variable attributes="__instancevar__" citdl="dict" line="74" name="takes_arg" />
+        <variable attributes="__instancevar__" citdl="list" line="70" name="short_opts" />
+      </scope>
+      <scope classrefs="CCompilerError" doc="Failure to create a static library from one or more C/C++ object&#xA;files." ilk="class" name="LibError" />
+      <scope classrefs="CCompilerError" doc="Failure to link one or more C/C++ object files into an executable&#xA;or shared library file." ilk="class" name="LinkError" />
+      <scope classrefs="object" doc="Dummy class just used as a place to hold command-line option&#xA;values as instance attributes." ilk="class" line="436" lineend="444" name="OptionDummy">
+        <scope doc="Create a new OptionDummy instance." ilk="function" line="440" lineend="444" name="__init__" signature="__init__(self, options=[])">
+          <variable citdl="OptionDummy" ilk="argument" name="self" />
+          <variable citdl="list" ilk="argument" name="options" />
+        </scope>
+      </scope>
+      <scope classrefs="CCompilerError" doc="Failure to preprocess one or more C/C++ files.&#xA;" ilk="class" name="PreprocessError" />
+      <scope classrefs="CCompilerError" doc="Attempt to process an unknown file type.&#xA;" ilk="class" name="UnknownFileError" />
+      <variable citdl="dict" line="373" name="WS_TRANS" />
+      <scope ilk="function" line="367" lineend="370" name="fancy_getopt" returns="parser.getopt()" signature="fancy_getopt(options, negative_opt, object, args)">
+        <variable ilk="argument" name="object" />
+        <variable citdl="FancyGetopt" line="368" name="parser" />
+        <variable ilk="argument" name="options" />
+        <variable ilk="argument" name="args" />
+        <variable ilk="argument" name="negative_opt" />
+      </scope>
+      <import module="getopt" />
+      <variable citdl="str" line="19" name="longopt_pat" />
+      <variable citdl="SRE_Pattern" line="20" name="longopt_re" />
+      <variable citdl="dict" line="27" name="longopt_xlate" />
+      <variable citdl="SRE_Pattern" line="23" name="neg_alias_re" />
+      <import module="re" />
+      <import module="string" />
+      <import module="sys" />
+      <scope doc="Convert a long option name to a valid Python identifier by&#xA;changing &quot;-&quot; to &quot;_&quot;." ilk="function" line="429" lineend="433" name="translate_longopt" returns="opt.translate()" signature="translate_longopt(opt)">
+        <variable ilk="argument" name="opt" />
+      </scope>
+      <scope doc="Split &apos;text&apos; into multiple lines of no more than &apos;width&apos;&#xA;characters each, and return the list of strings that&#xA;results." ilk="function" line="375" lineend="426" name="wrap_text" returns="list" signature="wrap_text(text : string, width : int) -&gt; [string]">
+        <variable ilk="argument" name="width" />
+        <variable citdl="int" line="394" name="cur_len" />
+        <variable citdl="re.split()" line="388" name="chunks" />
+        <variable citdl="text.translate()" ilk="argument" name="text" />
+        <variable citdl="list" line="390" name="lines" />
+        <variable citdl="len()" line="397" name="l" />
+        <variable citdl="list" line="393" name="cur_line" />
+      </scope>
+      <variable attributes="__hidden__" citdl="str" line="448" name="text" />
+      <variable citdl="str" line="11" name="__revision__" />
+    </scope>
+    

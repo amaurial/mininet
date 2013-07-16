@@ -1,0 +1,60 @@
+<scope ilk="blob" lang="Perl" name="GD::Text::Align">
+      <scope ilk="class" line="3" lineend="496" name="GD::Text::Align">
+        <import line="49" module="GD" symbol="*" />
+        <import line="50" module="GD::Text" symbol="*" />
+        <import line="51" module="Carp" symbol="*" />
+        <variable line="53" name="@GD::Text::Align::ISA" />
+        <scope attributes="__ctor__" ilk="function" line="63" lineend="75" name="new" signature="new($proto, $gd)">
+          <variable ilk="argument" name="$proto" />
+          <variable ilk="argument" name="$gd" />
+        </scope>
+        <scope ilk="function" line="82" lineend="90" name="_init" signature="_init($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="115" lineend="141" name="set" signature="set($self, %args)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="%args" />
+        </scope>
+        <scope ilk="function" line="177" lineend="192" name="set_valign" signature="set_valign($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="202" lineend="217" name="set_halign" signature="set_halign($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="227" lineend="233" name="set_align" signature="set_align($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="244" lineend="250" name="_builtin_up" signature="_builtin_up($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="256" lineend="276" name="_align" signature="_align($self, $x, $y, $angle)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$x" />
+          <variable ilk="argument" name="$y" />
+          <variable ilk="argument" name="$angle" />
+        </scope>
+        <scope ilk="function" line="281" lineend="310" name="_align_builtin" signature="_align_builtin($self, $x, $y)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$x" />
+          <variable ilk="argument" name="$y" />
+        </scope>
+        <scope ilk="function" line="315" lineend="354" name="_align_ttf" signature="_align_ttf($self, $x, $y)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$x" />
+          <variable ilk="argument" name="$y" />
+        </scope>
+        <scope ilk="function" line="369" lineend="406" name="draw" signature="draw($self, $x, $y, $angle)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$x" />
+          <variable ilk="argument" name="$y" />
+          <variable ilk="argument" name="$angle" />
+        </scope>
+        <scope ilk="function" line="426" lineend="466" name="bounding_box" signature="bounding_box($self, $x, $y, $angle)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$x" />
+          <variable ilk="argument" name="$y" />
+          <variable ilk="argument" name="$angle" />
+        </scope>
+      </scope>
+    </scope>
+    

@@ -1,0 +1,178 @@
+<scope doc="# Access WeakSet through the weakref module.&#xA;# This code is separated-out because it is needed # by abc.py to load everything else at startup." ilk="blob" lang="Python" name="_weakrefset">
+      <scope classrefs="object" doc="&#xA;" ilk="class" line="35" lineend="214" name="WeakSet">
+        <scope ilk="function" line="140" lineend="146" name="difference_update" signature="difference_update(self, other)">
+          <variable citdl="WeakSet" ilk="argument" name="self" />
+          <variable ilk="argument" name="other" />
+        </scope>
+        <scope ilk="function" line="189" lineend="190" name="symmetric_difference" returns="WeakSet._apply()" signature="symmetric_difference(self, other)">
+          <variable citdl="WeakSet" ilk="argument" name="self" />
+          <variable ilk="argument" name="other" />
+        </scope>
+        <scope ilk="function" line="75" lineend="77" name="__reduce__" returns="tuple" signature="__reduce__(self)">
+          <variable citdl="WeakSet" ilk="argument" name="self" />
+        </scope>
+        <scope ilk="function" line="92" lineend="102" name="pop" returns="itemref()" signature="pop(self)">
+          <variable citdl="itemref()" line="100" name="item" />
+          <variable citdl="WeakSet" ilk="argument" name="self" />
+          <variable citdl="self.data.pop()" line="97" name="itemref" />
+        </scope>
+        <scope ilk="function" line="177" lineend="178" name="issuperset" returns="self.data.issuperset()" signature="issuperset(self, other)">
+          <variable citdl="WeakSet" ilk="argument" name="self" />
+          <variable ilk="argument" name="other" />
+        </scope>
+        <scope ilk="function" line="104" lineend="107" name="remove" signature="remove(self, item)">
+          <variable ilk="argument" name="item" />
+          <variable citdl="WeakSet" ilk="argument" name="self" />
+        </scope>
+        <scope ilk="function" line="158" name="__and__" signature="__and__(self, other)" />
+        <scope ilk="function" line="172" name="__lt__" signature="__lt__(self, other)" />
+        <scope ilk="function" line="36" lineend="50" name="__init__" signature="__init__(self, data=None)">
+          <scope attributes="protected" ilk="function" line="38" lineend="44" name="_remove" signature="_remove(item, selfref=ref(self))">
+            <variable ilk="argument" name="item" />
+            <variable citdl="ref()" ilk="argument" name="selfref" />
+            <variable citdl="selfref()" line="39" name="self" />
+          </scope>
+          <variable citdl="WeakSet" ilk="argument" name="self" />
+          <variable ilk="argument" name="data" />
+        </scope>
+        <scope ilk="function" line="52" lineend="56" name="_commit_removals" signature="_commit_removals(self)">
+          <variable citdl="self.data.discard" line="54" name="discard" />
+          <variable citdl="WeakSet" ilk="argument" name="self" />
+          <variable citdl="list" line="53" name="l" />
+        </scope>
+        <scope ilk="function" line="156" lineend="157" name="intersection" returns="WeakSet._apply()" signature="intersection(self, other)">
+          <variable citdl="WeakSet" ilk="argument" name="self" />
+          <variable ilk="argument" name="other" />
+        </scope>
+        <scope ilk="function" line="164" lineend="168" name="__iand__" returns="WeakSet" signature="__iand__(self, other)">
+          <variable citdl="WeakSet" ilk="argument" name="self" />
+          <variable ilk="argument" name="other" />
+        </scope>
+        <scope ilk="function" line="170" lineend="171" name="issubset" returns="self.data.issubset()" signature="issubset(self, other)">
+          <variable citdl="WeakSet" ilk="argument" name="self" />
+          <variable ilk="argument" name="other" />
+        </scope>
+        <scope ilk="function" line="68" lineend="73" name="__contains__" returns="bool" signature="__contains__(self, item)">
+          <variable ilk="argument" name="item" />
+          <variable citdl="WeakSet" ilk="argument" name="self" />
+          <variable citdl="ref()" line="70" name="wr" />
+        </scope>
+        <scope ilk="function" line="209" lineend="210" name="union" returns="WeakSet._apply()" signature="union(self, other)">
+          <variable citdl="WeakSet" ilk="argument" name="self" />
+          <variable ilk="argument" name="other" />
+        </scope>
+        <scope ilk="function" line="109" lineend="112" name="discard" signature="discard(self, item)">
+          <variable ilk="argument" name="item" />
+          <variable citdl="WeakSet" ilk="argument" name="self" />
+        </scope>
+        <scope ilk="function" line="79" lineend="82" name="add" signature="add(self, item)">
+          <variable ilk="argument" name="item" />
+          <variable citdl="WeakSet" ilk="argument" name="self" />
+        </scope>
+        <scope ilk="function" line="200" lineend="207" name="__ixor__" returns="WeakSet" signature="__ixor__(self, other)">
+          <variable citdl="WeakSet" ilk="argument" name="self" />
+          <variable ilk="argument" name="other" />
+        </scope>
+        <scope ilk="function" line="65" lineend="66" name="__len__" returns="sum()" signature="__len__(self)">
+          <variable citdl="WeakSet" ilk="argument" name="self" />
+        </scope>
+        <scope ilk="function" line="147" lineend="154" name="__isub__" returns="WeakSet" signature="__isub__(self, other)">
+          <variable citdl="WeakSet" ilk="argument" name="self" />
+          <variable ilk="argument" name="other" />
+        </scope>
+        <scope ilk="function" line="193" lineend="199" name="symmetric_difference_update" signature="symmetric_difference_update(self, other)">
+          <variable citdl="WeakSet" ilk="argument" name="self" />
+          <variable ilk="argument" name="other" />
+        </scope>
+        <scope ilk="function" line="114" lineend="121" name="update" signature="update(self, other)">
+          <variable citdl="WeakSet" ilk="argument" name="self" />
+          <variable ilk="argument" name="other" />
+        </scope>
+        <scope ilk="function" line="136" lineend="137" name="difference" returns="WeakSet._apply()" signature="difference(self, other)">
+          <variable citdl="WeakSet" ilk="argument" name="self" />
+          <variable ilk="argument" name="other" />
+        </scope>
+        <scope ilk="function" line="58" lineend="63" name="__iter__" signature="__iter__(self)">
+          <variable citdl="itemref()" line="61" name="item" />
+          <variable citdl="WeakSet" ilk="argument" name="self" />
+        </scope>
+        <scope ilk="function" line="211" name="__or__" signature="__or__(self, other)" />
+        <scope ilk="function" line="179" name="__gt__" signature="__gt__(self, other)" />
+        <scope ilk="function" line="89" lineend="90" name="copy" returns="self.__class__()" signature="copy(self)">
+          <variable citdl="WeakSet" ilk="argument" name="self" />
+        </scope>
+        <scope ilk="function" line="184" lineend="187" name="__eq__" returns="NotImplemented" signature="__eq__(self, other)">
+          <variable citdl="WeakSet" ilk="argument" name="self" />
+          <variable ilk="argument" name="other" />
+        </scope>
+        <scope ilk="function" line="213" lineend="214" name="isdisjoint" returns="bool" signature="isdisjoint(self, other)">
+          <variable citdl="WeakSet" ilk="argument" name="self" />
+          <variable ilk="argument" name="other" />
+        </scope>
+        <scope ilk="function" line="84" lineend="87" name="clear" signature="clear(self)">
+          <variable citdl="WeakSet" ilk="argument" name="self" />
+        </scope>
+        <scope ilk="function" line="160" lineend="163" name="intersection_update" signature="intersection_update(self, other)">
+          <variable citdl="WeakSet" ilk="argument" name="self" />
+          <variable ilk="argument" name="other" />
+        </scope>
+        <scope ilk="function" line="191" name="__xor__" signature="__xor__(self, other)" />
+        <scope ilk="function" line="123" lineend="125" name="__ior__" returns="WeakSet" signature="__ior__(self, other)">
+          <variable citdl="WeakSet" ilk="argument" name="self" />
+          <variable ilk="argument" name="other" />
+        </scope>
+        <scope ilk="function" line="174" lineend="175" name="__le__" returns="bool" signature="__le__(self, other)">
+          <variable citdl="WeakSet" ilk="argument" name="self" />
+          <variable ilk="argument" name="other" />
+        </scope>
+        <scope doc="# Helper functions for simple delegating methods." ilk="function" line="128" lineend="134" name="_apply" returns="self.__class__()" signature="_apply(self, other, method)">
+          <variable citdl="WeakSet" ilk="argument" name="self" />
+          <variable citdl="self.__class__()" ilk="argument" name="other" />
+          <variable citdl="self.__class__()" line="132" name="newset" />
+          <variable ilk="argument" name="method" />
+          <variable citdl="method()" line="131" name="newdata" />
+        </scope>
+        <scope ilk="function" line="138" name="__sub__" signature="__sub__(self, other)" />
+        <scope ilk="function" line="181" lineend="182" name="__ge__" returns="bool" signature="__ge__(self, other)">
+          <variable citdl="WeakSet" ilk="argument" name="self" />
+          <variable ilk="argument" name="other" />
+        </scope>
+        <variable attributes="protected __instancevar__" citdl="set()" line="48" name="_iterating" />
+        <variable attributes="protected __instancevar__" citdl="list" line="47" name="_pending_removals" />
+        <variable attributes="__instancevar__" citdl="set()" line="37" name="data" />
+        <variable attributes="protected __instancevar__" citdl="WeakSet.__init__._remove" line="45" name="_remove" />
+      </scope>
+      <variable citdl="list" line="7" name="__all__" />
+      <scope classrefs="object" doc="&#xA;" ilk="class" name="ref">
+        <scope doc="x.__ne__(y) &lt;==&gt; x!=y" ilk="function" name="__ne__" signature="x.__ne__(y) &lt;==&gt; x!=y" />
+        <scope doc="x.__call__(...) &lt;==&gt; x(...)" ilk="function" name="__call__" signature="x.__call__(...) &lt;==&gt; x(...)" />
+        <scope doc="x.__le__(y) &lt;==&gt; x&lt;=y" ilk="function" name="__le__" signature="x.__le__(y) &lt;==&gt; x&lt;=y" />
+        <scope doc="x.__repr__() &lt;==&gt; repr(x)" ilk="function" name="__repr__" signature="x.__repr__() &lt;==&gt; repr(x)" />
+        <scope ilk="function" name="__init__" />
+        <scope doc="x.__gt__(y) &lt;==&gt; x&gt;y" ilk="function" name="__gt__" signature="x.__gt__(y) &lt;==&gt; x&gt;y" />
+        <scope doc="x.__hash__() &lt;==&gt; hash(x)" ilk="function" name="__hash__" signature="x.__hash__() &lt;==&gt; hash(x)" />
+        <scope doc="x.__lt__(y) &lt;==&gt; x&lt;y" ilk="function" name="__lt__" signature="x.__lt__(y) &lt;==&gt; x&lt;y" />
+        <scope doc="x.__eq__(y) &lt;==&gt; x==y" ilk="function" name="__eq__" signature="x.__eq__(y) &lt;==&gt; x==y" />
+        <scope doc="x.__ge__(y) &lt;==&gt; x&gt;=y" ilk="function" name="__ge__" signature="x.__ge__(y) &lt;==&gt; x&gt;=y" />
+      </scope>
+      <scope attributes="protected __hidden__" ilk="class" line="10" lineend="32" name="_IterationGuard">
+        <scope attributes="__ctor__" ilk="function" line="16" lineend="18" name="__init__" signature="_IterationGuard(weakcontainer)">
+          <variable citdl="_IterationGuard" ilk="argument" name="self" />
+          <variable ilk="argument" name="weakcontainer" />
+        </scope>
+        <variable attributes="__instancevar__" citdl="ref()" line="18" name="weakcontainer" />
+        <scope ilk="function" line="20" lineend="24" name="__enter__" returns="_IterationGuard" signature="__enter__()">
+          <variable citdl="_IterationGuard" ilk="argument" name="self" />
+          <variable citdl="weakcontainer()" line="21" name="w" />
+        </scope>
+        <scope ilk="function" line="26" lineend="32" name="__exit__" signature="__exit__(e, t, b)">
+          <variable citdl="_IterationGuard" ilk="argument" name="self" />
+          <variable ilk="argument" name="e" />
+          <variable ilk="argument" name="t" />
+          <variable ilk="argument" name="b" />
+          <variable citdl="weakcontainer()" line="27" name="w" />
+          <variable citdl="w._iterating" line="29" name="s" />
+        </scope>
+      </scope>
+    </scope>
+    

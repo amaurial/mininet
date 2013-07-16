@@ -1,0 +1,27 @@
+<scope ilk="blob" lang="Perl" name="HTTP::Cookies::Microsoft">
+      <scope classrefs="HTTP::Cookies" ilk="class" line="1" lineend="261" name="HTTP::Cookies::Microsoft">
+        <import line="9" module="HTTP::Cookies" />
+        <variable line="5" name="$VERSION" />
+        <variable line="5" name="@ISA" />
+        <scope ilk="function" line="12" lineend="54" name="load_cookies_from_file" signature="load_cookies_from_file($file)">
+          <variable ilk="argument" name="$file" />
+        </scope>
+        <scope ilk="function" line="56" lineend="63" name="get_user_name" signature="get_user_name()">
+          <import line="58" module="Win32" symbol="*" />
+          <import line="58" module="Win32" symbol="*" />
+        </scope>
+        <scope ilk="function" line="71" lineend="120" name="epoch_time_offset_from_win32_filetime" signature="epoch_time_offset_from_win32_filetime($high, $low)">
+          <variable ilk="argument" name="$high" />
+          <variable ilk="argument" name="$low" />
+        </scope>
+        <scope ilk="function" line="122" lineend="143" name="load_cookie" signature="load_cookie($self, $file)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$file" />
+        </scope>
+        <scope ilk="function" line="145" lineend="259" name="load" signature="load($self, $cookie_index)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$cookie_index" />
+        </scope>
+      </scope>
+    </scope>
+    

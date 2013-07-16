@@ -1,0 +1,65 @@
+<scope ilk="blob" lang="Perl" name="IO::Socket::INET">
+      <scope classrefs="IO::Socket" ilk="class" line="7" lineend="309" name="IO::Socket::INET">
+        <import line="11" module="IO::Socket" symbol="*" />
+        <import line="12" module="Socket" symbol="*" />
+        <import line="13" module="Carp" symbol="*" />
+        <import line="14" module="Exporter" symbol="*" />
+        <import line="15" module="Errno" symbol="*" />
+        <variable line="10" name="$VERSION" />
+        <variable line="10" name="@ISA" />
+        <scope ilk="function" line="34" lineend="38" name="new" signature="new($class)">
+          <variable ilk="argument" name="$class" />
+        </scope>
+        <scope ilk="function" line="40" lineend="46" name="_cache_proto" signature="_cache_proto(@proto)">
+          <variable ilk="argument" name="@proto" />
+        </scope>
+        <scope ilk="function" line="48" lineend="58" name="_get_proto_number" signature="_get_proto_number()">
+          </scope>
+        <scope ilk="function" line="60" lineend="70" name="_get_proto_name" signature="_get_proto_name($num)">
+          <variable ilk="argument" name="$num" />
+        </scope>
+        <scope ilk="function" line="72" lineend="109" name="_sock_info" signature="_sock_info($addr, $port, $proto)">
+          <variable ilk="argument" name="$addr" />
+          <variable ilk="argument" name="$port" />
+          <variable ilk="argument" name="$proto" />
+        </scope>
+        <scope ilk="function" line="111" lineend="123" name="_error" signature="_error($sock, $err)">
+          <variable ilk="argument" name="$sock" />
+          <variable ilk="argument" name="$err" />
+        </scope>
+        <scope ilk="function" line="125" lineend="135" name="_get_addr" signature="_get_addr($sock, $addr_str, $multi)">
+          <variable ilk="argument" name="$sock" />
+          <variable ilk="argument" name="$addr_str" />
+          <variable ilk="argument" name="$multi" />
+        </scope>
+        <scope ilk="function" line="137" lineend="251" name="configure" signature="configure($sock, $arg)">
+          <variable ilk="argument" name="$sock" />
+          <variable ilk="argument" name="$arg" />
+        </scope>
+        <scope ilk="function" line="253" lineend="258" name="connect" signature="connect($sock)">
+          <variable ilk="argument" name="$sock" />
+        </scope>
+        <scope ilk="function" line="260" lineend="265" name="bind" signature="bind($sock)">
+          <variable ilk="argument" name="$sock" />
+        </scope>
+        <scope ilk="function" line="267" lineend="272" name="sockaddr" signature="sockaddr($sock)">
+          <variable ilk="argument" name="$sock" />
+        </scope>
+        <scope ilk="function" line="274" lineend="279" name="sockport" signature="sockport($sock)">
+          <variable ilk="argument" name="$sock" />
+        </scope>
+        <scope ilk="function" line="281" lineend="286" name="sockhost" signature="sockhost($sock)">
+          <variable ilk="argument" name="$sock" />
+        </scope>
+        <scope ilk="function" line="288" lineend="293" name="peeraddr" signature="peeraddr($sock)">
+          <variable ilk="argument" name="$sock" />
+        </scope>
+        <scope ilk="function" line="295" lineend="300" name="peerport" signature="peerport($sock)">
+          <variable ilk="argument" name="$sock" />
+        </scope>
+        <scope ilk="function" line="302" lineend="307" name="peerhost" signature="peerhost($sock)">
+          <variable ilk="argument" name="$sock" />
+        </scope>
+      </scope>
+    </scope>
+    

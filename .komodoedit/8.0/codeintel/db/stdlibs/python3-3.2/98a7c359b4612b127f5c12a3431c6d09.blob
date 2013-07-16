@@ -1,0 +1,41 @@
+<scope doc="distutils.file_util&#xA;Utility functions for operating on single files." ilk="blob" lang="Python" name="distutils.file_util">
+      <scope classrefs="DistutilsError" doc="Any problems in the filesystem: expected file not found, etc.&#xA;Typically this is for problems that we detect before IOError or OSError could be raised." ilk="class" name="DistutilsFileError" />
+      <scope doc="Copy a file &apos;src&apos; to &apos;dst&apos;." ilk="function" line="67" lineend="154" name="copy_file" returns="tuple" signature="copy_file(src, dst, preserve_mode=1, preserve_times=1, update=0, link=None, verbose=1, dry_run=0)">
+        <variable ilk="argument" name="src" />
+        <variable citdl="int" ilk="argument" name="verbose" />
+        <variable citdl="int" ilk="argument" name="dry_run" />
+        <variable citdl="int" ilk="argument" name="preserve_times" />
+        <variable citdl="os.path.join()" ilk="argument" name="dst" />
+        <variable citdl="int" ilk="argument" name="update" />
+        <variable citdl="os.stat()" line="145" name="st" />
+        <variable ilk="argument" name="link" />
+        <variable line="118" name="action" />
+        <variable citdl="int" ilk="argument" name="preserve_mode" />
+        <variable citdl="os.path.dirname()" line="107" name="dir" />
+      </scope>
+      <import module="log" />
+      <scope doc="Move a file &apos;src&apos; to &apos;dst&apos;." ilk="function" line="158" lineend="218" name="move_file" returns="os.path.join()" signature="move_file(src, dst, verbose=1, dry_run=0)">
+        <variable ilk="argument" name="src" />
+        <variable citdl="os.path.join()" ilk="argument" name="dst" />
+        <variable citdl="int" ilk="argument" name="verbose" />
+        <variable citdl="True" line="193" name="copy_it" />
+        <variable citdl="int" ilk="argument" name="dry_run" />
+      </scope>
+      <import module="os" />
+      <scope doc="Create a file with the specified name and write &apos;contents&apos;&#xA;(a sequence of strings without line terminators) to it." ilk="function" line="221" lineend="230" name="write_file" signature="write_file(filename, contents)">
+        <variable citdl="open()" line="225" name="f" />
+        <variable ilk="argument" name="contents" />
+        <variable ilk="argument" name="filename" />
+      </scope>
+      <scope attributes="protected __hidden__" doc="Copy the file &apos;src&apos; to &apos;dst&apos;; both must be filenames.  Any error&#xA;opening either file, reading from &apos;src&apos;, or writing to &apos;dst&apos;, raises&#xA;DistutilsFileError.  Data is read/written in chunks of &apos;buffer_size&apos;&#xA;bytes (default 16k).  No attempt is made to handle anything apart from&#xA;regular files." ilk="function" line="16" lineend="65" name="_copy_file_contents" signature="_copy_file_contents(src, dst, buffer_size=16*1024)">
+        <variable ilk="argument" name="src" />
+        <variable ilk="argument" name="dst" />
+        <variable citdl="int" ilk="argument" name="buffer_size" />
+        <variable citdl="open()" line="25" name="fsrc" />
+        <variable citdl="open()" line="26" name="fdst" />
+        <variable citdl="fsrc.read()" line="48" name="buf" />
+      </scope>
+      <variable attributes="protected __hidden__" citdl="dict" line="11" name="_copy_action" />
+      <variable citdl="str" line="6" name="__revision__" />
+    </scope>
+    

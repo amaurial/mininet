@@ -1,0 +1,31 @@
+<scope ilk="blob" lang="Perl" name="ExtUtils::Liblist::Kid">
+      <scope ilk="class" line="1" lineend="566" name="ExtUtils::Liblist::Kid">
+        <import line="14" module="Config" symbol="*" />
+        <import line="15" module="Cwd" symbol="cwd" />
+        <import line="16" module="File::Basename" symbol="*" />
+        <import line="17" module="File::Spec" symbol="*" />
+        <variable line="12" name="$VERSION" />
+        <scope ilk="function" line="19" lineend="23" name="ext" signature="ext()" />
+        <scope ilk="function" line="25" lineend="224" name="_unix_os2_ext" signature="_unix_os2_ext($self, $potential_libs, $verbose, $give_libs)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$potential_libs" />
+          <variable ilk="argument" name="$verbose" />
+          <variable ilk="argument" name="$give_libs" />
+        </scope>
+        <scope ilk="function" line="226" lineend="390" name="_win32_ext" signature="_win32_ext($self, $potential_libs, $verbose, $give_libs)">
+          <import line="228" module="Text::ParseWords" />
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$potential_libs" />
+          <variable ilk="argument" name="$verbose" />
+          <variable ilk="argument" name="$give_libs" />
+          <import line="228" module="Text::ParseWords" />
+        </scope>
+        <scope ilk="function" line="393" lineend="564" name="_vms_ext" signature="_vms_ext($self, $potential_libs, $verbose, $give_libs)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$potential_libs" />
+          <variable ilk="argument" name="$verbose" />
+          <variable ilk="argument" name="$give_libs" />
+        </scope>
+      </scope>
+    </scope>
+    

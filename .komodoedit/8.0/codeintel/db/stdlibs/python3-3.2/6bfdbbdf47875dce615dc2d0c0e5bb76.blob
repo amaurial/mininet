@@ -1,0 +1,146 @@
+<scope doc="Implements ProcessPoolExecutor.&#xA;The follow diagram and text describe the data-flow through the system:  |======================= In-process =====================|== Out-of-process ==|  +----------+     +----------+       +--------+     +-----------+    +---------+ |          |  =&gt; | Work Ids |    =&gt; |        |  =&gt; | Call Q    | =&gt; |         | |          |     +----------+       |        |     +-----------+    |         | |          |     | ...      |       |        |     | ...       |    |         | |          |     | 6        |       |        |     | 5, call() |    |         | |          |     | 7        |       |        |     | ...       |    |         |" ilk="blob" lang="Python" name="concurrent.futures.process">
+      <variable citdl="int" line="85" name="EXTRA_QUEUED_CALLS" />
+      <scope classrefs="Executor" doc="&#xA;" ilk="class" line="267" lineend="359" name="ProcessPoolExecutor">
+        <scope ilk="function" line="317" lineend="324" name="_adjust_process_count" signature="_adjust_process_count(self)">
+          <variable citdl="multiprocessing.Process()" line="319" name="p" />
+          <variable citdl="ProcessPoolExecutor" ilk="argument" name="self" />
+        </scope>
+        <scope doc="Initializes a new ProcessPoolExecutor instance." ilk="function" line="268" lineend="297" name="__init__" signature="__init__(self, max_workers=None)">
+          <variable ilk="argument" name="max_workers" />
+          <variable citdl="ProcessPoolExecutor" ilk="argument" name="self" />
+        </scope>
+        <scope doc="Clean-up the resources associated with the Executor." ilk="function" line="345" lineend="358" name="shutdown" signature="shutdown(self, wait=True)">
+          <variable citdl="ProcessPoolExecutor" ilk="argument" name="self" />
+          <variable citdl="_base.Executor.shutdown.__doc__" line="359" name="__doc__" />
+          <variable citdl="True" ilk="argument" name="wait" />
+        </scope>
+        <scope ilk="function" line="299" lineend="315" name="_start_queue_management_thread" signature="_start_queue_management_thread(self)">
+          <variable citdl="ProcessPoolExecutor" ilk="argument" name="self" />
+          <scope ilk="function" line="302" lineend="303" name="weakref_cb" signature="weakref_cb(_, q=self._result_queue)">
+            <variable ilk="argument" name="_" />
+            <variable citdl="multiprocessing.Queue()" ilk="argument" name="q" />
+          </scope>
+        </scope>
+        <scope doc="Submits a callable to be executed with the given arguments." ilk="function" line="326" lineend="342" name="submit" returns="_base.Future()" signature="submit(self, fn, *args, **kwargs)">
+          <variable citdl="_WorkItem" line="332" name="w" />
+          <variable citdl="_base.Future()" line="331" name="f" />
+          <variable attributes="kwargs" ilk="argument" name="kwargs" />
+          <variable citdl="ProcessPoolExecutor" ilk="argument" name="self" />
+          <variable attributes="varargs" ilk="argument" name="args" />
+          <variable citdl="_base.Executor.submit.__doc__" line="343" name="__doc__" />
+          <variable ilk="argument" name="fn" />
+        </scope>
+        <variable attributes="protected __instancevar__" citdl="threading.Thread()" line="290" name="_queue_management_thread" />
+        <variable attributes="protected __instancevar__" citdl="dict" line="297" name="_pending_work_items" />
+        <variable attributes="protected __instancevar__" citdl="multiprocessing.Queue()" line="286" name="_call_queue" />
+        <variable attributes="protected __instancevar__" citdl="threading.Lock()" line="295" name="_shutdown_lock" />
+        <variable attributes="protected __instancevar__" citdl="int" line="296" name="_queue_count" />
+        <variable attributes="protected __instancevar__" citdl="queue.Queue()" line="289" name="_work_ids" />
+        <variable attributes="protected __instancevar__" citdl="multiprocessing.cpu_count()" line="279" name="_max_workers" />
+        <variable attributes="protected __instancevar__" citdl="multiprocessing.Queue()" line="288" name="_result_queue" />
+        <variable attributes="protected __instancevar__" citdl="False" line="294" name="_shutdown_thread" />
+        <variable attributes="protected __instancevar__" citdl="set()" line="291" name="_processes" />
+        <variable attributes="protected __instancevar__" citdl="multiprocessing.Event()" line="301" name="_shutdown_process_event" />
+      </scope>
+      <import module="_base" />
+      <import module="atexit" />
+      <import module="multiprocessing" />
+      <import module="queue" />
+      <import module="threading" />
+      <import module="weakref" />
+      <variable attributes="protected __hidden__" line="243" name="_system_limited" />
+      <variable attributes="protected __hidden__" citdl="False" line="242" name="_system_limits_checked" />
+      <variable attributes="protected __hidden__" citdl="False" line="70" name="_shutdown" />
+      <scope attributes="protected __hidden__" doc="Manages the communication between this process and the worker processes.&#xA;&#xA;This function is run in a local thread.&#xA;&#xA;Args:&#xA;    executor_reference: A weakref.ref to the ProcessPoolExecutor that owns&#xA;        this thread. Used to determine if the ProcessPoolExecutor has been&#xA;        garbage collected and that this function can exit.&#xA;    process: A list of the multiprocessing.Process instances used as&#xA;        workers.&#xA;    pending_work_items: A dict mapping work ids to _WorkItems e.g.&#xA;        {5: &lt;_WorkItem...&gt;, 6: &lt;_WorkItem...&gt;, ...}&#xA;    work_ids_queue: A queue.Queue of work ids e.g. Queue([5, 6, ...]).&#xA;    call_queue: A multiprocessing.Queue that will be filled with _CallItems&#xA;        derived from _WorkItems for processing by the process workers.&#xA;    result_queue: A multiprocessing.Queue of _ResultItems generated by the&#xA;        process workers." ilk="function" line="172" lineend="240" name="_queue_management_worker" signature="_queue_management_worker(executor_reference, processes, pending_work_items, work_ids_queue, call_queue, result_queue)">
+        <variable ilk="argument" name="executor_reference" />
+        <variable ilk="argument" name="processes" />
+        <variable ilk="argument" name="pending_work_items" />
+        <variable ilk="argument" name="work_ids_queue" />
+        <variable ilk="argument" name="call_queue" />
+        <variable ilk="argument" name="result_queue" />
+        <variable citdl="int" line="196" name="nb_shutdown_processes" />
+        <scope doc="Tell a worker to terminate, which will in turn wake us again" ilk="function" line="197" lineend="201" name="shutdown_one_process" signature="shutdown_one_process()" />
+        <variable citdl="result_queue.get()" line="207" name="result_item" />
+        <variable line="209" name="work_item" />
+        <variable citdl="executor_reference()" line="219" name="executor" />
+      </scope>
+      <variable attributes="__hidden__" citdl="str" line="46" name="__author__" />
+      <scope attributes="protected __hidden__" classrefs="object" ilk="class" line="87" lineend="92" name="_WorkItem">
+        <scope attributes="__ctor__" ilk="function" line="88" lineend="92" name="__init__" signature="_WorkItem(future, fn, args, kwargs)">
+          <variable citdl="_WorkItem" ilk="argument" name="self" />
+          <variable ilk="argument" name="future" />
+          <variable ilk="argument" name="fn" />
+          <variable ilk="argument" name="args" />
+          <variable ilk="argument" name="kwargs" />
+        </scope>
+        <variable attributes="__instancevar__" line="89" name="future" />
+        <variable attributes="__instancevar__" line="90" name="fn" />
+        <variable attributes="__instancevar__" line="91" name="args" />
+        <variable attributes="__instancevar__" line="92" name="kwargs" />
+      </scope>
+      <variable attributes="protected __hidden__" citdl="weakref.WeakKeyDictionary()" line="69" name="_threads_queues" />
+      <scope attributes="protected __hidden__" classrefs="object" ilk="class" line="100" lineend="105" name="_CallItem">
+        <scope attributes="__ctor__" ilk="function" line="101" lineend="105" name="__init__" signature="_CallItem(work_id, fn, args, kwargs)">
+          <variable citdl="_CallItem" ilk="argument" name="self" />
+          <variable ilk="argument" name="work_id" />
+          <variable ilk="argument" name="fn" />
+          <variable ilk="argument" name="args" />
+          <variable ilk="argument" name="kwargs" />
+        </scope>
+        <variable attributes="__instancevar__" line="102" name="work_id" />
+        <variable attributes="__instancevar__" line="103" name="fn" />
+        <variable attributes="__instancevar__" line="104" name="args" />
+        <variable attributes="__instancevar__" line="105" name="kwargs" />
+      </scope>
+      <scope attributes="protected __hidden__" doc="Evaluates calls from call_queue and places the results in result_queue.&#xA;&#xA;This worker is run in a separate process.&#xA;&#xA;Args:&#xA;    call_queue: A multiprocessing.Queue of _CallItems that will be read and&#xA;        evaluated by the worker.&#xA;    result_queue: A multiprocessing.Queue of _ResultItems that will written&#xA;        to by the worker.&#xA;    shutdown: A multiprocessing.Event that will be set as a signal to the&#xA;        worker that it should exit when call_queue is empty." ilk="function" line="107" lineend="133" name="_process_worker" signature="_process_worker(call_queue, result_queue)">
+        <variable ilk="argument" name="call_queue" />
+        <variable ilk="argument" name="result_queue" />
+        <variable citdl="call_queue.get()" line="121" name="call_item" />
+        <variable citdl="call_item.fn()" line="127" name="r" />
+        <variable ilk="argument" name="shutdown" />
+      </scope>
+      <scope attributes="protected __hidden__" classrefs="object" ilk="class" line="94" lineend="98" name="_ResultItem">
+        <scope attributes="__ctor__" ilk="function" line="95" lineend="98" name="__init__" signature="_ResultItem(work_id, exception=None, result=None)">
+          <variable citdl="_ResultItem" ilk="argument" name="self" />
+          <variable ilk="argument" name="work_id" />
+          <variable ilk="argument" name="exception" />
+          <variable ilk="argument" name="result" />
+        </scope>
+        <variable attributes="__instancevar__" line="96" name="work_id" />
+        <variable attributes="__instancevar__" line="97" name="exception" />
+        <variable attributes="__instancevar__" line="98" name="result" />
+      </scope>
+      <scope attributes="protected __hidden__" ilk="function" line="72" lineend="79" name="_python_exit" signature="_python_exit()">
+        <variable attributes="protected" citdl="True" line="74" name="_shutdown" />
+        <variable citdl="list()" line="75" name="items" />
+        <variable citdl="thread_reference()" line="76" name="thread" />
+      </scope>
+      <scope attributes="protected __hidden__" ilk="function" line="244" lineend="265" name="_check_system_limits" signature="_check_system_limits()">
+        <import line="251" module="os" />
+        <variable attributes="protected" citdl="True" line="249" name="_system_limits_checked" />
+        <variable citdl="os.sysconf()" line="252" name="nsems_max" />
+        <variable attributes="protected" citdl="str" line="264" name="_system_limited" />
+      </scope>
+      <scope attributes="protected __hidden__" doc="Fills call_queue with _WorkItems from pending_work_items.&#xA;&#xA;This function never blocks.&#xA;&#xA;Args:&#xA;    pending_work_items: A dict mapping work ids to _WorkItems e.g.&#xA;        {5: &lt;_WorkItem...&gt;, 6: &lt;_WorkItem...&gt;, ...}&#xA;    work_ids: A queue.Queue of work ids e.g. Queue([5, 6, ...]). Work ids&#xA;        are consumed and the corresponding _WorkItems from&#xA;        pending_work_items are transformed into _CallItems and put in&#xA;        call_queue.&#xA;    call_queue: A multiprocessing.Queue that will be filled with _CallItems&#xA;        derived from _WorkItems." ilk="function" line="135" lineend="170" name="_add_call_item_to_queue" signature="_add_call_item_to_queue(pending_work_items, work_ids, call_queue)">
+        <variable ilk="argument" name="pending_work_items" />
+        <variable ilk="argument" name="work_ids" />
+        <variable ilk="argument" name="call_queue" />
+        <variable citdl="work_ids.get()" line="156" name="work_id" />
+        <variable line="160" name="work_item" />
+      </scope>
+      <scope attributes="protected __hidden__" doc="Manages the communication between this process and the worker processes.&#xA;&#xA;This function is run in a local thread.&#xA;&#xA;Args:&#xA;    executor_reference: A weakref.ref to the ProcessPoolExecutor that owns&#xA;        this thread. Used to determine if the ProcessPoolExecutor has been&#xA;        garbage collected and that this function can exit.&#xA;    process: A list of the multiprocessing.Process instances used as&#xA;        workers.&#xA;    pending_work_items: A dict mapping work ids to _WorkItems e.g.&#xA;        {5: &lt;_WorkItem...&gt;, 6: &lt;_WorkItem...&gt;, ...}&#xA;    work_ids_queue: A queue.Queue of work ids e.g. Queue([5, 6, ...]).&#xA;    call_queue: A multiprocessing.Queue that will be filled with _CallItems&#xA;        derived from _WorkItems for processing by the process workers.&#xA;    result_queue: A multiprocessing.Queue of _ResultItems generated by the&#xA;        process workers.&#xA;    shutdown_process_event: A multiprocessing.Event used to signal the&#xA;        process workers that they should exit when their work queue is&#xA;        empty." ilk="function" line="184" lineend="245" name="_queue_manangement_worker" signature="_queue_manangement_worker(executor_reference, processes, pending_work_items, work_ids_queue, call_queue, result_queue, shutdown_process_event)">
+        <variable ilk="argument" name="executor_reference" />
+        <variable ilk="argument" name="processes" />
+        <variable ilk="argument" name="pending_work_items" />
+        <variable ilk="argument" name="work_ids_queue" />
+        <variable ilk="argument" name="call_queue" />
+        <variable ilk="argument" name="result_queue" />
+        <variable ilk="argument" name="shutdown_process_event" />
+        <variable citdl="result_queue.get()" line="218" name="result_item" />
+        <variable citdl="executor_reference()" line="220" name="executor" />
+        <variable line="239" name="work_item" />
+      </scope>
+      <scope attributes="protected __hidden__" doc="Remove inactive threads from _thread_references.&#xA;&#xA;Should be called periodically to prevent memory leaks in scenarios such as:&#xA;&gt;&gt;&gt; while True:&#xA;&gt;&gt;&gt; ...    t = ThreadPoolExecutor(max_workers=5)&#xA;&gt;&gt;&gt; ...    t.map(int, [&apos;1&apos;, &apos;2&apos;, &apos;3&apos;, &apos;4&apos;, &apos;5&apos;])" ilk="function" line="80" lineend="90" name="_remove_dead_thread_references" signature="_remove_dead_thread_references()" />
+      <variable attributes="protected __hidden__" citdl="set()" line="69" name="_thread_references" />
+    </scope>
+    

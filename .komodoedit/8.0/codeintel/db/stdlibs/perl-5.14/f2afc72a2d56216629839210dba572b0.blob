@@ -1,0 +1,21 @@
+<scope ilk="blob" lang="Perl" name="Net::HTTPS">
+      <scope ilk="class" line="1" lineend="80" name="Net::HTTPS">
+        <import line="26" module="IO::Socket::SSL" />
+        <import line="30" module="Net::SSL" />
+        <import line="43" module="Net::HTTP::Methods" />
+        <variable line="4" name="$SSL_SOCKET_CLASS" />
+        <variable line="4" name="$VERSION" />
+        <variable line="4" name="@ISA" />
+        <scope ilk="function" line="47" lineend="50" name="configure" signature="configure($self, $cnf)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$cnf" />
+        </scope>
+        <scope ilk="function" line="52" lineend="69" name="http_connect" signature="http_connect($self, $cnf)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$cnf" />
+        </scope>
+        <scope ilk="function" line="71" lineend="73" name="http_default_port" signature="http_default_port()" />
+        <scope ilk="function" line="78" lineend="78" name="blocking" signature="blocking()" />
+      </scope>
+    </scope>
+    

@@ -1,0 +1,35 @@
+<scope ilk="blob" lang="Perl" name="IO::Poll">
+      <scope classrefs="Exporter" ilk="class" line="8" lineend="131" name="IO::Poll">
+        <import line="11" module="IO::Handle" symbol="*" />
+        <import line="12" module="Exporter" />
+        <variable line="13" name="$VERSION" />
+        <variable line="13" name="@EXPORT" />
+        <variable line="13" name="@EXPORT_OK" />
+        <variable line="13" name="@ISA" />
+        <scope attributes="__ctor__" ilk="function" line="37" lineend="43" name="new" signature="new($class)">
+          <variable ilk="argument" name="$class" />
+        </scope>
+        <scope ilk="function" line="45" lineend="69" name="mask" signature="mask($self, $io, $mask)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$io" />
+          <variable ilk="argument" name="$mask" />
+        </scope>
+        <scope ilk="function" line="72" lineend="97" name="poll" signature="poll($self, $timeout)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$timeout" />
+        </scope>
+        <scope ilk="function" line="99" lineend="106" name="events" signature="events($self, $io)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$io" />
+        </scope>
+        <scope ilk="function" line="108" lineend="112" name="remove" signature="remove($self, $io)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$io" />
+        </scope>
+        <scope ilk="function" line="114" lineend="129" name="handles" signature="handles($self, $events)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$events" />
+        </scope>
+      </scope>
+    </scope>
+    

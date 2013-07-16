@@ -1,0 +1,220 @@
+<scope doc="Base classes for server/gateway implementations&#xA;" ilk="blob" lang="Python" name="wsgiref.handlers">
+      <scope classrefs="SimpleHandler" doc="CGI-like systems using input/output/error streams and environ mapping&#xA;Usage::  handler = BaseCGIHandler(inp,out,err,env) handler.run(app)  This handler class is useful for gateway protocols like ReadyExec and FastCGI, that have usable input/output/error streams and an environment mapping.  It&apos;s also the base class for CGIHandler, which just uses sys.stdin, os.environ, and so on. " ilk="class" line="458" lineend="479" name="BaseCGIHandler">
+        <variable citdl="False" line="479" name="origin_server" />
+      </scope>
+      <scope classrefs="object" doc="Manage the invocation of a WSGI application&#xA;" ilk="class" line="94" lineend="415" name="BaseHandler">
+        <scope doc="Platform-specific file transmission" ilk="function" line="281" lineend="299" name="sendfile" returns="bool" signature="sendfile(self)">
+          <variable citdl="BaseHandler" ilk="argument" name="self" />
+        </scope>
+        <scope doc="&apos;start_response()&apos; callable as specified by PEP 3333" ilk="function" line="210" lineend="236" name="start_response" returns="self.write" signature="start_response(self, status, headers, exc_info=None)">
+          <variable citdl="self._convert_string_type()" ilk="argument" name="status" />
+          <variable ilk="argument" name="headers" />
+          <variable citdl="self._convert_string_type()" line="232" name="name" />
+          <variable citdl="self._convert_string_type()" line="233" name="val" />
+          <variable ilk="argument" name="exc_info" />
+          <variable citdl="BaseHandler" ilk="argument" name="self" />
+        </scope>
+        <scope doc="Override in subclass to return suitable &apos;wsgi.input&apos;" ilk="function" line="405" lineend="407" name="get_stdin" signature="get_stdin(self)">
+          <variable citdl="BaseHandler" ilk="argument" name="self" />
+        </scope>
+        <scope doc="Compute Content-Length or switch to chunked encoding if&#xA;possible" ilk="function" line="189" name="set_content_length" signature="set_content_length(self)">
+          <variable citdl="BaseHandler" ilk="argument" name="self" />
+          <variable citdl="len()" line="192" name="blocks" />
+        </scope>
+        <scope doc="Transmit version/status/date/server, via self._write()" ilk="function" line="246" lineend="258" name="send_preamble" signature="send_preamble(self)">
+          <variable citdl="BaseHandler" ilk="argument" name="self" />
+        </scope>
+        <scope doc="Close the iterable (if needed) and reset all instance vars" ilk="function" line="312" lineend="322" name="close" signature="close(self)">
+          <variable citdl="BaseHandler" ilk="argument" name="self" />
+        </scope>
+        <scope doc="Log current error, and send error output to client if&#xA;possible" ilk="function" line="361" lineend="366" name="handle_error" signature="handle_error(self)">
+          <variable citdl="BaseHandler" ilk="argument" name="self" />
+        </scope>
+        <scope doc="Send any iterable data, then close self and the iterable" ilk="function" line="169" lineend="181" name="finish_response" signature="finish_response(self)">
+          <variable citdl="BaseHandler" ilk="argument" name="self" />
+        </scope>
+        <scope doc="&apos;write()&apos; callable as specified by PEP 3333" ilk="function" line="260" lineend="278" name="write" signature="write(self, data)">
+          <variable citdl="BaseHandler" ilk="argument" name="self" />
+          <variable ilk="argument" name="data" />
+        </scope>
+        <scope doc="Set up the environment for one request" ilk="function" line="148" lineend="166" name="setup_environ" signature="setup_environ(self)">
+          <variable citdl="BaseHandler" ilk="argument" name="self" />
+          <variable citdl="self.os_environ.copy()" line="151" name="env" />
+        </scope>
+        <scope doc="Invoke the application" ilk="function" line="128" lineend="145" name="run" signature="run(self, application)">
+          <variable ilk="argument" name="application" />
+          <variable citdl="BaseHandler" ilk="argument" name="self" />
+        </scope>
+        <scope doc="Log the &apos;exc_info&apos; tuple in the server log" ilk="function" line="345" lineend="359" name="log_exception" signature="log_exception(self, exc_info)">
+          <variable ilk="argument" name="exc_info" />
+          <variable citdl="BaseHandler" ilk="argument" name="self" />
+          <variable citdl="self.get_stderr()" line="352" name="stderr" />
+        </scope>
+        <scope doc="True if client can accept status and headers" ilk="function" line="340" lineend="342" name="client_is_modern" returns="bool" signature="client_is_modern(self)">
+          <variable citdl="BaseHandler" ilk="argument" name="self" />
+        </scope>
+        <scope doc="Override in subclass to force sending of recent &apos;_write()&apos;&#xA;calls" ilk="function" line="397" lineend="403" name="_flush" signature="_flush(self)">
+          <variable citdl="BaseHandler" ilk="argument" name="self" />
+        </scope>
+        <scope doc="Convert/check value type." ilk="function" line="238" lineend="243" name="_convert_string_type" signature="_convert_string_type(self, value, title)">
+          <variable citdl="BaseHandler" ilk="argument" name="self" />
+          <variable ilk="argument" name="value" />
+          <variable ilk="argument" name="title" />
+        </scope>
+        <scope doc="Override in subclass to buffer data for send to client" ilk="function" line="388" lineend="395" name="_write" signature="_write(self, data)">
+          <variable citdl="BaseHandler" ilk="argument" name="self" />
+          <variable ilk="argument" name="data" />
+        </scope>
+        <scope doc="WSGI mini-app to create error output" ilk="function" line="369" lineend="383" name="error_output" returns="list" signature="error_output(self, environ, start_response)">
+          <variable ilk="argument" name="start_response" />
+          <variable citdl="BaseHandler" ilk="argument" name="self" />
+          <variable ilk="argument" name="environ" />
+        </scope>
+        <scope doc="Return the URL scheme being used" ilk="function" line="184" lineend="186" name="get_scheme" returns="guess_scheme()" signature="get_scheme(self)">
+          <variable citdl="BaseHandler" ilk="argument" name="self" />
+        </scope>
+        <scope doc="Override in subclass to return suitable &apos;wsgi.errors&apos;" ilk="function" line="409" lineend="411" name="get_stderr" signature="get_stderr(self)">
+          <variable citdl="BaseHandler" ilk="argument" name="self" />
+        </scope>
+        <scope doc="Transmit headers to the client, via self._write()" ilk="function" line="325" lineend="331" name="send_headers" signature="send_headers(self)">
+          <variable citdl="BaseHandler" ilk="argument" name="self" />
+        </scope>
+        <scope doc="Make any necessary header changes or defaults" ilk="function" line="202" lineend="208" name="cleanup_headers" signature="cleanup_headers(self)">
+          <variable citdl="BaseHandler" ilk="argument" name="self" />
+        </scope>
+        <scope doc="Ensure headers and content have both been sent" ilk="function" line="302" lineend="310" name="finish_content" signature="finish_content(self)">
+          <variable citdl="BaseHandler" ilk="argument" name="self" />
+        </scope>
+        <scope doc="True if &apos;self.result&apos; is an instance of&#xA;&apos;self.wsgi_file_wrapper&apos;" ilk="function" line="334" lineend="337" name="result_is_file" returns="bool" signature="result_is_file(self)">
+          <variable citdl="BaseHandler" ilk="argument" name="self" />
+          <variable citdl="FileWrapper" line="336" name="wrapper" />
+        </scope>
+        <scope doc="Override in subclass to insert CGI variables in&#xA;&apos;self.environ&apos;" ilk="function" line="413" lineend="415" name="add_cgi_vars" signature="add_cgi_vars(self)">
+          <variable citdl="BaseHandler" ilk="argument" name="self" />
+        </scope>
+        <variable citdl="True" line="99" name="wsgi_multithread" />
+        <variable line="123" name="status" />
+        <variable citdl="str" line="104" name="http_version" />
+        <variable citdl="FileWrapper" line="113" name="wsgi_file_wrapper" />
+        <variable citdl="False" line="124" name="headers_sent" />
+        <variable citdl="True" line="103" name="origin_server" />
+        <variable citdl="str" line="120" name="error_body" />
+        <variable line="105" name="server_software" />
+        <variable citdl="True" line="100" name="wsgi_multiprocess" />
+        <variable citdl="tuple" line="98" name="wsgi_version" />
+        <variable citdl="headers_class()" line="125" name="headers" />
+        <variable citdl="str" line="118" name="error_status" />
+        <variable citdl="list" line="119" name="error_headers" />
+        <variable attributes="__instancevar__" citdl="self.error_output()" line="137" name="result" />
+        <variable citdl="read_environ()" line="110" name="os_environ" />
+        <variable citdl="int" line="126" name="bytes_sent" />
+        <variable citdl="False" line="101" name="wsgi_run_once" />
+        <variable line="117" name="traceback_limit" />
+        <variable citdl="Headers" line="114" name="headers_class" />
+      </scope>
+      <scope classrefs="BaseCGIHandler" doc="CGI-based invocation via sys.stdin/stdout/stderr and os.environ&#xA;Usage::  CGIHandler().run(app)  The difference between this class and BaseCGIHandler is that it always uses &apos;wsgi.run_once&apos; of &apos;True&apos;, &apos;wsgi.multithread&apos; of &apos;False&apos;, and &apos;wsgi.multiprocess&apos; of &apos;True&apos;.  It does not take any initialization parameters, but always uses &apos;sys.stdin&apos;, &apos;os.environ&apos;, and friends.  If you need to override any of these parameters, use BaseCGIHandler" ilk="class" line="482" lineend="508" name="CGIHandler">
+        <scope ilk="function" line="505" lineend="508" name="__init__" signature="__init__(self)">
+          <variable citdl="CGIHandler" ilk="argument" name="self" />
+        </scope>
+        <variable citdl="True" line="499" name="wsgi_run_once" />
+        <variable citdl="dict" line="503" name="os_environ" />
+      </scope>
+      <scope classrefs="object" doc="Wrapper to convert file-like objects to iterables&#xA;" ilk="class" name="FileWrapper">
+        <scope ilk="function" name="__getitem__" signature="__getitem__(self, key)" />
+        <scope ilk="function" name="__next__" signature="__next__(self)" />
+        <scope ilk="function" name="__iter__" signature="__iter__(self)" />
+        <scope ilk="function" name="__init__" signature="__init__(self, filelike, blksize=8192)" />
+      </scope>
+      <scope classrefs="object" doc="Manage a collection of HTTP response headers&#xA;" ilk="class" name="Headers">
+        <scope doc="Get the first header value for &apos;name&apos;" ilk="function" name="__getitem__" signature="__getitem__(self, name)" />
+        <scope doc="Return a list of all the values for the named field." ilk="function" name="get_all" signature="get_all(self, name)" />
+        <scope doc="Return a list of all the header field names." ilk="function" name="keys" signature="keys(self)" />
+        <scope doc="suitable for direct HTTP transmission." ilk="function" name="__str__" signature="str() returns the formatted headers, complete with end line," />
+        <scope doc="Extended header setting." ilk="function" name="add_header" signature="add_header(self, _name, _value, **_params)" />
+        <scope doc="Set the value of a header." ilk="function" name="__setitem__" signature="__setitem__(self, name, val)" />
+        <scope doc="Convert/check value type." ilk="function" name="_convert_string_type" signature="_convert_string_type(self, value)" />
+        <scope ilk="function" name="__init__" signature="__init__(self, headers)" />
+        <scope doc="Delete all occurrences of a header, if present." ilk="function" name="__delitem__" signature="__delitem__(self, name)" />
+        <scope doc="Return first matching header value for &apos;name&apos;, or &apos;value&apos;" ilk="function" name="setdefault" signature="setdefault(self, name, value)" />
+        <scope doc="Return true if the message contains the header." ilk="function" name="__contains__" signature="__contains__(self, name)" />
+        <scope doc="Get all the header fields and values." ilk="function" name="items" signature="items(self)" />
+        <scope doc="Get the first header value for &apos;name&apos;, or return &apos;default&apos;" ilk="function" name="get" signature="get(self, name, default=None)" />
+        <scope ilk="function" name="__bytes__" signature="__bytes__(self)" />
+        <scope doc="Return a list of all header values." ilk="function" name="values" signature="values(self)" />
+        <scope ilk="function" name="__repr__" signature="__repr__(self)" />
+        <scope doc="Return the total number of headers, including duplicates." ilk="function" name="__len__" signature="__len__(self)" />
+      </scope>
+      <scope classrefs="BaseCGIHandler" doc="CGI-based invocation with workaround for IIS path bug&#xA;This handler should be used in preference to CGIHandler when deploying on Microsoft IIS without having set the config allowPathInfo option (IIS&gt;=7) or metabase allowPathInfoForScriptMappings (IIS&lt;7)." ilk="class" line="512" lineend="544" name="IISCGIHandler">
+        <scope doc="# There is no way for CGI code to tell whether the option&#xA;was set, so a # separate handler class is provided." ilk="function" line="536" lineend="544" name="__init__" signature="__init__(self)">
+          <variable citdl="environ.get()" line="538" name="path" />
+          <variable citdl="IISCGIHandler" ilk="argument" name="self" />
+          <variable citdl="read_environ()" line="537" name="environ" />
+          <variable citdl="environ.get()" line="539" name="script" />
+        </scope>
+        <variable citdl="True" line="519" name="wsgi_run_once" />
+        <variable citdl="dict" line="520" name="os_environ" />
+      </scope>
+      <scope classrefs="BaseHandler" doc="Handler that&apos;s just initialized with streams, environment, etc.&#xA;This handler subclass is intended for synchronous HTTP/1.0 origin servers, and handles sending the entire response output, given the correct inputs.  Usage::  handler = SimpleHandler( inp,out,err,env, multithread=False, multiprocess=True ) handler.run(app)" ilk="class" line="418" lineend="455" name="SimpleHandler">
+        <scope ilk="function" line="444" lineend="445" name="get_stderr" signature="get_stderr(self)">
+          <variable citdl="SimpleHandler" ilk="argument" name="self" />
+        </scope>
+        <scope ilk="function" line="453" name="_flush" signature="_flush(self)" />
+        <scope ilk="function" line="441" lineend="442" name="get_stdin" signature="get_stdin(self)">
+          <variable citdl="SimpleHandler" ilk="argument" name="self" />
+        </scope>
+        <scope ilk="function" line="450" lineend="451" name="_write" signature="_write(self, data)">
+          <variable citdl="SimpleHandler" ilk="argument" name="self" />
+          <variable ilk="argument" name="data" />
+        </scope>
+        <scope ilk="function" line="447" lineend="448" name="add_cgi_vars" signature="add_cgi_vars(self)">
+          <variable citdl="SimpleHandler" ilk="argument" name="self" />
+        </scope>
+        <scope ilk="function" line="431" lineend="439" name="__init__" signature="__init__(self, stdin, stdout, stderr, environ, multithread=True, multiprocess=False)">
+          <variable citdl="True" ilk="argument" name="multithread" />
+          <variable citdl="False" ilk="argument" name="multiprocess" />
+          <variable ilk="argument" name="environ" />
+          <variable ilk="argument" name="stderr" />
+          <variable ilk="argument" name="stdout" />
+          <variable citdl="SimpleHandler" ilk="argument" name="self" />
+          <variable ilk="argument" name="stdin" />
+        </scope>
+        <variable attributes="__instancevar__" citdl="True" line="438" name="wsgi_multithread" />
+        <variable attributes="__instancevar__" line="435" name="stdout" />
+        <variable attributes="__instancevar__" line="434" name="stdin" />
+        <variable attributes="__instancevar__" citdl="False" line="439" name="wsgi_multiprocess" />
+        <variable attributes="__instancevar__" line="437" name="base_env" />
+        <variable attributes="__instancevar__" line="436" name="stderr" />
+      </scope>
+      <variable citdl="list" line="8" name="__all__" />
+      <scope ilk="function" line="19" lineend="22" name="format_date_time" returns="tuple" signature="format_date_time(timestamp)">
+        <variable line="20" name="wd" />
+        <variable line="20" name="mm" />
+        <variable ilk="argument" name="timestamp" />
+        <variable line="20" name="month" />
+        <variable line="20" name="ss" />
+        <variable line="20" name="hh" />
+        <variable line="20" name="year" />
+        <variable line="20" name="y" />
+        <variable line="20" name="z" />
+        <variable line="20" name="day" />
+      </scope>
+      <scope doc="Return a guess for whether &apos;wsgi.url_scheme&apos; should be&#xA;&apos;http&apos; or &apos;https&apos;" ilk="function" name="guess_scheme" signature="guess_scheme(environ)" />
+      <scope doc="Return true if &apos;header_name&apos; is an HTTP/1.1 &quot;Hop-by-Hop&quot;&#xA;header" ilk="function" name="is_hop_by_hop" signature="is_hop_by_hop(header_name)" />
+      <import module="os" />
+      <scope doc="Read environment, fixing HTTP variables" ilk="function" line="34" lineend="91" name="read_environ" returns="dict" signature="read_environ()">
+        <variable citdl="str" line="37" name="esc" />
+        <variable line="53" name="software" />
+        <variable citdl="sys.getfilesystemencoding()" line="36" name="enc" />
+        <variable citdl="dict" line="42" name="environ" />
+        <variable line="63" name="v" />
+      </scope>
+      <import module="sys" />
+      <import module="time" />
+      <variable attributes="protected __hidden__" citdl="list" line="15" name="_monthname" />
+      <variable attributes="protected __hidden__" line="25" name="_is_request" />
+      <variable attributes="protected __hidden__" citdl="list" line="14" name="_weekdayname" />
+      <scope attributes="protected __hidden__" ilk="function" line="30" lineend="32" name="_needs_transcode" returns="_needs_transcode()" signature="_needs_transcode(k)">
+        <variable ilk="argument" name="k" />
+      </scope>
+    </scope>
+    

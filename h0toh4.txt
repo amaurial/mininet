@@ -1,0 +1,7 @@
+#flow from first edge sw to second edge sw
+#naming convention e_number[port] -> ag_number[port] -> edge_number[port]
+#e_1[1] -> ag_1[2]-> e_2[1]
+setflow 00-20-00-00-00-01 10.0.0.5 1
+setflow 00-20-00-00-00-01 10.0.0.1 2
+setflow 00-00-00-10-00-00 10.0.0.5 2
+setflow 00-00-00-10-00-01 10.0.0.1 1

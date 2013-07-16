@@ -1,0 +1,27 @@
+<scope ilk="blob" lang="Perl" name="B::Terse">
+      <scope ilk="class" line="1" lineend="67" name="B::Terse">
+        <import line="6" module="B" symbol="class" />
+        <import line="6" module="B" symbol="@specialsv_name" />
+        <import line="7" module="B::Concise" symbol="concise_subref" />
+        <import line="7" module="B::Concise" symbol="set_style_standard" />
+        <import line="8" module="Carp" symbol="*" />
+        <variable line="3" name="$VERSION" />
+        <scope ilk="function" line="10" lineend="18" name="terse" signature="terse($order, $subref)">
+          <variable ilk="argument" name="$order" />
+          <variable ilk="argument" name="$subref" />
+        </scope>
+        <scope ilk="function" line="20" lineend="26" name="compile" signature="compile(@args)">
+          <variable ilk="argument" name="@args" />
+        </scope>
+        <scope ilk="function" line="28" lineend="31" name="indent" signature="indent()">
+          </scope>
+        <scope ilk="function" line="35" lineend="38" name="B::OP::terse" signature="B::OP::terse()" />
+        <scope ilk="function" line="40" lineend="50" name="B::SV::terse" signature="B::SV::terse()">
+          </scope>
+        <scope ilk="function" line="52" lineend="57" name="B::NULL::terse" signature="B::NULL::terse()">
+          </scope>
+        <scope ilk="function" line="59" lineend="65" name="B::SPECIAL::terse" signature="B::SPECIAL::terse()">
+          </scope>
+      </scope>
+    </scope>
+    

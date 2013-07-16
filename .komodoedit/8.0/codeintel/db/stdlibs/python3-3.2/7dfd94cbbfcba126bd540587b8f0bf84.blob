@@ -1,0 +1,159 @@
+<scope doc="Manage shelves of pickled objects.&#xA;A &quot;shelf&quot; is a persistent, dictionary-like object.  The difference with dbm databases is that the values (not the keys!) in a shelf can be essentially arbitrary Python objects -- anything that the &quot;pickle&quot; module can handle.  This includes most class instances, recursive data types, and objects containing lots of shared sub-objects.  The keys are ordinary strings.  To summarize the interface (key is a string, data is an arbitrary object): " ilk="blob" lang="Python" name="shelve">
+      <scope classrefs="Shelf" doc="Shelf implementation using the &quot;BSD&quot; db interface.&#xA;This adds methods first(), next(), previous(), last() and set_location() that have no counterpart in [g]dbm databases.  The actual database must be opened using one of the &quot;bsddb&quot; modules &quot;open&quot; routines (i.e. bsddb.hashopen, bsddb.btopen or bsddb.rnopen) and passed to the constructor.  See the module&apos;s __doc__ string for an overview of the interface." ilk="class" line="164" lineend="204" name="BsdDbShelf">
+        <scope ilk="function" line="201" lineend="204" name="last" returns="tuple" signature="last(self)">
+          <variable citdl="BsdDbShelf" ilk="argument" name="self" />
+          <variable line="202" name="value" />
+          <variable line="202" name="key" />
+          <variable citdl="BytesIO()" line="203" name="f" />
+        </scope>
+        <scope ilk="function" line="181" lineend="184" name="set_location" returns="tuple" signature="set_location(self, key)">
+          <variable citdl="BsdDbShelf" ilk="argument" name="self" />
+          <variable line="182" name="value" />
+          <variable ilk="argument" name="key" />
+          <variable citdl="BytesIO()" line="183" name="f" />
+        </scope>
+        <scope ilk="function" line="186" lineend="189" name="next" returns="tuple" signature="next(self)">
+          <variable citdl="BsdDbShelf" ilk="argument" name="self" />
+          <variable line="187" name="value" />
+          <variable line="187" name="key" />
+          <variable citdl="BytesIO()" line="188" name="f" />
+        </scope>
+        <scope ilk="function" line="191" lineend="194" name="previous" returns="tuple" signature="previous(self)">
+          <variable citdl="BsdDbShelf" ilk="argument" name="self" />
+          <variable line="192" name="value" />
+          <variable line="192" name="key" />
+          <variable citdl="BytesIO()" line="193" name="f" />
+        </scope>
+        <scope ilk="function" line="177" lineend="179" name="__init__" signature="__init__(self, dict, protocol=None, writeback=False, keyencoding=&apos;utf-8&apos;)">
+          <variable citdl="False" ilk="argument" name="writeback" />
+          <variable citdl="BsdDbShelf" ilk="argument" name="self" />
+          <variable ilk="argument" name="protocol" />
+          <variable ilk="argument" name="dict" />
+          <variable citdl="str" ilk="argument" name="keyencoding" />
+        </scope>
+        <scope ilk="function" line="196" lineend="199" name="first" returns="tuple" signature="first(self)">
+          <variable citdl="BsdDbShelf" ilk="argument" name="self" />
+          <variable line="197" name="value" />
+          <variable line="197" name="key" />
+          <variable citdl="BytesIO()" line="198" name="f" />
+        </scope>
+      </scope>
+      <scope classrefs="_BufferedIOBase" doc="BytesIO([buffer]) -&gt; object&#xA;Create a buffered I/O implementation using an in-memory bytes buffer, ready for reading and writing." ilk="class" name="BytesIO">
+        <scope doc="Call readline() repeatedly and return a list of the lines so&#xA;read." ilk="function" name="readlines" returns="list" signature="readlines([size]) -&gt; list of strings, each a line from the file." />
+        <scope doc="Retrieve the entire contents of the BytesIO object." ilk="function" name="getvalue" signature="getvalue() -&gt; bytes." />
+        <scope ilk="function" name="writable" />
+        <scope doc="flush() -&gt; None.  Does nothing." ilk="function" name="flush" signature="flush() -&gt; None.  Does nothing." />
+        <scope doc="close() -&gt; None.  Disable all I/O operations." ilk="function" name="close" signature="close() -&gt; None.  Disable all I/O operations." />
+        <scope doc="Seek to byte offset pos relative to position indicated by&#xA;whence: 0  Start of stream (the default)." ilk="function" name="seek" signature="seek(pos, whence=0) -&gt; int.  Change stream position." />
+        <scope ilk="function" name="__init__" />
+        <scope doc="Returns number of bytes read (0 for EOF), or None if the&#xA;object is set not to block as has no data to read." ilk="function" name="readinto" signature="readinto(bytearray) -&gt; int.  Read up to len(b) bytes into b." />
+        <scope ilk="function" name="readable" />
+        <scope doc="Return the number of bytes written." ilk="function" name="write" signature="write(bytes) -&gt; int.  Write bytes to file." />
+        <scope ilk="function" name="__getstate__" />
+        <scope doc="tell() -&gt; current file position, an integer" ilk="function" name="tell" signature="tell() -&gt; current file position, an integer" />
+        <scope doc="Always returns False since BytesIO objects are not connected&#xA;to a tty-like device." ilk="function" name="isatty" signature="isatty() -&gt; False." />
+        <scope doc="Size defaults to the current file position, as returned by&#xA;tell()." ilk="function" name="truncate" signature="truncate([size]) -&gt; int.  Truncate the file to at most size bytes." />
+        <scope ilk="function" name="__setstate__" />
+        <scope doc="If the size argument is negative, read until EOF is reached." ilk="function" name="read" signature="read([size]) -&gt; read at most size bytes, returned as a string." />
+        <scope doc="x.__next__() &lt;==&gt; next(x)" ilk="function" name="__next__" signature="x.__next__() &lt;==&gt; next(x)" />
+        <scope doc="If the size argument is negative or omitted, read until EOF&#xA;is reached." ilk="function" name="read1" signature="read1(size) -&gt; read at most size bytes, returned as a string." />
+        <scope doc="x.__iter__() &lt;==&gt; iter(x)" ilk="function" name="__iter__" signature="x.__iter__() &lt;==&gt; iter(x)" />
+        <scope ilk="function" name="seekable" />
+        <scope doc="Retain newline." ilk="function" name="readline" signature="readline([size]) -&gt; next line from the file, as a string." />
+        <scope doc="Note that newlines are not added." ilk="function" name="writelines" signature="writelines(sequence_of_strings) -&gt; None.  Write strings to the file." />
+        <scope doc="Get a read-write view over the contents of the BytesIO&#xA;object." ilk="function" name="getbuffer" signature="getbuffer() -&gt; bytes." />
+      </scope>
+      <scope classrefs="Shelf" doc="Shelf implementation using the &quot;dbm&quot; generic dbm interface.&#xA;This is initialized with the filename for the dbm database. See the module&apos;s __doc__ string for an overview of the interface." ilk="class" line="207" lineend="216" name="DbfilenameShelf">
+        <scope ilk="function" line="214" lineend="216" name="__init__" signature="__init__(self, filename, flag=&apos;c&apos;, protocol=None, writeback=False)">
+          <variable citdl="False" ilk="argument" name="writeback" />
+          <variable citdl="DbfilenameShelf" ilk="argument" name="self" />
+          <variable ilk="argument" name="protocol" />
+          <variable citdl="str" ilk="argument" name="flag" />
+          <variable ilk="argument" name="filename" />
+        </scope>
+      </scope>
+      <scope classrefs="object" doc="Pickler(file, protocol=None)&#xA;This takes a binary file for writing a pickle data stream.  The optional protocol argument tells the pickler to use the given protocol; supported protocols are 0, 1, 2, 3.  The default protocol is 3; a backward-incompatible protocol designed for Python 3.0.  Specifying a negative protocol version selects the highest protocol version supported.  The higher the protocol used, the more recent the version of Python needed to read the pickle" ilk="class" name="Pickler">
+        <scope doc="dump(obj) -&gt; None. Write a pickled representation of obj to the open file." ilk="function" name="dump" signature="dump(obj) -&gt; None. Write a pickled representation of obj to the open file." />
+        <scope doc="The memo is the data structure that remembers which objects&#xA;the pickler has already seen, so that shared or recursive&#xA;objects are pickled by reference and not by value." ilk="function" name="clear_memo" signature="clear_memo() -&gt; None. Clears the pickler&apos;s &quot;memo&quot;." />
+        <scope ilk="function" name="__init__" />
+      </scope>
+      <scope classrefs="MutableMapping" doc="Base class for shelf implementations.&#xA;This is initialized with a dictionary-like object. See the module&apos;s __doc__ string for an overview of the interface." ilk="class" line="77" lineend="161" name="Shelf">
+        <scope ilk="function" line="127" lineend="132" name="__delitem__" signature="__delitem__(self, key)">
+          <variable citdl="Shelf" ilk="argument" name="self" />
+          <variable ilk="argument" name="key" />
+        </scope>
+        <scope ilk="function" line="109" lineend="117" name="__getitem__" signature="__getitem__(self, key)">
+          <variable citdl="Shelf" ilk="argument" name="self" />
+          <variable line="111" name="value" />
+          <variable ilk="argument" name="key" />
+          <variable citdl="BytesIO()" line="113" name="f" />
+        </scope>
+        <scope ilk="function" line="101" lineend="102" name="__contains__" returns="bool" signature="__contains__(self, key)">
+          <variable citdl="Shelf" ilk="argument" name="self" />
+          <variable ilk="argument" name="key" />
+        </scope>
+        <scope ilk="function" line="147" lineend="151" name="__del__" signature="__del__(self)">
+          <variable citdl="Shelf" ilk="argument" name="self" />
+        </scope>
+        <scope ilk="function" line="104" lineend="107" name="get" signature="get(self, key, default=None)">
+          <variable ilk="argument" name="default" />
+          <variable citdl="Shelf" ilk="argument" name="self" />
+          <variable ilk="argument" name="key" />
+        </scope>
+        <scope ilk="function" line="94" lineend="96" name="__iter__" signature="__iter__(self)">
+          <variable citdl="Shelf" ilk="argument" name="self" />
+        </scope>
+        <scope ilk="function" line="153" lineend="161" name="sync" signature="sync(self)">
+          <variable citdl="Shelf" ilk="argument" name="self" />
+        </scope>
+        <scope ilk="function" line="119" lineend="125" name="__setitem__" signature="__setitem__(self, key, value)">
+          <variable citdl="Pickler()" line="123" name="p" />
+          <variable citdl="Shelf" ilk="argument" name="self" />
+          <variable ilk="argument" name="value" />
+          <variable ilk="argument" name="key" />
+          <variable citdl="BytesIO()" line="122" name="f" />
+        </scope>
+        <scope ilk="function" line="98" lineend="99" name="__len__" returns="len()" signature="__len__(self)">
+          <variable citdl="Shelf" ilk="argument" name="self" />
+        </scope>
+        <scope ilk="function" line="134" lineend="145" name="close" signature="close(self)">
+          <variable citdl="Shelf" ilk="argument" name="self" />
+        </scope>
+        <scope ilk="function" line="84" lineend="92" name="__init__" signature="__init__(self, dict, protocol=None, writeback=False, keyencoding=&apos;utf-8&apos;)">
+          <variable citdl="False" ilk="argument" name="writeback" />
+          <variable citdl="Shelf" ilk="argument" name="self" />
+          <variable citdl="int" ilk="argument" name="protocol" />
+          <variable ilk="argument" name="dict" />
+          <variable citdl="str" ilk="argument" name="keyencoding" />
+        </scope>
+        <variable attributes="__instancevar__" citdl="True" line="90" name="writeback" />
+        <variable attributes="__instancevar__" citdl="dict" line="91" name="cache" />
+        <variable attributes="__instancevar__" citdl="_ClosedDict" line="86" name="dict" />
+        <variable attributes="protected __instancevar__" citdl="int" line="89" name="_protocol" />
+        <variable attributes="__instancevar__" citdl="str" line="92" name="keyencoding" />
+      </scope>
+      <scope classrefs="object" doc="Unpickler(file, *, encoding=&apos;ASCII&apos;, errors=&apos;strict&apos;)&#xA;This takes a binary file for reading a pickle data stream.  The protocol version of the pickle is detected automatically, so no proto argument is needed.  The file-like object must have two methods, a read() method that takes an integer argument, and a readline() method that requires no arguments.  Both methods should return bytes. Thus file-like object can be a binary file object opened for reading, a BytesIO object, or any other custom object that" ilk="class" name="Unpickler">
+        <scope doc="Read a pickled object representation from the open file&#xA;object given in the constructor, and return the&#xA;reconstituted object hierarchy specified therein." ilk="function" name="load" signature="load() -&gt; object. Load a pickle." />
+        <scope doc="Return an object from a specified module, importing the&#xA;module if necessary." ilk="function" name="find_class" signature="find_class(module_name, global_name) -&gt; object." />
+        <scope ilk="function" name="__init__" />
+      </scope>
+      <variable citdl="list" line="64" name="__all__" />
+      <import module="collections" />
+      <scope doc="Open a persistent dictionary for reading and writing." ilk="function" line="219" lineend="232" name="open" returns="DbfilenameShelf" signature="open(filename, flag=&apos;c&apos;, protocol=None, writeback=False)">
+        <variable citdl="False" ilk="argument" name="writeback" />
+        <variable citdl="str" ilk="argument" name="flag" />
+        <variable ilk="argument" name="protocol" />
+        <variable ilk="argument" name="filename" />
+      </scope>
+      <scope attributes="protected __hidden__" classrefs="collections.MutableMapping" doc="Marker for a closed dict.  Access attempts raise a ValueError." ilk="class" line="66" lineend="74" name="_ClosedDict">
+        <scope ilk="function" line="69" lineend="70" name="closed" signature="closed(*args)">
+          <variable citdl="_ClosedDict" ilk="argument" name="self" />
+          <variable attributes="varargs" ilk="argument" name="args" />
+        </scope>
+        <variable citdl="_ClosedDict.closed" line="71" name="__iter__" />
+        <scope ilk="function" line="73" lineend="74" name="__repr__" returns="str" signature="__repr__()">
+          <variable citdl="_ClosedDict" ilk="argument" name="self" />
+        </scope>
+      </scope>
+    </scope>
+    

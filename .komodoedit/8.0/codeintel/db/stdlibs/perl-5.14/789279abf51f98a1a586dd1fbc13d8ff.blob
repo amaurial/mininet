@@ -1,0 +1,17 @@
+<scope ilk="blob" lang="Perl" name="URI::data">
+      <scope classrefs="URI" ilk="class" line="1" lineend="74" name="URI::data">
+        <import line="3" module="URI" />
+        <import line="8" module="MIME::Base64" symbol="encode_base64" />
+        <import line="8" module="MIME::Base64" symbol="decode_base64" />
+        <import line="9" module="URI::Escape" symbol="uri_unescape" />
+        <scope ilk="function" line="11" lineend="30" name="media_type" signature="media_type($self, $new)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$new" />
+        </scope>
+        <scope ilk="function" line="32" lineend="60" name="data" signature="data($self, $new)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$new" />
+        </scope>
+      </scope>
+    </scope>
+    

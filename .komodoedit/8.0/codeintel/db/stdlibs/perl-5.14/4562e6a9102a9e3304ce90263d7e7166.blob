@@ -1,0 +1,36 @@
+<scope ilk="blob" lang="Perl" name="TAP::Formatter::Console::ParallelSession">
+      <scope classrefs="TAP::Formatter::Console::Session" ilk="class" line="1" lineend="202" name="TAP::Formatter::Console::ParallelSession">
+        <import line="4" module="File::Spec" symbol="*" />
+        <import line="5" module="File::Path" symbol="*" />
+        <import line="6" module="TAP::Formatter::Console::Session" symbol="*" />
+        <import line="7" module="Carp" symbol="*" />
+        <variable line="10" name="$VERSION" />
+        <variable line="10" name="@ISA" />
+        <scope ilk="function" line="16" lineend="28" name="_initialize" signature="_initialize($self, $arg_for)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$arg_for" />
+        </scope>
+        <scope ilk="function" line="30" lineend="37" name="_create_shared_context" signature="_create_shared_context($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="70" lineend="71" name="header" signature="header()" />
+        <scope ilk="function" line="73" lineend="76" name="_clear_ruler" signature="_clear_ruler($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="84" lineend="114" name="_output_ruler" signature="_output_ruler($self, $refresh)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$refresh" />
+        </scope>
+        <scope ilk="function" line="122" lineend="148" name="result" signature="result($self, $result)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$result" />
+        </scope>
+        <scope ilk="function" line="154" lineend="165" name="clear_for_close" signature="clear_for_close($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="171" lineend="200" name="close_test" signature="close_test($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+      </scope>
+    </scope>
+    

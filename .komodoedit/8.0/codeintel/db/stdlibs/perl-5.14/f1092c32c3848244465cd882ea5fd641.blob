@@ -1,0 +1,65 @@
+<scope ilk="blob" lang="Perl" name="GD::Graph::pie">
+      <scope ilk="class" line="12" lineend="466" name="GD::Graph::pie">
+        <import line="20" module="GD" symbol="*" />
+        <import line="21" module="GD::Graph" symbol="*" />
+        <import line="22" module="GD::Graph::utils" symbol="**" />
+        <import line="23" module="GD::Graph::colour" symbol="**" />
+        <import line="24" module="GD::Text::Align" symbol="*" />
+        <import line="25" module="Carp" symbol="*" />
+        <variable line="27" name="@GD::Graph::pie::ISA" />
+        <scope ilk="function" line="58" lineend="62" name="_has_default" signature="_has_default($self, $attr)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$attr" />
+        </scope>
+        <scope ilk="function" line="64" lineend="73" name="initialise" signature="initialise($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="76" lineend="90" name="plot" signature="plot($self, $data)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$data" />
+        </scope>
+        <scope ilk="function" line="92" lineend="97" name="set_label_font" signature="set_label_font($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="99" lineend="104" name="set_value_font" signature="set_value_font($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="113" lineend="152" name="setup_coords" signature="setup_coords($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="157" lineend="177" name="setup_text" signature="setup_text($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="180" lineend="190" name="draw_text" signature="draw_text($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="193" lineend="224" name="draw_pie" signature="draw_pie($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="228" lineend="340" name="draw_data" signature="draw_data($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="342" lineend="416" name="_get_pie_front_coords" signature="_get_pie_front_coords($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="421" lineend="427" name="in_front" signature="in_front()">
+          </scope>
+        <scope ilk="function" line="432" lineend="438" name="level_angle" signature="level_angle($a)">
+          <variable ilk="argument" name="$a" />
+        </scope>
+        <scope ilk="function" line="441" lineend="450" name="put_slice_label" signature="put_slice_label($self, $x, $y, $label)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$x" />
+          <variable ilk="argument" name="$y" />
+          <variable ilk="argument" name="$label" />
+        </scope>
+        <scope ilk="function" line="456" lineend="464" name="cartesian" signature="cartesian($r, $phi, $xi, $yi, $cr)">
+          <variable ilk="argument" name="$r" />
+          <variable ilk="argument" name="$phi" />
+          <variable ilk="argument" name="$xi" />
+          <variable ilk="argument" name="$yi" />
+          <variable ilk="argument" name="$cr" />
+        </scope>
+      </scope>
+    </scope>
+    

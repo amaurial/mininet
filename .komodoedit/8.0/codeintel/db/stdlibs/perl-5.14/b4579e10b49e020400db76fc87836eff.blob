@@ -1,0 +1,62 @@
+<scope ilk="blob" lang="Perl" name="IO::Compress::RawDeflate">
+      <scope classrefs="Exporter IO::Compress::Base" ilk="class" line="1" lineend="247" name="IO::Compress::RawDeflate">
+        <import line="10" module="IO::Compress::Base" symbol="*" />
+        <import line="11" module="IO::Compress::Base::Common" symbol="*" />
+        <import line="12" module="IO::Compress::Adapter::Deflate" symbol="*" />
+        <import line="14" module="Exporter" />
+        <import line="178" module="IO::Seekable" symbol="SEEK_SET" />
+        <variable attributes="__exportable__" line="17" name="$RawDeflateError" />
+        <variable line="17" name="$VERSION" />
+        <variable line="17" name="%DEFLATE_CONSTANTS" />
+        <variable line="17" name="%EXPORT_TAGS" />
+        <variable line="17" name="@EXPORT_OK" />
+        <variable line="17" name="@ISA" />
+        <scope ilk="function" line="69" lineend="76" name="new" signature="new($class)">
+          <variable ilk="argument" name="$class" />
+        </scope>
+        <scope attributes="__exportable__" ilk="function" line="78" lineend="82" name="rawdeflate" signature="rawdeflate()">
+          </scope>
+        <scope ilk="function" line="84" lineend="90" name="ckParams" signature="ckParams($self, $got)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$got" />
+        </scope>
+        <scope ilk="function" line="92" lineend="108" name="mkComp" signature="mkComp($self, $got)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$got" />
+        </scope>
+        <scope ilk="function" line="111" lineend="115" name="mkHeader" signature="mkHeader($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="117" lineend="121" name="mkTrailer" signature="mkTrailer($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="123" lineend="126" name="mkFinalTrailer" signature="mkFinalTrailer()" />
+        <scope ilk="function" line="135" lineend="139" name="getExtraParams" signature="getExtraParams($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="141" lineend="162" name="getZlibParams" signature="getZlibParams($self)">
+          <import line="145" module="IO::Compress::Base::Common" symbol="*" />
+          <import line="146" module="Compress::Raw::Zlib" symbol="*" />
+          <variable ilk="argument" name="$self" />
+          <import line="145" module="IO::Compress::Base::Common" symbol="*" />
+          <import line="146" module="Compress::Raw::Zlib" symbol="*" />
+        </scope>
+        <scope ilk="function" line="164" lineend="168" name="getInverseClass" signature="getInverseClass()" />
+        <scope ilk="function" line="170" lineend="176" name="getFileInfo" signature="getFileInfo($self, $params, $file)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$params" />
+          <variable ilk="argument" name="$file" />
+        </scope>
+        <scope ilk="function" line="180" lineend="226" name="createMerge" signature="createMerge($self, $outValue, $outType)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$outValue" />
+          <variable ilk="argument" name="$outType" />
+        </scope>
+        <scope ilk="function" line="230" lineend="242" name="deflateParams" signature="deflateParams($self, $level, $strategy)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$level" />
+          <variable ilk="argument" name="$strategy" />
+        </scope>
+      </scope>
+    </scope>
+    

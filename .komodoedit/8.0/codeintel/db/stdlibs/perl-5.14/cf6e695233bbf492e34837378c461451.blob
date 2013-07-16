@@ -1,0 +1,79 @@
+<scope ilk="blob" lang="Perl" name="CPANPLUS::Configure::Setup">
+      <scope ilk="class" line="1" lineend="1653" name="CPANPLUS::Configure::Setup">
+        <import line="9" module="Config" symbol="*" />
+        <import line="10" module="Term::UI" symbol="*" />
+        <import line="11" module="Module::Load" symbol="*" />
+        <import line="12" module="Term::ReadLine" symbol="*" />
+        <import line="15" module="CPANPLUS::Internals::Utils" symbol="*" />
+        <import line="16" module="CPANPLUS::Internals::Constants" symbol="*" />
+        <import line="17" module="CPANPLUS::Error" symbol="*" />
+        <import line="19" module="IPC::Cmd" symbol="can_run" />
+        <import line="20" module="Params::Check" symbol="check" />
+        <import line="21" module="Module::Load::Conditional" symbol="check_install" />
+        <import line="22" module="Locale::Maketext::Simple" symbol="Class" />
+        <variable line="4" name="@ISA" />
+        <variable line="25" name="$Term::UI::VERBOSE" />
+        <variable line="80" name="$Term::UI::AUTOREPLY" />
+        <scope ilk="function" line="43" lineend="83" name="new" signature="new($class, %hash)">
+          <variable ilk="argument" name="$class" />
+          <variable ilk="argument" name="%hash" />
+        </scope>
+        <scope ilk="function" line="85" lineend="159" name="init" signature="init($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="164" lineend="229" name="_save_where" signature="_save_where($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="233" lineend="345" name="_setup_base" signature="_setup_base($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="347" lineend="457" name="_setup_ftp" signature="_setup_ftp($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="461" lineend="528" name="_setup_program" signature="_setup_program($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="530" lineend="727" name="_setup_installer" signature="_setup_installer($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="730" lineend="1059" name="_setup_conf" signature="_setup_conf($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="1061" lineend="1331" name="_setup_hosts" signature="_setup_hosts($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="1333" lineend="1363" name="_view_hosts" signature="_view_hosts($self, @hosts)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="@hosts" />
+        </scope>
+        <scope ilk="function" line="1365" lineend="1396" name="_get_mirrored_by" signature="_get_mirrored_by($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="1398" lineend="1487" name="_parse_mirrored_by" signature="_parse_mirrored_by($self, $file)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$file" />
+        </scope>
+        <scope ilk="function" line="1489" lineend="1504" name="_parse_host" signature="_parse_host($self, $host)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$host" />
+        </scope>
+        <scope ilk="function" line="1517" lineend="1572" name="_guess_from_timezone" signature="_guess_from_timezone($self, $hosts)">
+          <import line="1550" module="Time::Local" symbol="*" />
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$hosts" />
+          <import line="1550" module="Time::Local" symbol="*" />
+        </scope>
+        <scope ilk="function" line="1579" lineend="1613" name="_valid_email" signature="_valid_email($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="1624" lineend="1644" name="_edit" signature="_edit($self, $file, $editor)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$file" />
+          <variable ilk="argument" name="$editor" />
+        </scope>
+        <scope ilk="function" line="1646" lineend="1651" name="_save" signature="_save($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+      </scope>
+    </scope>
+    

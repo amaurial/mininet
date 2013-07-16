@@ -1,0 +1,61 @@
+<scope ilk="blob" lang="Perl" name="CPANPLUS::Dist">
+      <scope ilk="class" line="1" lineend="804" name="CPANPLUS::Dist">
+        <import line="5" module="CPANPLUS::Error" symbol="*" />
+        <import line="6" module="CPANPLUS::Internals::Constants" symbol="*" />
+        <import line="8" module="Cwd" />
+        <import line="9" module="Object::Accessor" symbol="*" />
+        <import line="10" module="Parse::CPAN::Meta" symbol="*" />
+        <import line="12" module="IPC::Cmd" symbol="run" />
+        <import line="13" module="Params::Check" symbol="check" />
+        <import line="14" module="Module::Load::Conditional" symbol="can_load" />
+        <import line="14" module="Module::Load::Conditional" symbol="check_install" />
+        <import line="15" module="Locale::Maketext::Simple" symbol="Class" />
+        <scope ilk="function" line="107" lineend="164" name="new" signature="new($self, %hash)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="%hash" />
+        </scope>
+        <scope ilk="function" line="180" lineend="180" name="_add_dist_types" signature="_add_dist_types($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="183" lineend="183" name="_ignore_dist_types" signature="_ignore_dist_types($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="184" lineend="184" name="_reset_dist_ignore" signature="_reset_dist_ignore()" />
+        <scope ilk="function" line="192" lineend="218" name="dist_types" signature="dist_types()">
+          <import line="197" module="Module::Pluggable" />
+          <import line="197" module="Module::Pluggable" />
+        </scope>
+        <scope ilk="function" line="228" lineend="232" name="rescan_dist_types" signature="rescan_dist_types($dist)">
+          <variable ilk="argument" name="$dist" />
+        </scope>
+        <scope ilk="function" line="241" lineend="246" name="has_dist_type" signature="has_dist_type($dist, $type)">
+          <variable ilk="argument" name="$dist" />
+          <variable ilk="argument" name="$type" />
+        </scope>
+        <scope ilk="function" line="256" lineend="283" name="prereq_satisfied" signature="prereq_satisfied($dist, %hash)">
+          <variable ilk="argument" name="$dist" />
+          <variable ilk="argument" name="%hash" />
+        </scope>
+        <scope ilk="function" line="293" lineend="341" name="find_configure_requires" signature="find_configure_requires($self, %hash)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="%hash" />
+        </scope>
+        <scope ilk="function" line="343" lineend="393" name="find_mymeta_requires" signature="find_mymeta_requires($self, %hash)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="%hash" />
+        </scope>
+        <scope ilk="function" line="395" lineend="443" name="_prereqs_from_meta_file" signature="_prereqs_from_meta_file($self, %hash)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="%hash" />
+        </scope>
+        <scope ilk="function" line="445" lineend="500" name="_prereqs_from_meta_json" signature="_prereqs_from_meta_json($self, %hash)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="%hash" />
+        </scope>
+        <scope ilk="function" line="525" lineend="795" name="_resolve_prereqs" signature="_resolve_prereqs($dist, %hash)">
+          <variable ilk="argument" name="$dist" />
+          <variable ilk="argument" name="%hash" />
+        </scope>
+      </scope>
+    </scope>
+    

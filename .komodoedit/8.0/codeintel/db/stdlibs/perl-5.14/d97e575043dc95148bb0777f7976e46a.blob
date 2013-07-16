@@ -1,0 +1,62 @@
+<scope ilk="blob" lang="Perl" name="Class::MOP::Mixin::HasMethods">
+      <scope ilk="class" line="1" lineend="242" name="Class::MOP::Mixin::HasMethods">
+        <import line="12" module="Class::MOP::Method::Meta" symbol="*" />
+        <import line="14" module="Scalar::Util" symbol="blessed" />
+        <import line="15" module="Carp" symbol="confess" />
+        <import line="16" module="Sub::Name" symbol="subname" />
+        <variable line="3" name="$Class::MOP::Mixin::HasMethods::AUTHORITY" />
+        <variable line="6" name="$Class::MOP::Mixin::HasMethods::VERSION" />
+        <scope ilk="function" line="20" lineend="20" name="_meta_method_class" signature="_meta_method_class()" />
+        <scope ilk="function" line="22" lineend="37" name="_add_meta_method" signature="_add_meta_method($self, $name)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$name" />
+        </scope>
+        <scope ilk="function" line="39" lineend="49" name="wrap_method_body" signature="wrap_method_body($self, %args)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="%args" />
+        </scope>
+        <scope ilk="function" line="51" lineend="87" name="add_method" signature="add_method($self, $method_name, $method)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$method_name" />
+          <variable ilk="argument" name="$method" />
+        </scope>
+        <scope ilk="function" line="89" lineend="96" name="_code_is_mine" signature="_code_is_mine($self, $code)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$code" />
+        </scope>
+        <scope ilk="function" line="98" lineend="108" name="has_method" signature="has_method($self, $method_name)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$method_name" />
+        </scope>
+        <scope ilk="function" line="110" lineend="126" name="get_method" signature="get_method($self, $method_name)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$method_name" />
+        </scope>
+        <scope ilk="function" line="128" lineend="139" name="_get_maybe_raw_method" signature="_get_maybe_raw_method($self, $method_name)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$method_name" />
+        </scope>
+        <scope ilk="function" line="141" lineend="158" name="remove_method" signature="remove_method($self, $method_name)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$method_name" />
+        </scope>
+        <scope ilk="function" line="160" lineend="164" name="get_method_list" signature="get_method_list($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="166" lineend="170" name="_get_local_methods" signature="_get_local_methods($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="172" lineend="180" name="_restore_metamethods_from" signature="_restore_metamethods_from($self, $old_meta)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$old_meta" />
+        </scope>
+        <scope ilk="function" line="182" lineend="182" name="reset_package_cache_flag" signature="reset_package_cache_flag()" />
+        <scope ilk="function" line="183" lineend="192" name="update_package_cache_flag" signature="update_package_cache_flag($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="194" lineend="207" name="_full_method_map" signature="_full_method_map($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+      </scope>
+    </scope>
+    

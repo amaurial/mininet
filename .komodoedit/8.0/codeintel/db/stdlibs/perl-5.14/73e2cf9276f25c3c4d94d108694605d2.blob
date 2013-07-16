@@ -1,0 +1,285 @@
+<scope ilk="blob" lang="Perl" name="Date::Calendar::Profiles">
+      <scope classrefs="Exporter" ilk="class" line="12" lineend="2997" name="Date::Calendar::Profiles">
+        <import line="14" module="bytes" />
+        <import line="18" module="Exporter" />
+        <import line="40" module="Date::Calc" symbol="**" />
+        <import line="41" module="Carp::Clan" symbol="^Date::" />
+        <variable attributes="__exportable__" line="16" name="$Profiles" />
+        <variable line="16" name="$VERSION" />
+        <variable line="16" name="@EXPORT" />
+        <variable line="16" name="@EXPORT_OK" />
+        <variable line="16" name="@ISA" />
+        <scope attributes="__exportable__" ilk="function" line="85" lineend="98" name="Previous_Friday" signature="Previous_Friday()">
+          </scope>
+        <scope attributes="__exportable__" ilk="function" line="100" lineend="114" name="Next_Monday" signature="Next_Monday()">
+          </scope>
+        <scope attributes="__exportable__" ilk="function" line="116" lineend="131" name="Next_Monday_or_Tuesday" signature="Next_Monday_or_Tuesday()">
+          </scope>
+        <scope attributes="__exportable__" ilk="function" line="133" lineend="147" name="Nearest_Workday" signature="Nearest_Workday()">
+          </scope>
+        <scope attributes="__exportable__" ilk="function" line="149" lineend="161" name="Sunday_to_Monday" signature="Sunday_to_Monday()">
+          </scope>
+        <scope attributes="__exportable__" ilk="function" line="167" lineend="172" name="Advent1" signature="Advent1($year, $label)">
+          <variable ilk="argument" name="$year" />
+          <variable ilk="argument" name="$label" />
+        </scope>
+        <scope attributes="__exportable__" ilk="function" line="173" lineend="178" name="Advent2" signature="Advent2($year, $label)">
+          <variable ilk="argument" name="$year" />
+          <variable ilk="argument" name="$label" />
+        </scope>
+        <scope attributes="__exportable__" ilk="function" line="179" lineend="184" name="Advent3" signature="Advent3($year, $label)">
+          <variable ilk="argument" name="$year" />
+          <variable ilk="argument" name="$label" />
+        </scope>
+        <scope attributes="__exportable__" ilk="function" line="185" lineend="190" name="Advent4" signature="Advent4($year, $label)">
+          <variable ilk="argument" name="$year" />
+          <variable ilk="argument" name="$label" />
+        </scope>
+        <scope attributes="__exportable__" ilk="function" line="192" lineend="200" name="Advent" signature="Advent($year, $label)">
+          <variable ilk="argument" name="$year" />
+          <variable ilk="argument" name="$label" />
+        </scope>
+        <scope ilk="function" line="363" lineend="370" name="DE_Buss_und_Bettag" signature="DE_Buss_und_Bettag($year, $label)">
+          <variable ilk="argument" name="$year" />
+          <variable ilk="argument" name="$label" />
+        </scope>
+        <scope ilk="function" line="371" lineend="374" name="DE_Buss_und_Bettag2" signature="DE_Buss_und_Bettag2()" />
+        <scope ilk="function" line="375" lineend="380" name="DE_Volkstrauertag" signature="DE_Volkstrauertag($year, $label)">
+          <variable ilk="argument" name="$year" />
+          <variable ilk="argument" name="$label" />
+        </scope>
+        <scope ilk="function" line="381" lineend="386" name="DE_Totensonntag" signature="DE_Totensonntag($year, $label)">
+          <variable ilk="argument" name="$year" />
+          <variable ilk="argument" name="$label" />
+        </scope>
+        <scope ilk="function" line="435" lineend="439" name="US_New_Year" signature="US_New_Year($year, $label)">
+          <variable ilk="argument" name="$year" />
+          <variable ilk="argument" name="$label" />
+        </scope>
+        <scope ilk="function" line="440" lineend="444" name="US_Independence" signature="US_Independence($year, $label)">
+          <variable ilk="argument" name="$year" />
+          <variable ilk="argument" name="$label" />
+        </scope>
+        <scope ilk="function" line="445" lineend="450" name="US_Labor" signature="US_Labor($year, $label)">
+          <variable ilk="argument" name="$year" />
+          <variable ilk="argument" name="$label" />
+        </scope>
+        <scope ilk="function" line="451" lineend="456" name="US_Election" signature="US_Election($year, $label)">
+          <variable ilk="argument" name="$year" />
+          <variable ilk="argument" name="$label" />
+        </scope>
+        <scope ilk="function" line="457" lineend="461" name="US_Veteran" signature="US_Veteran($year, $label)">
+          <variable ilk="argument" name="$year" />
+          <variable ilk="argument" name="$label" />
+        </scope>
+        <scope ilk="function" line="462" lineend="466" name="US_Christmas" signature="US_Christmas($year, $label)">
+          <variable ilk="argument" name="$year" />
+          <variable ilk="argument" name="$label" />
+        </scope>
+        <scope ilk="function" line="719" lineend="724" name="CA_QC_Dollard" signature="CA_QC_Dollard($year, $label)">
+          <variable ilk="argument" name="$year" />
+          <variable ilk="argument" name="$label" />
+        </scope>
+        <scope ilk="function" line="1262" lineend="1272" name="IT_Fondazione" signature="IT_Fondazione($year, $label)">
+          <variable ilk="argument" name="$year" />
+          <variable ilk="argument" name="$label" />
+        </scope>
+        <scope ilk="function" line="1379" lineend="1387" name="NL_Koninginnedag" signature="NL_Koninginnedag($year, $label)">
+          <variable ilk="argument" name="$year" />
+          <variable ilk="argument" name="$label" />
+        </scope>
+        <scope ilk="function" line="1411" lineend="1433" name="NL_Bevrijdingsdag" signature="NL_Bevrijdingsdag($year, $label)">
+          <variable ilk="argument" name="$year" />
+          <variable ilk="argument" name="$label" />
+        </scope>
+        <scope ilk="function" line="1477" lineend="1482" name="SV_Midsommarafton" signature="SV_Midsommarafton($year, $label)">
+          <variable ilk="argument" name="$year" />
+          <variable ilk="argument" name="$label" />
+        </scope>
+        <scope ilk="function" line="1483" lineend="1488" name="SV_Midsommardagen" signature="SV_Midsommardagen($year, $label)">
+          <variable ilk="argument" name="$year" />
+          <variable ilk="argument" name="$label" />
+        </scope>
+        <scope ilk="function" line="1489" lineend="1494" name="SV_Alla_Helgons_Dag" signature="SV_Alla_Helgons_Dag($year, $label)">
+          <variable ilk="argument" name="$year" />
+          <variable ilk="argument" name="$label" />
+        </scope>
+        <scope ilk="function" line="1571" lineend="1575" name="GB_New_Year" signature="GB_New_Year($year, $label)">
+          <variable ilk="argument" name="$year" />
+          <variable ilk="argument" name="$label" />
+        </scope>
+        <scope ilk="function" line="1582" lineend="1589" name="GB_Early_May" signature="GB_Early_May($year, $label)">
+          <variable ilk="argument" name="$year" />
+          <variable ilk="argument" name="$label" />
+        </scope>
+        <scope ilk="function" line="1590" lineend="1594" name="GB_Christmas" signature="GB_Christmas($year, $label)">
+          <variable ilk="argument" name="$year" />
+          <variable ilk="argument" name="$label" />
+        </scope>
+        <scope ilk="function" line="1595" lineend="1599" name="GB_Boxing" signature="GB_Boxing($year, $label)">
+          <variable ilk="argument" name="$year" />
+          <variable ilk="argument" name="$label" />
+        </scope>
+        <scope ilk="function" line="1641" lineend="1645" name="AU_Australia" signature="AU_Australia($year, $label)">
+          <variable ilk="argument" name="$year" />
+          <variable ilk="argument" name="$label" />
+        </scope>
+        <scope ilk="function" line="1646" lineend="1650" name="AU_Christmas" signature="AU_Christmas($year, $label)">
+          <variable ilk="argument" name="$year" />
+          <variable ilk="argument" name="$label" />
+        </scope>
+        <scope ilk="function" line="1651" lineend="1655" name="AU_Boxing" signature="AU_Boxing($year, $label)">
+          <variable ilk="argument" name="$year" />
+          <variable ilk="argument" name="$label" />
+        </scope>
+        <scope ilk="function" line="1656" lineend="1660" name="AU_New_Year" signature="AU_New_Year($year, $label)">
+          <variable ilk="argument" name="$year" />
+          <variable ilk="argument" name="$label" />
+        </scope>
+        <scope ilk="function" line="1661" lineend="1668" name="AU_Lauceston" signature="AU_Lauceston($year, $label)">
+          <variable ilk="argument" name="$year" />
+          <variable ilk="argument" name="$label" />
+        </scope>
+        <scope ilk="function" line="1669" lineend="1673" name="AU_May" signature="AU_May($year, $label)">
+          <variable ilk="argument" name="$year" />
+          <variable ilk="argument" name="$label" />
+        </scope>
+        <scope ilk="function" line="1674" lineend="1678" name="AU_QLD_Anzac" signature="AU_QLD_Anzac($year, $label)">
+          <variable ilk="argument" name="$year" />
+          <variable ilk="argument" name="$label" />
+        </scope>
+        <scope ilk="function" line="1679" lineend="1686" name="AU_QLD_Brisbane" signature="AU_QLD_Brisbane($year, $label)">
+          <variable ilk="argument" name="$year" />
+          <variable ilk="argument" name="$label" />
+        </scope>
+        <scope ilk="function" line="1687" lineend="1691" name="AU_VIC_New_Year" signature="AU_VIC_New_Year($year, $label)">
+          <variable ilk="argument" name="$year" />
+          <variable ilk="argument" name="$label" />
+        </scope>
+        <scope ilk="function" line="1692" lineend="1696" name="AU_VIC_Boxing" signature="AU_VIC_Boxing($year, $label)">
+          <variable ilk="argument" name="$year" />
+          <variable ilk="argument" name="$label" />
+        </scope>
+        <scope ilk="function" line="1813" lineend="1817" name="NZ_New_Year" signature="NZ_New_Year($year, $label)">
+          <variable ilk="argument" name="$year" />
+          <variable ilk="argument" name="$label" />
+        </scope>
+        <scope ilk="function" line="1818" lineend="1822" name="NZ_After_New_Year" signature="NZ_After_New_Year($year, $label)">
+          <variable ilk="argument" name="$year" />
+          <variable ilk="argument" name="$label" />
+        </scope>
+        <scope ilk="function" line="1823" lineend="1827" name="NZ_Labour" signature="NZ_Labour($year, $label)">
+          <variable ilk="argument" name="$year" />
+          <variable ilk="argument" name="$label" />
+        </scope>
+        <scope ilk="function" line="1828" lineend="1832" name="NZ_Christmas" signature="NZ_Christmas($year, $label)">
+          <variable ilk="argument" name="$year" />
+          <variable ilk="argument" name="$label" />
+        </scope>
+        <scope ilk="function" line="1833" lineend="1837" name="NZ_Boxing" signature="NZ_Boxing($year, $label)">
+          <variable ilk="argument" name="$year" />
+          <variable ilk="argument" name="$label" />
+        </scope>
+        <scope ilk="function" line="1839" lineend="1843" name="NZ_Southland" signature="NZ_Southland($year, $label)">
+          <variable ilk="argument" name="$year" />
+          <variable ilk="argument" name="$label" />
+        </scope>
+        <scope ilk="function" line="1844" lineend="1848" name="NZ_Wellington" signature="NZ_Wellington($year, $label)">
+          <variable ilk="argument" name="$year" />
+          <variable ilk="argument" name="$label" />
+        </scope>
+        <scope ilk="function" line="1849" lineend="1853" name="NZ_Auckland" signature="NZ_Auckland($year, $label)">
+          <variable ilk="argument" name="$year" />
+          <variable ilk="argument" name="$label" />
+        </scope>
+        <scope ilk="function" line="1854" lineend="1858" name="NZ_Taranaki" signature="NZ_Taranaki($year, $label)">
+          <variable ilk="argument" name="$year" />
+          <variable ilk="argument" name="$label" />
+        </scope>
+        <scope ilk="function" line="1859" lineend="1863" name="NZ_Otago" signature="NZ_Otago($year, $label)">
+          <variable ilk="argument" name="$year" />
+          <variable ilk="argument" name="$label" />
+        </scope>
+        <scope ilk="function" line="1864" lineend="1868" name="NZ_South_Canterbury" signature="NZ_South_Canterbury($year, $label)">
+          <variable ilk="argument" name="$year" />
+          <variable ilk="argument" name="$label" />
+        </scope>
+        <scope ilk="function" line="1869" lineend="1873" name="NZ_Hawkes_Bay" signature="NZ_Hawkes_Bay($year, $label)">
+          <variable ilk="argument" name="$year" />
+          <variable ilk="argument" name="$label" />
+        </scope>
+        <scope ilk="function" line="1874" lineend="1878" name="NZ_Marlborough" signature="NZ_Marlborough($year, $label)">
+          <variable ilk="argument" name="$year" />
+          <variable ilk="argument" name="$label" />
+        </scope>
+        <scope ilk="function" line="1879" lineend="1883" name="NZ_North_Central_Canterbury" signature="NZ_North_Central_Canterbury($year, $label)">
+          <variable ilk="argument" name="$year" />
+          <variable ilk="argument" name="$label" />
+        </scope>
+        <scope ilk="function" line="1884" lineend="1888" name="NZ_Chatham_Islands" signature="NZ_Chatham_Islands($year, $label)">
+          <variable ilk="argument" name="$year" />
+          <variable ilk="argument" name="$label" />
+        </scope>
+        <scope ilk="function" line="1889" lineend="1893" name="NZ_Westland" signature="NZ_Westland($year, $label)">
+          <variable ilk="argument" name="$year" />
+          <variable ilk="argument" name="$label" />
+        </scope>
+        <scope ilk="function" line="1894" lineend="1898" name="NZ_Christchurch" signature="NZ_Christchurch($year, $label)">
+          <variable ilk="argument" name="$year" />
+          <variable ilk="argument" name="$label" />
+        </scope>
+        <scope ilk="function" line="2873" lineend="2878" name="ZA_Y2K_1" signature="ZA_Y2K_1($year, $label)">
+          <variable ilk="argument" name="$year" />
+          <variable ilk="argument" name="$label" />
+        </scope>
+        <scope ilk="function" line="2879" lineend="2884" name="ZA_Y2K_2" signature="ZA_Y2K_2($year, $label)">
+          <variable ilk="argument" name="$year" />
+          <variable ilk="argument" name="$label" />
+        </scope>
+        <scope ilk="function" line="2885" lineend="2890" name="ZA_Y2K_3" signature="ZA_Y2K_3($year, $label)">
+          <variable ilk="argument" name="$year" />
+          <variable ilk="argument" name="$label" />
+        </scope>
+        <scope ilk="function" line="2891" lineend="2895" name="ZA_New_Year" signature="ZA_New_Year($year, $label)">
+          <variable ilk="argument" name="$year" />
+          <variable ilk="argument" name="$label" />
+        </scope>
+        <scope ilk="function" line="2896" lineend="2900" name="ZA_Human_Rights" signature="ZA_Human_Rights($year, $label)">
+          <variable ilk="argument" name="$year" />
+          <variable ilk="argument" name="$label" />
+        </scope>
+        <scope ilk="function" line="2901" lineend="2905" name="ZA_Freedom" signature="ZA_Freedom($year, $label)">
+          <variable ilk="argument" name="$year" />
+          <variable ilk="argument" name="$label" />
+        </scope>
+        <scope ilk="function" line="2906" lineend="2910" name="ZA_Workers" signature="ZA_Workers($year, $label)">
+          <variable ilk="argument" name="$year" />
+          <variable ilk="argument" name="$label" />
+        </scope>
+        <scope ilk="function" line="2911" lineend="2915" name="ZA_Youth" signature="ZA_Youth($year, $label)">
+          <variable ilk="argument" name="$year" />
+          <variable ilk="argument" name="$label" />
+        </scope>
+        <scope ilk="function" line="2916" lineend="2920" name="ZA_Women" signature="ZA_Women($year, $label)">
+          <variable ilk="argument" name="$year" />
+          <variable ilk="argument" name="$label" />
+        </scope>
+        <scope ilk="function" line="2921" lineend="2925" name="ZA_Heritage" signature="ZA_Heritage($year, $label)">
+          <variable ilk="argument" name="$year" />
+          <variable ilk="argument" name="$label" />
+        </scope>
+        <scope ilk="function" line="2926" lineend="2930" name="ZA_Reconciliation" signature="ZA_Reconciliation($year, $label)">
+          <variable ilk="argument" name="$year" />
+          <variable ilk="argument" name="$label" />
+        </scope>
+        <scope ilk="function" line="2931" lineend="2935" name="ZA_Christmas" signature="ZA_Christmas($year, $label)">
+          <variable ilk="argument" name="$year" />
+          <variable ilk="argument" name="$label" />
+        </scope>
+        <scope ilk="function" line="2936" lineend="2940" name="ZA_Goodwill" signature="ZA_Goodwill($year, $label)">
+          <variable ilk="argument" name="$year" />
+          <variable ilk="argument" name="$label" />
+        </scope>
+      </scope>
+    </scope>
+    

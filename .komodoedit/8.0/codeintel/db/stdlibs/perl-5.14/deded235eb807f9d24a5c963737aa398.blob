@@ -1,0 +1,43 @@
+<scope ilk="blob" lang="Perl" name="URI::_generic">
+      <scope classrefs="URI URI::_query" ilk="class" line="1" lineend="249" name="URI::_generic">
+        <import line="2" module="URI" />
+        <import line="3" module="URI::_query" />
+        <import line="7" module="URI::Escape" symbol="uri_unescape" />
+        <import line="8" module="Carp" />
+        <scope ilk="function" line="13" lineend="13" name="_no_scheme_ok" signature="_no_scheme_ok()" />
+        <scope ilk="function" line="15" lineend="32" name="authority" signature="authority($self, $auth)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$auth" />
+        </scope>
+        <scope ilk="function" line="34" lineend="49" name="path" signature="path($self, $new_path)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$new_path" />
+        </scope>
+        <scope ilk="function" line="51" lineend="66" name="path_query" signature="path_query($self, $new_path)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$new_path" />
+        </scope>
+        <scope ilk="function" line="68" lineend="87" name="_check_path" signature="_check_path($path, $pre)">
+          <variable ilk="argument" name="$path" />
+          <variable ilk="argument" name="$pre" />
+        </scope>
+        <scope ilk="function" line="89" lineend="113" name="path_segments" signature="path_segments($self, @arg)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="@arg" />
+        </scope>
+        <scope ilk="function" line="116" lineend="121" name="_split_segment" signature="_split_segment($self)">
+          <import line="119" module="URI::_segment" />
+          <variable ilk="argument" name="$self" />
+          <import line="119" module="URI::_segment" />
+        </scope>
+        <scope ilk="function" line="124" lineend="181" name="abs" signature="abs($self, $base)">
+          <variable ilk="argument" name="$self" />
+          <variable citdl="URI" ilk="argument" name="$base" />
+        </scope>
+        <scope ilk="function" line="184" lineend="247" name="rel" signature="rel($self, $base)">
+          <variable ilk="argument" name="$self" />
+          <variable citdl="URI" ilk="argument" name="$base" />
+        </scope>
+      </scope>
+    </scope>
+    

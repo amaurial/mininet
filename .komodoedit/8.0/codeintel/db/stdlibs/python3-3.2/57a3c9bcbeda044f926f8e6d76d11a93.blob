@@ -1,0 +1,83 @@
+<scope doc="Manage HTTP Response Headers&#xA;Much of this module is red-handedly pilfered from email.message in the stdlib, so portions are Copyright (C) 2001,2002 Python Software Foundation, and were written by Barry Warsaw." ilk="blob" lang="Python" name="wsgiref.headers">
+      <scope classrefs="object" doc="Manage a collection of HTTP response headers&#xA;" ilk="class" line="28" lineend="184" name="Headers">
+        <scope doc="Get the first header value for &apos;name&apos;" ilk="function" line="66" lineend="75" name="__getitem__" returns="self.get()" signature="__getitem__(self, name)">
+          <variable citdl="Headers" ilk="argument" name="self" />
+          <variable ilk="argument" name="name" />
+        </scope>
+        <scope doc="Return a list of all the values for the named field." ilk="function" line="82" lineend="91" name="get_all" returns="list" signature="get_all(self, name)">
+          <variable citdl="Headers" ilk="argument" name="self" />
+          <variable citdl="_convert_string_type()" ilk="argument" name="name" />
+        </scope>
+        <scope doc="Return a list of all the header field names." ilk="function" line="103" lineend="111" name="keys" returns="list" signature="keys(self)">
+          <variable citdl="Headers" ilk="argument" name="self" />
+        </scope>
+        <scope doc="suitable for direct HTTP transmission." ilk="function" line="136" lineend="139" name="__str__" returns="str.join()" signature="str() returns the formatted headers, complete with end line,">
+          <variable citdl="Headers" ilk="argument" name="self" />
+        </scope>
+        <scope doc="Extended header setting." ilk="function" line="157" lineend="184" name="add_header" signature="add_header(self, _name, _value, **_params)">
+          <variable citdl="_convert_string_type()" ilk="argument" name="_value" />
+          <variable citdl="list" line="173" name="parts" />
+          <variable citdl="_convert_string_type()" line="182" name="v" />
+          <variable citdl="Headers" ilk="argument" name="self" />
+          <variable citdl="_convert_string_type()" line="178" name="k" />
+          <variable attributes="kwargs" ilk="argument" name="_params" />
+          <variable ilk="argument" name="_name" />
+        </scope>
+        <scope doc="Set the value of a header." ilk="function" line="52" lineend="56" name="__setitem__" signature="__setitem__(self, name, val)">
+          <variable citdl="Headers" ilk="argument" name="self" />
+          <variable ilk="argument" name="name" />
+          <variable ilk="argument" name="val" />
+        </scope>
+        <scope doc="Convert/check value type." ilk="function" line="41" lineend="46" name="_convert_string_type" signature="_convert_string_type(self, value)">
+          <variable citdl="Headers" ilk="argument" name="self" />
+          <variable ilk="argument" name="value" />
+        </scope>
+        <scope ilk="function" line="32" lineend="39" name="__init__" signature="__init__(self, headers)">
+          <variable ilk="argument" name="headers" />
+          <variable citdl="Headers" ilk="argument" name="self" />
+        </scope>
+        <scope doc="Delete all occurrences of a header, if present." ilk="function" line="58" lineend="64" name="__delitem__" signature="__delitem__(self, name)">
+          <variable citdl="Headers" ilk="argument" name="self" />
+          <variable citdl="_convert_string_type()" ilk="argument" name="name" />
+        </scope>
+        <scope doc="Return first matching header value for &apos;name&apos;, or &apos;value&apos;" ilk="function" line="144" lineend="155" name="setdefault" returns="get()" signature="setdefault(self, name, value)">
+          <variable citdl="Headers" ilk="argument" name="self" />
+          <variable ilk="argument" name="name" />
+          <variable ilk="argument" name="value" />
+          <variable citdl="get()" line="149" name="result" />
+        </scope>
+        <scope doc="Return true if the message contains the header." ilk="function" line="77" lineend="79" name="__contains__" returns="bool" signature="__contains__(self, name)">
+          <variable citdl="Headers" ilk="argument" name="self" />
+          <variable ilk="argument" name="name" />
+        </scope>
+        <scope doc="Get all the header fields and values." ilk="function" line="123" lineend="131" name="items" returns="list" signature="items(self)">
+          <variable citdl="Headers" ilk="argument" name="self" />
+        </scope>
+        <scope doc="Get the first header value for &apos;name&apos;, or return &apos;default&apos;" ilk="function" line="94" lineend="100" name="get" returns="v" signature="get(self, name, default=None)">
+          <variable ilk="argument" name="default" />
+          <variable citdl="Headers" ilk="argument" name="self" />
+          <variable citdl="_convert_string_type()" ilk="argument" name="name" />
+        </scope>
+        <scope ilk="function" line="141" lineend="142" name="__bytes__" signature="__bytes__(self)">
+          <variable citdl="Headers" ilk="argument" name="self" />
+        </scope>
+        <scope doc="Return a list of all header values." ilk="function" line="113" lineend="121" name="values" returns="list" signature="values(self)">
+          <variable citdl="Headers" ilk="argument" name="self" />
+        </scope>
+        <scope ilk="function" line="133" lineend="134" name="__repr__" returns="str" signature="__repr__(self)">
+          <variable citdl="Headers" ilk="argument" name="self" />
+        </scope>
+        <scope doc="Return the total number of headers, including duplicates." ilk="function" line="48" lineend="50" name="__len__" returns="len()" signature="__len__(self)">
+          <variable citdl="Headers" ilk="argument" name="self" />
+        </scope>
+        <variable attributes="protected __instancevar__" line="35" name="_headers" />
+      </scope>
+      <import module="re" />
+      <variable citdl="SRE_Pattern" line="11" name="tspecials" />
+      <scope attributes="protected __hidden__" doc="Convenience function to format and return a key=value pair.&#xA;&#xA;This will quote the value if needed or if quote is true." ilk="function" line="13" lineend="25" name="_formatparam" returns="tuple" signature="_formatparam(param, value=None, quote=1)">
+        <variable ilk="argument" name="param" />
+        <variable ilk="argument" name="value" />
+        <variable citdl="int" ilk="argument" name="quote" />
+      </scope>
+    </scope>
+    

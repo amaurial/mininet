@@ -1,0 +1,50 @@
+<scope ilk="blob" lang="Perl" name="PPI::Structure">
+      <scope classrefs="PPI::Node" ilk="class" line="1" lineend="350" name="PPI::Structure">
+        <import line="92" module="Scalar::Util" />
+        <import line="93" module="Params::Util" symbol="_INSTANCE" />
+        <import line="94" module="PPI::Node" />
+        <import line="95" module="PPI::Exception" />
+        <import line="104" module="PPI::Structure::Block" />
+        <import line="105" module="PPI::Structure::Condition" />
+        <import line="106" module="PPI::Structure::Constructor" />
+        <import line="107" module="PPI::Structure::For" />
+        <import line="108" module="PPI::Structure::Given" />
+        <import line="109" module="PPI::Structure::List" />
+        <import line="110" module="PPI::Structure::Subscript" />
+        <import line="111" module="PPI::Structure::Unknown" />
+        <import line="112" module="PPI::Structure::When" />
+        <variable line="97" name="$VERSION" />
+        <variable line="97" name="*_PARENT" />
+        <variable line="97" name="@ISA" />
+        <scope attributes="__ctor__" ilk="function" line="121" lineend="137" name="new" signature="new($class)">
+          <variable ilk="argument" name="$class" />
+        </scope>
+        <scope ilk="function" line="166" lineend="166" name="start" signature="start()" />
+        <scope ilk="function" line="182" lineend="182" name="finish" signature="finish()" />
+        <scope ilk="function" line="197" lineend="204" name="braces" signature="braces()">
+          </scope>
+        <scope ilk="function" line="220" lineend="222" name="complete" signature="complete()" />
+        <scope ilk="function" line="232" lineend="245" name="elements" signature="elements($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="248" lineend="252" name="first_element" signature="first_element()" />
+        <scope ilk="function" line="255" lineend="259" name="last_element" signature="last_element()" />
+        <scope ilk="function" line="262" lineend="266" name="location" signature="location($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="276" lineend="284" name="tokens" signature="tokens($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="289" lineend="297" name="content" signature="content($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="300" lineend="302" name="_complete" signature="_complete()" />
+        <scope ilk="function" line="305" lineend="314" name="insert_before" signature="insert_before($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="317" lineend="326" name="insert_after" signature="insert_after($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+      </scope>
+    </scope>
+    

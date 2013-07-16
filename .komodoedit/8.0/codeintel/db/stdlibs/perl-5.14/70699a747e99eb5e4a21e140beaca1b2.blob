@@ -1,0 +1,43 @@
+<scope ilk="blob" lang="Perl" name="Moose::Meta::Role::Composite">
+      <scope ilk="class" line="1" lineend="227" name="Moose::Meta::Role::Composite">
+        <import line="11" module="metaclass" symbol="*" />
+        <import line="13" module="Scalar::Util" symbol="blessed" />
+        <variable line="3" name="$Moose::Meta::Role::Composite::AUTHORITY" />
+        <variable line="6" name="$Moose::Meta::Role::Composite::VERSION" />
+        <scope ilk="function" line="41" lineend="69" name="new" signature="new($class, %params)">
+          <import line="47" module="Moose" />
+          <variable ilk="argument" name="$class" />
+          <variable ilk="argument" name="%params" />
+          <import line="47" module="Moose" />
+        </scope>
+        <scope ilk="function" line="75" lineend="98" name="add_method" signature="add_method($self, $method_name, $method)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$method_name" />
+          <variable ilk="argument" name="$method" />
+        </scope>
+        <scope ilk="function" line="100" lineend="103" name="get_method_list" signature="get_method_list($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="105" lineend="108" name="_get_local_methods" signature="_get_local_methods($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="110" lineend="114" name="has_method" signature="has_method($self, $method_name)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$method_name" />
+        </scope>
+        <scope ilk="function" line="116" lineend="120" name="get_method" signature="get_method($self, $method_name)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$method_name" />
+        </scope>
+        <scope ilk="function" line="122" lineend="131" name="apply_params" signature="apply_params($self, $role_params)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$role_params" />
+        </scope>
+        <scope ilk="function" line="133" lineend="147" name="reinitialize" signature="reinitialize($class, $old_meta, @args)">
+          <variable ilk="argument" name="$class" />
+          <variable ilk="argument" name="$old_meta" />
+          <variable ilk="argument" name="@args" />
+        </scope>
+      </scope>
+    </scope>
+    

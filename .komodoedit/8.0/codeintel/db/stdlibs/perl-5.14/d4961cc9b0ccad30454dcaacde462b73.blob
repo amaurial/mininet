@@ -1,0 +1,83 @@
+<scope ilk="blob" lang="Perl" name="Perl::Critic::OptionsProcessor">
+      <scope ilk="class" line="8" lineend="279" name="Perl::Critic::OptionsProcessor">
+        <import line="14" module="English" symbol="-no_match_vars" />
+        <import line="16" module="Perl::Critic::Exception::AggregateConfiguration" symbol="*" />
+        <import line="17" module="Perl::Critic::Exception::Configuration::Option::Global::ExtraParameter" symbol="*" />
+        <import line="18" module="Perl::Critic::Utils" symbol="**" />
+        <import line="21" module="Perl::Critic::Utils::Constants" symbol="**" />
+        <import line="25" module="Perl::Critic::Utils::DataConversion" symbol="dor" />
+        <variable line="27" name="$VERSION" />
+        <scope attributes="__ctor__" ilk="function" line="31" lineend="36" name="new" signature="new($class, %args)">
+          <variable ilk="argument" name="$class" />
+          <variable ilk="argument" name="%args" />
+        </scope>
+        <scope ilk="function" line="40" lineend="112" name="_init" signature="_init($self, %args)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="%args" />
+        </scope>
+        <scope ilk="function" line="116" lineend="134" name="_check_for_extra_options" signature="_check_for_extra_options(%args)">
+          <variable ilk="argument" name="%args" />
+        </scope>
+        <scope ilk="function" line="139" lineend="142" name="severity" signature="severity($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="146" lineend="149" name="theme" signature="theme($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="153" lineend="156" name="exclude" signature="exclude($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="160" lineend="163" name="include" signature="include($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="167" lineend="170" name="only" signature="only($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="174" lineend="177" name="profile_strictness" signature="profile_strictness($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="181" lineend="184" name="single_policy" signature="single_policy($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="188" lineend="191" name="verbose" signature="verbose($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="195" lineend="198" name="color" signature="color($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="202" lineend="205" name="pager" signature="pager($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="209" lineend="212" name="allow_unsafe" signature="allow_unsafe($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="216" lineend="219" name="criticism_fatal" signature="criticism_fatal($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="223" lineend="226" name="force" signature="force($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="230" lineend="233" name="top" signature="top($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="237" lineend="240" name="color_severity_highest" signature="color_severity_highest($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="244" lineend="247" name="color_severity_high" signature="color_severity_high($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="251" lineend="254" name="color_severity_medium" signature="color_severity_medium($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="258" lineend="261" name="color_severity_low" signature="color_severity_low($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="265" lineend="268" name="color_severity_lowest" signature="color_severity_lowest($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="272" lineend="275" name="program_extensions" signature="program_extensions($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+      </scope>
+    </scope>
+    

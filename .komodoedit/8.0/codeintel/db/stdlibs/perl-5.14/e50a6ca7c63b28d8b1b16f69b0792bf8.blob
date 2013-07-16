@@ -1,0 +1,78 @@
+<scope ilk="blob" lang="Perl" name="Perl::Critic::Policy::NamingConventions::Capitalization">
+      <scope ilk="class" line="8" lineend="620" name="Perl::Critic::Policy::NamingConventions::Capitalization">
+        <import line="14" module="English" symbol="-no_match_vars" />
+        <import line="15" module="Readonly" symbol="*" />
+        <import line="17" module="List::MoreUtils" symbol="any" />
+        <import line="19" module="Perl::Critic::Exception::AggregateConfiguration" symbol="*" />
+        <import line="20" module="Perl::Critic::Exception::Configuration::Option::Policy::ParameterValue" symbol="*" />
+        <import line="21" module="Perl::Critic::Utils" symbol="**" />
+        <import line="25" module="Perl::Critic::Utils::Perl" symbol="symbol_without_sigil" />
+        <import line="27" module="Perl::Critic::Utils::PPI" symbol="is_in_subroutine" />
+        <import line="30" module="PPIx::Utilities::Statement" symbol="get_constant_name_elements_from_declaring_statement" />
+        <variable line="35" name="$VERSION" />
+        <scope ilk="function" line="95" lineend="208" name="supported_parameters" signature="supported_parameters()" />
+        <scope ilk="function" line="210" lineend="210" name="default_severity" signature="default_severity()" />
+        <scope ilk="function" line="211" lineend="211" name="default_themes" signature="default_themes()" />
+        <scope ilk="function" line="212" lineend="212" name="applies_to" signature="applies_to()" />
+        <scope ilk="function" line="216" lineend="258" name="initialize_if_enabled" signature="initialize_if_enabled($self, $config, $name)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$config" />
+          <variable ilk="argument" name="$name" />
+        </scope>
+        <scope ilk="function" line="260" lineend="300" name="_derive_capitalization_test_regex_and_message" signature="_derive_capitalization_test_regex_and_message($self, $kind_of_name, $configuration_exceptions)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$kind_of_name" />
+          <variable ilk="argument" name="$configuration_exceptions" />
+        </scope>
+        <scope ilk="function" line="302" lineend="331" name="_derive_capitalization_exemption_test_regexes" signature="_derive_capitalization_exemption_test_regexes($self, $kind_of_name, $configuration_exceptions)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$kind_of_name" />
+          <variable ilk="argument" name="$configuration_exceptions" />
+        </scope>
+        <scope ilk="function" line="333" lineend="341" name="_name_is_exempt" signature="_name_is_exempt($name, $exemption_regexes)">
+          <variable ilk="argument" name="$name" />
+          <variable ilk="argument" name="$exemption_regexes" />
+        </scope>
+        <scope ilk="function" line="345" lineend="379" name="violates" signature="violates()" />
+        <scope ilk="function" line="381" lineend="452" name="_variable_capitalization" signature="_variable_capitalization($self, $elem)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$elem" />
+        </scope>
+        <scope ilk="function" line="454" lineend="464" name="_subroutine_capitalization" signature="_subroutine_capitalization($self, $elem)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$elem" />
+        </scope>
+        <scope ilk="function" line="466" lineend="472" name="_constant_capitalization" signature="_constant_capitalization($self, $elem, $name)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$elem" />
+          <variable ilk="argument" name="$name" />
+        </scope>
+        <scope ilk="function" line="474" lineend="489" name="_package_capitalization" signature="_package_capitalization($self, $elem)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$elem" />
+        </scope>
+        <scope ilk="function" line="491" lineend="532" name="_foreach_variable_capitalization" signature="_foreach_variable_capitalization($self, $elem)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$elem" />
+        </scope>
+        <scope ilk="function" line="534" lineend="540" name="_label_capitalization" signature="_label_capitalization($self, $elem, $name)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$elem" />
+          <variable ilk="argument" name="$name" />
+        </scope>
+        <scope ilk="function" line="542" lineend="555" name="_check_capitalization" signature="_check_capitalization($self, $to_match, $full_name, $name_type, $elem)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$to_match" />
+          <variable ilk="argument" name="$full_name" />
+          <variable ilk="argument" name="$name_type" />
+          <variable ilk="argument" name="$elem" />
+        </scope>
+        <scope ilk="function" line="570" lineend="598" name="_is_directly_in_scope_block" signature="_is_directly_in_scope_block($elem)">
+          <variable ilk="argument" name="$elem" />
+        </scope>
+        <scope ilk="function" line="600" lineend="618" name="_is_not_real_label" signature="_is_not_real_label($elem)">
+          <variable ilk="argument" name="$elem" />
+        </scope>
+      </scope>
+    </scope>
+    

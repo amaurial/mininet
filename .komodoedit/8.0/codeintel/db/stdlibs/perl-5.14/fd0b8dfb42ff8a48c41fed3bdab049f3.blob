@@ -1,0 +1,38 @@
+<scope ilk="blob" lang="Perl" name="PPI::Token::_QuoteEngine::Full">
+      <scope classrefs="PPI::Token::_QuoteEngine" ilk="class" line="1" lineend="479" name="PPI::Token::_QuoteEngine::Full">
+        <import line="6" module="Clone" />
+        <import line="7" module="Carp" />
+        <import line="8" module="PPI::Token::_QuoteEngine" />
+        <variable line="10" name="$VERSION" />
+        <variable line="10" name="%quotes" />
+        <variable line="10" name="%sections" />
+        <variable line="10" name="@ISA" />
+        <scope ilk="function" line="139" lineend="168" name="new" signature="new($class)">
+          <variable ilk="argument" name="$class" />
+        </scope>
+        <scope ilk="function" line="170" lineend="225" name="_fill" signature="_fill($class, $t)">
+          <variable ilk="argument" name="$class" />
+          <variable ilk="argument" name="$t" />
+        </scope>
+        <scope ilk="function" line="228" lineend="287" name="_fill_normal" signature="_fill_normal($self, $t)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$t" />
+        </scope>
+        <scope ilk="function" line="290" lineend="407" name="_fill_braced" signature="_fill_braced($self, $t)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$t" />
+        </scope>
+        <scope ilk="function" line="418" lineend="418" name="_sections" signature="_sections()" />
+        <scope ilk="function" line="421" lineend="426" name="_section_content" signature="_section_content($self, $inx)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$inx" />
+        </scope>
+        <scope ilk="function" line="432" lineend="437" name="_modifiers" signature="_modifiers($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="440" lineend="455" name="_delimiters" signature="_delimiters($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+      </scope>
+    </scope>
+    

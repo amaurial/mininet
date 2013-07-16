@@ -1,0 +1,21 @@
+<scope ilk="blob" lang="Perl" name="File::HomeDir::MacOS9">
+      <scope classrefs="File::HomeDir::Driver" ilk="class" line="1" lineend="150" name="File::HomeDir::MacOS9">
+        <import line="9" module="Carp" />
+        <import line="10" module="File::HomeDir::Driver" />
+        <variable line="12" name="$VERSION" />
+        <variable line="12" name="@ISA" />
+        <scope ilk="function" line="32" lineend="60" name="my_home" signature="my_home($class)">
+          <variable ilk="argument" name="$class" />
+        </scope>
+        <scope ilk="function" line="62" lineend="75" name="my_desktop" signature="my_desktop($class)">
+          <import line="67" module="Mac::Files" />
+          <variable ilk="argument" name="$class" />
+          <import line="67" module="Mac::Files" />
+        </scope>
+        <scope ilk="function" line="84" lineend="95" name="users_home" signature="users_home($class, $name)">
+          <variable ilk="argument" name="$class" />
+          <variable ilk="argument" name="$name" />
+        </scope>
+      </scope>
+    </scope>
+    

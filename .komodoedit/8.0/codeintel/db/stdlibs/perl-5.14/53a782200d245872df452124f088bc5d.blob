@@ -1,0 +1,163 @@
+<scope ilk="blob" lang="Perl" name="DBD::ODBC">
+      <variable line="22" name="$DBD::ODBC::VERSION" />
+      <scope classrefs="Exporter DynaLoader" ilk="class" line="27" lineend="79" name="DBD::ODBC">
+        <import line="29" module="DBI" />
+        <import line="30" module="DynaLoader" />
+        <import line="31" module="Exporter" />
+        <variable line="41" name="$err" />
+        <variable line="42" name="$errstr" />
+        <variable line="43" name="$sqlstate" />
+        <variable line="44" name="$drh" />
+        <scope ilk="function" line="46" lineend="51" name="parse_trace_flag" signature="parse_trace_flag($class, $name)">
+          <variable ilk="argument" name="$class" />
+          <variable ilk="argument" name="$name" />
+        </scope>
+        <scope ilk="function" line="53" lineend="56" name="parse_trace_flags" signature="parse_trace_flags($class, $flags)">
+          <variable ilk="argument" name="$class" />
+          <variable ilk="argument" name="$flags" />
+        </scope>
+        <scope ilk="function" line="58" lineend="76" name="driver" signature="driver($class, $attr)">
+          <variable ilk="argument" name="$class" />
+          <variable ilk="argument" name="$attr" />
+        </scope>
+        <scope ilk="function" line="78" lineend="78" name="CLONE" signature="CLONE()" />
+      </scope>
+      <scope ilk="class" line="83" lineend="116" name="DBD::ODBC::dr">
+        <scope ilk="function" line="88" lineend="110" name="connect" signature="connect($drh, $dbname, $user, $auth, $attr)">
+          <variable ilk="argument" name="$drh" />
+          <variable ilk="argument" name="$dbname" />
+          <variable ilk="argument" name="$user" />
+          <variable ilk="argument" name="$auth" />
+          <variable ilk="argument" name="$attr" />
+        </scope>
+      </scope>
+      <scope ilk="class" line="116" lineend="485" name="DBD::ODBC::db">
+        <scope ilk="function" line="125" lineend="128" name="parse_trace_flag" signature="parse_trace_flag($h, $name)">
+          <variable ilk="argument" name="$h" />
+          <variable ilk="argument" name="$name" />
+        </scope>
+        <scope ilk="function" line="130" lineend="150" name="private_attribute_info" signature="private_attribute_info()" />
+        <scope ilk="function" line="152" lineend="168" name="prepare" signature="prepare($dbh, $statement, @attribs)">
+          <variable ilk="argument" name="$dbh" />
+          <variable ilk="argument" name="$statement" />
+          <variable ilk="argument" name="@attribs" />
+        </scope>
+        <scope ilk="function" line="170" lineend="184" name="column_info" signature="column_info($dbh, $catalog, $schema, $table, $column)">
+          <variable ilk="argument" name="$dbh" />
+          <variable ilk="argument" name="$catalog" />
+          <variable ilk="argument" name="$schema" />
+          <variable ilk="argument" name="$table" />
+          <variable ilk="argument" name="$column" />
+        </scope>
+        <scope ilk="function" line="186" lineend="200" name="columns" signature="columns($dbh, $catalog, $schema, $table, $column)">
+          <variable ilk="argument" name="$dbh" />
+          <variable ilk="argument" name="$catalog" />
+          <variable ilk="argument" name="$schema" />
+          <variable ilk="argument" name="$table" />
+          <variable ilk="argument" name="$column" />
+        </scope>
+        <scope ilk="function" line="203" lineend="225" name="table_info" signature="table_info($dbh, $catalog, $schema, $table, $type)">
+          <variable ilk="argument" name="$dbh" />
+          <variable ilk="argument" name="$catalog" />
+          <variable ilk="argument" name="$schema" />
+          <variable ilk="argument" name="$table" />
+          <variable ilk="argument" name="$type" />
+        </scope>
+        <scope ilk="function" line="227" lineend="239" name="primary_key_info" signature="primary_key_info($dbh, $catalog, $schema, $table)">
+          <variable ilk="argument" name="$dbh" />
+          <variable ilk="argument" name="$catalog" />
+          <variable ilk="argument" name="$schema" />
+          <variable ilk="argument" name="$table" />
+        </scope>
+        <scope ilk="function" line="240" lineend="256" name="statistics_info" signature="statistics_info($dbh, $catalog, $schema, $table, $unique, $quick)">
+          <variable ilk="argument" name="$dbh" />
+          <variable ilk="argument" name="$catalog" />
+          <variable ilk="argument" name="$schema" />
+          <variable ilk="argument" name="$table" />
+          <variable ilk="argument" name="$unique" />
+          <variable ilk="argument" name="$quick" />
+        </scope>
+        <scope ilk="function" line="258" lineend="272" name="foreign_key_info" signature="foreign_key_info($dbh, $pkcatalog, $pkschema, $pktable, $fkcatalog, $fkschema, $fktable)">
+          <variable ilk="argument" name="$dbh" />
+          <variable ilk="argument" name="$pkcatalog" />
+          <variable ilk="argument" name="$pkschema" />
+          <variable ilk="argument" name="$pktable" />
+          <variable ilk="argument" name="$fkcatalog" />
+          <variable ilk="argument" name="$fkschema" />
+          <variable ilk="argument" name="$fktable" />
+        </scope>
+        <scope ilk="function" line="274" lineend="308" name="ping" signature="ping($dbh)">
+          <variable ilk="argument" name="$dbh" />
+        </scope>
+        <scope ilk="function" line="352" lineend="361" name="get_info" signature="get_info($dbh, $item)">
+          <variable ilk="argument" name="$dbh" />
+          <variable ilk="argument" name="$item" />
+        </scope>
+        <scope ilk="function" line="367" lineend="387" name="do" signature="do($dbh, $statement, $attr, @params)">
+          <variable ilk="argument" name="$dbh" />
+          <variable ilk="argument" name="$statement" />
+          <variable ilk="argument" name="$attr" />
+          <variable ilk="argument" name="@params" />
+        </scope>
+        <scope ilk="function" line="394" lineend="397" name="ExecDirect" signature="ExecDirect($dbh, $sql)">
+          <variable ilk="argument" name="$dbh" />
+          <variable ilk="argument" name="$sql" />
+        </scope>
+        <scope ilk="function" line="405" lineend="408" name="GetInfo" signature="GetInfo($dbh, $item)">
+          <variable ilk="argument" name="$dbh" />
+          <variable ilk="argument" name="$item" />
+        </scope>
+        <scope ilk="function" line="414" lineend="421" name="GetStatistics" signature="GetStatistics($dbh, $catalog, $schema, $table, $unique)">
+          <variable ilk="argument" name="$dbh" />
+          <variable ilk="argument" name="$catalog" />
+          <variable ilk="argument" name="$schema" />
+          <variable ilk="argument" name="$table" />
+          <variable ilk="argument" name="$unique" />
+        </scope>
+        <scope ilk="function" line="427" lineend="435" name="GetForeignKeys" signature="GetForeignKeys($dbh, $pk_catalog, $pk_schema, $pk_table, $fk_catalog, $fk_schema, $fk_table)">
+          <variable ilk="argument" name="$dbh" />
+          <variable ilk="argument" name="$pk_catalog" />
+          <variable ilk="argument" name="$pk_schema" />
+          <variable ilk="argument" name="$pk_table" />
+          <variable ilk="argument" name="$fk_catalog" />
+          <variable ilk="argument" name="$fk_schema" />
+          <variable ilk="argument" name="$fk_table" />
+        </scope>
+        <scope ilk="function" line="441" lineend="447" name="GetPrimaryKeys" signature="GetPrimaryKeys($dbh, $catalog, $schema, $table)">
+          <variable ilk="argument" name="$dbh" />
+          <variable ilk="argument" name="$catalog" />
+          <variable ilk="argument" name="$schema" />
+          <variable ilk="argument" name="$table" />
+        </scope>
+        <scope ilk="function" line="453" lineend="460" name="GetSpecialColumns" signature="GetSpecialColumns($dbh, $identifier, $catalog, $schema, $table, $scope, $nullable)">
+          <variable ilk="argument" name="$dbh" />
+          <variable ilk="argument" name="$identifier" />
+          <variable ilk="argument" name="$catalog" />
+          <variable ilk="argument" name="$schema" />
+          <variable ilk="argument" name="$table" />
+          <variable ilk="argument" name="$scope" />
+          <variable ilk="argument" name="$nullable" />
+        </scope>
+        <scope ilk="function" line="462" lineend="469" name="GetTypeInfo" signature="GetTypeInfo($dbh, $sqltype)">
+          <variable ilk="argument" name="$dbh" />
+          <variable ilk="argument" name="$sqltype" />
+        </scope>
+        <scope ilk="function" line="471" lineend="481" name="type_info_all" signature="type_info_all($dbh, $sqltype)">
+          <variable ilk="argument" name="$dbh" />
+          <variable ilk="argument" name="$sqltype" />
+        </scope>
+      </scope>
+      <scope ilk="class" line="485" lineend="556" name="DBD::ODBC::st">
+        <variable line="489" name="*parse_trace_flag" />
+        <scope ilk="function" line="491" lineend="503" name="private_attribute_info" signature="private_attribute_info()" />
+        <scope ilk="function" line="505" lineend="509" name="ColAttributes" signature="ColAttributes($sth, $colno, $desctype)">
+          <variable ilk="argument" name="$sth" />
+          <variable ilk="argument" name="$colno" />
+          <variable ilk="argument" name="$desctype" />
+        </scope>
+        <scope ilk="function" line="511" lineend="515" name="cancel" signature="cancel($sth)">
+          <variable ilk="argument" name="$sth" />
+        </scope>
+      </scope>
+    </scope>
+    

@@ -1,0 +1,19 @@
+<scope ilk="blob" lang="Perl" name="Perl::Critic::Policy::CodeLayout::ProhibitHardTabs">
+      <scope ilk="class" line="8" lineend="95" name="Perl::Critic::Policy::CodeLayout::ProhibitHardTabs">
+        <import line="13" module="Readonly" symbol="*" />
+        <import line="15" module="Perl::Critic::Utils" symbol="**" />
+        <variable line="18" name="$VERSION" />
+        <scope ilk="function" line="35" lineend="44" name="supported_parameters" signature="supported_parameters()" />
+        <scope ilk="function" line="46" lineend="46" name="default_severity" signature="default_severity()" />
+        <scope ilk="function" line="47" lineend="47" name="default_themes" signature="default_themes()" />
+        <scope ilk="function" line="48" lineend="48" name="applies_to" signature="applies_to()" />
+        <scope ilk="function" line="52" lineend="73" name="violates" signature="violates()" />
+        <scope ilk="function" line="77" lineend="80" name="_allow_leading_tabs" signature="_allow_leading_tabs($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="84" lineend="93" name="_is_extended_regex" signature="_is_extended_regex($elem)">
+          <variable ilk="argument" name="$elem" />
+        </scope>
+      </scope>
+    </scope>
+    

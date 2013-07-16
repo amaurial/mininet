@@ -1,0 +1,60 @@
+<scope ilk="blob" lang="Perl" name="Test">
+      <scope classrefs="Exporter" ilk="class" line="3" lineend="731" name="Test">
+        <import line="7" module="Carp" symbol="*" />
+        <import line="24" module="Exporter" />
+        <variable attributes="__exportable__" line="8" name="$ntest" />
+        <variable line="8" name="$TestLevel" />
+        <variable line="8" name="$VERSION" />
+        <variable line="8" name="@EXPORT" />
+        <variable line="8" name="@EXPORT_OK" />
+        <variable line="8" name="@ISA" />
+        <variable line="20" name="$planned" />
+        <variable attributes="__exportable__" line="31" name="$TESTOUT" />
+        <variable attributes="__exportable__" line="32" name="$TESTERR" />
+        <variable line="168" name="$ONFAIL" />
+        <scope ilk="function" line="14" lineend="21" name="_reset_globals" signature="_reset_globals()">
+          </scope>
+        <scope attributes="__exported__" ilk="function" line="149" lineend="196" name="plan" signature="plan()">
+          </scope>
+        <scope ilk="function" line="198" lineend="211" name="_read_program" signature="_read_program()">
+          </scope>
+        <scope ilk="function" line="225" lineend="228" name="_to_value" signature="_to_value($v)">
+          <variable ilk="argument" name="$v" />
+        </scope>
+        <scope ilk="function" line="230" lineend="250" name="_quote" signature="_quote()">
+          </scope>
+        <scope attributes="__exported__" ilk="function" line="367" lineend="428" name="ok" signature="ok()">
+          </scope>
+        <scope ilk="function" line="431" lineend="475" name="_complain" signature="_complain($result, $expected, $detail)">
+          <variable ilk="argument" name="$result" />
+          <variable ilk="argument" name="$expected" />
+          <variable ilk="argument" name="$detail" />
+        </scope>
+        <scope ilk="function" line="479" lineend="492" name="_diff_complain" signature="_diff_complain($result, $expected, $detail, $prefix)">
+          <import line="483" module="Algorithm::Diff" />
+          <variable ilk="argument" name="$result" />
+          <variable ilk="argument" name="$expected" />
+          <variable ilk="argument" name="$detail" />
+          <variable ilk="argument" name="$prefix" />
+          <import line="483" module="Algorithm::Diff" />
+        </scope>
+        <scope ilk="function" line="496" lineend="529" name="_diff_complain_external" signature="_diff_complain_external($result, $expected, $detail, $prefix)">
+          <import line="500" module="File::Temp" />
+          <variable ilk="argument" name="$result" />
+          <variable ilk="argument" name="$expected" />
+          <variable ilk="argument" name="$detail" />
+          <variable ilk="argument" name="$prefix" />
+          <import line="500" module="File::Temp" />
+        </scope>
+        <scope ilk="function" line="533" lineend="607" name="_diff_complain_algdiff" signature="_diff_complain_algdiff($result, $expected, $detail, $prefix, $kind)">
+          <variable ilk="argument" name="$result" />
+          <variable ilk="argument" name="$expected" />
+          <variable ilk="argument" name="$detail" />
+          <variable ilk="argument" name="$prefix" />
+          <variable ilk="argument" name="$kind" />
+        </scope>
+        <scope attributes="__exported__" ilk="function" line="692" lineend="721" name="skip" signature="skip()">
+          </scope>
+      </scope>
+    </scope>
+    

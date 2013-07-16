@@ -1,0 +1,188 @@
+<scope ilk="blob" lang="Perl" name="Perl::Critic::Utils">
+      <scope ilk="class" line="11" lineend="1379" name="Perl::Critic::Utils">
+        <import line="16" module="Readonly" symbol="*" />
+        <import line="18" module="Carp" symbol="confess" />
+        <import line="19" module="English" symbol="-no_match_vars" />
+        <import line="20" module="File::Spec" />
+        <import line="21" module="Scalar::Util" symbol="blessed" />
+        <import line="22" module="B::Keywords" />
+        <import line="23" module="PPI::Token::Quote::Single" symbol="*" />
+        <import line="25" module="Perl::Critic::Exception::Fatal::Generic" symbol="throw_generic" />
+        <import line="26" module="Perl::Critic::Utils::PPI" symbol="is_ppi_expression_or_generic_statement" />
+        <variable line="30" name="$VERSION" />
+        <variable line="35" name="@EXPORT_OK" />
+        <variable line="111" name="@EXPORT" />
+        <variable line="114" name="%EXPORT_TAGS" />
+        <variable line="183" name="$POLICY_NAMESPACE" />
+        <variable line="187" name="$SEVERITY_HIGHEST" />
+        <variable line="188" name="$SEVERITY_HIGH" />
+        <variable line="189" name="$SEVERITY_MEDIUM" />
+        <variable line="190" name="$SEVERITY_LOW" />
+        <variable line="191" name="$SEVERITY_LOWEST" />
+        <variable line="195" name="$COMMA" />
+        <variable line="196" name="$EQUAL" />
+        <variable line="197" name="$FATCOMMA" />
+        <variable line="198" name="$COLON" />
+        <variable line="199" name="$SCOLON" />
+        <variable line="200" name="$QUOTE" />
+        <variable line="201" name="$DQUOTE" />
+        <variable line="202" name="$BACKTICK" />
+        <variable line="203" name="$PERIOD" />
+        <variable line="204" name="$PIPE" />
+        <variable line="205" name="$SPACE" />
+        <variable line="206" name="$SLASH" />
+        <variable line="207" name="$BSLASH" />
+        <variable line="208" name="$LEFT_PAREN" />
+        <variable line="209" name="$RIGHT_PAREN" />
+        <variable line="210" name="$EMPTY" />
+        <variable line="211" name="$TRUE" />
+        <variable line="212" name="$FALSE" />
+        <variable line="1029" name="$DEFAULT_VERBOSITY" />
+        <variable line="1030" name="$DEFAULT_VERBOSITY_WITH_FILE_NAME" />
+        <variable line="1056" name="@SEVERITY_NAMES" />
+        <scope ilk="function" line="325" lineend="327" name="hashify" signature="hashify()" />
+        <scope ilk="function" line="331" lineend="334" name="interpolate" signature="interpolate($literal)">
+          <variable ilk="argument" name="$literal" />
+        </scope>
+        <scope ilk="function" line="338" lineend="344" name="find_keywords" signature="find_keywords($doc, $keyword)">
+          <variable ilk="argument" name="$doc" />
+          <variable ilk="argument" name="$keyword" />
+        </scope>
+        <scope ilk="function" line="348" lineend="356" name="_name_for_sub_or_stringified_element" signature="_name_for_sub_or_stringified_element($elem)">
+          <variable ilk="argument" name="$elem" />
+        </scope>
+        <scope ilk="function" line="363" lineend="368" name="is_perl_builtin" signature="is_perl_builtin($elem)">
+          <variable ilk="argument" name="$elem" />
+        </scope>
+        <scope ilk="function" line="374" lineend="379" name="is_perl_bareword" signature="is_perl_bareword($elem)">
+          <variable ilk="argument" name="$elem" />
+        </scope>
+        <scope ilk="function" line="383" lineend="399" name="_build_globals_without_sigils" signature="_build_globals_without_sigils()">
+          </scope>
+        <scope ilk="function" line="405" lineend="411" name="is_perl_global" signature="is_perl_global($elem)">
+          <variable ilk="argument" name="$elem" />
+        </scope>
+        <scope ilk="function" line="417" lineend="422" name="is_perl_filehandle" signature="is_perl_filehandle($elem)">
+          <variable ilk="argument" name="$elem" />
+        </scope>
+        <scope ilk="function" line="463" lineend="471" name="is_perl_builtin_with_list_context" signature="is_perl_builtin_with_list_context($elem)">
+          <variable ilk="argument" name="$elem" />
+        </scope>
+        <scope ilk="function" line="544" lineend="552" name="is_perl_builtin_with_multiple_arguments" signature="is_perl_builtin_with_multiple_arguments($elem)">
+          <variable ilk="argument" name="$elem" />
+        </scope>
+        <scope ilk="function" line="585" lineend="593" name="is_perl_builtin_with_no_arguments" signature="is_perl_builtin_with_no_arguments($elem)">
+          <variable ilk="argument" name="$elem" />
+        </scope>
+        <scope ilk="function" line="637" lineend="645" name="is_perl_builtin_with_one_argument" signature="is_perl_builtin_with_one_argument($elem)">
+          <variable ilk="argument" name="$elem" />
+        </scope>
+        <scope ilk="function" line="659" lineend="667" name="is_perl_builtin_with_optional_argument" signature="is_perl_builtin_with_optional_argument($elem)">
+          <variable ilk="argument" name="$elem" />
+        </scope>
+        <scope ilk="function" line="671" lineend="683" name="is_perl_builtin_with_zero_and_or_one_arguments" signature="is_perl_builtin_with_zero_and_or_one_arguments($elem)">
+          <variable ilk="argument" name="$elem" />
+        </scope>
+        <scope ilk="function" line="687" lineend="693" name="is_qualified_name" signature="is_qualified_name($name)">
+          <variable ilk="argument" name="$name" />
+        </scope>
+        <scope ilk="function" line="697" lineend="701" name="precedence_of" signature="precedence_of($elem)">
+          <variable ilk="argument" name="$elem" />
+        </scope>
+        <scope ilk="function" line="705" lineend="726" name="is_hash_key" signature="is_hash_key($elem)">
+          <variable ilk="argument" name="$elem" />
+        </scope>
+        <scope ilk="function" line="730" lineend="736" name="_is_followed_by_parens" signature="_is_followed_by_parens($elem)">
+          <variable ilk="argument" name="$elem" />
+        </scope>
+        <scope ilk="function" line="740" lineend="747" name="is_included_module_name" signature="is_included_module_name($elem)">
+          <variable ilk="argument" name="$elem" />
+        </scope>
+        <scope ilk="function" line="751" lineend="756" name="is_integer" signature="is_integer($value)">
+          <variable ilk="argument" name="$value" />
+        </scope>
+        <scope ilk="function" line="760" lineend="772" name="is_label_pointer" signature="is_label_pointer($elem)">
+          <variable ilk="argument" name="$elem" />
+        </scope>
+        <scope ilk="function" line="776" lineend="781" name="is_method_call" signature="is_method_call($elem)">
+          <variable ilk="argument" name="$elem" />
+        </scope>
+        <scope ilk="function" line="785" lineend="791" name="is_class_name" signature="is_class_name($elem)">
+          <variable ilk="argument" name="$elem" />
+        </scope>
+        <scope ilk="function" line="795" lineend="800" name="_is_dereference_operator" signature="_is_dereference_operator($elem)">
+          <variable ilk="argument" name="$elem" />
+        </scope>
+        <scope ilk="function" line="804" lineend="811" name="is_package_declaration" signature="is_package_declaration($elem)">
+          <variable ilk="argument" name="$elem" />
+        </scope>
+        <scope ilk="function" line="815" lineend="823" name="is_subroutine_name" signature="is_subroutine_name($elem)">
+          <variable ilk="argument" name="$elem" />
+        </scope>
+        <scope ilk="function" line="827" lineend="842" name="is_function_call" signature="is_function_call($elem)">
+          <variable ilk="argument" name="$elem" />
+        </scope>
+        <scope ilk="function" line="846" lineend="860" name="is_script" signature="is_script($doc)">
+          <variable ilk="argument" name="$doc" />
+        </scope>
+        <scope ilk="function" line="864" lineend="870" name="_is_PL_file" signature="_is_PL_file($doc)">
+          <variable ilk="argument" name="$doc" />
+        </scope>
+        <scope ilk="function" line="874" lineend="896" name="is_in_void_context" signature="is_in_void_context($token)">
+          <variable ilk="argument" name="$token" />
+        </scope>
+        <scope ilk="function" line="900" lineend="906" name="policy_long_name" signature="policy_long_name($policy_name)">
+          <variable ilk="argument" name="$policy_name" />
+        </scope>
+        <scope ilk="function" line="910" lineend="914" name="policy_short_name" signature="policy_short_name($policy_name)">
+          <variable ilk="argument" name="$policy_name" />
+        </scope>
+        <scope ilk="function" line="918" lineend="931" name="first_arg" signature="first_arg($elem)">
+          <variable ilk="argument" name="$elem" />
+        </scope>
+        <scope ilk="function" line="935" lineend="977" name="parse_arg_list" signature="parse_arg_list($elem)">
+          <variable ilk="argument" name="$elem" />
+        </scope>
+        <scope ilk="function" line="981" lineend="1009" name="split_nodes_on_comma" signature="split_nodes_on_comma(@nodes)">
+          <variable ilk="argument" name="@nodes" />
+        </scope>
+        <scope ilk="function" line="1033" lineend="1037" name="is_valid_numeric_verbosity" signature="is_valid_numeric_verbosity($verbosity)">
+          <variable ilk="argument" name="$verbosity" />
+        </scope>
+        <scope ilk="function" line="1039" lineend="1044" name="verbosity_to_format" signature="verbosity_to_format($verbosity)">
+          <variable ilk="argument" name="$verbosity" />
+        </scope>
+        <scope ilk="function" line="1061" lineend="1071" name="severity_to_number" signature="severity_to_number($severity)">
+          <variable ilk="argument" name="$severity" />
+        </scope>
+        <scope ilk="function" line="1073" lineend="1078" name="_normalize_severity" signature="_normalize_severity($s)">
+          <variable ilk="argument" name="$s" />
+        </scope>
+        <scope ilk="function" line="1085" lineend="1111" name="all_perl_files" signature="all_perl_files(@queue)">
+          <variable ilk="argument" name="@queue" />
+        </scope>
+        <scope ilk="function" line="1117" lineend="1124" name="_is_backup" signature="_is_backup($file)">
+          <variable ilk="argument" name="$file" />
+        </scope>
+        <scope ilk="function" line="1131" lineend="1146" name="_is_perl" signature="_is_perl($file)">
+          <variable ilk="argument" name="$file" />
+        </scope>
+        <scope ilk="function" line="1150" lineend="1164" name="shebang_line" signature="shebang_line($doc)">
+          <variable ilk="argument" name="$doc" />
+        </scope>
+        <scope ilk="function" line="1168" lineend="1172" name="words_from_string" signature="words_from_string($str)">
+          <variable ilk="argument" name="$str" />
+        </scope>
+        <scope ilk="function" line="1176" lineend="1225" name="is_unchecked_call" signature="is_unchecked_call($elem)">
+          <variable ilk="argument" name="$elem" />
+        </scope>
+        <scope ilk="function" line="1321" lineend="1352" name="_is_fatal" signature="_is_fatal($elem)">
+          <variable ilk="argument" name="$elem" />
+        </scope>
+        <scope ilk="function" line="1354" lineend="1377" name="_is_covered_by_autodie" signature="_is_covered_by_autodie($elem, $include)">
+          <variable ilk="argument" name="$elem" />
+          <variable ilk="argument" name="$include" />
+        </scope>
+      </scope>
+    </scope>
+    

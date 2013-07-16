@@ -1,0 +1,84 @@
+<scope ilk="blob" lang="Perl" name="Archive::Tar::File">
+      <scope ilk="class" line="1" lineend="660" name="Archive::Tar::File">
+        <import line="4" module="Carp" />
+        <import line="5" module="IO::File" symbol="*" />
+        <import line="6" module="File::Spec::Unix" />
+        <import line="7" module="File::Spec" />
+        <import line="8" module="File::Basename" />
+        <import line="11" module="Archive::Tar" />
+        <import line="12" module="Archive::Tar::Constant" symbol="*" />
+        <variable line="14" name="$VERSION" />
+        <variable line="14" name="@ISA" />
+        <scope ilk="function" line="186" lineend="196" name="new" signature="new($class, $what)">
+          <variable ilk="argument" name="$class" />
+          <variable ilk="argument" name="$what" />
+        </scope>
+        <scope attributes="__ctor__" ilk="function" line="199" lineend="202" name="clone" signature="clone($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope attributes="__ctor__" ilk="function" line="204" lineend="235" name="_new_from_chunk" signature="_new_from_chunk($class, $chunk, %hash)">
+          <variable ilk="argument" name="$class" />
+          <variable ilk="argument" name="$chunk" />
+          <variable ilk="argument" name="%hash" />
+        </scope>
+        <scope attributes="__ctor__" ilk="function" line="237" lineend="333" name="_new_from_file" signature="_new_from_file($class, $path)">
+          <variable ilk="argument" name="$class" />
+          <variable ilk="argument" name="$path" />
+        </scope>
+        <scope attributes="__ctor__" ilk="function" line="335" lineend="379" name="_new_from_data" signature="_new_from_data($class, $path, $data, $opt)">
+          <variable ilk="argument" name="$class" />
+          <variable ilk="argument" name="$path" />
+          <variable ilk="argument" name="$data" />
+          <variable ilk="argument" name="$opt" />
+        </scope>
+        <scope ilk="function" line="381" lineend="403" name="_prefix_and_file" signature="_prefix_and_file($self, $path)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$path" />
+        </scope>
+        <scope ilk="function" line="405" lineend="430" name="_filetype" signature="_filetype($self, $file)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$file" />
+        </scope>
+        <scope ilk="function" line="434" lineend="441" name="_downgrade_to_plainfile" signature="_downgrade_to_plainfile($entry)">
+          <variable ilk="argument" name="$entry" />
+        </scope>
+        <scope ilk="function" line="453" lineend="459" name="extract" signature="extract($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="468" lineend="476" name="full_path" signature="full_path($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="488" lineend="503" name="validate" signature="validate($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="514" lineend="517" name="has_content" signature="has_content($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="525" lineend="528" name="get_content" signature="get_content($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="540" lineend="544" name="get_content_by_ref" signature="get_content_by_ref($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="556" lineend="563" name="replace_content" signature="replace_content($self, $data)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$data" />
+        </scope>
+        <scope ilk="function" line="576" lineend="588" name="rename" signature="rename($self, $path)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$path" />
+        </scope>
+        <scope ilk="function" line="648" lineend="648" name="is_file" signature="is_file()" />
+        <scope ilk="function" line="649" lineend="649" name="is_dir" signature="is_dir()" />
+        <scope ilk="function" line="650" lineend="650" name="is_hardlink" signature="is_hardlink()" />
+        <scope ilk="function" line="651" lineend="651" name="is_symlink" signature="is_symlink()" />
+        <scope ilk="function" line="652" lineend="652" name="is_chardev" signature="is_chardev()" />
+        <scope ilk="function" line="653" lineend="653" name="is_blockdev" signature="is_blockdev()" />
+        <scope ilk="function" line="654" lineend="654" name="is_fifo" signature="is_fifo()" />
+        <scope ilk="function" line="655" lineend="655" name="is_socket" signature="is_socket()" />
+        <scope ilk="function" line="656" lineend="656" name="is_unknown" signature="is_unknown()" />
+        <scope ilk="function" line="657" lineend="657" name="is_longlink" signature="is_longlink()" />
+        <scope ilk="function" line="658" lineend="658" name="is_label" signature="is_label()" />
+      </scope>
+    </scope>
+    

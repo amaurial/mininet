@@ -1,0 +1,62 @@
+<scope doc="Interfaces for launching and remotely controlling Web browsers.&#xA;" ilk="blob" lang="Python" name="webbrowser">
+      <scope classrefs="GenericBrowser" doc="Class for all browsers which are to be started in the&#xA;background." ilk="class" name="BackgroundBrowser">
+        <scope ilk="function" name="open" signature="open(self, url, new=0, autoraise=True)" />
+      </scope>
+      <scope classrefs="object" doc="Parent class for all browsers. Do not use directly.&#xA;" ilk="class" name="BaseBrowser">
+        <scope ilk="function" name="open_new" signature="open_new(self, url)" />
+        <scope ilk="function" name="open" signature="open(self, url, new=0, autoraise=True)" />
+        <scope ilk="function" name="__init__" signature="__init__(self, name=&apos;&apos;)" />
+        <scope ilk="function" name="open_new_tab" signature="open_new_tab(self, url)" />
+      </scope>
+      <scope classrefs="UnixBrowser" doc="Launcher class for Elinks browsers.&#xA;" ilk="class" name="Elinks" />
+      <scope classrefs="Exception" doc="&#xA;" ilk="class" name="Error" />
+      <scope classrefs="UnixBrowser" doc="Launcher class for Galeon/Epiphany browsers.&#xA;" ilk="class" name="Galeon" />
+      <scope classrefs="BaseBrowser" doc="Class for all browsers started with a command&#xA;and without remote functionality." ilk="class" name="GenericBrowser">
+        <scope ilk="function" name="open" signature="open(self, url, new=0, autoraise=True)" />
+        <scope ilk="function" name="__init__" signature="__init__(self, name)" />
+      </scope>
+      <scope classrefs="BaseBrowser" doc="&#xA;" ilk="class" name="Grail">
+        <scope doc="# There should be a way to maintain a connection to Grail,&#xA;but the # Grail remote control protocol doesn&apos;t really allow&#xA;that at this # point." ilk="function" name="_find_grail_rc" signature="_find_grail_rc(self)" />
+        <scope ilk="function" name="open" signature="open(self, url, new=0, autoraise=True)" />
+        <scope ilk="function" name="_remote" signature="_remote(self, action)" />
+      </scope>
+      <scope classrefs="BaseBrowser" doc="Controller for the KDE File Manager (kfm, or Konqueror).&#xA;See the output of ``kfmclient --commands`` for more information on the Konqueror remote-control interface." ilk="class" name="Konqueror">
+        <scope ilk="function" name="open" signature="open(self, url, new=0, autoraise=True)" />
+      </scope>
+      <scope classrefs="UnixBrowser" doc="Launcher class for Mozilla/Netscape browsers.&#xA;" ilk="class" name="Mozilla" />
+      <scope classrefs="UnixBrowser" doc="Launcher class for Mozilla/Netscape browsers.&#xA;" ilk="class" name="Netscape" />
+      <scope classrefs="UnixBrowser" doc="Launcher class for Opera browser.&#xA;" ilk="class" name="Opera" />
+      <scope classrefs="BaseBrowser" doc="Parent class for all Unix browsers with remote functionality.&#xA;" ilk="class" name="UnixBrowser">
+        <scope ilk="function" name="_invoke" signature="_invoke(self, args, remote, autoraise)" />
+        <scope ilk="function" name="open" signature="open(self, url, new=0, autoraise=True)" />
+      </scope>
+      <scope classrefs="BaseBrowser" doc="&#xA;" ilk="class" name="WindowsDefault">
+        <scope ilk="function" name="open" signature="open(self, url, new=0, autoraise=True)" />
+      </scope>
+      <variable citdl="list" name="__all__" />
+      <variable citdl="str" name="browser" />
+      <scope doc="Return a browser launcher instance appropriate for the&#xA;environment." ilk="function" name="get" signature="get(using=None)" />
+      <variable citdl="str" name="iexplore" />
+      <import module="io" />
+      <scope ilk="function" name="main" signature="main()" />
+      <scope ilk="function" name="open" signature="open(url, new=0, autoraise=True)" />
+      <scope ilk="function" name="open_new" signature="open_new(url)" />
+      <scope ilk="function" name="open_new_tab" signature="open_new_tab(url)" />
+      <import module="os" />
+      <scope doc="Register a browser connector and, optionally, connection." ilk="function" name="register" signature="register(name, klass, instance=None, update_tryorder=1)" />
+      <scope ilk="function" name="register_X_browsers" signature="register_X_browsers()" />
+      <import module="shlex" />
+      <import module="stat" />
+      <import module="subprocess" />
+      <import module="sys" />
+      <import module="time" />
+      <scope classrefs="BaseBrowser" doc="Launcher class for Aqua browsers on Mac OS X&#xA;Optionally specify a browser name on instantiation.  Note that this will not work for Aqua browsers if the user has moved the application package after installation.  If no browser is specified, the default browser, as specified in the Internet System Preferences panel, will be used." ilk="class" name="MacOSX">
+        <scope ilk="function" name="open" signature="open(self, url, new=0, autoraise=True)" />
+        <scope ilk="function" name="__init__" signature="__init__(self, name)" />
+      </scope>
+      <scope classrefs="BaseBrowser" doc="&#xA;" ilk="class" name="MacOSXOSAScript">
+        <scope ilk="function" name="open" signature="open(self, url, new=0, autoraise=True)" />
+        <scope ilk="function" name="__init__" signature="__init__(self, name)" />
+      </scope>
+    </scope>
+    

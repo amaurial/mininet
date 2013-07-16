@@ -1,0 +1,57 @@
+<scope ilk="blob" lang="Perl" name="CPANPLUS::Shell">
+      <scope ilk="class" line="1" lineend="96" name="CPANPLUS::Shell">
+        <import line="5" module="CPANPLUS::Error" symbol="*" />
+        <import line="6" module="CPANPLUS::Configure" symbol="*" />
+        <import line="7" module="CPANPLUS::Internals::Constants" symbol="*" />
+        <import line="9" module="Module::Load" symbol="load" />
+        <import line="10" module="Params::Check" symbol="check" />
+        <import line="11" module="Locale::Maketext::Simple" symbol="Class" />
+        <variable line="13" name="$Params::Check::VERBOSE" />
+        <variable line="15" name="$DEFAULT" />
+        <variable line="15" name="$SHELL" />
+        <variable line="15" name="@ISA" />
+        <scope ilk="function" line="52" lineend="92" name="import" signature="import($class, $option)">
+          <variable ilk="argument" name="$class" />
+          <variable ilk="argument" name="$option" />
+        </scope>
+        <scope ilk="function" line="94" lineend="94" name="which" signature="which()" />
+      </scope>
+      <scope ilk="class" line="102" lineend="340" name="CPANPLUS::Shell::_Base::ReadLine">
+        <import line="107" module="FileHandle" symbol="*" />
+        <import line="108" module="CPANPLUS::Error" symbol="*" />
+        <import line="109" module="Params::Check" symbol="check" />
+        <import line="110" module="Module::Load::Conditional" symbol="can_load" />
+        <import line="111" module="Locale::Maketext::Simple" symbol="Class" />
+        <variable line="105" name="$AUTOLOAD" />
+        <variable line="105" name="$TMPL" />
+        <variable line="113" name="$Params::Check::VERBOSE" />
+        <scope attributes="__ctor__" ilk="function" line="144" lineend="164" name="_init" signature="_init($class, %hash)">
+          <variable ilk="argument" name="$class" />
+          <variable ilk="argument" name="%hash" />
+        </scope>
+        <scope ilk="function" line="167" lineend="202" name="_show_banner" signature="_show_banner($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="205" lineend="213" name="__is_bad_terminal" signature="__is_bad_terminal($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="216" lineend="236" name="_pager_open" signature="_pager_open($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="239" lineend="251" name="_pager_close" signature="_pager_close($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="260" lineend="288" name="_term_rowcount" signature="_term_rowcount($self, %hash)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="%hash" />
+        </scope>
+        <scope ilk="function" line="293" lineend="296" name="__print" signature="__print($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="298" lineend="306" name="__printf" signature="__printf($self, $fmt)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$fmt" />
+        </scope>
+      </scope>
+    </scope>
+    

@@ -1,0 +1,226 @@
+<scope doc="Header encoding and decoding functionality.&#xA;" ilk="blob" lang="Python" name="email.header">
+      <variable citdl="bytes" line="25" name="BSPACE" />
+      <scope classrefs="object" doc="Map character sets to their email properties.&#xA;This class provides information about the requirements imposed on email for a specific character set.  It also provides convenience routines for converting between character sets, given the availability of the applicable codecs.  Given a character set, it will do its best to provide information on how to use that character set in an email in an RFC-compliant way.  Certain character sets must be encoded with quoted-printable or base64 when used in email headers or bodies.  Certain character sets must be converted outright, and are not allowed in email.  Instances of this" ilk="class" line="21" name="Charset">
+        <scope ilk="function" name="__ne__" signature="__ne__(self, other)" />
+        <scope doc="Header-encode a string by converting it first to bytes." ilk="function" name="header_encode_lines" signature="header_encode_lines(self, string, maxlengths)" />
+        <scope ilk="function" name="_get_encoder" signature="_get_encoder(self, header_bytes)" />
+        <scope doc="Header-encode a string by converting it first to bytes." ilk="function" name="header_encode" signature="header_encode(self, string)" />
+        <scope ilk="function" name="__str__" signature="__str__(self)" />
+        <scope doc="Return the content-transfer-encoding used for body encoding." ilk="function" name="get_body_encoding" signature="get_body_encoding(self)" />
+        <scope doc="Return the output character set." ilk="function" name="get_output_charset" signature="get_output_charset(self)" />
+        <scope ilk="function" name="__repr__" signature="__repr__(self)" />
+        <scope doc="Body-encode a string by converting it first to bytes." ilk="function" name="body_encode" signature="body_encode(self, string)" />
+        <scope ilk="function" name="__eq__" signature="__eq__(self, other)" />
+        <scope ilk="function" name="__init__" signature="__init__(self, input_charset=&apos;us-ascii&apos;)" />
+      </scope>
+      <variable citdl="str" line="27" name="EMPTYSTRING" />
+      <variable citdl="str" line="29" name="FWS" />
+      <scope classrefs="object" doc="&#xA;" ilk="class" line="167" lineend="372" name="Header">
+        <scope ilk="function" line="248" lineend="249" name="__ne__" returns="bool" signature="__ne__(self, other)">
+          <variable citdl="Header" ilk="argument" name="self" />
+          <variable ilk="argument" name="other" />
+        </scope>
+        <scope doc="Return the string value of the header." ilk="function" line="215" lineend="238" name="__str__" returns="EMPTYSTRING.join()" signature="__str__(self)">
+          <variable citdl="list" line="218" name="uchunks" />
+          <variable citdl="charset" line="225" name="nextcs" />
+          <variable citdl="original_bytes.decode()" line="228" name="string" />
+          <variable citdl="string.encode()" line="227" name="original_bytes" />
+          <variable citdl="Header" ilk="argument" name="self" />
+          <variable citdl="charset" line="219" name="lastcs" />
+        </scope>
+        <scope doc="Append a string to the MIME header." ilk="function" line="251" lineend="287" name="append" signature="append(self, s, charset=None, errors=&apos;strict&apos;)">
+          <variable citdl="charset.output_codec" line="284" name="output_charset" />
+          <variable citdl="s.decode()" ilk="argument" name="s" />
+          <variable citdl="str" ilk="argument" name="errors" />
+          <variable citdl="charset.input_codec" line="277" name="input_charset" />
+          <variable citdl="Header" ilk="argument" name="self" />
+          <variable citdl="Charset()" ilk="argument" name="charset" />
+        </scope>
+        <scope ilk="function" line="356" lineend="372" name="_normalize" signature="_normalize(self)">
+          <variable citdl="list" line="359" name="chunks" />
+          <variable citdl="Header" ilk="argument" name="self" />
+          <variable citdl="list" line="361" name="last_chunk" />
+          <variable citdl="charset" line="360" name="last_charset" />
+        </scope>
+        <scope doc="Encode a message header into an RFC-compliant format." ilk="function" line="289" lineend="354" name="encode" returns="formatter._str()" signature="encode(self, splitchars=&apos;;, \t&apos;, maxlinelen=None, linesep=&apos;\n&apos;)">
+          <variable citdl="int" ilk="argument" name="maxlinelen" />
+          <variable citdl="line.lstrip()" line="344" name="sline" />
+          <variable citdl="Header" ilk="argument" name="self" />
+          <variable citdl="string.splitlines()" line="333" name="lines" />
+          <variable citdl="str" ilk="argument" name="linesep" />
+          <variable citdl="formatter._str()" line="350" name="value" />
+          <variable citdl="str" ilk="argument" name="splitchars" />
+          <variable citdl="_ValueFormatter()" line="330" name="formatter" />
+          <variable citdl="list" line="345" name="fws" />
+          <variable citdl="line.lstrip()" line="322" name="line" />
+        </scope>
+        <scope doc="# Rich comparison operators for equality only." ilk="function" line="242" lineend="246" name="__eq__" returns="bool" signature="__eq__(self, other)">
+          <variable citdl="Header" ilk="argument" name="self" />
+          <variable ilk="argument" name="other" />
+        </scope>
+        <scope doc="Create a MIME-compliant header that can contain many&#xA;character sets." ilk="function" line="168" lineend="213" name="__init__" signature="__init__(self, s=None, charset=None, maxlinelen=None, header_name=None, continuation_ws=&apos; &apos;, errors=&apos;strict&apos;)">
+          <variable ilk="argument" name="s" />
+          <variable citdl="int" ilk="argument" name="maxlinelen" />
+          <variable ilk="argument" name="header_name" />
+          <variable citdl="str" ilk="argument" name="errors" />
+          <variable citdl="str" ilk="argument" name="continuation_ws" />
+          <variable citdl="Header" ilk="argument" name="self" />
+          <variable citdl="Charset()" ilk="argument" name="charset" />
+        </scope>
+        <variable attributes="protected __instancevar__" citdl="Charset()" line="201" name="_charset" />
+        <variable attributes="protected __instancevar__" citdl="str" line="202" name="_continuation_ws" />
+        <variable attributes="protected __instancevar__" citdl="int" line="208" name="_maxlinelen" />
+        <variable attributes="protected __instancevar__" citdl="list" line="203" name="_chunks" />
+        <variable attributes="protected __instancevar__" citdl="int" line="210" name="_headerlen" />
+      </scope>
+      <scope classrefs="MessageParseError" doc="Error while parsing headers.&#xA;" ilk="class" name="HeaderParseError" />
+      <variable citdl="int" line="28" name="MAXLINELEN" />
+      <variable citdl="str" line="23" name="NL" />
+      <variable citdl="str" line="24" name="SPACE" />
+      <variable citdl="str" line="26" name="SPACE8" />
+      <variable citdl="Charset" line="31" name="USASCII" />
+      <variable citdl="Charset" line="32" name="UTF8" />
+      <variable citdl="list" line="7" name="__all__" />
+      <import module="_charset" />
+      <import module="binascii" />
+      <scope doc="Decode a message header value without converting charset." ilk="function" line="62" lineend="140" name="decode_header" returns="list" signature="decode_header(header)">
+        <variable citdl="len()" line="110" name="paderr" />
+        <variable citdl="bytes()" line="107" name="word" />
+        <variable citdl="list" line="101" name="decoded_words" />
+        <variable line="95" name="encoding" />
+        <variable citdl="list" line="123" name="collapsed" />
+        <variable line="94" name="charset" />
+        <variable line="130" name="last_charset" />
+        <variable citdl="email.base64mime.decode()" line="124" name="last_word" />
+        <variable ilk="argument" name="header" />
+        <variable citdl="ecre.split()" line="88" name="parts" />
+        <variable citdl="list" line="86" name="words" />
+        <variable citdl="parts.pop()" line="96" name="encoded" />
+        <variable line="90" name="unencoded" />
+      </scope>
+      <variable citdl="SRE_Pattern" line="35" name="ecre" />
+      <import module="email" />
+      <variable citdl="SRE_Pattern" line="49" name="fcre" />
+      <scope doc="Create a Header from a sequence of pairs as returned by&#xA;decode_header()" ilk="function" line="144" lineend="163" name="make_header" returns="Header()" signature="make_header(decoded_seq, maxlinelen=None, header_name=None, continuation_ws=&apos; &apos;)">
+        <variable ilk="argument" name="decoded_seq" />
+        <variable ilk="argument" name="maxlinelen" />
+        <variable ilk="argument" name="header_name" />
+        <variable citdl="str" ilk="argument" name="continuation_ws" />
+        <variable citdl="Header()" line="156" name="h" />
+        <variable citdl="Charset()" line="161" name="charset" />
+      </scope>
+      <import module="re" />
+      <variable attributes="protected __hidden__" citdl="re.compile()" line="53" name="_embeded_header" />
+      <variable attributes="protected __hidden__" citdl="email.quoprimime._max_append" line="58" name="_max_append" />
+      <scope attributes="protected __hidden__" ilk="class" line="376" lineend="501" name="_ValueFormatter">
+        <scope attributes="__ctor__" ilk="function" line="377" lineend="383" name="__init__" signature="_ValueFormatter(headerlen, maxlen, continuation_ws, splitchars)">
+          <variable citdl="_ValueFormatter" ilk="argument" name="self" />
+          <variable ilk="argument" name="headerlen" />
+          <variable ilk="argument" name="maxlen" />
+          <variable ilk="argument" name="continuation_ws" />
+          <variable ilk="argument" name="splitchars" />
+        </scope>
+        <variable attributes="protected __instancevar__" line="378" name="_maxlen" />
+        <variable attributes="protected __instancevar__" line="379" name="_continuation_ws" />
+        <variable attributes="protected __instancevar__" citdl="len()" line="380" name="_continuation_ws_len" />
+        <variable attributes="protected __instancevar__" line="381" name="_splitchars" />
+        <variable attributes="protected __instancevar__" citdl="list" line="382" name="_lines" />
+        <variable attributes="protected __instancevar__" citdl="_Accumulator()" line="383" name="_current_line" />
+        <scope attributes="protected" ilk="function" line="385" lineend="387" name="_str" returns="linesep.join()" signature="_str(linesep)">
+          <variable citdl="_ValueFormatter" ilk="argument" name="self" />
+          <variable ilk="argument" name="linesep" />
+        </scope>
+        <scope ilk="function" line="389" lineend="390" name="__str__" returns="_ValueFormatter._str()" signature="__str__()">
+          <variable citdl="_ValueFormatter" ilk="argument" name="self" />
+        </scope>
+        <scope ilk="function" line="392" lineend="401" name="newline" signature="newline()">
+          <variable citdl="_ValueFormatter" ilk="argument" name="self" />
+          <variable citdl="self._current_line.pop()" line="393" name="end_of_line" />
+        </scope>
+        <scope ilk="function" line="403" lineend="404" name="add_transition" signature="add_transition()">
+          <variable citdl="_ValueFormatter" ilk="argument" name="self" />
+        </scope>
+        <scope ilk="function" line="406" lineend="441" name="feed" signature="feed(fws, string, charset)">
+          <variable citdl="_ValueFormatter" ilk="argument" name="self" />
+          <variable ilk="argument" name="fws" />
+          <variable ilk="argument" name="string" />
+          <variable ilk="argument" name="charset" />
+          <variable citdl="charset.header_encode_lines()" line="422" name="encoded_lines" />
+          <variable citdl="encoded_lines.pop()" line="426" name="first_line" />
+          <variable citdl="encoded_lines.pop()" line="433" name="last_line" />
+          <variable citdl="charset.header_encode()" line="383" name="encoded_string" />
+          <variable line="397" name="ch" />
+        </scope>
+        <scope attributes="protected" ilk="function" line="443" lineend="447" name="_maxlengths" signature="_maxlengths()">
+          <variable citdl="_ValueFormatter" ilk="argument" name="self" />
+        </scope>
+        <scope attributes="protected" ilk="function" line="449" lineend="469" name="_ascii_split" signature="_ascii_split(fws, string, splitchars)">
+          <variable citdl="_ValueFormatter" ilk="argument" name="self" />
+          <variable ilk="argument" name="fws" />
+          <variable ilk="argument" name="string" />
+          <variable ilk="argument" name="splitchars" />
+          <variable citdl="re.split()" line="463" name="parts" />
+          <variable ilk="argument" name="ch" />
+          <variable citdl="holding.pop()" line="495" name="save_part" />
+          <variable citdl="len()" line="486" name="holding_prelen" />
+          <variable citdl="len()" line="505" name="holding_len" />
+          <variable line="470" name="part" />
+          <variable citdl="_Accumulator()" line="445" name="holding" />
+        </scope>
+        <scope attributes="protected" ilk="function" line="471" lineend="501" name="_append_chunk" signature="_append_chunk(fws, string)">
+          <variable citdl="_ValueFormatter" ilk="argument" name="self" />
+          <variable citdl="str" ilk="argument" name="fws" />
+          <variable ilk="argument" name="string" />
+          <variable line="482" name="prevpart" />
+          <variable line="489" name="part" />
+          <variable citdl="self._current_line.pop_from()" line="499" name="remainder" />
+        </scope>
+      </scope>
+      <scope attributes="protected __hidden__" classrefs="list" ilk="class" line="504" lineend="541" name="_Accumulator">
+        <scope attributes="__ctor__" ilk="function" line="506" lineend="508" name="__init__" signature="_Accumulator(initial_size=0)">
+          <variable citdl="_Accumulator" ilk="argument" name="self" />
+          <variable citdl="int" ilk="argument" name="initial_size" />
+        </scope>
+        <variable attributes="protected __instancevar__" citdl="int" line="507" name="_initial_size" />
+        <scope ilk="function" line="510" lineend="511" name="push" signature="push(fws, string)">
+          <variable citdl="_Accumulator" ilk="argument" name="self" />
+          <variable ilk="argument" name="fws" />
+          <variable ilk="argument" name="string" />
+        </scope>
+        <scope ilk="function" line="513" lineend="516" name="pop_from" returns="list" signature="pop_from(i=0)">
+          <variable citdl="_Accumulator" ilk="argument" name="self" />
+          <variable citdl="int" ilk="argument" name="i" />
+          <variable citdl="list" line="514" name="popped" />
+        </scope>
+        <scope ilk="function" line="518" lineend="521" name="pop" returns="self._current.pop()" signature="pop()">
+          <variable citdl="_Accumulator" ilk="argument" name="self" />
+        </scope>
+        <scope ilk="function" line="523" lineend="525" name="__len__" returns="sum()" signature="__len__()">
+          <variable citdl="_Accumulator" ilk="argument" name="self" />
+        </scope>
+        <scope ilk="function" line="527" lineend="529" name="__str__" returns="EMPTYSTRING.join()" signature="__str__()">
+          <variable citdl="_Accumulator" ilk="argument" name="self" />
+        </scope>
+        <scope ilk="function" line="531" lineend="535" name="reset" signature="reset(startval=None)">
+          <variable citdl="_Accumulator" ilk="argument" name="self" />
+          <variable citdl="list" ilk="argument" name="startval" />
+          <variable ilk="argument" name="string" />
+        </scope>
+        <scope ilk="function" line="537" lineend="538" name="is_onlyws" returns="bool" signature="is_onlyws()">
+          <variable citdl="_Accumulator" ilk="argument" name="self" />
+        </scope>
+        <scope ilk="function" line="540" lineend="541" name="part_count" signature="part_count()">
+          <variable citdl="_Accumulator" ilk="argument" name="self" />
+        </scope>
+        <variable attributes="protected __instancevar__" citdl="list" line="573" name="_current" />
+      </scope>
+      <scope attributes="protected __hidden__" ilk="function" line="559" lineend="567" name="_spliterator" signature="_spliterator(character, string)">
+        <variable ilk="argument" name="character" />
+        <variable ilk="argument" name="string" />
+        <variable citdl="list()" line="560" name="parts" />
+        <variable citdl="parts.pop()" line="562" name="part" />
+        <variable line="563" name="splitparts" />
+        <variable line="564" name="nextpart" />
+      </scope>
+    </scope>
+    

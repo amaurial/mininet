@@ -1,0 +1,42 @@
+<scope ilk="blob" lang="Perl" name="Encode::MIME::Header">
+      <scope ilk="class" line="1" lineend="186" name="Encode::MIME::Header">
+        <import line="7" module="Encode" symbol="find_encoding" />
+        <import line="7" module="Encode" symbol="encode_utf8" />
+        <import line="7" module="Encode" symbol="decode_utf8" />
+        <import line="8" module="MIME::Base64" symbol="*" />
+        <import line="9" module="Carp" symbol="*" />
+        <variable line="6" name="$VERSION" />
+        <scope ilk="function" line="36" lineend="36" name="needs_lines" signature="needs_lines()" />
+        <scope ilk="function" line="37" lineend="37" name="perlio_ok" signature="perlio_ok()" />
+        <scope ilk="function" line="39" lineend="74" name="decode" signature="decode($obj, $str, $chk)">
+          <import line="40" module="utf8" symbol="*" />
+          <variable ilk="argument" name="$obj" />
+          <variable ilk="argument" name="$str" />
+          <variable ilk="argument" name="$chk" />
+          <import line="40" module="utf8" symbol="*" />
+        </scope>
+        <scope ilk="function" line="76" lineend="84" name="decode_b" signature="decode_b($enc, $chk)">
+          <variable ilk="argument" name="$enc" />
+          <variable ilk="argument" name="$chk" />
+        </scope>
+        <scope ilk="function" line="86" lineend="94" name="decode_q" signature="decode_q($enc, $q, $chk)">
+          <variable ilk="argument" name="$enc" />
+          <variable ilk="argument" name="$q" />
+          <variable ilk="argument" name="$chk" />
+        </scope>
+        <scope ilk="function" line="111" lineend="143" name="encode" signature="encode($obj, $str, $chk)">
+          <variable ilk="argument" name="$obj" />
+          <variable ilk="argument" name="$str" />
+          <variable ilk="argument" name="$chk" />
+        </scope>
+        <scope ilk="function" line="149" lineend="169" name="_encode" signature="_encode($o, $str)">
+          <variable ilk="argument" name="$o" />
+          <variable ilk="argument" name="$str" />
+        </scope>
+        <scope ilk="function" line="171" lineend="173" name="_encode_b" signature="_encode_b()" />
+        <scope ilk="function" line="175" lineend="184" name="_encode_q" signature="_encode_q($chunk)">
+          <variable ilk="argument" name="$chunk" />
+        </scope>
+      </scope>
+    </scope>
+    

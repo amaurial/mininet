@@ -1,0 +1,28 @@
+<scope ilk="blob" lang="Perl" name="IO::Compress::Zlib::Extra">
+      <scope ilk="class" line="1" lineend="196" name="IO::Compress::Zlib::Extra">
+        <import line="13" module="IO::Compress::Gzip::Constants" symbol="*" />
+        <variable line="9" name="$VERSION" />
+        <variable line="9" name="%EXPORT_TAGS" />
+        <variable line="9" name="@EXPORT_OK" />
+        <variable line="9" name="@ISA" />
+        <scope ilk="function" line="15" lineend="19" name="ExtraFieldError" signature="ExtraFieldError()" />
+        <scope ilk="function" line="21" lineend="52" name="validateExtraFieldPair" signature="validateExtraFieldPair($pair, $strict, $gzipMode)">
+          <variable ilk="argument" name="$pair" />
+          <variable ilk="argument" name="$strict" />
+          <variable ilk="argument" name="$gzipMode" />
+        </scope>
+        <scope ilk="function" line="54" lineend="99" name="parseRawExtra" signature="parseRawExtra($data, $extraRef, $strict, $gzipMode)">
+          <variable ilk="argument" name="$data" />
+          <variable ilk="argument" name="$extraRef" />
+          <variable ilk="argument" name="$strict" />
+          <variable ilk="argument" name="$gzipMode" />
+        </scope>
+        <scope ilk="function" line="102" lineend="108" name="mkSubField" signature="mkSubField($id, $data)">
+          <variable ilk="argument" name="$id" />
+          <variable ilk="argument" name="$data" />
+        </scope>
+        <scope ilk="function" line="110" lineend="194" name="parseExtraField" signature="parseExtraField()">
+          </scope>
+      </scope>
+    </scope>
+    

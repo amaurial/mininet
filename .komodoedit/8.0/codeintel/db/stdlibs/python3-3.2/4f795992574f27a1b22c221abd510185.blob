@@ -1,0 +1,125 @@
+<scope doc="The Python Debugger Pdb&#xA;=======================  To use the debugger in its simplest form:  &gt;&gt;&gt; import pdb &gt;&gt;&gt; pdb.run(&apos;&lt;a statement&gt;&apos;)  The debugger&apos;s prompt is &apos;(Pdb) &apos;.  This will stop in the first function call in &lt;a statement&gt;. " ilk="blob" lang="Python" name="pdb">
+      <scope classrefs="Bdb Cmd" doc="&#xA;" ilk="class" name="Pdb">
+        <scope doc="enable bpnumber [bpnumber ...] Enables the breakpoints given&#xA;as a space separated list of breakpoint numbers." ilk="function" name="do_enable" signature="do_enable(self, arg)" />
+        <scope ilk="function" name="forget" signature="forget(self)" />
+        <scope doc="With a space separated list of breakpoint numbers, clear&#xA;those breakpoints." ilk="function" name="do_cl" signature="cl(ear) filename:lineno&#xA;cl(ear) [bpnumber [bpnumber...]]" />
+        <scope doc="alias [name [command [parameter parameter ...] ]] Create an&#xA;alias called &apos;name&apos; that executes &apos;command&apos;." ilk="function" name="do_alias" signature="do_alias(self, arg)" />
+        <scope doc="undisplay [expression]" ilk="function" name="do_undisplay" signature="do_undisplay(self, arg)" />
+        <scope ilk="function" name="print_stack_trace" signature="print_stack_trace(self)" />
+        <scope doc="Print the argument list of the current function." ilk="function" name="do_args" signature="a(rgs)" />
+        <scope ilk="function" name="message" signature="message(self, msg)" />
+        <scope doc="Handle alias expansion and &apos;;;&apos; separator." ilk="function" name="precmd" signature="precmd(self, line)" />
+        <scope ilk="function" name="_getval" signature="_getval(self, arg)" />
+        <scope doc="Continue execution until the next line in the current&#xA;function is reached or it returns." ilk="function" name="do_next" signature="n(ext)" />
+        <scope doc="retval Print the return value for the last return of a&#xA;function." ilk="function" name="do_rv" signature="do_rv(self, arg)" />
+        <scope doc="(!) statement Execute the (one-line) statement in the&#xA;context of the current stack frame." ilk="function" name="help_exec" signature="help_exec(self)" />
+        <scope ilk="function" name="_select_frame" signature="_select_frame(self, number)" />
+        <scope doc="Set the next line that will be executed." ilk="function" name="do_jump" signature="j(ump) lineno" />
+        <scope doc="Helper function for break/clear parsing -- may be&#xA;overridden." ilk="function" name="lookupmodule" signature="lookupmodule(self, filename)" />
+        <scope doc="Continue execution, only stop when a breakpoint is&#xA;encountered." ilk="function" name="do_cont" signature="c(ont(inue))" />
+        <scope doc="disable bpnumber [bpnumber ...] Disables the breakpoints&#xA;given as a space separated list of breakpoint numbers." ilk="function" name="do_disable" signature="do_disable(self, arg)" />
+        <scope doc="This function is called if an exception occurs, but only if&#xA;we are to stop at or just below this level." ilk="function" name="user_exception" signature="user_exception(self, frame, exc_info)" />
+        <scope doc="# Called before loop, handles display expressions" ilk="function" name="preloop" signature="preloop(self)" />
+        <scope ilk="function" name="_getval_except" signature="_getval_except(self, arg, frame=None)" />
+        <scope doc="# General interaction function" ilk="function" name="_cmdloop" signature="_cmdloop(self)" />
+        <scope doc="Execute the current line, stop at the first possible&#xA;occasion (either in a function that is called or in the&#xA;current function)." ilk="function" name="do_step" signature="s(tep)" />
+        <scope doc="commands [bpnumber] (com) ..." ilk="function" name="do_commands" signature="do_commands(self, arg)" />
+        <scope doc="EOF Handles the receipt of EOF as a command." ilk="function" name="do_EOF" signature="do_EOF(self, arg)" />
+        <scope doc="Check whether specified line seems to be executable." ilk="function" name="checkline" signature="checkline(self, filename, lineno)" />
+        <scope doc="Move the current frame count (default one) levels up in the&#xA;stack trace (to an older frame)." ilk="function" name="do_up" signature="u(p) [count]" />
+        <scope doc="Print a stack trace, with the most recent frame at the&#xA;bottom." ilk="function" name="do_bt" signature="w(here)" />
+        <scope doc="This method is called when there is the remote possibility&#xA;that we ever need to stop in this function." ilk="function" name="user_call" signature="user_call(self, frame, argument_list)" />
+        <scope doc="exit Quit from the debugger." ilk="function" name="do_exit" signature="q(uit)" />
+        <scope doc="Call every command that was set for the current active&#xA;breakpoint (if there is one)." ilk="function" name="bp_commands" signature="bp_commands(self, frame)" />
+        <scope doc="run [args...] Restart the debugged python program." ilk="function" name="do_restart" signature="do_restart(self, arg)" />
+        <scope doc="Print the value of the expression." ilk="function" name="do_print" signature="p(rint) expression" />
+        <scope ilk="function" name="reset" signature="reset(self)" />
+        <scope doc="Move the current frame count (default one) levels down in&#xA;the stack trace (to a newer frame)." ilk="function" name="do_d" signature="d(own) [count]" />
+        <scope doc="exit Quit from the debugger." ilk="function" name="do_q" signature="q(uit)" />
+        <scope doc="Without argument, list all breaks." ilk="function" name="do_b" signature="b(reak) [ ([filename:]lineno | function) [, condition] ]" />
+        <scope doc="ignore bpnumber [count] Set the ignore count for the given&#xA;breakpoint number." ilk="function" name="do_ignore" signature="do_ignore(self, arg)" />
+        <scope doc="Without argument, continue execution until the line with a&#xA;number greater than the current one is reached." ilk="function" name="do_until" signature="unt(il) [lineno]" />
+        <scope doc="Print the argument list of the current function." ilk="function" name="do_a" signature="a(rgs)" />
+        <scope ilk="function" name="default" signature="default(self, line)" />
+        <scope ilk="function" name="setup" signature="setup(self, f, tb)" />
+        <scope doc="Set the next line that will be executed." ilk="function" name="do_j" signature="j(ump) lineno" />
+        <scope doc="Without argument, print the list of available commands." ilk="function" name="do_h" signature="h(elp)" />
+        <scope ilk="function" name="print_stack_entry" signature="print_stack_entry(self, frame_lineno, prompt_prefix=&apos;\n-&gt; &apos;)" />
+        <scope ilk="function" name="help_pdb" signature="help_pdb(self)" />
+        <scope doc="Move the current frame count (default one) levels up in the&#xA;stack trace (to an older frame)." ilk="function" name="do_u" signature="u(p) [count]" />
+        <scope doc="Continue execution until the current function returns." ilk="function" name="do_r" signature="r(eturn)" />
+        <scope doc="This function is called when a return trap is set here." ilk="function" name="user_return" signature="user_return(self, frame, return_value)" />
+        <scope doc="Print the value of the expression." ilk="function" name="do_p" signature="p(rint) expression" />
+        <scope doc="interact" ilk="function" name="do_interact" signature="do_interact(self, arg)" />
+        <scope doc="Print a stack trace, with the most recent frame at the&#xA;bottom." ilk="function" name="do_where" signature="w(here)" />
+        <scope doc="List source code for the current file." ilk="function" name="do_list" signature="l(ist) [first [,last] | .]" />
+        <scope doc="Without argument, print the list of available commands." ilk="function" name="do_help" signature="h(elp)" />
+        <scope doc="Handles one command line during command list definition." ilk="function" name="handle_command_def" signature="handle_command_def(self, line)" />
+        <scope doc="Move the current frame count (default one) levels down in&#xA;the stack trace (to a newer frame)." ilk="function" name="do_down" signature="d(own) [count]" />
+        <scope doc="Interpret the argument as though it had been typed in&#xA;response to the prompt." ilk="function" name="onecmd" signature="onecmd(self, line)" />
+        <scope doc="display [expression]" ilk="function" name="do_display" signature="do_display(self, arg)" />
+        <scope ilk="function" name="lineinfo" signature="lineinfo(self, identifier)" />
+        <scope ilk="function" name="__init__" signature="__init__(self, completekey=&apos;tab&apos;, stdin=None, stdout=None, skip=None, nosigint=False)" />
+        <scope doc="Print a range of lines." ilk="function" name="_print_lines" signature="_print_lines(self, lines, start, breaks=(), frame=None)" />
+        <scope doc="Continue execution until the next line in the current&#xA;function is reached or it returns." ilk="function" name="do_n" signature="n(ext)" />
+        <scope doc="pp expression Pretty-print the value of the expression." ilk="function" name="do_pp" signature="do_pp(self, arg)" />
+        <scope doc="# Can be executed earlier than &apos;setup&apos; if desired" ilk="function" name="execRcLines" signature="execRcLines(self)" />
+        <scope doc="Print a stack trace, with the most recent frame at the&#xA;bottom." ilk="function" name="do_w" signature="w(here)" />
+        <scope doc="Without argument, list all breaks." ilk="function" name="do_break" signature="b(reak) [ ([filename:]lineno | function) [, condition] ]" />
+        <scope doc="Continue execution until the current function returns." ilk="function" name="do_return" signature="r(eturn)" />
+        <scope doc="debug code Enter a recursive debugger that steps through the&#xA;code argument (which is an arbitrary expression or statement&#xA;to be executed in the current environment)." ilk="function" name="do_debug" signature="do_debug(self, arg)" />
+        <scope doc="Continue execution, only stop when a breakpoint is&#xA;encountered." ilk="function" name="do_continue" signature="c(ont(inue))" />
+        <scope doc="exit Quit from the debugger." ilk="function" name="do_quit" signature="q(uit)" />
+        <scope doc="This function is called when we stop or break at this line." ilk="function" name="user_line" signature="user_line(self, frame)" />
+        <scope doc="Execute the current line, stop at the first possible&#xA;occasion (either in a function that is called or in the&#xA;current function)." ilk="function" name="do_s" signature="s(tep)" />
+        <scope doc="run [args...] Restart the debugged python program." ilk="function" name="do_run" signature="do_run(self, arg)" />
+        <scope doc="tbreak [ ([filename:]lineno | function) [, condition] ] Same&#xA;arguments as break, but sets a temporary breakpoint: it is&#xA;automatically deleted when first hit." ilk="function" name="do_tbreak" signature="do_tbreak(self, arg)" />
+        <scope doc="unalias name Delete the specified alias." ilk="function" name="do_unalias" signature="do_unalias(self, arg)" />
+        <scope doc="longlist | ll List the whole source code for the current&#xA;function or frame." ilk="function" name="do_ll" signature="do_ll(self, arg)" />
+        <scope ilk="function" name="sigint_handler" signature="sigint_handler(self, signum, frame)" />
+        <scope ilk="function" name="_runscript" signature="_runscript(self, filename)" />
+        <scope doc="List source code for the current file." ilk="function" name="do_l" signature="l(ist) [first [,last] | .]" />
+        <scope doc="Continue execution, only stop when a breakpoint is&#xA;encountered." ilk="function" name="do_c" signature="c(ont(inue))" />
+        <scope ilk="function" name="interaction" signature="interaction(self, frame, traceback)" />
+        <scope doc="With a space separated list of breakpoint numbers, clear&#xA;those breakpoints." ilk="function" name="do_clear" signature="cl(ear) filename:lineno&#xA;cl(ear) [bpnumber [bpnumber...]]" />
+        <scope doc="Custom displayhook for the exec in default(), which prevents&#xA;assignment of the _ variable in the builtins." ilk="function" name="displayhook" signature="displayhook(self, obj)" />
+        <scope doc="retval Print the return value for the last return of a&#xA;function." ilk="function" name="do_retval" signature="do_retval(self, arg)" />
+        <scope doc="longlist | ll List the whole source code for the current&#xA;function or frame." ilk="function" name="do_longlist" signature="do_longlist(self, arg)" />
+        <scope doc="condition bpnumber [condition] Set a new condition for the&#xA;breakpoint, an expression which must evaluate to true before&#xA;the breakpoint is honored." ilk="function" name="do_condition" signature="do_condition(self, arg)" />
+        <scope doc="Produce a reasonable default." ilk="function" name="defaultFile" signature="defaultFile(self)" />
+        <scope doc="Without argument, continue execution until the line with a&#xA;number greater than the current one is reached." ilk="function" name="do_unt" signature="unt(il) [lineno]" />
+        <scope ilk="function" name="error" signature="error(self, msg)" />
+        <scope doc="whatis arg Print the type of the argument." ilk="function" name="do_whatis" signature="do_whatis(self, arg)" />
+        <scope doc="source expression Try to get source code for the given&#xA;object and display it." ilk="function" name="do_source" signature="do_source(self, arg)" />
+      </scope>
+      <scope classrefs="Exception" doc="Causes a debugger to be restarted for the debugged python program.&#xA;" ilk="class" name="Restart" />
+      <variable citdl="str" name="TESTCMD" />
+      <variable citdl="list" name="__all__" />
+      <import module="bdb" />
+      <import module="cmd" />
+      <import module="code" />
+      <import module="dis" />
+      <scope ilk="function" name="find_function" signature="find_function(funcname, filename)" />
+      <scope ilk="function" name="getsourcelines" signature="getsourcelines(obj)" />
+      <scope doc="# print help" ilk="function" name="help" signature="help()" />
+      <import module="inspect" />
+      <scope ilk="function" name="lasti2lineno" signature="lasti2lineno(code, lasti)" />
+      <variable citdl="str" name="line_prefix" />
+      <import module="linecache" />
+      <scope ilk="function" name="main" signature="main()" />
+      <import module="os" />
+      <scope ilk="function" name="pm" signature="pm()" />
+      <scope ilk="function" name="post_mortem" signature="post_mortem(t=None)" />
+      <import module="pprint" />
+      <import module="re" />
+      <scope ilk="function" name="run" signature="run(statement, globals=None, locals=None)" />
+      <scope ilk="function" name="runcall" signature="runcall(*args, **kwds)" />
+      <scope ilk="function" name="runctx" signature="runctx(statement, globals, locals)" />
+      <scope ilk="function" name="runeval" signature="runeval(expression, globals=None, locals=None)" />
+      <scope ilk="function" name="set_trace" signature="set_trace()" />
+      <import module="signal" />
+      <import module="sys" />
+      <scope ilk="function" name="test" signature="test()" />
+      <import module="traceback" />
+    </scope>
+    

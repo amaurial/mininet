@@ -1,0 +1,61 @@
+<scope ilk="blob" lang="Perl" name="Test::Perl::Critic::Policy">
+      <scope ilk="class" line="10" lineend="254" name="Test::Perl::Critic::Policy">
+        <import line="17" module="Carp" symbol="croak" />
+        <import line="17" module="Carp" symbol="confess" />
+        <import line="18" module="English" symbol="-no_match_vars" />
+        <import line="19" module="List::MoreUtils" symbol="all" />
+        <import line="19" module="List::MoreUtils" symbol="none" />
+        <import line="20" module="Readonly" symbol="*" />
+        <import line="22" module="Test::Builder" />
+        <import line="23" module="Test::More" symbol="*" />
+        <import line="25" module="Perl::Critic::Violation" symbol="*" />
+        <import line="27" module="Perl::Critic::TestUtils" symbol="pcritique_with_violations" />
+        <import line="27" module="Perl::Critic::TestUtils" symbol="fcritique_with_violations" />
+        <import line="27" module="Perl::Critic::TestUtils" symbol="subtests_in_tree" />
+        <variable line="32" name="$VERSION" />
+        <variable line="38" name="@EXPORT_OK" />
+        <variable line="39" name="%EXPORT_TAGS" />
+        <scope ilk="function" line="52" lineend="88" name="all_policies_ok" signature="all_policies_ok(%args)">
+          <variable ilk="argument" name="%args" />
+        </scope>
+        <scope ilk="function" line="92" lineend="102" name="_validate_wanted_policy_names" signature="_validate_wanted_policy_names($wanted_policies, $subtests_with_extras)">
+          <variable ilk="argument" name="$wanted_policies" />
+          <variable ilk="argument" name="$subtests_with_extras" />
+        </scope>
+        <scope ilk="function" line="106" lineend="118" name="_filter_unwanted_subtests" signature="_filter_unwanted_subtests($wanted_policies, $subtests_with_extras)">
+          <variable ilk="argument" name="$wanted_policies" />
+          <variable ilk="argument" name="$subtests_with_extras" />
+        </scope>
+        <scope ilk="function" line="122" lineend="156" name="_run_subtest" signature="_run_subtest($policy, $subtest)">
+          <variable ilk="argument" name="$policy" />
+          <variable ilk="argument" name="$subtest" />
+        </scope>
+        <scope ilk="function" line="160" lineend="172" name="_evaluate_test_results" signature="_evaluate_test_results($subtest, $error, $violations)">
+          <variable ilk="argument" name="$subtest" />
+          <variable ilk="argument" name="$error" />
+          <variable ilk="argument" name="$violations" />
+        </scope>
+        <scope ilk="function" line="176" lineend="191" name="_evaluate_violation_case" signature="_evaluate_violation_case($subtest, $violations)">
+          <variable ilk="argument" name="$subtest" />
+          <variable ilk="argument" name="$violations" />
+        </scope>
+        <scope ilk="function" line="195" lineend="209" name="_evaluate_error_case" signature="_evaluate_error_case($subtest, $error)">
+          <variable ilk="argument" name="$subtest" />
+          <variable ilk="argument" name="$error" />
+        </scope>
+        <scope ilk="function" line="213" lineend="226" name="_compute_test_count" signature="_compute_test_count($subtests_with_extras)">
+          <variable ilk="argument" name="$subtests_with_extras" />
+        </scope>
+        <scope ilk="function" line="230" lineend="236" name="_compute_wanted_violation_count" signature="_compute_wanted_violation_count($subtest)">
+          <variable ilk="argument" name="$subtest" />
+        </scope>
+        <scope ilk="function" line="240" lineend="244" name="_all_optional_modules_are_available" signature="_all_optional_modules_are_available($subtest)">
+          <variable ilk="argument" name="$subtest" />
+        </scope>
+        <scope ilk="function" line="248" lineend="251" name="_create_test_name" signature="_create_test_name($policy, $subtest)">
+          <variable ilk="argument" name="$policy" />
+          <variable ilk="argument" name="$subtest" />
+        </scope>
+      </scope>
+    </scope>
+    

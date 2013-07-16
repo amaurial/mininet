@@ -1,0 +1,31 @@
+<scope ilk="blob" lang="Perl" name="ExtUtils::MM_Cygwin">
+      <scope classrefs="ExtUtils::MM_Unix" ilk="class" line="1" lineend="156" name="ExtUtils::MM_Cygwin">
+        <import line="5" module="ExtUtils::MakeMaker::Config" symbol="*" />
+        <import line="6" module="File::Spec" symbol="*" />
+        <import line="8" module="ExtUtils::MM_Unix" />
+        <import line="9" module="ExtUtils::MM_Win32" />
+        <variable line="12" name="$VERSION" />
+        <scope ilk="function" line="35" lineend="37" name="os_flavor" signature="os_flavor()" />
+        <scope ilk="function" line="45" lineend="62" name="cflags" signature="cflags($self, $libperl)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$libperl" />
+        </scope>
+        <scope ilk="function" line="71" lineend="75" name="replace_manpage_separator" signature="replace_manpage_separator($self, $man)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$man" />
+        </scope>
+        <scope ilk="function" line="83" lineend="99" name="init_linker" signature="init_linker($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="109" lineend="117" name="maybe_command" signature="maybe_command($self, $file)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$file" />
+        </scope>
+        <scope ilk="function" line="126" lineend="140" name="dynamic_lib" signature="dynamic_lib($self, %attribs)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="%attribs" />
+        </scope>
+        <scope ilk="function" line="148" lineend="150" name="all_target" signature="all_target()" />
+      </scope>
+    </scope>
+    

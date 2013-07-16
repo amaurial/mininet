@@ -1,0 +1,64 @@
+<scope ilk="blob" lang="Perl" name="Hash::Util">
+      <scope classrefs="Exporter" ilk="class" line="1" lineend="522" name="Hash::Util">
+        <import line="5" module="Carp" symbol="*" />
+        <import line="8" module="warnings::register" symbol="*" />
+        <import line="9" module="Scalar::Util" symbol="reftype" />
+        <import line="11" module="Exporter" />
+        <import line="33" module="XSLoader" />
+        <variable line="13" name="@EXPORT_OK" />
+        <variable line="32" name="$VERSION" />
+        <scope ilk="function" line="36" lineend="44" name="import" signature="import($class)">
+          <import line="39" module="Hash::Util::FieldHash" />
+          <variable ilk="argument" name="$class" />
+          <import line="39" module="Hash::Util::FieldHash" />
+        </scope>
+        <scope ilk="function" line="139" lineend="165" name="lock_ref_keys" signature="lock_ref_keys($hash, @keys)">
+          <variable ilk="argument" name="$hash" />
+          <variable ilk="argument" name="@keys" />
+        </scope>
+        <scope ilk="function" line="167" lineend="172" name="unlock_ref_keys" signature="unlock_ref_keys($hash)">
+          <variable ilk="argument" name="$hash" />
+        </scope>
+        <scope ilk="function" line="174" lineend="174" name="lock_keys" signature="lock_keys()" />
+        <scope ilk="function" line="175" lineend="175" name="unlock_keys" signature="unlock_keys()" />
+        <scope ilk="function" line="192" lineend="205" name="lock_ref_keys_plus" signature="lock_ref_keys_plus($hash, @keys)">
+          <variable ilk="argument" name="$hash" />
+          <variable ilk="argument" name="@keys" />
+        </scope>
+        <scope ilk="function" line="207" lineend="207" name="lock_keys_plus" signature="lock_keys_plus()" />
+        <scope ilk="function" line="227" lineend="236" name="lock_ref_value" signature="lock_ref_value($hash, $key)">
+          <variable ilk="argument" name="$hash" />
+          <variable ilk="argument" name="$key" />
+        </scope>
+        <scope ilk="function" line="238" lineend="242" name="unlock_ref_value" signature="unlock_ref_value($hash, $key)">
+          <variable ilk="argument" name="$hash" />
+          <variable ilk="argument" name="$key" />
+        </scope>
+        <scope ilk="function" line="244" lineend="244" name="lock_value" signature="lock_value()" />
+        <scope ilk="function" line="245" lineend="245" name="unlock_value" signature="unlock_value()" />
+        <scope ilk="function" line="267" lineend="277" name="lock_hashref" signature="lock_hashref($hash)">
+          <variable ilk="argument" name="$hash" />
+        </scope>
+        <scope ilk="function" line="279" lineend="289" name="unlock_hashref" signature="unlock_hashref($hash)">
+          <variable ilk="argument" name="$hash" />
+        </scope>
+        <scope ilk="function" line="291" lineend="291" name="lock_hash" signature="lock_hash()" />
+        <scope ilk="function" line="292" lineend="292" name="unlock_hash" signature="unlock_hash()" />
+        <scope ilk="function" line="318" lineend="330" name="lock_hashref_recurse" signature="lock_hashref_recurse($hash)">
+          <variable ilk="argument" name="$hash" />
+        </scope>
+        <scope ilk="function" line="332" lineend="344" name="unlock_hashref_recurse" signature="unlock_hashref_recurse($hash)">
+          <variable ilk="argument" name="$hash" />
+        </scope>
+        <scope ilk="function" line="346" lineend="346" name="lock_hash_recurse" signature="lock_hash_recurse()" />
+        <scope ilk="function" line="347" lineend="347" name="unlock_hash_recurse" signature="unlock_hash_recurse()" />
+        <scope ilk="function" line="358" lineend="361" name="hashref_unlocked" signature="hashref_unlocked($hash)">
+          <variable ilk="argument" name="$hash" />
+        </scope>
+        <scope ilk="function" line="363" lineend="363" name="hash_unlocked" signature="hash_unlocked()" />
+        <scope ilk="function" line="372" lineend="372" name="legal_keys" signature="legal_keys()" />
+        <scope ilk="function" line="373" lineend="373" name="hidden_keys" signature="hidden_keys()" />
+        <scope ilk="function" line="439" lineend="441" name="hash_seed" signature="hash_seed()" />
+      </scope>
+    </scope>
+    

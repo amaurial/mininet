@@ -1,0 +1,23 @@
+<scope doc="Tool for measuring execution time of small code snippets.&#xA;This module avoids a number of common traps for measuring execution times.  See also Tim Peters&apos; introduction to the Algorithms chapter in the Python Cookbook, published by O&apos;Reilly.  Library usage: see the Timer class.  Command line usage: python timeit.py [-n N] [-r N] [-s S] [-t] [-c] [-h] [--] [statement]  Options:" ilk="blob" lang="Python" name="timeit">
+      <scope classrefs="object" doc="Class for timing execution speed of small code snippets.&#xA;The constructor takes a statement to be timed, an additional statement used for setup, and a timer function.  Both statements default to &apos;pass&apos;; the timer function is platform-dependent (see module doc string).  To measure the execution time of the first statement, use the timeit() method.  The repeat() method is a convenience to call timeit() multiple times and return a list of results.  The statements may contain newlines, as long as they don&apos;t contain" ilk="class" name="Timer">
+        <scope doc="Call timeit() a few times." ilk="function" name="repeat" signature="repeat(self, repeat=3, number=1000000)" />
+        <scope doc="Helper to print a traceback from the timed code." ilk="function" name="print_exc" signature="print_exc(self, file=None)" />
+        <scope doc="Time &apos;number&apos; executions of the main statement." ilk="function" name="timeit" signature="timeit(self, number=1000000)" />
+        <scope doc="Constructor. See class doc string." ilk="function" name="__init__" signature="__init__(self, stmt=&apos;pass&apos;, setup=&apos;pass&apos;, timer=&lt;built-in function clock&gt;)" />
+      </scope>
+      <variable citdl="list" name="__all__" />
+      <variable citdl="int" name="default_number" />
+      <variable citdl="int" name="default_repeat" />
+      <scope doc="Return the CPU time or real time since the start of the&#xA;process or since the first call to clock()." ilk="function" name="default_timer" signature="clock() -&gt; floating point number" />
+      <variable citdl="str" name="dummy_src_name" />
+      <import module="gc" />
+      <import module="itertools" />
+      <scope doc="Main program, used when run as a script." ilk="function" name="main" signature="main(args=None, *, _wrap_timer=None)" />
+      <scope doc="Helper to reindent a multi-line statement." ilk="function" name="reindent" signature="reindent(src, indent)" />
+      <scope doc="Convenience function to create Timer object and call repeat&#xA;method." ilk="function" name="repeat" signature="repeat(stmt=&apos;pass&apos;, setup=&apos;pass&apos;, timer=&lt;built-in function clock&gt;, repeat=3, number=1000000)" />
+      <import module="sys" />
+      <variable citdl="str" name="template" />
+      <import module="time" />
+      <scope doc="Convenience function to create Timer object and call timeit&#xA;method." ilk="function" name="timeit" signature="timeit(stmt=&apos;pass&apos;, setup=&apos;pass&apos;, timer=&lt;built-in function clock&gt;, number=1000000)" />
+    </scope>
+    

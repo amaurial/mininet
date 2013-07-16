@@ -1,0 +1,304 @@
+<scope doc="distutils.msvccompiler&#xA;Contains MSVCCompiler, an implementation of the abstract CCompiler class for the Microsoft Visual Studio." ilk="blob" lang="Python" name="distutils.msvccompiler">
+      <scope classrefs="object" doc="Abstract base class to define the interface that must be implemented&#xA;by real compiler classes.  Also has some utility methods used by several compiler classes.  The basic idea behind a compiler abstraction class is that each instance can be used for all the compile/link steps in building a single project.  Thus, attributes common to all of those compile and link steps -- include directories, macros to define, libraries to link against, etc. -- are attributes of the compiler instance.  To allow for variability in how individual files are treated, most of those attributes may be varied on a per-compilation or per-link basis." ilk="class" name="CCompiler">
+        <scope doc="Set the list of directories to search for shared libraries&#xA;at runtime to &apos;dirs&apos; (a list of strings)." ilk="function" name="set_runtime_library_dirs" signature="set_runtime_library_dirs(self, dirs)" />
+        <scope ilk="function" name="_get_cc_args" signature="_get_cc_args(self, pp_opts, debug, before)" />
+        <scope doc="Add &apos;object&apos; to the list of object files (or analogues, such&#xA;as explicitly named library files or the output of &quot;resource&#xA;compilers&quot;) to be included in every link driven by this&#xA;compiler object." ilk="function" name="add_link_object" signature="add_link_object(self, object)" />
+        <scope doc="Return the compiler option to add &apos;dir&apos; to the list of&#xA;directories searched for runtime libraries." ilk="function" name="runtime_library_dir_option" signature="runtime_library_dir_option(self, dir)" />
+        <scope doc="Link a bunch of stuff together to create a static library&#xA;file." ilk="function" name="create_static_lib" signature="create_static_lib(self, objects, output_libname, output_dir=None, debug=0, target_lang=None)" />
+        <scope doc="Process arguments and decide which source files to compile." ilk="function" name="_setup_compile" signature="_setup_compile(self, outdir, macros, incdirs, sources, depends, extra)" />
+        <scope doc="Add &apos;dir&apos; to the list of directories that will be searched&#xA;for libraries specified to &apos;add_library()&apos; and&#xA;&apos;set_libraries()&apos;." ilk="function" name="add_library_dir" signature="add_library_dir(self, dir)" />
+        <scope doc="Define a preprocessor macro for all compilations driven by&#xA;this compiler object." ilk="function" name="define_macro" signature="define_macro(self, name, value=None)" />
+        <scope doc="Return true if we need to relink the files listed in&#xA;&apos;objects&apos; to recreate &apos;output_file&apos;." ilk="function" name="_need_link" signature="_need_link(self, objects, output_file)" />
+        <scope doc="Preprocess a single C/C++ source file, named in &apos;source&apos;." ilk="function" name="preprocess" signature="preprocess(self, source, output_file=None, macros=None, include_dirs=None, extra_preargs=None, extra_postargs=None)" />
+        <scope doc="Search the specified list of directories for a static or&#xA;shared library file &apos;lib&apos; and return the full path to that&#xA;file." ilk="function" name="find_library_file" signature="find_library_file(self, dirs, lib, debug=0)" />
+        <scope ilk="function" name="object_filenames" signature="object_filenames(self, source_filenames, strip_dir=0, output_dir=&apos;&apos;)" />
+        <scope ilk="function" name="shared_object_filename" signature="shared_object_filename(self, basename, strip_dir=0, output_dir=&apos;&apos;)" />
+        <scope doc="Typecheck and fix-up some of the arguments to the&#xA;&apos;compile()&apos; method, and return fixed-up values." ilk="function" name="_fix_compile_args" signature="_fix_compile_args(self, output_dir, macros, include_dirs)" />
+        <scope ilk="function" name="warn" signature="warn(self, msg)" />
+        <scope doc="Add &apos;dir&apos; to the list of directories that will be searched&#xA;for header files." ilk="function" name="add_include_dir" signature="add_include_dir(self, dir)" />
+        <scope doc="Link a bunch of stuff together to create an executable or&#xA;shared library file." ilk="function" name="link" signature="link(self, target_desc, objects, output_filename, output_dir=None, libraries=None, library_dirs=None, runtime_library_dirs=None, export_symbols=None, debug=0, extra_preargs=None, extra_postargs=None, build_temp=None, target_lang=None)" />
+        <scope ilk="function" name="announce" signature="announce(self, msg, level=1)" />
+        <scope ilk="function" name="execute" signature="execute(self, func, args, msg=None, level=1)" />
+        <scope ilk="function" name="executable_filename" signature="executable_filename(self, basename, strip_dir=0, output_dir=&apos;&apos;)" />
+        <scope ilk="function" name="_find_macro" signature="_find_macro(self, name)" />
+        <scope doc="Typecheck and fix up some of the arguments supplied to the&#xA;&apos;link_*&apos; methods." ilk="function" name="_fix_lib_args" signature="_fix_lib_args(self, libraries, library_dirs, runtime_library_dirs)" />
+        <scope doc="Add &apos;libname&apos; to the list of libraries that will be included&#xA;in all links driven by this compiler object." ilk="function" name="add_library" signature="add_library(self, libname)" />
+        <scope doc="Compile one or more source files." ilk="function" name="compile" signature="compile(self, sources, output_dir=None, macros=None, include_dirs=None, debug=0, extra_preargs=None, extra_postargs=None, depends=None)" />
+        <scope doc="Detect the language of a given file, or list of files." ilk="function" name="detect_language" signature="detect_language(self, sources)" />
+        <scope ilk="function" name="spawn" signature="spawn(self, cmd)" />
+        <scope doc="Add &apos;dir&apos; to the list of directories that will be searched&#xA;for shared libraries at runtime." ilk="function" name="add_runtime_library_dir" signature="add_runtime_library_dir(self, dir)" />
+        <scope doc="Typecheck and fix up some arguments supplied to various&#xA;methods." ilk="function" name="_fix_object_args" signature="_fix_object_args(self, objects, output_dir)" />
+        <scope doc="Set the list of library search directories to &apos;dirs&apos; (a list&#xA;of strings)." ilk="function" name="set_library_dirs" signature="set_library_dirs(self, dirs)" />
+        <scope doc="Define the executables (and options for them) that will be&#xA;run to perform the various stages of compilation." ilk="function" name="set_executables" signature="set_executables(self, **kwargs)" />
+        <scope doc="Return the compiler option to add &apos;dir&apos; to the list of&#xA;directories searched for libraries." ilk="function" name="library_dir_option" signature="library_dir_option(self, dir)" />
+        <scope ilk="function" name="__init__" signature="__init__(self, verbose=0, dry_run=0, force=0)" />
+        <scope doc="Return the compiler option to add &apos;dir&apos; to the list of&#xA;libraries linked into the shared library or executable." ilk="function" name="library_option" signature="library_option(self, lib)" />
+        <scope ilk="function" name="link_shared_object" signature="link_shared_object(self, objects, output_filename, output_dir=None, libraries=None, library_dirs=None, runtime_library_dirs=None, export_symbols=None, debug=0, extra_preargs=None, extra_postargs=None, build_temp=None, target_lang=None)" />
+        <scope doc="Decide which souce files must be recompiled." ilk="function" name="_prep_compile" signature="_prep_compile(self, sources, output_dir, depends=None)" />
+        <scope ilk="function" name="set_executable" signature="set_executable(self, key, value)" />
+        <scope doc="Compile &apos;src&apos; to product &apos;obj&apos;." ilk="function" name="_compile" signature="_compile(self, obj, src, ext, cc_args, extra_postargs, pp_opts)" />
+        <scope ilk="function" name="library_filename" signature="library_filename(self, libname, lib_type=&apos;static&apos;, strip_dir=0, output_dir=&apos;&apos;)" />
+        <scope doc="Undefine a preprocessor macro for all compilations driven by&#xA;this compiler object." ilk="function" name="undefine_macro" signature="undefine_macro(self, name)" />
+        <scope doc="Set the list of directories that will be searched to &apos;dirs&apos;&#xA;(a list of strings)." ilk="function" name="set_include_dirs" signature="set_include_dirs(self, dirs)" />
+        <scope doc="Set the list of object files (or analogues) to be included&#xA;in every link to &apos;objects&apos;." ilk="function" name="set_link_objects" signature="set_link_objects(self, objects)" />
+        <scope ilk="function" name="link_shared_lib" signature="link_shared_lib(self, objects, output_libname, output_dir=None, libraries=None, library_dirs=None, runtime_library_dirs=None, export_symbols=None, debug=0, extra_preargs=None, extra_postargs=None, build_temp=None, target_lang=None)" />
+        <scope doc="Set the list of libraries to be included in all links driven&#xA;by this compiler object to &apos;libnames&apos; (a list of strings)." ilk="function" name="set_libraries" signature="set_libraries(self, libnames)" />
+        <scope doc="Ensures that every element of &apos;definitions&apos; is a valid macro&#xA;definition, ie." ilk="function" name="_check_macro_definitions" signature="_check_macro_definitions(self, definitions)" />
+        <scope doc="Return a boolean indicating whether funcname is supported on&#xA;the current platform." ilk="function" name="has_function" signature="has_function(self, funcname, includes=None, include_dirs=None, libraries=None, library_dirs=None)" />
+        <scope ilk="function" name="mkpath" signature="mkpath(self, name, mode=511)" />
+        <scope ilk="function" name="link_executable" signature="link_executable(self, objects, output_progname, output_dir=None, libraries=None, library_dirs=None, runtime_library_dirs=None, debug=0, extra_preargs=None, extra_postargs=None, target_lang=None)" />
+        <scope ilk="function" name="move_file" signature="move_file(self, src, dst)" />
+        <scope ilk="function" name="debug_print" signature="debug_print(self, msg)" />
+      </scope>
+      <scope classrefs="CCompilerError" doc="Failure to compile one or more C/C++ source files.&#xA;" ilk="class" name="CompileError" />
+      <scope classrefs="DistutilsError" doc="Any problems executing an external program (such as the C&#xA;compiler, when compiling C files)." ilk="class" name="DistutilsExecError" />
+      <scope classrefs="DistutilsError" doc="We don&apos;t know how to do something on the current platform (but&#xA;we do know how to do it on some platform) -- eg. trying to compile C files on a platform not supported by a CCompiler subclass." ilk="class" name="DistutilsPlatformError" />
+      <variable citdl="tuple" line="50" name="HKEYS" />
+      <scope classrefs="CCompilerError" doc="Failure to create a static library from one or more C/C++ object&#xA;files." ilk="class" name="LibError" />
+      <scope classrefs="CCompilerError" doc="Failure to link one or more C/C++ object files into an executable&#xA;or shared library file." ilk="class" name="LinkError" />
+      <scope classrefs="CCompiler" doc="Concrete class that implements an interface to Microsoft Visual C++,&#xA;as defined by the CCompiler abstract class." ilk="class" line="197" lineend="632" name="MSVCCompiler">
+        <scope ilk="function" line="450" lineend="526" name="link" signature="link(self, target_desc, objects, output_filename, output_dir=None, libraries=None, library_dirs=None, runtime_library_dirs=None, export_symbols=None, debug=0, extra_preargs=None, extra_postargs=None, build_temp=None, target_lang=None)">
+          <variable ilk="argument" name="target_lang" />
+          <variable citdl="gen_lib_options()" line="476" name="lib_opts" />
+          <variable line="507" name="dll_name" />
+          <variable citdl="list" line="494" name="export_opts" />
+          <variable citdl="list" line="498" name="ld_args" />
+          <variable citdl="os.path.join()" ilk="argument" name="output_filename" />
+          <variable ilk="argument" name="build_temp" />
+          <variable ilk="argument" name="extra_postargs" />
+          <variable citdl="os.path.join()" line="509" name="implib_file" />
+          <variable citdl="list" line="485" name="ldflags" />
+          <variable line="507" name="dll_ext" />
+          <variable ilk="argument" name="export_symbols" />
+          <variable ilk="argument" name="target_desc" />
+          <variable ilk="argument" name="extra_preargs" />
+          <variable ilk="argument" name="runtime_library_dirs" />
+          <variable ilk="argument" name="libraries" />
+          <variable ilk="argument" name="objects" />
+          <variable citdl="self._fix_lib_args()" line="468" name="fixed_args" />
+          <variable ilk="argument" name="output_dir" />
+          <variable citdl="int" ilk="argument" name="debug" />
+          <variable ilk="argument" name="library_dirs" />
+          <variable citdl="MSVCCompiler" ilk="argument" name="self" />
+        </scope>
+        <scope ilk="function" line="536" lineend="538" name="runtime_library_dir_option" signature="runtime_library_dir_option(self, dir)">
+          <variable citdl="MSVCCompiler" ilk="argument" name="self" />
+          <variable ilk="argument" name="dir" />
+        </scope>
+        <scope ilk="function" line="245" lineend="305" name="initialize" signature="initialize(self, plat_name=None)">
+          <variable citdl="MSVCCompiler" ilk="argument" name="self" />
+        </scope>
+        <scope ilk="function" line="540" lineend="541" name="library_option" returns="self.library_filename()" signature="library_option(self, lib)">
+          <variable citdl="MSVCCompiler" ilk="argument" name="self" />
+          <variable ilk="argument" name="lib" />
+        </scope>
+        <scope ilk="function" line="425" lineend="447" name="create_static_lib" signature="create_static_lib(self, objects, output_libname, output_dir=None, debug=0, target_lang=None)">
+          <variable ilk="argument" name="target_lang" />
+          <variable citdl="MSVCCompiler" ilk="argument" name="self" />
+          <variable citdl="self.library_filename()" line="435" name="output_filename" />
+          <variable ilk="argument" name="objects" />
+          <variable ilk="argument" name="output_dir" />
+          <variable citdl="list" line="439" name="lib_args" />
+          <variable citdl="int" ilk="argument" name="debug" />
+          <variable ilk="argument" name="output_libname" />
+        </scope>
+        <scope ilk="function" line="533" lineend="534" name="library_dir_option" returns="str" signature="library_dir_option(self, dir)">
+          <variable citdl="MSVCCompiler" ilk="argument" name="self" />
+          <variable ilk="argument" name="dir" />
+        </scope>
+        <scope ilk="function" line="227" lineend="243" name="__init__" signature="__init__(self, verbose=0, dry_run=0, force=0)">
+          <variable citdl="MSVCCompiler" ilk="argument" name="self" />
+          <variable citdl="int" ilk="argument" name="force" />
+          <variable citdl="int" ilk="argument" name="verbose" />
+          <variable citdl="int" ilk="argument" name="dry_run" />
+        </scope>
+        <scope ilk="function" line="340" lineend="422" name="compile" returns="objects" signature="compile(self, sources, output_dir=None, macros=None, include_dirs=None, debug=0, extra_preargs=None, extra_postargs=None, depends=None)">
+          <variable ilk="argument" name="sources" />
+          <variable ilk="argument" name="extra_postargs" />
+          <variable citdl="os.path.abspath()" line="369" name="input_opt" />
+          <variable citdl="os.path.join()" line="401" name="rc_file" />
+          <variable attributes="protected" line="400" name="_" />
+          <variable ilk="argument" name="include_dirs" />
+          <variable citdl="os.path.abspath()" line="366" name="src" />
+          <variable citdl="self._setup_compile()" line="346" name="compile_info" />
+          <variable citdl="MSVCCompiler" ilk="argument" name="self" />
+          <variable ilk="argument" name="depends" />
+          <variable ilk="argument" name="extra_preargs" />
+          <variable citdl="list" line="350" name="compile_opts" />
+          <variable ilk="argument" name="macros" />
+          <variable line="400" name="base" />
+          <variable ilk="argument" name="output_dir" />
+          <variable citdl="int" ilk="argument" name="debug" />
+          <variable citdl="os.path.dirname()" line="394" name="h_dir" />
+          <variable citdl="os.path.dirname()" line="395" name="rc_dir" />
+          <variable citdl="obj" line="375" name="output_opt" />
+        </scope>
+        <scope doc="Return path to an MSVC executable program." ilk="function" line="562" lineend="582" name="find_exe" returns="os.path.join()" signature="find_exe(self, exe)">
+          <variable citdl="MSVCCompiler" ilk="argument" name="self" />
+          <variable ilk="argument" name="exe" />
+          <variable citdl="os.path.join()" line="572" name="fn" />
+        </scope>
+        <scope ilk="function" name="_remove_visual_c_ref" signature="_remove_visual_c_ref(self, manifest_file)" />
+        <scope ilk="function" line="544" lineend="558" name="find_library_file" returns="os.path.join()" signature="find_library_file(self, dirs, lib, debug=0)">
+          <variable ilk="argument" name="dirs" />
+          <variable citdl="list" line="548" name="try_names" />
+          <variable ilk="argument" name="lib" />
+          <variable citdl="int" ilk="argument" name="debug" />
+          <variable citdl="MSVCCompiler" ilk="argument" name="self" />
+          <variable citdl="os.path.join()" line="553" name="libfile" />
+        </scope>
+        <scope ilk="function" line="309" lineend="337" name="object_filenames" returns="list" signature="object_filenames(self, source_filenames, strip_dir=0, output_dir=&apos;&apos;)">
+          <variable line="318" name="ext" />
+          <variable citdl="os.path.basename()" line="318" name="base" />
+          <variable citdl="str" ilk="argument" name="output_dir" />
+          <variable citdl="int" ilk="argument" name="strip_dir" />
+          <variable ilk="argument" name="source_filenames" />
+          <variable citdl="MSVCCompiler" ilk="argument" name="self" />
+          <variable citdl="list" line="316" name="obj_names" />
+        </scope>
+        <variable citdl="dict" line="208" name="executables" />
+        <variable citdl="list" line="218" name="src_extensions" />
+        <variable attributes="private __instancevar__" citdl="get_build_version()" line="238" name="__product" />
+        <variable attributes="__instancevar__" citdl="self.find_exe()" line="250" name="cc" />
+        <variable attributes="__instancevar__" citdl="self.find_exe()" line="251" name="linker" />
+        <variable attributes="protected" citdl="list" line="211" name="_c_extensions" />
+        <variable attributes="__instancevar__" citdl="True" line="243" name="initialized" />
+        <variable attributes="private __instancevar__" citdl="MacroExpander" line="235" name="__macros" />
+        <variable attributes="__instancevar__" citdl="list" line="285" name="compile_options_debug" />
+        <variable attributes="__instancevar__" citdl="list" line="294" name="ldflags_shared" />
+        <variable attributes="__instancevar__" citdl="self.find_exe()" line="252" name="lib" />
+        <variable citdl="str" line="201" name="compiler_type" />
+        <variable attributes="private __instancevar__" citdl="get_build_version()" line="229" name="__version" />
+        <variable attributes="protected" citdl="list" line="214" name="_mc_extensions" />
+        <variable attributes="__instancevar__" citdl="list" line="283" name="compile_options" />
+        <variable citdl="str" line="221" name="obj_extension" />
+        <scope doc="Get a list of devstudio directories (include, lib or path).&#xA;&#xA;Return a list of strings.  The list will be empty if unable to&#xA;access the registry or appropriate registry keys not found." ilk="function" line="584" lineend="618" name="get_msvc_paths" returns="list" signature="get_msvc_paths(path, platform=&apos;x86&apos;)">
+          <variable citdl="MSVCCompiler" ilk="argument" name="self" />
+          <variable citdl="str" ilk="argument" name="path" />
+          <variable citdl="str" ilk="argument" name="platform" />
+          <variable citdl="str" line="595" name="key" />
+          <variable citdl="read_values()" line="602" name="d" />
+        </scope>
+        <variable attributes="protected" citdl="list" line="212" name="_cpp_extensions" />
+        <variable attributes="protected" citdl="list" line="213" name="_rc_extensions" />
+        <variable attributes="__instancevar__" line="281" name="preprocess_options" />
+        <variable attributes="__instancevar__" citdl="self.find_exe()" line="253" name="rc" />
+        <variable attributes="private __instancevar__" citdl="get_build_architecture()" line="230" name="__arch" />
+        <variable attributes="private __instancevar__" citdl="str" line="234" name="__root" />
+        <variable citdl="str" line="225" name="exe_extension" />
+        <variable attributes="__instancevar__" citdl="list" line="303" name="ldflags_static" />
+        <variable citdl="str" line="224" name="static_lib_format" />
+        <variable attributes="__instancevar__" citdl="self.find_exe()" line="254" name="mc" />
+        <variable attributes="private __instancevar__" citdl="self.get_msvc_paths()" line="246" name="__paths" />
+        <variable attributes="__instancevar__" citdl="list" line="296" name="ldflags_shared_debug" />
+        <scope doc="Set environment variable &apos;name&apos; to an MSVC path type value.&#xA;&#xA;This is equivalent to a SET command prior to execution of spawned&#xA;commands." ilk="function" line="620" lineend="632" name="set_path_env_var" signature="set_path_env_var(name)">
+          <variable citdl="MSVCCompiler" ilk="argument" name="self" />
+          <variable ilk="argument" name="name" />
+          <variable citdl="get_msvc_paths()" line="628" name="p" />
+        </scope>
+        <variable citdl="str" line="220" name="res_extension" />
+        <variable citdl="str" line="222" name="static_lib_extension" />
+        <variable citdl="str" line="223" name="shared_lib_extension" />
+      </scope>
+      <scope classrefs="object" doc="&#xA;" ilk="class" line="102" lineend="145" name="MacroExpander">
+        <scope ilk="function" line="107" lineend="112" name="set_macro" signature="set_macro(self, macro, path, key)">
+          <variable ilk="argument" name="macro" />
+          <variable citdl="MacroExpander" ilk="argument" name="self" />
+          <variable citdl="read_values()" line="109" name="d" />
+          <variable ilk="argument" name="key" />
+          <variable ilk="argument" name="path" />
+        </scope>
+        <scope ilk="function" line="142" lineend="145" name="sub" returns="s.replace()" signature="sub(self, s)">
+          <variable citdl="MacroExpander" ilk="argument" name="self" />
+          <variable citdl="s.replace()" ilk="argument" name="s" />
+        </scope>
+        <scope ilk="function" line="114" lineend="140" name="load_macros" signature="load_macros(self, version)">
+          <variable citdl="read_values()" line="139" name="d" />
+          <variable citdl="RegOpenKeyEx()" line="135" name="h" />
+          <variable citdl="MacroExpander" ilk="argument" name="self" />
+          <variable citdl="str" line="115" name="vsbase" />
+          <variable citdl="str" line="132" name="p" />
+          <variable ilk="argument" name="version" />
+          <variable citdl="RegEnumKey()" line="138" name="key" />
+          <variable citdl="str" line="118" name="net" />
+        </scope>
+        <scope ilk="function" line="103" lineend="105" name="__init__" signature="__init__(self, version)">
+          <variable citdl="MacroExpander" ilk="argument" name="self" />
+          <variable ilk="argument" name="version" />
+        </scope>
+        <variable attributes="__instancevar__" citdl="dict" line="104" name="macros" />
+      </scope>
+      <scope classrefs="CCompiler" doc="Concrete class that implements an interface to Microsoft Visual C++,&#xA;as defined by the CCompiler abstract class." ilk="class" line="637" name="OldMSVCCompiler">
+        <scope doc="Get a list of devstudio directories (include, lib or path)." ilk="function" name="get_msvc_paths" signature="get_msvc_paths(self, path, platform=&apos;x86&apos;)" />
+        <scope ilk="function" name="compile" signature="compile(self, sources, output_dir=None, macros=None, include_dirs=None, debug=0, extra_preargs=None, extra_postargs=None, depends=None)" />
+        <scope ilk="function" name="link" signature="link(self, target_desc, objects, output_filename, output_dir=None, libraries=None, library_dirs=None, runtime_library_dirs=None, export_symbols=None, debug=0, extra_preargs=None, extra_postargs=None, build_temp=None, target_lang=None)" />
+        <scope ilk="function" name="runtime_library_dir_option" signature="runtime_library_dir_option(self, dir)" />
+        <scope ilk="function" name="initialize" signature="initialize(self)" />
+        <scope ilk="function" name="library_option" signature="library_option(self, lib)" />
+        <scope ilk="function" name="create_static_lib" signature="create_static_lib(self, objects, output_libname, output_dir=None, debug=0, target_lang=None)" />
+        <scope ilk="function" name="library_dir_option" signature="library_dir_option(self, dir)" />
+        <scope ilk="function" name="__init__" signature="__init__(self, verbose=0, dry_run=0, force=0)" />
+        <scope doc="Set environment variable &apos;name&apos; to an MSVC path type value." ilk="function" name="set_path_env_var" signature="set_path_env_var(self, name)" />
+        <scope doc="Return path to an MSVC executable program." ilk="function" name="find_exe" signature="find_exe(self, exe)" />
+        <scope ilk="function" name="find_library_file" signature="find_library_file(self, dirs, lib, debug=0)" />
+        <scope ilk="function" name="object_filenames" signature="object_filenames(self, source_filenames, strip_dir=0, output_dir=&apos;&apos;)" />
+      </scope>
+      <scope doc="Enumerates subkeys of an open registry key." ilk="function" line="27" name="RegEnumKey" returns="str" signature="EnumKey(key, index) -&gt; string" />
+      <scope doc="Enumerates values of an open registry key." ilk="function" line="28" name="RegEnumValue" returns="tuple" signature="EnumValue(key, index) -&gt; tuple" />
+      <scope classrefs="OSError" doc="MS-Windows OS system call failed.&#xA;" ilk="class" line="29" name="RegError">
+        <scope doc="x.__str__() &lt;==&gt; str(x)" ilk="function" name="__str__" signature="x.__str__() &lt;==&gt; str(x)" />
+        <scope ilk="function" name="__init__" />
+      </scope>
+      <scope doc="See OpenKey()" ilk="function" line="26" name="RegOpenKeyEx" />
+      <scope ilk="function" line="93" lineend="100" name="convert_mbcs" returns="dec()" signature="convert_mbcs(s)">
+        <variable citdl="dec()" ilk="argument" name="s" />
+        <variable citdl="getattr()" line="94" name="dec" />
+      </scope>
+      <scope doc="Generate linker options for searching library directories&#xA;and linking with specific libraries." ilk="function" name="gen_lib_options" signature="gen_lib_options(compiler, library_dirs, runtime_library_dirs, libraries)" />
+      <scope doc="Generate C pre-processor options (-D, -U, -I) as used by at&#xA;least two types of compilers: the typical Unix compiler and&#xA;Visual C++." ilk="function" name="gen_preprocess_options" signature="gen_preprocess_options(macros, include_dirs)" />
+      <scope doc="Return the processor architecture." ilk="function" line="169" lineend="180" name="get_build_architecture" returns="str" signature="get_build_architecture()">
+        <variable citdl="sys.version.find()" line="176" name="i" />
+        <variable citdl="str" line="175" name="prefix" />
+        <variable citdl="sys.version.find()" line="179" name="j" />
+      </scope>
+      <scope doc="Return the version of MSVC that was used to build Python." ilk="function" line="147" lineend="167" name="get_build_version" returns="int()" signature="get_build_version()">
+        <variable citdl="int()" line="159" name="majorVersion" />
+        <variable citdl="str" line="153" name="prefix" />
+        <variable citdl="int" line="160" name="minorVersion" />
+        <variable citdl="sys.version.find()" line="154" name="i" />
+        <variable line="158" name="s" />
+        <variable line="158" name="rest" />
+      </scope>
+      <import module="hkey_mod" />
+      <import module="log" />
+      <scope doc="Return a list of normalized paths with duplicates removed." ilk="function" line="182" lineend="194" name="normalize_and_reduce_paths" returns="list" signature="normalize_and_reduce_paths(paths)">
+        <variable citdl="os.path.normpath()" line="190" name="np" />
+        <variable ilk="argument" name="paths" />
+        <variable citdl="list" line="188" name="reduced_paths" />
+      </scope>
+      <import module="os" />
+      <scope doc="Return list of registry keys." ilk="function" line="55" lineend="70" name="read_keys" returns="list" signature="read_keys(base, key)">
+        <variable ilk="argument" name="base" />
+        <variable citdl="RegOpenKeyEx()" line="58" name="handle" />
+        <variable ilk="argument" name="key" />
+        <variable citdl="int" line="62" name="i" />
+        <variable citdl="RegEnumKey()" line="65" name="k" />
+        <variable citdl="list" line="61" name="L" />
+      </scope>
+      <scope doc="Return dict of registry keys and values." ilk="function" line="72" lineend="91" name="read_values" returns="dict" signature="read_values(base, key)">
+        <variable citdl="RegOpenKeyEx()" line="78" name="handle" />
+        <variable citdl="dict" line="81" name="d" />
+        <variable citdl="int" line="82" name="i" />
+        <variable line="85" name="value" />
+        <variable ilk="argument" name="base" />
+        <variable ilk="argument" name="key" />
+        <variable line="85" name="type" />
+        <variable citdl="name.lower()" line="85" name="name" />
+      </scope>
+      <import module="sys" />
+      <import module="winreg" />
+      <variable attributes="protected __hidden__" citdl="True" line="19" name="_can_read_reg" />
+      <variable attributes="__hidden__" citdl="winreg" line="24" name="hkey_mod" />
+      <variable citdl="str" line="11" name="__revision__" />
+    </scope>
+    

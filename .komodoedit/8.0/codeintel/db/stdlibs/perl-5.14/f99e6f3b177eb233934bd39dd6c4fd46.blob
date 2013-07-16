@@ -1,0 +1,31 @@
+<scope ilk="blob" lang="Perl" name="Module::Build::Platform::MacOS">
+      <scope classrefs="Module::Build::Base" ilk="class" line="1" lineend="101" name="Module::Build::Platform::MacOS">
+        <import line="7" module="Module::Build::Base" symbol="*" />
+        <import line="11" module="ExtUtils::Install" symbol="*" />
+        <variable line="4" name="$VERSION" />
+        <variable line="8" name="@ISA" />
+        <scope ilk="function" line="13" lineend="13" name="have_forkpipe" signature="have_forkpipe()" />
+        <scope ilk="function" line="15" lineend="30" name="new" signature="new($class)">
+          <variable ilk="argument" name="$class" />
+        </scope>
+        <scope ilk="function" line="32" lineend="38" name="make_executable" signature="make_executable($self)">
+          <import line="34" module="MacPerl" />
+          <variable ilk="argument" name="$self" />
+          <import line="34" module="MacPerl" />
+        </scope>
+        <scope ilk="function" line="40" lineend="68" name="dispatch" signature="dispatch($self)">
+          <import line="44" module="MacPerl" />
+          <variable ilk="argument" name="$self" />
+          <import line="44" module="MacPerl" />
+        </scope>
+        <scope ilk="function" line="70" lineend="74" name="ACTION_realclean" signature="ACTION_realclean($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="83" lineend="99" name="ACTION_install" signature="ACTION_install($self, $code, @dirs)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$code" />
+          <variable ilk="argument" name="@dirs" />
+        </scope>
+      </scope>
+    </scope>
+    

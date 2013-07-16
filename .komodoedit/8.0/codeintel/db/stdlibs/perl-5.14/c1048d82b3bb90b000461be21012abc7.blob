@@ -1,0 +1,82 @@
+<scope ilk="blob" lang="Perl" name="POSIX">
+      <scope ilk="class" line="1" lineend="71" name="POSIX">
+        <import line="9" module="AutoLoader" symbol="*" />
+        <import line="11" module="XSLoader" />
+        <import line="13" module="Fcntl" symbol="FD_CLOEXEC" />
+        <import line="13" module="Fcntl" symbol="F_DUPFD" />
+        <import line="13" module="Fcntl" symbol="F_GETFD" />
+        <import line="13" module="Fcntl" symbol="F_GETFL" />
+        <import line="13" module="Fcntl" symbol="F_GETLK" />
+        <import line="13" module="Fcntl" symbol="F_RDLCK" />
+        <import line="13" module="Fcntl" symbol="F_SETFD" />
+        <import line="14" module="Fcntl" symbol="F_SETFL" />
+        <import line="14" module="Fcntl" symbol="F_SETLK" />
+        <import line="14" module="Fcntl" symbol="F_SETLKW" />
+        <import line="14" module="Fcntl" symbol="F_UNLCK" />
+        <import line="14" module="Fcntl" symbol="F_WRLCK" />
+        <import line="14" module="Fcntl" symbol="O_ACCMODE" />
+        <import line="14" module="Fcntl" symbol="O_APPEND" />
+        <import line="15" module="Fcntl" symbol="O_CREAT" />
+        <import line="15" module="Fcntl" symbol="O_EXCL" />
+        <import line="15" module="Fcntl" symbol="O_NOCTTY" />
+        <import line="15" module="Fcntl" symbol="O_NONBLOCK" />
+        <import line="15" module="Fcntl" symbol="O_RDONLY" />
+        <import line="15" module="Fcntl" symbol="O_RDWR" />
+        <import line="15" module="Fcntl" symbol="O_TRUNC" />
+        <import line="16" module="Fcntl" symbol="O_WRONLY" />
+        <import line="16" module="Fcntl" symbol="SEEK_CUR" />
+        <import line="16" module="Fcntl" symbol="SEEK_END" />
+        <import line="16" module="Fcntl" symbol="SEEK_SET" />
+        <import line="17" module="Fcntl" symbol="S_ISBLK" />
+        <import line="17" module="Fcntl" symbol="S_ISCHR" />
+        <import line="17" module="Fcntl" symbol="S_ISDIR" />
+        <import line="17" module="Fcntl" symbol="S_ISFIFO" />
+        <import line="17" module="Fcntl" symbol="S_ISREG" />
+        <import line="18" module="Fcntl" symbol="S_IRGRP" />
+        <import line="18" module="Fcntl" symbol="S_IROTH" />
+        <import line="18" module="Fcntl" symbol="S_IRUSR" />
+        <import line="18" module="Fcntl" symbol="S_IRWXG" />
+        <import line="18" module="Fcntl" symbol="S_IRWXO" />
+        <import line="18" module="Fcntl" symbol="S_IRWXU" />
+        <import line="18" module="Fcntl" symbol="S_ISGID" />
+        <import line="18" module="Fcntl" symbol="S_ISUID" />
+        <import line="19" module="Fcntl" symbol="S_IWGRP" />
+        <import line="19" module="Fcntl" symbol="S_IWOTH" />
+        <import line="19" module="Fcntl" symbol="S_IWUSR" />
+        <import line="19" module="Fcntl" symbol="S_IXGRP" />
+        <import line="19" module="Fcntl" symbol="S_IXOTH" />
+        <import line="19" module="Fcntl" symbol="S_IXUSR" />
+        <variable line="5" name="$AUTOLOAD" />
+        <variable line="5" name="%EXPORT_TAGS" />
+        <variable line="5" name="%SIGRT" />
+        <variable line="5" name="@EXPORT" />
+        <variable line="5" name="@EXPORT_OK" />
+        <variable line="5" name="@ISA" />
+        <variable line="7" name="$VERSION" />
+        <variable line="42" name="$AutoLoader::AUTOLOAD" />
+        <scope ilk="function" line="24" lineend="30" name="import" signature="import($this)">
+          <variable ilk="argument" name="$this" />
+        </scope>
+        <scope ilk="function" line="32" lineend="32" name="croak" signature="croak()">
+          <import line="32" module="Carp" />
+          <import line="32" module="Carp" />
+        </scope>
+        <scope ilk="function" line="38" lineend="48" name="AUTOLOAD" signature="AUTOLOAD()">
+          </scope>
+      </scope>
+      <scope ilk="class" line="50" lineend="52" name="POSIX::SigAction">
+        <import line="52" module="AutoLoader" symbol="AUTOLOAD" />
+      </scope>
+      <scope ilk="class" line="54" lineend="67" name="POSIX::SigRt">
+        <import line="56" module="AutoLoader" symbol="AUTOLOAD" />
+        <import line="58" module="Tie::Hash" symbol="*" />
+        <variable line="60" name="$_SIGRTMAX" />
+        <variable line="60" name="$_SIGRTMIN" />
+        <variable line="60" name="$_sigrtn" />
+        <variable line="60" name="$SIGACTION_FLAGS" />
+        <variable line="60" name="@ISA" />
+        <variable line="61" name="@POSIX::SigRt::ISA" />
+        <scope ilk="function" line="67" lineend="67" name="DESTROY" signature="DESTROY()" />
+      </scope>
+    </scope>
+    

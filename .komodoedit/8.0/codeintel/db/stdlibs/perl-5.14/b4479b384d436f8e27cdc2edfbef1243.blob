@@ -1,0 +1,42 @@
+<scope ilk="blob" lang="Perl" name="DBI::Gofer::Transport::Base">
+      <scope ilk="class" line="1" lineend="175" name="DBI::Gofer::Transport::Base">
+        <import line="13" module="DBI" symbol="*" />
+        <import line="17" module="DBI::Gofer::Serializer::Storable" symbol="*" />
+        <import line="18" module="DBI::Gofer::Serializer::DataDumper" symbol="*" />
+        <variable line="21" name="$VERSION" />
+        <variable line="73" name="*freeze_request" />
+        <variable line="74" name="*freeze_response" />
+        <variable line="107" name="*thaw_request" />
+        <variable line="108" name="*thaw_response" />
+        <scope ilk="function" line="32" lineend="32" name="_init_trace" signature="_init_trace()" />
+        <scope attributes="__ctor__" ilk="function" line="35" lineend="43" name="new" signature="new($class, $args)">
+          <variable ilk="argument" name="$class" />
+          <variable ilk="argument" name="$args" />
+        </scope>
+        <scope ilk="function" line="49" lineend="71" name="_freeze_data" signature="_freeze_data($self, $data, $serializer, $skip_trace)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$data" />
+          <variable ilk="argument" name="$serializer" />
+          <variable ilk="argument" name="$skip_trace" />
+        </scope>
+        <scope ilk="function" line="77" lineend="105" name="_thaw_data" signature="_thaw_data($self, $frozen_data, $serializer, $skip_trace)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$frozen_data" />
+          <variable ilk="argument" name="$serializer" />
+          <variable ilk="argument" name="$skip_trace" />
+        </scope>
+        <scope ilk="function" line="113" lineend="139" name="_dump" signature="_dump($self, $label, $data)">
+          <import line="122" module="Data::Dumper" />
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$label" />
+          <variable ilk="argument" name="$data" />
+          <import line="122" module="Data::Dumper" />
+        </scope>
+        <scope ilk="function" line="142" lineend="148" name="trace_msg" signature="trace_msg($self, $msg, $min_level)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$msg" />
+          <variable ilk="argument" name="$min_level" />
+        </scope>
+      </scope>
+    </scope>
+    

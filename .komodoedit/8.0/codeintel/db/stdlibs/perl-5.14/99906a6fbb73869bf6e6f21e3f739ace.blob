@@ -1,0 +1,26 @@
+<scope ilk="blob" lang="Perl" name="Thread::Semaphore">
+      <scope ilk="class" line="1" lineend="235" name="Thread::Semaphore">
+        <import line="9" module="threads::shared" symbol="*" />
+        <import line="10" module="Scalar::Util" symbol="*" />
+        <import line="87" module="Carp" />
+        <variable line="6" name="$VERSION" />
+        <scope attributes="__ctor__" ilk="function" line="16" lineend="33" name="new" signature="new($class)">
+          <import line="26" module="Carp" />
+          <variable ilk="argument" name="$class" />
+          <import line="26" module="Carp" />
+        </scope>
+        <scope ilk="function" line="36" lineend="43" name="down" signature="down($sema)">
+          <variable ilk="argument" name="$sema" />
+        </scope>
+        <scope ilk="function" line="47" lineend="55" name="down_nb" signature="down_nb($sema)">
+          <variable ilk="argument" name="$sema" />
+        </scope>
+        <scope ilk="function" line="59" lineend="65" name="down_force" signature="down_force($sema)">
+          <variable ilk="argument" name="$sema" />
+        </scope>
+        <scope ilk="function" line="68" lineend="74" name="up" signature="up($sema)">
+          <variable ilk="argument" name="$sema" />
+        </scope>
+      </scope>
+    </scope>
+    

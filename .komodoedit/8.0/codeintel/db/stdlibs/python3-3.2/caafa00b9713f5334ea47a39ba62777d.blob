@@ -1,0 +1,141 @@
+<scope doc="distutils.command.bdist_wininst&#xA;Implements the Distutils &apos;bdist_wininst&apos; command: create a windows installer exe-program." ilk="blob" lang="Python" name="distutils.command.bdist_wininst">
+      <scope classrefs="Exception" doc="Some compile/link operation failed.&#xA;" ilk="class" name="CCompilerError" />
+      <scope classrefs="object" doc="Abstract base class for defining command classes, the &quot;worker bees&quot;&#xA;of the Distutils.  A useful analogy for command classes is to think of them as subroutines with local variables called &quot;options&quot;.  The options are &quot;declared&quot; in &apos;initialize_options()&apos; and &quot;defined&quot; (given their final values, aka &quot;finalized&quot;) in &apos;finalize_options()&apos;, both of which must be defined by every command class.  The distinction between the two is necessary because option values might come from the outside world (command line, config file, ...), and any options dependent on other options must be computed *after* these outside influences have been processed -- hence &apos;finalize_options()&apos;.  The &quot;body&quot; of the subroutine, where it does all its work based on the values of its" ilk="class" name="Command">
+        <scope ilk="function" name="_ensure_tested_string" signature="_ensure_tested_string(self, option, tester, what, error_fmt, default=None)" />
+        <scope doc="Spawn an external command respecting dry-run flag." ilk="function" name="spawn" signature="spawn(self, cmd, search_path=1, level=1)" />
+        <scope ilk="function" name="ensure_finalized" signature="ensure_finalized(self)" />
+        <scope doc="Create and initialize a new Command object." ilk="function" name="__init__" signature="__init__(self, dist)" />
+        <scope doc="Set default values for all the options that this command&#xA;supports." ilk="function" name="initialize_options" signature="initialize_options(self)" />
+        <scope ilk="function" name="dump_options" signature="dump_options(self, header=None, indent=&apos;&apos;)" />
+        <scope doc="# XXX A more explicit way to customize dry_run would be&#xA;better." ilk="function" name="__getattr__" signature="__getattr__(self, attr)" />
+        <scope doc="Determine the sub-commands that are relevant in the current&#xA;distribution (ie., that need to be run)." ilk="function" name="get_sub_commands" signature="get_sub_commands(self)" />
+        <scope doc="Copy an entire directory tree respecting verbose, dry-run,&#xA;and force flags." ilk="function" name="copy_tree" signature="copy_tree(self, infile, outfile, preserve_mode=1, preserve_times=1, preserve_symlinks=0, level=1)" />
+        <scope doc="If the current verbosity level is of greater than or equal&#xA;to &apos;level&apos; print &apos;msg&apos; to stdout." ilk="function" name="announce" signature="announce(self, msg, level=1)" />
+        <scope doc="Run some other command: uses the &apos;run_command()&apos; method of&#xA;Distribution, which creates and finalizes the command object&#xA;if necessary and then invokes its &apos;run()&apos; method." ilk="function" name="run_command" signature="run_command(self, command)" />
+        <scope doc="Set the values of any &quot;undefined&quot; options from corresponding&#xA;option values in some other command object." ilk="function" name="set_undefined_options" signature="set_undefined_options(self, src_cmd, *option_pairs)" />
+        <scope doc="A command&apos;s raison d&apos;etre: carry out the action it exists to&#xA;perform, controlled by the options initialized in&#xA;&apos;initialize_options()&apos;, customized by other commands, the&#xA;setup script, the command-line, and config files, and&#xA;finalized in" ilk="function" name="run" signature="run(self)" />
+        <scope doc="# XXX rename to &apos;get_reinitialized_command()&apos;? (should do&#xA;the # same in dist.py, if so)" ilk="function" name="reinitialize_command" signature="reinitialize_command(self, command, reinit_subcommands=0)" />
+        <scope doc="Copy a file respecting verbose, dry-run and force flags." ilk="function" name="copy_file" signature="copy_file(self, infile, outfile, preserve_mode=1, preserve_times=1, link=None, level=1)" />
+        <scope ilk="function" name="warn" signature="warn(self, msg)" />
+        <scope ilk="function" name="ensure_dirname" signature="ensure_dirname(self, option)" />
+        <scope doc="Move a file respecting dry-run flag." ilk="function" name="move_file" signature="move_file(self, src, dst, level=1)" />
+        <scope doc="Ensure that &apos;option&apos; is a list of strings." ilk="function" name="ensure_string_list" signature="ensure_string_list(self, option)" />
+        <scope ilk="function" name="_ensure_stringlike" signature="_ensure_stringlike(self, option, what, default=None)" />
+        <scope doc="Wrapper around Distribution&apos;s &apos;get_command_obj()&apos; method:&#xA;find (create if necessary and &apos;create&apos; is true) the command&#xA;object for &apos;command&apos;, call its &apos;ensure_finalized()&apos; method,&#xA;and return the finalized command object." ilk="function" name="get_finalized_command" signature="get_finalized_command(self, command, create=1)" />
+        <scope ilk="function" name="execute" signature="execute(self, func, args, msg=None, level=1)" />
+        <scope doc="Ensure that &apos;option&apos; is a string; if not defined, set it to&#xA;&apos;default&apos;." ilk="function" name="ensure_string" signature="ensure_string(self, option, default=None)" />
+        <scope ilk="function" name="mkpath" signature="mkpath(self, name, mode=511)" />
+        <scope ilk="function" name="make_archive" signature="make_archive(self, base_name, format, root_dir=None, base_dir=None)" />
+        <scope ilk="function" name="get_command_name" signature="get_command_name(self)" />
+        <scope doc="Special case of &apos;execute()&apos; for operations that process one&#xA;or more input files and generate one output file." ilk="function" name="make_file" signature="make_file(self, infiles, outfile, func, args, exec_msg=None, skip_msg=None, level=1)" />
+        <scope doc="Set final values for all the options that this command&#xA;supports." ilk="function" name="finalize_options" signature="finalize_options(self)" />
+        <scope doc="Ensure that &apos;option&apos; is the name of an existing file." ilk="function" name="ensure_filename" signature="ensure_filename(self, option)" />
+        <scope doc="Print &apos;msg&apos; to stdout if the global DEBUG (taken from the&#xA;DISTUTILS_DEBUG environment variable) flag is true." ilk="function" name="debug_print" signature="debug_print(self, msg)" />
+      </scope>
+      <scope classrefs="CCompilerError" doc="Failure to compile one or more C/C++ source files.&#xA;" ilk="class" name="CompileError" />
+      <scope classrefs="DistutilsError" doc="Raised by fancy_getopt in response to getopt.error -- ie. an&#xA;error in the command line usage." ilk="class" name="DistutilsArgError" />
+      <scope classrefs="DistutilsError" doc="Byte compile error.&#xA;" ilk="class" name="DistutilsByteCompileError" />
+      <scope classrefs="DistutilsError" doc="Some command class (or possibly distribution class, if anyone&#xA;feels a need to subclass Distribution) is found not to be holding up its end of the bargain, ie. implementing some part of the &quot;command &quot;interface." ilk="class" name="DistutilsClassError" />
+      <scope classrefs="Exception" doc="The root of all Distutils evil.&#xA;" ilk="class" name="DistutilsError" />
+      <scope classrefs="DistutilsError" doc="Any problems executing an external program (such as the C&#xA;compiler, when compiling C files)." ilk="class" name="DistutilsExecError" />
+      <scope classrefs="DistutilsError" doc="Any problems in the filesystem: expected file not found, etc.&#xA;Typically this is for problems that we detect before IOError or OSError could be raised." ilk="class" name="DistutilsFileError" />
+      <scope classrefs="DistutilsError" doc="The option table provided to &apos;fancy_getopt()&apos; is bogus.&#xA;" ilk="class" name="DistutilsGetoptError" />
+      <scope classrefs="DistutilsError" doc="Internal inconsistencies or impossibilities (obviously, this&#xA;should never be seen if the code is working!)." ilk="class" name="DistutilsInternalError" />
+      <scope classrefs="DistutilsError" doc="Unable to load an expected module, or to find an expected class&#xA;within some module (in particular, command modules and classes)." ilk="class" name="DistutilsModuleError" />
+      <scope classrefs="DistutilsError" doc="Syntactic/semantic errors in command options, such as use of&#xA;mutually conflicting options, or inconsistent options, badly-spelled values, etc.  No distinction is made between option values originating in the setup script, the command line, config files, or what-have-you -- but if we *know* something originated in the setup script, we&apos;ll raise DistutilsSetupError instead." ilk="class" name="DistutilsOptionError" />
+      <scope classrefs="DistutilsError" doc="We don&apos;t know how to do something on the current platform (but&#xA;we do know how to do it on some platform) -- eg. trying to compile C files on a platform not supported by a CCompiler subclass." ilk="class" name="DistutilsPlatformError" />
+      <scope classrefs="DistutilsError" doc="For errors that can be definitely blamed on the setup script,&#xA;such as invalid keyword arguments to &apos;setup()&apos;." ilk="class" name="DistutilsSetupError" />
+      <scope classrefs="DistutilsError" doc="Syntax error in a file list template.&#xA;" ilk="class" name="DistutilsTemplateError" />
+      <scope classrefs="CCompilerError" doc="Failure to create a static library from one or more C/C++ object&#xA;files." ilk="class" name="LibError" />
+      <scope classrefs="CCompilerError" doc="Failure to link one or more C/C++ object files into an executable&#xA;or shared library file." ilk="class" name="LinkError" />
+      <scope classrefs="CCompilerError" doc="Failure to preprocess one or more C/C++ files.&#xA;" ilk="class" name="PreprocessError" />
+      <scope classrefs="CCompilerError" doc="Attempt to process an unknown file type.&#xA;" ilk="class" name="UnknownFileError" />
+      <scope classrefs="Command" doc="&#xA;" ilk="class" line="14" lineend="349" name="bdist_wininst">
+        <scope ilk="function" line="305" lineend="349" name="get_exe_bytes" returns="f.read()" signature="get_exe_bytes(self)">
+          <variable citdl="list" line="340" name="sfix" />
+          <variable citdl="os.path.dirname()" line="332" name="directory" />
+          <variable citdl="get_build_version()" line="321" name="bv" />
+          <variable citdl="open()" line="345" name="f" />
+          <variable citdl="get_python_version()" line="315" name="cur_version" />
+          <variable citdl="bdist_wininst" ilk="argument" name="self" />
+          <variable citdl="os.path.join()" line="344" name="filename" />
+        </scope>
+        <scope ilk="function" line="239" lineend="290" name="create_exe" signature="create_exe(self, arcname, fullname, bitmap=None)">
+          <variable citdl="open()" line="255" name="file" />
+          <variable citdl="int" line="251" name="bitmaplen" />
+          <variable citdl="bdist_wininst" ilk="argument" name="self" />
+          <variable line="250" name="bitmapdata" />
+          <variable citdl="str" line="244" name="cfgdata" />
+          <variable ilk="argument" name="bitmap" />
+          <variable citdl="struct.pack()" line="284" name="header" />
+          <variable citdl="self.get_installer_filename()" line="246" name="installer_name" />
+          <variable ilk="argument" name="arcname" />
+          <variable ilk="argument" name="fullname" />
+          <variable line="272" name="script_data" />
+        </scope>
+        <scope ilk="function" line="112" lineend="191" name="run" signature="run(self)">
+          <variable citdl="list" line="141" name="target_version" />
+          <variable citdl="self.make_archive()" line="176" name="arcname" />
+          <variable citdl="bdist_wininst" ilk="argument" name="self" />
+          <variable citdl="key.upper()" line="153" name="value" />
+          <variable citdl="mktemp()" line="174" name="archive_basename" />
+          <variable citdl="str" line="181" name="pyversion" />
+          <variable citdl="self.reinitialize_command()" line="123" name="install" />
+          <variable citdl="self.reinitialize_command()" line="129" name="install_lib" />
+          <variable citdl="str" line="145" name="plat_specifier" />
+          <variable citdl="self.distribution.get_fullname()" line="175" name="fullname" />
+          <variable citdl="self.get_finalized_command()" line="146" name="build" />
+        </scope>
+        <scope ilk="function" line="58" lineend="71" name="initialize_options" signature="initialize_options(self)">
+          <variable citdl="bdist_wininst" ilk="argument" name="self" />
+        </scope>
+        <scope ilk="function" line="193" lineend="237" name="get_inidata" returns="str.join()" signature="get_inidata(self)">
+          <variable citdl="str" line="203" name="info" />
+          <variable citdl="str" line="234" name="build_info" />
+          <variable citdl="self.distribution.get_fullname()" line="230" name="title" />
+          <variable citdl="bdist_wininst" ilk="argument" name="self" />
+          <variable citdl="list" line="195" name="lines" />
+          <scope ilk="function" line="206" lineend="207" name="escape" returns="s.replace()" signature="escape(s)">
+            <variable ilk="argument" name="s" />
+          </scope>
+          <variable citdl="getattr()" line="211" name="data" />
+          <variable citdl="self.distribution.metadata" line="196" name="metadata" />
+        </scope>
+        <scope ilk="function" line="292" lineend="303" name="get_installer_filename" returns="os.path.join()" signature="get_installer_filename(self, fullname)">
+          <variable citdl="bdist_wininst" ilk="argument" name="self" />
+          <variable citdl="os.path.join()" line="297" name="installer_name" />
+          <variable ilk="argument" name="fullname" />
+        </scope>
+        <scope ilk="function" line="74" lineend="110" name="finalize_options" signature="finalize_options(self)">
+          <variable citdl="bdist_wininst" ilk="argument" name="self" />
+          <variable citdl="self.distribution.get_command_obj()" line="81" name="bdist" />
+          <variable line="84" name="bdist_base" />
+          <variable citdl="get_python_version()" line="91" name="short_version" />
+        </scope>
+        <variable citdl="list" line="18" name="user_options" />
+        <variable attributes="__instancevar__" citdl="get_python_version()" line="64" name="target_version" />
+        <variable citdl="str" line="16" name="description" />
+        <variable attributes="__instancevar__" line="67" name="title" />
+        <variable attributes="__instancevar__" citdl="int" line="63" name="no_target_optimize" />
+        <variable attributes="__instancevar__" line="60" name="plat_name" />
+        <variable attributes="__instancevar__" line="66" name="bitmap" />
+        <variable attributes="__instancevar__" citdl="int" line="68" name="skip_build" />
+        <variable attributes="__instancevar__" citdl="os.path.join()" line="59" name="bdist_dir" />
+        <variable citdl="list" line="55" name="boolean_options" />
+        <variable attributes="__instancevar__" line="65" name="dist_dir" />
+        <variable attributes="__instancevar__" line="70" name="pre_install_script" />
+        <variable attributes="__instancevar__" citdl="int" line="62" name="no_target_compile" />
+        <variable attributes="__instancevar__" citdl="int" line="61" name="keep_temp" />
+        <variable attributes="__instancevar__" line="69" name="install_script" />
+        <variable attributes="__instancevar__" line="71" name="user_access_control" />
+      </scope>
+      <scope doc="Create all the empty directories under &apos;base_dir&apos; needed to&#xA;put &apos;files&apos; there." ilk="function" name="create_tree" signature="create_tree(base_dir, files, mode=511, verbose=1, dry_run=0)" />
+      <scope doc="Return a string that identifies the current platform." ilk="function" name="get_platform" signature="get_platform()" />
+      <scope doc="Return a string containing the major and minor Python&#xA;version, leaving off the patchlevel." ilk="function" name="get_python_version" signature="get_python_version()" />
+      <import module="log" />
+      <import module="os" />
+      <scope doc="Recursively remove an entire directory tree." ilk="function" name="remove_tree" signature="remove_tree(directory, verbose=1, dry_run=0)" />
+      <import module="sys" />
+      <variable citdl="str" line="6" name="__revision__" />
+    </scope>
+    

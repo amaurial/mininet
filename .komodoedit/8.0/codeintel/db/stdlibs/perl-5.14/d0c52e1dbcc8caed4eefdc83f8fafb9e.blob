@@ -1,0 +1,39 @@
+<scope ilk="blob" lang="Perl" name="encoding">
+      <scope ilk="class" line="2" lineend="193" name="encoding">
+        <import line="5" module="Encode" symbol="*" />
+        <import line="13" module="Carp" />
+        <import line="19" module="PerlIO::encoding" />
+        <variable line="3" name="$VERSION" />
+        <variable line="18" name="$HAS_PERLIO" />
+        <scope ilk="function" line="9" lineend="9" name="DEBUG" signature="DEBUG()" />
+        <scope ilk="function" line="24" lineend="35" name="_exception" signature="_exception($name)">
+          <import line="31" module="Config" />
+          <variable ilk="argument" name="$name" />
+          <import line="31" module="Config" />
+        </scope>
+        <scope ilk="function" line="37" lineend="37" name="in_locale" signature="in_locale()" />
+        <scope ilk="function" line="39" lineend="102" name="_get_locale_encoding" signature="_get_locale_encoding()">
+          <import line="44" module="I18N::Langinfo" />
+          <import line="94" module="Carp" />
+          <import line="44" module="I18N::Langinfo" />
+          <import line="94" module="Carp" />
+        </scope>
+        <scope ilk="function" line="104" lineend="175" name="import" signature="import($class, $name, %arg)">
+          <import line="120" module="Carp" />
+          <import line="133" module="utf8" />
+          <import line="136" module="Filter::Util::Call" />
+          <import line="155" module="Carp" />
+          <import line="170" module="Carp" />
+          <variable ilk="argument" name="$class" />
+          <variable ilk="argument" name="$name" />
+          <variable ilk="argument" name="%arg" />
+          <import line="120" module="Carp" />
+          <import line="133" module="utf8" />
+          <import line="136" module="Filter::Util::Call" />
+          <import line="155" module="Carp" />
+          <import line="170" module="Carp" />
+        </scope>
+        <scope ilk="function" line="177" lineend="191" name="unimport" signature="unimport()" />
+      </scope>
+    </scope>
+    

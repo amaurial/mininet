@@ -1,0 +1,137 @@
+<scope ilk="blob" lang="Perl" name="DBD::Gofer">
+      <scope ilk="class" line="2" lineend="129" name="DBD::Gofer">
+        <import line="6" module="DBI" />
+        <import line="7" module="DBI::Gofer::Request" />
+        <import line="8" module="DBI::Gofer::Response" />
+        <import line="9" module="Carp" />
+        <variable line="11" name="$VERSION" />
+        <variable line="23" name="%xxh_local_store_attrib" />
+        <variable line="45" name="%xxh_local_store_attrib_if_same_value" />
+        <variable line="50" name="$drh" />
+        <variable line="51" name="$methods_already_installed" />
+        <scope ilk="function" line="53" lineend="76" name="driver" signature="driver($class, $attr)">
+          <variable ilk="argument" name="$class" />
+          <variable ilk="argument" name="$attr" />
+        </scope>
+        <scope ilk="function" line="79" lineend="81" name="CLONE" signature="CLONE()" />
+        <scope ilk="function" line="84" lineend="91" name="go_cache" signature="go_cache($h)">
+          <variable ilk="argument" name="$h" />
+        </scope>
+        <scope ilk="function" line="94" lineend="101" name="set_err_from_response" signature="set_err_from_response($h, $response)">
+          <variable ilk="argument" name="$h" />
+          <variable ilk="argument" name="$response" />
+        </scope>
+        <scope ilk="function" line="104" lineend="129" name="install_methods_proxy" signature="install_methods_proxy($installed_methods)">
+          <variable ilk="argument" name="$installed_methods" />
+        </scope>
+      </scope>
+      <scope ilk="class" line="133" lineend="261" name="DBD::Gofer::dr">
+        <variable line="135" name="$imp_data_size" />
+        <scope ilk="function" line="138" lineend="145" name="connect_cached" signature="connect_cached($drh, $dsn, $user, $auth, $attr)">
+          <variable ilk="argument" name="$drh" />
+          <variable ilk="argument" name="$dsn" />
+          <variable ilk="argument" name="$user" />
+          <variable ilk="argument" name="$auth" />
+          <variable ilk="argument" name="$attr" />
+        </scope>
+        <scope ilk="function" line="148" lineend="247" name="connect" signature="connect($drh, $dsn, $user, $auth, $attr)">
+          <variable ilk="argument" name="$drh" />
+          <variable ilk="argument" name="$dsn" />
+          <variable ilk="argument" name="$user" />
+          <variable ilk="argument" name="$auth" />
+          <variable ilk="argument" name="$attr" />
+        </scope>
+        <scope ilk="function" line="249" lineend="256" name="_load_class" signature="_load_class($class)">
+          <variable ilk="argument" name="$class" />
+        </scope>
+      </scope>
+      <scope ilk="class" line="261" lineend="572" name="DBD::Gofer::db">
+        <import line="264" module="Carp" symbol="carp" />
+        <import line="264" module="Carp" symbol="croak" />
+        <variable line="262" name="$imp_data_size" />
+        <variable line="568" name="*go_cache" />
+        <scope ilk="function" line="268" lineend="270" name="connected" signature="connected()" />
+        <scope ilk="function" line="272" lineend="339" name="go_dbh_method" signature="go_dbh_method($dbh, $meta)">
+          <variable ilk="argument" name="$dbh" />
+          <variable ilk="argument" name="$meta" />
+        </scope>
+        <scope ilk="function" line="446" lineend="452" name="do" signature="do($dbh, $sql, $attr, @args)">
+          <variable ilk="argument" name="$dbh" />
+          <variable ilk="argument" name="$sql" />
+          <variable ilk="argument" name="$attr" />
+          <variable ilk="argument" name="@args" />
+        </scope>
+        <scope ilk="function" line="454" lineend="460" name="ping" signature="ping($dbh)">
+          <variable ilk="argument" name="$dbh" />
+        </scope>
+        <scope ilk="function" line="462" lineend="466" name="last_insert_id" signature="last_insert_id($dbh)">
+          <variable ilk="argument" name="$dbh" />
+        </scope>
+        <scope ilk="function" line="468" lineend="484" name="FETCH" signature="FETCH($dbh, $attrib)">
+          <variable ilk="argument" name="$dbh" />
+          <variable ilk="argument" name="$attrib" />
+        </scope>
+        <scope ilk="function" line="486" lineend="513" name="STORE" signature="STORE($dbh, $attrib, $value)">
+          <variable ilk="argument" name="$dbh" />
+          <variable ilk="argument" name="$attrib" />
+          <variable ilk="argument" name="$value" />
+        </scope>
+        <scope ilk="function" line="515" lineend="519" name="disconnect" signature="disconnect($dbh)">
+          <variable ilk="argument" name="$dbh" />
+        </scope>
+        <scope ilk="function" line="521" lineend="557" name="prepare" signature="prepare($dbh, $statement, $attr)">
+          <variable ilk="argument" name="$dbh" />
+          <variable ilk="argument" name="$statement" />
+          <variable ilk="argument" name="$attr" />
+        </scope>
+        <scope ilk="function" line="559" lineend="566" name="prepare_cached" signature="prepare_cached($dbh, $sql, $attr, $if_active)">
+          <variable ilk="argument" name="$dbh" />
+          <variable ilk="argument" name="$sql" />
+          <variable ilk="argument" name="$attr" />
+          <variable ilk="argument" name="$if_active" />
+        </scope>
+      </scope>
+      <scope ilk="class" line="572" lineend="804" name="DBD::Gofer::st">
+        <variable line="573" name="$imp_data_size" />
+        <variable line="738" name="*fetch" />
+        <variable line="801" name="*go_cache" />
+        <scope ilk="function" line="578" lineend="652" name="go_sth_method" signature="go_sth_method($sth, $meta)">
+          <variable ilk="argument" name="$sth" />
+          <variable ilk="argument" name="$meta" />
+        </scope>
+        <scope ilk="function" line="655" lineend="661" name="bind_param" signature="bind_param($sth, $param, $value, $attr)">
+          <variable ilk="argument" name="$sth" />
+          <variable ilk="argument" name="$param" />
+          <variable ilk="argument" name="$value" />
+          <variable ilk="argument" name="$attr" />
+        </scope>
+        <scope ilk="function" line="664" lineend="670" name="execute" signature="execute($sth)">
+          <variable ilk="argument" name="$sth" />
+        </scope>
+        <scope ilk="function" line="673" lineend="710" name="more_results" signature="more_results($sth)">
+          <variable ilk="argument" name="$sth" />
+        </scope>
+        <scope ilk="function" line="713" lineend="723" name="go_clone_sth" signature="go_clone_sth($sth1)">
+          <variable ilk="argument" name="$sth1" />
+        </scope>
+        <scope ilk="function" line="726" lineend="737" name="fetchrow_arrayref" signature="fetchrow_arrayref($sth)">
+          <variable ilk="argument" name="$sth" />
+        </scope>
+        <scope ilk="function" line="741" lineend="754" name="fetchall_arrayref" signature="fetchall_arrayref($sth, $slice, $max_rows)">
+          <variable ilk="argument" name="$sth" />
+          <variable ilk="argument" name="$slice" />
+          <variable ilk="argument" name="$max_rows" />
+        </scope>
+        <scope ilk="function" line="757" lineend="759" name="rows" signature="rows()" />
+        <scope ilk="function" line="762" lineend="787" name="STORE" signature="STORE($sth, $attrib, $value)">
+          <variable ilk="argument" name="$sth" />
+          <variable ilk="argument" name="$attrib" />
+          <variable ilk="argument" name="$value" />
+        </scope>
+        <scope ilk="function" line="793" lineend="799" name="execute_array" signature="execute_array($sth, $attr)">
+          <variable ilk="argument" name="$sth" />
+          <variable ilk="argument" name="$attr" />
+        </scope>
+      </scope>
+    </scope>
+    

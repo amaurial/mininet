@@ -1,0 +1,41 @@
+<scope ilk="blob" lang="Perl" name="CPANPLUS::Internals::Source::SQLite">
+      <scope ilk="class" line="1" lineend="374" name="CPANPLUS::Internals::Source::SQLite">
+        <import line="8" module="CPANPLUS::Error" symbol="*" />
+        <import line="9" module="CPANPLUS::Internals::Constants" symbol="*" />
+        <import line="10" module="CPANPLUS::Internals::Source::SQLite::Tie" symbol="*" />
+        <import line="12" module="Data::Dumper" symbol="*" />
+        <import line="13" module="DBIx::Simple" symbol="*" />
+        <import line="14" module="DBD::SQLite" symbol="*" />
+        <import line="16" module="Params::Check" symbol="allow" />
+        <import line="16" module="Params::Check" symbol="check" />
+        <import line="17" module="Locale::Maketext::Simple" symbol="Class" />
+        <variable line="240" name="$sub" />
+        <scope ilk="function" line="30" lineend="42" name="__sqlite_file" signature="__sqlite_file($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="44" lineend="57" name="__sqlite_dbh" signature="__sqlite_dbh($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="59" lineend="64" name="__sqlite_disconnect" signature="__sqlite_disconnect()" />
+        <scope ilk="function" line="69" lineend="125" name="_init_trees" signature="_init_trees($self, %hash)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="%hash" />
+        </scope>
+        <scope ilk="function" line="127" lineend="127" name="_standard_trees_completed" signature="_standard_trees_completed()" />
+        <scope ilk="function" line="128" lineend="128" name="_custom_trees_completed" signature="_custom_trees_completed()" />
+        <scope ilk="function" line="130" lineend="130" name="_finalize_trees" signature="_finalize_trees()" />
+        <scope ilk="function" line="133" lineend="136" name="_save_state" signature="_save_state()" />
+        <scope ilk="function" line="153" lineend="180" name="_add_author_object" signature="_add_author_object($self, %hash)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="%hash" />
+        </scope>
+        <scope ilk="function" line="196" lineend="226" name="_add_module_object" signature="_add_module_object($self, %hash)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="%hash" />
+        </scope>
+        <scope ilk="function" line="272" lineend="372" name="__sqlite_create_db" signature="__sqlite_create_db($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+      </scope>
+    </scope>
+    

@@ -1,0 +1,17 @@
+<scope ilk="blob" lang="Perl" name="Digest::HMAC_MD5">
+      <scope classrefs="Digest::HMAC" ilk="class" line="1" lineend="33" name="Digest::HMAC_MD5">
+        <import line="5" module="Digest::MD5" symbol="md5" />
+        <import line="6" module="Digest::HMAC" symbol="hmac" />
+        <import line="18" module="Exporter" />
+        <variable line="2" name="$VERSION" />
+        <variable line="9" name="@ISA" />
+        <variable line="19" name="*import" />
+        <variable line="20" name="@EXPORT_OK" />
+        <scope ilk="function" line="11" lineend="15" name="new" signature="new($class)">
+          <variable ilk="argument" name="$class" />
+        </scope>
+        <scope attributes="__exportable__" ilk="function" line="23" lineend="26" name="hmac_md5" signature="hmac_md5()" />
+        <scope attributes="__exportable__" ilk="function" line="28" lineend="31" name="hmac_md5_hex" signature="hmac_md5_hex()" />
+      </scope>
+    </scope>
+    

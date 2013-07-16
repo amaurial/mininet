@@ -1,0 +1,35 @@
+<scope ilk="blob" lang="Perl" name="CPANPLUS::Internals::Report">
+      <scope ilk="class" line="1" lineend="664" name="CPANPLUS::Internals::Report">
+        <import line="5" module="CPANPLUS::Error" symbol="*" />
+        <import line="6" module="CPANPLUS::Internals::Constants" symbol="*" />
+        <import line="7" module="CPANPLUS::Internals::Constants::Report" symbol="*" />
+        <import line="9" module="Data::Dumper" symbol="*" />
+        <import line="11" module="Params::Check" symbol="check" />
+        <import line="12" module="Module::Load::Conditional" symbol="can_load" />
+        <import line="13" module="Locale::Maketext::Simple" symbol="Class" />
+        <import line="14" module="version" symbol="*" />
+        <import line="19" module="CPANPLUS::Internals" />
+        <variable line="16" name="$Params::Check::VERBOSE" />
+        <scope ilk="function" line="70" lineend="84" name="_have_query_report_modules" signature="_have_query_report_modules($self, %hash)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="%hash" />
+        </scope>
+        <scope ilk="function" line="86" lineend="100" name="_have_send_report_modules" signature="_have_send_report_modules($self, %hash)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="%hash" />
+        </scope>
+        <scope ilk="function" line="152" lineend="226" name="_query_report" signature="_query_report($self, %hash)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="%hash" />
+        </scope>
+        <scope ilk="function" line="611" lineend="654" name="_verify_missing_prereqs" signature="_verify_missing_prereqs($self, %hash)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="%hash" />
+        </scope>
+        <scope ilk="function" line="285" lineend="664" name="_send_report" signature="_send_report($self, %hash)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="%hash" />
+        </scope>
+      </scope>
+    </scope>
+    

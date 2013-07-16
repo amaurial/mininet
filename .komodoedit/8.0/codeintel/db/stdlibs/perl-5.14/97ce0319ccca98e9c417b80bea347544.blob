@@ -1,0 +1,63 @@
+<scope ilk="blob" lang="Perl" name="ExtUtils::Constant::XS">
+      <scope classrefs="ExtUtils::Constant::Base Exporter" ilk="class" line="1" lineend="259" name="ExtUtils::Constant::XS">
+        <import line="5" module="Carp" symbol="*" />
+        <import line="6" module="ExtUtils::Constant::Utils" symbol="perl_stringify" />
+        <import line="7" module="ExtUtils::Constant::Base" />
+        <variable line="4" name="$is_perl56" />
+        <variable line="4" name="$VERSION" />
+        <variable attributes="__exportable__" line="4" name="%XS_Constant" />
+        <variable attributes="__exportable__" line="4" name="%XS_TypeSet" />
+        <variable line="4" name="@EXPORT_OK" />
+        <variable line="4" name="@ISA" />
+        <variable line="239" name="$Data::Dumper::Terse" />
+        <scope ilk="function" line="70" lineend="93" name="header" signature="header()">
+          </scope>
+        <scope ilk="function" line="95" lineend="98" name="valid_type" signature="valid_type($self, $type)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$type" />
+        </scope>
+        <scope ilk="function" line="101" lineend="116" name="assignment_clause_for_type" signature="assignment_clause_for_type($self, $args)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$args" />
+        </scope>
+        <scope ilk="function" line="118" lineend="123" name="return_statement_for_type" signature="return_statement_for_type($self, $type)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$type" />
+        </scope>
+        <scope ilk="function" line="125" lineend="128" name="return_statement_for_notdef" signature="return_statement_for_notdef()" />
+        <scope ilk="function" line="130" lineend="133" name="return_statement_for_notfound" signature="return_statement_for_notfound()" />
+        <scope ilk="function" line="135" lineend="137" name="default_type" signature="default_type()" />
+        <scope ilk="function" line="139" lineend="144" name="macro_from_name" signature="macro_from_name($self, $item)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$item" />
+        </scope>
+        <scope ilk="function" line="146" lineend="151" name="macro_from_item" signature="macro_from_item($self, $item)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$item" />
+        </scope>
+        <scope ilk="function" line="154" lineend="156" name="memEQ" signature="memEQ()" />
+        <scope ilk="function" line="158" lineend="170" name="params" signature="params($self, $what)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$what" />
+        </scope>
+        <scope ilk="function" line="173" lineend="175" name="C_constant_prefix_param" signature="C_constant_prefix_param()" />
+        <scope ilk="function" line="177" lineend="179" name="C_constant_prefix_param_defintion" signature="C_constant_prefix_param_defintion()" />
+        <scope ilk="function" line="181" lineend="183" name="namelen_param_definition" signature="namelen_param_definition()" />
+        <scope ilk="function" line="185" lineend="194" name="C_constant_other_params_defintion" signature="C_constant_other_params_defintion($self, $params)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$params" />
+        </scope>
+        <scope ilk="function" line="196" lineend="205" name="C_constant_other_params" signature="C_constant_other_params($self, $params)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$params" />
+        </scope>
+        <scope ilk="function" line="207" lineend="257" name="dogfood" signature="dogfood($self, $args, @items)">
+          <import line="238" module="Data::Dumper" />
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$args" />
+          <variable ilk="argument" name="@items" />
+          <import line="238" module="Data::Dumper" />
+        </scope>
+      </scope>
+    </scope>
+    

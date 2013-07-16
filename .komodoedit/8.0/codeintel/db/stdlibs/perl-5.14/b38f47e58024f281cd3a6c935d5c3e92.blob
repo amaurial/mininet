@@ -1,0 +1,87 @@
+<scope ilk="blob" lang="Perl" name="App::Prove">
+      <scope classrefs="TAP::Object" ilk="class" line="1" lineend="656" name="App::Prove">
+        <import line="6" module="TAP::Object" />
+        <import line="7" module="TAP::Harness" symbol="*" />
+        <import line="8" module="TAP::Parser::Utils" symbol="split_shell" />
+        <import line="9" module="File::Spec" symbol="*" />
+        <import line="10" module="Getopt::Long" symbol="*" />
+        <import line="11" module="App::Prove::State" symbol="*" />
+        <import line="12" module="Carp" symbol="*" />
+        <variable line="4" name="$VERSION" />
+        <variable line="4" name="@ISA" />
+        <scope ilk="function" line="80" lineend="111" name="_initialize" signature="_initialize($self, $args)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$args" />
+        </scope>
+        <scope ilk="function" line="134" lineend="145" name="add_rc_file" signature="add_rc_file($self, $rc_file)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$rc_file" />
+        </scope>
+        <scope ilk="function" line="158" lineend="262" name="process_args" signature="process_args($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="264" lineend="270" name="_first_pos" signature="_first_pos($want)">
+          <variable ilk="argument" name="$want" />
+        </scope>
+        <scope ilk="function" line="272" lineend="285" name="_help" signature="_help($self, $verbosity)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$verbosity" />
+        </scope>
+        <scope ilk="function" line="287" lineend="291" name="_color_default" signature="_color_default($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="293" lineend="391" name="_get_args" signature="_get_args($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="393" lineend="408" name="_find_module" signature="_find_module($self, $class, @search)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$class" />
+          <variable ilk="argument" name="@search" />
+        </scope>
+        <scope ilk="function" line="410" lineend="428" name="_load_extension" signature="_load_extension($self, $name, @search)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$name" />
+          <variable ilk="argument" name="@search" />
+        </scope>
+        <scope ilk="function" line="430" lineend="433" name="_load_extensions" signature="_load_extensions($self, $ext, @search)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$ext" />
+          <variable ilk="argument" name="@search" />
+        </scope>
+        <scope ilk="function" line="435" lineend="469" name="_parse_source" signature="_parse_source($self, $handler)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$handler" />
+        </scope>
+        <scope ilk="function" line="484" lineend="515" name="run" signature="run($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="517" lineend="533" name="_get_tests" signature="_get_tests($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="535" lineend="556" name="_runtests" signature="_runtests($self, $args, $harness_class, @tests)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$args" />
+          <variable ilk="argument" name="$harness_class" />
+          <variable ilk="argument" name="@tests" />
+        </scope>
+        <scope ilk="function" line="558" lineend="579" name="_get_switches" signature="_get_switches($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="581" lineend="599" name="_get_lib" signature="_get_lib($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="601" lineend="611" name="_shuffle" signature="_shuffle($self, $i)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$i" />
+        </scope>
+        <scope ilk="function" line="621" lineend="635" name="require_harness" signature="require_harness($self, $for, $class)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$for" />
+          <variable ilk="argument" name="$class" />
+        </scope>
+        <scope ilk="function" line="644" lineend="652" name="print_version" signature="print_version($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+      </scope>
+    </scope>
+    

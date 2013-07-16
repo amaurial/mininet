@@ -1,0 +1,53 @@
+<scope ilk="blob" lang="Perl" name="ActiveState::Unix::Pw">
+      <scope ilk="class" line="1" lineend="314" name="ActiveState::Unix::Pw">
+        <import line="4" module="ActiveState::Run" symbol="run" />
+        <import line="5" module="Cwd" symbol="*" />
+        <variable line="8" name="@EXPORT_OK" />
+        <scope ilk="function" line="48" lineend="95" name="useradd" signature="useradd(%opt)">
+          <variable ilk="argument" name="%opt" />
+        </scope>
+        <scope ilk="function" line="97" lineend="148" name="userdel" signature="userdel(%opt)">
+          <variable ilk="argument" name="%opt" />
+        </scope>
+        <scope ilk="function" line="150" lineend="184" name="usermod" signature="usermod(%opt)">
+          <variable ilk="argument" name="%opt" />
+        </scope>
+        <scope ilk="function" line="186" lineend="224" name="groupadd" signature="groupadd(%opt)">
+          <variable ilk="argument" name="%opt" />
+        </scope>
+        <scope ilk="function" line="226" lineend="239" name="groupdel" signature="groupdel(%opt)">
+          <variable ilk="argument" name="%opt" />
+        </scope>
+        <scope ilk="function" line="241" lineend="256" name="_run" signature="_run($f, $opt, $cmd)">
+          <variable ilk="argument" name="$f" />
+          <variable ilk="argument" name="$opt" />
+          <variable ilk="argument" name="$cmd" />
+        </scope>
+        <scope ilk="function" line="258" lineend="265" name="_shell_escape" signature="_shell_escape(@words)">
+          <variable ilk="argument" name="@words" />
+        </scope>
+        <scope ilk="function" line="268" lineend="314" name="su" signature="su(%opt)">
+          <variable ilk="argument" name="%opt" />
+        </scope>
+      </scope>
+      <scope ilk="class" line="316" lineend="437" name="ActiveState::Unix::Darwin::Pw">
+        <scope ilk="function" line="322" lineend="326" name="_run" signature="_run($f, $opt, $cmd)">
+          <variable ilk="argument" name="$f" />
+          <variable ilk="argument" name="$opt" />
+          <variable ilk="argument" name="$cmd" />
+        </scope>
+        <scope ilk="function" line="328" lineend="395" name="useradd" signature="useradd($opt)">
+          <variable ilk="argument" name="$opt" />
+        </scope>
+        <scope ilk="function" line="397" lineend="400" name="userdel" signature="userdel($opt)">
+          <variable ilk="argument" name="$opt" />
+        </scope>
+        <scope ilk="function" line="402" lineend="430" name="groupadd" signature="groupadd($opt)">
+          <variable ilk="argument" name="$opt" />
+        </scope>
+        <scope ilk="function" line="432" lineend="435" name="groupdel" signature="groupdel($opt)">
+          <variable ilk="argument" name="$opt" />
+        </scope>
+      </scope>
+    </scope>
+    

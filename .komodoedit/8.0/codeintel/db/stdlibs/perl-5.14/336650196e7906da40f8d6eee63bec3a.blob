@@ -1,0 +1,24 @@
+<scope ilk="blob" lang="Perl" name="Perl::Critic::Utils::McCabe">
+      <scope ilk="class" line="8" lineend="138" name="Perl::Critic::Utils::McCabe">
+        <import line="14" module="Readonly" symbol="*" />
+        <import line="16" module="Perl::Critic::Utils" symbol="**" />
+        <variable line="22" name="$VERSION" />
+        <variable line="26" name="@EXPORT_OK" />
+        <scope ilk="function" line="39" lineend="48" name="calculate_mccabe_of_sub" signature="calculate_mccabe_of_sub($sub)">
+          <variable ilk="argument" name="$sub" />
+        </scope>
+        <scope ilk="function" line="52" lineend="59" name="calculate_mccabe_of_main" signature="calculate_mccabe_of_main($doc)">
+          <variable ilk="argument" name="$doc" />
+        </scope>
+        <scope ilk="function" line="63" lineend="97" name="_count_main_logic_operators_and_keywords" signature="_count_main_logic_operators_and_keywords($doc)">
+          <variable ilk="argument" name="$doc" />
+        </scope>
+        <scope ilk="function" line="101" lineend="116" name="_count_logic_keywords" signature="_count_logic_keywords($sub)">
+          <variable ilk="argument" name="$sub" />
+        </scope>
+        <scope ilk="function" line="120" lineend="135" name="_count_logic_operators" signature="_count_logic_operators($sub)">
+          <variable ilk="argument" name="$sub" />
+        </scope>
+      </scope>
+    </scope>
+    

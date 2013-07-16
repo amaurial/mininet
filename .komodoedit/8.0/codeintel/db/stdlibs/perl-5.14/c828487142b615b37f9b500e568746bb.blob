@@ -1,0 +1,22 @@
+<scope ilk="blob" lang="Perl" name="Log::Message::Config">
+      <scope ilk="class" line="1" lineend="110" name="Log::Message::Config">
+        <import line="4" module="Params::Check" symbol="check" />
+        <import line="5" module="Module::Load" symbol="*" />
+        <import line="6" module="FileHandle" symbol="*" />
+        <import line="7" module="Locale::Maketext::Simple" symbol="Style" />
+        <variable line="10" name="$AUTOLOAD" />
+        <variable line="10" name="$VERSION" />
+        <scope attributes="__ctor__" ilk="function" line="14" lineend="65" name="new" signature="new($class, %hash)">
+          <variable ilk="argument" name="$class" />
+          <variable ilk="argument" name="%hash" />
+        </scope>
+        <scope ilk="function" line="67" lineend="96" name="_read_config_file" signature="_read_config_file($file)">
+          <variable ilk="argument" name="$file" />
+        </scope>
+        <scope ilk="function" line="98" lineend="106" name="AUTOLOAD" signature="AUTOLOAD($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="108" lineend="108" name="DESTROY" signature="DESTROY()" />
+      </scope>
+    </scope>
+    

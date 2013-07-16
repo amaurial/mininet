@@ -1,0 +1,82 @@
+<scope ilk="blob" lang="Perl" name="Pod::PlainText">
+      <scope classrefs="Pod::Select" ilk="class" line="18" lineend="600" name="Pod::PlainText">
+        <import line="23" module="Carp" symbol="carp" />
+        <import line="23" module="Carp" symbol="croak" />
+        <import line="24" module="Pod::Select" />
+        <import line="36" module="Symbol" />
+        <variable line="26" name="$VERSION" />
+        <variable line="26" name="%ESCAPES" />
+        <variable line="26" name="@ISA" />
+        <variable line="336" name="*cmd_head4" />
+        <scope ilk="function" line="127" lineend="140" name="initialize" signature="initialize($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="151" lineend="163" name="command" signature="command($self, $command)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$command" />
+        </scope>
+        <scope ilk="function" line="168" lineend="176" name="verbatim" signature="verbatim($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="180" lineend="237" name="textblock" signature="textblock($self, $line)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$line" />
+        </scope>
+        <scope ilk="function" line="243" lineend="274" name="interior_sequence" signature="interior_sequence($self, $command)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$command" />
+        </scope>
+        <scope ilk="function" line="278" lineend="283" name="preprocess_paragraph" signature="preprocess_paragraph($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="293" lineend="304" name="cmd_head1" signature="cmd_head1($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="307" lineend="318" name="cmd_head2" signature="cmd_head2($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="321" lineend="332" name="cmd_head3" signature="cmd_head3($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="339" lineend="345" name="cmd_over" signature="cmd_over($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="348" lineend="355" name="cmd_back" signature="cmd_back($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="358" lineend="364" name="cmd_item" signature="cmd_item($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="368" lineend="377" name="cmd_begin" signature="cmd_begin($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="381" lineend="385" name="cmd_end" signature="cmd_end($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="389" lineend="395" name="cmd_for" signature="cmd_for($self, $line)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$line" />
+        </scope>
+        <scope ilk="function" line="404" lineend="404" name="seq_b" signature="seq_b()" />
+        <scope ilk="function" line="405" lineend="405" name="seq_c" signature="seq_c()" />
+        <scope ilk="function" line="406" lineend="406" name="seq_f" signature="seq_f()" />
+        <scope ilk="function" line="407" lineend="407" name="seq_i" signature="seq_i()" />
+        <scope ilk="function" line="412" lineend="457" name="seq_l" signature="seq_l($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="471" lineend="499" name="item" signature="item($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="510" lineend="526" name="wrap" signature="wrap($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="530" lineend="545" name="reformat" signature="reformat($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="548" lineend="548" name="output" signature="output()" />
+        <scope ilk="function" line="557" lineend="593" name="pod2text" signature="pod2text($flag)">
+          <variable ilk="argument" name="$flag" />
+        </scope>
+      </scope>
+    </scope>
+    

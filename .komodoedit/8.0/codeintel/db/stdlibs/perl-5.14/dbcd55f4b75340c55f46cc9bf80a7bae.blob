@@ -1,0 +1,54 @@
+<scope ilk="blob" lang="Perl" name="Devel::StackTrace">
+      <scope ilk="class" line="1" lineend="227" name="Devel::StackTrace">
+        <import line="11" module="Devel::StackTrace::Frame" symbol="*" />
+        <import line="12" module="File::Spec" symbol="*" />
+        <import line="13" module="Scalar::Util" symbol="blessed" />
+        <variable line="3" name="$Devel::StackTrace::VERSION" />
+        <scope attributes="__ctor__" ilk="function" line="19" lineend="38" name="new" signature="new($class, %p)">
+          <variable ilk="argument" name="$class" />
+          <variable ilk="argument" name="%p" />
+        </scope>
+        <scope ilk="function" line="40" lineend="61" name="_record_caller_data" signature="_record_caller_data($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="63" lineend="78" name="_ref_to_string" signature="_ref_to_string($self, $ref)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$ref" />
+        </scope>
+        <scope ilk="function" line="80" lineend="91" name="_make_frames" signature="_make_frames($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="95" lineend="128" name="_make_frame_filter" signature="_make_frame_filter($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="130" lineend="150" name="_add_frame" signature="_add_frame($self, $c, $args)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$c" />
+          <variable ilk="argument" name="$args" />
+        </scope>
+        <scope ilk="function" line="152" lineend="166" name="next_frame" signature="next_frame($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="168" lineend="183" name="prev_frame" signature="prev_frame($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="185" lineend="189" name="reset_pointer" signature="reset_pointer($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="191" lineend="197" name="frames" signature="frames($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="199" lineend="206" name="frame" signature="frame($self, $i)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$i" />
+        </scope>
+        <scope ilk="function" line="208" lineend="212" name="frame_count" signature="frame_count($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="214" lineend="225" name="as_string" signature="as_string($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+      </scope>
+      <scope classrefs="Devel::StackTrace::Frame" ilk="class" line="229" lineend="443" name="Devel::StackTraceFrame" />
+    </scope>
+    

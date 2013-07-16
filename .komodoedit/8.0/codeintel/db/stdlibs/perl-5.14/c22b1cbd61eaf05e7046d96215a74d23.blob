@@ -1,0 +1,20 @@
+<scope ilk="blob" lang="Perl" name="Scope::Guard">
+      <scope classrefs="Exporter" ilk="class" line="1" lineend="43" name="Scope::Guard">
+        <import line="6" module="Carp" symbol="confess" />
+        <import line="7" module="Exporter" />
+        <variable line="10" name="@EXPORT_OK" />
+        <variable line="11" name="$VERSION" />
+        <scope attributes="__ctor__" ilk="function" line="13" lineend="24" name="new" signature="new($class)">
+          <variable ilk="argument" name="$class" />
+        </scope>
+        <scope ilk="function" line="26" lineend="31" name="dismiss" signature="dismiss($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="33" lineend="33" name="guard" signature="guard()" />
+        <scope ilk="function" line="34" lineend="34" name="scope_guard" signature="scope_guard()" />
+        <scope ilk="function" line="36" lineend="41" name="DESTROY" signature="DESTROY($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+      </scope>
+    </scope>
+    

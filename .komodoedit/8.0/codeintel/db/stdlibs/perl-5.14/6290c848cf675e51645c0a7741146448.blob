@@ -1,0 +1,139 @@
+<scope ilk="blob" lang="Perl" name="HTTP::Message">
+      <scope ilk="class" line="1" lineend="769" name="HTTP::Message">
+        <import line="7" module="HTTP::Headers" />
+        <import line="8" module="Carp" />
+        <variable line="4" name="$AUTOLOAD" />
+        <variable line="4" name="$VERSION" />
+        <variable line="14" name="*_utf8_downgrade" />
+        <scope attributes="__ctor__" ilk="function" line="23" lineend="49" name="new" signature="new($class, $header, $content)">
+          <variable ilk="argument" name="$class" />
+          <variable citdl="HTTP::Headers" ilk="argument" name="$header" />
+          <variable ilk="argument" name="$content" />
+        </scope>
+        <scope ilk="function" line="52" lineend="73" name="parse" signature="parse($class, $str)">
+          <variable ilk="argument" name="$class" />
+          <variable ilk="argument" name="$str" />
+        </scope>
+        <scope ilk="function" line="76" lineend="83" name="clone" signature="clone($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="86" lineend="92" name="clear" signature="clear($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="95" lineend="97" name="protocol" signature="protocol()" />
+        <scope ilk="function" line="99" lineend="107" name="headers" signature="headers($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="109" lineend="111" name="headers_as_string" signature="headers_as_string()" />
+        <scope ilk="function" line="114" lineend="131" name="content" signature="content()">
+          </scope>
+        <scope ilk="function" line="134" lineend="146" name="_set_content" signature="_set_content()">
+          </scope>
+        <scope ilk="function" line="149" lineend="169" name="add_content" signature="add_content($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="171" lineend="176" name="add_content_utf8" signature="add_content_utf8($self, $buf)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$buf" />
+        </scope>
+        <scope ilk="function" line="178" lineend="194" name="content_ref" signature="content_ref($self, $new)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$new" />
+        </scope>
+        <scope ilk="function" line="197" lineend="283" name="content_charset" signature="content_charset($self)">
+          <import line="240" module="HTML::Parser" />
+          <import line="272" module="Encode" />
+          <variable ilk="argument" name="$self" />
+          <import line="240" module="HTML::Parser" />
+          <import line="272" module="Encode" />
+        </scope>
+        <scope ilk="function" line="286" lineend="417" name="decoded_content" signature="decoded_content($self, %opt)">
+          <import line="303" module="IO::Uncompress::Gunzip" />
+          <import line="311" module="IO::Uncompress::Bunzip2" />
+          <import line="319" module="IO::Uncompress::Inflate" />
+          <import line="329" module="IO::Uncompress::RawInflate" />
+          <import line="344" module="MIME::Base64" />
+          <import line="349" module="MIME::QuotedPrint" />
+          <import line="381" module="Encode" />
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="%opt" />
+          <import line="303" module="IO::Uncompress::Gunzip" />
+          <import line="311" module="IO::Uncompress::Bunzip2" />
+          <import line="319" module="IO::Uncompress::Inflate" />
+          <import line="329" module="IO::Uncompress::RawInflate" />
+          <import line="344" module="MIME::Base64" />
+          <import line="349" module="MIME::QuotedPrint" />
+          <import line="381" module="Encode" />
+        </scope>
+        <scope ilk="function" line="420" lineend="443" name="decodable" signature="decodable($self)">
+          <import line="428" module="IO::Uncompress::Gunzip" />
+          <import line="432" module="IO::Uncompress::Inflate" />
+          <import line="433" module="IO::Uncompress::RawInflate" />
+          <import line="437" module="IO::Uncompress::Bunzip2" />
+          <variable ilk="argument" name="$self" />
+          <import line="428" module="IO::Uncompress::Gunzip" />
+          <import line="432" module="IO::Uncompress::Inflate" />
+          <import line="433" module="IO::Uncompress::RawInflate" />
+          <import line="437" module="IO::Uncompress::Bunzip2" />
+        </scope>
+        <scope ilk="function" line="446" lineend="456" name="decode" signature="decode($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="459" lineend="511" name="encode" signature="encode($self, @enc)">
+          <import line="474" module="MIME::Base64" />
+          <import line="478" module="IO::Compress::Gzip" />
+          <import line="485" module="IO::Compress::Deflate" />
+          <import line="492" module="IO::Compress::Bzip2" />
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="@enc" />
+          <import line="474" module="MIME::Base64" />
+          <import line="478" module="IO::Compress::Gzip" />
+          <import line="485" module="IO::Compress::Deflate" />
+          <import line="492" module="IO::Compress::Bzip2" />
+        </scope>
+        <scope ilk="function" line="514" lineend="529" name="as_string" signature="as_string($self, $eol)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$eol" />
+        </scope>
+        <scope ilk="function" line="532" lineend="580" name="dump" signature="dump($self, %opt)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="%opt" />
+        </scope>
+        <scope ilk="function" line="583" lineend="605" name="parts" signature="parts($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="607" lineend="625" name="add_part" signature="add_part($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="627" lineend="638" name="_stale_content" signature="_stale_content($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="642" lineend="651" name="AUTOLOAD" signature="AUTOLOAD()">
+          </scope>
+        <scope ilk="function" line="654" lineend="654" name="DESTROY" signature="DESTROY()" />
+        <scope ilk="function" line="658" lineend="665" name="_elem" signature="_elem($self, $elem)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$elem" />
+        </scope>
+        <scope ilk="function" line="669" lineend="699" name="_parts" signature="_parts($self)">
+          <import line="673" module="HTTP::Headers::Util" />
+          <import line="687" module="HTTP::Request" />
+          <import line="688" module="HTTP::Response" />
+          <variable ilk="argument" name="$self" />
+          <import line="673" module="HTTP::Headers::Util" />
+          <import line="687" module="HTTP::Request" />
+          <import line="688" module="HTTP::Response" />
+        </scope>
+        <scope ilk="function" line="703" lineend="756" name="_content" signature="_content($self)">
+          <import line="711" module="HTTP::Headers::Util" />
+          <variable ilk="argument" name="$self" />
+          <import line="711" module="HTTP::Headers::Util" />
+        </scope>
+        <scope ilk="function" line="759" lineend="766" name="_boundary" signature="_boundary($size)">
+          <import line="762" module="MIME::Base64" />
+          <variable ilk="argument" name="$size" />
+          <import line="762" module="MIME::Base64" />
+        </scope>
+      </scope>
+    </scope>
+    

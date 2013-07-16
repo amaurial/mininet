@@ -1,0 +1,31 @@
+<scope ilk="blob" lang="Perl" name="TAP::Parser::YAMLish::Writer">
+      <scope classrefs="TAP::Object" ilk="class" line="1" lineend="138" name="TAP::Parser::YAMLish::Writer">
+        <import line="6" module="TAP::Object" />
+        <variable line="4" name="$VERSION" />
+        <variable line="4" name="@ISA" />
+        <scope ilk="function" line="23" lineend="41" name="write" signature="write($self, $obj, $out)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$obj" />
+          <variable ilk="argument" name="$out" />
+        </scope>
+        <scope ilk="function" line="43" lineend="63" name="_make_writer" signature="_make_writer($self, $out)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$out" />
+        </scope>
+        <scope ilk="function" line="65" lineend="68" name="_put" signature="_put($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="70" lineend="90" name="_enc_scalar" signature="_enc_scalar($self, $val, $rule)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$val" />
+          <variable ilk="argument" name="$rule" />
+        </scope>
+        <scope ilk="function" line="92" lineend="136" name="_write_obj" signature="_write_obj($self, $prefix, $obj, $indent)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$prefix" />
+          <variable ilk="argument" name="$obj" />
+          <variable ilk="argument" name="$indent" />
+        </scope>
+      </scope>
+    </scope>
+    

@@ -1,0 +1,58 @@
+<scope ilk="blob" lang="Perl" name="Text::Diff">
+      <scope classrefs="Exporter" ilk="class" line="1" lineend="389" name="Text::Diff">
+        <import line="5" module="Carp" symbol="*" />
+        <import line="6" module="Exporter" />
+        <import line="7" module="Algorithm::Diff" />
+        <variable line="8" name="$VERSION" />
+        <variable line="8" name="@EXPORT" />
+        <variable line="8" name="@ISA" />
+        <variable line="263" name="@Text::Diff::Unified::ISA" />
+        <variable line="298" name="@Text::Diff::Context::ISA" />
+        <variable line="350" name="@Text::Diff::OldStyle::ISA" />
+        <scope attributes="__exported__" ilk="function" line="29" lineend="177" name="diff" signature="diff($options)">
+          <variable ilk="argument" name="$options" />
+        </scope>
+        <scope ilk="function" line="179" lineend="197" name="_header" signature="_header($h)">
+          <variable ilk="argument" name="$h" />
+        </scope>
+        <scope ilk="function" line="201" lineend="228" name="_range" signature="_range($ops, $a_or_b, $format)">
+          <variable ilk="argument" name="$ops" />
+          <variable ilk="argument" name="$a_or_b" />
+          <variable ilk="argument" name="$format" />
+        </scope>
+        <scope ilk="function" line="230" lineend="242" name="_op_to_line" signature="_op_to_line($seqs, $op, $a_or_b, $op_prefixes)">
+          <variable ilk="argument" name="$seqs" />
+          <variable ilk="argument" name="$op" />
+          <variable ilk="argument" name="$a_or_b" />
+          <variable ilk="argument" name="$op_prefixes" />
+        </scope>
+        <scope ilk="function" line="265" lineend="272" name="Text::Diff::Unified::file_header" signature="Text::Diff::Unified::file_header()">
+          </scope>
+        <scope ilk="function" line="274" lineend="286" name="Text::Diff::Unified::hunk_header" signature="Text::Diff::Unified::hunk_header()">
+          </scope>
+        <scope ilk="function" line="288" lineend="296" name="Text::Diff::Unified::hunk" signature="Text::Diff::Unified::hunk()">
+          </scope>
+        <scope ilk="function" line="300" lineend="302" name="Text::Diff::Context::file_header" signature="Text::Diff::Context::file_header()" />
+        <scope ilk="function" line="304" lineend="306" name="Text::Diff::Context::hunk_header" signature="Text::Diff::Context::hunk_header()" />
+        <scope ilk="function" line="308" lineend="348" name="Text::Diff::Context::hunk" signature="Text::Diff::Context::hunk()">
+          </scope>
+        <scope ilk="function" line="352" lineend="359" name="_op" signature="_op($ops)">
+          <variable ilk="argument" name="$ops" />
+        </scope>
+        <scope ilk="function" line="361" lineend="369" name="Text::Diff::OldStyle::hunk_header" signature="Text::Diff::OldStyle::hunk_header()">
+          </scope>
+        <scope ilk="function" line="371" lineend="387" name="Text::Diff::OldStyle::hunk" signature="Text::Diff::OldStyle::hunk()">
+          </scope>
+      </scope>
+      <scope ilk="class" line="245" lineend="260" name="Text::Diff::Base">
+        <scope attributes="__ctor__" ilk="function" line="247" lineend="250" name="new" signature="new($proto)">
+          <variable ilk="argument" name="$proto" />
+        </scope>
+        <scope ilk="function" line="252" lineend="252" name="file_header" signature="file_header()" />
+        <scope ilk="function" line="254" lineend="254" name="hunk_header" signature="hunk_header()" />
+        <scope ilk="function" line="256" lineend="256" name="hunk" signature="hunk()" />
+        <scope ilk="function" line="258" lineend="258" name="hunk_footer" signature="hunk_footer()" />
+        <scope ilk="function" line="260" lineend="260" name="file_footer" signature="file_footer()" />
+      </scope>
+    </scope>
+    

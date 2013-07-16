@@ -1,0 +1,206 @@
+<scope ilk="blob" lang="Perl" name="CPAN::Shell">
+      <scope ilk="class" line="1" lineend="1980" name="CPAN::Shell">
+        <import line="54" module="Cwd" symbol="chdir" />
+        <import line="55" module="Carp" />
+        <variable line="8" name="$ADVANCED_QUERY" />
+        <variable line="9" name="$AUTOLOAD" />
+        <variable line="10" name="$COLOR_REGISTERED" />
+        <variable line="11" name="$Help" />
+        <variable line="12" name="$autoload_recursion" />
+        <variable line="13" name="$reload" />
+        <variable line="14" name="@ISA" />
+        <variable line="15" name="@relo" />
+        <variable line="16" name="$VERSION" />
+        <variable line="53" name="@CPAN::Shell::ISA" />
+        <variable line="193" name="*help" />
+        <variable line="411" name="$CPAN::DEBUG" />
+        <variable line="475" name="$CPAN::GOTOSHELL" />
+        <variable line="703" name="$CPAN::Signal" />
+        <scope ilk="function" line="107" lineend="142" name="AUTOLOAD" signature="AUTOLOAD()">
+          </scope>
+        <scope ilk="function" line="147" lineend="191" name="h" signature="h($class, $about)">
+          <variable ilk="argument" name="$class" />
+          <variable ilk="argument" name="$about" />
+        </scope>
+        <scope ilk="function" line="196" lineend="203" name="a" signature="a($self, @arg)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="@arg" />
+        </scope>
+        <scope ilk="function" line="206" lineend="286" name="globls" signature="globls($self, $s, $pragmas)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$s" />
+          <variable ilk="argument" name="$pragmas" />
+        </scope>
+        <scope ilk="function" line="289" lineend="312" name="local_bundles" signature="local_bundles($self, @which)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="@which" />
+        </scope>
+        <scope ilk="function" line="315" lineend="320" name="b" signature="b($self, @which)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="@which" />
+        </scope>
+        <scope ilk="function" line="323" lineend="323" name="d" signature="d()" />
+        <scope ilk="function" line="326" lineend="336" name="m" signature="m($self, @m)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="@m" />
+        </scope>
+        <scope ilk="function" line="339" lineend="359" name="i" signature="i(@args)">
+          <variable ilk="argument" name="@args" />
+        </scope>
+        <scope ilk="function" line="367" lineend="456" name="o" signature="o($self, $o_type, @o_what)">
+          <import line="434" module="Text::Wrap" />
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$o_type" />
+          <variable ilk="argument" name="@o_what" />
+          <import line="434" module="Text::Wrap" />
+        </scope>
+        <scope ilk="function" line="459" lineend="481" name="paintdots_onreload" signature="paintdots_onreload()">
+          </scope>
+        <scope ilk="function" line="484" lineend="552" name="hosts" signature="hosts($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="556" lineend="587" name="reload" signature="reload($self, $command, @arg)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$command" />
+          <variable ilk="argument" name="@arg" />
+        </scope>
+        <scope ilk="function" line="591" lineend="646" name="_reload_this" signature="_reload_this($self, $f, $args)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$f" />
+          <variable ilk="argument" name="$args" />
+        </scope>
+        <scope ilk="function" line="649" lineend="665" name="mkmyconfig" signature="mkmyconfig($self)">
+          <import line="656" module="CPAN::FirstTime" />
+          <variable ilk="argument" name="$self" />
+          <import line="656" module="CPAN::FirstTime" />
+        </scope>
+        <scope ilk="function" line="668" lineend="685" name="_binary_extensions" signature="_binary_extensions()">
+          </scope>
+        <scope ilk="function" line="688" lineend="707" name="recompile" signature="recompile()">
+          </scope>
+        <scope ilk="function" line="710" lineend="769" name="scripts" signature="scripts($self, $arg)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$arg" />
+        </scope>
+        <scope ilk="function" line="773" lineend="781" name="report" signature="report($self, @args)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="@args" />
+        </scope>
+        <scope ilk="function" line="785" lineend="837" name="install_tested" signature="install_tested($self, @some)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="@some" />
+        </scope>
+        <scope ilk="function" line="840" lineend="843" name="upgrade" signature="upgrade($self, @args)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="@args" />
+        </scope>
+        <scope ilk="function" line="846" lineend="1028" name="_u_r_common" signature="_u_r_common(@args)">
+          <variable ilk="argument" name="@args" />
+        </scope>
+        <scope ilk="function" line="1031" lineend="1033" name="r" signature="r()" />
+        <scope ilk="function" line="1036" lineend="1038" name="u" signature="u()" />
+        <scope ilk="function" line="1041" lineend="1126" name="failed" signature="failed($self, $only_id, $silent)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$only_id" />
+          <variable ilk="argument" name="$silent" />
+        </scope>
+        <scope ilk="function" line="1132" lineend="1160" name="status" signature="status($self)">
+          <import line="1134" module="Devel::Size" />
+          <variable ilk="argument" name="$self" />
+          <import line="1134" module="Devel::Size" />
+        </scope>
+        <scope ilk="function" line="1164" lineend="1177" name="is_tested" signature="is_tested($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="1180" lineend="1224" name="autobundle" signature="autobundle()">
+          </scope>
+        <scope ilk="function" line="1227" lineend="1259" name="expandany" signature="expandany($self, $s)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$s" />
+        </scope>
+        <scope ilk="function" line="1262" lineend="1273" name="expand" signature="expand($self, $type, @args)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$type" />
+          <variable ilk="argument" name="@args" />
+        </scope>
+        <scope ilk="function" line="1276" lineend="1374" name="expand_by_method" signature="expand_by_method($self, $class, $methods, @args)">
+          <import line="1305" module="Data::Dumper" />
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$class" />
+          <variable ilk="argument" name="$methods" />
+          <variable ilk="argument" name="@args" />
+          <import line="1305" module="Data::Dumper" />
+        </scope>
+        <scope ilk="function" line="1377" lineend="1391" name="format_result" signature="format_result($type, @args)">
+          <variable ilk="argument" name="$type" />
+          <variable ilk="argument" name="@args" />
+        </scope>
+        <scope ilk="function" line="1398" lineend="1414" name="report_fh" signature="report_fh()" />
+        <scope ilk="function" line="1428" lineend="1439" name="colorize_output" signature="colorize_output()">
+          </scope>
+        <scope ilk="function" line="1444" lineend="1484" name="print_ornamented" signature="print_ornamented($self, $what, $ornament)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$what" />
+          <variable ilk="argument" name="$ornament" />
+        </scope>
+        <scope ilk="function" line="1492" lineend="1497" name="myprint" signature="myprint($self, $what)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$what" />
+        </scope>
+        <scope ilk="function" line="1501" lineend="1504" name="myprintonce" signature="myprintonce($self, $what)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$what" />
+        </scope>
+        <scope ilk="function" line="1506" lineend="1515" name="optprint" signature="optprint($self, $category, $what)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$category" />
+          <variable ilk="argument" name="$what" />
+        </scope>
+        <scope ilk="function" line="1518" lineend="1522" name="myexit" signature="myexit($self, $what)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$what" />
+        </scope>
+        <scope ilk="function" line="1525" lineend="1528" name="mywarn" signature="mywarn($self, $what)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$what" />
+        </scope>
+        <scope ilk="function" line="1532" lineend="1535" name="mywarnonce" signature="mywarnonce($self, $what)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$what" />
+        </scope>
+        <scope ilk="function" line="1539" lineend="1549" name="mydie" signature="mydie($self, $what)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$what" />
+        </scope>
+        <scope ilk="function" line="1552" lineend="1564" name="colorable_makemaker_prompt" signature="colorable_makemaker_prompt($foo, $bar)">
+          <variable ilk="argument" name="$foo" />
+          <variable ilk="argument" name="$bar" />
+        </scope>
+        <scope ilk="function" line="1568" lineend="1589" name="unrecoverable_error" signature="unrecoverable_error($self, $what)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$what" />
+        </scope>
+        <scope ilk="function" line="1592" lineend="1599" name="mysleep" signature="mysleep($self, $sleep)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$sleep" />
+        </scope>
+        <scope ilk="function" line="1602" lineend="1609" name="setup_output" signature="setup_output()">
+          </scope>
+        <scope ilk="function" line="1613" lineend="1843" name="rematein" signature="rematein($self, $meth, @some)">
+          <import line="1695" module="Carp" />
+          <import line="1809" module="overload" />
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$meth" />
+          <variable ilk="argument" name="@some" />
+          <import line="1695" module="Carp" />
+          <import line="1809" module="overload" />
+        </scope>
+        <scope ilk="function" line="1846" lineend="1930" name="recent" signature="recent($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="1933" lineend="1954" name="smoke" signature="smoke($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+      </scope>
+    </scope>
+    

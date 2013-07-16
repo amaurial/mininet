@@ -1,0 +1,204 @@
+<scope doc="Generate Python documentation in HTML or text for interactive use.&#xA;In the Python interpreter, do &quot;from pydoc import help&quot; to provide online help.  Calling help(thing) on a Python object documents the object.  Or, at the shell command line outside of Python:  Run &quot;pydoc &lt;name&gt;&quot; to show documentation on something.  &lt;name&gt; may be the name of a function, module, package, or a dotted reference to a class or function within a module or module in a package.  If the argument contains a path segment delimiter (e.g. slash on Unix, backslash on Windows) it is treated as the path to a Python source file." ilk="blob" lang="Python" name="pydoc">
+      <scope classrefs="object" doc="&#xA;" ilk="class" name="Doc">
+        <scope doc="Raise an exception for unimplemented types." ilk="function" name="docmodule" signature="docmodule(self, object, name=None, *args)" />
+        <scope doc="Raise an exception for unimplemented types." ilk="function" name="docother" signature="docother(self, object, name=None, *args)" />
+        <scope doc="Raise an exception for unimplemented types." ilk="function" name="docproperty" signature="docproperty(self, object, name=None, *args)" />
+        <scope doc="Raise an exception for unimplemented types." ilk="function" name="docdata" signature="docdata(self, object, name=None, *args)" />
+        <scope doc="Raise an exception for unimplemented types." ilk="function" name="fail" signature="fail(self, object, name=None, *args)" />
+        <scope doc="Raise an exception for unimplemented types." ilk="function" name="docclass" signature="docclass(self, object, name=None, *args)" />
+        <scope doc="Return the location of module docs or None" ilk="function" name="getdocloc" signature="getdocloc(self, object)" />
+        <scope doc="Raise an exception for unimplemented types." ilk="function" name="docroutine" signature="docroutine(self, object, name=None, *args)" />
+        <scope doc="Generate documentation for an object." ilk="function" name="document" signature="document(self, object, name=None, *args)" />
+      </scope>
+      <scope classrefs="Exception" doc="Errors that occurred while trying to import something to document it.&#xA;" ilk="class" name="ErrorDuringImport">
+        <scope ilk="function" name="__str__" signature="__str__(self)" />
+        <scope ilk="function" name="__init__" signature="__init__(self, filename, exc_info)" />
+      </scope>
+      <scope classrefs="Doc" doc="Formatter class for HTML documentation.&#xA;" ilk="class" name="HTMLDoc">
+        <scope doc="Make a link for a class." ilk="function" name="classlink" signature="classlink(self, object, modname)" />
+        <scope doc="Format literal preformatted text." ilk="function" name="preformat" signature="preformat(self, text)" />
+        <scope doc="Make a link for an identifier, given name-to-URL mappings." ilk="function" name="namelink" signature="namelink(self, name, *dicts)" />
+        <scope ilk="function" name="_docdescriptor" signature="_docdescriptor(self, name, value, mod)" />
+        <scope doc="Produce HTML documentation for a module object." ilk="function" name="docmodule" signature="docmodule(self, object, name=None, mod=None, *ignored)" />
+        <scope doc="Format an argument default value as text." ilk="function" name="formatvalue" signature="formatvalue(self, object)" />
+        <scope doc="Produce HTML documentation for a data object." ilk="function" name="docother" signature="docother(self, object, name=None, mod=None, *ignored)" />
+        <scope doc="Produce html documentation for a property." ilk="function" name="docproperty" signature="docproperty(self, object, name=None, mod=None, cl=None)" />
+        <scope doc="Produce html documentation for a data descriptor." ilk="function" name="docdata" signature="docdata(self, object, name=None, mod=None, cl=None)" />
+        <scope doc="Produce HTML for a class tree as given by&#xA;inspect.getclasstree()." ilk="function" name="formattree" signature="formattree(self, tree, modname, parent=None)" />
+        <scope doc="Make a link for a module or package to display in an index." ilk="function" name="modpkglink" signature="modpkglink(self, modpkginfo)" />
+        <scope doc="Format a section with a big heading." ilk="function" name="bigsection" signature="bigsection(self, title, *args)" />
+        <scope ilk="function" name="escape" />
+        <scope doc="Produce HTML documentation for a function or method object." ilk="function" name="docroutine" signature="docroutine(self, object, name=None, mod=None, funcs={}, classes={}, methods={}, cl=None)" />
+        <scope doc="Mark up some plain text, given a context of symbols to look&#xA;for." ilk="function" name="markup" signature="markup(self, text, escape=None, funcs={}, classes={}, methods={})" />
+        <scope doc="Format a page heading." ilk="function" name="heading" signature="heading(self, title, fgcol, bgcol, extras=&apos;&apos;)" />
+        <scope doc="Generate an HTML index for a directory of modules." ilk="function" name="index" signature="index(self, dir, shadowed=None)" />
+        <scope doc="Make a link to source file." ilk="function" name="filelink" signature="filelink(self, url, path)" />
+        <scope ilk="function" name="grey" signature="grey(self, text)" />
+        <scope doc="Format a section with a heading." ilk="function" name="section" signature="section(self, title, fgcol, bgcol, contents, width=6, prelude=&apos;&apos;, marginalia=None, gap=&apos;&amp;nbsp;&apos;)" />
+        <scope doc="Make a link for a module." ilk="function" name="modulelink" signature="modulelink(self, object)" />
+        <scope ilk="function" name="repr" />
+        <scope doc="Format an HTML page." ilk="function" name="page" signature="page(self, title, contents)" />
+        <scope doc="Produce HTML documentation for a class object." ilk="function" name="docclass" signature="docclass(self, object, name=None, mod=None, funcs={}, classes={}, *ignored)" />
+        <scope doc="Format a list of items into a multi-column list." ilk="function" name="multicolumn" signature="multicolumn(self, list, format, cols=4)" />
+      </scope>
+      <scope classrefs="Repr" doc="Class for safely making an HTML representation of a Python object.&#xA;" ilk="class" name="HTMLRepr">
+        <scope ilk="function" name="repr_instance" signature="repr_instance(self, x, level)" />
+        <scope ilk="function" name="repr_str" signature="repr_str(self, x, level)" />
+        <scope ilk="function" name="repr_string" signature="repr_string(self, x, level)" />
+        <scope ilk="function" name="repr" signature="repr(self, object)" />
+        <scope ilk="function" name="repr1" signature="repr1(self, x, level)" />
+        <scope ilk="function" name="escape" signature="escape(self, text)" />
+        <scope ilk="function" name="repr_unicode" signature="repr_unicode(self, x, level)" />
+        <scope ilk="function" name="__init__" signature="__init__(self)" />
+      </scope>
+      <scope classrefs="object" doc="&#xA;" ilk="class" name="Helper">
+        <scope ilk="function" name="help" signature="help(self, request)" />
+        <scope ilk="function" name="listmodules" signature="listmodules(self, key=&apos;&apos;)" />
+        <scope ilk="function" name="intro" signature="intro(self)" />
+        <scope ilk="function" name="listsymbols" signature="listsymbols(self)" />
+        <scope ilk="function" name="__init__" signature="__init__(self, input=None, output=None)" />
+        <scope ilk="function" name="showsymbol" signature="showsymbol(self, symbol)" />
+        <scope ilk="function" name="listkeywords" signature="listkeywords(self)" />
+        <scope ilk="function" name="showtopic" signature="showtopic(self, topic, more_xrefs=&apos;&apos;)" />
+        <scope ilk="function" name="interact" signature="interact(self)" />
+        <scope ilk="function" name="list" signature="list(self, items, columns=4, width=80)" />
+        <scope ilk="function" name="__repr__" signature="__repr__(self)" />
+        <scope ilk="function" name="__call__" signature="__call__(self, request=&lt;object object at 0x0207EDD0&gt;)" />
+        <scope doc="Return unbuffered tuple of (topic, xrefs)." ilk="function" name="_gettopic" signature="_gettopic(self, topic, more_xrefs=&apos;&apos;)" />
+        <scope doc="Read one line, using input() when appropriate." ilk="function" name="getline" signature="getline(self, prompt)" />
+        <scope ilk="function" name="listtopics" signature="listtopics(self)" />
+      </scope>
+      <scope classrefs="object" doc="An interruptible scanner that searches module synopses.&#xA;" ilk="class" name="ModuleScanner">
+        <scope ilk="function" name="run" signature="run(self, callback, key=None, completer=None, onerror=None)" />
+      </scope>
+      <scope classrefs="object" doc="&#xA;" ilk="class" name="Repr">
+        <scope ilk="function" name="repr_instance" signature="repr_instance(self, x, level)" />
+        <scope ilk="function" name="repr_array" signature="repr_array(self, x, level)" />
+        <scope ilk="function" name="repr_tuple" signature="repr_tuple(self, x, level)" />
+        <scope ilk="function" name="repr_list" signature="repr_list(self, x, level)" />
+        <scope ilk="function" name="repr_str" signature="repr_str(self, x, level)" />
+        <scope ilk="function" name="_repr_iterable" signature="_repr_iterable(self, x, level, left, right, maxiter, trail=&apos;&apos;)" />
+        <scope ilk="function" name="repr" signature="repr(self, x)" />
+        <scope ilk="function" name="repr_set" signature="repr_set(self, x, level)" />
+        <scope ilk="function" name="repr_frozenset" signature="repr_frozenset(self, x, level)" />
+        <scope ilk="function" name="repr_deque" signature="repr_deque(self, x, level)" />
+        <scope ilk="function" name="repr1" signature="repr1(self, x, level)" />
+        <scope ilk="function" name="repr_dict" signature="repr_dict(self, x, level)" />
+        <scope ilk="function" name="__init__" signature="__init__(self)" />
+        <scope ilk="function" name="repr_int" signature="repr_int(self, x, level)" />
+      </scope>
+      <scope classrefs="object" doc="A generic tree iterator.&#xA;" ilk="class" name="Scanner">
+        <scope ilk="function" name="next" signature="next(self)" />
+        <scope ilk="function" name="__init__" signature="__init__(self, roots, children, descendp)" />
+      </scope>
+      <scope classrefs="Doc" doc="Formatter class for text documentation.&#xA;" ilk="class" name="TextDoc">
+        <scope doc="Format a string in bold by overstriking." ilk="function" name="bold" signature="bold(self, text)" />
+        <scope ilk="function" name="_docdescriptor" signature="_docdescriptor(self, name, value, mod)" />
+        <scope doc="Produce text documentation for a given module object." ilk="function" name="docmodule" signature="docmodule(self, object, name=None, mod=None)" />
+        <scope doc="Format an argument default value as text." ilk="function" name="formatvalue" signature="formatvalue(self, object)" />
+        <scope doc="Produce text documentation for a data object." ilk="function" name="docother" signature="docother(self, object, name=None, mod=None, parent=None, maxlen=None, doc=None)" />
+        <scope ilk="function" name="repr" />
+        <scope doc="Produce text documentation for a data descriptor." ilk="function" name="docdata" signature="docdata(self, object, name=None, mod=None, cl=None)" />
+        <scope doc="Produce text documentation for a function or method object." ilk="function" name="docroutine" signature="docroutine(self, object, name=None, mod=None, cl=None)" />
+        <scope doc="Render in text a class tree as returned by&#xA;inspect.getclasstree()." ilk="function" name="formattree" signature="formattree(self, tree, modname, parent=None, prefix=&apos;&apos;)" />
+        <scope doc="Indent text by prepending a given prefix to each line." ilk="function" name="indent" signature="indent(self, text, prefix=&apos;    &apos;)" />
+        <scope doc="Format a section with a given heading." ilk="function" name="section" signature="section(self, title, contents)" />
+        <scope doc="Produce text documentation for a given class object." ilk="function" name="docclass" signature="docclass(self, object, name=None, mod=None, *ignored)" />
+        <scope doc="Produce text documentation for a property." ilk="function" name="docproperty" signature="docproperty(self, object, name=None, mod=None, cl=None)" />
+      </scope>
+      <scope classrefs="Repr" doc="Class for safely making a text representation of a Python object.&#xA;" ilk="class" name="TextRepr">
+        <scope ilk="function" name="repr_instance" signature="repr_instance(self, x, level)" />
+        <scope ilk="function" name="repr_str" signature="repr_str(self, x, level)" />
+        <scope ilk="function" name="repr_string" signature="repr_string(self, x, level)" />
+        <scope ilk="function" name="__init__" signature="__init__(self)" />
+        <scope ilk="function" name="repr1" signature="repr1(self, x, level)" />
+      </scope>
+      <variable citdl="list" name="__all__" />
+      <variable citdl="dict" name="__warningregistry__" />
+      <scope ilk="function" name="allmethods" signature="allmethods(cl)" />
+      <scope doc="Print all the one-line module summaries that contain a&#xA;substring." ilk="function" name="apropos" signature="apropos(key)" />
+      <scope doc="Start the enhanced pydoc Web server and open a Web browser." ilk="function" name="browse" signature="browse(port=0, *, open_browser=True)" />
+      <import module="builtins" />
+      <scope doc="Wrap inspect.classify_class_attrs, with fixup for data&#xA;descriptors." ilk="function" name="classify_class_attrs" signature="classify_class_attrs(object)" />
+      <scope doc="Get a class name and qualify it with a module name if&#xA;necessary." ilk="function" name="classname" signature="classname(object, modname)" />
+      <scope doc="Command-line interface (looks at sys.argv to decide what to&#xA;do)." ilk="function" name="cli" signature="cli()" />
+      <scope doc="Omit part of a string if needed to make it fit in a maximum&#xA;length." ilk="function" name="cram" signature="cram(text, maxlen)" />
+      <scope classrefs="object" doc="deque(iterable[, maxlen]) --&gt; deque object&#xA;Build an ordered collection with optimized access from its endpoints." ilk="class" name="deque">
+        <scope doc="Add an element to the left side of the deque." ilk="function" name="appendleft" />
+        <scope doc="x.__getattribute__(&apos;name&apos;) &lt;==&gt; x.name" ilk="function" name="__getattribute__" signature="x.__getattribute__(&apos;name&apos;) &lt;==&gt; x.name" />
+        <scope doc="Remove and return the rightmost element." ilk="function" name="pop" />
+        <scope doc="remove first occurrence of value." ilk="function" name="remove" signature="D.remove(value)" />
+        <scope doc="x.__lt__(y) &lt;==&gt; x&lt;y" ilk="function" name="__lt__" signature="x.__lt__(y) &lt;==&gt; x&lt;y" />
+        <scope ilk="function" name="__init__" />
+        <scope doc="Extend the left side of the deque with elements from the&#xA;iterable" ilk="function" name="extendleft" />
+        <scope doc="Add an element to the right side of the deque." ilk="function" name="append" />
+        <scope doc="x.__len__() &lt;==&gt; len(x)" ilk="function" name="__len__" signature="x.__len__() &lt;==&gt; len(x)" />
+        <scope doc="x.__ne__(y) &lt;==&gt; x!=y" ilk="function" name="__ne__" signature="x.__ne__(y) &lt;==&gt; x!=y" />
+        <scope doc="x.__getitem__(y) &lt;==&gt; x[y]" ilk="function" name="__getitem__" signature="x.__getitem__(y) &lt;==&gt; x[y]" />
+        <scope doc="Return state information for pickling." ilk="function" name="__reduce__" />
+        <scope doc="Remove and return the leftmost element." ilk="function" name="popleft" />
+        <scope doc="x.__setitem__(i, y) &lt;==&gt; x[i]=y" ilk="function" name="__setitem__" signature="x.__setitem__(i, y) &lt;==&gt; x[i]=y" />
+        <scope doc="x.__gt__(y) &lt;==&gt; x&gt;y" ilk="function" name="__gt__" signature="x.__gt__(y) &lt;==&gt; x&gt;y" />
+        <scope doc="x.__eq__(y) &lt;==&gt; x==y" ilk="function" name="__eq__" signature="x.__eq__(y) &lt;==&gt; x==y" />
+        <scope doc="D.count(value) -&gt; integer -- return number of occurrences of value" ilk="function" name="count" returns="int" signature="D.count(value) -&gt; integer -- return number of occurrences of value" />
+        <scope doc="x.__delitem__(y) &lt;==&gt; del x[y]" ilk="function" name="__delitem__" signature="x.__delitem__(y) &lt;==&gt; del x[y]" />
+        <scope doc="Extend the right side of the deque with elements from the&#xA;iterable" ilk="function" name="extend" />
+        <scope doc="Rotate the deque n steps to the right (default n=1)." ilk="function" name="rotate" />
+        <scope doc="reverse *IN PLACE*" ilk="function" name="reverse" signature="D.reverse()" />
+        <scope doc="Remove all elements from the deque." ilk="function" name="clear" />
+        <scope doc="x.__iter__() &lt;==&gt; iter(x)" ilk="function" name="__iter__" signature="x.__iter__() &lt;==&gt; iter(x)" />
+        <scope doc="x.__iadd__(y) &lt;==&gt; x+=y" ilk="function" name="__iadd__" signature="x.__iadd__(y) &lt;==&gt; x+=y" />
+        <scope doc="return a reverse iterator over the deque" ilk="function" name="__reversed__" signature="D.__reversed__()" />
+        <scope doc="x.__le__(y) &lt;==&gt; x&lt;=y" ilk="function" name="__le__" signature="x.__le__(y) &lt;==&gt; x&lt;=y" />
+        <scope doc="x.__repr__() &lt;==&gt; repr(x)" ilk="function" name="__repr__" signature="x.__repr__() &lt;==&gt; repr(x)" />
+        <scope doc="Return a shallow copy of a deque." ilk="function" name="__copy__" />
+        <scope doc="x.__ge__(y) &lt;==&gt; x&gt;=y" ilk="function" name="__ge__" signature="x.__ge__(y) &lt;==&gt; x&gt;=y" />
+      </scope>
+      <scope doc="Produce a short description of the given thing." ilk="function" name="describe" signature="describe(thing)" />
+      <scope doc="Display text documentation, given an object or a path to an&#xA;object." ilk="function" name="doc" signature="doc(thing, title=&apos;Python Library Documentation: %s&apos;, forceload=0, output=None)" />
+      <scope doc="Return list of up to limit pre-processed entries from&#xA;traceback." ilk="function" name="extract_tb" signature="extract_tb(tb, limit=None)" />
+      <scope doc="Format the exception part of a traceback." ilk="function" name="format_exception_only" signature="format_exception_only(etype, value)" />
+      <scope doc="Get the doc string or comments for an object." ilk="function" name="getdoc" signature="getdoc(object)" />
+      <scope doc="Decide what method to use for paging through text." ilk="function" name="getpager" signature="getpager()" />
+      <scope doc="Graphical interface (starts Web server and pops up a control&#xA;window)." ilk="function" name="gui" signature="gui()" />
+      <variable citdl="Helper" name="help" />
+      <variable citdl="HTMLDoc" name="html" />
+      <import module="imp" />
+      <scope doc="Import a Python source file or compiled file given its path." ilk="function" name="importfile" signature="importfile(path)" />
+      <import module="inspect" />
+      <import module="io" />
+      <scope doc="Check if an object is of a type that probably means it&apos;s&#xA;data." ilk="function" name="isdata" signature="isdata(object)" />
+      <scope doc="Guess whether a path refers to a package directory." ilk="function" name="ispackage" signature="ispackage(path)" />
+      <scope ilk="function" name="ispath" signature="ispath(x)" />
+      <scope doc="Locate an object by name or dotted path, importing as&#xA;necessary." ilk="function" name="locate" signature="locate(path, forceload=0)" />
+      <import module="os" />
+      <scope doc="The first time this is called, determine what kind of pager&#xA;to use." ilk="function" name="pager" signature="pager(text)" />
+      <scope doc="Convert sys.path into a list of absolute, existing, unique&#xA;paths." ilk="function" name="pathdirs" signature="pathdirs()" />
+      <scope doc="Page through text by feeding it to another program." ilk="function" name="pipepager" signature="pipepager(text, cmd)" />
+      <import module="pkgutil" />
+      <scope doc="Remove boldface formatting from text." ilk="function" name="plain" signature="plain(text)" />
+      <scope doc="Simply print unformatted text." ilk="function" name="plainpager" signature="plainpager(text)" />
+      <variable citdl="_PlainTextDoc" name="plaintext" />
+      <import module="platform" />
+      <import module="re" />
+      <scope doc="Render text documentation, given an object or a path to an&#xA;object." ilk="function" name="render_doc" signature="render_doc(thing, title=&apos;Python Library Documentation: %s&apos;, forceload=0, renderer=None)" />
+      <scope doc="Do a series of global replacements on a string." ilk="function" name="replace" signature="replace(text, *pairs)" />
+      <scope doc="Given an object or a path to an object, get the object and&#xA;its name." ilk="function" name="resolve" signature="resolve(thing, forceload=0)" />
+      <scope doc="Import a module; handle errors; return None if the module&#xA;isn&apos;t found." ilk="function" name="safeimport" signature="safeimport(path, forceload=0, cache={})" />
+      <scope ilk="function" name="serve" signature="serve(port, callback=None, completer=None)" />
+      <scope ilk="function" name="source_synopsis" signature="source_synopsis(file)" />
+      <scope doc="Split a doc string into a synopsis line (if any) and the&#xA;rest." ilk="function" name="splitdoc" signature="splitdoc(doc)" />
+      <scope doc="Remove the hexadecimal id from a Python object&#xA;representation." ilk="function" name="stripid" signature="stripid(text)" />
+      <scope doc="Get the one-line summary out of a module file." ilk="function" name="synopsis" signature="synopsis(filename, cache={})" />
+      <import module="sys" />
+      <scope doc="Page through text by invoking a program on a temporary file." ilk="function" name="tempfilepager" signature="tempfilepager(text, cmd)" />
+      <variable citdl="TextDoc" name="text" />
+      <import module="time" />
+      <import module="tokenize" />
+      <scope doc="Page through text on a text terminal." ilk="function" name="ttypager" signature="ttypager(text)" />
+      <scope doc="Decide whether to show documentation on a variable." ilk="function" name="visiblename" signature="visiblename(name, all=None, obj=None)" />
+      <import module="warnings" />
+      <scope doc="Write HTML documentation to a file in the current directory." ilk="function" name="writedoc" signature="writedoc(thing, forceload=0)" />
+      <scope doc="Write out HTML documentation for all modules in a directory&#xA;tree." ilk="function" name="writedocs" signature="writedocs(dir, pkgpath=&apos;&apos;, done=None)" />
+    </scope>
+    

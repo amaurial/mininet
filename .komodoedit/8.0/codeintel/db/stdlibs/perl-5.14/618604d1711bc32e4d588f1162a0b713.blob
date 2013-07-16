@@ -1,0 +1,130 @@
+<scope ilk="blob" lang="Perl" name="File::Temp">
+      <scope ilk="class" line="1" lineend="2281" name="File::Temp">
+        <import line="143" module="Carp" symbol="*" />
+        <import line="144" module="File::Spec" symbol="*" />
+        <import line="145" module="File::Path" symbol="rmtree" />
+        <import line="146" module="Fcntl" symbol="*" />
+        <import line="147" module="IO::Seekable" symbol="*" />
+        <import line="148" module="Errno" symbol="*" />
+        <import line="149" module="VMS::Stdio" />
+        <import line="156" module="Carp::Heavy" />
+        <import line="159" module="Symbol" />
+        <variable line="166" name="$DEBUG" />
+        <variable line="166" name="$KEEP_ALL" />
+        <variable line="166" name="$VERSION" />
+        <variable line="166" name="%EXPORT_TAGS" />
+        <variable line="166" name="@EXPORT_OK" />
+        <scope ilk="function" line="331" lineend="605" name="_gettemp" signature="_gettemp($template)">
+          <variable ilk="argument" name="$template" />
+        </scope>
+        <scope ilk="function" line="616" lineend="635" name="_replace_XX" signature="_replace_XX($path, $ignore)">
+          <variable ilk="argument" name="$path" />
+          <variable ilk="argument" name="$ignore" />
+        </scope>
+        <scope ilk="function" line="640" lineend="643" name="_force_writable" signature="_force_writable($file)">
+          <variable ilk="argument" name="$file" />
+        </scope>
+        <scope ilk="function" line="665" lineend="714" name="_is_safe" signature="_is_safe($path, $err_ref)">
+          <variable ilk="argument" name="$path" />
+          <variable ilk="argument" name="$err_ref" />
+        </scope>
+        <scope ilk="function" line="726" lineend="788" name="_is_verysafe" signature="_is_verysafe($path, $err_ref)">
+          <import line="729" module="POSIX" />
+          <variable ilk="argument" name="$path" />
+          <variable ilk="argument" name="$err_ref" />
+          <import line="729" module="POSIX" />
+        </scope>
+        <scope ilk="function" line="801" lineend="809" name="_can_unlink_opened_file" signature="_can_unlink_opened_file()" />
+        <scope ilk="function" line="818" lineend="833" name="_can_do_level" signature="_can_do_level($level)">
+          <variable ilk="argument" name="$level" />
+        </scope>
+        <scope attributes="__exportable__" ilk="function" line="876" lineend="913" name="cleanup" signature="cleanup()">
+          </scope>
+        <scope ilk="function" line="921" lineend="962" name="_deferred_unlink" signature="_deferred_unlink($fh, $fname, $isdir)">
+          <variable ilk="argument" name="$fh" />
+          <variable ilk="argument" name="$fname" />
+          <variable ilk="argument" name="$isdir" />
+        </scope>
+        <scope attributes="__ctor__" ilk="function" line="1009" lineend="1050" name="new" signature="new($proto, %args)">
+          <variable ilk="argument" name="$proto" />
+          <variable ilk="argument" name="%args" />
+        </scope>
+        <scope attributes="__ctor__" ilk="function" line="1067" lineend="1088" name="newdir" signature="newdir($self, %options)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="%options" />
+        </scope>
+        <scope ilk="function" line="1102" lineend="1105" name="filename" signature="filename($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="1107" lineend="1110" name="STRINGIFY" signature="STRINGIFY($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="1132" lineend="1138" name="unlink_on_destroy" signature="unlink_on_destroy($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="1161" lineend="1191" name="DESTROY" signature="DESTROY($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope attributes="__exportable__" ilk="function" line="1295" lineend="1419" name="tempfile" signature="tempfile()">
+          </scope>
+        <scope attributes="__exportable__" ilk="function" line="1486" lineend="1578" name="tempdir" signature="tempdir()">
+          </scope>
+        <scope attributes="__exportable__" ilk="function" line="1608" lineend="1630" name="mkstemp" signature="mkstemp($template)">
+          <variable ilk="argument" name="$template" />
+        </scope>
+        <scope attributes="__exportable__" ilk="function" line="1649" lineend="1675" name="mkstemps" signature="mkstemps($template, $suffix)">
+          <variable ilk="argument" name="$template" />
+          <variable ilk="argument" name="$suffix" />
+        </scope>
+        <scope attributes="__exportable__" ilk="function" line="1694" lineend="1720" name="mkdtemp" signature="mkdtemp($template)">
+          <variable ilk="argument" name="$template" />
+        </scope>
+        <scope attributes="__exportable__" ilk="function" line="1735" lineend="1752" name="mktemp" signature="mktemp($template)">
+          <variable ilk="argument" name="$template" />
+        </scope>
+        <scope attributes="__exportable__" ilk="function" line="1797" lineend="1814" name="tmpnam" signature="tmpnam()">
+          </scope>
+        <scope attributes="__exportable__" ilk="function" line="1833" lineend="1845" name="tmpfile" signature="tmpfile()">
+          </scope>
+        <scope ilk="function" line="1878" lineend="1892" name="tempnam" signature="tempnam($dir, $prefix)">
+          <variable ilk="argument" name="$dir" />
+          <variable ilk="argument" name="$prefix" />
+        </scope>
+        <scope attributes="__exportable__" ilk="function" line="1950" lineend="1988" name="unlink0" signature="unlink0($fh, $path)">
+          <variable ilk="argument" name="$fh" />
+          <variable ilk="argument" name="$path" />
+        </scope>
+        <scope ilk="function" line="2015" lineend="2084" name="cmpstat" signature="cmpstat($fh, $path)">
+          <variable ilk="argument" name="$fh" />
+          <variable ilk="argument" name="$path" />
+        </scope>
+        <scope ilk="function" line="2108" lineend="2128" name="unlink1" signature="unlink1($fh, $path)">
+          <variable ilk="argument" name="$fh" />
+          <variable ilk="argument" name="$path" />
+        </scope>
+        <scope ilk="function" line="2226" lineend="2244" name="safe_level" signature="safe_level($self, $level)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$level" />
+        </scope>
+        <scope ilk="function" line="2271" lineend="2280" name="top_system_uid" signature="top_system_uid($self, $newuid)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$newuid" />
+        </scope>
+      </scope>
+      <scope ilk="class" line="2403" lineend="2452" name="File::Temp::Dir">
+        <import line="2405" module="File::Path" symbol="rmtree" />
+        <scope ilk="function" line="2417" lineend="2420" name="dirname" signature="dirname($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="2422" lineend="2425" name="STRINGIFY" signature="STRINGIFY($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="2427" lineend="2433" name="unlink_on_destroy" signature="unlink_on_destroy($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="2435" lineend="2449" name="DESTROY" signature="DESTROY($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+      </scope>
+    </scope>
+    

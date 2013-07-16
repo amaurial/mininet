@@ -1,0 +1,112 @@
+<scope ilk="blob" lang="Perl" name="Version::Requirements">
+      <scope ilk="class" line="3" lineend="184" name="Version::Requirements">
+        <import line="10" module="Carp" />
+        <import line="11" module="Scalar::Util" />
+        <import line="12" module="version" symbol="*" />
+        <variable line="5" name="$Version::Requirements::VERSION" />
+        <scope attributes="__ctor__" ilk="function" line="15" lineend="18" name="new" signature="new($class)">
+          <variable ilk="argument" name="$class" />
+        </scope>
+        <scope ilk="function" line="20" lineend="28" name="_version_object" signature="_version_object($self, $version)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$version" />
+        </scope>
+        <scope ilk="function" line="52" lineend="64" name="add_requirements" signature="add_requirements($self, $req)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$req" />
+        </scope>
+        <scope ilk="function" line="67" lineend="74" name="accepts_module" signature="accepts_module($self, $module, $version)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$module" />
+          <variable ilk="argument" name="$version" />
+        </scope>
+        <scope ilk="function" line="77" lineend="88" name="clear_requirement" signature="clear_requirement($self, $module)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$module" />
+        </scope>
+        <scope ilk="function" line="91" lineend="91" name="required_modules" signature="required_modules()" />
+        <scope ilk="function" line="94" lineend="99" name="clone" signature="clone($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="101" lineend="101" name="__entry_for" signature="__entry_for()" />
+        <scope ilk="function" line="103" lineend="119" name="__modify_entry_for" signature="__modify_entry_for($self, $name, $method, $version)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$name" />
+          <variable ilk="argument" name="$method" />
+          <variable ilk="argument" name="$version" />
+        </scope>
+        <scope ilk="function" line="122" lineend="130" name="is_simple" signature="is_simple($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="133" lineend="133" name="is_finalized" signature="is_finalized()" />
+        <scope ilk="function" line="136" lineend="136" name="finalize" signature="finalize()" />
+        <scope ilk="function" line="139" lineend="146" name="as_string_hash" signature="as_string_hash($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="158" lineend="180" name="from_string_hash" signature="from_string_hash($class, $hash)">
+          <variable ilk="argument" name="$class" />
+          <variable ilk="argument" name="$hash" />
+        </scope>
+      </scope>
+      <scope ilk="class" line="186" lineend="231" name="Version::Requirements::_Range::Exact">
+        <variable line="188" name="$Version::Requirements::_Range::Exact::VERSION" />
+        <scope attributes="__ctor__" ilk="function" line="190" lineend="190" name="_new" signature="_new()" />
+        <scope ilk="function" line="192" lineend="192" name="_accepts" signature="_accepts()" />
+        <scope ilk="function" line="194" lineend="194" name="as_string" signature="as_string()" />
+        <scope ilk="function" line="196" lineend="196" name="as_modifiers" signature="as_modifiers()" />
+        <scope ilk="function" line="198" lineend="200" name="_clone" signature="_clone()" />
+        <scope ilk="function" line="202" lineend="208" name="with_exact_version" signature="with_exact_version($self, $version)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$version" />
+        </scope>
+        <scope ilk="function" line="210" lineend="214" name="with_minimum" signature="with_minimum($self, $minimum)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$minimum" />
+        </scope>
+        <scope ilk="function" line="216" lineend="220" name="with_maximum" signature="with_maximum($self, $maximum)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$maximum" />
+        </scope>
+        <scope ilk="function" line="222" lineend="226" name="with_exclusion" signature="with_exclusion($self, $exclusion)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$exclusion" />
+        </scope>
+      </scope>
+      <scope ilk="class" line="233" lineend="384" name="Version::Requirements::_Range::Range">
+        <variable line="235" name="$Version::Requirements::_Range::Range::VERSION" />
+        <scope ilk="function" line="238" lineend="238" name="_self" signature="_self()" />
+        <scope attributes="__ctor__" ilk="function" line="240" lineend="254" name="_clone" signature="_clone($s)">
+          <variable ilk="argument" name="$s" />
+        </scope>
+        <scope ilk="function" line="256" lineend="263" name="as_modifiers" signature="as_modifiers($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="265" lineend="295" name="as_string" signature="as_string($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="297" lineend="305" name="with_exact_version" signature="with_exact_version($self, $version)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$version" />
+        </scope>
+        <scope ilk="function" line="307" lineend="335" name="_simplify" signature="_simplify($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="337" lineend="348" name="with_minimum" signature="with_minimum($self, $minimum)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$minimum" />
+        </scope>
+        <scope ilk="function" line="350" lineend="361" name="with_maximum" signature="with_maximum($self, $maximum)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$maximum" />
+        </scope>
+        <scope ilk="function" line="363" lineend="370" name="with_exclusion" signature="with_exclusion($self, $exclusion)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$exclusion" />
+        </scope>
+        <scope ilk="function" line="372" lineend="381" name="_accepts" signature="_accepts($self, $version)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$version" />
+        </scope>
+      </scope>
+    </scope>
+    

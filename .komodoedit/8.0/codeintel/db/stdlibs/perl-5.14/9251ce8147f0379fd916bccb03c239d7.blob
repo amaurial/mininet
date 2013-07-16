@@ -1,0 +1,36 @@
+<scope ilk="blob" lang="Perl" name="HTML::Parser">
+      <scope ilk="class" line="1" lineend="128" name="HTML::Parser">
+        <import line="14" module="HTML::Entities" />
+        <import line="16" module="XSLoader" />
+        <variable line="10" name="$VERSION" />
+        <variable line="10" name="@ISA" />
+        <variable line="64" name="$h" />
+        <variable line="122" name="*start" />
+        <variable line="123" name="*end" />
+        <variable line="124" name="*comment" />
+        <variable line="125" name="*declaration" />
+        <variable line="126" name="*process" />
+        <scope attributes="__ctor__" ilk="function" line="19" lineend="24" name="new" signature="new($class)">
+          <variable ilk="argument" name="$class" />
+        </scope>
+        <scope ilk="function" line="27" lineend="85" name="init" signature="init($self, %arg)">
+          <import line="35" module="Carp" />
+          <import line="76" module="Carp" />
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="%arg" />
+          <import line="35" module="Carp" />
+          <import line="76" module="Carp" />
+        </scope>
+        <scope ilk="function" line="88" lineend="106" name="parse_file" signature="parse_file($self, $file)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$file" />
+        </scope>
+        <scope ilk="function" line="109" lineend="118" name="netscape_buggy_comment" signature="netscape_buggy_comment($self)">
+          <import line="112" module="Carp" />
+          <variable ilk="argument" name="$self" />
+          <import line="112" module="Carp" />
+        </scope>
+        <scope ilk="function" line="121" lineend="121" name="text" signature="text()" />
+      </scope>
+    </scope>
+    

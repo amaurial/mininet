@@ -1,0 +1,32 @@
+<scope doc="A collection of string constants.&#xA;Public module variables:  whitespace -- a string containing all ASCII whitespace ascii_lowercase -- a string containing all ASCII lowercase letters ascii_uppercase -- a string containing all ASCII uppercase letters ascii_letters -- a string containing all ASCII letters digits -- a string containing all ASCII decimal digits hexdigits -- a string containing all ASCII hexadecimal digits octdigits -- a string containing all ASCII octal digits punctuation -- a string containing all ASCII punctuation characters" ilk="blob" lang="Python" name="string">
+      <scope classrefs="object" doc="&#xA;" ilk="class" name="Formatter">
+        <scope ilk="function" name="format_field" signature="format_field(self, value, format_spec)" />
+        <scope ilk="function" name="format" signature="format(self, format_string, *args, **kwargs)" />
+        <scope ilk="function" name="convert_field" signature="convert_field(self, value, conversion)" />
+        <scope ilk="function" name="get_value" signature="get_value(self, key, args, kwargs)" />
+        <scope ilk="function" name="vformat" signature="vformat(self, format_string, args, kwargs)" />
+        <scope ilk="function" name="_vformat" signature="_vformat(self, format_string, args, kwargs, used_args, recursion_depth)" />
+        <scope doc="# returns an iterable that contains tuples of the form: #&#xA;(literal_text, field_name, format_spec, conversion) #&#xA;literal_text can be zero length # field_name can be None, in&#xA;which case there&apos;s no" ilk="function" name="parse" signature="parse(self, format_string)" />
+        <scope doc="# given a field_name, find the object it references." ilk="function" name="get_field" signature="get_field(self, field_name, args, kwargs)" />
+        <scope ilk="function" name="check_unused_args" signature="check_unused_args(self, used_args, args, kwargs)" />
+      </scope>
+      <scope classrefs="object" doc="A string class for supporting $-substitutions.&#xA;" ilk="class" name="Template">
+        <scope ilk="function" name="_invalid" signature="_invalid(self, mo)" />
+        <scope ilk="function" name="safe_substitute" signature="safe_substitute(self, *args, **kws)" />
+        <scope ilk="function" name="__init__" signature="__init__(self, template)" />
+        <scope ilk="function" name="substitute" signature="substitute(self, *args, **kws)" />
+      </scope>
+      <import module="_re" />
+      <import module="_string" />
+      <variable citdl="str" name="ascii_letters" />
+      <variable citdl="str" name="ascii_lowercase" />
+      <variable citdl="str" name="ascii_uppercase" />
+      <scope doc="Split the argument into words using split, capitalize each&#xA;word using capitalize, and join the capitalized words using&#xA;join." ilk="function" name="capwords" returns="str" signature="capwords(s [,sep]) -&gt; string" />
+      <variable citdl="str" name="digits" />
+      <variable citdl="str" name="hexdigits" />
+      <variable citdl="str" name="octdigits" />
+      <variable citdl="str" name="printable" />
+      <variable citdl="str" name="punctuation" />
+      <variable citdl="str" name="whitespace" />
+    </scope>
+    

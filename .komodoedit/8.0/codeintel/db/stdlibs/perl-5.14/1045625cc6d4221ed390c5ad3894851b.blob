@@ -1,0 +1,50 @@
+<scope ilk="blob" lang="Perl" name="Perl::Critic::Policy::ValuesAndExpressions::RequireConstantVersion">
+      <scope ilk="class" line="8" lineend="351" name="Perl::Critic::Policy::ValuesAndExpressions::RequireConstantVersion">
+        <import line="14" module="Carp" symbol="*" />
+        <import line="15" module="English" symbol="-no_match_vars" />
+        <import line="16" module="Perl::Critic::Utils" symbol="**" />
+        <import line="21" module="Perl::Critic::Utils::PPI" symbol="is_ppi_constant_element" />
+        <import line="22" module="Perl::Critic::Utils::PPI" symbol="get_next_element_in_same_simple_statement" />
+        <import line="23" module="Perl::Critic::Utils::PPI" symbol="get_previous_module_used_on_same_line" />
+        <import line="25" module="Readonly" symbol="*" />
+        <variable line="29" name="$VERSION" />
+        <scope ilk="function" line="53" lineend="62" name="supported_parameters" signature="supported_parameters()" />
+        <scope ilk="function" line="63" lineend="63" name="default_severity" signature="default_severity()" />
+        <scope ilk="function" line="64" lineend="64" name="default_themes" signature="default_themes()" />
+        <scope ilk="function" line="65" lineend="65" name="applies_to" signature="applies_to()" />
+        <scope ilk="function" line="69" lineend="123" name="violates" signature="violates($self, $elem, $doc)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$elem" />
+          <variable ilk="argument" name="$doc" />
+        </scope>
+        <scope ilk="function" line="134" lineend="146" name="_check_for_assignment_operator" signature="_check_for_assignment_operator($operator)">
+          <variable ilk="argument" name="$operator" />
+        </scope>
+        <scope ilk="function" line="154" lineend="213" name="_validate_operator_bind_regex" signature="_validate_operator_bind_regex($self, $operator, $elem)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$operator" />
+          <variable ilk="argument" name="$elem" />
+        </scope>
+        <scope ilk="function" line="223" lineend="252" name="_validate_word_token" signature="_validate_word_token($self, $elem, $value)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$elem" />
+          <variable ilk="argument" name="$value" />
+        </scope>
+        <scope ilk="function" line="262" lineend="275" name="_validate_word_vstring" signature="_validate_word_vstring($self, $elem, $value)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$elem" />
+          <variable ilk="argument" name="$value" />
+        </scope>
+        <scope ilk="function" line="281" lineend="310" name="_validate_word_qv" signature="_validate_word_qv($self, $elem, $value)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$elem" />
+          <variable ilk="argument" name="$value" />
+        </scope>
+        <scope ilk="function" line="317" lineend="349" name="_validate_word_version" signature="_validate_word_version($self, $elem, $value)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$elem" />
+          <variable ilk="argument" name="$value" />
+        </scope>
+      </scope>
+    </scope>
+    

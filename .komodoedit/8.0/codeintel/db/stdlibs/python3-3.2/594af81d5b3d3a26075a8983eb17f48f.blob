@@ -1,0 +1,48 @@
+<scope doc="Abstract base classes related to import.&#xA;" ilk="blob" lang="Python" name="importlib.abc">
+      <scope classrefs="InspectLoader" doc="Abstract base class for loaders that wish to support the execution of&#xA;modules as scripts.  This ABC represents one of the optional protocols specified in PEP 302." ilk="class" name="ExecutionLoader">
+        <scope doc="Abstract method which should return the value that __file__&#xA;is to be set to." ilk="function" name="get_filename" signature="get_filename(self, fullname)" />
+      </scope>
+      <scope classrefs="object" doc="Abstract base class for import finders.&#xA;" ilk="class" name="Finder">
+        <scope doc="Abstract method which when implemented should find a module." ilk="function" name="find_module" signature="find_module(self, fullname, path=None)" />
+      </scope>
+      <scope classrefs="Loader" doc="Abstract base class for loaders which support inspection about the&#xA;modules they can load.  This ABC represents one of the optional protocols specified by PEP 302." ilk="class" name="InspectLoader">
+        <scope doc="Abstract method which should return the source code for the&#xA;module." ilk="function" name="get_source" signature="get_source(self, fullname)" />
+        <scope doc="Abstract method which when implemented should return whether&#xA;the module is a package." ilk="function" name="is_package" signature="is_package(self, fullname)" />
+        <scope doc="Abstract method which when implemented should return the&#xA;code object for the module." ilk="function" name="get_code" signature="get_code(self, fullname)" />
+      </scope>
+      <scope classrefs="object" doc="Abstract base class for import loaders.&#xA;" ilk="class" name="Loader">
+        <scope doc="Abstract method which when implemented should load a module." ilk="function" name="load_module" signature="load_module(self, fullname)" />
+      </scope>
+      <scope classrefs="SourceLoader" doc="Implement the deprecated PyLoader ABC in terms of SourceLoader.&#xA;This class has been deprecated! It is slated for removal in Python 3.4. If compatibility with Python 3.1 is not needed then implement the SourceLoader ABC instead of this class. If Python 3.1 compatibility is needed, then use the following idiom to have a single class that is compatible with Python 3.1 onwards::  try: from importlib.abc import SourceLoader except ImportError: from importlib.abc import PyLoader as SourceLoader" ilk="class" name="PyLoader">
+        <scope doc="Abstract method." ilk="function" name="source_path" signature="source_path(self, fullname)" />
+        <scope ilk="function" name="is_package" signature="is_package(self, fullname)" />
+        <scope doc="Implement get_filename in terms of source_path." ilk="function" name="get_filename" signature="get_filename(self, fullname)" />
+      </scope>
+      <scope classrefs="PyLoader" doc="Abstract base class to assist in loading source and bytecode by&#xA;requiring only back-end storage methods to be implemented.  This class has been deprecated! Removal is slated for Python 3.4. Implement the SourceLoader ABC instead. If Python 3.1 compatibility is needed, see PyLoader.  The methods get_code, get_source, and load_module are implemented for the user." ilk="class" name="PyPycLoader">
+        <scope doc="Abstract method." ilk="function" name="source_mtime" signature="source_mtime(self, fullname)" />
+        <scope doc="Return the source or bytecode file path." ilk="function" name="get_filename" signature="get_filename(self, fullname)" />
+        <scope doc="Abstract method." ilk="function" name="write_bytecode" signature="write_bytecode(self, fullname, bytecode)" />
+        <scope doc="Abstract method." ilk="function" name="bytecode_path" signature="bytecode_path(self, fullname)" />
+        <scope doc="Get a code object from source or bytecode." ilk="function" name="get_code" signature="get_code(self, fullname)" />
+      </scope>
+      <scope classrefs="Loader" doc="Abstract base class for loaders which can return data from their&#xA;back-end storage.  This ABC represents one of the optional protocols specified by PEP 302." ilk="class" name="ResourceLoader">
+        <scope doc="Abstract method which when implemented should return the&#xA;bytes for the specified path." ilk="function" name="get_data" signature="get_data(self, path)" />
+      </scope>
+      <scope classrefs="SourceLoader ResourceLoader ExecutionLoader" doc="Abstract base class for loading source code (and optionally any&#xA;corresponding bytecode).  To support loading from source code, the abstractmethods inherited from ResourceLoader and ExecutionLoader need to be implemented. To also support loading from bytecode, the optional methods specified directly by this ABC is required.  Inherited abstractmethods not implemented in this ABC:  * ResourceLoader.get_data" ilk="class" name="SourceLoader">
+        <scope doc="Return the (int) modification time for the path (str)." ilk="function" name="path_mtime" signature="path_mtime(self, path)" />
+        <scope doc="Write the bytes to the path (if possible)." ilk="function" name="set_data" signature="set_data(self, path, data)" />
+      </scope>
+      <import module="_bootstrap" />
+      <import module="abc" />
+      <import module="imp" />
+      <import module="io" />
+      <import module="machinery" />
+      <import module="marshal" />
+      <import module="os" />
+      <import module="sys" />
+      <import module="tokenize" />
+      <import module="types" />
+      <import module="util" />
+      <import module="warnings" />
+    </scope>
+    

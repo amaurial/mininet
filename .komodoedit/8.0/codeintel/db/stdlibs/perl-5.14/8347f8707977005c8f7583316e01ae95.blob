@@ -1,0 +1,208 @@
+<scope ilk="blob" lang="Perl" name="IO::Uncompress::Base">
+      <scope classrefs="Exporter IO::File" ilk="class" line="2" lineend="1443" name="IO::Uncompress::Base">
+        <import line="17" module="IO::Compress::Base::Common" symbol="*" />
+        <import line="20" module="IO::File" symbol="*" />
+        <import line="21" module="Symbol" symbol="*" />
+        <import line="22" module="Scalar::Util" symbol="readonly" />
+        <import line="23" module="List::Util" symbol="min" />
+        <import line="24" module="Carp" symbol="*" />
+        <variable line="8" name="$VERSION" />
+        <variable line="8" name="%EXPORT_TAGS" />
+        <variable line="8" name="@EXPORT_OK" />
+        <variable line="8" name="@ISA" />
+        <variable line="1410" name="*BINMODE" />
+        <variable line="1411" name="*SEEK" />
+        <variable line="1412" name="*READ" />
+        <variable line="1413" name="*sysread" />
+        <variable line="1414" name="*TELL" />
+        <variable line="1415" name="*EOF" />
+        <variable line="1417" name="*FILENO" />
+        <variable line="1418" name="*CLOSE" />
+        <variable line="1428" name="*print" />
+        <variable line="1429" name="*PRINT" />
+        <variable line="1430" name="*printf" />
+        <variable line="1431" name="*PRINTF" />
+        <variable line="1432" name="*write" />
+        <variable line="1433" name="*WRITE" />
+        <scope ilk="function" line="32" lineend="119" name="smartRead" signature="smartRead()">
+          </scope>
+        <scope ilk="function" line="121" lineend="144" name="pushBack" signature="pushBack($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="146" lineend="162" name="smartSeek" signature="smartSeek($self, $offset, $truncate)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$offset" />
+          <variable ilk="argument" name="$truncate" />
+        </scope>
+        <scope ilk="function" line="164" lineend="180" name="smartWrite" signature="smartWrite($self, $out_data)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$out_data" />
+        </scope>
+        <scope ilk="function" line="182" lineend="185" name="smartReadExact" signature="smartReadExact()" />
+        <scope ilk="function" line="187" lineend="217" name="smartEof" signature="smartEof()">
+          </scope>
+        <scope ilk="function" line="219" lineend="225" name="clearError" signature="clearError($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="227" lineend="232" name="getErrInfo" signature="getErrInfo($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="234" lineend="241" name="setErrInfo" signature="setErrInfo($self, $ref)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$ref" />
+        </scope>
+        <scope ilk="function" line="243" lineend="254" name="saveStatus" signature="saveStatus($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="257" lineend="269" name="saveErrorString" signature="saveErrorString($self, $retval)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$retval" />
+        </scope>
+        <scope ilk="function" line="271" lineend="276" name="croakError" signature="croakError($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="279" lineend="293" name="closeError" signature="closeError($self, $retval)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$retval" />
+        </scope>
+        <scope ilk="function" line="295" lineend="299" name="error" signature="error($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="301" lineend="305" name="errorNo" signature="errorNo($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="307" lineend="311" name="HeaderError" signature="HeaderError()">
+          </scope>
+        <scope ilk="function" line="313" lineend="317" name="TrailerError" signature="TrailerError()">
+          </scope>
+        <scope ilk="function" line="319" lineend="323" name="TruncatedHeader" signature="TruncatedHeader()">
+          </scope>
+        <scope ilk="function" line="325" lineend="329" name="TruncatedTrailer" signature="TruncatedTrailer()">
+          </scope>
+        <scope ilk="function" line="331" lineend="334" name="postCheckParams" signature="postCheckParams()" />
+        <scope ilk="function" line="336" lineend="374" name="checkParams" signature="checkParams($self, $class, $got)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$class" />
+          <variable ilk="argument" name="$got" />
+        </scope>
+        <scope ilk="function" line="376" lineend="503" name="_create" signature="_create($obj, $got, $append_mode, $inValue)">
+          <variable ilk="argument" name="$obj" />
+          <variable ilk="argument" name="$got" />
+          <variable ilk="argument" name="$append_mode" />
+          <variable ilk="argument" name="$inValue" />
+        </scope>
+        <scope ilk="function" line="505" lineend="527" name="ckInputParam" signature="ckInputParam($self, $from)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$from" />
+        </scope>
+        <scope ilk="function" line="530" lineend="615" name="_inf" signature="_inf($obj, $input, $haveOut, $output)">
+          <variable ilk="argument" name="$obj" />
+          <variable ilk="argument" name="$input" />
+          <variable ilk="argument" name="$haveOut" />
+          <variable ilk="argument" name="$output" />
+        </scope>
+        <scope ilk="function" line="617" lineend="625" name="retErr" signature="retErr($x, $string)">
+          <variable ilk="argument" name="$x" />
+          <variable ilk="argument" name="$string" />
+        </scope>
+        <scope ilk="function" line="627" lineend="688" name="_singleTarget" signature="_singleTarget($self, $x, $input, $output)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$x" />
+          <variable ilk="argument" name="$input" />
+          <variable ilk="argument" name="$output" />
+        </scope>
+        <scope ilk="function" line="690" lineend="749" name="_rd2" signature="_rd2($self, $x, $input, $output)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$x" />
+          <variable ilk="argument" name="$input" />
+          <variable ilk="argument" name="$output" />
+        </scope>
+        <scope ilk="function" line="751" lineend="756" name="TIEHANDLE" signature="TIEHANDLE()" />
+        <scope ilk="function" line="758" lineend="761" name="UNTIE" signature="UNTIE($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="764" lineend="768" name="getHeaderInfo" signature="getHeaderInfo($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="770" lineend="797" name="readBlock" signature="readBlock($self, $buff, $size)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$buff" />
+          <variable ilk="argument" name="$size" />
+        </scope>
+        <scope ilk="function" line="799" lineend="802" name="postBlockChk" signature="postBlockChk()" />
+        <scope ilk="function" line="804" lineend="930" name="_raw_read" signature="_raw_read($self, $buffer, $scan_mode)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$buffer" />
+          <variable ilk="argument" name="$scan_mode" />
+        </scope>
+        <scope ilk="function" line="932" lineend="937" name="reset" signature="reset($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="939" lineend="941" name="filterUncompressed" signature="filterUncompressed()" />
+        <scope ilk="function" line="950" lineend="962" name="nextStream" signature="nextStream($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="964" lineend="1015" name="gotoNextStream" signature="gotoNextStream($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="1017" lineend="1022" name="streamCount" signature="streamCount($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="1024" lineend="1129" name="read" signature="read($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="1131" lineend="1189" name="_getline" signature="_getline($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="1191" lineend="1200" name="getline" signature="getline($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="1202" lineend="1211" name="getlines" signature="getlines($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="1213" lineend="1217" name="READLINE" signature="READLINE()" />
+        <scope ilk="function" line="1219" lineend="1225" name="getc" signature="getc($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="1227" lineend="1232" name="ungetc" signature="ungetc($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="1235" lineend="1247" name="trailingData" signature="trailingData($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="1250" lineend="1257" name="eof" signature="eof($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="1259" lineend="1275" name="tell" signature="tell($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="1277" lineend="1305" name="close" signature="close($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="1307" lineend="1313" name="DESTROY" signature="DESTROY($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="1315" lineend="1368" name="seek" signature="seek($self, $position, $whence)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$position" />
+          <variable ilk="argument" name="$whence" />
+        </scope>
+        <scope ilk="function" line="1370" lineend="1376" name="fileno" signature="fileno($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="1378" lineend="1385" name="binmode" signature="binmode()" />
+        <scope ilk="function" line="1387" lineend="1391" name="opened" signature="opened($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="1393" lineend="1399" name="autoflush" signature="autoflush($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="1401" lineend="1407" name="input_line_number" signature="input_line_number($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="1420" lineend="1425" name="_notAvailable" signature="_notAvailable($name)">
+          <variable ilk="argument" name="$name" />
+        </scope>
+      </scope>
+    </scope>
+    

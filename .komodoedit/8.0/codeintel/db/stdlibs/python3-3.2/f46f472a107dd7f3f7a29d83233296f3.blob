@@ -1,0 +1,117 @@
+<scope doc="Define names for built-in types that aren&apos;t directly accessible as a builtin.&#xA;" ilk="blob" lang="Python" name="types">
+      <scope classrefs="object" doc="&#xA;" ilk="class" line="24" name="BuiltinFunctionType">
+        <scope doc="x.__ne__(y) &lt;==&gt; x!=y" ilk="function" name="__ne__" signature="x.__ne__(y) &lt;==&gt; x!=y" />
+        <scope doc="x.__getattribute__(&apos;name&apos;) &lt;==&gt; x.name" ilk="function" name="__getattribute__" signature="x.__getattribute__(&apos;name&apos;) &lt;==&gt; x.name" />
+        <scope doc="x.__call__(...) &lt;==&gt; x(...)" ilk="function" name="__call__" signature="x.__call__(...) &lt;==&gt; x(...)" />
+        <scope doc="x.__le__(y) &lt;==&gt; x&lt;=y" ilk="function" name="__le__" signature="x.__le__(y) &lt;==&gt; x&lt;=y" />
+        <scope doc="x.__repr__() &lt;==&gt; repr(x)" ilk="function" name="__repr__" signature="x.__repr__() &lt;==&gt; repr(x)" />
+        <scope doc="x.__gt__(y) &lt;==&gt; x&gt;y" ilk="function" name="__gt__" signature="x.__gt__(y) &lt;==&gt; x&gt;y" />
+        <scope doc="x.__hash__() &lt;==&gt; hash(x)" ilk="function" name="__hash__" signature="x.__hash__() &lt;==&gt; hash(x)" />
+        <scope doc="x.__lt__(y) &lt;==&gt; x&lt;y" ilk="function" name="__lt__" signature="x.__lt__(y) &lt;==&gt; x&lt;y" />
+        <scope doc="x.__eq__(y) &lt;==&gt; x==y" ilk="function" name="__eq__" signature="x.__eq__(y) &lt;==&gt; x==y" />
+        <scope doc="x.__ge__(y) &lt;==&gt; x&gt;=y" ilk="function" name="__ge__" signature="x.__ge__(y) &lt;==&gt; x&gt;=y" />
+      </scope>
+      <scope classrefs="object" doc="&#xA;" ilk="class" line="25" name="BuiltinMethodType">
+        <scope doc="x.__ne__(y) &lt;==&gt; x!=y" ilk="function" name="__ne__" signature="x.__ne__(y) &lt;==&gt; x!=y" />
+        <scope doc="x.__getattribute__(&apos;name&apos;) &lt;==&gt; x.name" ilk="function" name="__getattribute__" signature="x.__getattribute__(&apos;name&apos;) &lt;==&gt; x.name" />
+        <scope doc="x.__call__(...) &lt;==&gt; x(...)" ilk="function" name="__call__" signature="x.__call__(...) &lt;==&gt; x(...)" />
+        <scope doc="x.__le__(y) &lt;==&gt; x&lt;=y" ilk="function" name="__le__" signature="x.__le__(y) &lt;==&gt; x&lt;=y" />
+        <scope doc="x.__repr__() &lt;==&gt; repr(x)" ilk="function" name="__repr__" signature="x.__repr__() &lt;==&gt; repr(x)" />
+        <scope doc="x.__gt__(y) &lt;==&gt; x&gt;y" ilk="function" name="__gt__" signature="x.__gt__(y) &lt;==&gt; x&gt;y" />
+        <scope doc="x.__hash__() &lt;==&gt; hash(x)" ilk="function" name="__hash__" signature="x.__hash__() &lt;==&gt; hash(x)" />
+        <scope doc="x.__lt__(y) &lt;==&gt; x&lt;y" ilk="function" name="__lt__" signature="x.__lt__(y) &lt;==&gt; x&lt;y" />
+        <scope doc="x.__eq__(y) &lt;==&gt; x==y" ilk="function" name="__eq__" signature="x.__eq__(y) &lt;==&gt; x==y" />
+        <scope doc="x.__ge__(y) &lt;==&gt; x&gt;=y" ilk="function" name="__ge__" signature="x.__ge__(y) &lt;==&gt; x&gt;=y" />
+      </scope>
+      <scope classrefs="object" doc="code(argcount, kwonlyargcount, nlocals, stacksize, flags, codestring,&#xA;constants, names, varnames, filename, name, firstlineno, lnotab[, freevars[, cellvars]])  Create a code object.  Not for the faint of heart." ilk="class" line="14" name="CodeType">
+        <scope doc="x.__getattribute__(&apos;name&apos;) &lt;==&gt; x.name" ilk="function" name="__getattribute__" signature="x.__getattribute__(&apos;name&apos;) &lt;==&gt; x.name" />
+        <scope doc="x.__lt__(y) &lt;==&gt; x&lt;y" ilk="function" name="__lt__" signature="x.__lt__(y) &lt;==&gt; x&lt;y" />
+        <scope doc="x.__le__(y) &lt;==&gt; x&lt;=y" ilk="function" name="__le__" signature="x.__le__(y) &lt;==&gt; x&lt;=y" />
+        <scope doc="x.__ne__(y) &lt;==&gt; x!=y" ilk="function" name="__ne__" signature="x.__ne__(y) &lt;==&gt; x!=y" />
+        <scope doc="x.__gt__(y) &lt;==&gt; x&gt;y" ilk="function" name="__gt__" signature="x.__gt__(y) &lt;==&gt; x&gt;y" />
+        <scope doc="x.__eq__(y) &lt;==&gt; x==y" ilk="function" name="__eq__" signature="x.__eq__(y) &lt;==&gt; x==y" />
+        <scope doc="x.__repr__() &lt;==&gt; repr(x)" ilk="function" name="__repr__" signature="x.__repr__() &lt;==&gt; repr(x)" />
+        <scope doc="x.__hash__() &lt;==&gt; hash(x)" ilk="function" name="__hash__" signature="x.__hash__() &lt;==&gt; hash(x)" />
+        <scope doc="x.__ge__(y) &lt;==&gt; x&gt;=y" ilk="function" name="__ge__" signature="x.__ge__(y) &lt;==&gt; x&gt;=y" />
+      </scope>
+      <scope classrefs="object" doc="&#xA;" ilk="class" line="34" name="FrameType">
+        <scope doc="x.__setattr__(&apos;name&apos;, value) &lt;==&gt; x.name = value" ilk="function" name="__setattr__" signature="x.__setattr__(&apos;name&apos;, value) &lt;==&gt; x.name = value" />
+        <scope doc="x.__getattribute__(&apos;name&apos;) &lt;==&gt; x.name" ilk="function" name="__getattribute__" signature="x.__getattribute__(&apos;name&apos;) &lt;==&gt; x.name" />
+        <scope doc="x.__delattr__(&apos;name&apos;) &lt;==&gt; del x.name" ilk="function" name="__delattr__" signature="x.__delattr__(&apos;name&apos;) &lt;==&gt; del x.name" />
+        <scope doc="F.__sizeof__() -&gt; size of F in memory, in bytes" ilk="function" name="__sizeof__" signature="F.__sizeof__() -&gt; size of F in memory, in bytes" />
+      </scope>
+      <scope classrefs="object" doc="function(code, globals[, name[, argdefs[, closure]]])&#xA;Create a function object from a code object and a dictionary. The optional name string overrides the name from the code object. The optional argdefs tuple specifies the default argument values. The optional closure tuple supplies the bindings for free variables." ilk="class" line="12" name="FunctionType">
+        <scope doc="x.__setattr__(&apos;name&apos;, value) &lt;==&gt; x.name = value" ilk="function" name="__setattr__" signature="x.__setattr__(&apos;name&apos;, value) &lt;==&gt; x.name = value" />
+        <scope doc="x.__getattribute__(&apos;name&apos;) &lt;==&gt; x.name" ilk="function" name="__getattribute__" signature="x.__getattribute__(&apos;name&apos;) &lt;==&gt; x.name" />
+        <scope doc="x.__delattr__(&apos;name&apos;) &lt;==&gt; del x.name" ilk="function" name="__delattr__" signature="x.__delattr__(&apos;name&apos;) &lt;==&gt; del x.name" />
+        <scope doc="x.__repr__() &lt;==&gt; repr(x)" ilk="function" name="__repr__" signature="x.__repr__() &lt;==&gt; repr(x)" />
+        <scope doc="x.__call__(...) &lt;==&gt; x(...)" ilk="function" name="__call__" signature="x.__call__(...) &lt;==&gt; x(...)" />
+        <scope doc="descr.__get__(obj[, type]) -&gt; value" ilk="function" name="__get__" signature="descr.__get__(obj[, type]) -&gt; value" />
+      </scope>
+      <scope classrefs="object" doc="&#xA;" ilk="class" line="18" name="GeneratorType">
+        <scope doc="x.__next__() &lt;==&gt; next(x)" ilk="function" name="__next__" signature="x.__next__() &lt;==&gt; next(x)" />
+        <scope doc="x.__getattribute__(&apos;name&apos;) &lt;==&gt; x.name" ilk="function" name="__getattribute__" signature="x.__getattribute__(&apos;name&apos;) &lt;==&gt; x.name" />
+        <scope doc="return next yielded value or raise StopIteration." ilk="function" name="send" signature="send(arg) -&gt; send &apos;arg&apos; into generator," />
+        <scope doc="x.__iter__() &lt;==&gt; iter(x)" ilk="function" name="__iter__" signature="x.__iter__() &lt;==&gt; iter(x)" />
+        <scope doc="x.__repr__() &lt;==&gt; repr(x)" ilk="function" name="__repr__" signature="x.__repr__() &lt;==&gt; repr(x)" />
+        <scope doc="close(arg) -&gt; raise GeneratorExit inside generator." ilk="function" name="close" signature="close(arg) -&gt; raise GeneratorExit inside generator." />
+        <scope doc="return next yielded value or raise StopIteration." ilk="function" name="throw" signature="throw(typ[,val[,tb]]) -&gt; raise exception in generator," />
+      </scope>
+      <scope classrefs="object" doc="&#xA;" ilk="class" line="38" name="GetSetDescriptorType">
+        <scope doc="descr.__set__(obj, value)" ilk="function" name="__set__" signature="descr.__set__(obj, value)" />
+        <scope doc="x.__getattribute__(&apos;name&apos;) &lt;==&gt; x.name" ilk="function" name="__getattribute__" signature="x.__getattribute__(&apos;name&apos;) &lt;==&gt; x.name" />
+        <scope doc="x.__repr__() &lt;==&gt; repr(x)" ilk="function" name="__repr__" signature="x.__repr__() &lt;==&gt; repr(x)" />
+        <scope doc="descr.__get__(obj[, type]) -&gt; value" ilk="function" name="__get__" signature="descr.__get__(obj[, type]) -&gt; value" />
+        <scope doc="descr.__delete__(obj)" ilk="function" name="__delete__" signature="descr.__delete__(obj)" />
+      </scope>
+      <scope classrefs="object" doc="function(code, globals[, name[, argdefs[, closure]]])&#xA;Create a function object from a code object and a dictionary. The optional name string overrides the name from the code object. The optional argdefs tuple specifies the default argument values. The optional closure tuple supplies the bindings for free variables." ilk="class" line="13" name="LambdaType">
+        <scope doc="x.__setattr__(&apos;name&apos;, value) &lt;==&gt; x.name = value" ilk="function" name="__setattr__" signature="x.__setattr__(&apos;name&apos;, value) &lt;==&gt; x.name = value" />
+        <scope doc="x.__getattribute__(&apos;name&apos;) &lt;==&gt; x.name" ilk="function" name="__getattribute__" signature="x.__getattribute__(&apos;name&apos;) &lt;==&gt; x.name" />
+        <scope doc="x.__delattr__(&apos;name&apos;) &lt;==&gt; del x.name" ilk="function" name="__delattr__" signature="x.__delattr__(&apos;name&apos;) &lt;==&gt; del x.name" />
+        <scope doc="x.__repr__() &lt;==&gt; repr(x)" ilk="function" name="__repr__" signature="x.__repr__() &lt;==&gt; repr(x)" />
+        <scope doc="x.__call__(...) &lt;==&gt; x(...)" ilk="function" name="__call__" signature="x.__call__(...) &lt;==&gt; x(...)" />
+        <scope doc="descr.__get__(obj[, type]) -&gt; value" ilk="function" name="__get__" signature="descr.__get__(obj[, type]) -&gt; value" />
+      </scope>
+      <scope classrefs="object" doc="&#xA;" ilk="class" line="39" name="MemberDescriptorType">
+        <scope doc="descr.__set__(obj, value)" ilk="function" name="__set__" signature="descr.__set__(obj, value)" />
+        <scope doc="x.__getattribute__(&apos;name&apos;) &lt;==&gt; x.name" ilk="function" name="__getattribute__" signature="x.__getattribute__(&apos;name&apos;) &lt;==&gt; x.name" />
+        <scope doc="x.__repr__() &lt;==&gt; repr(x)" ilk="function" name="__repr__" signature="x.__repr__() &lt;==&gt; repr(x)" />
+        <scope doc="descr.__get__(obj[, type]) -&gt; value" ilk="function" name="__get__" signature="descr.__get__(obj[, type]) -&gt; value" />
+        <scope doc="descr.__delete__(obj)" ilk="function" name="__delete__" signature="descr.__delete__(obj)" />
+      </scope>
+      <scope classrefs="object" doc="method(function, instance)&#xA;Create a bound instance method object." ilk="class" line="22" name="MethodType">
+        <scope doc="x.__ne__(y) &lt;==&gt; x!=y" ilk="function" name="__ne__" signature="x.__ne__(y) &lt;==&gt; x!=y" />
+        <scope doc="x.__setattr__(&apos;name&apos;, value) &lt;==&gt; x.name = value" ilk="function" name="__setattr__" signature="x.__setattr__(&apos;name&apos;, value) &lt;==&gt; x.name = value" />
+        <scope doc="x.__delattr__(&apos;name&apos;) &lt;==&gt; del x.name" ilk="function" name="__delattr__" signature="x.__delattr__(&apos;name&apos;) &lt;==&gt; del x.name" />
+        <scope doc="x.__getattribute__(&apos;name&apos;) &lt;==&gt; x.name" ilk="function" name="__getattribute__" signature="x.__getattribute__(&apos;name&apos;) &lt;==&gt; x.name" />
+        <scope doc="x.__call__(...) &lt;==&gt; x(...)" ilk="function" name="__call__" signature="x.__call__(...) &lt;==&gt; x(...)" />
+        <scope doc="x.__le__(y) &lt;==&gt; x&lt;=y" ilk="function" name="__le__" signature="x.__le__(y) &lt;==&gt; x&lt;=y" />
+        <scope doc="x.__repr__() &lt;==&gt; repr(x)" ilk="function" name="__repr__" signature="x.__repr__() &lt;==&gt; repr(x)" />
+        <scope doc="x.__gt__(y) &lt;==&gt; x&gt;y" ilk="function" name="__gt__" signature="x.__gt__(y) &lt;==&gt; x&gt;y" />
+        <scope doc="x.__hash__() &lt;==&gt; hash(x)" ilk="function" name="__hash__" signature="x.__hash__() &lt;==&gt; hash(x)" />
+        <scope doc="x.__lt__(y) &lt;==&gt; x&lt;y" ilk="function" name="__lt__" signature="x.__lt__(y) &lt;==&gt; x&lt;y" />
+        <scope doc="x.__eq__(y) &lt;==&gt; x==y" ilk="function" name="__eq__" signature="x.__eq__(y) &lt;==&gt; x==y" />
+        <scope doc="x.__ge__(y) &lt;==&gt; x&gt;=y" ilk="function" name="__ge__" signature="x.__ge__(y) &lt;==&gt; x&gt;=y" />
+        <scope doc="descr.__get__(obj[, type]) -&gt; value" ilk="function" name="__get__" signature="descr.__get__(obj[, type]) -&gt; value" />
+      </scope>
+      <scope classrefs="object" doc="module(name[, doc])&#xA;Create a module object. The name must be a string; the optional doc argument can have any type." ilk="class" line="27" name="ModuleType">
+        <scope doc="x.__setattr__(&apos;name&apos;, value) &lt;==&gt; x.name = value" ilk="function" name="__setattr__" signature="x.__setattr__(&apos;name&apos;, value) &lt;==&gt; x.name = value" />
+        <scope doc="x.__getattribute__(&apos;name&apos;) &lt;==&gt; x.name" ilk="function" name="__getattribute__" signature="x.__getattribute__(&apos;name&apos;) &lt;==&gt; x.name" />
+        <scope doc="x.__delattr__(&apos;name&apos;) &lt;==&gt; del x.name" ilk="function" name="__delattr__" signature="x.__delattr__(&apos;name&apos;) &lt;==&gt; del x.name" />
+        <scope doc="x.__repr__() &lt;==&gt; repr(x)" ilk="function" name="__repr__" signature="x.__repr__() &lt;==&gt; repr(x)" />
+        <scope ilk="function" name="__init__" />
+      </scope>
+      <scope classrefs="object" doc="&#xA;" ilk="class" line="33" name="TracebackType">
+        <scope doc="x.__getattribute__(&apos;name&apos;) &lt;==&gt; x.name" ilk="function" name="__getattribute__" signature="x.__getattribute__(&apos;name&apos;) &lt;==&gt; x.name" />
+        <scope ilk="function" name="__dir__" />
+      </scope>
+      <scope attributes="protected __hidden__" ilk="function" line="16" lineend="17" name="_g" signature="_g()" />
+      <scope attributes="protected __hidden__" ilk="function" line="11" lineend="11" name="_f" signature="_f()" />
+      <scope attributes="protected __hidden__" ilk="class" line="20" lineend="21" name="_C">
+        <scope attributes="protected" ilk="function" line="21" lineend="21" name="_m" signature="_m()">
+          <variable citdl="_C" ilk="argument" name="self" />
+        </scope>
+      </scope>
+      <variable attributes="__hidden__" line="32" name="tb" />
+    </scope>
+    

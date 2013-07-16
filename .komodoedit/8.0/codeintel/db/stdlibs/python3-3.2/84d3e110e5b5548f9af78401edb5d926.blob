@@ -1,0 +1,10 @@
+<scope doc="Access to the Unix group database.&#xA;Group entries are reported as 4-tuples containing the following fields from the group database, in order:  name   - name of the group passwd - group password (encrypted); often empty gid    - numeric ID of the group mem    - list of members  The gid is an integer, name and password are strings.  (Note that most users are not explicitly listed as members of the groups they are in" ilk="blob" lang="Python" name="grp">
+      <scope doc="Return a list of all available group entries, in arbitrary&#xA;order." ilk="function" name="getgrall" returns="list" signature="getgrall() -&gt; list of tuples" />
+      <scope doc="Return the group database entry for the given numeric group&#xA;ID." ilk="function" name="getgrgid" returns="tuple" signature="getgrgid(id) -&gt; tuple" />
+      <scope doc="Return the group database entry for the given group name." ilk="function" name="getgrnam" returns="tuple" signature="getgrnam(name) -&gt; tuple" />
+      <scope classrefs="tuple" doc="grp.struct_group: Results from getgr*() routines.&#xA;This object may be accessed either as a tuple of (gr_name,gr_passwd,gr_gid,gr_mem) or via the object attributes as named in the above tuple." ilk="class" name="struct_group">
+        <scope ilk="function" name="__reduce__" />
+        <scope doc="x.__repr__() &lt;==&gt; repr(x)" ilk="function" name="__repr__" signature="x.__repr__() &lt;==&gt; repr(x)" />
+      </scope>
+    </scope>
+    

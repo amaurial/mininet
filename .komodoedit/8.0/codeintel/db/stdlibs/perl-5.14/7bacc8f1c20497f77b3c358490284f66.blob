@@ -1,0 +1,398 @@
+<scope ilk="blob" lang="Perl" name="Net::Telnet">
+      <scope classrefs="Exporter" ilk="class" line="1" lineend="3321" name="Net::Telnet">
+        <import line="31" module="Exporter" />
+        <import line="32" module="Socket" symbol="AF_INET" />
+        <import line="32" module="Socket" symbol="SOCK_STREAM" />
+        <import line="32" module="Socket" symbol="inet_aton" />
+        <import line="32" module="Socket" symbol="sockaddr_in" />
+        <import line="33" module="Symbol" symbol="qualify" />
+        <import line="42" module="FileHandle" />
+        <variable line="13" name="@EXPORT_OK" />
+        <variable line="36" name="@ISA" />
+        <variable line="47" name="$VERSION" />
+        <variable line="47" name="@Telopts" />
+        <variable line="1195" name="*ofs" />
+        <variable line="1496" name="*ors" />
+        <variable line="1758" name="*rs" />
+        <scope ilk="function" line="62" lineend="198" name="new" signature="new($class)">
+          <variable ilk="argument" name="$class" />
+        </scope>
+        <scope ilk="function" line="201" lineend="202" name="DESTROY" signature="DESTROY()" />
+        <scope ilk="function" line="205" lineend="224" name="binmode" signature="binmode($self, $mode)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$mode" />
+        </scope>
+        <scope ilk="function" line="227" lineend="235" name="break" signature="break($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="238" lineend="243" name="buffer" signature="buffer($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="246" lineend="254" name="buffer_empty" signature="buffer_empty($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="257" lineend="267" name="close" signature="close($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="270" lineend="413" name="cmd" signature="cmd($self, @args)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="@args" />
+        </scope>
+        <scope ilk="function" line="416" lineend="431" name="cmd_remove_mode" signature="cmd_remove_mode($self, $mode)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$mode" />
+        </scope>
+        <scope ilk="function" line="434" lineend="455" name="dump_log" signature="dump_log($self, $name)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$name" />
+        </scope>
+        <scope ilk="function" line="458" lineend="462" name="eof" signature="eof($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="465" lineend="480" name="errmode" signature="errmode($self, $mode)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$mode" />
+        </scope>
+        <scope ilk="function" line="483" lineend="498" name="errmsg" signature="errmsg($self, @errmsgs)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="@errmsgs" />
+        </scope>
+        <scope ilk="function" line="501" lineend="546" name="error" signature="error($self, @errmsg)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="@errmsg" />
+        </scope>
+        <scope ilk="function" line="549" lineend="596" name="fhopen" signature="fhopen($self, $fh)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$fh" />
+        </scope>
+        <scope ilk="function" line="599" lineend="703" name="get" signature="get($self, %args)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="%args" />
+        </scope>
+        <scope ilk="function" line="706" lineend="800" name="getline" signature="getline($self, %args)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="%args" />
+        </scope>
+        <scope ilk="function" line="803" lineend="886" name="getlines" signature="getlines($self, %args)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="%args" />
+        </scope>
+        <scope ilk="function" line="889" lineend="908" name="host" signature="host($self, $host)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$host" />
+        </scope>
+        <scope ilk="function" line="911" lineend="932" name="input_log" signature="input_log($self, $name)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$name" />
+        </scope>
+        <scope ilk="function" line="935" lineend="950" name="input_record_separator" signature="input_record_separator($self, $rs)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$rs" />
+        </scope>
+        <scope ilk="function" line="953" lineend="972" name="last_prompt" signature="last_prompt($self, $string)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$string" />
+        </scope>
+        <scope ilk="function" line="975" lineend="994" name="lastline" signature="lastline($self, $line)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$line" />
+        </scope>
+        <scope ilk="function" line="997" lineend="1157" name="login" signature="login($self, $errmsg)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$errmsg" />
+        </scope>
+        <scope ilk="function" line="1160" lineend="1191" name="max_buffer_length" signature="max_buffer_length($self, $maxbufsize)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$maxbufsize" />
+        </scope>
+        <scope ilk="function" line="1198" lineend="1347" name="open" signature="open($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="1350" lineend="1419" name="option_accept" signature="option_accept($self, @args)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="@args" />
+        </scope>
+        <scope ilk="function" line="1422" lineend="1443" name="option_callback" signature="option_callback($self, $callback)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$callback" />
+        </scope>
+        <scope ilk="function" line="1446" lineend="1467" name="option_log" signature="option_log($self, $name)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$name" />
+        </scope>
+        <scope ilk="function" line="1470" lineend="1492" name="option_state" signature="option_state($self, $option)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$option" />
+        </scope>
+        <scope ilk="function" line="1499" lineend="1518" name="output_field_separator" signature="output_field_separator($self, $ofs)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$ofs" />
+        </scope>
+        <scope ilk="function" line="1521" lineend="1542" name="output_log" signature="output_log($self, $name)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$name" />
+        </scope>
+        <scope ilk="function" line="1545" lineend="1564" name="output_record_separator" signature="output_record_separator($self, $ors)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$ors" />
+        </scope>
+        <scope ilk="function" line="1567" lineend="1601" name="port" signature="port($self, $port)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$port" />
+        </scope>
+        <scope ilk="function" line="1604" lineend="1637" name="print" signature="print()">
+          </scope>
+        <scope ilk="function" line="1640" lineend="1644" name="print_length" signature="print_length($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="1647" lineend="1663" name="prompt" signature="prompt($self, $prompt)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$prompt" />
+        </scope>
+        <scope ilk="function" line="1666" lineend="1754" name="put" signature="put($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="1761" lineend="1782" name="suboption_callback" signature="suboption_callback($self, $callback)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$callback" />
+        </scope>
+        <scope ilk="function" line="1785" lineend="1804" name="telnetmode" signature="telnetmode($self, $mode)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$mode" />
+        </scope>
+        <scope ilk="function" line="1807" lineend="1826" name="timed_out" signature="timed_out($self, $value)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$value" />
+        </scope>
+        <scope ilk="function" line="1829" lineend="1844" name="timeout" signature="timeout($self, $timeout)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$timeout" />
+        </scope>
+        <scope ilk="function" line="1847" lineend="2010" name="waitfor" signature="waitfor($self, @args)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="@args" />
+        </scope>
+        <scope ilk="function" line="2016" lineend="2027" name="_append_lineno" signature="_append_lineno($obj, @msgs)">
+          <variable ilk="argument" name="$obj" />
+          <variable ilk="argument" name="@msgs" />
+        </scope>
+        <scope ilk="function" line="2030" lineend="2032" name="_carp" signature="_carp()" />
+        <scope ilk="function" line="2035" lineend="2037" name="_croak" signature="_croak()" />
+        <scope ilk="function" line="2040" lineend="2058" name="_endtime" signature="_endtime($interval)">
+          <variable ilk="argument" name="$interval" />
+        </scope>
+        <scope ilk="function" line="2061" lineend="2079" name="_escape_cr" signature="_escape_cr($string)">
+          <variable ilk="argument" name="$string" />
+        </scope>
+        <scope ilk="function" line="2082" lineend="2190" name="_fillbuf" signature="_fillbuf($self, $s, $endtime)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$s" />
+          <variable ilk="argument" name="$endtime" />
+        </scope>
+        <scope ilk="function" line="2193" lineend="2217" name="_flush_opts" signature="_flush_opts($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="2220" lineend="2241" name="_fname_to_handle" signature="_fname_to_handle($self, $fh)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$fh" />
+        </scope>
+        <scope ilk="function" line="2244" lineend="2252" name="_have_alarm" signature="_have_alarm()" />
+        <scope ilk="function" line="2255" lineend="2285" name="_interpret_cr" signature="_interpret_cr($s, $pos)">
+          <variable ilk="argument" name="$s" />
+          <variable ilk="argument" name="$pos" />
+        </scope>
+        <scope ilk="function" line="2288" lineend="2375" name="_interpret_tcmd" signature="_interpret_tcmd($self, $s, $offset)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$s" />
+          <variable ilk="argument" name="$offset" />
+        </scope>
+        <scope ilk="function" line="2378" lineend="2381" name="_io_socket_include" signature="_io_socket_include()" />
+        <scope ilk="function" line="2384" lineend="2428" name="_log_dump" signature="_log_dump($direction, $fh, $data, $offset, $len)">
+          <variable ilk="argument" name="$direction" />
+          <variable ilk="argument" name="$fh" />
+          <variable ilk="argument" name="$data" />
+          <variable ilk="argument" name="$offset" />
+          <variable ilk="argument" name="$len" />
+        </scope>
+        <scope ilk="function" line="2431" lineend="2445" name="_log_option" signature="_log_option($fh, $direction, $request, $option)">
+          <variable ilk="argument" name="$fh" />
+          <variable ilk="argument" name="$direction" />
+          <variable ilk="argument" name="$request" />
+          <variable ilk="argument" name="$option" />
+        </scope>
+        <scope ilk="function" line="2448" lineend="2458" name="_log_print" signature="_log_print($fh, $buf)">
+          <variable ilk="argument" name="$fh" />
+          <variable ilk="argument" name="$buf" />
+        </scope>
+        <scope ilk="function" line="2461" lineend="2489" name="_match_check" signature="_match_check($self, $code)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$code" />
+        </scope>
+        <scope ilk="function" line="2492" lineend="2520" name="_negotiate_callback" signature="_negotiate_callback($self, $opt, $is_remote, $is_enabled, $was_enabled, $opt_bufpos)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$opt" />
+          <variable ilk="argument" name="$is_remote" />
+          <variable ilk="argument" name="$is_enabled" />
+          <variable ilk="argument" name="$was_enabled" />
+          <variable ilk="argument" name="$opt_bufpos" />
+        </scope>
+        <scope ilk="function" line="2523" lineend="2561" name="_negotiate_recv" signature="_negotiate_recv($self, $s, $opt_request, $opt, $opt_bufpos)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$s" />
+          <variable ilk="argument" name="$opt_request" />
+          <variable ilk="argument" name="$opt" />
+          <variable ilk="argument" name="$opt_bufpos" />
+        </scope>
+        <scope ilk="function" line="2564" lineend="2655" name="_negotiate_recv_disable" signature="_negotiate_recv_disable($self, $s, $opt, $opt_request, $opt_bufpos, $enable_ok, $is_enabled, $state)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$s" />
+          <variable ilk="argument" name="$opt" />
+          <variable ilk="argument" name="$opt_request" />
+          <variable ilk="argument" name="$opt_bufpos" />
+          <variable ilk="argument" name="$enable_ok" />
+          <variable ilk="argument" name="$is_enabled" />
+          <variable ilk="argument" name="$state" />
+        </scope>
+        <scope ilk="function" line="2658" lineend="2762" name="_negotiate_recv_enable" signature="_negotiate_recv_enable($self, $s, $opt, $opt_request, $opt_bufpos, $enable_ok, $is_enabled, $state)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$s" />
+          <variable ilk="argument" name="$opt" />
+          <variable ilk="argument" name="$opt_request" />
+          <variable ilk="argument" name="$opt_bufpos" />
+          <variable ilk="argument" name="$enable_ok" />
+          <variable ilk="argument" name="$is_enabled" />
+          <variable ilk="argument" name="$state" />
+        </scope>
+        <scope ilk="function" line="2765" lineend="2773" name="_new_handle" signature="_new_handle()">
+          <import line="2770" module="FileHandle" />
+          <import line="2770" module="FileHandle" />
+        </scope>
+        <scope ilk="function" line="2776" lineend="2798" name="_next_getlines" signature="_next_getlines($self, $s)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$s" />
+        </scope>
+        <scope ilk="function" line="2801" lineend="2829" name="_opt_accept" signature="_opt_accept($self, @args)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="@args" />
+        </scope>
+        <scope ilk="function" line="2832" lineend="2841" name="_optimal_blksize" signature="_optimal_blksize($blksize)">
+          <variable ilk="argument" name="$blksize" />
+        </scope>
+        <scope ilk="function" line="2844" lineend="2861" name="_parse_cmd_remove_mode" signature="_parse_cmd_remove_mode($self, $mode)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$mode" />
+        </scope>
+        <scope ilk="function" line="2864" lineend="2893" name="_parse_errmode" signature="_parse_errmode($self, $errmode)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$errmode" />
+        </scope>
+        <scope ilk="function" line="2896" lineend="2905" name="_parse_input_record_separator" signature="_parse_input_record_separator($self, $rs)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$rs" />
+        </scope>
+        <scope ilk="function" line="2908" lineend="2922" name="_parse_prompt" signature="_parse_prompt($self, $prompt)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$prompt" />
+        </scope>
+        <scope ilk="function" line="2925" lineend="2949" name="_parse_timeout" signature="_parse_timeout($self, $timeout)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$timeout" />
+        </scope>
+        <scope ilk="function" line="2952" lineend="3042" name="_put" signature="_put($self, $buf, $subname)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$buf" />
+          <variable ilk="argument" name="$subname" />
+        </scope>
+        <scope ilk="function" line="3045" lineend="3069" name="_qualify_fh" signature="_qualify_fh($obj, $name)">
+          <variable ilk="argument" name="$obj" />
+          <variable ilk="argument" name="$name" />
+        </scope>
+        <scope ilk="function" line="3072" lineend="3086" name="_reset_options" signature="_reset_options($opts)">
+          <variable ilk="argument" name="$opts" />
+        </scope>
+        <scope ilk="function" line="3089" lineend="3132" name="_save_lastline" signature="_save_lastline($s)">
+          <variable ilk="argument" name="$s" />
+        </scope>
+        <scope ilk="function" line="3135" lineend="3146" name="_set_default_option" signature="_set_default_option($s, $option)">
+          <variable ilk="argument" name="$s" />
+          <variable ilk="argument" name="$option" />
+        </scope>
+        <scope ilk="function" line="3149" lineend="3160" name="_sleep" signature="_sleep($secs)">
+          <variable ilk="argument" name="$secs" />
+        </scope>
+        <scope ilk="function" line="3163" lineend="3185" name="_timeout_interval" signature="_timeout_interval($endtime)">
+          <variable ilk="argument" name="$endtime" />
+        </scope>
+        <scope ilk="function" line="3188" lineend="3222" name="_user_caller" signature="_user_caller($obj)">
+          <variable ilk="argument" name="$obj" />
+        </scope>
+        <scope ilk="function" line="3225" lineend="3250" name="_verify_telopt_arg" signature="_verify_telopt_arg($self, $option, $argname)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$option" />
+          <variable ilk="argument" name="$argname" />
+        </scope>
+        <scope attributes="__exportable__" ilk="function" line="3256" lineend="3256" name="TELNET_IAC" signature="TELNET_IAC()" />
+        <scope attributes="__exportable__" ilk="function" line="3257" lineend="3257" name="TELNET_DONT" signature="TELNET_DONT()" />
+        <scope attributes="__exportable__" ilk="function" line="3258" lineend="3258" name="TELNET_DO" signature="TELNET_DO()" />
+        <scope attributes="__exportable__" ilk="function" line="3259" lineend="3259" name="TELNET_WONT" signature="TELNET_WONT()" />
+        <scope attributes="__exportable__" ilk="function" line="3260" lineend="3260" name="TELNET_WILL" signature="TELNET_WILL()" />
+        <scope attributes="__exportable__" ilk="function" line="3261" lineend="3261" name="TELNET_SB" signature="TELNET_SB()" />
+        <scope attributes="__exportable__" ilk="function" line="3262" lineend="3262" name="TELNET_GA" signature="TELNET_GA()" />
+        <scope attributes="__exportable__" ilk="function" line="3263" lineend="3263" name="TELNET_EL" signature="TELNET_EL()" />
+        <scope attributes="__exportable__" ilk="function" line="3264" lineend="3264" name="TELNET_EC" signature="TELNET_EC()" />
+        <scope attributes="__exportable__" ilk="function" line="3265" lineend="3265" name="TELNET_AYT" signature="TELNET_AYT()" />
+        <scope attributes="__exportable__" ilk="function" line="3266" lineend="3266" name="TELNET_AO" signature="TELNET_AO()" />
+        <scope attributes="__exportable__" ilk="function" line="3267" lineend="3267" name="TELNET_IP" signature="TELNET_IP()" />
+        <scope attributes="__exportable__" ilk="function" line="3268" lineend="3268" name="TELNET_BREAK" signature="TELNET_BREAK()" />
+        <scope attributes="__exportable__" ilk="function" line="3269" lineend="3269" name="TELNET_DM" signature="TELNET_DM()" />
+        <scope attributes="__exportable__" ilk="function" line="3270" lineend="3270" name="TELNET_NOP" signature="TELNET_NOP()" />
+        <scope attributes="__exportable__" ilk="function" line="3271" lineend="3271" name="TELNET_SE" signature="TELNET_SE()" />
+        <scope attributes="__exportable__" ilk="function" line="3272" lineend="3272" name="TELNET_EOR" signature="TELNET_EOR()" />
+        <scope attributes="__exportable__" ilk="function" line="3273" lineend="3273" name="TELNET_ABORT" signature="TELNET_ABORT()" />
+        <scope attributes="__exportable__" ilk="function" line="3274" lineend="3274" name="TELNET_SUSP" signature="TELNET_SUSP()" />
+        <scope attributes="__exportable__" ilk="function" line="3275" lineend="3275" name="TELNET_EOF" signature="TELNET_EOF()" />
+        <scope attributes="__exportable__" ilk="function" line="3276" lineend="3276" name="TELNET_SYNCH" signature="TELNET_SYNCH()" />
+        <scope attributes="__exportable__" ilk="function" line="3278" lineend="3278" name="TELOPT_BINARY" signature="TELOPT_BINARY()" />
+        <scope attributes="__exportable__" ilk="function" line="3279" lineend="3279" name="TELOPT_ECHO" signature="TELOPT_ECHO()" />
+        <scope attributes="__exportable__" ilk="function" line="3280" lineend="3280" name="TELOPT_RCP" signature="TELOPT_RCP()" />
+        <scope attributes="__exportable__" ilk="function" line="3281" lineend="3281" name="TELOPT_SGA" signature="TELOPT_SGA()" />
+        <scope attributes="__exportable__" ilk="function" line="3282" lineend="3282" name="TELOPT_NAMS" signature="TELOPT_NAMS()" />
+        <scope attributes="__exportable__" ilk="function" line="3283" lineend="3283" name="TELOPT_STATUS" signature="TELOPT_STATUS()" />
+        <scope attributes="__exportable__" ilk="function" line="3284" lineend="3284" name="TELOPT_TM" signature="TELOPT_TM()" />
+        <scope attributes="__exportable__" ilk="function" line="3285" lineend="3285" name="TELOPT_RCTE" signature="TELOPT_RCTE()" />
+        <scope attributes="__exportable__" ilk="function" line="3286" lineend="3286" name="TELOPT_NAOL" signature="TELOPT_NAOL()" />
+        <scope attributes="__exportable__" ilk="function" line="3287" lineend="3287" name="TELOPT_NAOP" signature="TELOPT_NAOP()" />
+        <scope attributes="__exportable__" ilk="function" line="3288" lineend="3288" name="TELOPT_NAOCRD" signature="TELOPT_NAOCRD()" />
+        <scope attributes="__exportable__" ilk="function" line="3289" lineend="3289" name="TELOPT_NAOHTS" signature="TELOPT_NAOHTS()" />
+        <scope attributes="__exportable__" ilk="function" line="3290" lineend="3290" name="TELOPT_NAOHTD" signature="TELOPT_NAOHTD()" />
+        <scope attributes="__exportable__" ilk="function" line="3291" lineend="3291" name="TELOPT_NAOFFD" signature="TELOPT_NAOFFD()" />
+        <scope attributes="__exportable__" ilk="function" line="3292" lineend="3292" name="TELOPT_NAOVTS" signature="TELOPT_NAOVTS()" />
+        <scope attributes="__exportable__" ilk="function" line="3293" lineend="3293" name="TELOPT_NAOVTD" signature="TELOPT_NAOVTD()" />
+        <scope attributes="__exportable__" ilk="function" line="3294" lineend="3294" name="TELOPT_NAOLFD" signature="TELOPT_NAOLFD()" />
+        <scope attributes="__exportable__" ilk="function" line="3295" lineend="3295" name="TELOPT_XASCII" signature="TELOPT_XASCII()" />
+        <scope attributes="__exportable__" ilk="function" line="3296" lineend="3296" name="TELOPT_LOGOUT" signature="TELOPT_LOGOUT()" />
+        <scope attributes="__exportable__" ilk="function" line="3297" lineend="3297" name="TELOPT_BM" signature="TELOPT_BM()" />
+        <scope attributes="__exportable__" ilk="function" line="3298" lineend="3298" name="TELOPT_DET" signature="TELOPT_DET()" />
+        <scope attributes="__exportable__" ilk="function" line="3299" lineend="3299" name="TELOPT_SUPDUP" signature="TELOPT_SUPDUP()" />
+        <scope attributes="__exportable__" ilk="function" line="3300" lineend="3300" name="TELOPT_SUPDUPOUTPUT" signature="TELOPT_SUPDUPOUTPUT()" />
+        <scope attributes="__exportable__" ilk="function" line="3301" lineend="3301" name="TELOPT_SNDLOC" signature="TELOPT_SNDLOC()" />
+        <scope attributes="__exportable__" ilk="function" line="3302" lineend="3302" name="TELOPT_TTYPE" signature="TELOPT_TTYPE()" />
+        <scope attributes="__exportable__" ilk="function" line="3303" lineend="3303" name="TELOPT_EOR" signature="TELOPT_EOR()" />
+        <scope attributes="__exportable__" ilk="function" line="3304" lineend="3304" name="TELOPT_TUID" signature="TELOPT_TUID()" />
+        <scope attributes="__exportable__" ilk="function" line="3305" lineend="3305" name="TELOPT_OUTMRK" signature="TELOPT_OUTMRK()" />
+        <scope attributes="__exportable__" ilk="function" line="3306" lineend="3306" name="TELOPT_TTYLOC" signature="TELOPT_TTYLOC()" />
+        <scope attributes="__exportable__" ilk="function" line="3307" lineend="3307" name="TELOPT_3270REGIME" signature="TELOPT_3270REGIME()" />
+        <scope attributes="__exportable__" ilk="function" line="3308" lineend="3308" name="TELOPT_X3PAD" signature="TELOPT_X3PAD()" />
+        <scope attributes="__exportable__" ilk="function" line="3309" lineend="3309" name="TELOPT_NAWS" signature="TELOPT_NAWS()" />
+        <scope attributes="__exportable__" ilk="function" line="3310" lineend="3310" name="TELOPT_TSPEED" signature="TELOPT_TSPEED()" />
+        <scope attributes="__exportable__" ilk="function" line="3311" lineend="3311" name="TELOPT_LFLOW" signature="TELOPT_LFLOW()" />
+        <scope attributes="__exportable__" ilk="function" line="3312" lineend="3312" name="TELOPT_LINEMODE" signature="TELOPT_LINEMODE()" />
+        <scope attributes="__exportable__" ilk="function" line="3313" lineend="3313" name="TELOPT_XDISPLOC" signature="TELOPT_XDISPLOC()" />
+        <scope attributes="__exportable__" ilk="function" line="3314" lineend="3314" name="TELOPT_OLD_ENVIRON" signature="TELOPT_OLD_ENVIRON()" />
+        <scope attributes="__exportable__" ilk="function" line="3315" lineend="3315" name="TELOPT_AUTHENTICATION" signature="TELOPT_AUTHENTICATION()" />
+        <scope attributes="__exportable__" ilk="function" line="3316" lineend="3316" name="TELOPT_ENCRYPT" signature="TELOPT_ENCRYPT()" />
+        <scope attributes="__exportable__" ilk="function" line="3317" lineend="3317" name="TELOPT_NEW_ENVIRON" signature="TELOPT_NEW_ENVIRON()" />
+        <scope attributes="__exportable__" ilk="function" line="3318" lineend="3318" name="TELOPT_EXOPL" signature="TELOPT_EXOPL()" />
+      </scope>
+    </scope>
+    

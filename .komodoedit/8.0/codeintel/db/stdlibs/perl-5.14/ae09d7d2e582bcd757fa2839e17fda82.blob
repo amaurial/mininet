@@ -1,0 +1,133 @@
+<scope ilk="blob" lang="Perl" name="Pod::LaTeX">
+      <scope ilk="class" line="1" lineend="1877" name="Pod::LaTeX">
+        <import line="28" module="Pod::ParseUtils" />
+        <import line="32" module="Carp" symbol="*" />
+        <variable line="34" name="$VERSION" />
+        <variable line="34" name="%HTML_Escapes" />
+        <variable line="34" name="@LatexSections" />
+        <scope ilk="function" line="390" lineend="461" name="initialize" signature="initialize($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="501" lineend="507" name="AddPreamble" signature="AddPreamble($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="528" lineend="534" name="AddPostamble" signature="AddPostamble($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="568" lineend="579" name="Head1Level" signature="Head1Level($self, $arg)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$arg" />
+        </scope>
+        <scope ilk="function" line="606" lineend="612" name="Label" signature="Label($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="634" lineend="640" name="LevelNoNum" signature="LevelNoNum($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="657" lineend="663" name="MakeIndex" signature="MakeIndex($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="703" lineend="709" name="ReplaceNAMEwithSection" signature="ReplaceNAMEwithSection($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="723" lineend="729" name="StartWithNewPage" signature="StartWithNewPage($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="744" lineend="750" name="TableOfContents" signature="TableOfContents($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="767" lineend="773" name="UniqueLabels" signature="UniqueLabels($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="786" lineend="792" name="UserPreamble" signature="UserPreamble($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="805" lineend="811" name="UserPostamble" signature="UserPostamble($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="831" lineend="835" name="lists" signature="lists($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="865" lineend="945" name="begin_pod" signature="begin_pod($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="955" lineend="980" name="end_pod" signature="end_pod($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="988" lineend="1100" name="command" signature="command($self, $command, $paragraph, $line_num, $parobj)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$command" />
+          <variable ilk="argument" name="$paragraph" />
+          <variable ilk="argument" name="$line_num" />
+          <variable ilk="argument" name="$parobj" />
+        </scope>
+        <scope ilk="function" line="1108" lineend="1142" name="verbatim" signature="verbatim($self, $paragraph, $line_num, $parobj)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$paragraph" />
+          <variable ilk="argument" name="$line_num" />
+          <variable ilk="argument" name="$parobj" />
+        </scope>
+        <scope ilk="function" line="1150" lineend="1215" name="textblock" signature="textblock($self, $paragraph, $line_num, $parobj)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$paragraph" />
+          <variable ilk="argument" name="$line_num" />
+          <variable ilk="argument" name="$parobj" />
+        </scope>
+        <scope ilk="function" line="1223" lineend="1327" name="interior_sequence" signature="interior_sequence($self, $seq_command, $seq_argument, $pod_seq)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$seq_command" />
+          <variable ilk="argument" name="$seq_argument" />
+          <variable ilk="argument" name="$pod_seq" />
+        </scope>
+        <scope ilk="function" line="1347" lineend="1360" name="begin_list" signature="begin_list($self, $indent, $line_num)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$indent" />
+          <variable ilk="argument" name="$line_num" />
+        </scope>
+        <scope ilk="function" line="1372" lineend="1394" name="end_list" signature="end_list($self, $line_num)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$line_num" />
+        </scope>
+        <scope ilk="function" line="1407" lineend="1479" name="add_item" signature="add_item($self, $paragraph, $line_num)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$paragraph" />
+          <variable ilk="argument" name="$line_num" />
+        </scope>
+        <scope ilk="function" line="1499" lineend="1535" name="head" signature="head($self, $num, $paragraph, $parobj)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$num" />
+          <variable ilk="argument" name="$paragraph" />
+          <variable ilk="argument" name="$parobj" />
+        </scope>
+        <scope ilk="function" line="1563" lineend="1570" name="_output" signature="_output($self, $text)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$text" />
+        </scope>
+        <scope ilk="function" line="1602" lineend="1625" name="_replace_special_chars" signature="_replace_special_chars($self, $paragraph)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$paragraph" />
+        </scope>
+        <scope ilk="function" line="1643" lineend="1655" name="_replace_special_chars_late" signature="_replace_special_chars_late($self, $paragraph)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$paragraph" />
+        </scope>
+        <scope ilk="function" line="1676" lineend="1701" name="_create_label" signature="_create_label($self, $paragraph)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$paragraph" />
+        </scope>
+        <scope ilk="function" line="1717" lineend="1737" name="_create_index" signature="_create_index($self, $paragraph)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$paragraph" />
+        </scope>
+        <scope ilk="function" line="1748" lineend="1764" name="_clean_latex_commands" signature="_clean_latex_commands($self, $paragraph)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$paragraph" />
+        </scope>
+        <scope ilk="function" line="1784" lineend="1824" name="_split_delimited" signature="_split_delimited($self, $input, $limit)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$input" />
+          <variable ilk="argument" name="$limit" />
+        </scope>
+      </scope>
+    </scope>
+    

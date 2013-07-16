@@ -1,0 +1,81 @@
+<scope ilk="blob" lang="Perl" name="Unicode::UCD">
+      <scope classrefs="Exporter" ilk="class" line="1" lineend="1418" name="Unicode::UCD">
+        <import line="7" module="Unicode::Normalize" symbol="getCombinClass" />
+        <import line="7" module="Unicode::Normalize" symbol="NFKD" />
+        <import line="11" module="Storable" symbol="dclone" />
+        <import line="13" module="Exporter" />
+        <import line="28" module="Carp" symbol="*" />
+        <variable line="9" name="$VERSION" />
+        <variable line="17" name="@EXPORT_OK" />
+        <scope ilk="function" line="99" lineend="114" name="openunicode" signature="openunicode($rfh, @path)">
+          <import line="104" module="File::Spec" symbol="*" />
+          <variable ilk="argument" name="$rfh" />
+          <variable ilk="argument" name="@path" />
+          <import line="104" module="File::Spec" symbol="*" />
+        </scope>
+        <scope ilk="function" line="254" lineend="264" name="_getcode" signature="_getcode($arg)">
+          <variable ilk="argument" name="$arg" />
+        </scope>
+        <scope ilk="function" line="279" lineend="301" name="_charinfo_case" signature="_charinfo_case($char, $cased, $file, $array_ref)">
+          <variable ilk="argument" name="$char" />
+          <variable ilk="argument" name="$cased" />
+          <variable ilk="argument" name="$file" />
+          <variable ilk="argument" name="$array_ref" />
+        </scope>
+        <scope ilk="function" line="303" lineend="412" name="charinfo" signature="charinfo($arg)">
+          <import line="312" module="feature" symbol="unicode_strings" />
+          <variable ilk="argument" name="$arg" />
+          <import line="312" module="feature" symbol="unicode_strings" />
+        </scope>
+        <scope ilk="function" line="414" lineend="432" name="_search" signature="_search($table, $lo, $hi, $code)">
+          <variable ilk="argument" name="$table" />
+          <variable ilk="argument" name="$lo" />
+          <variable ilk="argument" name="$hi" />
+          <variable ilk="argument" name="$code" />
+        </scope>
+        <scope ilk="function" line="434" lineend="465" name="_read_table" signature="_read_table($table)">
+          <variable ilk="argument" name="$table" />
+        </scope>
+        <scope ilk="function" line="467" lineend="473" name="charinrange" signature="charinrange($range, $arg)">
+          <variable ilk="argument" name="$range" />
+          <variable ilk="argument" name="$arg" />
+        </scope>
+        <scope ilk="function" line="505" lineend="523" name="_charblocks" signature="_charblocks()">
+          </scope>
+        <scope ilk="function" line="525" lineend="540" name="charblock" signature="charblock($arg)">
+          <variable ilk="argument" name="$arg" />
+        </scope>
+        <scope ilk="function" line="570" lineend="576" name="_charscripts" signature="_charscripts()">
+          </scope>
+        <scope ilk="function" line="578" lineend="594" name="charscript" signature="charscript($arg)">
+          <variable ilk="argument" name="$arg" />
+        </scope>
+        <scope ilk="function" line="609" lineend="612" name="charblocks" signature="charblocks()" />
+        <scope ilk="function" line="628" lineend="631" name="charscripts" signature="charscripts()" />
+        <scope ilk="function" line="689" lineend="691" name="general_categories" signature="general_categories()" />
+        <scope ilk="function" line="751" lineend="753" name="bidi_types" signature="bidi_types()" />
+        <scope ilk="function" line="790" lineend="798" name="compexcl" signature="compexcl($arg)">
+          <variable ilk="argument" name="$arg" />
+        </scope>
+        <scope ilk="function" line="925" lineend="974" name="_casefold" signature="_casefold()">
+          </scope>
+        <scope ilk="function" line="976" lineend="985" name="casefold" signature="casefold($arg)">
+          <variable ilk="argument" name="$arg" />
+        </scope>
+        <scope ilk="function" line="1087" lineend="1139" name="_casespec" signature="_casespec()">
+          </scope>
+        <scope ilk="function" line="1141" lineend="1150" name="casespec" signature="casespec($arg)">
+          <variable ilk="argument" name="$arg" />
+        </scope>
+        <scope ilk="function" line="1183" lineend="1198" name="_namedseq" signature="_namedseq()">
+          </scope>
+        <scope ilk="function" line="1200" lineend="1228" name="namedseq" signature="namedseq()">
+          </scope>
+        <scope ilk="function" line="1232" lineend="1273" name="_numeric" signature="_numeric()">
+          </scope>
+        <scope ilk="function" line="1331" lineend="1350" name="num" signature="num()">
+          </scope>
+        <scope ilk="function" line="1364" lineend="1373" name="UnicodeVersion" signature="UnicodeVersion()" />
+      </scope>
+    </scope>
+    

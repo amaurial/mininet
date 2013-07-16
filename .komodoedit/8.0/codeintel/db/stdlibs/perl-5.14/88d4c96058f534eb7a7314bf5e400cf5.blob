@@ -1,0 +1,18 @@
+<scope ilk="blob" lang="Perl" name="Opcode">
+      <scope classrefs="Exporter" ilk="class" line="1" lineend="84" name="Opcode">
+        <import line="11" module="Carp" symbol="*" />
+        <import line="12" module="Exporter" />
+        <import line="13" module="XSLoader" symbol="*" />
+        <variable line="7" name="$VERSION" />
+        <variable line="7" name="@EXPORT_OK" />
+        <variable line="7" name="@ISA" />
+        <scope attributes="__exportable__" ilk="function" line="35" lineend="35" name="ops_to_opset" signature="ops_to_opset()" />
+        <scope attributes="__exportable__" ilk="function" line="37" lineend="40" name="opset_to_hex" signature="opset_to_hex()" />
+        <scope attributes="__exportable__" ilk="function" line="42" lineend="50" name="opdump" signature="opdump($pat)">
+          <variable ilk="argument" name="$pat" />
+        </scope>
+        <scope ilk="function" line="54" lineend="81" name="_init_optags" signature="_init_optags()">
+          </scope>
+      </scope>
+    </scope>
+    

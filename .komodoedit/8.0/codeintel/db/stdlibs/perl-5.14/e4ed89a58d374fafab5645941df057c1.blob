@@ -1,0 +1,1064 @@
+<scope ilk="blob" lang="Perl" name="B::Deparse">
+      <scope ilk="class" line="10" lineend="4400" name="B::Deparse">
+        <import line="11" module="Carp" symbol="*" />
+        <import line="12" module="B" symbol="class" />
+        <import line="12" module="B" symbol="main_root" />
+        <import line="12" module="B" symbol="main_start" />
+        <import line="12" module="B" symbol="main_cv" />
+        <import line="12" module="B" symbol="svref_2object" />
+        <import line="12" module="B" symbol="opnumber" />
+        <import line="12" module="B" symbol="perlstring" />
+        <import line="13" module="B" symbol="OPf_WANT" />
+        <import line="13" module="B" symbol="OPf_WANT_VOID" />
+        <import line="13" module="B" symbol="OPf_WANT_SCALAR" />
+        <import line="13" module="B" symbol="OPf_WANT_LIST" />
+        <import line="14" module="B" symbol="OPf_KIDS" />
+        <import line="14" module="B" symbol="OPf_REF" />
+        <import line="14" module="B" symbol="OPf_STACKED" />
+        <import line="14" module="B" symbol="OPf_SPECIAL" />
+        <import line="14" module="B" symbol="OPf_MOD" />
+        <import line="15" module="B" symbol="OPpLVAL_INTRO" />
+        <import line="15" module="B" symbol="OPpOUR_INTRO" />
+        <import line="15" module="B" symbol="OPpENTERSUB_AMPER" />
+        <import line="15" module="B" symbol="OPpSLICE" />
+        <import line="15" module="B" symbol="OPpCONST_BARE" />
+        <import line="16" module="B" symbol="OPpTRANS_SQUASH" />
+        <import line="16" module="B" symbol="OPpTRANS_DELETE" />
+        <import line="16" module="B" symbol="OPpTRANS_COMPLEMENT" />
+        <import line="16" module="B" symbol="OPpTARGET_MY" />
+        <import line="17" module="B" symbol="OPpCONST_ARYBASE" />
+        <import line="17" module="B" symbol="OPpEXISTS_SUB" />
+        <import line="17" module="B" symbol="OPpSORT_NUMERIC" />
+        <import line="17" module="B" symbol="OPpSORT_INTEGER" />
+        <import line="18" module="B" symbol="OPpSORT_REVERSE" />
+        <import line="19" module="B" symbol="SVf_IOK" />
+        <import line="19" module="B" symbol="SVf_NOK" />
+        <import line="19" module="B" symbol="SVf_ROK" />
+        <import line="19" module="B" symbol="SVf_POK" />
+        <import line="19" module="B" symbol="SVpad_OUR" />
+        <import line="19" module="B" symbol="SVf_FAKE" />
+        <import line="19" module="B" symbol="SVs_RMG" />
+        <import line="19" module="B" symbol="SVs_SMG" />
+        <import line="20" module="B" symbol="CVf_METHOD" />
+        <import line="20" module="B" symbol="CVf_LVALUE" />
+        <import line="21" module="B" symbol="PMf_KEEP" />
+        <import line="21" module="B" symbol="PMf_GLOBAL" />
+        <import line="21" module="B" symbol="PMf_CONTINUE" />
+        <import line="21" module="B" symbol="PMf_EVAL" />
+        <import line="21" module="B" symbol="PMf_ONCE" />
+        <import line="22" module="B" symbol="PMf_MULTILINE" />
+        <import line="22" module="B" symbol="PMf_SINGLELINE" />
+        <import line="22" module="B" symbol="PMf_FOLD" />
+        <import line="22" module="B" symbol="PMf_EXTENDED" />
+        <variable line="29" name="$VERSION" />
+        <variable line="31" name="$AUTOLOAD" />
+        <variable line="1860" name="*pp_anonhash" />
+        <scope ilk="function" line="312" lineend="315" name="null" signature="null($op)">
+          <variable ilk="argument" name="$op" />
+        </scope>
+        <scope ilk="function" line="317" lineend="333" name="todo" signature="todo($self, $cv, $is_form)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$cv" />
+          <variable ilk="argument" name="$is_form" />
+        </scope>
+        <scope ilk="function" line="335" lineend="371" name="next_todo" signature="next_todo($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="374" lineend="471" name="begin_is_use" signature="begin_is_use($self, $cv)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$cv" />
+        </scope>
+        <scope ilk="function" line="473" lineend="529" name="stash_subs" signature="stash_subs($self, $pack)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$pack" />
+        </scope>
+        <scope ilk="function" line="531" lineend="541" name="print_protos" signature="print_protos($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="543" lineend="562" name="style_opts" signature="style_opts($self, $opts)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$opts" />
+        </scope>
+        <scope attributes="__ctor__" ilk="function" line="564" lineend="608" name="new" signature="new($class)">
+          <import line="590" module="Data::Dumper" />
+          <variable ilk="argument" name="$class" />
+          <import line="590" module="Data::Dumper" />
+        </scope>
+        <scope ilk="function" line="616" lineend="618" name="WARN_MASK" signature="WARN_MASK()" />
+        <scope ilk="function" line="624" lineend="637" name="init" signature="init($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="639" lineend="698" name="compile" signature="compile(@args)">
+          <variable ilk="argument" name="@args" />
+        </scope>
+        <scope ilk="function" line="700" lineend="707" name="coderef2text" signature="coderef2text($self, $sub)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$sub" />
+        </scope>
+        <scope ilk="function" line="709" lineend="816" name="ambient_pragmas" signature="ambient_pragmas($self)">
+          <import line="718" module="strict" />
+          <import line="755" module="re" />
+          <variable ilk="argument" name="$self" />
+          <import line="718" module="strict" />
+          <import line="755" module="re" />
+        </scope>
+        <scope ilk="function" line="819" lineend="827" name="deparse" signature="deparse($self, $op, $cx)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$op" />
+          <variable ilk="argument" name="$cx" />
+        </scope>
+        <scope ilk="function" line="829" lineend="855" name="indent" signature="indent($self, $txt)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$txt" />
+        </scope>
+        <scope ilk="function" line="857" lineend="907" name="deparse_sub" signature="deparse_sub($self, $cv)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$cv" />
+        </scope>
+        <scope ilk="function" line="909" lineend="936" name="deparse_format" signature="deparse_format($self, $form)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$form" />
+        </scope>
+        <scope ilk="function" line="938" lineend="944" name="is_scope" signature="is_scope($op)">
+          <variable ilk="argument" name="$op" />
+        </scope>
+        <scope ilk="function" line="946" lineend="949" name="is_state" signature="is_state()">
+          </scope>
+        <scope ilk="function" line="951" lineend="961" name="is_miniwhile" signature="is_miniwhile($op)">
+          <variable ilk="argument" name="$op" />
+        </scope>
+        <scope ilk="function" line="965" lineend="984" name="is_for_loop" signature="is_for_loop($op)">
+          <variable ilk="argument" name="$op" />
+        </scope>
+        <scope ilk="function" line="986" lineend="993" name="is_scalar" signature="is_scalar($op)">
+          <variable ilk="argument" name="$op" />
+        </scope>
+        <scope ilk="function" line="995" lineend="1009" name="maybe_parens" signature="maybe_parens($self, $text, $cx, $prec)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$text" />
+          <variable ilk="argument" name="$cx" />
+          <variable ilk="argument" name="$prec" />
+        </scope>
+        <scope ilk="function" line="1012" lineend="1037" name="maybe_parens_unop" signature="maybe_parens_unop($self, $name, $kid, $cx)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$name" />
+          <variable ilk="argument" name="$kid" />
+          <variable ilk="argument" name="$cx" />
+        </scope>
+        <scope ilk="function" line="1039" lineend="1047" name="maybe_parens_func" signature="maybe_parens_func($self, $func, $text, $cx, $prec)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$func" />
+          <variable ilk="argument" name="$text" />
+          <variable ilk="argument" name="$cx" />
+          <variable ilk="argument" name="$prec" />
+        </scope>
+        <scope ilk="function" line="1049" lineend="1072" name="maybe_local" signature="maybe_local($self, $op, $cx, $text)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$op" />
+          <variable ilk="argument" name="$cx" />
+          <variable ilk="argument" name="$text" />
+        </scope>
+        <scope ilk="function" line="1074" lineend="1084" name="maybe_targmy" signature="maybe_targmy($self, $op, $cx, $func, @args)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$op" />
+          <variable ilk="argument" name="$cx" />
+          <variable ilk="argument" name="$func" />
+          <variable ilk="argument" name="@args" />
+        </scope>
+        <scope ilk="function" line="1086" lineend="1090" name="padname_sv" signature="padname_sv($self, $targ)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$targ" />
+        </scope>
+        <scope ilk="function" line="1092" lineend="1105" name="maybe_my" signature="maybe_my($self, $op, $cx, $text)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$op" />
+          <variable ilk="argument" name="$cx" />
+          <variable ilk="argument" name="$text" />
+        </scope>
+        <scope ilk="function" line="1111" lineend="1118" name="AUTOLOAD" signature="AUTOLOAD()" />
+        <scope ilk="function" line="1120" lineend="1120" name="DESTROY" signature="DESTROY()" />
+        <scope ilk="function" line="1126" lineend="1154" name="lineseq" signature="lineseq($self, $root, @ops)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$root" />
+          <variable ilk="argument" name="@ops" />
+        </scope>
+        <scope ilk="function" line="1156" lineend="1193" name="scopeop" signature="scopeop($real_block, $self, $op, $cx)">
+          <variable ilk="argument" name="$real_block" />
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$op" />
+          <variable ilk="argument" name="$cx" />
+        </scope>
+        <scope ilk="function" line="1195" lineend="1195" name="pp_scope" signature="pp_scope()" />
+        <scope ilk="function" line="1196" lineend="1196" name="pp_lineseq" signature="pp_lineseq()" />
+        <scope ilk="function" line="1197" lineend="1197" name="pp_leave" signature="pp_leave()" />
+        <scope ilk="function" line="1202" lineend="1216" name="deparse_root" signature="deparse_root($self, $op)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$op" />
+        </scope>
+        <scope ilk="function" line="1218" lineend="1239" name="walk_lineseq" signature="walk_lineseq($self, $op, $kids, $callback)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$op" />
+          <variable ilk="argument" name="$kids" />
+          <variable ilk="argument" name="$callback" />
+        </scope>
+        <scope ilk="function" line="1247" lineend="1269" name="gv_name" signature="gv_name($self, $gv)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$gv" />
+        </scope>
+        <scope ilk="function" line="1274" lineend="1287" name="stash_variable" signature="stash_variable($self, $prefix, $name)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$prefix" />
+          <variable ilk="argument" name="$name" />
+        </scope>
+        <scope ilk="function" line="1289" lineend="1301" name="lex_in_scope" signature="lex_in_scope($self, $name)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$name" />
+        </scope>
+        <scope ilk="function" line="1303" lineend="1328" name="populate_curcvlex" signature="populate_curcvlex($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="1330" lineend="1330" name="find_scope_st" signature="find_scope_st()" />
+        <scope ilk="function" line="1331" lineend="1331" name="find_scope_en" signature="find_scope_en()" />
+        <scope ilk="function" line="1334" lineend="1362" name="find_scope" signature="find_scope($self, $op, $scope_st, $scope_en)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$op" />
+          <variable ilk="argument" name="$scope_st" />
+          <variable ilk="argument" name="$scope_en" />
+        </scope>
+        <scope ilk="function" line="1365" lineend="1376" name="cop_subs" signature="cop_subs($self, $op, $out_seq)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$op" />
+          <variable ilk="argument" name="$out_seq" />
+        </scope>
+        <scope ilk="function" line="1378" lineend="1389" name="seq_subs" signature="seq_subs($self, $seq)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$seq" />
+        </scope>
+        <scope ilk="function" line="1393" lineend="1456" name="pp_nextstate" signature="pp_nextstate($self, $op, $cx)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$op" />
+          <variable ilk="argument" name="$cx" />
+        </scope>
+        <scope ilk="function" line="1458" lineend="1467" name="declare_warnings" signature="declare_warnings($from, $to)">
+          <variable ilk="argument" name="$from" />
+          <variable ilk="argument" name="$to" />
+        </scope>
+        <scope ilk="function" line="1469" lineend="1481" name="declare_hints" signature="declare_hints($from, $to)">
+          <variable ilk="argument" name="$from" />
+          <variable ilk="argument" name="$to" />
+        </scope>
+        <scope ilk="function" line="1491" lineend="1508" name="declare_hinthash" signature="declare_hinthash($from, $to, $indent)">
+          <variable ilk="argument" name="$from" />
+          <variable ilk="argument" name="$to" />
+          <variable ilk="argument" name="$indent" />
+        </scope>
+        <scope ilk="function" line="1510" lineend="1517" name="hint_pragmas" signature="hint_pragmas($bits)">
+          <variable ilk="argument" name="$bits" />
+        </scope>
+        <scope ilk="function" line="1519" lineend="1519" name="pp_dbstate" signature="pp_dbstate()" />
+        <scope ilk="function" line="1520" lineend="1520" name="pp_setstate" signature="pp_setstate()" />
+        <scope ilk="function" line="1522" lineend="1522" name="pp_unstack" signature="pp_unstack()" />
+        <scope ilk="function" line="1524" lineend="1528" name="baseop" signature="baseop($self, $op, $cx, $name)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$op" />
+          <variable ilk="argument" name="$cx" />
+          <variable ilk="argument" name="$name" />
+        </scope>
+        <scope ilk="function" line="1530" lineend="1539" name="pp_stub" signature="pp_stub($self, $op, $cx, $name)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$op" />
+          <variable ilk="argument" name="$cx" />
+          <variable ilk="argument" name="$name" />
+        </scope>
+        <scope ilk="function" line="1540" lineend="1540" name="pp_wantarray" signature="pp_wantarray()" />
+        <scope ilk="function" line="1541" lineend="1541" name="pp_fork" signature="pp_fork()" />
+        <scope ilk="function" line="1542" lineend="1542" name="pp_wait" signature="pp_wait()" />
+        <scope ilk="function" line="1543" lineend="1543" name="pp_getppid" signature="pp_getppid()" />
+        <scope ilk="function" line="1544" lineend="1544" name="pp_time" signature="pp_time()" />
+        <scope ilk="function" line="1545" lineend="1545" name="pp_tms" signature="pp_tms()" />
+        <scope ilk="function" line="1546" lineend="1546" name="pp_ghostent" signature="pp_ghostent()" />
+        <scope ilk="function" line="1547" lineend="1547" name="pp_gnetent" signature="pp_gnetent()" />
+        <scope ilk="function" line="1548" lineend="1548" name="pp_gprotoent" signature="pp_gprotoent()" />
+        <scope ilk="function" line="1549" lineend="1549" name="pp_gservent" signature="pp_gservent()" />
+        <scope ilk="function" line="1550" lineend="1550" name="pp_ehostent" signature="pp_ehostent()" />
+        <scope ilk="function" line="1551" lineend="1551" name="pp_enetent" signature="pp_enetent()" />
+        <scope ilk="function" line="1552" lineend="1552" name="pp_eprotoent" signature="pp_eprotoent()" />
+        <scope ilk="function" line="1553" lineend="1553" name="pp_eservent" signature="pp_eservent()" />
+        <scope ilk="function" line="1554" lineend="1554" name="pp_gpwent" signature="pp_gpwent()" />
+        <scope ilk="function" line="1555" lineend="1555" name="pp_spwent" signature="pp_spwent()" />
+        <scope ilk="function" line="1556" lineend="1556" name="pp_epwent" signature="pp_epwent()" />
+        <scope ilk="function" line="1557" lineend="1557" name="pp_ggrent" signature="pp_ggrent()" />
+        <scope ilk="function" line="1558" lineend="1558" name="pp_sgrent" signature="pp_sgrent()" />
+        <scope ilk="function" line="1559" lineend="1559" name="pp_egrent" signature="pp_egrent()" />
+        <scope ilk="function" line="1560" lineend="1560" name="pp_getlogin" signature="pp_getlogin()" />
+        <scope ilk="function" line="1562" lineend="1562" name="POSTFIX" signature="POSTFIX()" />
+        <scope ilk="function" line="1567" lineend="1574" name="pfixop" signature="pfixop($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="1576" lineend="1576" name="pp_preinc" signature="pp_preinc()" />
+        <scope ilk="function" line="1577" lineend="1577" name="pp_predec" signature="pp_predec()" />
+        <scope ilk="function" line="1578" lineend="1578" name="pp_postinc" signature="pp_postinc()" />
+        <scope ilk="function" line="1579" lineend="1579" name="pp_postdec" signature="pp_postdec()" />
+        <scope ilk="function" line="1580" lineend="1580" name="pp_i_preinc" signature="pp_i_preinc()" />
+        <scope ilk="function" line="1581" lineend="1581" name="pp_i_predec" signature="pp_i_predec()" />
+        <scope ilk="function" line="1582" lineend="1582" name="pp_i_postinc" signature="pp_i_postinc()" />
+        <scope ilk="function" line="1583" lineend="1583" name="pp_i_postdec" signature="pp_i_postdec()" />
+        <scope ilk="function" line="1584" lineend="1584" name="pp_complement" signature="pp_complement()" />
+        <scope ilk="function" line="1586" lineend="1586" name="pp_negate" signature="pp_negate()" />
+        <scope ilk="function" line="1587" lineend="1596" name="real_negate" signature="real_negate($self, $op, $cx)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$op" />
+          <variable ilk="argument" name="$cx" />
+        </scope>
+        <scope ilk="function" line="1597" lineend="1597" name="pp_i_negate" signature="pp_i_negate()" />
+        <scope ilk="function" line="1599" lineend="1607" name="pp_not" signature="pp_not($self, $op, $cx)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$op" />
+          <variable ilk="argument" name="$cx" />
+        </scope>
+        <scope ilk="function" line="1609" lineend="1631" name="unop" signature="unop($self, $op, $cx, $name)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$op" />
+          <variable ilk="argument" name="$cx" />
+          <variable ilk="argument" name="$name" />
+        </scope>
+        <scope ilk="function" line="1633" lineend="1633" name="pp_chop" signature="pp_chop()" />
+        <scope ilk="function" line="1634" lineend="1634" name="pp_chomp" signature="pp_chomp()" />
+        <scope ilk="function" line="1635" lineend="1635" name="pp_schop" signature="pp_schop()" />
+        <scope ilk="function" line="1636" lineend="1636" name="pp_schomp" signature="pp_schomp()" />
+        <scope ilk="function" line="1637" lineend="1637" name="pp_defined" signature="pp_defined()" />
+        <scope ilk="function" line="1638" lineend="1638" name="pp_undef" signature="pp_undef()" />
+        <scope ilk="function" line="1639" lineend="1639" name="pp_study" signature="pp_study()" />
+        <scope ilk="function" line="1640" lineend="1640" name="pp_ref" signature="pp_ref()" />
+        <scope ilk="function" line="1641" lineend="1641" name="pp_pos" signature="pp_pos()" />
+        <scope ilk="function" line="1643" lineend="1643" name="pp_sin" signature="pp_sin()" />
+        <scope ilk="function" line="1644" lineend="1644" name="pp_cos" signature="pp_cos()" />
+        <scope ilk="function" line="1645" lineend="1645" name="pp_rand" signature="pp_rand()" />
+        <scope ilk="function" line="1646" lineend="1646" name="pp_srand" signature="pp_srand()" />
+        <scope ilk="function" line="1647" lineend="1647" name="pp_exp" signature="pp_exp()" />
+        <scope ilk="function" line="1648" lineend="1648" name="pp_log" signature="pp_log()" />
+        <scope ilk="function" line="1649" lineend="1649" name="pp_sqrt" signature="pp_sqrt()" />
+        <scope ilk="function" line="1650" lineend="1650" name="pp_int" signature="pp_int()" />
+        <scope ilk="function" line="1651" lineend="1651" name="pp_hex" signature="pp_hex()" />
+        <scope ilk="function" line="1652" lineend="1652" name="pp_oct" signature="pp_oct()" />
+        <scope ilk="function" line="1653" lineend="1653" name="pp_abs" signature="pp_abs()" />
+        <scope ilk="function" line="1655" lineend="1655" name="pp_length" signature="pp_length()" />
+        <scope ilk="function" line="1656" lineend="1656" name="pp_ord" signature="pp_ord()" />
+        <scope ilk="function" line="1657" lineend="1657" name="pp_chr" signature="pp_chr()" />
+        <scope ilk="function" line="1659" lineend="1659" name="pp_each" signature="pp_each()" />
+        <scope ilk="function" line="1660" lineend="1660" name="pp_values" signature="pp_values()" />
+        <scope ilk="function" line="1661" lineend="1661" name="pp_keys" signature="pp_keys()" />
+        <scope ilk="function" line="1662" lineend="1665" name="pp_boolkeys" signature="pp_boolkeys()" />
+        <scope ilk="function" line="1666" lineend="1666" name="pp_aeach" signature="pp_aeach()" />
+        <scope ilk="function" line="1667" lineend="1667" name="pp_avalues" signature="pp_avalues()" />
+        <scope ilk="function" line="1668" lineend="1668" name="pp_akeys" signature="pp_akeys()" />
+        <scope ilk="function" line="1669" lineend="1669" name="pp_pop" signature="pp_pop()" />
+        <scope ilk="function" line="1670" lineend="1670" name="pp_shift" signature="pp_shift()" />
+        <scope ilk="function" line="1672" lineend="1672" name="pp_caller" signature="pp_caller()" />
+        <scope ilk="function" line="1673" lineend="1673" name="pp_reset" signature="pp_reset()" />
+        <scope ilk="function" line="1674" lineend="1674" name="pp_exit" signature="pp_exit()" />
+        <scope ilk="function" line="1675" lineend="1675" name="pp_prototype" signature="pp_prototype()" />
+        <scope ilk="function" line="1677" lineend="1677" name="pp_close" signature="pp_close()" />
+        <scope ilk="function" line="1678" lineend="1678" name="pp_fileno" signature="pp_fileno()" />
+        <scope ilk="function" line="1679" lineend="1679" name="pp_umask" signature="pp_umask()" />
+        <scope ilk="function" line="1680" lineend="1680" name="pp_untie" signature="pp_untie()" />
+        <scope ilk="function" line="1681" lineend="1681" name="pp_tied" signature="pp_tied()" />
+        <scope ilk="function" line="1682" lineend="1682" name="pp_dbmclose" signature="pp_dbmclose()" />
+        <scope ilk="function" line="1683" lineend="1683" name="pp_getc" signature="pp_getc()" />
+        <scope ilk="function" line="1684" lineend="1684" name="pp_eof" signature="pp_eof()" />
+        <scope ilk="function" line="1685" lineend="1685" name="pp_tell" signature="pp_tell()" />
+        <scope ilk="function" line="1686" lineend="1686" name="pp_getsockname" signature="pp_getsockname()" />
+        <scope ilk="function" line="1687" lineend="1687" name="pp_getpeername" signature="pp_getpeername()" />
+        <scope ilk="function" line="1689" lineend="1689" name="pp_chdir" signature="pp_chdir()" />
+        <scope ilk="function" line="1690" lineend="1690" name="pp_chroot" signature="pp_chroot()" />
+        <scope ilk="function" line="1691" lineend="1691" name="pp_readlink" signature="pp_readlink()" />
+        <scope ilk="function" line="1692" lineend="1692" name="pp_rmdir" signature="pp_rmdir()" />
+        <scope ilk="function" line="1693" lineend="1693" name="pp_readdir" signature="pp_readdir()" />
+        <scope ilk="function" line="1694" lineend="1694" name="pp_telldir" signature="pp_telldir()" />
+        <scope ilk="function" line="1695" lineend="1695" name="pp_rewinddir" signature="pp_rewinddir()" />
+        <scope ilk="function" line="1696" lineend="1696" name="pp_closedir" signature="pp_closedir()" />
+        <scope ilk="function" line="1697" lineend="1697" name="pp_getpgrp" signature="pp_getpgrp()" />
+        <scope ilk="function" line="1698" lineend="1698" name="pp_localtime" signature="pp_localtime()" />
+        <scope ilk="function" line="1699" lineend="1699" name="pp_gmtime" signature="pp_gmtime()" />
+        <scope ilk="function" line="1700" lineend="1700" name="pp_alarm" signature="pp_alarm()" />
+        <scope ilk="function" line="1701" lineend="1701" name="pp_sleep" signature="pp_sleep()" />
+        <scope ilk="function" line="1703" lineend="1703" name="pp_dofile" signature="pp_dofile()" />
+        <scope ilk="function" line="1704" lineend="1704" name="pp_entereval" signature="pp_entereval()" />
+        <scope ilk="function" line="1706" lineend="1706" name="pp_ghbyname" signature="pp_ghbyname()" />
+        <scope ilk="function" line="1707" lineend="1707" name="pp_gnbyname" signature="pp_gnbyname()" />
+        <scope ilk="function" line="1708" lineend="1708" name="pp_gpbyname" signature="pp_gpbyname()" />
+        <scope ilk="function" line="1709" lineend="1709" name="pp_shostent" signature="pp_shostent()" />
+        <scope ilk="function" line="1710" lineend="1710" name="pp_snetent" signature="pp_snetent()" />
+        <scope ilk="function" line="1711" lineend="1711" name="pp_sprotoent" signature="pp_sprotoent()" />
+        <scope ilk="function" line="1712" lineend="1712" name="pp_sservent" signature="pp_sservent()" />
+        <scope ilk="function" line="1713" lineend="1713" name="pp_gpwnam" signature="pp_gpwnam()" />
+        <scope ilk="function" line="1714" lineend="1714" name="pp_gpwuid" signature="pp_gpwuid()" />
+        <scope ilk="function" line="1715" lineend="1715" name="pp_ggrnam" signature="pp_ggrnam()" />
+        <scope ilk="function" line="1716" lineend="1716" name="pp_ggrgid" signature="pp_ggrgid()" />
+        <scope ilk="function" line="1718" lineend="1718" name="pp_lock" signature="pp_lock()" />
+        <scope ilk="function" line="1720" lineend="1720" name="pp_continue" signature="pp_continue()" />
+        <scope ilk="function" line="1721" lineend="1725" name="pp_break" signature="pp_break($self, $op)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$op" />
+        </scope>
+        <scope ilk="function" line="1727" lineend="1747" name="givwhen" signature="givwhen($self, $op, $cx, $givwhen)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$op" />
+          <variable ilk="argument" name="$cx" />
+          <variable ilk="argument" name="$givwhen" />
+        </scope>
+        <scope ilk="function" line="1749" lineend="1749" name="pp_leavegiven" signature="pp_leavegiven()" />
+        <scope ilk="function" line="1750" lineend="1750" name="pp_leavewhen" signature="pp_leavewhen()" />
+        <scope ilk="function" line="1752" lineend="1768" name="pp_exists" signature="pp_exists($self, $op, $cx)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$op" />
+          <variable ilk="argument" name="$cx" />
+        </scope>
+        <scope ilk="function" line="1770" lineend="1795" name="pp_delete" signature="pp_delete($self, $op, $cx)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$op" />
+          <variable ilk="argument" name="$cx" />
+        </scope>
+        <scope ilk="function" line="1797" lineend="1811" name="pp_require" signature="pp_require($self, $op, $cx)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$op" />
+          <variable ilk="argument" name="$cx" />
+        </scope>
+        <scope ilk="function" line="1813" lineend="1822" name="pp_scalar" signature="pp_scalar($self, $op, $cx)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$op" />
+          <variable ilk="argument" name="$cx" />
+        </scope>
+        <scope ilk="function" line="1825" lineend="1829" name="padval" signature="padval($self, $targ)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$targ" />
+        </scope>
+        <scope ilk="function" line="1831" lineend="1848" name="anon_hash_or_list" signature="anon_hash_or_list($self, $op, $cx)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$op" />
+          <variable ilk="argument" name="$cx" />
+        </scope>
+        <scope ilk="function" line="1850" lineend="1858" name="pp_anonlist" signature="pp_anonlist($self, $op, $cx)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$op" />
+          <variable ilk="argument" name="$cx" />
+        </scope>
+        <scope ilk="function" line="1862" lineend="1889" name="pp_refgen" signature="pp_refgen($self, $op, $cx)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$op" />
+          <variable ilk="argument" name="$cx" />
+        </scope>
+        <scope ilk="function" line="1891" lineend="1895" name="e_anoncode" signature="e_anoncode($self, $info)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$info" />
+        </scope>
+        <scope ilk="function" line="1897" lineend="1897" name="pp_srefgen" signature="pp_srefgen()" />
+        <scope ilk="function" line="1899" lineend="1906" name="pp_readline" signature="pp_readline($self, $op, $cx)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$op" />
+          <variable ilk="argument" name="$cx" />
+        </scope>
+        <scope ilk="function" line="1908" lineend="1912" name="pp_rcatline" signature="pp_rcatline($self, $op)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$op" />
+        </scope>
+        <scope ilk="function" line="1915" lineend="1927" name="dq_unop" signature="dq_unop($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="1929" lineend="1929" name="pp_ucfirst" signature="pp_ucfirst()" />
+        <scope ilk="function" line="1930" lineend="1930" name="pp_lcfirst" signature="pp_lcfirst()" />
+        <scope ilk="function" line="1931" lineend="1931" name="pp_uc" signature="pp_uc()" />
+        <scope ilk="function" line="1932" lineend="1932" name="pp_lc" signature="pp_lc()" />
+        <scope ilk="function" line="1933" lineend="1933" name="pp_quotemeta" signature="pp_quotemeta()" />
+        <scope ilk="function" line="1935" lineend="1947" name="loopex" signature="loopex($self, $op, $cx, $name)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$op" />
+          <variable ilk="argument" name="$cx" />
+          <variable ilk="argument" name="$name" />
+        </scope>
+        <scope ilk="function" line="1949" lineend="1949" name="pp_last" signature="pp_last()" />
+        <scope ilk="function" line="1950" lineend="1950" name="pp_next" signature="pp_next()" />
+        <scope ilk="function" line="1951" lineend="1951" name="pp_redo" signature="pp_redo()" />
+        <scope ilk="function" line="1952" lineend="1952" name="pp_goto" signature="pp_goto()" />
+        <scope ilk="function" line="1953" lineend="1953" name="pp_dump" signature="pp_dump()" />
+        <scope ilk="function" line="1955" lineend="1967" name="ftst" signature="ftst($self, $op, $cx, $name)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$op" />
+          <variable ilk="argument" name="$cx" />
+          <variable ilk="argument" name="$name" />
+        </scope>
+        <scope ilk="function" line="1969" lineend="1969" name="pp_lstat" signature="pp_lstat()" />
+        <scope ilk="function" line="1970" lineend="1970" name="pp_stat" signature="pp_stat()" />
+        <scope ilk="function" line="1971" lineend="1971" name="pp_ftrread" signature="pp_ftrread()" />
+        <scope ilk="function" line="1972" lineend="1972" name="pp_ftrwrite" signature="pp_ftrwrite()" />
+        <scope ilk="function" line="1973" lineend="1973" name="pp_ftrexec" signature="pp_ftrexec()" />
+        <scope ilk="function" line="1974" lineend="1974" name="pp_fteread" signature="pp_fteread()" />
+        <scope ilk="function" line="1975" lineend="1975" name="pp_ftewrite" signature="pp_ftewrite()" />
+        <scope ilk="function" line="1976" lineend="1976" name="pp_fteexec" signature="pp_fteexec()" />
+        <scope ilk="function" line="1977" lineend="1977" name="pp_ftis" signature="pp_ftis()" />
+        <scope ilk="function" line="1978" lineend="1978" name="pp_fteowned" signature="pp_fteowned()" />
+        <scope ilk="function" line="1979" lineend="1979" name="pp_ftrowned" signature="pp_ftrowned()" />
+        <scope ilk="function" line="1980" lineend="1980" name="pp_ftzero" signature="pp_ftzero()" />
+        <scope ilk="function" line="1981" lineend="1981" name="pp_ftsize" signature="pp_ftsize()" />
+        <scope ilk="function" line="1982" lineend="1982" name="pp_ftmtime" signature="pp_ftmtime()" />
+        <scope ilk="function" line="1983" lineend="1983" name="pp_ftatime" signature="pp_ftatime()" />
+        <scope ilk="function" line="1984" lineend="1984" name="pp_ftctime" signature="pp_ftctime()" />
+        <scope ilk="function" line="1985" lineend="1985" name="pp_ftsock" signature="pp_ftsock()" />
+        <scope ilk="function" line="1986" lineend="1986" name="pp_ftchr" signature="pp_ftchr()" />
+        <scope ilk="function" line="1987" lineend="1987" name="pp_ftblk" signature="pp_ftblk()" />
+        <scope ilk="function" line="1988" lineend="1988" name="pp_ftfile" signature="pp_ftfile()" />
+        <scope ilk="function" line="1989" lineend="1989" name="pp_ftdir" signature="pp_ftdir()" />
+        <scope ilk="function" line="1990" lineend="1990" name="pp_ftpipe" signature="pp_ftpipe()" />
+        <scope ilk="function" line="1991" lineend="1991" name="pp_ftlink" signature="pp_ftlink()" />
+        <scope ilk="function" line="1992" lineend="1992" name="pp_ftsuid" signature="pp_ftsuid()" />
+        <scope ilk="function" line="1993" lineend="1993" name="pp_ftsgid" signature="pp_ftsgid()" />
+        <scope ilk="function" line="1994" lineend="1994" name="pp_ftsvtx" signature="pp_ftsvtx()" />
+        <scope ilk="function" line="1995" lineend="1995" name="pp_fttty" signature="pp_fttty()" />
+        <scope ilk="function" line="1996" lineend="1996" name="pp_fttext" signature="pp_fttext()" />
+        <scope ilk="function" line="1997" lineend="1997" name="pp_ftbinary" signature="pp_ftbinary()" />
+        <scope ilk="function" line="1999" lineend="1999" name="SWAP_CHILDREN" signature="SWAP_CHILDREN()" />
+        <scope ilk="function" line="2000" lineend="2000" name="ASSIGN" signature="ASSIGN()" />
+        <scope ilk="function" line="2001" lineend="2001" name="LIST_CONTEXT" signature="LIST_CONTEXT()" />
+        <scope ilk="function" line="2005" lineend="2024" name="assoc_class" signature="assoc_class($op)">
+          <variable ilk="argument" name="$op" />
+        </scope>
+        <scope ilk="function" line="2045" lineend="2055" name="deparse_binop_left" signature="deparse_binop_left($self, $op, $left, $prec)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$op" />
+          <variable ilk="argument" name="$left" />
+          <variable ilk="argument" name="$prec" />
+        </scope>
+        <scope ilk="function" line="2078" lineend="2088" name="deparse_binop_right" signature="deparse_binop_right($self, $op, $right, $prec)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$op" />
+          <variable ilk="argument" name="$right" />
+          <variable ilk="argument" name="$prec" />
+        </scope>
+        <scope ilk="function" line="2090" lineend="2108" name="binop" signature="binop($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="2110" lineend="2110" name="pp_add" signature="pp_add()" />
+        <scope ilk="function" line="2111" lineend="2111" name="pp_multiply" signature="pp_multiply()" />
+        <scope ilk="function" line="2112" lineend="2112" name="pp_subtract" signature="pp_subtract()" />
+        <scope ilk="function" line="2113" lineend="2113" name="pp_divide" signature="pp_divide()" />
+        <scope ilk="function" line="2114" lineend="2114" name="pp_modulo" signature="pp_modulo()" />
+        <scope ilk="function" line="2115" lineend="2115" name="pp_i_add" signature="pp_i_add()" />
+        <scope ilk="function" line="2116" lineend="2116" name="pp_i_multiply" signature="pp_i_multiply()" />
+        <scope ilk="function" line="2117" lineend="2117" name="pp_i_subtract" signature="pp_i_subtract()" />
+        <scope ilk="function" line="2118" lineend="2118" name="pp_i_divide" signature="pp_i_divide()" />
+        <scope ilk="function" line="2119" lineend="2119" name="pp_i_modulo" signature="pp_i_modulo()" />
+        <scope ilk="function" line="2120" lineend="2120" name="pp_pow" signature="pp_pow()" />
+        <scope ilk="function" line="2122" lineend="2122" name="pp_left_shift" signature="pp_left_shift()" />
+        <scope ilk="function" line="2123" lineend="2123" name="pp_right_shift" signature="pp_right_shift()" />
+        <scope ilk="function" line="2124" lineend="2124" name="pp_bit_and" signature="pp_bit_and()" />
+        <scope ilk="function" line="2125" lineend="2125" name="pp_bit_or" signature="pp_bit_or()" />
+        <scope ilk="function" line="2126" lineend="2126" name="pp_bit_xor" signature="pp_bit_xor()" />
+        <scope ilk="function" line="2128" lineend="2128" name="pp_eq" signature="pp_eq()" />
+        <scope ilk="function" line="2129" lineend="2129" name="pp_ne" signature="pp_ne()" />
+        <scope ilk="function" line="2130" lineend="2130" name="pp_lt" signature="pp_lt()" />
+        <scope ilk="function" line="2131" lineend="2131" name="pp_gt" signature="pp_gt()" />
+        <scope ilk="function" line="2132" lineend="2132" name="pp_ge" signature="pp_ge()" />
+        <scope ilk="function" line="2133" lineend="2133" name="pp_le" signature="pp_le()" />
+        <scope ilk="function" line="2134" lineend="2134" name="pp_ncmp" signature="pp_ncmp()" />
+        <scope ilk="function" line="2135" lineend="2135" name="pp_i_eq" signature="pp_i_eq()" />
+        <scope ilk="function" line="2136" lineend="2136" name="pp_i_ne" signature="pp_i_ne()" />
+        <scope ilk="function" line="2137" lineend="2137" name="pp_i_lt" signature="pp_i_lt()" />
+        <scope ilk="function" line="2138" lineend="2138" name="pp_i_gt" signature="pp_i_gt()" />
+        <scope ilk="function" line="2139" lineend="2139" name="pp_i_ge" signature="pp_i_ge()" />
+        <scope ilk="function" line="2140" lineend="2140" name="pp_i_le" signature="pp_i_le()" />
+        <scope ilk="function" line="2141" lineend="2141" name="pp_i_ncmp" signature="pp_i_ncmp()" />
+        <scope ilk="function" line="2143" lineend="2143" name="pp_seq" signature="pp_seq()" />
+        <scope ilk="function" line="2144" lineend="2144" name="pp_sne" signature="pp_sne()" />
+        <scope ilk="function" line="2145" lineend="2145" name="pp_slt" signature="pp_slt()" />
+        <scope ilk="function" line="2146" lineend="2146" name="pp_sgt" signature="pp_sgt()" />
+        <scope ilk="function" line="2147" lineend="2147" name="pp_sge" signature="pp_sge()" />
+        <scope ilk="function" line="2148" lineend="2148" name="pp_sle" signature="pp_sle()" />
+        <scope ilk="function" line="2149" lineend="2149" name="pp_scmp" signature="pp_scmp()" />
+        <scope ilk="function" line="2151" lineend="2151" name="pp_sassign" signature="pp_sassign()" />
+        <scope ilk="function" line="2152" lineend="2152" name="pp_aassign" signature="pp_aassign()" />
+        <scope ilk="function" line="2154" lineend="2162" name="pp_smartmatch" signature="pp_smartmatch($self, $op, $cx)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$op" />
+          <variable ilk="argument" name="$cx" />
+        </scope>
+        <scope ilk="function" line="2167" lineend="2167" name="pp_concat" signature="pp_concat()" />
+        <scope ilk="function" line="2168" lineend="2182" name="real_concat" signature="real_concat($self, $op, $cx)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$op" />
+          <variable ilk="argument" name="$cx" />
+        </scope>
+        <scope ilk="function" line="2185" lineend="2209" name="pp_repeat" signature="pp_repeat($self, $op, $cx)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$op" />
+          <variable ilk="argument" name="$cx" />
+        </scope>
+        <scope ilk="function" line="2211" lineend="2219" name="range" signature="range($self, $op, $cx, $type)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$op" />
+          <variable ilk="argument" name="$cx" />
+          <variable ilk="argument" name="$type" />
+        </scope>
+        <scope ilk="function" line="2221" lineend="2227" name="pp_flop" signature="pp_flop($self, $op, $cx)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$op" />
+          <variable ilk="argument" name="$cx" />
+        </scope>
+        <scope ilk="function" line="2231" lineend="2256" name="logop" signature="logop($self, $op, $cx, $lowop, $lowprec, $highop, $highprec, $blockname)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$op" />
+          <variable ilk="argument" name="$cx" />
+          <variable ilk="argument" name="$lowop" />
+          <variable ilk="argument" name="$lowprec" />
+          <variable ilk="argument" name="$highop" />
+          <variable ilk="argument" name="$highprec" />
+          <variable ilk="argument" name="$blockname" />
+        </scope>
+        <scope ilk="function" line="2258" lineend="2258" name="pp_and" signature="pp_and()" />
+        <scope ilk="function" line="2259" lineend="2259" name="pp_or" signature="pp_or()" />
+        <scope ilk="function" line="2260" lineend="2260" name="pp_dor" signature="pp_dor()" />
+        <scope ilk="function" line="2264" lineend="2264" name="pp_xor" signature="pp_xor()" />
+        <scope ilk="function" line="2266" lineend="2274" name="logassignop" signature="logassignop($self, $op, $cx, $opname)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$op" />
+          <variable ilk="argument" name="$cx" />
+          <variable ilk="argument" name="$opname" />
+        </scope>
+        <scope ilk="function" line="2276" lineend="2276" name="pp_andassign" signature="pp_andassign()" />
+        <scope ilk="function" line="2277" lineend="2277" name="pp_orassign" signature="pp_orassign()" />
+        <scope ilk="function" line="2278" lineend="2278" name="pp_dorassign" signature="pp_dorassign()" />
+        <scope ilk="function" line="2280" lineend="2319" name="listop" signature="listop($self, $op, $cx, $name)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$op" />
+          <variable ilk="argument" name="$cx" />
+          <variable ilk="argument" name="$name" />
+        </scope>
+        <scope ilk="function" line="2321" lineend="2321" name="pp_bless" signature="pp_bless()" />
+        <scope ilk="function" line="2322" lineend="2322" name="pp_atan2" signature="pp_atan2()" />
+        <scope ilk="function" line="2323" lineend="2323" name="pp_substr" signature="pp_substr()" />
+        <scope ilk="function" line="2324" lineend="2324" name="pp_vec" signature="pp_vec()" />
+        <scope ilk="function" line="2325" lineend="2325" name="pp_index" signature="pp_index()" />
+        <scope ilk="function" line="2326" lineend="2326" name="pp_rindex" signature="pp_rindex()" />
+        <scope ilk="function" line="2327" lineend="2327" name="pp_sprintf" signature="pp_sprintf()" />
+        <scope ilk="function" line="2328" lineend="2328" name="pp_formline" signature="pp_formline()" />
+        <scope ilk="function" line="2329" lineend="2329" name="pp_crypt" signature="pp_crypt()" />
+        <scope ilk="function" line="2330" lineend="2330" name="pp_unpack" signature="pp_unpack()" />
+        <scope ilk="function" line="2331" lineend="2331" name="pp_pack" signature="pp_pack()" />
+        <scope ilk="function" line="2332" lineend="2332" name="pp_join" signature="pp_join()" />
+        <scope ilk="function" line="2333" lineend="2333" name="pp_splice" signature="pp_splice()" />
+        <scope ilk="function" line="2334" lineend="2334" name="pp_push" signature="pp_push()" />
+        <scope ilk="function" line="2335" lineend="2335" name="pp_unshift" signature="pp_unshift()" />
+        <scope ilk="function" line="2336" lineend="2336" name="pp_reverse" signature="pp_reverse()" />
+        <scope ilk="function" line="2337" lineend="2337" name="pp_warn" signature="pp_warn()" />
+        <scope ilk="function" line="2338" lineend="2338" name="pp_die" signature="pp_die()" />
+        <scope ilk="function" line="2341" lineend="2341" name="pp_return" signature="pp_return()" />
+        <scope ilk="function" line="2342" lineend="2342" name="pp_open" signature="pp_open()" />
+        <scope ilk="function" line="2343" lineend="2343" name="pp_pipe_op" signature="pp_pipe_op()" />
+        <scope ilk="function" line="2344" lineend="2344" name="pp_tie" signature="pp_tie()" />
+        <scope ilk="function" line="2345" lineend="2345" name="pp_binmode" signature="pp_binmode()" />
+        <scope ilk="function" line="2346" lineend="2346" name="pp_dbmopen" signature="pp_dbmopen()" />
+        <scope ilk="function" line="2347" lineend="2347" name="pp_sselect" signature="pp_sselect()" />
+        <scope ilk="function" line="2348" lineend="2348" name="pp_select" signature="pp_select()" />
+        <scope ilk="function" line="2349" lineend="2349" name="pp_read" signature="pp_read()" />
+        <scope ilk="function" line="2350" lineend="2350" name="pp_sysopen" signature="pp_sysopen()" />
+        <scope ilk="function" line="2351" lineend="2351" name="pp_sysseek" signature="pp_sysseek()" />
+        <scope ilk="function" line="2352" lineend="2352" name="pp_sysread" signature="pp_sysread()" />
+        <scope ilk="function" line="2353" lineend="2353" name="pp_syswrite" signature="pp_syswrite()" />
+        <scope ilk="function" line="2354" lineend="2354" name="pp_send" signature="pp_send()" />
+        <scope ilk="function" line="2355" lineend="2355" name="pp_recv" signature="pp_recv()" />
+        <scope ilk="function" line="2356" lineend="2356" name="pp_seek" signature="pp_seek()" />
+        <scope ilk="function" line="2357" lineend="2357" name="pp_fcntl" signature="pp_fcntl()" />
+        <scope ilk="function" line="2358" lineend="2358" name="pp_ioctl" signature="pp_ioctl()" />
+        <scope ilk="function" line="2359" lineend="2359" name="pp_flock" signature="pp_flock()" />
+        <scope ilk="function" line="2360" lineend="2360" name="pp_socket" signature="pp_socket()" />
+        <scope ilk="function" line="2361" lineend="2361" name="pp_sockpair" signature="pp_sockpair()" />
+        <scope ilk="function" line="2362" lineend="2362" name="pp_bind" signature="pp_bind()" />
+        <scope ilk="function" line="2363" lineend="2363" name="pp_connect" signature="pp_connect()" />
+        <scope ilk="function" line="2364" lineend="2364" name="pp_listen" signature="pp_listen()" />
+        <scope ilk="function" line="2365" lineend="2365" name="pp_accept" signature="pp_accept()" />
+        <scope ilk="function" line="2366" lineend="2366" name="pp_shutdown" signature="pp_shutdown()" />
+        <scope ilk="function" line="2367" lineend="2367" name="pp_gsockopt" signature="pp_gsockopt()" />
+        <scope ilk="function" line="2368" lineend="2368" name="pp_ssockopt" signature="pp_ssockopt()" />
+        <scope ilk="function" line="2369" lineend="2369" name="pp_chown" signature="pp_chown()" />
+        <scope ilk="function" line="2370" lineend="2370" name="pp_unlink" signature="pp_unlink()" />
+        <scope ilk="function" line="2371" lineend="2371" name="pp_chmod" signature="pp_chmod()" />
+        <scope ilk="function" line="2372" lineend="2372" name="pp_utime" signature="pp_utime()" />
+        <scope ilk="function" line="2373" lineend="2373" name="pp_rename" signature="pp_rename()" />
+        <scope ilk="function" line="2374" lineend="2374" name="pp_link" signature="pp_link()" />
+        <scope ilk="function" line="2375" lineend="2375" name="pp_symlink" signature="pp_symlink()" />
+        <scope ilk="function" line="2376" lineend="2376" name="pp_mkdir" signature="pp_mkdir()" />
+        <scope ilk="function" line="2377" lineend="2377" name="pp_open_dir" signature="pp_open_dir()" />
+        <scope ilk="function" line="2378" lineend="2378" name="pp_seekdir" signature="pp_seekdir()" />
+        <scope ilk="function" line="2379" lineend="2379" name="pp_waitpid" signature="pp_waitpid()" />
+        <scope ilk="function" line="2380" lineend="2380" name="pp_system" signature="pp_system()" />
+        <scope ilk="function" line="2381" lineend="2381" name="pp_exec" signature="pp_exec()" />
+        <scope ilk="function" line="2382" lineend="2382" name="pp_kill" signature="pp_kill()" />
+        <scope ilk="function" line="2383" lineend="2383" name="pp_setpgrp" signature="pp_setpgrp()" />
+        <scope ilk="function" line="2384" lineend="2384" name="pp_getpriority" signature="pp_getpriority()" />
+        <scope ilk="function" line="2385" lineend="2385" name="pp_setpriority" signature="pp_setpriority()" />
+        <scope ilk="function" line="2386" lineend="2386" name="pp_shmget" signature="pp_shmget()" />
+        <scope ilk="function" line="2387" lineend="2387" name="pp_shmctl" signature="pp_shmctl()" />
+        <scope ilk="function" line="2388" lineend="2388" name="pp_shmread" signature="pp_shmread()" />
+        <scope ilk="function" line="2389" lineend="2389" name="pp_shmwrite" signature="pp_shmwrite()" />
+        <scope ilk="function" line="2390" lineend="2390" name="pp_msgget" signature="pp_msgget()" />
+        <scope ilk="function" line="2391" lineend="2391" name="pp_msgctl" signature="pp_msgctl()" />
+        <scope ilk="function" line="2392" lineend="2392" name="pp_msgsnd" signature="pp_msgsnd()" />
+        <scope ilk="function" line="2393" lineend="2393" name="pp_msgrcv" signature="pp_msgrcv()" />
+        <scope ilk="function" line="2394" lineend="2394" name="pp_semget" signature="pp_semget()" />
+        <scope ilk="function" line="2395" lineend="2395" name="pp_semctl" signature="pp_semctl()" />
+        <scope ilk="function" line="2396" lineend="2396" name="pp_semop" signature="pp_semop()" />
+        <scope ilk="function" line="2397" lineend="2397" name="pp_ghbyaddr" signature="pp_ghbyaddr()" />
+        <scope ilk="function" line="2398" lineend="2398" name="pp_gnbyaddr" signature="pp_gnbyaddr()" />
+        <scope ilk="function" line="2399" lineend="2399" name="pp_gpbynumber" signature="pp_gpbynumber()" />
+        <scope ilk="function" line="2400" lineend="2400" name="pp_gsbyname" signature="pp_gsbyname()" />
+        <scope ilk="function" line="2401" lineend="2401" name="pp_gsbyport" signature="pp_gsbyport()" />
+        <scope ilk="function" line="2402" lineend="2402" name="pp_syscall" signature="pp_syscall()" />
+        <scope ilk="function" line="2404" lineend="2414" name="pp_glob" signature="pp_glob($self, $op, $cx)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$op" />
+          <variable ilk="argument" name="$cx" />
+        </scope>
+        <scope ilk="function" line="2420" lineend="2440" name="pp_truncate" signature="pp_truncate($self, $op, $cx)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$op" />
+          <variable ilk="argument" name="$cx" />
+        </scope>
+        <scope ilk="function" line="2442" lineend="2498" name="indirop" signature="indirop($self, $op, $cx, $name)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$op" />
+          <variable ilk="argument" name="$cx" />
+          <variable ilk="argument" name="$name" />
+        </scope>
+        <scope ilk="function" line="2500" lineend="2500" name="pp_prtf" signature="pp_prtf()" />
+        <scope ilk="function" line="2501" lineend="2501" name="pp_print" signature="pp_print()" />
+        <scope ilk="function" line="2502" lineend="2502" name="pp_say" signature="pp_say()" />
+        <scope ilk="function" line="2503" lineend="2503" name="pp_sort" signature="pp_sort()" />
+        <scope ilk="function" line="2505" lineend="2523" name="mapop" signature="mapop($self, $op, $cx, $name)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$op" />
+          <variable ilk="argument" name="$cx" />
+          <variable ilk="argument" name="$name" />
+        </scope>
+        <scope ilk="function" line="2525" lineend="2525" name="pp_mapwhile" signature="pp_mapwhile()" />
+        <scope ilk="function" line="2526" lineend="2526" name="pp_grepwhile" signature="pp_grepwhile()" />
+        <scope ilk="function" line="2527" lineend="2527" name="pp_mapstart" signature="pp_mapstart()" />
+        <scope ilk="function" line="2528" lineend="2528" name="pp_grepstart" signature="pp_grepstart()" />
+        <scope ilk="function" line="2530" lineend="2600" name="pp_list" signature="pp_list($self, $op, $cx)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$op" />
+          <variable ilk="argument" name="$cx" />
+        </scope>
+        <scope ilk="function" line="2602" lineend="2607" name="is_ifelse_cont" signature="is_ifelse_cont($op)">
+          <variable ilk="argument" name="$op" />
+        </scope>
+        <scope ilk="function" line="2609" lineend="2651" name="pp_cond_expr" signature="pp_cond_expr($self, $op, $cx)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$op" />
+          <variable ilk="argument" name="$cx" />
+        </scope>
+        <scope ilk="function" line="2653" lineend="2659" name="pp_once" signature="pp_once($self, $op, $cx)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$op" />
+          <variable ilk="argument" name="$cx" />
+        </scope>
+        <scope ilk="function" line="2661" lineend="2768" name="loop_common" signature="loop_common($self, $op, $cx, $init)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$op" />
+          <variable ilk="argument" name="$cx" />
+          <variable ilk="argument" name="$init" />
+        </scope>
+        <scope ilk="function" line="2770" lineend="2770" name="pp_leaveloop" signature="pp_leaveloop()" />
+        <scope ilk="function" line="2772" lineend="2779" name="for_loop" signature="for_loop($self, $op, $cx)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$op" />
+          <variable ilk="argument" name="$cx" />
+        </scope>
+        <scope ilk="function" line="2781" lineend="2784" name="pp_leavetry" signature="pp_leavetry($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="2791" lineend="2832" name="pp_null" signature="pp_null($self, $op, $cx)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$op" />
+          <variable ilk="argument" name="$cx" />
+        </scope>
+        <scope ilk="function" line="2834" lineend="2838" name="padname" signature="padname($self, $targ)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$targ" />
+        </scope>
+        <scope ilk="function" line="2840" lineend="2844" name="padany" signature="padany($self, $op)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$op" />
+        </scope>
+        <scope ilk="function" line="2846" lineend="2850" name="pp_padsv" signature="pp_padsv($self, $op, $cx)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$op" />
+          <variable ilk="argument" name="$cx" />
+        </scope>
+        <scope ilk="function" line="2852" lineend="2852" name="pp_padav" signature="pp_padav()" />
+        <scope ilk="function" line="2853" lineend="2853" name="pp_padhv" signature="pp_padhv()" />
+        <scope ilk="function" line="2856" lineend="2860" name="pp_threadsv" signature="pp_threadsv($self, $op, $cx)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$op" />
+          <variable ilk="argument" name="$cx" />
+        </scope>
+        <scope ilk="function" line="2862" lineend="2870" name="gv_or_padgv" signature="gv_or_padgv($self, $op)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$op" />
+        </scope>
+        <scope ilk="function" line="2872" lineend="2878" name="pp_gvsv" signature="pp_gvsv($self, $op, $cx)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$op" />
+          <variable ilk="argument" name="$cx" />
+        </scope>
+        <scope ilk="function" line="2880" lineend="2885" name="pp_gv" signature="pp_gv($self, $op, $cx)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$op" />
+          <variable ilk="argument" name="$cx" />
+        </scope>
+        <scope ilk="function" line="2887" lineend="2904" name="pp_aelemfast" signature="pp_aelemfast($self, $op, $cx)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$op" />
+          <variable ilk="argument" name="$cx" />
+        </scope>
+        <scope ilk="function" line="2906" lineend="2935" name="rv2x" signature="rv2x($self, $op, $cx, $type)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$op" />
+          <variable ilk="argument" name="$cx" />
+          <variable ilk="argument" name="$type" />
+        </scope>
+        <scope ilk="function" line="2937" lineend="2937" name="pp_rv2sv" signature="pp_rv2sv()" />
+        <scope ilk="function" line="2938" lineend="2938" name="pp_rv2hv" signature="pp_rv2hv()" />
+        <scope ilk="function" line="2939" lineend="2939" name="pp_rv2gv" signature="pp_rv2gv()" />
+        <scope ilk="function" line="2942" lineend="2951" name="pp_av2arylen" signature="pp_av2arylen($self, $op, $cx)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$op" />
+          <variable ilk="argument" name="$cx" />
+        </scope>
+        <scope ilk="function" line="2954" lineend="2964" name="pp_rv2cv" signature="pp_rv2cv($self, $op, $cx)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$op" />
+          <variable ilk="argument" name="$cx" />
+        </scope>
+        <scope ilk="function" line="2966" lineend="2982" name="list_const" signature="list_const($self, $cx, @list)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$cx" />
+          <variable ilk="argument" name="@list" />
+        </scope>
+        <scope ilk="function" line="2984" lineend="2994" name="pp_rv2av" signature="pp_rv2av($self, $op, $cx)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$op" />
+          <variable ilk="argument" name="$cx" />
+        </scope>
+        <scope ilk="function" line="2996" lineend="3013" name="is_subscriptable" signature="is_subscriptable($op)">
+          <variable ilk="argument" name="$op" />
+        </scope>
+        <scope ilk="function" line="3015" lineend="3037" name="elem_or_slice_array_name" signature="elem_or_slice_array_name($self, $array, $left, $padname, $allow_arrow)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$array" />
+          <variable ilk="argument" name="$left" />
+          <variable ilk="argument" name="$padname" />
+          <variable ilk="argument" name="$allow_arrow" />
+        </scope>
+        <scope ilk="function" line="3039" lineend="3075" name="elem_or_slice_single_index" signature="elem_or_slice_single_index($self, $idx)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$idx" />
+        </scope>
+        <scope ilk="function" line="3077" lineend="3096" name="elem" signature="elem($self, $op, $cx, $left, $right, $padname)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$op" />
+          <variable ilk="argument" name="$cx" />
+          <variable ilk="argument" name="$left" />
+          <variable ilk="argument" name="$right" />
+          <variable ilk="argument" name="$padname" />
+        </scope>
+        <scope ilk="function" line="3098" lineend="3098" name="pp_aelem" signature="pp_aelem()" />
+        <scope ilk="function" line="3099" lineend="3099" name="pp_helem" signature="pp_helem()" />
+        <scope ilk="function" line="3101" lineend="3111" name="pp_gelem" signature="pp_gelem($self, $op, $cx)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$op" />
+          <variable ilk="argument" name="$cx" />
+        </scope>
+        <scope ilk="function" line="3113" lineend="3139" name="slice" signature="slice($self, $op, $cx, $left, $right, $regname, $padname)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$op" />
+          <variable ilk="argument" name="$cx" />
+          <variable ilk="argument" name="$left" />
+          <variable ilk="argument" name="$right" />
+          <variable ilk="argument" name="$regname" />
+          <variable ilk="argument" name="$padname" />
+        </scope>
+        <scope ilk="function" line="3141" lineend="3141" name="pp_aslice" signature="pp_aslice()" />
+        <scope ilk="function" line="3142" lineend="3142" name="pp_hslice" signature="pp_hslice()" />
+        <scope ilk="function" line="3144" lineend="3153" name="pp_lslice" signature="pp_lslice($self, $op, $cx)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$op" />
+          <variable ilk="argument" name="$cx" />
+        </scope>
+        <scope ilk="function" line="3155" lineend="3158" name="want_scalar" signature="want_scalar($op)">
+          <variable ilk="argument" name="$op" />
+        </scope>
+        <scope ilk="function" line="3160" lineend="3163" name="want_list" signature="want_list($op)">
+          <variable ilk="argument" name="$op" />
+        </scope>
+        <scope ilk="function" line="3165" lineend="3212" name="_method" signature="_method($self, $op, $cx)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$op" />
+          <variable ilk="argument" name="$cx" />
+        </scope>
+        <scope ilk="function" line="3215" lineend="3219" name="method" signature="method($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="3221" lineend="3234" name="e_method" signature="e_method($self, $info)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$info" />
+        </scope>
+        <scope ilk="function" line="3238" lineend="3313" name="check_proto" signature="check_proto($self, $proto, @args)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$proto" />
+          <variable ilk="argument" name="@args" />
+        </scope>
+        <scope ilk="function" line="3315" lineend="3426" name="pp_entersub" signature="pp_entersub($self, $op, $cx)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$op" />
+          <variable ilk="argument" name="$cx" />
+        </scope>
+        <scope ilk="function" line="3428" lineend="3428" name="pp_enterwrite" signature="pp_enterwrite()" />
+        <scope ilk="function" line="3432" lineend="3436" name="uninterp" signature="uninterp($str)">
+          <variable ilk="argument" name="$str" />
+        </scope>
+        <scope ilk="function" line="3454" lineend="3476" name="re_uninterp" signature="re_uninterp($str)">
+          <variable ilk="argument" name="$str" />
+        </scope>
+        <scope ilk="function" line="3480" lineend="3504" name="re_uninterp_extended" signature="re_uninterp_extended($str)">
+          <variable ilk="argument" name="$str" />
+        </scope>
+        <scope ilk="function" line="3543" lineend="3556" name="escape_str" signature="escape_str($str)">
+          <variable ilk="argument" name="$str" />
+        </scope>
+        <scope ilk="function" line="3560" lineend="3567" name="escape_extended_re" signature="escape_extended_re($str)">
+          <variable ilk="argument" name="$str" />
+        </scope>
+        <scope ilk="function" line="3570" lineend="3574" name="unback" signature="unback($str)">
+          <variable ilk="argument" name="$str" />
+        </scope>
+        <scope ilk="function" line="3578" lineend="3584" name="re_unback" signature="re_unback($str)">
+          <variable ilk="argument" name="$str" />
+        </scope>
+        <scope ilk="function" line="3586" lineend="3612" name="balanced_delim" signature="balanced_delim($str)">
+          <variable ilk="argument" name="$str" />
+        </scope>
+        <scope ilk="function" line="3614" lineend="3631" name="single_delim" signature="single_delim($q, $default, $str)">
+          <variable ilk="argument" name="$q" />
+          <variable ilk="argument" name="$default" />
+          <variable ilk="argument" name="$str" />
+        </scope>
+        <scope ilk="function" line="3639" lineend="3655" name="split_float" signature="split_float($f)">
+          <variable ilk="argument" name="$f" />
+        </scope>
+        <scope ilk="function" line="3657" lineend="3762" name="const" signature="const($self, $sv, $cx)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$sv" />
+          <variable ilk="argument" name="$cx" />
+        </scope>
+        <scope ilk="function" line="3764" lineend="3776" name="const_dumper" signature="const_dumper($self, $sv, $cx)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$sv" />
+          <variable ilk="argument" name="$cx" />
+        </scope>
+        <scope ilk="function" line="3778" lineend="3785" name="const_sv" signature="const_sv($self, $op)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$op" />
+        </scope>
+        <scope ilk="function" line="3787" lineend="3798" name="pp_const" signature="pp_const($self, $op, $cx)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$op" />
+          <variable ilk="argument" name="$cx" />
+        </scope>
+        <scope ilk="function" line="3800" lineend="3833" name="dq" signature="dq($self, $op)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$op" />
+        </scope>
+        <scope ilk="function" line="3835" lineend="3842" name="pp_backtick" signature="pp_backtick($self, $op, $cx)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$op" />
+          <variable ilk="argument" name="$cx" />
+        </scope>
+        <scope ilk="function" line="3844" lineend="3851" name="dquote" signature="dquote($self, $op, $cx)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$op" />
+          <variable ilk="argument" name="$cx" />
+        </scope>
+        <scope ilk="function" line="3854" lineend="3854" name="pp_stringify" signature="pp_stringify()" />
+        <scope ilk="function" line="3858" lineend="3882" name="double_delim" signature="double_delim($from, $to)">
+          <variable ilk="argument" name="$from" />
+          <variable ilk="argument" name="$to" />
+        </scope>
+        <scope ilk="function" line="3885" lineend="3913" name="pchr" signature="pchr($n)">
+          <variable ilk="argument" name="$n" />
+        </scope>
+        <scope ilk="function" line="3915" lineend="3931" name="collapse" signature="collapse(@chars)">
+          <variable ilk="argument" name="@chars" />
+        </scope>
+        <scope ilk="function" line="3933" lineend="3976" name="tr_decode_byte" signature="tr_decode_byte($table, $flags)">
+          <variable ilk="argument" name="$table" />
+          <variable ilk="argument" name="$flags" />
+        </scope>
+        <scope ilk="function" line="3978" lineend="3987" name="tr_chr" signature="tr_chr($x)">
+          <variable ilk="argument" name="$x" />
+        </scope>
+        <scope ilk="function" line="3991" lineend="4084" name="tr_decode_utf8" signature="tr_decode_utf8($swash_hv, $flags)">
+          <variable ilk="argument" name="$swash_hv" />
+          <variable ilk="argument" name="$flags" />
+        </scope>
+        <scope ilk="function" line="4086" lineend="4106" name="pp_trans" signature="pp_trans($self, $op, $cx)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$op" />
+          <variable ilk="argument" name="$cx" />
+        </scope>
+        <scope ilk="function" line="4108" lineend="4108" name="pp_transr" signature="pp_transr()" />
+        <scope ilk="function" line="4110" lineend="4118" name="re_dq_disambiguate" signature="re_dq_disambiguate($first, $last)">
+          <variable ilk="argument" name="$first" />
+          <variable ilk="argument" name="$last" />
+        </scope>
+        <scope ilk="function" line="4121" lineend="4151" name="re_dq" signature="re_dq($self, $op, $extended)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$op" />
+          <variable ilk="argument" name="$extended" />
+        </scope>
+        <scope ilk="function" line="4153" lineend="4193" name="pure_string" signature="pure_string($self, $op)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$op" />
+        </scope>
+        <scope ilk="function" line="4195" lineend="4217" name="regcomp" signature="regcomp($self, $op, $cx, $extended)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$op" />
+          <variable ilk="argument" name="$cx" />
+          <variable ilk="argument" name="$extended" />
+        </scope>
+        <scope ilk="function" line="4219" lineend="4222" name="pp_regcomp" signature="pp_regcomp($self, $op, $cx)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$op" />
+          <variable ilk="argument" name="$cx" />
+        </scope>
+        <scope ilk="function" line="4231" lineend="4284" name="matchop" signature="matchop($self, $op, $cx, $name, $delim)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$op" />
+          <variable ilk="argument" name="$cx" />
+          <variable ilk="argument" name="$name" />
+          <variable ilk="argument" name="$delim" />
+        </scope>
+        <scope ilk="function" line="4286" lineend="4286" name="pp_match" signature="pp_match()" />
+        <scope ilk="function" line="4287" lineend="4287" name="pp_pushre" signature="pp_pushre()" />
+        <scope ilk="function" line="4288" lineend="4288" name="pp_qr" signature="pp_qr()" />
+        <scope ilk="function" line="4290" lineend="4330" name="pp_split" signature="pp_split($self, $op, $cx)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$op" />
+          <variable ilk="argument" name="$cx" />
+        </scope>
+        <scope ilk="function" line="4344" lineend="4398" name="pp_subst" signature="pp_subst($self, $op, $cx)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$op" />
+          <variable ilk="argument" name="$cx" />
+        </scope>
+      </scope>
+    </scope>
+    

@@ -1,0 +1,16 @@
+<scope ilk="blob" lang="Perl" name="TAP::Formatter::File">
+      <scope classrefs="TAP::Formatter::Base" ilk="class" line="1" lineend="58" name="TAP::Formatter::File">
+        <import line="4" module="TAP::Formatter::Base" />
+        <import line="5" module="TAP::Formatter::File::Session" symbol="*" />
+        <import line="6" module="POSIX" symbol="strftime" />
+        <variable line="8" name="$VERSION" />
+        <variable line="8" name="@ISA" />
+        <scope ilk="function" line="39" lineend="52" name="open_test" signature="open_test($self, $test, $parser)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$test" />
+          <variable ilk="argument" name="$parser" />
+        </scope>
+        <scope ilk="function" line="54" lineend="56" name="_should_show_count" signature="_should_show_count()" />
+      </scope>
+    </scope>
+    

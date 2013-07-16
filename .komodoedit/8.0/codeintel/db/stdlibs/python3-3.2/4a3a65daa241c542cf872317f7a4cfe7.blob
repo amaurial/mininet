@@ -1,0 +1,129 @@
+<scope doc="Thread module emulating a subset of Java&apos;s threading model.&#xA;" ilk="blob" lang="Python" name="threading">
+      <scope classrefs="_Verbose" doc="Barrier.  Useful for synchronizing a fixed number of threads&#xA;at known synchronization points.  Threads block on &apos;wait()&apos; and are simultaneously once they have all made that call." ilk="class" name="Barrier">
+        <scope doc="Reset the barrier to the initial state." ilk="function" name="reset" signature="reset(self)" />
+        <scope ilk="function" name="_break" signature="_break(self)" />
+        <scope doc="# Block until the barrier is ready for us, or raise an&#xA;exception # if it is broken." ilk="function" name="_enter" signature="_enter(self)" />
+        <scope doc="# Optionally run the &apos;action&apos; and release the threads&#xA;waiting # in the barrier." ilk="function" name="_release" signature="_release(self)" />
+        <scope doc="# Wait in the barrier until we are relased." ilk="function" name="_wait" signature="_wait(self, timeout)" />
+        <scope doc="Place the barrier into a &apos;broken&apos; state." ilk="function" name="abort" signature="abort(self)" />
+        <scope doc="# If we are the last thread to exit the barrier, signal any&#xA;threads # waiting for the barrier to drain." ilk="function" name="_exit" signature="_exit(self)" />
+        <scope doc="Create a barrier, initialised to &apos;parties&apos; threads." ilk="function" name="__init__" signature="__init__(self, parties, action=None, timeout=None, verbose=None)" />
+        <scope doc="Wait for the barrier." ilk="function" name="wait" signature="wait(self, timeout=None)" />
+      </scope>
+      <scope ilk="function" name="BoundedSemaphore" signature="BoundedSemaphore(*args, **kwargs)" />
+      <scope classrefs="RuntimeError" doc="#exception raised by the Barrier class&#xA;" ilk="class" name="BrokenBarrierError" />
+      <scope ilk="function" name="Condition" signature="Condition(*args, **kwargs)" />
+      <scope ilk="function" name="Event" signature="Event(*args, **kwargs)" />
+      <scope doc="(allocate() is an obsolete synonym)" ilk="function" name="Lock" signature="allocate_lock() -&gt; lock object" />
+      <scope ilk="function" name="RLock" signature="RLock(verbose=None, *args, **kwargs)" />
+      <scope ilk="function" name="Semaphore" signature="Semaphore(*args, **kwargs)" />
+      <variable citdl="float" name="TIMEOUT_MAX" />
+      <scope classrefs="_Verbose" doc="&#xA;" ilk="class" name="Thread">
+        <scope ilk="function" name="isAlive" signature="isAlive(self)" />
+        <scope ilk="function" name="setName" signature="setName(self, name)" />
+        <scope ilk="function" name="_set_ident" signature="_set_ident(self)" />
+        <scope ilk="function" name="_stop" signature="_stop(self)" />
+        <scope ilk="function" name="setDaemon" signature="setDaemon(self, daemonic)" />
+        <scope doc="Remove current thread from the dict of currently running&#xA;threads." ilk="function" name="_delete" signature="_delete(self)" />
+        <scope ilk="function" name="isDaemon" signature="isDaemon(self)" />
+        <scope ilk="function" name="run" signature="run(self)" />
+        <scope ilk="function" name="_set_daemon" signature="_set_daemon(self)" />
+        <scope ilk="function" name="__init__" signature="__init__(self, group=None, target=None, name=None, args=(), kwargs=None, verbose=None)" />
+        <scope ilk="function" name="join" signature="join(self, timeout=None)" />
+        <scope ilk="function" name="start" signature="start(self)" />
+        <scope ilk="function" name="getName" signature="getName(self)" />
+        <scope ilk="function" name="_bootstrap" signature="_bootstrap(self)" />
+        <scope ilk="function" name="_bootstrap_inner" signature="_bootstrap_inner(self)" />
+        <scope ilk="function" name="is_alive" signature="is_alive(self)" />
+        <scope ilk="function" name="_reset_internal_locks" signature="_reset_internal_locks(self)" />
+        <scope ilk="function" name="__repr__" signature="__repr__(self)" />
+      </scope>
+      <scope classrefs="Exception" doc="&#xA;" ilk="class" name="ThreadError" />
+      <scope ilk="function" name="Timer" signature="Timer(*args, **kwargs)" />
+      <scope classrefs="object" doc="&#xA;" ilk="class" name="WeakSet">
+        <scope ilk="function" name="difference_update" signature="difference_update(self, other)" />
+        <scope ilk="function" name="symmetric_difference" signature="symmetric_difference(self, other)" />
+        <scope ilk="function" name="__reduce__" signature="__reduce__(self)" />
+        <scope ilk="function" name="pop" signature="pop(self)" />
+        <scope ilk="function" name="issuperset" signature="issuperset(self, other)" />
+        <scope ilk="function" name="remove" signature="remove(self, item)" />
+        <scope ilk="function" name="__and__" signature="__and__(self, other)" />
+        <scope ilk="function" name="__lt__" signature="__lt__(self, other)" />
+        <scope ilk="function" name="__init__" signature="__init__(self, data=None)" />
+        <scope ilk="function" name="_commit_removals" signature="_commit_removals(self)" />
+        <scope ilk="function" name="intersection" signature="intersection(self, other)" />
+        <scope ilk="function" name="__iand__" signature="__iand__(self, other)" />
+        <scope ilk="function" name="issubset" signature="issubset(self, other)" />
+        <scope ilk="function" name="__contains__" signature="__contains__(self, item)" />
+        <scope ilk="function" name="union" signature="union(self, other)" />
+        <scope ilk="function" name="discard" signature="discard(self, item)" />
+        <scope ilk="function" name="add" signature="add(self, item)" />
+        <scope ilk="function" name="__ixor__" signature="__ixor__(self, other)" />
+        <scope ilk="function" name="__len__" signature="__len__(self)" />
+        <scope ilk="function" name="__isub__" signature="__isub__(self, other)" />
+        <scope ilk="function" name="symmetric_difference_update" signature="symmetric_difference_update(self, other)" />
+        <scope ilk="function" name="update" signature="update(self, other)" />
+        <scope ilk="function" name="difference" signature="difference(self, other)" />
+        <scope ilk="function" name="__iter__" signature="__iter__(self)" />
+        <scope ilk="function" name="__or__" signature="__or__(self, other)" />
+        <scope ilk="function" name="__gt__" signature="__gt__(self, other)" />
+        <scope ilk="function" name="copy" signature="copy(self)" />
+        <scope ilk="function" name="__eq__" signature="__eq__(self, other)" />
+        <scope ilk="function" name="isdisjoint" signature="isdisjoint(self, other)" />
+        <scope ilk="function" name="clear" signature="clear(self)" />
+        <scope ilk="function" name="intersection_update" signature="intersection_update(self, other)" />
+        <scope ilk="function" name="__xor__" signature="__xor__(self, other)" />
+        <scope ilk="function" name="__ior__" signature="__ior__(self, other)" />
+        <scope ilk="function" name="__le__" signature="__le__(self, other)" />
+        <scope doc="# Helper functions for simple delegating methods." ilk="function" name="_apply" signature="_apply(self, other, method)" />
+        <scope ilk="function" name="__sub__" signature="__sub__(self, other)" />
+        <scope ilk="function" name="__ge__" signature="__ge__(self, other)" />
+      </scope>
+      <variable citdl="list" name="__all__" />
+      <import module="_sys" />
+      <scope ilk="function" name="activeCount" signature="activeCount()" />
+      <scope ilk="function" name="active_count" signature="active_count()" />
+      <scope ilk="function" name="currentThread" signature="currentThread()" />
+      <scope ilk="function" name="current_thread" signature="current_thread()" />
+      <scope classrefs="object" doc="deque(iterable[, maxlen]) --&gt; deque object&#xA;Build an ordered collection with optimized access from its endpoints." ilk="class" name="deque">
+        <scope doc="Add an element to the left side of the deque." ilk="function" name="appendleft" />
+        <scope doc="x.__getattribute__(&apos;name&apos;) &lt;==&gt; x.name" ilk="function" name="__getattribute__" signature="x.__getattribute__(&apos;name&apos;) &lt;==&gt; x.name" />
+        <scope doc="Remove and return the rightmost element." ilk="function" name="pop" />
+        <scope doc="remove first occurrence of value." ilk="function" name="remove" signature="D.remove(value)" />
+        <scope doc="x.__lt__(y) &lt;==&gt; x&lt;y" ilk="function" name="__lt__" signature="x.__lt__(y) &lt;==&gt; x&lt;y" />
+        <scope ilk="function" name="__init__" />
+        <scope doc="Extend the left side of the deque with elements from the&#xA;iterable" ilk="function" name="extendleft" />
+        <scope doc="Add an element to the right side of the deque." ilk="function" name="append" />
+        <scope doc="x.__len__() &lt;==&gt; len(x)" ilk="function" name="__len__" signature="x.__len__() &lt;==&gt; len(x)" />
+        <scope doc="x.__ne__(y) &lt;==&gt; x!=y" ilk="function" name="__ne__" signature="x.__ne__(y) &lt;==&gt; x!=y" />
+        <scope doc="x.__getitem__(y) &lt;==&gt; x[y]" ilk="function" name="__getitem__" signature="x.__getitem__(y) &lt;==&gt; x[y]" />
+        <scope doc="Return state information for pickling." ilk="function" name="__reduce__" />
+        <scope doc="Remove and return the leftmost element." ilk="function" name="popleft" />
+        <scope doc="x.__setitem__(i, y) &lt;==&gt; x[i]=y" ilk="function" name="__setitem__" signature="x.__setitem__(i, y) &lt;==&gt; x[i]=y" />
+        <scope doc="x.__gt__(y) &lt;==&gt; x&gt;y" ilk="function" name="__gt__" signature="x.__gt__(y) &lt;==&gt; x&gt;y" />
+        <scope doc="x.__eq__(y) &lt;==&gt; x==y" ilk="function" name="__eq__" signature="x.__eq__(y) &lt;==&gt; x==y" />
+        <scope doc="D.count(value) -&gt; integer -- return number of occurrences of value" ilk="function" name="count" returns="int" signature="D.count(value) -&gt; integer -- return number of occurrences of value" />
+        <scope doc="x.__delitem__(y) &lt;==&gt; del x[y]" ilk="function" name="__delitem__" signature="x.__delitem__(y) &lt;==&gt; del x[y]" />
+        <scope doc="Extend the right side of the deque with elements from the&#xA;iterable" ilk="function" name="extend" />
+        <scope doc="Rotate the deque n steps to the right (default n=1)." ilk="function" name="rotate" />
+        <scope doc="reverse *IN PLACE*" ilk="function" name="reverse" signature="D.reverse()" />
+        <scope doc="Remove all elements from the deque." ilk="function" name="clear" />
+        <scope doc="x.__iter__() &lt;==&gt; iter(x)" ilk="function" name="__iter__" signature="x.__iter__() &lt;==&gt; iter(x)" />
+        <scope doc="x.__iadd__(y) &lt;==&gt; x+=y" ilk="function" name="__iadd__" signature="x.__iadd__(y) &lt;==&gt; x+=y" />
+        <scope doc="return a reverse iterator over the deque" ilk="function" name="__reversed__" signature="D.__reversed__()" />
+        <scope doc="x.__le__(y) &lt;==&gt; x&lt;=y" ilk="function" name="__le__" signature="x.__le__(y) &lt;==&gt; x&lt;=y" />
+        <scope doc="x.__repr__() &lt;==&gt; repr(x)" ilk="function" name="__repr__" signature="x.__repr__() &lt;==&gt; repr(x)" />
+        <scope doc="Return a shallow copy of a deque." ilk="function" name="__copy__" />
+        <scope doc="x.__ge__(y) &lt;==&gt; x&gt;=y" ilk="function" name="__ge__" signature="x.__ge__(y) &lt;==&gt; x&gt;=y" />
+      </scope>
+      <scope ilk="function" name="enumerate" signature="enumerate()" />
+      <scope classrefs="object" doc="Thread-local data&#xA;" ilk="class" name="local">
+        <scope doc="x.__delattr__(&apos;name&apos;) &lt;==&gt; del x.name" ilk="function" name="__delattr__" signature="x.__delattr__(&apos;name&apos;) &lt;==&gt; del x.name" />
+        <scope doc="x.__setattr__(&apos;name&apos;, value) &lt;==&gt; x.name = value" ilk="function" name="__setattr__" signature="x.__setattr__(&apos;name&apos;, value) &lt;==&gt; x.name = value" />
+        <scope doc="x.__getattribute__(&apos;name&apos;) &lt;==&gt; x.name" ilk="function" name="__getattribute__" signature="x.__getattribute__(&apos;name&apos;) &lt;==&gt; x.name" />
+      </scope>
+      <scope ilk="function" name="setprofile" signature="setprofile(func)" />
+      <scope ilk="function" name="settrace" signature="settrace(func)" />
+      <scope doc="Return the thread stack size used when creating new threads." ilk="function" name="stack_size" signature="stack_size([size]) -&gt; size" />
+    </scope>
+    

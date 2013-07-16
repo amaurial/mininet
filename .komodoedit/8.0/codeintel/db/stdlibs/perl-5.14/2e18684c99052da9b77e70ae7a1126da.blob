@@ -1,0 +1,44 @@
+<scope ilk="blob" lang="Perl" name="Log::Message">
+      <scope ilk="class" line="1" lineend="600" name="Log::Message">
+        <import line="5" module="Params::Check" symbol="check" />
+        <import line="6" module="Log::Message::Item" symbol="*" />
+        <import line="7" module="Log::Message::Config" symbol="*" />
+        <import line="8" module="Locale::Maketext::Simple" symbol="Style" />
+        <variable citdl="Log::Message::Config" line="13" name="$CONFIG" />
+        <variable line="13" name="$STACK" />
+        <variable line="13" name="$VERSION" />
+        <variable line="13" name="@ISA" />
+        <scope ilk="function" line="239" lineend="246" name="import" signature="import($pkg, %hash)">
+          <variable ilk="argument" name="$pkg" />
+          <variable ilk="argument" name="%hash" />
+        </scope>
+        <scope ilk="function" line="282" lineend="302" name="new" signature="new($class, %hash)">
+          <variable ilk="argument" name="$class" />
+          <variable ilk="argument" name="%hash" />
+        </scope>
+        <scope attributes="__ctor__" ilk="function" line="304" lineend="327" name="_new_stack" signature="_new_stack($class, %hash)">
+          <variable ilk="argument" name="$class" />
+          <variable ilk="argument" name="%hash" />
+        </scope>
+        <scope ilk="function" line="329" lineend="338" name="_get_conf" signature="_get_conf($self, $what)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$what" />
+        </scope>
+        <scope ilk="function" line="379" lineend="424" name="store" signature="store($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="469" lineend="513" name="retrieve" signature="retrieve($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="528" lineend="533" name="first" signature="first($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="549" lineend="554" name="final" signature="final($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="562" lineend="566" name="flush" signature="flush($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+      </scope>
+    </scope>
+    

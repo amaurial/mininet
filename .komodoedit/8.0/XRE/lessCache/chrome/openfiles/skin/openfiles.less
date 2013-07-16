@@ -1,0 +1,91 @@
+/* Tabs */
+#openfilesListbox {
+  -moz-appearance: none;
+  background: none;
+  margin: 5px 0 0;
+}
+#openfilesListbox richlistitem {
+  -moz-appearance: none;
+  background-color: inherit;
+  padding: 2px;
+}
+#openfilesListbox richlistitem.file-item label.file-title {
+  font-size: 9pt;
+  margin-left: 3px;
+  margin-top: 0px;
+}
+#openfilesListbox richlistitem.file-item label.file-dirty {
+  font-size: 9pt;
+  margin: 0;
+  padding: 0;
+}
+#openfilesListbox richlistitem.file-item label.file-path {
+  visibility: collapse;
+  opacity: 0.7;
+  font-size: 9pt;
+  margin-top: 0px;
+}
+#openfilesListbox richlistitem.file-item.duplicate-name label.file-path {
+  visibility: visible;
+}
+#openfilesListbox richlistitem.file-item image.file-icon {
+  margin-left: 2px;
+  height: 16px;
+  max-height: 16px;
+}
+#openfilesListbox richlistitem.file-item toolbarbutton.file-close-button {
+  -moz-appearance: none;
+  opacity: 0;
+  margin: 0 5px 0 0;
+  padding: 0;
+  list-style-image: url("chrome://global/skin/icons/close.png");
+  -moz-image-region: rect(0px, 16px, 16px, 0px);
+  -moz-transition: opacity 0.15s ease;
+}
+#openfilesListbox richlistitem.file-item toolbarbutton.file-close-button:hover {
+  opacity: 1;
+  -moz-image-region: rect(0px, 32px, 16px, 16px);
+  border-color: transparent;
+}
+#openfilesListbox richlistitem.file-item toolbarbutton.file-close-button:focus {
+  outline: none !important;
+}
+#openfilesListbox richlistitem.file-item toolbarbutton.file-close-button:active {
+  -moz-image-region: rect(0px, 48px, 16px, 32px);
+}
+#openfilesListbox richlistitem.file-item:hover {
+  -moz-transition: background-color 0.15s ease;
+  -moz-transition: color 0.15s ease;
+  background: rgba(0, 0, 0, 0.05);
+}
+#openfilesListbox richlistitem.file-item:hover toolbarbutton.file-close-button {
+  opacity: 0.8;
+}
+#openfilesListbox richlistitem.file-item[selected] {
+  background: Highlight;
+  color: HighlightText;
+}
+#openfilesListbox richlistitem.group-item {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 0;
+  margin: 0 5px;
+}
+#openfilesListbox richlistitem.group-item:not(:first-child) {
+  margin-top: 5px;
+}
+#openfilesListbox richlistitem.group-item label {
+  font-size: 8pt;
+  font-weight: bold;
+  color: inherit;
+  margin-left: 0;
+}
+#openfilesListbox richlistitem.split-item {
+  height: 1px;
+  border-top: 1px dashed rgba(0, 0, 0, 0.3);
+  margin: 10px 10px 0;
+  padding: 0 0 5px;
+}
+#openfilesListbox richlistitem.split-item:first-child,
+#openfilesListbox richlistitem.split-item > * {
+  display: none;
+}

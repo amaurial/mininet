@@ -1,0 +1,35 @@
+<scope doc="Base64 content transfer encoding per RFCs 2045-2047.&#xA;This module handles the content transfer encoding method defined in RFC 2045 to encode arbitrary 8-bit data using the three 8-bit bytes in four 7-bit characters encoding known as Base64.  It is used in the MIME standards for email to attach images, audio, and text using some 8-bit character sets to messages.  This module provides an interface to encode and decode both headers and bodies with Base64 encoding. " ilk="blob" lang="Python" name="email.base64mime">
+      <variable citdl="str" line="40" name="CRLF" />
+      <variable citdl="str" line="42" name="EMPTYSTRING" />
+      <variable citdl="int" line="45" name="MISC_LEN" />
+      <variable citdl="str" line="41" name="NL" />
+      <variable citdl="list" line="27" name="__all__" />
+      <scope doc="(ascii) -&gt; bin." ilk="function" name="a2b_base64" />
+      <scope doc="(bin) -&gt; ascii." ilk="function" name="b2a_base64" />
+      <scope doc="Encode a byte string using Base64." ilk="function" name="b64encode" signature="b64encode(s, altchars=None)" />
+      <scope doc="Decode a raw base64 string, returning a bytes object." ilk="function" line="118" name="body_decode" signature="body_decode(string)" />
+      <scope doc="Encode a string with base64." ilk="function" line="76" lineend="98" name="body_encode" returns="EMPTYSTRING.join()" signature="body_encode(s, maxlinelen=76, eol=&apos;\n&apos;)">
+        <variable citdl="list" line="89" name="encvec" />
+        <variable ilk="argument" name="s" />
+        <variable citdl="int" ilk="argument" name="maxlinelen" />
+        <variable citdl="int" line="90" name="max_unencoded" />
+        <variable citdl="list" line="94" name="enc" />
+        <variable citdl="str" ilk="argument" name="eol" />
+      </scope>
+      <scope doc="Decode a raw base64 string, returning a bytes object." ilk="function" line="102" lineend="114" name="decode" returns="bytes()" signature="decode(string)">
+        <variable ilk="argument" name="string" />
+      </scope>
+      <scope doc="Decode a raw base64 string, returning a bytes object." ilk="function" line="119" name="decodestring" signature="decodestring(string)" />
+      <scope doc="Encode a single header line with Base64 encoding in a given&#xA;charset." ilk="function" line="61" lineend="72" name="header_encode" returns="tuple" signature="header_encode(header_bytes, charset=&apos;iso-8859-1&apos;)">
+        <variable line="71" name="encoded" />
+        <variable citdl="header_bytes.encode()" ilk="argument" name="header_bytes" />
+        <variable citdl="str" ilk="argument" name="charset" />
+      </scope>
+      <scope doc="Return the length of s when it is encoded with base64." ilk="function" line="50" lineend="57" name="header_length" returns="int" signature="header_length(bytearray)">
+        <variable ilk="argument" name="bytearray" />
+        <variable line="52" name="leftover" />
+        <variable line="52" name="groups_of_3" />
+        <variable citdl="int" line="54" name="n" />
+      </scope>
+    </scope>
+    

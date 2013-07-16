@@ -1,0 +1,69 @@
+<scope ilk="blob" lang="Perl" name="TAP::Formatter::Base">
+      <scope classrefs="TAP::Base" ilk="class" line="1" lineend="454" name="TAP::Formatter::Base">
+        <import line="4" module="TAP::Base" />
+        <import line="5" module="POSIX" symbol="strftime" />
+        <variable line="7" name="$VERSION" />
+        <variable line="7" name="@ISA" />
+        <scope ilk="function" line="67" lineend="97" name="_initialize" signature="_initialize($self, $arg_for)">
+          <import line="92" module="TAP::Formatter::Color" />
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$arg_for" />
+          <import line="92" module="TAP::Formatter::Color" />
+        </scope>
+        <scope ilk="function" line="99" lineend="99" name="verbose" signature="verbose()" />
+        <scope ilk="function" line="100" lineend="100" name="quiet" signature="quiet()" />
+        <scope ilk="function" line="101" lineend="101" name="really_quiet" signature="really_quiet()" />
+        <scope ilk="function" line="102" lineend="102" name="silent" signature="silent()" />
+        <scope ilk="function" line="204" lineend="214" name="prepare" signature="prepare($self, @tests)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="@tests" />
+        </scope>
+        <scope ilk="function" line="216" lineend="216" name="_format_now" signature="_format_now()" />
+        <scope ilk="function" line="218" lineend="232" name="_format_name" signature="_format_name($self, $test)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$test" />
+        </scope>
+        <scope ilk="function" line="247" lineend="249" name="open_test" signature="open_test()" />
+        <scope ilk="function" line="251" lineend="254" name="_output_success" signature="_output_success($self, $msg)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$msg" />
+        </scope>
+        <scope ilk="function" line="267" lineend="350" name="summary" signature="summary($self, $aggregate, $interrupted)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$aggregate" />
+          <variable ilk="argument" name="$interrupted" />
+        </scope>
+        <scope ilk="function" line="352" lineend="370" name="_output_summary_failure" signature="_output_summary_failure($self, $method, $name, $test, $parser)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$method" />
+          <variable ilk="argument" name="$name" />
+          <variable ilk="argument" name="$test" />
+          <variable ilk="argument" name="$parser" />
+        </scope>
+        <scope ilk="function" line="372" lineend="383" name="_summary_test_header" signature="_summary_test_header($self, $test, $parser)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$test" />
+          <variable ilk="argument" name="$parser" />
+        </scope>
+        <scope ilk="function" line="385" lineend="389" name="_output" signature="_output($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="391" lineend="395" name="_failure_output" signature="_failure_output($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="397" lineend="421" name="_balanced_range" signature="_balanced_range($self, $limit, @range)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$limit" />
+          <variable ilk="argument" name="@range" />
+        </scope>
+        <scope ilk="function" line="423" lineend="447" name="_range" signature="_range($self, @numbers)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="@numbers" />
+        </scope>
+        <scope ilk="function" line="449" lineend="452" name="_get_output_method" signature="_get_output_method($self, $parser)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$parser" />
+        </scope>
+      </scope>
+    </scope>
+    

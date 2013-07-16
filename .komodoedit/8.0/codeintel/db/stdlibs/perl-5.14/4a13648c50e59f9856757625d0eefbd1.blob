@@ -1,0 +1,40 @@
+<scope ilk="blob" lang="Perl" name="CPAN::InfoObj">
+      <scope ilk="class" line="3" lineend="224" name="CPAN::InfoObj">
+        <import line="6" module="CPAN::Debug" symbol="*" />
+        <import line="9" module="Cwd" symbol="chdir" />
+        <variable line="7" name="@CPAN::InfoObj::ISA" />
+        <variable line="12" name="$VERSION" />
+        <variable line="209" name="$Data::Dumper::Sortkeys" />
+        <scope ilk="function" line="16" lineend="19" name="ro" signature="ro($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="22" lineend="32" name="cpan_userid" signature="cpan_userid($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="34" lineend="34" name="id" signature="id()" />
+        <scope attributes="__ctor__" ilk="function" line="37" lineend="41" name="new" signature="new()">
+          </scope>
+        <scope ilk="function" line="50" lineend="83" name="safe_chdir" signature="safe_chdir($self, $todir)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$todir" />
+        </scope>
+        <scope ilk="function" line="86" lineend="106" name="set" signature="set($self, %att)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="%att" />
+        </scope>
+        <scope ilk="function" line="109" lineend="117" name="as_glimpse" signature="as_glimpse($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="120" lineend="194" name="as_string" signature="as_string($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="197" lineend="200" name="fullname" signature="fullname($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="203" lineend="222" name="dump" signature="dump($self, $what)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$what" />
+        </scope>
+      </scope>
+    </scope>
+    

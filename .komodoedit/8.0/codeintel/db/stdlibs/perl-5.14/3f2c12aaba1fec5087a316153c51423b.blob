@@ -1,0 +1,40 @@
+<scope ilk="blob" lang="Perl" name="Perl::Critic::Policy::ErrorHandling::RequireCheckingReturnValueOfEval">
+      <scope ilk="class" line="8" lineend="271" name="Perl::Critic::Policy::ErrorHandling::RequireCheckingReturnValueOfEval">
+        <import line="14" module="Readonly" symbol="*" />
+        <import line="16" module="Scalar::Util" symbol="refaddr" />
+        <import line="18" module="Perl::Critic::Utils" symbol="**" />
+        <variable line="21" name="$VERSION" />
+        <scope ilk="function" line="37" lineend="37" name="supported_parameters" signature="supported_parameters()" />
+        <scope ilk="function" line="38" lineend="38" name="default_severity" signature="default_severity()" />
+        <scope ilk="function" line="39" lineend="39" name="default_themes" signature="default_themes()" />
+        <scope ilk="function" line="40" lineend="40" name="applies_to" signature="applies_to()" />
+        <scope ilk="function" line="44" lineend="66" name="violates" signature="violates()">
+          </scope>
+        <scope ilk="function" line="70" lineend="97" name="_is_in_right_hand_side_of_assignment" signature="_is_in_right_hand_side_of_assignment($elem)">
+          <variable ilk="argument" name="$elem" />
+        </scope>
+        <scope ilk="function" line="99" lineend="115" name="_grandparent_for_is_in_right_hand_side_of_assignment" signature="_grandparent_for_is_in_right_hand_side_of_assignment($elem)">
+          <variable ilk="argument" name="$elem" />
+        </scope>
+        <scope ilk="function" line="121" lineend="160" name="_is_in_correct_position_in_a_condition_or_foreach_loop_collection" signature="_is_in_correct_position_in_a_condition_or_foreach_loop_collection($elem, $following)">
+          <variable ilk="argument" name="$elem" />
+          <variable ilk="argument" name="$following" />
+        </scope>
+        <scope ilk="function" line="162" lineend="203" name="_is_in_correct_position_in_a_structure_condition" signature="_is_in_correct_position_in_a_structure_condition($elem, $parent, $following)">
+          <variable ilk="argument" name="$elem" />
+          <variable ilk="argument" name="$parent" />
+          <variable ilk="argument" name="$following" />
+        </scope>
+        <scope ilk="function" line="206" lineend="216" name="_descendant_of" signature="_descendant_of($cursor, $potential_ancestor)">
+          <variable ilk="argument" name="$cursor" />
+          <variable ilk="argument" name="$potential_ancestor" />
+        </scope>
+        <scope ilk="function" line="220" lineend="252" name="_is_in_postfix_expression" signature="_is_in_postfix_expression($elem)">
+          <variable ilk="argument" name="$elem" />
+        </scope>
+        <scope ilk="function" line="256" lineend="267" name="_is_effectively_a_comma" signature="_is_effectively_a_comma($elem)">
+          <variable ilk="argument" name="$elem" />
+        </scope>
+      </scope>
+    </scope>
+    

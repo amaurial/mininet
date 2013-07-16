@@ -1,0 +1,229 @@
+<scope doc="Utility functions for copying and archiving files and directory trees.&#xA;XXX The functions here don&apos;t copy the resource fork or other metadata on Mac." ilk="blob" lang="Python" name="shutil">
+      <scope classrefs="EnvironmentError" doc="&#xA;" ilk="class" line="39" lineend="40" name="Error" />
+      <scope classrefs="EnvironmentError" doc="Raised when a command could not be executed&#xA;" ilk="class" line="46" name="ExecError" />
+      <scope classrefs="EnvironmentError" doc="Raised when an archive cannot be read&#xA;" ilk="class" line="49" name="ReadError" />
+      <scope classrefs="Exception" doc="Raised when a registery operation with the archiving&#xA;and unpacking registeries fails" ilk="class" line="52" name="RegistryError" />
+      <scope classrefs="EnvironmentError" doc="Raised when trying to do a kind of operation (e.g. copying) which is&#xA;not supported on a special file (e.g. a named pipe)" ilk="class" line="42" name="SpecialFileError" />
+      <variable citdl="list" line="32" name="__all__" />
+      <scope doc="Return the absolute version of a path." ilk="function" name="abspath" signature="abspath(path)" />
+      <import module="bz2" />
+      <import module="collections" />
+      <scope doc="Copy data and mode bits (&quot;cp src dst&quot;)." ilk="function" line="125" lineend="134" name="copy" signature="copy(src, dst)">
+        <variable ilk="argument" name="src" />
+        <variable citdl="os.path.join()" ilk="argument" name="dst" />
+      </scope>
+      <scope doc="Copy data and all stat info (&quot;cp -p src dst&quot;)." ilk="function" line="136" lineend="145" name="copy2" signature="copy2(src, dst)">
+        <variable ilk="argument" name="src" />
+        <variable citdl="os.path.join()" ilk="argument" name="dst" />
+      </scope>
+      <scope doc="Copy data from src to dst" ilk="function" line="82" lineend="100" name="copyfile" signature="copyfile(src, dst)">
+        <variable ilk="argument" name="src" />
+        <variable ilk="argument" name="dst" />
+        <variable citdl="os.stat()" line="89" name="st" />
+      </scope>
+      <scope doc="copy data from file-like object fsrc to file-like object&#xA;fdst" ilk="function" line="62" lineend="68" name="copyfileobj" signature="copyfileobj(fsrc, fdst, length=16384)">
+        <variable citdl="fsrc.read()" line="65" name="buf" />
+        <variable citdl="int" ilk="argument" name="length" />
+        <variable ilk="argument" name="fdst" />
+        <variable ilk="argument" name="fsrc" />
+      </scope>
+      <scope doc="Copy mode bits from src to dst" ilk="function" line="102" lineend="107" name="copymode" signature="copymode(src, dst)">
+        <variable ilk="argument" name="src" />
+        <variable ilk="argument" name="dst" />
+        <variable citdl="stat.S_IMODE()" line="106" name="mode" />
+        <variable citdl="os.stat()" line="105" name="st" />
+      </scope>
+      <scope doc="Copy all stat info (mode bits, atime, mtime, flags) from src&#xA;to dst" ilk="function" line="109" lineend="123" name="copystat" signature="copystat(src, dst)">
+        <variable ilk="argument" name="src" />
+        <variable ilk="argument" name="dst" />
+        <variable citdl="stat.S_IMODE()" line="112" name="mode" />
+        <variable citdl="os.stat()" line="111" name="st" />
+      </scope>
+      <scope doc="Recursively copy a directory tree." ilk="function" line="159" lineend="239" name="copytree" signature="copytree(src, dst, symlinks=False, ignore=None, copy_function=&lt;function copy2 at 0x03B982B8&gt;, ignore_dangling_symlinks=False)">
+        <variable citdl="False" ilk="argument" name="symlinks" />
+        <variable ilk="argument" name="src" />
+        <variable citdl="copy2" ilk="argument" name="copy_function" />
+        <variable citdl="os.readlink()" line="210" name="linkto" />
+        <variable citdl="os.path.join()" line="207" name="dstname" />
+        <variable citdl="False" ilk="argument" name="ignore_dangling_symlinks" />
+        <variable ilk="argument" name="dst" />
+        <variable citdl="os.path.join()" line="206" name="srcname" />
+        <variable citdl="list" line="202" name="errors" />
+        <variable citdl="os.listdir()" line="195" name="names" />
+        <variable ilk="argument" name="ignore" />
+        <variable citdl="set()" line="197" name="ignored_names" />
+      </scope>
+      <import module="errno" />
+      <import module="fnmatch" />
+      <scope doc="Returns a list of supported formats for archiving and&#xA;unarchiving." ilk="function" line="505" lineend="513" name="get_archive_formats" returns="list" signature="get_archive_formats()">
+        <variable citdl="list" line="510" name="formats" />
+      </scope>
+      <scope doc="Returns a list of supported formats for unpacking." ilk="function" line="594" lineend="603" name="get_unpack_formats" returns="list" signature="get_unpack_formats()">
+        <variable citdl="list" line="600" name="formats" />
+      </scope>
+      <variable citdl="NoneType" doc="Return the group database entry for the given group name." line="30" name="getgrnam" returns="tuple" signature="getgrnam(name) -&gt; tuple" />
+      <variable citdl="NoneType" doc="pw_gid,pw_gecos,pw_dir,pw_shell) Return the password&#xA;database entry for the given user name." line="25" name="getpwnam" signature="getpwnam(name) -&gt; (pw_name,pw_passwd,pw_uid," />
+      <scope doc="Function that can be used as copytree() ignore parameter." ilk="function" line="147" lineend="157" name="ignore_patterns" returns="ignore_patterns._ignore_patterns" signature="ignore_patterns(*patterns)">
+        <variable attributes="varargs" ilk="argument" name="patterns" />
+        <scope attributes="protected" ilk="function" line="152" lineend="156" name="_ignore_patterns" returns="set()" signature="_ignore_patterns(path, names)">
+          <variable ilk="argument" name="path" />
+          <variable ilk="argument" name="names" />
+          <variable citdl="list" line="153" name="ignored_names" />
+        </scope>
+      </scope>
+      <scope doc="Create an archive file (eg. zip or tar)." ilk="function" line="539" lineend="591" name="make_archive" returns="func()" signature="make_archive(base_name, format, root_dir=None, base_dir=None, verbose=0, dry_run=0, owner=None, group=None, logger=None)">
+        <variable line="571" name="format_info" />
+        <variable ilk="argument" name="root_dir" />
+        <variable citdl="int" ilk="argument" name="verbose" />
+        <variable citdl="int" ilk="argument" name="dry_run" />
+        <variable ilk="argument" name="format" />
+        <variable citdl="os.path.abspath()" ilk="argument" name="base_name" />
+        <variable citdl="func()" line="584" name="filename" />
+        <variable line="575" name="func" />
+        <variable citdl="dict" line="568" name="kwargs" />
+        <variable ilk="argument" name="owner" />
+        <variable citdl="os.getcwd()" line="557" name="save_cwd" />
+        <variable ilk="argument" name="logger" />
+        <variable ilk="argument" name="group" />
+        <variable citdl="os.curdir" ilk="argument" name="base_dir" />
+      </scope>
+      <scope doc="Recursively move a file or directory to another location." ilk="function" line="295" lineend="333" name="move" signature="move(src, dst)">
+        <variable citdl="os.path.join()" line="312" name="real_dst" />
+        <variable ilk="argument" name="src" />
+        <variable ilk="argument" name="dst" />
+      </scope>
+      <import module="os" />
+      <scope doc="Registers an archive format." ilk="function" line="515" lineend="534" name="register_archive_format" signature="register_archive_format(name, function, extra_args=None, description=&apos;&apos;)">
+        <variable ilk="argument" name="function" />
+        <variable citdl="list" ilk="argument" name="extra_args" />
+        <variable ilk="argument" name="name" />
+        <variable citdl="str" ilk="argument" name="description" />
+      </scope>
+      <scope doc="Registers an unpack format." ilk="function" line="623" lineend="643" name="register_unpack_format" signature="register_unpack_format(name, extensions, function, extra_args=None, description=&apos;&apos;)">
+        <variable ilk="argument" name="function" />
+        <variable citdl="list" ilk="argument" name="extra_args" />
+        <variable ilk="argument" name="extensions" />
+        <variable ilk="argument" name="name" />
+        <variable citdl="str" ilk="argument" name="description" />
+      </scope>
+      <scope doc="Recursively delete a directory tree." ilk="function" line="241" lineend="287" name="rmtree" signature="rmtree(path, ignore_errors=False, onerror=None)">
+        <variable citdl="os.listdir()" line="266" name="names" />
+        <variable citdl="False" ilk="argument" name="ignore_errors" />
+        <variable ilk="argument" name="onerror" />
+        <variable ilk="argument" name="path" />
+        <variable citdl="os.path.join()" line="272" name="fullname" />
+        <variable citdl="int" line="274" name="mode" />
+      </scope>
+      <import module="stat" />
+      <import module="sys" />
+      <import module="tarfile" />
+      <scope doc="Unpack an archive." ilk="function" line="722" lineend="756" name="unpack_archive" signature="unpack_archive(filename, extract_dir=None, format=None)">
+        <variable citdl="os.getcwd()" ilk="argument" name="extract_dir" />
+        <variable line="742" name="format_info" />
+        <variable line="746" name="func" />
+        <variable citdl="_find_unpack_format()" ilk="argument" name="format" />
+        <variable citdl="dict()" line="755" name="kwargs" />
+        <variable ilk="argument" name="filename" />
+      </scope>
+      <scope ilk="function" line="536" lineend="537" name="unregister_archive_format" signature="unregister_archive_format(name)">
+        <variable ilk="argument" name="name" />
+      </scope>
+      <scope doc="Removes the pack format from the registery." ilk="function" line="645" lineend="647" name="unregister_unpack_format" signature="unregister_unpack_format(name)">
+        <variable ilk="argument" name="name" />
+      </scope>
+      <scope attributes="protected __hidden__" doc="Ensure that the parent directory of `path` exists" ilk="function" line="649" lineend="653" name="_ensure_directory" signature="_ensure_directory(path)">
+        <variable ilk="argument" name="path" />
+        <variable citdl="os.path.dirname()" line="651" name="dirname" />
+      </scope>
+      <scope attributes="protected __hidden__" ilk="function" line="70" lineend="80" name="_samefile" returns="os.path.samefile()" signature="_samefile(src, dst)">
+        <variable ilk="argument" name="src" />
+        <variable ilk="argument" name="dst" />
+      </scope>
+      <scope attributes="protected __hidden__" doc="Checks what gets registered as an unpacker." ilk="function" line="605" lineend="620" name="_check_unpack_options" signature="_check_unpack_options(extensions, function, extra_args)">
+        <variable ilk="argument" name="extensions" />
+        <variable ilk="argument" name="function" />
+        <variable ilk="argument" name="extra_args" />
+        <variable citdl="dict" line="608" name="existing_extensions" />
+        <variable citdl="str" line="615" name="msg" />
+      </scope>
+      <scope attributes="protected __hidden__" ilk="function" line="430" lineend="445" name="_call_external_zip" signature="_call_external_zip(base_dir, zip_filename, verbose=False, dry_run=False)">
+        <import line="436" module="distutils.errors" symbol="DistutilsExecError" />
+        <import line="437" module="distutils.spawn" symbol="spawn" />
+        <variable ilk="argument" name="base_dir" />
+        <variable ilk="argument" name="zip_filename" />
+        <variable citdl="False" ilk="argument" name="verbose" />
+        <variable citdl="False" ilk="argument" name="dry_run" />
+        <variable citdl="str" line="433" name="zipoptions" />
+      </scope>
+      <scope attributes="protected __hidden__" doc="Unpack tar/tar.gz/tar.bz2 `filename` to `extract_dir`&#xA;    " ilk="function" line="692" lineend="703" name="_unpack_tarfile" signature="_unpack_tarfile(filename, extract_dir)">
+        <variable ilk="argument" name="filename" />
+        <variable ilk="argument" name="extract_dir" />
+        <variable citdl="tarfile.open()" line="696" name="tarobj" />
+      </scope>
+      <scope attributes="protected __hidden__" doc="Returns an uid, given a user name." ilk="function" line="356" lineend="366" name="_get_uid" signature="_get_uid(name)">
+        <variable ilk="argument" name="name" />
+        <variable citdl="getpwnam()" line="361" name="result" />
+      </scope>
+      <scope attributes="protected __hidden__" doc="Unpack zip `filename` to `extract_dir`&#xA;    " ilk="function" line="655" lineend="690" name="_unpack_zipfile" signature="_unpack_zipfile(filename, extract_dir)">
+        <import line="659" module="zipfile" />
+        <variable ilk="argument" name="filename" />
+        <variable ilk="argument" name="extract_dir" />
+        <variable citdl="zipfile.ZipFile()" line="666" name="zip" />
+        <variable citdl="info.filename" line="669" name="name" />
+        <variable citdl="os.path.join()" line="675" name="target" />
+        <variable citdl="zip.read()" line="682" name="data" />
+        <variable citdl="open()" line="683" name="f" />
+      </scope>
+      <scope attributes="protected __hidden__" ilk="function" line="290" lineend="293" name="_basename" returns="os.path.basename()" signature="_basename(path)">
+        <variable ilk="argument" name="path" />
+      </scope>
+      <variable attributes="protected __hidden__" citdl="False" line="18" name="_BZ2_SUPPORTED" />
+      <scope attributes="protected __hidden__" doc="Create a (possibly compressed) tar file from all the files under&#xA;&apos;base_dir&apos;.&#xA;&#xA;&apos;compress&apos; must be &quot;gzip&quot; (the default), &quot;bzip2&quot;, or None.&#xA;&#xA;&apos;owner&apos; and &apos;group&apos; can be used to define an owner and a group for the&#xA;archive that is being built. If not provided, the current owner and group&#xA;will be used.&#xA;&#xA;The output tar file will be named &apos;base_name&apos; +  &quot;.tar&quot;, possibly plus&#xA;the appropriate compression extension (&quot;.gz&quot;, or &quot;.bz2&quot;).&#xA;&#xA;Returns the output filename." ilk="function" line="368" lineend="428" name="_make_tarball" returns="str" signature="_make_tarball(base_name, base_dir, compress=&apos;gzip&apos;, verbose=0, dry_run=0, owner=None, group=None, logger=None)">
+        <variable ilk="argument" name="base_name" />
+        <variable ilk="argument" name="base_dir" />
+        <variable citdl="str" ilk="argument" name="compress" />
+        <variable citdl="int" ilk="argument" name="verbose" />
+        <variable citdl="int" ilk="argument" name="dry_run" />
+        <variable ilk="argument" name="owner" />
+        <variable ilk="argument" name="group" />
+        <variable ilk="argument" name="logger" />
+        <variable citdl="dict" line="384" name="tar_compression" />
+        <variable citdl="dict" line="385" name="compress_ext" />
+        <variable citdl="compress_ext.get()" line="396" name="archive_name" />
+        <variable citdl="os.path.dirname()" line="397" name="archive_dir" />
+        <variable citdl="_get_uid()" line="409" name="uid" />
+        <variable citdl="_get_gid()" line="410" name="gid" />
+        <scope attributes="protected" ilk="function" line="412" lineend="419" name="_set_uid_gid" signature="_set_uid_gid(tarinfo)">
+          <variable ilk="argument" name="tarinfo" />
+        </scope>
+        <variable citdl="tarfile.open()" line="422" name="tar" />
+      </scope>
+      <scope attributes="protected __hidden__" doc="Create a zip file from all the files under &apos;base_dir&apos;.&#xA;&#xA;The output zip file will be named &apos;base_name&apos; + &quot;.zip&quot;.  Uses either the&#xA;&quot;zipfile&quot; Python module (if available) or the InfoZIP &quot;zip&quot; utility&#xA;(if installed and found on the default search path).  If neither tool is&#xA;available, raises ExecError.  Returns the name of the output zip&#xA;file." ilk="function" line="447" lineend="492" name="_make_zipfile" returns="str" signature="_make_zipfile(base_name, base_dir, verbose=0, dry_run=0, logger=None)">
+        <import line="468" module="zipfile" />
+        <variable ilk="argument" name="base_name" />
+        <variable ilk="argument" name="base_dir" />
+        <variable citdl="int" ilk="argument" name="verbose" />
+        <variable citdl="int" ilk="argument" name="dry_run" />
+        <variable ilk="argument" name="logger" />
+        <variable citdl="str" line="456" name="zip_filename" />
+        <variable citdl="os.path.dirname()" line="457" name="archive_dir" />
+        <variable line="470" name="zipfile" />
+        <variable citdl="zipfile.ZipFile()" line="480" name="zip" />
+        <variable citdl="os.path.normpath()" line="485" name="path" />
+      </scope>
+      <variable attributes="protected __hidden__" citdl="dict" line="494" name="_ARCHIVE_FORMATS" />
+      <variable attributes="protected __hidden__" citdl="dict" line="705" name="_UNPACK_FORMATS" />
+      <scope attributes="protected __hidden__" doc="Returns a gid, given a group name." ilk="function" line="344" lineend="354" name="_get_gid" signature="_get_gid(name)">
+        <variable ilk="argument" name="name" />
+        <variable citdl="getgrnam()" line="349" name="result" />
+      </scope>
+      <scope attributes="protected __hidden__" ilk="function" line="715" lineend="720" name="_find_unpack_format" returns="name" signature="_find_unpack_format(filename)">
+        <variable ilk="argument" name="filename" />
+      </scope>
+      <scope attributes="protected __hidden__" ilk="function" line="335" lineend="342" name="_destinsrc" returns="dst.startswith()" signature="_destinsrc(src, dst)">
+        <variable citdl="abspath()" ilk="argument" name="src" />
+        <variable citdl="abspath()" ilk="argument" name="dst" />
+      </scope>
+      <variable attributes="__hidden__" citdl="NoneType" line="60" name="WindowsError" />
+    </scope>
+    

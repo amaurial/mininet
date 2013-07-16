@@ -1,0 +1,103 @@
+<scope ilk="blob" lang="Perl" name="IO::Handle">
+      <scope classrefs="Exporter" ilk="class" line="1" lineend="646" name="IO::Handle">
+        <import line="263" module="Carp" symbol="*" />
+        <import line="264" module="Symbol" symbol="*" />
+        <import line="265" module="SelectSaver" symbol="*" />
+        <import line="266" module="IO" />
+        <import line="268" module="Exporter" />
+        <variable line="262" name="$VERSION" />
+        <variable line="262" name="@EXPORT_OK" />
+        <variable line="262" name="@ISA" />
+        <variable line="439" name="*gets" />
+        <scope attributes="__ctor__" ilk="function" line="310" lineend="326" name="new" signature="new()">
+          <import line="318" module="IO::File" />
+          <import line="318" module="IO::File" />
+        </scope>
+        <scope attributes="__ctor__" ilk="function" line="328" lineend="336" name="new_from_fd" signature="new_from_fd()">
+          </scope>
+        <scope ilk="function" line="344" lineend="344" name="DESTROY" signature="DESTROY()" />
+        <scope ilk="function" line="351" lineend="359" name="_open_mode_string" signature="_open_mode_string($mode)">
+          <variable ilk="argument" name="$mode" />
+        </scope>
+        <scope ilk="function" line="361" lineend="378" name="fdopen" signature="fdopen($io, $fd, $mode)">
+          <variable ilk="argument" name="$io" />
+          <variable ilk="argument" name="$fd" />
+          <variable ilk="argument" name="$mode" />
+        </scope>
+        <scope ilk="function" line="380" lineend="385" name="close" signature="close($io)">
+          <variable ilk="argument" name="$io" />
+        </scope>
+        <scope ilk="function" line="394" lineend="397" name="opened" signature="opened()" />
+        <scope ilk="function" line="399" lineend="402" name="fileno" signature="fileno()" />
+        <scope ilk="function" line="404" lineend="407" name="getc" signature="getc()" />
+        <scope ilk="function" line="409" lineend="412" name="eof" signature="eof()" />
+        <scope attributes="__exportable__" ilk="function" line="414" lineend="418" name="print" signature="print($this)">
+          <variable ilk="argument" name="$this" />
+        </scope>
+        <scope attributes="__exportable__" ilk="function" line="420" lineend="424" name="printf" signature="printf($this)">
+          <variable ilk="argument" name="$this" />
+        </scope>
+        <scope attributes="__exportable__" ilk="function" line="426" lineend="431" name="say" signature="say($this)">
+          <variable ilk="argument" name="$this" />
+        </scope>
+        <scope attributes="__exportable__" ilk="function" line="433" lineend="437" name="getline" signature="getline($this)">
+          <variable ilk="argument" name="$this" />
+        </scope>
+        <scope attributes="__exportable__" ilk="function" line="441" lineend="447" name="getlines" signature="getlines($this)">
+          <variable ilk="argument" name="$this" />
+        </scope>
+        <scope ilk="function" line="449" lineend="452" name="truncate" signature="truncate()" />
+        <scope ilk="function" line="454" lineend="457" name="read" signature="read()" />
+        <scope ilk="function" line="459" lineend="462" name="sysread" signature="sysread()" />
+        <scope ilk="function" line="464" lineend="469" name="write" signature="write()" />
+        <scope ilk="function" line="471" lineend="478" name="syswrite" signature="syswrite()" />
+        <scope ilk="function" line="480" lineend="483" name="stat" signature="stat()" />
+        <scope attributes="__exportable__" ilk="function" line="489" lineend="494" name="autoflush" signature="autoflush()">
+          </scope>
+        <scope attributes="__exportable__" ilk="function" line="496" lineend="502" name="output_field_separator" signature="output_field_separator()">
+          </scope>
+        <scope attributes="__exportable__" ilk="function" line="504" lineend="510" name="output_record_separator" signature="output_record_separator()">
+          </scope>
+        <scope attributes="__exportable__" ilk="function" line="512" lineend="518" name="input_record_separator" signature="input_record_separator()">
+          </scope>
+        <scope attributes="__exportable__" ilk="function" line="520" lineend="526" name="input_line_number" signature="input_line_number()">
+          </scope>
+        <scope attributes="__exportable__" ilk="function" line="528" lineend="534" name="format_page_number" signature="format_page_number()">
+          </scope>
+        <scope attributes="__exportable__" ilk="function" line="536" lineend="542" name="format_lines_per_page" signature="format_lines_per_page()">
+          </scope>
+        <scope attributes="__exportable__" ilk="function" line="544" lineend="550" name="format_lines_left" signature="format_lines_left()">
+          </scope>
+        <scope attributes="__exportable__" ilk="function" line="552" lineend="558" name="format_name" signature="format_name()">
+          </scope>
+        <scope attributes="__exportable__" ilk="function" line="560" lineend="566" name="format_top_name" signature="format_top_name()">
+          </scope>
+        <scope attributes="__exportable__" ilk="function" line="568" lineend="574" name="format_line_break_characters" signature="format_line_break_characters()">
+          </scope>
+        <scope attributes="__exportable__" ilk="function" line="576" lineend="582" name="format_formfeed" signature="format_formfeed()">
+          </scope>
+        <scope ilk="function" line="584" lineend="591" name="formline" signature="formline($io, $picture)">
+          <variable ilk="argument" name="$io" />
+          <variable ilk="argument" name="$picture" />
+        </scope>
+        <scope attributes="__exportable__" ilk="function" line="593" lineend="603" name="format_write" signature="format_write($io, $fmt)">
+          <variable ilk="argument" name="$io" />
+          <variable ilk="argument" name="$fmt" />
+        </scope>
+        <scope ilk="function" line="605" lineend="609" name="fcntl" signature="fcntl($io, $op)">
+          <variable ilk="argument" name="$io" />
+          <variable ilk="argument" name="$op" />
+        </scope>
+        <scope ilk="function" line="611" lineend="615" name="ioctl" signature="ioctl($io, $op)">
+          <variable ilk="argument" name="$io" />
+          <variable ilk="argument" name="$op" />
+        </scope>
+        <scope ilk="function" line="623" lineend="628" name="constant" signature="constant($name)">
+          <variable ilk="argument" name="$name" />
+        </scope>
+        <scope attributes="__exportable__" ilk="function" line="633" lineend="644" name="printflush" signature="printflush($io)">
+          <variable ilk="argument" name="$io" />
+        </scope>
+      </scope>
+    </scope>
+    

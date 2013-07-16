@@ -1,0 +1,65 @@
+<scope ilk="blob" lang="Perl" name="Term::ReadLine::Stub">
+      <scope classrefs="Term::ReadLine::Tk Term::ReadLine::TermCap" ilk="class" line="163" lineend="287" name="Term::ReadLine::Stub">
+        <variable line="166" name="$DB::emacs" />
+        <variable line="167" name="@rl_term_set" />
+        <variable line="168" name="*rl_term_set" />
+        <scope ilk="function" line="170" lineend="170" name="PERL_UNICODE_STDIN" signature="PERL_UNICODE_STDIN()" />
+        <scope ilk="function" line="172" lineend="172" name="ReadLine" signature="ReadLine()" />
+        <scope ilk="function" line="173" lineend="190" name="readline" signature="readline($self, $prompt)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$prompt" />
+        </scope>
+        <scope ilk="function" line="191" lineend="191" name="addhistory" signature="addhistory()" />
+        <scope ilk="function" line="193" lineend="227" name="findConsole" signature="findConsole()">
+          </scope>
+        <scope attributes="__ctor__" ilk="function" line="229" lineend="263" name="new" signature="new()">
+          </scope>
+        <scope ilk="function" line="265" lineend="272" name="newTTY" signature="newTTY($self, $in, $out)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$in" />
+          <variable ilk="argument" name="$out" />
+        </scope>
+        <scope ilk="function" line="274" lineend="274" name="IN" signature="IN()" />
+        <scope ilk="function" line="275" lineend="275" name="OUT" signature="OUT()" />
+        <scope ilk="function" line="276" lineend="276" name="MinLine" signature="MinLine()" />
+        <scope ilk="function" line="277" lineend="277" name="Attribs" signature="Attribs()" />
+        <scope ilk="function" line="280" lineend="280" name="Features" signature="Features()" />
+        <scope ilk="function" line="282" lineend="287" name="get_line" signature="get_line($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+      </scope>
+      <scope classrefs="Term::ReadLine::Gnu Term::ReadLine::Stub Term::ReadLine::Perl Term::ReadLine::Stub &quot;Term::ReadLine:: Term::ReadLine::Stub" ilk="class" line="289" lineend="324" name="Term::ReadLine">
+        <variable line="291" name="$VERSION" />
+      </scope>
+      <scope ilk="class" line="326" lineend="357" name="Term::ReadLine::TermCap">
+        <variable line="330" name="@rl_term_set" />
+        <variable line="332" name="$rl_term_set" />
+        <variable line="334" name="$terminal" />
+        <scope ilk="function" line="335" lineend="340" name="LoadTermCap" signature="LoadTermCap()">
+          <import line="338" module="Term::Cap" />
+          <import line="338" module="Term::Cap" />
+        </scope>
+        <scope ilk="function" line="342" lineend="357" name="ornaments" signature="ornaments()">
+          </scope>
+      </scope>
+      <scope ilk="class" line="360" lineend="400" name="Term::ReadLine::Tk">
+        <variable line="362" name="$count_DoOne" />
+        <variable line="362" name="$count_handle" />
+        <variable line="362" name="$count_loop" />
+        <variable line="365" name="$giveup" />
+        <variable line="382" name="$Term::ReadLine::toloop" />
+        <scope ilk="function" line="366" lineend="366" name="handle" signature="handle()" />
+        <scope ilk="function" line="368" lineend="373" name="Tk_loop" signature="Tk_loop()" />
+        <scope ilk="function" line="375" lineend="379" name="register_Tk" signature="register_Tk($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="381" lineend="384" name="tkRunning" signature="tkRunning()" />
+        <scope ilk="function" line="386" lineend="390" name="get_c" signature="get_c($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="392" lineend="398" name="get_line" signature="get_line($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+      </scope>
+    </scope>
+    

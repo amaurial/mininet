@@ -1,0 +1,41 @@
+<scope ilk="blob" lang="Perl" name="Params::Check">
+      <scope classrefs="Exporter" ilk="class" line="1" lineend="711" name="Params::Check">
+        <import line="5" module="Carp" symbol="carp" />
+        <import line="5" module="Carp" symbol="croak" />
+        <import line="6" module="Locale::Maketext::Simple" symbol="Style" />
+        <import line="8" module="Data::Dumper" symbol="*" />
+        <import line="11" module="Exporter" />
+        <variable line="12" name="$ALLOW_UNKNOWN" />
+        <variable line="12" name="$VERBOSE" />
+        <variable line="12" name="$VERSION" />
+        <variable line="12" name="@EXPORT_OK" />
+        <variable line="12" name="@ISA" />
+        <variable line="13" name="$NO_DUPLICATES" />
+        <variable line="13" name="$STRICT_TYPE" />
+        <variable line="13" name="$STRIP_LEADING_DASHES" />
+        <variable line="14" name="$ONLY_ALLOW_DEFINED" />
+        <variable line="14" name="$PRESERVE_CASE" />
+        <variable line="14" name="$WARNINGS_FATAL" />
+        <variable line="15" name="$_ERROR_STRING" />
+        <variable line="15" name="$CALLER_DEPTH" />
+        <variable line="15" name="$SANITY_CHECK_TEMPLATE" />
+        <scope attributes="__exportable__" ilk="function" line="247" lineend="376" name="check" signature="check($utmpl, $href, $verbose)">
+          <variable ilk="argument" name="$utmpl" />
+          <variable ilk="argument" name="$href" />
+          <variable ilk="argument" name="$verbose" />
+        </scope>
+        <scope attributes="__exportable__" ilk="function" line="420" lineend="452" name="allow" signature="allow()" />
+        <scope ilk="function" line="457" lineend="474" name="_clean_up_args" signature="_clean_up_args()">
+          </scope>
+        <scope ilk="function" line="476" lineend="528" name="_sanity_check_and_defaults" signature="_sanity_check_and_defaults()">
+          </scope>
+        <scope ilk="function" line="530" lineend="535" name="_safe_eq" signature="_safe_eq()" />
+        <scope ilk="function" line="537" lineend="541" name="_who_was_it" signature="_who_was_it()">
+          </scope>
+        <scope ilk="function" line="557" lineend="568" name="_store_error" signature="_store_error()">
+          </scope>
+        <scope ilk="function" line="570" lineend="572" name="_clear_error" signature="_clear_error()" />
+        <scope attributes="__exportable__" ilk="function" line="574" lineend="574" name="last_error" signature="last_error()" />
+      </scope>
+    </scope>
+    

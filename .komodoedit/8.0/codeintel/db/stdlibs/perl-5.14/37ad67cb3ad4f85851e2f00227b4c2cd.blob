@@ -1,0 +1,30 @@
+<scope ilk="blob" lang="Perl" name="Encode::JP::JIS7">
+      <scope ilk="class" line="1" lineend="157" name="Encode::JP::JIS7">
+        <import line="6" module="Encode" symbol="**" />
+        <import line="24" module="Encode::CJKConstants" symbol="**" />
+        <variable line="4" name="$VERSION" />
+        <scope ilk="function" line="22" lineend="22" name="needs_lines" signature="needs_lines()" />
+        <scope ilk="function" line="30" lineend="39" name="decode" signature="decode($obj, $str, $chk)">
+          <variable ilk="argument" name="$obj" />
+          <variable ilk="argument" name="$str" />
+          <variable ilk="argument" name="$chk" />
+        </scope>
+        <scope ilk="function" line="45" lineend="56" name="encode" signature="encode($obj, $utf8, $chk)">
+          <import line="46" module="Encode::JP::H2Z" />
+          <variable ilk="argument" name="$obj" />
+          <variable ilk="argument" name="$utf8" />
+          <variable ilk="argument" name="$chk" />
+          <import line="46" module="Encode::JP::H2Z" />
+        </scope>
+        <scope ilk="function" line="67" lineend="102" name="cat_decode" signature="cat_decode()">
+          </scope>
+        <scope ilk="function" line="109" lineend="129" name="jis_euc" signature="jis_euc($r_str)">
+          <variable ilk="argument" name="$r_str" />
+        </scope>
+        <scope ilk="function" line="131" lineend="155" name="euc_jis" signature="euc_jis($r_str, $jis0212)">
+          <variable ilk="argument" name="$r_str" />
+          <variable ilk="argument" name="$jis0212" />
+        </scope>
+      </scope>
+    </scope>
+    

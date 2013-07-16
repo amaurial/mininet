@@ -1,0 +1,53 @@
+<scope ilk="blob" lang="Perl" name="File::HomeDir">
+      <scope classrefs="Exporter" ilk="class" line="1" lineend="323" name="File::HomeDir">
+        <import line="7" module="Carp" />
+        <import line="8" module="Config" />
+        <import line="9" module="File::Spec" />
+        <import line="10" module="File::Which" />
+        <import line="18" module="Exporter" />
+        <variable line="13" name="$IMPLEMENTED_BY" />
+        <variable line="13" name="$VERSION" />
+        <variable line="13" name="@EXPORT" />
+        <variable line="13" name="@EXPORT_OK" />
+        <variable line="13" name="@ISA" />
+        <scope ilk="function" line="46" lineend="48" name="_CLASS" signature="_CLASS()" />
+        <scope ilk="function" line="49" lineend="51" name="_DRIVER" signature="_DRIVER()" />
+        <scope attributes="__exportable__" ilk="function" line="92" lineend="94" name="my_home" signature="my_home()" />
+        <scope attributes="__exportable__" ilk="function" line="96" lineend="100" name="my_desktop" signature="my_desktop()" />
+        <scope attributes="__exportable__" ilk="function" line="102" lineend="106" name="my_documents" signature="my_documents()" />
+        <scope attributes="__exportable__" ilk="function" line="108" lineend="112" name="my_music" signature="my_music()" />
+        <scope attributes="__exportable__" ilk="function" line="114" lineend="118" name="my_pictures" signature="my_pictures()" />
+        <scope attributes="__exportable__" ilk="function" line="120" lineend="124" name="my_videos" signature="my_videos()" />
+        <scope attributes="__exportable__" ilk="function" line="126" lineend="130" name="my_data" signature="my_data()" />
+        <scope attributes="__exportable__" ilk="function" line="133" lineend="157" name="my_dist_data" signature="my_dist_data()">
+          <import line="154" module="File::Path" />
+          <import line="154" module="File::Path" />
+        </scope>
+        <scope attributes="__exportable__" ilk="function" line="159" lineend="187" name="my_dist_config" signature="my_dist_config()">
+          <import line="184" module="File::Path" />
+          <import line="184" module="File::Path" />
+        </scope>
+        <scope attributes="__exportable__" ilk="function" line="195" lineend="199" name="users_home" signature="users_home()" />
+        <scope attributes="__exportable__" ilk="function" line="201" lineend="205" name="users_desktop" signature="users_desktop()" />
+        <scope attributes="__exportable__" ilk="function" line="207" lineend="211" name="users_documents" signature="users_documents()" />
+        <scope attributes="__exportable__" ilk="function" line="213" lineend="217" name="users_music" signature="users_music()" />
+        <scope attributes="__exportable__" ilk="function" line="219" lineend="223" name="users_pictures" signature="users_pictures()" />
+        <scope attributes="__exportable__" ilk="function" line="225" lineend="229" name="users_videos" signature="users_videos()" />
+        <scope attributes="__exportable__" ilk="function" line="231" lineend="235" name="users_data" signature="users_data()" />
+        <scope attributes="__exported__ __exportable__" ilk="function" line="245" lineend="271" name="home" signature="home($name)">
+          <variable ilk="argument" name="$name" />
+        </scope>
+      </scope>
+      <scope ilk="class" line="284" lineend="317" name="File::HomeDir::TIE">
+        <scope ilk="function" line="291" lineend="291" name="TIEHASH" signature="TIEHASH()" />
+        <scope ilk="function" line="293" lineend="306" name="FETCH" signature="FETCH()" />
+        <scope ilk="function" line="308" lineend="308" name="STORE" signature="STORE()" />
+        <scope ilk="function" line="309" lineend="309" name="EXISTS" signature="EXISTS()" />
+        <scope ilk="function" line="310" lineend="310" name="DELETE" signature="DELETE()" />
+        <scope ilk="function" line="311" lineend="311" name="CLEAR" signature="CLEAR()" />
+        <scope ilk="function" line="312" lineend="312" name="FIRSTKEY" signature="FIRSTKEY()" />
+        <scope ilk="function" line="313" lineend="313" name="NEXTKEY" signature="NEXTKEY()" />
+        <scope ilk="function" line="315" lineend="317" name="_bad" signature="_bad()" />
+      </scope>
+    </scope>
+    

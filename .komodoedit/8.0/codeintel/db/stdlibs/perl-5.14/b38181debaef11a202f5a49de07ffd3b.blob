@@ -1,0 +1,56 @@
+<scope ilk="blob" lang="Perl" name="LWP::ConnCache">
+      <scope ilk="class" line="1" lineend="167" name="LWP::ConnCache">
+        <variable line="4" name="$DEBUG" />
+        <variable line="4" name="$VERSION" />
+        <scope attributes="__ctor__" ilk="function" line="9" lineend="23" name="new" signature="new($class, %cnf)">
+          <import line="17" module="Carp" />
+          <variable ilk="argument" name="$class" />
+          <variable ilk="argument" name="%cnf" />
+          <import line="17" module="Carp" />
+        </scope>
+        <scope ilk="function" line="26" lineend="31" name="deposit" signature="deposit($self, $type, $key, $conn)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$type" />
+          <variable ilk="argument" name="$key" />
+          <variable ilk="argument" name="$conn" />
+        </scope>
+        <scope ilk="function" line="34" lineend="44" name="withdraw" signature="withdraw($self, $type, $key)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$type" />
+          <variable ilk="argument" name="$key" />
+        </scope>
+        <scope ilk="function" line="47" lineend="55" name="total_capacity" signature="total_capacity($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="58" lineend="67" name="capacity" signature="capacity($self, $type)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$type" />
+        </scope>
+        <scope ilk="function" line="70" lineend="92" name="enforce_limits" signature="enforce_limits($self, $type)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$type" />
+        </scope>
+        <scope ilk="function" line="95" lineend="98" name="dropping" signature="dropping($self, $c, $reason)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$c" />
+          <variable ilk="argument" name="$reason" />
+        </scope>
+        <scope ilk="function" line="101" lineend="136" name="drop" signature="drop($self, $checker, $reason)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$checker" />
+          <variable ilk="argument" name="$reason" />
+        </scope>
+        <scope ilk="function" line="139" lineend="142" name="prune" signature="prune($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="145" lineend="150" name="get_types" signature="get_types($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="153" lineend="160" name="get_connections" signature="get_connections($self, $type)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$type" />
+        </scope>
+        <scope ilk="function" line="163" lineend="165" name="_looks_like_number" signature="_looks_like_number()" />
+      </scope>
+    </scope>
+    

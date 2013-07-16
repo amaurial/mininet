@@ -1,0 +1,53 @@
+<scope ilk="blob" lang="Perl" name="AutoSplit">
+      <scope classrefs="Exporter" ilk="class" line="1" lineend="576" name="AutoSplit">
+        <import line="3" module="Exporter" />
+        <import line="4" module="Config" symbol="%Config" />
+        <import line="5" module="File::Basename" />
+        <import line="6" module="File::Path" symbol="mkpath" />
+        <import line="7" module="File::Spec::Functions" symbol="curdir" />
+        <import line="7" module="File::Spec::Functions" symbol="catfile" />
+        <import line="7" module="File::Spec::Functions" symbol="catdir" />
+        <variable attributes="__exportable__" line="9" name="$Keep" />
+        <variable attributes="__exportable__" line="9" name="$Maxlen" />
+        <variable attributes="__exportable__" line="9" name="$Verbose" />
+        <variable line="9" name="$VERSION" />
+        <variable line="9" name="@EXPORT" />
+        <variable line="9" name="@EXPORT_OK" />
+        <variable line="9" name="@ISA" />
+        <variable attributes="__exportable__" line="10" name="$CheckForAutoloader" />
+        <variable attributes="__exportable__" line="10" name="$CheckModTime" />
+        <variable line="242" name="$trick1" />
+        <variable line="244" name="$trick2" />
+        <scope attributes="__exported__" ilk="function" line="248" lineend="257" name="autosplit" signature="autosplit($file, $autodir, $keep, $ckal, $ckmt)">
+          <variable ilk="argument" name="$file" />
+          <variable ilk="argument" name="$autodir" />
+          <variable ilk="argument" name="$keep" />
+          <variable ilk="argument" name="$ckal" />
+          <variable ilk="argument" name="$ckmt" />
+        </scope>
+        <scope ilk="function" line="259" lineend="262" name="carp" signature="carp()">
+          <import line="260" module="Carp" />
+          <import line="260" module="Carp" />
+        </scope>
+        <scope attributes="__exported__" ilk="function" line="267" lineend="291" name="autosplit_lib_modules" signature="autosplit_lib_modules(@modules)">
+          <variable ilk="argument" name="@modules" />
+        </scope>
+        <scope ilk="function" line="298" lineend="525" name="autosplit_file" signature="autosplit_file($filename, $autodir, $keep, $check_for_autoloader, $check_mod_time)">
+          <variable ilk="argument" name="$filename" />
+          <variable ilk="argument" name="$autodir" />
+          <variable ilk="argument" name="$keep" />
+          <variable ilk="argument" name="$check_for_autoloader" />
+          <variable ilk="argument" name="$check_mod_time" />
+        </scope>
+        <scope ilk="function" line="527" lineend="544" name="_modpname" signature="_modpname($package)">
+          <variable ilk="argument" name="$package" />
+        </scope>
+        <scope ilk="function" line="546" lineend="574" name="_check_unique" signature="_check_unique($filename, $maxlen, $warn, @outfiles)">
+          <variable ilk="argument" name="$filename" />
+          <variable ilk="argument" name="$maxlen" />
+          <variable ilk="argument" name="$warn" />
+          <variable ilk="argument" name="@outfiles" />
+        </scope>
+      </scope>
+    </scope>
+    

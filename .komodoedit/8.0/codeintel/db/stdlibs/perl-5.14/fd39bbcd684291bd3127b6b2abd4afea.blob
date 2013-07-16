@@ -1,0 +1,112 @@
+<scope ilk="blob" lang="Perl" name="Net::SMTP">
+      <scope classrefs="Net::Cmd IO::Socket::INET" ilk="class" line="7" lineend="531" name="Net::SMTP">
+        <import line="13" module="Socket" symbol="*" />
+        <import line="14" module="Carp" symbol="*" />
+        <import line="15" module="IO::Socket" symbol="*" />
+        <import line="16" module="Net::Cmd" symbol="*" />
+        <import line="17" module="Net::Config" symbol="*" />
+        <variable line="12" name="$VERSION" />
+        <variable line="12" name="@ISA" />
+        <variable line="412" name="*to" />
+        <variable line="413" name="*cc" />
+        <variable line="414" name="*bcc" />
+        <scope ilk="function" line="24" lineend="78" name="new" signature="new($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="81" lineend="84" name="host" signature="host($me)">
+          <variable ilk="argument" name="$me" />
+        </scope>
+        <scope ilk="function" line="91" lineend="95" name="banner" signature="banner($me)">
+          <variable ilk="argument" name="$me" />
+        </scope>
+        <scope ilk="function" line="98" lineend="102" name="domain" signature="domain($me)">
+          <variable ilk="argument" name="$me" />
+        </scope>
+        <scope ilk="function" line="105" lineend="109" name="etrn" signature="etrn($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="112" lineend="165" name="auth" signature="auth($self, $username, $password)">
+          <import line="116" module="MIME::Base64" />
+          <import line="117" module="Authen::SASL" />
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$username" />
+          <variable ilk="argument" name="$password" />
+          <import line="116" module="MIME::Base64" />
+          <import line="117" module="Authen::SASL" />
+        </scope>
+        <scope ilk="function" line="168" lineend="191" name="hello" signature="hello($me, $domain)">
+          <variable ilk="argument" name="$me" />
+          <variable ilk="argument" name="$domain" />
+        </scope>
+        <scope ilk="function" line="194" lineend="202" name="supports" signature="supports($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="205" lineend="219" name="_addr" signature="_addr($self, $addr)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$addr" />
+        </scope>
+        <scope ilk="function" line="222" lineend="339" name="mail" signature="mail($me, %opt)">
+          <variable ilk="argument" name="$me" />
+          <variable ilk="argument" name="%opt" />
+        </scope>
+        <scope ilk="function" line="342" lineend="342" name="send" signature="send($me)">
+          <variable ilk="argument" name="$me" />
+        </scope>
+        <scope ilk="function" line="343" lineend="343" name="send_or_mail" signature="send_or_mail($me)">
+          <variable ilk="argument" name="$me" />
+        </scope>
+        <scope ilk="function" line="344" lineend="344" name="send_and_mail" signature="send_and_mail($me)">
+          <variable ilk="argument" name="$me" />
+        </scope>
+        <scope ilk="function" line="347" lineend="354" name="reset" signature="reset($me)">
+          <variable ilk="argument" name="$me" />
+        </scope>
+        <scope ilk="function" line="357" lineend="409" name="recipient" signature="recipient($smtp)">
+          <variable ilk="argument" name="$smtp" />
+        </scope>
+        <scope ilk="function" line="418" lineend="431" name="data" signature="data($me)">
+          <variable ilk="argument" name="$me" />
+        </scope>
+        <scope ilk="function" line="434" lineend="447" name="bdat" signature="bdat($me, $data)">
+          <variable ilk="argument" name="$me" />
+          <variable ilk="argument" name="$data" />
+        </scope>
+        <scope ilk="function" line="450" lineend="463" name="bdatlast" signature="bdatlast($me, $data)">
+          <variable ilk="argument" name="$me" />
+          <variable ilk="argument" name="$data" />
+        </scope>
+        <scope ilk="function" line="466" lineend="470" name="datafh" signature="datafh($me)">
+          <variable ilk="argument" name="$me" />
+        </scope>
+        <scope ilk="function" line="473" lineend="479" name="expand" signature="expand($me)">
+          <variable ilk="argument" name="$me" />
+        </scope>
+        <scope ilk="function" line="482" lineend="482" name="verify" signature="verify()" />
+        <scope ilk="function" line="485" lineend="491" name="help" signature="help($me)">
+          <variable ilk="argument" name="$me" />
+        </scope>
+        <scope ilk="function" line="494" lineend="499" name="quit" signature="quit($me)">
+          <variable ilk="argument" name="$me" />
+        </scope>
+        <scope ilk="function" line="502" lineend="505" name="DESTROY" signature="DESTROY()" />
+        <scope ilk="function" line="512" lineend="512" name="_EHLO" signature="_EHLO()" />
+        <scope ilk="function" line="513" lineend="513" name="_HELO" signature="_HELO()" />
+        <scope ilk="function" line="514" lineend="514" name="_MAIL" signature="_MAIL()" />
+        <scope ilk="function" line="515" lineend="515" name="_RCPT" signature="_RCPT()" />
+        <scope ilk="function" line="516" lineend="516" name="_SEND" signature="_SEND()" />
+        <scope ilk="function" line="517" lineend="517" name="_SAML" signature="_SAML()" />
+        <scope ilk="function" line="518" lineend="518" name="_SOML" signature="_SOML()" />
+        <scope ilk="function" line="519" lineend="519" name="_VRFY" signature="_VRFY()" />
+        <scope ilk="function" line="520" lineend="520" name="_EXPN" signature="_EXPN()" />
+        <scope ilk="function" line="521" lineend="521" name="_HELP" signature="_HELP()" />
+        <scope ilk="function" line="522" lineend="522" name="_RSET" signature="_RSET()" />
+        <scope ilk="function" line="523" lineend="523" name="_NOOP" signature="_NOOP()" />
+        <scope ilk="function" line="524" lineend="524" name="_QUIT" signature="_QUIT()" />
+        <scope ilk="function" line="525" lineend="525" name="_DATA" signature="_DATA()" />
+        <scope ilk="function" line="526" lineend="526" name="_BDAT" signature="_BDAT()" />
+        <scope ilk="function" line="527" lineend="527" name="_TURN" signature="_TURN()" />
+        <scope ilk="function" line="528" lineend="528" name="_ETRN" signature="_ETRN()" />
+        <scope ilk="function" line="529" lineend="529" name="_AUTH" signature="_AUTH()" />
+      </scope>
+    </scope>
+    

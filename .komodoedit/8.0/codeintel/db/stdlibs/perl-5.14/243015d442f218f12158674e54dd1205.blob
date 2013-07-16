@@ -1,0 +1,51 @@
+<scope ilk="blob" lang="Perl" name="CPAN::Queue::Item">
+      <scope ilk="class" line="3" lineend="21" name="CPAN::Queue::Item">
+        <scope attributes="__ctor__" ilk="function" line="6" lineend="10" name="new" signature="new($class, @attr)">
+          <variable ilk="argument" name="$class" />
+          <variable ilk="argument" name="@attr" />
+        </scope>
+        <scope ilk="function" line="12" lineend="15" name="as_string" signature="as_string($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="18" lineend="21" name="reqtype" signature="reqtype($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+      </scope>
+      <scope ilk="class" line="23" lineend="200" name="CPAN::Queue">
+        <variable line="69" name="$VERSION" />
+        <variable line="69" name="@All" />
+        <scope ilk="function" line="73" lineend="78" name="queue_item" signature="queue_item($class, @attr)">
+          <variable ilk="argument" name="$class" />
+          <variable ilk="argument" name="@attr" />
+        </scope>
+        <scope ilk="function" line="81" lineend="87" name="qpush" signature="qpush($class, $obj)">
+          <variable ilk="argument" name="$class" />
+          <variable ilk="argument" name="$obj" />
+        </scope>
+        <scope ilk="function" line="90" lineend="93" name="first" signature="first()">
+          </scope>
+        <scope ilk="function" line="96" lineend="105" name="delete_first" signature="delete_first($class, $what)">
+          <variable ilk="argument" name="$class" />
+          <variable ilk="argument" name="$what" />
+        </scope>
+        <scope ilk="function" line="108" lineend="148" name="jumpqueue" signature="jumpqueue($class, @what)">
+          <variable ilk="argument" name="$class" />
+          <variable ilk="argument" name="@what" />
+        </scope>
+        <scope ilk="function" line="151" lineend="157" name="exists" signature="exists($self, $what)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$what" />
+        </scope>
+        <scope ilk="function" line="160" lineend="167" name="delete" signature="delete($self, $mod)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$mod" />
+        </scope>
+        <scope ilk="function" line="170" lineend="172" name="nullify_queue" signature="nullify_queue()" />
+        <scope ilk="function" line="175" lineend="177" name="size" signature="size()" />
+        <scope ilk="function" line="179" lineend="198" name="reqtype_of" signature="reqtype_of($self, $mod)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$mod" />
+        </scope>
+      </scope>
+    </scope>
+    

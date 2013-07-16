@@ -1,0 +1,15 @@
+<scope ilk="blob" lang="Perl" name="Module::Build::Platform::cygwin">
+      <scope classrefs="Module::Build::Platform::Unix" ilk="class" line="1" lineend="32" name="Module::Build::Platform::cygwin">
+        <import line="7" module="Module::Build::Platform::Unix" symbol="*" />
+        <variable line="4" name="$VERSION" />
+        <variable line="9" name="@ISA" />
+        <scope ilk="function" line="12" lineend="14" name="manpage_separator" signature="manpage_separator()" />
+        <scope ilk="function" line="21" lineend="30" name="_maybe_command" signature="_maybe_command($self, $file)">
+          <import line="25" module="Module::Build::Platform::Windows" />
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$file" />
+          <import line="25" module="Module::Build::Platform::Windows" />
+        </scope>
+      </scope>
+    </scope>
+    

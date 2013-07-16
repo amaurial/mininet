@@ -1,0 +1,96 @@
+<scope doc="&#xA;" ilk="blob" lang="Python" name="msilib.schema">
+      <variable citdl="Table" line="15" name="ActionText" />
+      <variable citdl="Table" line="20" name="AdminExecuteSequence" />
+      <variable citdl="Table" line="30" name="AdminUISequence" />
+      <variable citdl="Table" line="35" name="AdvtExecuteSequence" />
+      <variable citdl="Table" line="40" name="AdvtUISequence" />
+      <variable citdl="Table" line="45" name="AppId" />
+      <variable citdl="Table" line="54" name="AppSearch" />
+      <variable citdl="Table" line="62" name="BBControl" />
+      <variable citdl="Table" line="73" name="Billboard" />
+      <variable citdl="Table" line="89" name="Binary" />
+      <variable citdl="Table" line="93" name="BindImage" />
+      <variable citdl="Table" line="107" name="CCPSearch" />
+      <variable citdl="Table" line="110" name="CheckBox" />
+      <variable citdl="Table" line="114" name="Class" />
+      <variable citdl="Table" line="149" name="ComboBox" />
+      <variable citdl="Table" line="155" name="CompLocator" />
+      <variable citdl="Table" line="160" name="Complus" />
+      <variable citdl="Table" line="129" name="Component" />
+      <variable citdl="Table" line="25" name="Condition" />
+      <variable citdl="Table" line="169" name="Control" />
+      <variable citdl="Table" line="195" name="ControlCondition" />
+      <variable citdl="Table" line="201" name="ControlEvent" />
+      <variable citdl="Table" line="209" name="CreateFolder" />
+      <variable citdl="Table" line="213" name="CustomAction" />
+      <variable citdl="Table" line="183" name="Dialog" />
+      <variable citdl="Table" line="164" name="Directory" />
+      <variable citdl="Table" line="219" name="DrLocator" />
+      <variable citdl="Table" line="225" name="DuplicateFile" />
+      <variable citdl="Table" line="232" name="Environment" />
+      <variable citdl="Table" line="238" name="Error" />
+      <variable citdl="Table" line="242" name="EventMapping" />
+      <variable citdl="Table" line="248" name="Extension" />
+      <variable citdl="Table" line="79" name="Feature" />
+      <variable citdl="Table" line="260" name="FeatureComponents" />
+      <variable citdl="Table" line="97" name="File" />
+      <variable citdl="Table" line="264" name="FileSFPCatalog" />
+      <variable citdl="Table" line="273" name="Font" />
+      <variable citdl="Table" line="137" name="Icon" />
+      <variable citdl="Table" line="277" name="IniFile" />
+      <variable citdl="Table" line="287" name="IniLocator" />
+      <variable citdl="Table" line="295" name="InstallExecuteSequence" />
+      <variable citdl="Table" line="300" name="InstallUISequence" />
+      <variable citdl="Table" line="305" name="IsolatedComponent" />
+      <variable citdl="Table" line="309" name="LaunchCondition" />
+      <variable citdl="Table" line="313" name="ListBox" />
+      <variable citdl="Table" line="319" name="ListView" />
+      <variable citdl="Table" line="326" name="LockPermissions" />
+      <variable citdl="Table" line="255" name="MIME" />
+      <variable citdl="Table" line="333" name="Media" />
+      <variable citdl="Table" line="341" name="MoveFile" />
+      <variable citdl="Table" line="350" name="MsiAssembly" />
+      <variable citdl="Table" line="357" name="MsiAssemblyName" />
+      <variable citdl="Table" line="362" name="MsiDigitalCertificate" />
+      <variable citdl="Table" line="366" name="MsiDigitalSignature" />
+      <variable citdl="Table" line="372" name="MsiFileHash" />
+      <variable citdl="Table" line="380" name="MsiPatchHeaders" />
+      <variable citdl="Table" line="384" name="ODBCAttribute" />
+      <variable citdl="Table" line="396" name="ODBCDataSource" />
+      <variable citdl="Table" line="389" name="ODBCDriver" />
+      <variable citdl="Table" line="403" name="ODBCSourceAttribute" />
+      <variable citdl="Table" line="408" name="ODBCTranslator" />
+      <variable citdl="Table" line="415" name="Patch" />
+      <variable citdl="Table" line="423" name="PatchPackage" />
+      <variable citdl="Table" line="141" name="ProgId" />
+      <variable citdl="Table" line="58" name="Property" />
+      <variable citdl="Table" line="427" name="PublishComponent" />
+      <variable citdl="Table" line="434" name="RadioButton" />
+      <variable citdl="Table" line="453" name="RegLocator" />
+      <variable citdl="Table" line="445" name="Registry" />
+      <variable citdl="Table" line="460" name="RemoveFile" />
+      <variable citdl="Table" line="467" name="RemoveIniFile" />
+      <variable citdl="Table" line="477" name="RemoveRegistry" />
+      <variable citdl="Table" line="484" name="ReserveCost" />
+      <variable citdl="Table" line="268" name="SFPCatalog" />
+      <variable citdl="Table" line="491" name="SelfReg" />
+      <variable citdl="Table" line="495" name="ServiceControl" />
+      <variable citdl="Table" line="503" name="ServiceInstall" />
+      <variable citdl="Table" line="518" name="Shortcut" />
+      <variable citdl="Table" line="532" name="Signature" />
+      <scope classrefs="object" doc="&#xA;" ilk="class" name="Table">
+        <scope ilk="function" name="create" signature="create(self, db)" />
+        <scope ilk="function" name="add_field" signature="add_field(self, index, name, type)" />
+        <scope ilk="function" name="sql" signature="sql(self)" />
+        <scope ilk="function" name="__init__" signature="__init__(self, name)" />
+      </scope>
+      <variable citdl="Table" line="543" name="TextStyle" />
+      <variable citdl="Table" line="550" name="TypeLib" />
+      <variable citdl="Table" line="560" name="UIText" />
+      <variable citdl="Table" line="564" name="Upgrade" />
+      <variable citdl="Table" line="573" name="Verb" />
+      <variable citdl="list" line="580" name="tables" />
+      <variable attributes="protected __hidden__" citdl="Table()" line="3" name="_Validation" />
+      <variable attributes="protected __hidden__" citdl="list" line="582" name="_Validation_records" />
+    </scope>
+    

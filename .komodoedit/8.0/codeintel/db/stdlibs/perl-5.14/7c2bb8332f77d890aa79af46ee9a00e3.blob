@@ -1,0 +1,35 @@
+<scope ilk="blob" lang="Perl" name="Thread::Queue">
+      <scope ilk="class" line="1" lineend="476" name="Thread::Queue">
+        <import line="9" module="threads::shared" symbol="*" />
+        <import line="10" module="Scalar::Util" symbol="*" />
+        <import line="176" module="Carp" />
+        <import line="195" module="Carp" />
+        <variable line="6" name="$VERSION" />
+        <variable line="13" name="@CARP_NOT" />
+        <scope attributes="__ctor__" ilk="function" line="19" lineend="24" name="new" signature="new($class)">
+          <variable ilk="argument" name="$class" />
+        </scope>
+        <scope ilk="function" line="27" lineend="33" name="enqueue" signature="enqueue($queue)">
+          <variable ilk="argument" name="$queue" />
+        </scope>
+        <scope ilk="function" line="36" lineend="41" name="pending" signature="pending($queue)">
+          <variable ilk="argument" name="$queue" />
+        </scope>
+        <scope ilk="function" line="44" lineend="62" name="dequeue" signature="dequeue($queue)">
+          <variable ilk="argument" name="$queue" />
+        </scope>
+        <scope ilk="function" line="65" lineend="82" name="dequeue_nb" signature="dequeue_nb($queue)">
+          <variable ilk="argument" name="$queue" />
+        </scope>
+        <scope ilk="function" line="85" lineend="91" name="peek" signature="peek($queue)">
+          <variable ilk="argument" name="$queue" />
+        </scope>
+        <scope ilk="function" line="94" lineend="125" name="insert" signature="insert($queue)">
+          <variable ilk="argument" name="$queue" />
+        </scope>
+        <scope ilk="function" line="128" lineend="164" name="extract" signature="extract($queue)">
+          <variable ilk="argument" name="$queue" />
+        </scope>
+      </scope>
+    </scope>
+    

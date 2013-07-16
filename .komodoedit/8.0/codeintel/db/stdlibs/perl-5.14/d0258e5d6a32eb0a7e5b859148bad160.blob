@@ -1,0 +1,26 @@
+<scope ilk="blob" lang="Perl" name="LWP::Protocol::https">
+      <scope classrefs="LWP::Protocol::http" ilk="class" line="1" lineend="81" name="LWP::Protocol::https">
+        <import line="6" module="LWP::Protocol::http" />
+        <variable line="4" name="$VERSION" />
+        <scope ilk="function" line="9" lineend="12" name="socket_type" signature="socket_type()" />
+        <scope ilk="function" line="14" lineend="47" name="_extra_sock_opts" signature="_extra_sock_opts($self)">
+          <import line="25" module="Mozilla::CA" />
+          <variable ilk="argument" name="$self" />
+          <import line="25" module="Mozilla::CA" />
+        </scope>
+        <scope ilk="function" line="49" lineend="61" name="_check_sock" signature="_check_sock($self, $req, $sock)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$req" />
+          <variable ilk="argument" name="$sock" />
+        </scope>
+        <scope ilk="function" line="63" lineend="81" name="_get_sock_info" signature="_get_sock_info($self, $res, $sock)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$res" />
+          <variable ilk="argument" name="$sock" />
+        </scope>
+      </scope>
+      <scope classrefs="Net::HTTPS LWP::Protocol::http::SocketMethods" ilk="class" line="84" lineend="89" name="LWP::Protocol::https::Socket">
+        <import line="86" module="Net::HTTPS" />
+      </scope>
+    </scope>
+    

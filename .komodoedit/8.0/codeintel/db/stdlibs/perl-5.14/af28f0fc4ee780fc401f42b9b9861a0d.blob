@@ -1,0 +1,94 @@
+<scope ilk="blob" lang="Perl" name="DBI::Gofer::Execute">
+      <scope ilk="class" line="1" lineend="710" name="DBI::Gofer::Execute">
+        <import line="13" module="Carp" symbol="*" />
+        <import line="15" module="DBI" symbol="dbi_time" />
+        <import line="16" module="DBI::Gofer::Request" symbol="*" />
+        <import line="17" module="DBI::Gofer::Response" symbol="*" />
+        <variable line="21" name="$VERSION" />
+        <variable line="23" name="@all_dbh_methods" />
+        <variable line="24" name="%all_dbh_methods" />
+        <variable line="26" name="$local_log" />
+        <variable line="28" name="$current_dbh" />
+        <scope ilk="function" line="62" lineend="69" name="new" signature="new($self, $args)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$args" />
+        </scope>
+        <scope ilk="function" line="72" lineend="75" name="valid_configuration_attributes" signature="valid_configuration_attributes($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="139" lineend="229" name="_connect" signature="_connect($self, $request)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$request" />
+        </scope>
+        <scope ilk="function" line="232" lineend="235" name="reset_dbh" signature="reset_dbh($self, $dbh)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$dbh" />
+        </scope>
+        <scope ilk="function" line="238" lineend="272" name="new_response_with_err" signature="new_response_with_err($self, $rv, $eval_error, $dbh)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$rv" />
+          <variable ilk="argument" name="$eval_error" />
+          <variable ilk="argument" name="$dbh" />
+        </scope>
+        <scope ilk="function" line="275" lineend="315" name="execute_request" signature="execute_request($self, $request)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$request" />
+        </scope>
+        <scope ilk="function" line="318" lineend="361" name="execute_dbh_request" signature="execute_dbh_request($self, $request)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$request" />
+        </scope>
+        <scope ilk="function" line="364" lineend="381" name="gather_dbh_attributes" signature="gather_dbh_attributes($self, $dbh, $dbh_attributes)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$dbh" />
+          <variable ilk="argument" name="$dbh_attributes" />
+        </scope>
+        <scope ilk="function" line="384" lineend="426" name="_std_response_attribute_names" signature="_std_response_attribute_names($self, $h)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$h" />
+        </scope>
+        <scope ilk="function" line="429" lineend="491" name="execute_sth_request" signature="execute_sth_request($self, $request)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$request" />
+        </scope>
+        <scope ilk="function" line="494" lineend="530" name="gather_sth_resultsets" signature="gather_sth_resultsets($self, $sth, $request, $response)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$sth" />
+          <variable ilk="argument" name="$request" />
+          <variable ilk="argument" name="$response" />
+        </scope>
+        <scope ilk="function" line="533" lineend="554" name="fetch_result_set" signature="fetch_result_set($self, $sth, $sth_attr)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$sth" />
+          <variable ilk="argument" name="$sth_attr" />
+        </scope>
+        <scope ilk="function" line="557" lineend="571" name="_get_default_methods" signature="_get_default_methods($dbh)">
+          <variable ilk="argument" name="$dbh" />
+        </scope>
+        <scope ilk="function" line="575" lineend="627" name="_install_rand_callbacks" signature="_install_rand_callbacks($self, $dbh, $dbi_gofer_random)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$dbh" />
+          <variable ilk="argument" name="$dbi_gofer_random" />
+        </scope>
+        <scope ilk="function" line="631" lineend="662" name="_mk_rand_callback" signature="_mk_rand_callback($self, $method, $fail_percent, $delay_percent, $delay_duration, $fail_err, $h)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$method" />
+          <variable ilk="argument" name="$fail_percent" />
+          <variable ilk="argument" name="$delay_percent" />
+          <variable ilk="argument" name="$delay_duration" />
+          <variable ilk="argument" name="$fail_err" />
+          <variable ilk="argument" name="$h" />
+        </scope>
+        <scope ilk="function" line="665" lineend="707" name="update_stats" signature="update_stats($self, $request, $response, $frozen_request, $frozen_response, $time_received, $store_meta, $other_meta)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$request" />
+          <variable ilk="argument" name="$response" />
+          <variable ilk="argument" name="$frozen_request" />
+          <variable ilk="argument" name="$frozen_response" />
+          <variable ilk="argument" name="$time_received" />
+          <variable ilk="argument" name="$store_meta" />
+          <variable ilk="argument" name="$other_meta" />
+        </scope>
+      </scope>
+    </scope>
+    

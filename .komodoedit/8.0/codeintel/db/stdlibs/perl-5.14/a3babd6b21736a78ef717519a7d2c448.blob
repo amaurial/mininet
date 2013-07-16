@@ -1,0 +1,152 @@
+<scope ilk="blob" lang="Perl" name="HTTP::Tiny">
+      <scope ilk="class" line="10" lineend="294" name="HTTP::Tiny">
+        <import line="18" module="Carp" />
+        <variable line="12" name="$HTTP::Tiny::VERSION" />
+        <scope attributes="__ctor__" ilk="function" line="32" lineend="44" name="new" signature="new($class, %args)">
+          <variable ilk="argument" name="$class" />
+          <variable ilk="argument" name="%args" />
+        </scope>
+        <scope ilk="function" line="47" lineend="52" name="get" signature="get($self, $url, $args)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$url" />
+          <variable ilk="argument" name="$args" />
+        </scope>
+        <scope ilk="function" line="55" lineend="81" name="mirror" signature="mirror($self, $url, $file, $args)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$url" />
+          <variable ilk="argument" name="$file" />
+          <variable ilk="argument" name="$args" />
+        </scope>
+        <scope ilk="function" line="86" lineend="113" name="request" signature="request($self, $method, $url, $args)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$method" />
+          <variable ilk="argument" name="$url" />
+          <variable ilk="argument" name="$args" />
+        </scope>
+        <scope ilk="function" line="120" lineend="168" name="_request" signature="_request($self, $method, $url, $args)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$method" />
+          <variable ilk="argument" name="$url" />
+          <variable ilk="argument" name="$args" />
+        </scope>
+        <scope ilk="function" line="170" lineend="206" name="_prepare_headers_and_cb" signature="_prepare_headers_and_cb($self, $request, $args)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$request" />
+          <variable ilk="argument" name="$args" />
+        </scope>
+        <scope ilk="function" line="208" lineend="226" name="_prepare_data_cb" signature="_prepare_data_cb($self, $response, $args)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$response" />
+          <variable ilk="argument" name="$args" />
+        </scope>
+        <scope ilk="function" line="228" lineend="242" name="_maybe_redirect" signature="_maybe_redirect($self, $request, $response, $args)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$request" />
+          <variable ilk="argument" name="$response" />
+          <variable ilk="argument" name="$args" />
+        </scope>
+        <scope ilk="function" line="244" lineend="263" name="_split_url" signature="_split_url()">
+          </scope>
+        <scope ilk="function" line="268" lineend="275" name="_http_date" signature="_http_date()">
+          </scope>
+        <scope ilk="function" line="277" lineend="294" name="_parse_http_date" signature="_parse_http_date($self, $str)">
+          <import line="279" module="Time::Local" />
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$str" />
+          <import line="279" module="Time::Local" />
+        </scope>
+      </scope>
+      <scope ilk="class" line="297" lineend="750" name="HTTP::Tiny::Handle">
+        <import line="301" module="Carp" symbol="croak" />
+        <import line="302" module="Errno" symbol="EINTR" />
+        <import line="302" module="Errno" symbol="EPIPE" />
+        <import line="303" module="IO::Socket" symbol="SOCK_STREAM" />
+        <scope ilk="function" line="305" lineend="305" name="BUFSIZE" signature="BUFSIZE()" />
+        <scope attributes="__ctor__" ilk="function" line="318" lineend="327" name="new" signature="new($class, %args)">
+          <variable ilk="argument" name="$class" />
+          <variable ilk="argument" name="%args" />
+        </scope>
+        <scope ilk="function" line="335" lineend="372" name="connect" signature="connect($self, $scheme, $host, $port)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$scheme" />
+          <variable ilk="argument" name="$host" />
+          <variable ilk="argument" name="$port" />
+        </scope>
+        <scope ilk="function" line="374" lineend="379" name="close" signature="close($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="381" lineend="412" name="write" signature="write($self, $buf)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$buf" />
+        </scope>
+        <scope ilk="function" line="414" lineend="443" name="read" signature="read($self, $len, $allow_partial)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$len" />
+          <variable ilk="argument" name="$allow_partial" />
+        </scope>
+        <scope ilk="function" line="445" lineend="467" name="readline" signature="readline($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="469" lineend="510" name="read_header_lines" signature="read_header_lines($self, $headers)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$headers" />
+        </scope>
+        <scope ilk="function" line="512" lineend="518" name="write_request" signature="write_request($self, $request)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$request" />
+        </scope>
+        <scope ilk="function" line="528" lineend="552" name="write_header_lines" signature="write_header_lines($self, $headers)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$headers" />
+        </scope>
+        <scope ilk="function" line="554" lineend="565" name="read_body" signature="read_body($self, $cb, $response)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$cb" />
+          <variable ilk="argument" name="$response" />
+        </scope>
+        <scope ilk="function" line="567" lineend="576" name="write_body" signature="write_body($self, $request)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$request" />
+        </scope>
+        <scope ilk="function" line="578" lineend="597" name="read_content_body" signature="read_content_body($self, $cb, $response, $content_length)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$cb" />
+          <variable ilk="argument" name="$response" />
+          <variable ilk="argument" name="$content_length" />
+        </scope>
+        <scope ilk="function" line="599" lineend="622" name="write_content_body" signature="write_content_body($self, $request)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$request" />
+        </scope>
+        <scope ilk="function" line="624" lineend="644" name="read_chunked_body" signature="read_chunked_body($self, $cb, $response)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$cb" />
+          <variable ilk="argument" name="$response" />
+        </scope>
+        <scope ilk="function" line="646" lineend="675" name="write_chunked_body" signature="write_chunked_body($self, $request)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$request" />
+        </scope>
+        <scope ilk="function" line="677" lineend="697" name="read_response_header" signature="read_response_header($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="699" lineend="705" name="write_request_header" signature="write_request_header($self, $method, $request_uri, $headers)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$method" />
+          <variable ilk="argument" name="$request_uri" />
+          <variable ilk="argument" name="$headers" />
+        </scope>
+        <scope ilk="function" line="707" lineend="736" name="_do_timeout" signature="_do_timeout($self, $type, $timeout)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$type" />
+          <variable ilk="argument" name="$timeout" />
+        </scope>
+        <scope ilk="function" line="738" lineend="742" name="can_read" signature="can_read($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="744" lineend="748" name="can_write" signature="can_write($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+      </scope>
+    </scope>
+    

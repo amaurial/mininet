@@ -1,0 +1,38 @@
+<scope ilk="blob" lang="Perl" name="ActiveState::Run">
+      <scope ilk="class" line="1" lineend="549" name="ActiveState::Run">
+        <import line="10" module="Carp" />
+        <variable line="5" name="$VERSION" />
+        <variable line="8" name="@EXPORT_OK" />
+        <scope ilk="function" line="12" lineend="21" name="_echo_cmd" signature="_echo_cmd()">
+          </scope>
+        <scope ilk="function" line="23" lineend="49" name="run" signature="run(@cmds)">
+          <variable ilk="argument" name="@cmds" />
+        </scope>
+        <scope ilk="function" line="51" lineend="290" name="run_ex" signature="run_ex(%opt, $before)">
+          <import line="142" module="Win32::Job" />
+          <import line="155" module="Win32::Process" />
+          <import line="162" module="Time::HiRes" />
+          <import line="182" module="POSIX" />
+          <import line="183" module="Time::HiRes" />
+          <import line="245" module="POSIX" />
+          <import line="250" module="BSD::Resource" />
+          <import line="274" module="POSIX" />
+          <variable ilk="argument" name="%opt" />
+          <variable ilk="argument" name="$before" />
+          <import line="142" module="Win32::Job" />
+          <import line="155" module="Win32::Process" />
+          <import line="162" module="Time::HiRes" />
+          <import line="182" module="POSIX" />
+          <import line="183" module="Time::HiRes" />
+          <import line="245" module="POSIX" />
+          <import line="250" module="BSD::Resource" />
+          <import line="274" module="POSIX" />
+        </scope>
+        <scope ilk="function" line="292" lineend="307" name="shell_quote" signature="shell_quote()">
+          </scope>
+        <scope ilk="function" line="309" lineend="334" name="decode_status" signature="decode_status($rc)">
+          <variable ilk="argument" name="$rc" />
+        </scope>
+      </scope>
+    </scope>
+    

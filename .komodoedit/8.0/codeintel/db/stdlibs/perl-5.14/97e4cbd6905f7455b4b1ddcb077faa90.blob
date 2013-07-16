@@ -1,0 +1,114 @@
+<scope ilk="blob" lang="Perl" name="DBD::Proxy::RPC::PlClient">
+      <import line="24" module="Carp" symbol="*" />
+      <import line="26" module="DBI" />
+      <import line="29" module="RPC::PlClient" symbol="*" />
+      <scope ilk="class" line="31" lineend="41" name="DBD::Proxy::RPC::PlClient">
+        <variable line="32" name="@DBD::Proxy::RPC::PlClient::ISA" />
+        <scope ilk="function" line="33" lineend="41" name="Call" signature="Call($self, $rpcmeth, $obj, $method, @args)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$rpcmeth" />
+          <variable ilk="argument" name="$obj" />
+          <variable ilk="argument" name="$method" />
+          <variable ilk="argument" name="@args" />
+        </scope>
+      </scope>
+      <scope ilk="class" line="45" lineend="90" name="DBD::Proxy">
+        <variable line="47" name="$drh" />
+        <variable line="47" name="$VERSION" />
+        <variable line="47" name="%ATTR" />
+        <scope ilk="function" line="65" lineend="79" name="driver" signature="driver($class, $attr)">
+          <variable ilk="argument" name="$class" />
+          <variable ilk="argument" name="$attr" />
+        </scope>
+        <scope ilk="function" line="81" lineend="83" name="CLONE" signature="CLONE()" />
+        <scope ilk="function" line="85" lineend="90" name="proxy_set_err" signature="proxy_set_err($h, $errmsg)">
+          <variable ilk="argument" name="$h" />
+          <variable ilk="argument" name="$errmsg" />
+        </scope>
+      </scope>
+      <scope ilk="class" line="92" lineend="215" name="DBD::Proxy::dr">
+        <variable line="94" name="$DBD::Proxy::dr::imp_data_size" />
+        <scope ilk="function" line="96" lineend="212" name="connect" signature="connect($drh, $dsn, $user, $auth, $attr)">
+          <variable ilk="argument" name="$drh" />
+          <variable ilk="argument" name="$dsn" />
+          <variable ilk="argument" name="$user" />
+          <variable ilk="argument" name="$auth" />
+          <variable ilk="argument" name="$attr" />
+        </scope>
+        <scope ilk="function" line="215" lineend="215" name="DESTROY" signature="DESTROY()" />
+      </scope>
+      <scope ilk="class" line="218" lineend="475" name="DBD::Proxy::db">
+        <variable line="220" name="$DBD::Proxy::db::imp_data_size" />
+        <variable line="237" name="$AUTOLOAD" />
+        <variable line="237" name="%ATTR" />
+        <scope ilk="function" line="257" lineend="290" name="AUTOLOAD" signature="AUTOLOAD()">
+          </scope>
+        <scope ilk="function" line="292" lineend="296" name="DESTROY" signature="DESTROY($dbh)">
+          <variable ilk="argument" name="$dbh" />
+        </scope>
+        <scope ilk="function" line="298" lineend="323" name="disconnect" signature="disconnect($dbh)">
+          <variable ilk="argument" name="$dbh" />
+        </scope>
+        <scope ilk="function" line="326" lineend="352" name="STORE" signature="STORE($dbh, $attr, $val)">
+          <variable ilk="argument" name="$dbh" />
+          <variable ilk="argument" name="$attr" />
+          <variable ilk="argument" name="$val" />
+        </scope>
+        <scope ilk="function" line="354" lineend="371" name="FETCH" signature="FETCH($dbh, $attr)">
+          <variable ilk="argument" name="$dbh" />
+          <variable ilk="argument" name="$attr" />
+        </scope>
+        <scope ilk="function" line="373" lineend="403" name="prepare" signature="prepare($dbh, $stmt, $attr)">
+          <variable ilk="argument" name="$dbh" />
+          <variable ilk="argument" name="$stmt" />
+          <variable ilk="argument" name="$attr" />
+        </scope>
+        <scope ilk="function" line="405" lineend="430" name="quote" signature="quote($dbh)">
+          <variable ilk="argument" name="$dbh" />
+        </scope>
+        <scope ilk="function" line="432" lineend="459" name="table_info" signature="table_info($dbh)">
+          <variable ilk="argument" name="$dbh" />
+        </scope>
+        <scope ilk="function" line="461" lineend="465" name="tables" signature="tables($dbh)">
+          <variable ilk="argument" name="$dbh" />
+        </scope>
+        <scope ilk="function" line="468" lineend="475" name="type_info_all" signature="type_info_all($dbh)">
+          <variable ilk="argument" name="$dbh" />
+        </scope>
+      </scope>
+      <scope ilk="class" line="478" lineend="723" name="DBD::Proxy::st">
+        <variable line="480" name="$DBD::Proxy::st::imp_data_size" />
+        <variable line="482" name="%ATTR" />
+        <variable line="507" name="*AUTOLOAD" />
+        <variable line="624" name="*fetchrow_arrayref" />
+        <variable line="715" name="*bind_param_inout" />
+        <scope ilk="function" line="509" lineend="589" name="execute" signature="execute($sth)">
+          <variable ilk="argument" name="$sth" />
+        </scope>
+        <scope ilk="function" line="591" lineend="623" name="fetch" signature="fetch($sth)">
+          <variable ilk="argument" name="$sth" />
+        </scope>
+        <scope ilk="function" line="626" lineend="629" name="rows" signature="rows()">
+          </scope>
+        <scope ilk="function" line="631" lineend="648" name="finish" signature="finish($sth)">
+          <variable ilk="argument" name="$sth" />
+        </scope>
+        <scope ilk="function" line="650" lineend="672" name="STORE" signature="STORE($sth, $attr, $val)">
+          <variable ilk="argument" name="$sth" />
+          <variable ilk="argument" name="$attr" />
+          <variable ilk="argument" name="$val" />
+        </scope>
+        <scope ilk="function" line="674" lineend="709" name="FETCH" signature="FETCH($sth, $attr)">
+          <variable ilk="argument" name="$sth" />
+          <variable ilk="argument" name="$attr" />
+        </scope>
+        <scope ilk="function" line="711" lineend="714" name="bind_param" signature="bind_param($sth, $param)">
+          <variable ilk="argument" name="$sth" />
+          <variable ilk="argument" name="$param" />
+        </scope>
+        <scope ilk="function" line="717" lineend="720" name="DESTROY" signature="DESTROY($sth)">
+          <variable ilk="argument" name="$sth" />
+        </scope>
+      </scope>
+    </scope>
+    

@@ -1,0 +1,32 @@
+<scope ilk="blob" lang="Perl" name="TAP::Parser::ResultFactory">
+      <scope classrefs="TAP::Object" ilk="class" line="1" lineend="189" name="TAP::Parser::ResultFactory">
+        <import line="6" module="TAP::Object" />
+        <import line="7" module="TAP::Parser::Result::Bailout" />
+        <import line="8" module="TAP::Parser::Result::Comment" />
+        <import line="9" module="TAP::Parser::Result::Plan" />
+        <import line="10" module="TAP::Parser::Result::Pragma" />
+        <import line="11" module="TAP::Parser::Result::Test" />
+        <import line="12" module="TAP::Parser::Result::Unknown" />
+        <import line="13" module="TAP::Parser::Result::Version" />
+        <import line="14" module="TAP::Parser::Result::YAML" />
+        <variable line="4" name="$VERSION" />
+        <variable line="4" name="%CLASS_FOR" />
+        <variable line="4" name="@ISA" />
+        <scope ilk="function" line="65" lineend="69" name="make_result" signature="make_result($proto, $token)">
+          <variable ilk="argument" name="$proto" />
+          <variable ilk="argument" name="$token" />
+        </scope>
+        <scope ilk="function" line="112" lineend="121" name="class_for" signature="class_for($class, $type)">
+          <import line="119" module="Carp" />
+          <variable ilk="argument" name="$class" />
+          <variable ilk="argument" name="$type" />
+          <import line="119" module="Carp" />
+        </scope>
+        <scope ilk="function" line="123" lineend="129" name="register_type" signature="register_type($class, $type, $rclass)">
+          <variable ilk="argument" name="$class" />
+          <variable ilk="argument" name="$type" />
+          <variable ilk="argument" name="$rclass" />
+        </scope>
+      </scope>
+    </scope>
+    

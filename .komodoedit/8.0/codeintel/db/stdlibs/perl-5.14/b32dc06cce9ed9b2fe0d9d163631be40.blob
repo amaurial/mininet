@@ -1,0 +1,36 @@
+<scope ilk="blob" lang="Perl" name="DBD::Gofer::Transport::pipeone">
+      <scope ilk="class" line="1" lineend="207" name="DBD::Gofer::Transport::pipeone">
+        <import line="13" module="Carp" symbol="*" />
+        <import line="14" module="Fcntl" symbol="*" />
+        <import line="15" module="IO::Select" symbol="*" />
+        <import line="16" module="IPC::Open3" symbol="open3" />
+        <import line="17" module="Symbol" symbol="gensym" />
+        <variable line="21" name="$VERSION" />
+        <scope ilk="function" line="29" lineend="43" name="new" signature="new($self, $args)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$args" />
+        </scope>
+        <scope ilk="function" line="47" lineend="53" name="nonblock" signature="nonblock($fh)">
+          <variable ilk="argument" name="$fh" />
+        </scope>
+        <scope ilk="function" line="56" lineend="85" name="start_pipe_command" signature="start_pipe_command($self, $cmd)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$cmd" />
+        </scope>
+        <scope ilk="function" line="88" lineend="94" name="cmd_as_string" signature="cmd_as_string($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="97" lineend="116" name="transmit_request_by_transport" signature="transmit_request_by_transport($self, $request)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$request" />
+        </scope>
+        <scope ilk="function" line="119" lineend="162" name="read_response_from_fh" signature="read_response_from_fh($self, $fh_actions)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$fh_actions" />
+        </scope>
+        <scope ilk="function" line="165" lineend="204" name="receive_response_by_transport" signature="receive_response_by_transport($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+      </scope>
+    </scope>
+    

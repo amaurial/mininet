@@ -1,0 +1,55 @@
+<scope ilk="blob" lang="Perl" name="CPANPLUS::Internals">
+      <scope classrefs="CPANPLUS::Internals::Extract CPANPLUS::Internals::Fetch CPANPLUS::Internals::Utils CPANPLUS::Internals::Search CPANPLUS::Internals::Report" ilk="class" line="1" lineend="517" name="CPANPLUS::Internals">
+        <import line="8" module="Config" symbol="*" />
+        <import line="11" module="CPANPLUS::Error" symbol="*" />
+        <import line="13" module="CPANPLUS::Selfupdate" symbol="*" />
+        <import line="15" module="CPANPLUS::Internals::Extract" symbol="*" />
+        <import line="16" module="CPANPLUS::Internals::Fetch" symbol="*" />
+        <import line="17" module="CPANPLUS::Internals::Utils" symbol="*" />
+        <import line="18" module="CPANPLUS::Internals::Constants" symbol="*" />
+        <import line="19" module="CPANPLUS::Internals::Search" symbol="*" />
+        <import line="20" module="CPANPLUS::Internals::Report" symbol="*" />
+        <import line="23" module="base" />
+        <import line="24" module="Cwd" symbol="cwd" />
+        <import line="25" module="Module::Load" symbol="load" />
+        <import line="26" module="Params::Check" symbol="check" />
+        <import line="27" module="Locale::Maketext::Simple" symbol="Class" />
+        <import line="28" module="Module::Load::Conditional" symbol="can_load" />
+        <import line="30" module="Object::Accessor" symbol="*" />
+        <variable line="35" name="$VERSION" />
+        <variable line="35" name="@ISA" />
+        <variable line="272" name="$File&apos;Fetch::METHOD_FAIL" />
+        <scope attributes="__ctor__" ilk="function" line="144" lineend="223" name="_init" signature="_init($class, %hash)">
+          <variable ilk="argument" name="$class" />
+          <variable ilk="argument" name="%hash" />
+        </scope>
+        <scope ilk="function" line="236" lineend="290" name="_flush" signature="_flush($self, %hash)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="%hash" />
+        </scope>
+        <scope ilk="function" line="348" lineend="365" name="_register_callback" signature="_register_callback($self, %hash)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="%hash" />
+        </scope>
+        <scope ilk="function" line="414" lineend="439" name="_add_to_includepath" signature="_add_to_includepath($self, %hash)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="%hash" />
+        </scope>
+        <scope ilk="function" line="474" lineend="474" name="_inc_id" signature="_inc_id()" />
+        <scope ilk="function" line="476" lineend="476" name="_last_id" signature="_last_id()" />
+        <scope ilk="function" line="478" lineend="490" name="_store_id" signature="_store_id($self, $obj)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$obj" />
+        </scope>
+        <scope ilk="function" line="492" lineend="498" name="_retrieve_id" signature="_retrieve_id($self, $id)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$id" />
+        </scope>
+        <scope ilk="function" line="500" lineend="505" name="_remove_id" signature="_remove_id($self, $id)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$id" />
+        </scope>
+        <scope ilk="function" line="507" lineend="507" name="_return_all_objects" signature="_return_all_objects()" />
+      </scope>
+    </scope>
+    

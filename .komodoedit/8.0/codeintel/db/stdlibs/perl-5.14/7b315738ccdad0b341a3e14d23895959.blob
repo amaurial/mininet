@@ -1,0 +1,22 @@
+<scope ilk="blob" lang="Perl" name="DBI::Const::GetInfoReturn">
+      <scope classrefs="Exporter" ilk="class" line="10" lineend="105" name="DBI::Const::GetInfoReturn">
+        <import line="14" module="Exporter" />
+        <import line="39" module="DBI::Const::GetInfoType" symbol="*" />
+        <import line="41" module="DBI::Const::GetInfo::ANSI" />
+        <import line="42" module="DBI::Const::GetInfo::ODBC" />
+        <variable attributes="__exported__" line="16" name="%GetInfoReturnTypes" />
+        <variable attributes="__exported__" line="16" name="%GetInfoReturnValues" />
+        <variable line="16" name="@EXPORT" />
+        <variable line="16" name="@EXPORT_OK" />
+        <variable line="16" name="@ISA" />
+        <scope ilk="function" line="67" lineend="79" name="Format" signature="Format($InfoType, $Value)">
+          <variable ilk="argument" name="$InfoType" />
+          <variable ilk="argument" name="$Value" />
+        </scope>
+        <scope ilk="function" line="82" lineend="103" name="Explain" signature="Explain($InfoType, $Value)">
+          <variable ilk="argument" name="$InfoType" />
+          <variable ilk="argument" name="$Value" />
+        </scope>
+      </scope>
+    </scope>
+    

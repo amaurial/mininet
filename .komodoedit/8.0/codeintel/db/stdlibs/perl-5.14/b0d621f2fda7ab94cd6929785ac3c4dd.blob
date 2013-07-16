@@ -1,0 +1,40 @@
+<scope ilk="blob" lang="Perl" name="HTTP::Request">
+      <scope classrefs="HTTP::Message" ilk="class" line="1" lineend="134" name="HTTP::Request">
+        <import line="3" module="HTTP::Message" />
+        <variable line="5" name="$VERSION" />
+        <variable line="88" name="*url" />
+        <scope ilk="function" line="11" lineend="18" name="new" signature="new($class, $method, $uri, $header, $content)">
+          <variable ilk="argument" name="$class" />
+          <variable ilk="argument" name="$method" />
+          <variable ilk="argument" name="$uri" />
+          <variable ilk="argument" name="$header" />
+          <variable ilk="argument" name="$content" />
+        </scope>
+        <scope ilk="function" line="21" lineend="39" name="parse" signature="parse($class, $str)">
+          <variable ilk="argument" name="$class" />
+          <variable ilk="argument" name="$str" />
+        </scope>
+        <scope attributes="__ctor__" ilk="function" line="42" lineend="49" name="clone" signature="clone($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="52" lineend="55" name="method" signature="method()" />
+        <scope ilk="function" line="58" lineend="86" name="uri" signature="uri($self, $uri)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$uri" />
+        </scope>
+        <scope ilk="function" line="90" lineend="94" name="uri_canonical" signature="uri_canonical($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="97" lineend="101" name="accept_decodable" signature="accept_decodable($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="103" lineend="117" name="as_string" signature="as_string($self, $eol)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$eol" />
+        </scope>
+        <scope ilk="function" line="119" lineend="131" name="dump" signature="dump($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+      </scope>
+    </scope>
+    

@@ -1,0 +1,66 @@
+<scope ilk="blob" lang="Perl" name="IPC::Semaphore">
+      <scope ilk="class" line="17" lineend="160" name="IPC::Semaphore">
+        <import line="19" module="IPC::SysV" symbol="GETNCNT" />
+        <import line="19" module="IPC::SysV" symbol="GETZCNT" />
+        <import line="19" module="IPC::SysV" symbol="GETVAL" />
+        <import line="19" module="IPC::SysV" symbol="SETVAL" />
+        <import line="19" module="IPC::SysV" symbol="GETPID" />
+        <import line="19" module="IPC::SysV" symbol="GETALL" />
+        <import line="19" module="IPC::SysV" symbol="SETALL" />
+        <import line="20" module="IPC::SysV" symbol="IPC_STAT" />
+        <import line="20" module="IPC::SysV" symbol="IPC_SET" />
+        <import line="20" module="IPC::SysV" symbol="IPC_RMID" />
+        <import line="23" module="Carp" symbol="*" />
+        <variable line="22" name="$VERSION" />
+        <scope ilk="function" line="48" lineend="57" name="new" signature="new($class)">
+          <variable ilk="argument" name="$class" />
+        </scope>
+        <scope ilk="function" line="59" lineend="62" name="id" signature="id($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="64" lineend="67" name="remove" signature="remove($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="69" lineend="75" name="getncnt" signature="getncnt($self, $sem)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$sem" />
+        </scope>
+        <scope ilk="function" line="77" lineend="83" name="getzcnt" signature="getzcnt($self, $sem)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$sem" />
+        </scope>
+        <scope ilk="function" line="85" lineend="91" name="getval" signature="getval($self, $sem)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$sem" />
+        </scope>
+        <scope ilk="function" line="93" lineend="99" name="getpid" signature="getpid($self, $sem)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$sem" />
+        </scope>
+        <scope ilk="function" line="101" lineend="107" name="op" signature="op($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="109" lineend="115" name="stat" signature="stat($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="117" lineend="136" name="set" signature="set($self, %arg)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="%arg" />
+        </scope>
+        <scope ilk="function" line="138" lineend="144" name="getall" signature="getall($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="146" lineend="150" name="setall" signature="setall($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="152" lineend="158" name="setval" signature="setval($self, $sem, $val)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$sem" />
+          <variable ilk="argument" name="$val" />
+        </scope>
+      </scope>
+      <scope ilk="class" line="32" lineend="45" name="IPC::Semaphore::stat">
+        <import line="34" module="Class::Struct" symbol="struct" />
+      </scope>
+    </scope>
+    

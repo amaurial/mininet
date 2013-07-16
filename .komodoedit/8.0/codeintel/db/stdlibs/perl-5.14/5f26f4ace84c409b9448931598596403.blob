@@ -1,0 +1,219 @@
+<scope ilk="blob" lang="Perl" name="GD::Graph::axestype">
+      <scope ilk="class" line="12" lineend="2119" name="GD::Graph::axestype">
+        <import line="18" module="GD::Graph" symbol="*" />
+        <import line="19" module="GD::Graph::utils" symbol="**" />
+        <import line="20" module="Carp" symbol="*" />
+        <variable line="22" name="@GD::Graph::axestype::ISA" />
+        <scope ilk="function" line="196" lineend="200" name="_has_default" signature="_has_default($self, $attr)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$attr" />
+        </scope>
+        <scope ilk="function" line="202" lineend="217" name="initialise" signature="initialise($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="220" lineend="241" name="plot" signature="plot($self, $data)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$data" />
+        </scope>
+        <scope ilk="function" line="243" lineend="282" name="set" signature="set($self, %args)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="%args" />
+        </scope>
+        <scope ilk="function" line="284" lineend="331" name="setup_text" signature="setup_text($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="333" lineend="337" name="set_x_label_font" signature="set_x_label_font($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="338" lineend="342" name="set_y_label_font" signature="set_y_label_font($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="343" lineend="347" name="set_x_axis_font" signature="set_x_axis_font($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="349" lineend="353" name="set_y_axis_font" signature="set_y_axis_font($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="355" lineend="359" name="set_values_font" signature="set_values_font($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="361" lineend="365" name="set_legend" signature="set_legend($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="367" lineend="371" name="set_legend_font" signature="set_legend_font($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="373" lineend="391" name="get_hotspot" signature="get_hotspot($self, $ds, $np)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$ds" />
+          <variable ilk="argument" name="$np" />
+        </scope>
+        <scope ilk="function" line="393" lineend="399" name="_set_feature_coords" signature="_set_feature_coords($self, $feature, $type)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$feature" />
+          <variable ilk="argument" name="$type" />
+        </scope>
+        <scope ilk="function" line="401" lineend="406" name="_set_text_feature_coords" signature="_set_text_feature_coords($self, $feature)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$feature" />
+        </scope>
+        <scope ilk="function" line="408" lineend="420" name="get_feature_coordinates" signature="get_feature_coordinates($self, $feature)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$feature" />
+        </scope>
+        <scope ilk="function" line="429" lineend="451" name="setup_bottom_boundary" signature="setup_bottom_boundary($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="455" lineend="479" name="setup_top_boundary" signature="setup_top_boundary($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="483" lineend="506" name="setup_left_boundary" signature="setup_left_boundary($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="510" lineend="550" name="setup_right_boundary" signature="setup_right_boundary($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="552" lineend="587" name="_setup_boundaries" signature="_setup_boundaries($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="595" lineend="595" name="correct_width" signature="correct_width()" />
+        <scope ilk="function" line="597" lineend="626" name="setup_x_step_size_v" signature="setup_x_step_size_v($s)">
+          <variable ilk="argument" name="$s" />
+        </scope>
+        <scope ilk="function" line="628" lineend="657" name="setup_x_step_size_h" signature="setup_x_step_size_h($s)">
+          <variable ilk="argument" name="$s" />
+        </scope>
+        <scope ilk="function" line="659" lineend="717" name="setup_coords" signature="setup_coords($s)">
+          <variable ilk="argument" name="$s" />
+        </scope>
+        <scope ilk="function" line="719" lineend="756" name="create_y_labels" signature="create_y_labels($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="758" lineend="775" name="get_x_axis_label_length" signature="get_x_axis_label_length($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="778" lineend="821" name="create_x_labels" signature="create_x_labels($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="830" lineend="839" name="draw_left_label" signature="draw_left_label($self, $label, $align)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$label" />
+          <variable ilk="argument" name="$align" />
+        </scope>
+        <scope ilk="function" line="841" lineend="850" name="draw_bottom_label" signature="draw_bottom_label($self, $label, $align)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$label" />
+          <variable ilk="argument" name="$align" />
+        </scope>
+        <scope ilk="function" line="852" lineend="862" name="draw_top_label" signature="draw_top_label($self, $label, $align)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$label" />
+          <variable ilk="argument" name="$align" />
+        </scope>
+        <scope ilk="function" line="864" lineend="873" name="draw_right_label" signature="draw_right_label($self, $label, $align)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$label" />
+          <variable ilk="argument" name="$align" />
+        </scope>
+        <scope ilk="function" line="875" lineend="896" name="draw_x_label" signature="draw_x_label($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="898" lineend="935" name="draw_y_labels" signature="draw_y_labels($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="937" lineend="952" name="draw_text" signature="draw_text($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="954" lineend="991" name="draw_axes" signature="draw_axes($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="996" lineend="1046" name="draw_y_ticks_h" signature="draw_y_ticks_h($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="1048" lineend="1099" name="draw_y_ticks_v" signature="draw_y_ticks_v($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="1101" lineend="1105" name="draw_y_ticks" signature="draw_y_ticks()" />
+        <scope ilk="function" line="1111" lineend="1170" name="draw_x_ticks_h" signature="draw_x_ticks_h($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="1172" lineend="1231" name="draw_x_ticks_v" signature="draw_x_ticks_v($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="1233" lineend="1237" name="draw_x_ticks" signature="draw_x_ticks()" />
+        <scope ilk="function" line="1345" lineend="1364" name="draw_ticks" signature="draw_ticks($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="1366" lineend="1395" name="draw_data" signature="draw_data($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="1399" lineend="1453" name="draw_values" signature="draw_values($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="1458" lineend="1463" name="draw_data_set" signature="draw_data_set($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="1474" lineend="1500" name="_correct_y_min_max" signature="_correct_y_min_max($self, $min, $max)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$min" />
+          <variable ilk="argument" name="$max" />
+        </scope>
+        <scope ilk="function" line="1506" lineend="1645" name="set_max_min" signature="set_max_min($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="1665" lineend="1725" name="_best_ends" signature="_best_ends($min, $max, $n_ref, $min_range)">
+          <variable ilk="argument" name="$min" />
+          <variable ilk="argument" name="$max" />
+          <variable ilk="argument" name="$n_ref" />
+          <variable ilk="argument" name="$min_range" />
+        </scope>
+        <scope ilk="function" line="1743" lineend="1810" name="_best_dual_ends" signature="_best_dual_ends(@rem_args)">
+          <variable ilk="argument" name="@rem_args" />
+          <variable line="1760" name="$fact_2" />
+        </scope>
+        <scope ilk="function" line="1816" lineend="1831" name="_fit_interval" signature="_fit_interval($min, $max, $step_count, $step_size)">
+          <variable ilk="argument" name="$min" />
+          <variable ilk="argument" name="$max" />
+          <variable ilk="argument" name="$step_count" />
+          <variable ilk="argument" name="$step_size" />
+        </scope>
+        <scope ilk="function" line="1835" lineend="1851" name="_fit_vals_range" signature="_fit_vals_range($min, $max, $min_range)">
+          <variable ilk="argument" name="$min" />
+          <variable ilk="argument" name="$max" />
+          <variable ilk="argument" name="$min_range" />
+        </scope>
+        <scope ilk="function" line="1857" lineend="1868" name="_measure_interval_fit" signature="_measure_interval_fit($bmin, $min, $max, $bmax)">
+          <variable ilk="argument" name="$bmin" />
+          <variable ilk="argument" name="$min" />
+          <variable ilk="argument" name="$max" />
+          <variable ilk="argument" name="$bmax" />
+        </scope>
+        <scope ilk="function" line="1870" lineend="1885" name="_get_bottom" signature="_get_bottom($self, $ds, $np)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$ds" />
+          <variable ilk="argument" name="$np" />
+        </scope>
+        <scope ilk="function" line="1891" lineend="1930" name="val_to_pixel" signature="val_to_pixel($self, $x, $y, $i)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$x" />
+          <variable ilk="argument" name="$y" />
+          <variable ilk="argument" name="$i" />
+        </scope>
+        <scope ilk="function" line="1935" lineend="2045" name="setup_legend" signature="setup_legend($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="2047" lineend="2086" name="draw_legend" signature="draw_legend($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="2092" lineend="2117" name="draw_legend_marker" signature="draw_legend_marker($s, $n, $x, $y)">
+          <variable ilk="argument" name="$s" />
+          <variable ilk="argument" name="$n" />
+          <variable ilk="argument" name="$x" />
+          <variable ilk="argument" name="$y" />
+        </scope>
+        <scope ilk="function" line="1272" lineend="2119" name="draw_x_ticks_number" signature="draw_x_ticks_number($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+      </scope>
+    </scope>
+    

@@ -1,0 +1,97 @@
+<scope ilk="blob" lang="Perl" name="Pod::ParseUtils">
+      <scope ilk="class" line="10" lineend="15" name="Pod::ParseUtils">
+        <variable line="13" name="$VERSION" />
+      </scope>
+      <scope ilk="class" line="41" lineend="208" name="Pod::List">
+        <import line="43" module="Carp" symbol="*" />
+        <scope attributes="__ctor__" ilk="function" line="64" lineend="72" name="new" signature="new($this, %params)">
+          <variable ilk="argument" name="$this" />
+          <variable ilk="argument" name="%params" />
+        </scope>
+        <scope ilk="function" line="74" lineend="81" name="initialize" signature="initialize($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="92" lineend="94" name="file" signature="file()" />
+        <scope ilk="function" line="106" lineend="108" name="start" signature="start()" />
+        <scope ilk="function" line="120" lineend="122" name="indent" signature="indent()" />
+        <scope ilk="function" line="135" lineend="137" name="type" signature="type()" />
+        <scope ilk="function" line="152" lineend="154" name="rx" signature="rx()" />
+        <scope ilk="function" line="165" lineend="174" name="item" signature="item($self, $item)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$item" />
+        </scope>
+        <scope ilk="function" line="188" lineend="190" name="parent" signature="parent()" />
+        <scope ilk="function" line="206" lineend="208" name="tag" signature="tag()" />
+      </scope>
+      <scope ilk="class" line="216" lineend="621" name="Pod::Hyperlink">
+        <import line="240" module="Carp" symbol="*" />
+        <scope attributes="__ctor__" ilk="function" line="242" lineend="260" name="new" signature="new($this)">
+          <variable ilk="argument" name="$this" />
+        </scope>
+        <scope ilk="function" line="262" lineend="271" name="initialize" signature="initialize($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="284" lineend="415" name="parse" signature="parse($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="417" lineend="450" name="_construct_text" signature="_construct_text($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="463" lineend="465" name="markup" signature="markup()" />
+        <scope ilk="function" line="482" lineend="484" name="text" signature="text()" />
+        <scope ilk="function" line="494" lineend="501" name="warning" signature="warning($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="513" lineend="515" name="line" signature="line()" />
+        <scope ilk="function" line="518" lineend="520" name="file" signature="file()" />
+        <scope ilk="function" line="529" lineend="535" name="page" signature="page()" />
+        <scope ilk="function" line="544" lineend="550" name="node" signature="node()" />
+        <scope ilk="function" line="559" lineend="565" name="alttext" signature="alttext()" />
+        <scope ilk="function" line="575" lineend="577" name="type" signature="type()" />
+        <scope ilk="function" line="588" lineend="612" name="link" signature="link($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="614" lineend="621" name="_invalid_link" signature="_invalid_link($msg)">
+          <variable ilk="argument" name="$msg" />
+        </scope>
+      </scope>
+      <scope ilk="class" line="629" lineend="691" name="Pod::Cache">
+        <scope attributes="__ctor__" ilk="function" line="646" lineend="652" name="new" signature="new($this)">
+          <variable ilk="argument" name="$this" />
+        </scope>
+        <scope ilk="function" line="661" lineend="671" name="item" signature="item($self, %param)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="%param" />
+        </scope>
+        <scope ilk="function" line="683" lineend="691" name="find_page" signature="find_page($self, $page)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$page" />
+        </scope>
+      </scope>
+      <scope ilk="class" line="693" lineend="855" name="Pod::Cache::Item">
+        <scope attributes="__ctor__" ilk="function" line="711" lineend="719" name="new" signature="new($this, %params)">
+          <variable ilk="argument" name="$this" />
+          <variable ilk="argument" name="%params" />
+        </scope>
+        <scope ilk="function" line="721" lineend="724" name="initialize" signature="initialize($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="733" lineend="735" name="page" signature="page()" />
+        <scope ilk="function" line="745" lineend="747" name="description" signature="description()" />
+        <scope ilk="function" line="756" lineend="758" name="path" signature="path()" />
+        <scope ilk="function" line="767" lineend="769" name="file" signature="file()" />
+        <scope ilk="function" line="783" lineend="792" name="nodes" signature="nodes($self, @nodes)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="@nodes" />
+        </scope>
+        <scope ilk="function" line="802" lineend="813" name="find_node" signature="find_node($self, $node)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$node" />
+        </scope>
+        <scope ilk="function" line="829" lineend="838" name="idx" signature="idx($self, @idx)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="@idx" />
+        </scope>
+      </scope>
+    </scope>
+    

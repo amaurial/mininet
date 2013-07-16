@@ -1,0 +1,263 @@
+<scope doc="Abstract Base Classes (ABCs) for collections, according to PEP 3119.&#xA;DON&apos;T USE THIS MODULE DIRECTLY!  The classes here should be imported via collections; they are defined here only to alleviate certain bootstrapping issues.  Unit tests are in test_collections." ilk="blob" lang="Python" name="_abcoll">
+      <scope classrefs="type" doc="Metaclass for defining Abstract Base Classes (ABCs).&#xA;Use this metaclass to create an ABC.  An ABC can be subclassed directly, and then acts as a mix-in class.  You can also register unrelated concrete classes (even built-in classes) and unrelated ABCs as &apos;virtual subclasses&apos; -- these and their descendants will be considered subclasses of the registering ABC by the built-in issubclass() function, but the registering ABC won&apos;t show up in their MRO (Method Resolution Order) nor will method implementations defined by the registering ABC be callable (not even via super())." ilk="class" name="ABCMeta">
+        <scope ilk="function" name="__new__" signature="__new__(mcls, name, bases, namespace)" />
+        <scope doc="Override for isinstance(instance, cls)." ilk="function" name="__instancecheck__" signature="__instancecheck__(cls, instance)" />
+        <scope doc="Register a virtual subclass of an ABC." ilk="function" name="register" signature="register(cls, subclass)" />
+        <scope doc="Override for issubclass(subclass, cls)." ilk="function" name="__subclasscheck__" signature="__subclasscheck__(cls, subclass)" />
+        <scope doc="Debug helper to print the ABC registry." ilk="function" name="_dump_registry" signature="_dump_registry(cls, file=None)" />
+      </scope>
+      <scope classrefs="Sequence" doc="This unifies bytes and bytearray.&#xA;XXX Should add all their methods." ilk="class" name="ByteString" />
+      <scope classrefs="object" doc="&#xA;" ilk="class" name="Callable">
+        <scope ilk="function" name="__subclasshook__" />
+        <scope ilk="function" name="__call__" signature="__call__(self, *args, **kwds)" />
+      </scope>
+      <scope classrefs="object" doc="&#xA;" ilk="class" name="Container">
+        <scope ilk="function" name="__contains__" signature="__contains__(self, x)" />
+        <scope ilk="function" name="__subclasshook__" />
+      </scope>
+      <scope classrefs="object" doc="&#xA;" ilk="class" name="Hashable">
+        <scope ilk="function" name="__subclasshook__" />
+        <scope ilk="function" name="__hash__" signature="__hash__(self)" />
+      </scope>
+      <scope classrefs="MappingView Set" doc="&#xA;" ilk="class" name="ItemsView">
+        <scope ilk="function" name="__contains__" signature="__contains__(self, item)" />
+        <scope ilk="function" name="__iter__" signature="__iter__(self)" />
+        <scope ilk="function" name="_from_iterable" />
+      </scope>
+      <scope classrefs="object" doc="&#xA;" ilk="class" name="Iterable">
+        <scope ilk="function" name="__iter__" signature="__iter__(self)" />
+        <scope ilk="function" name="__subclasshook__" />
+      </scope>
+      <scope classrefs="Iterable" doc="&#xA;" ilk="class" name="Iterator">
+        <scope ilk="function" name="__next__" signature="__next__(self)" />
+        <scope ilk="function" name="__iter__" signature="__iter__(self)" />
+        <scope ilk="function" name="__subclasshook__" />
+      </scope>
+      <scope classrefs="MappingView Set" doc="&#xA;" ilk="class" name="KeysView">
+        <scope ilk="function" name="__contains__" signature="__contains__(self, key)" />
+        <scope ilk="function" name="__iter__" signature="__iter__(self)" />
+        <scope ilk="function" name="_from_iterable" />
+      </scope>
+      <scope classrefs="Sized Iterable Container" doc="&#xA;" ilk="class" name="Mapping">
+        <scope ilk="function" name="__ne__" signature="__ne__(self, other)" />
+        <scope ilk="function" name="__getitem__" signature="__getitem__(self, key)" />
+        <scope ilk="function" name="__contains__" signature="__contains__(self, key)" />
+        <scope ilk="function" name="keys" signature="keys(self)" />
+        <scope ilk="function" name="items" signature="items(self)" />
+        <scope ilk="function" name="get" signature="get(self, key, default=None)" />
+        <scope ilk="function" name="values" signature="values(self)" />
+        <scope ilk="function" name="__eq__" signature="__eq__(self, other)" />
+      </scope>
+      <scope classrefs="Sized" doc="&#xA;" ilk="class" name="MappingView">
+        <scope ilk="function" name="__len__" signature="__len__(self)" />
+        <scope ilk="function" name="__init__" signature="__init__(self, mapping)" />
+        <scope ilk="function" name="__repr__" signature="__repr__(self)" />
+      </scope>
+      <scope classrefs="Mapping" doc="&#xA;" ilk="class" name="MutableMapping">
+        <scope ilk="function" name="__delitem__" signature="__delitem__(self, key)" />
+        <scope ilk="function" name="setdefault" signature="setdefault(self, key, default=None)" />
+        <scope ilk="function" name="clear" signature="clear(self)" />
+        <scope ilk="function" name="update" signature="update(*args, **kwds)" />
+        <scope ilk="function" name="pop" signature="pop(self, key, default=&lt;object object at 0x01CFB610&gt;)" />
+        <scope ilk="function" name="__setitem__" signature="__setitem__(self, key, value)" />
+        <scope ilk="function" name="popitem" signature="popitem(self)" />
+      </scope>
+      <scope classrefs="Sequence" doc="&#xA;" ilk="class" name="MutableSequence">
+        <scope ilk="function" name="__delitem__" signature="__delitem__(self, index)" />
+        <scope ilk="function" name="reverse" signature="reverse(self)" />
+        <scope ilk="function" name="extend" signature="extend(self, values)" />
+        <scope ilk="function" name="insert" signature="insert(self, index, value)" />
+        <scope ilk="function" name="remove" signature="remove(self, value)" />
+        <scope ilk="function" name="pop" signature="pop(self, index=-1)" />
+        <scope ilk="function" name="__setitem__" signature="__setitem__(self, index, value)" />
+        <scope ilk="function" name="__iadd__" signature="__iadd__(self, values)" />
+        <scope ilk="function" name="append" signature="append(self, value)" />
+      </scope>
+      <scope classrefs="Set" doc="&#xA;" ilk="class" name="MutableSet">
+        <scope ilk="function" name="__isub__" signature="__isub__(self, it)" />
+        <scope ilk="function" name="__iand__" signature="__iand__(self, it)" />
+        <scope doc="This is slow (creates N new iterators!) but effective." ilk="function" name="clear" signature="clear(self)" />
+        <scope doc="Remove an element. If not a member, raise a KeyError." ilk="function" name="remove" signature="remove(self, value)" />
+        <scope ilk="function" name="__ior__" signature="__ior__(self, it)" />
+        <scope doc="Add an element." ilk="function" name="add" signature="add(self, value)" />
+        <scope doc="Return the popped value. Raise KeyError if empty." ilk="function" name="pop" signature="pop(self)" />
+        <scope doc="Remove an element. Do not raise an exception if absent." ilk="function" name="discard" signature="discard(self, value)" />
+        <scope ilk="function" name="__ixor__" signature="__ixor__(self, it)" />
+      </scope>
+      <scope classrefs="Sized Iterable Container" doc="All the operations on a read-only sequence.&#xA;Concrete subclasses must override __new__ or __init__, __getitem__, and __len__." ilk="class" name="Sequence">
+        <scope ilk="function" name="count" signature="count(self, value)" />
+        <scope ilk="function" name="index" signature="index(self, value)" />
+        <scope ilk="function" name="__reversed__" signature="__reversed__(self)" />
+        <scope ilk="function" name="__getitem__" signature="__getitem__(self, index)" />
+        <scope ilk="function" name="__contains__" signature="__contains__(self, value)" />
+        <scope ilk="function" name="__iter__" signature="__iter__(self)" />
+      </scope>
+      <scope classrefs="Sized Iterable Container" doc="A set is a finite, iterable container.&#xA;This class provides concrete generic implementations of all methods except for __contains__, __iter__ and __len__.  To override the comparisons (presumably for speed, as the semantics are fixed), all you have to do is redefine __le__ and then the other operations will automatically follow suit." ilk="class" name="Set">
+        <scope ilk="function" name="__ne__" signature="__ne__(self, other)" />
+        <scope ilk="function" name="isdisjoint" signature="isdisjoint(self, other)" />
+        <scope ilk="function" name="__xor__" signature="__xor__(self, other)" />
+        <scope ilk="function" name="__le__" signature="__le__(self, other)" />
+        <scope ilk="function" name="__ge__" signature="__ge__(self, other)" />
+        <scope doc="Compute the hash value of a set." ilk="function" name="_hash" signature="_hash(self)" />
+        <scope ilk="function" name="__gt__" signature="__gt__(self, other)" />
+        <scope ilk="function" name="__and__" signature="__and__(self, other)" />
+        <scope ilk="function" name="__sub__" signature="__sub__(self, other)" />
+        <scope ilk="function" name="__lt__" signature="__lt__(self, other)" />
+        <scope ilk="function" name="__eq__" signature="__eq__(self, other)" />
+        <scope doc="Construct an instance of the class from any iterable input." ilk="function" name="_from_iterable" />
+        <scope ilk="function" name="__or__" signature="__or__(self, other)" />
+      </scope>
+      <scope classrefs="object" doc="&#xA;" ilk="class" name="Sized">
+        <scope ilk="function" name="__subclasshook__" />
+        <scope ilk="function" name="__len__" signature="__len__(self)" />
+      </scope>
+      <scope classrefs="MappingView" doc="&#xA;" ilk="class" name="ValuesView">
+        <scope ilk="function" name="__contains__" signature="__contains__(self, value)" />
+        <scope ilk="function" name="__iter__" signature="__iter__(self)" />
+      </scope>
+      <variable citdl="list" name="__all__" />
+      <scope doc="A decorator indicating abstract methods." ilk="function" name="abstractmethod" signature="abstractmethod(funcobj)" />
+      <scope classrefs="object" doc="&#xA;" ilk="class" name="bytearray_iterator">
+        <scope doc="x.__iter__() &lt;==&gt; iter(x)" ilk="function" name="__iter__" signature="x.__iter__() &lt;==&gt; iter(x)" />
+        <scope doc="x.__next__() &lt;==&gt; next(x)" ilk="function" name="__next__" signature="x.__next__() &lt;==&gt; next(x)" />
+        <scope doc="x.__getattribute__(&apos;name&apos;) &lt;==&gt; x.name" ilk="function" name="__getattribute__" signature="x.__getattribute__(&apos;name&apos;) &lt;==&gt; x.name" />
+        <scope doc="Private method returning an estimate of len(list(it))." ilk="function" name="__length_hint__" />
+      </scope>
+      <scope classrefs="object" doc="&#xA;" ilk="class" name="bytes_iterator">
+        <scope doc="x.__iter__() &lt;==&gt; iter(x)" ilk="function" name="__iter__" signature="x.__iter__() &lt;==&gt; iter(x)" />
+        <scope doc="x.__next__() &lt;==&gt; next(x)" ilk="function" name="__next__" signature="x.__next__() &lt;==&gt; next(x)" />
+        <scope doc="x.__getattribute__(&apos;name&apos;) &lt;==&gt; x.name" ilk="function" name="__getattribute__" signature="x.__getattribute__(&apos;name&apos;) &lt;==&gt; x.name" />
+        <scope doc="Private method returning an estimate of len(list(it))." ilk="function" name="__length_hint__" />
+      </scope>
+      <scope classrefs="object" doc="&#xA;" ilk="class" name="dict_itemiterator">
+        <scope doc="x.__iter__() &lt;==&gt; iter(x)" ilk="function" name="__iter__" signature="x.__iter__() &lt;==&gt; iter(x)" />
+        <scope doc="x.__next__() &lt;==&gt; next(x)" ilk="function" name="__next__" signature="x.__next__() &lt;==&gt; next(x)" />
+        <scope doc="x.__getattribute__(&apos;name&apos;) &lt;==&gt; x.name" ilk="function" name="__getattribute__" signature="x.__getattribute__(&apos;name&apos;) &lt;==&gt; x.name" />
+        <scope doc="Private method returning an estimate of len(list(it))." ilk="function" name="__length_hint__" />
+      </scope>
+      <scope classrefs="object" doc="&#xA;" ilk="class" name="dict_items">
+        <scope doc="x.__ror__(y) &lt;==&gt; y|x" ilk="function" name="__ror__" signature="x.__ror__(y) &lt;==&gt; y|x" />
+        <scope doc="x.__getattribute__(&apos;name&apos;) &lt;==&gt; x.name" ilk="function" name="__getattribute__" signature="x.__getattribute__(&apos;name&apos;) &lt;==&gt; x.name" />
+        <scope doc="x.__rsub__(y) &lt;==&gt; y-x" ilk="function" name="__rsub__" signature="x.__rsub__(y) &lt;==&gt; y-x" />
+        <scope doc="x.__and__(y) &lt;==&gt; x&amp;y" ilk="function" name="__and__" signature="x.__and__(y) &lt;==&gt; x&amp;y" />
+        <scope doc="x.__lt__(y) &lt;==&gt; x&lt;y" ilk="function" name="__lt__" signature="x.__lt__(y) &lt;==&gt; x&lt;y" />
+        <scope doc="x.__rand__(y) &lt;==&gt; y&amp;x" ilk="function" name="__rand__" signature="x.__rand__(y) &lt;==&gt; y&amp;x" />
+        <scope doc="x.__contains__(y) &lt;==&gt; y in x" ilk="function" name="__contains__" signature="x.__contains__(y) &lt;==&gt; y in x" />
+        <scope doc="x.__len__() &lt;==&gt; len(x)" ilk="function" name="__len__" signature="x.__len__() &lt;==&gt; len(x)" />
+        <scope doc="x.__ne__(y) &lt;==&gt; x!=y" ilk="function" name="__ne__" signature="x.__ne__(y) &lt;==&gt; x!=y" />
+        <scope doc="x.__iter__() &lt;==&gt; iter(x)" ilk="function" name="__iter__" signature="x.__iter__() &lt;==&gt; iter(x)" />
+        <scope doc="x.__or__(y) &lt;==&gt; x|y" ilk="function" name="__or__" signature="x.__or__(y) &lt;==&gt; x|y" />
+        <scope doc="x.__gt__(y) &lt;==&gt; x&gt;y" ilk="function" name="__gt__" signature="x.__gt__(y) &lt;==&gt; x&gt;y" />
+        <scope doc="x.__eq__(y) &lt;==&gt; x==y" ilk="function" name="__eq__" signature="x.__eq__(y) &lt;==&gt; x==y" />
+        <scope doc="x.__rxor__(y) &lt;==&gt; y^x" ilk="function" name="__rxor__" signature="x.__rxor__(y) &lt;==&gt; y^x" />
+        <scope doc="Return True if the view and the given iterable have a null&#xA;intersection." ilk="function" name="isdisjoint" />
+        <scope doc="x.__xor__(y) &lt;==&gt; x^y" ilk="function" name="__xor__" signature="x.__xor__(y) &lt;==&gt; x^y" />
+        <scope doc="x.__le__(y) &lt;==&gt; x&lt;=y" ilk="function" name="__le__" signature="x.__le__(y) &lt;==&gt; x&lt;=y" />
+        <scope doc="x.__repr__() &lt;==&gt; repr(x)" ilk="function" name="__repr__" signature="x.__repr__() &lt;==&gt; repr(x)" />
+        <scope doc="x.__sub__(y) &lt;==&gt; x-y" ilk="function" name="__sub__" signature="x.__sub__(y) &lt;==&gt; x-y" />
+        <scope doc="x.__ge__(y) &lt;==&gt; x&gt;=y" ilk="function" name="__ge__" signature="x.__ge__(y) &lt;==&gt; x&gt;=y" />
+      </scope>
+      <scope classrefs="object" doc="&#xA;" ilk="class" name="dict_keyiterator">
+        <scope doc="x.__iter__() &lt;==&gt; iter(x)" ilk="function" name="__iter__" signature="x.__iter__() &lt;==&gt; iter(x)" />
+        <scope doc="x.__next__() &lt;==&gt; next(x)" ilk="function" name="__next__" signature="x.__next__() &lt;==&gt; next(x)" />
+        <scope doc="x.__getattribute__(&apos;name&apos;) &lt;==&gt; x.name" ilk="function" name="__getattribute__" signature="x.__getattribute__(&apos;name&apos;) &lt;==&gt; x.name" />
+        <scope doc="Private method returning an estimate of len(list(it))." ilk="function" name="__length_hint__" />
+      </scope>
+      <scope classrefs="object" doc="&#xA;" ilk="class" name="dict_keys">
+        <scope doc="x.__ror__(y) &lt;==&gt; y|x" ilk="function" name="__ror__" signature="x.__ror__(y) &lt;==&gt; y|x" />
+        <scope doc="x.__getattribute__(&apos;name&apos;) &lt;==&gt; x.name" ilk="function" name="__getattribute__" signature="x.__getattribute__(&apos;name&apos;) &lt;==&gt; x.name" />
+        <scope doc="x.__rsub__(y) &lt;==&gt; y-x" ilk="function" name="__rsub__" signature="x.__rsub__(y) &lt;==&gt; y-x" />
+        <scope doc="x.__and__(y) &lt;==&gt; x&amp;y" ilk="function" name="__and__" signature="x.__and__(y) &lt;==&gt; x&amp;y" />
+        <scope doc="x.__lt__(y) &lt;==&gt; x&lt;y" ilk="function" name="__lt__" signature="x.__lt__(y) &lt;==&gt; x&lt;y" />
+        <scope doc="x.__rand__(y) &lt;==&gt; y&amp;x" ilk="function" name="__rand__" signature="x.__rand__(y) &lt;==&gt; y&amp;x" />
+        <scope doc="x.__contains__(y) &lt;==&gt; y in x" ilk="function" name="__contains__" signature="x.__contains__(y) &lt;==&gt; y in x" />
+        <scope doc="x.__len__() &lt;==&gt; len(x)" ilk="function" name="__len__" signature="x.__len__() &lt;==&gt; len(x)" />
+        <scope doc="x.__ne__(y) &lt;==&gt; x!=y" ilk="function" name="__ne__" signature="x.__ne__(y) &lt;==&gt; x!=y" />
+        <scope doc="x.__iter__() &lt;==&gt; iter(x)" ilk="function" name="__iter__" signature="x.__iter__() &lt;==&gt; iter(x)" />
+        <scope doc="x.__or__(y) &lt;==&gt; x|y" ilk="function" name="__or__" signature="x.__or__(y) &lt;==&gt; x|y" />
+        <scope doc="x.__gt__(y) &lt;==&gt; x&gt;y" ilk="function" name="__gt__" signature="x.__gt__(y) &lt;==&gt; x&gt;y" />
+        <scope doc="x.__eq__(y) &lt;==&gt; x==y" ilk="function" name="__eq__" signature="x.__eq__(y) &lt;==&gt; x==y" />
+        <scope doc="x.__rxor__(y) &lt;==&gt; y^x" ilk="function" name="__rxor__" signature="x.__rxor__(y) &lt;==&gt; y^x" />
+        <scope doc="Return True if the view and the given iterable have a null&#xA;intersection." ilk="function" name="isdisjoint" />
+        <scope doc="x.__xor__(y) &lt;==&gt; x^y" ilk="function" name="__xor__" signature="x.__xor__(y) &lt;==&gt; x^y" />
+        <scope doc="x.__le__(y) &lt;==&gt; x&lt;=y" ilk="function" name="__le__" signature="x.__le__(y) &lt;==&gt; x&lt;=y" />
+        <scope doc="x.__repr__() &lt;==&gt; repr(x)" ilk="function" name="__repr__" signature="x.__repr__() &lt;==&gt; repr(x)" />
+        <scope doc="x.__sub__(y) &lt;==&gt; x-y" ilk="function" name="__sub__" signature="x.__sub__(y) &lt;==&gt; x-y" />
+        <scope doc="x.__ge__(y) &lt;==&gt; x&gt;=y" ilk="function" name="__ge__" signature="x.__ge__(y) &lt;==&gt; x&gt;=y" />
+      </scope>
+      <scope classrefs="object" doc="&#xA;" ilk="class" name="dict_proxy">
+        <scope doc="x.__ne__(y) &lt;==&gt; x!=y" ilk="function" name="__ne__" signature="x.__ne__(y) &lt;==&gt; x!=y" />
+        <scope doc="D.copy() -&gt; a shallow copy of D" ilk="function" name="copy" signature="D.copy() -&gt; a shallow copy of D" />
+        <scope doc="x.__getitem__(y) &lt;==&gt; x[y]" ilk="function" name="__getitem__" signature="x.__getitem__(y) &lt;==&gt; x[y]" />
+        <scope doc="x.__contains__(y) &lt;==&gt; y in x" ilk="function" name="__contains__" signature="x.__contains__(y) &lt;==&gt; y in x" />
+        <scope doc="D.keys() -&gt; list of D&apos;s keys" ilk="function" name="keys" returns="list" signature="D.keys() -&gt; list of D&apos;s keys" />
+        <scope doc="x.__len__() &lt;==&gt; len(x)" ilk="function" name="__len__" signature="x.__len__() &lt;==&gt; len(x)" />
+        <scope doc="x.__str__() &lt;==&gt; str(x)" ilk="function" name="__str__" signature="x.__str__() &lt;==&gt; str(x)" />
+        <scope doc="D.get(k[,d]) -&gt; D[k] if k in D, else d.  d defaults to None." ilk="function" name="get" signature="D.get(k[,d]) -&gt; D[k] if k in D, else d.  d defaults to None." />
+        <scope doc="x.__getattribute__(&apos;name&apos;) &lt;==&gt; x.name" ilk="function" name="__getattribute__" signature="x.__getattribute__(&apos;name&apos;) &lt;==&gt; x.name" />
+        <scope doc="x.__iter__() &lt;==&gt; iter(x)" ilk="function" name="__iter__" signature="x.__iter__() &lt;==&gt; iter(x)" />
+        <scope doc="x.__le__(y) &lt;==&gt; x&lt;=y" ilk="function" name="__le__" signature="x.__le__(y) &lt;==&gt; x&lt;=y" />
+        <scope doc="D.values() -&gt; list of D&apos;s values" ilk="function" name="values" returns="list" signature="D.values() -&gt; list of D&apos;s values" />
+        <scope doc="x.__repr__() &lt;==&gt; repr(x)" ilk="function" name="__repr__" signature="x.__repr__() &lt;==&gt; repr(x)" />
+        <scope doc="x.__gt__(y) &lt;==&gt; x&gt;y" ilk="function" name="__gt__" signature="x.__gt__(y) &lt;==&gt; x&gt;y" />
+        <scope doc="x.__lt__(y) &lt;==&gt; x&lt;y" ilk="function" name="__lt__" signature="x.__lt__(y) &lt;==&gt; x&lt;y" />
+        <scope doc="D.items() -&gt; list of D&apos;s (key, value) pairs, as 2-tuples" ilk="function" name="items" returns="list" signature="D.items() -&gt; list of D&apos;s (key, value) pairs, as 2-tuples" />
+        <scope doc="x.__eq__(y) &lt;==&gt; x==y" ilk="function" name="__eq__" signature="x.__eq__(y) &lt;==&gt; x==y" />
+        <scope doc="x.__ge__(y) &lt;==&gt; x&gt;=y" ilk="function" name="__ge__" signature="x.__ge__(y) &lt;==&gt; x&gt;=y" />
+      </scope>
+      <scope classrefs="object" doc="&#xA;" ilk="class" name="dict_valueiterator">
+        <scope doc="x.__iter__() &lt;==&gt; iter(x)" ilk="function" name="__iter__" signature="x.__iter__() &lt;==&gt; iter(x)" />
+        <scope doc="x.__next__() &lt;==&gt; next(x)" ilk="function" name="__next__" signature="x.__next__() &lt;==&gt; next(x)" />
+        <scope doc="x.__getattribute__(&apos;name&apos;) &lt;==&gt; x.name" ilk="function" name="__getattribute__" signature="x.__getattribute__(&apos;name&apos;) &lt;==&gt; x.name" />
+        <scope doc="Private method returning an estimate of len(list(it))." ilk="function" name="__length_hint__" />
+      </scope>
+      <scope classrefs="object" doc="&#xA;" ilk="class" name="dict_values">
+        <scope doc="x.__iter__() &lt;==&gt; iter(x)" ilk="function" name="__iter__" signature="x.__iter__() &lt;==&gt; iter(x)" />
+        <scope doc="x.__getattribute__(&apos;name&apos;) &lt;==&gt; x.name" ilk="function" name="__getattribute__" signature="x.__getattribute__(&apos;name&apos;) &lt;==&gt; x.name" />
+        <scope doc="x.__repr__() &lt;==&gt; repr(x)" ilk="function" name="__repr__" signature="x.__repr__() &lt;==&gt; repr(x)" />
+        <scope doc="x.__len__() &lt;==&gt; len(x)" ilk="function" name="__len__" signature="x.__len__() &lt;==&gt; len(x)" />
+      </scope>
+      <scope classrefs="object" doc="&#xA;" ilk="class" name="list_iterator">
+        <scope doc="x.__iter__() &lt;==&gt; iter(x)" ilk="function" name="__iter__" signature="x.__iter__() &lt;==&gt; iter(x)" />
+        <scope doc="x.__next__() &lt;==&gt; next(x)" ilk="function" name="__next__" signature="x.__next__() &lt;==&gt; next(x)" />
+        <scope doc="x.__getattribute__(&apos;name&apos;) &lt;==&gt; x.name" ilk="function" name="__getattribute__" signature="x.__getattribute__(&apos;name&apos;) &lt;==&gt; x.name" />
+        <scope doc="Private method returning an estimate of len(list(it))." ilk="function" name="__length_hint__" />
+      </scope>
+      <scope classrefs="object" doc="&#xA;" ilk="class" name="list_reverseiterator">
+        <scope doc="x.__iter__() &lt;==&gt; iter(x)" ilk="function" name="__iter__" signature="x.__iter__() &lt;==&gt; iter(x)" />
+        <scope doc="x.__next__() &lt;==&gt; next(x)" ilk="function" name="__next__" signature="x.__next__() &lt;==&gt; next(x)" />
+        <scope doc="x.__getattribute__(&apos;name&apos;) &lt;==&gt; x.name" ilk="function" name="__getattribute__" signature="x.__getattribute__(&apos;name&apos;) &lt;==&gt; x.name" />
+        <scope doc="Private method returning an estimate of len(list(it))." ilk="function" name="__length_hint__" />
+      </scope>
+      <scope classrefs="object" doc="&#xA;" ilk="class" name="range_iterator">
+        <scope doc="Private method returning an estimate of len(list(it))." ilk="function" name="__length_hint__" />
+        <scope doc="x.__next__() &lt;==&gt; next(x)" ilk="function" name="__next__" signature="x.__next__() &lt;==&gt; next(x)" />
+        <scope doc="x.__getattribute__(&apos;name&apos;) &lt;==&gt; x.name" ilk="function" name="__getattribute__" signature="x.__getattribute__(&apos;name&apos;) &lt;==&gt; x.name" />
+        <scope doc="x.__iter__() &lt;==&gt; iter(x)" ilk="function" name="__iter__" signature="x.__iter__() &lt;==&gt; iter(x)" />
+      </scope>
+      <scope classrefs="object" doc="&#xA;" ilk="class" name="set_iterator">
+        <scope doc="x.__iter__() &lt;==&gt; iter(x)" ilk="function" name="__iter__" signature="x.__iter__() &lt;==&gt; iter(x)" />
+        <scope doc="x.__next__() &lt;==&gt; next(x)" ilk="function" name="__next__" signature="x.__next__() &lt;==&gt; next(x)" />
+        <scope doc="x.__getattribute__(&apos;name&apos;) &lt;==&gt; x.name" ilk="function" name="__getattribute__" signature="x.__getattribute__(&apos;name&apos;) &lt;==&gt; x.name" />
+        <scope doc="Private method returning an estimate of len(list(it))." ilk="function" name="__length_hint__" />
+      </scope>
+      <scope classrefs="object" doc="&#xA;" ilk="class" name="str_iterator">
+        <scope doc="x.__iter__() &lt;==&gt; iter(x)" ilk="function" name="__iter__" signature="x.__iter__() &lt;==&gt; iter(x)" />
+        <scope doc="x.__next__() &lt;==&gt; next(x)" ilk="function" name="__next__" signature="x.__next__() &lt;==&gt; next(x)" />
+        <scope doc="x.__getattribute__(&apos;name&apos;) &lt;==&gt; x.name" ilk="function" name="__getattribute__" signature="x.__getattribute__(&apos;name&apos;) &lt;==&gt; x.name" />
+        <scope doc="Private method returning an estimate of len(list(it))." ilk="function" name="__length_hint__" />
+      </scope>
+      <import module="sys" />
+      <scope classrefs="object" doc="&#xA;" ilk="class" name="tuple_iterator">
+        <scope doc="x.__iter__() &lt;==&gt; iter(x)" ilk="function" name="__iter__" signature="x.__iter__() &lt;==&gt; iter(x)" />
+        <scope doc="x.__next__() &lt;==&gt; next(x)" ilk="function" name="__next__" signature="x.__next__() &lt;==&gt; next(x)" />
+        <scope doc="x.__getattribute__(&apos;name&apos;) &lt;==&gt; x.name" ilk="function" name="__getattribute__" signature="x.__getattribute__(&apos;name&apos;) &lt;==&gt; x.name" />
+        <scope doc="Private method returning an estimate of len(list(it))." ilk="function" name="__length_hint__" />
+      </scope>
+      <scope classrefs="object" doc="zip(iter1 [,iter2 [...]]) --&gt; zip object&#xA;Return a zip object whose .__next__() method returns a tuple where the i-th element comes from the i-th iterable argument.  The .__next__() method continues until the shortest iterable in the argument sequence is exhausted and then it raises StopIteration." ilk="class" name="zip_iterator">
+        <scope doc="x.__iter__() &lt;==&gt; iter(x)" ilk="function" name="__iter__" signature="x.__iter__() &lt;==&gt; iter(x)" />
+        <scope doc="x.__next__() &lt;==&gt; next(x)" ilk="function" name="__next__" signature="x.__next__() &lt;==&gt; next(x)" />
+        <scope doc="x.__getattribute__(&apos;name&apos;) &lt;==&gt; x.name" ilk="function" name="__getattribute__" signature="x.__getattribute__(&apos;name&apos;) &lt;==&gt; x.name" />
+      </scope>
+    </scope>
+    

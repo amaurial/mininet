@@ -1,0 +1,106 @@
+<scope ilk="blob" lang="Perl" name="Moose::Util">
+      <scope ilk="class" line="1" lineend="609" name="Moose::Util">
+        <import line="12" module="Data::OptList" symbol="*" />
+        <import line="13" module="Params::Util" symbol="_STRING" />
+        <import line="14" module="Sub::Exporter" symbol="*" />
+        <import line="15" module="Scalar::Util" symbol="blessed" />
+        <import line="16" module="List::Util" symbol="first" />
+        <import line="17" module="List::MoreUtils" symbol="any" />
+        <import line="17" module="List::MoreUtils" symbol="all" />
+        <import line="19" module="Class::MOP" symbol="*" />
+        <variable line="3" name="$Moose::Util::AUTHORITY" />
+        <variable line="6" name="$Moose::Util::VERSION" />
+        <scope ilk="function" line="45" lineend="45" name="find_meta" signature="find_meta()" />
+        <scope ilk="function" line="49" lineend="58" name="does_role" signature="does_role($class_or_obj, $role)">
+          <variable ilk="argument" name="$class_or_obj" />
+          <variable ilk="argument" name="$role" />
+        </scope>
+        <scope ilk="function" line="60" lineend="81" name="search_class_by_role" signature="search_class_by_role($class_or_obj, $role)">
+          <variable ilk="argument" name="$class_or_obj" />
+          <variable ilk="argument" name="$role" />
+        </scope>
+        <scope ilk="function" line="86" lineend="89" name="ensure_all_roles" signature="ensure_all_roles($applicant)">
+          <variable ilk="argument" name="$applicant" />
+        </scope>
+        <scope ilk="function" line="91" lineend="94" name="apply_all_roles" signature="apply_all_roles($applicant)">
+          <variable ilk="argument" name="$applicant" />
+        </scope>
+        <scope ilk="function" line="96" lineend="144" name="_apply_all_roles" signature="_apply_all_roles($applicant, $role_filter)">
+          <import line="101" module="Moose" />
+          <import line="120" module="Moose" />
+          <variable ilk="argument" name="$applicant" />
+          <variable ilk="argument" name="$role_filter" />
+          <import line="101" module="Moose" />
+          <import line="120" module="Moose" />
+        </scope>
+        <scope ilk="function" line="146" lineend="154" name="with_traits" signature="with_traits($class, @roles)">
+          <variable ilk="argument" name="$class" />
+          <variable ilk="argument" name="@roles" />
+        </scope>
+        <scope ilk="function" line="158" lineend="165" name="get_all_attribute_values" signature="get_all_attribute_values($class, $instance)">
+          <variable ilk="argument" name="$class" />
+          <variable ilk="argument" name="$instance" />
+        </scope>
+        <scope ilk="function" line="167" lineend="175" name="get_all_init_args" signature="get_all_init_args($class, $instance)">
+          <variable ilk="argument" name="$class" />
+          <variable ilk="argument" name="$instance" />
+        </scope>
+        <scope ilk="function" line="177" lineend="179" name="resolve_metatrait_alias" signature="resolve_metatrait_alias()" />
+        <scope ilk="function" line="181" lineend="188" name="_build_alias_package_name" signature="_build_alias_package_name($type, $name, $trait)">
+          <variable ilk="argument" name="$type" />
+          <variable ilk="argument" name="$name" />
+          <variable ilk="argument" name="$trait" />
+        </scope>
+        <scope ilk="function" line="193" lineend="213" name="resolve_metaclass_alias" signature="resolve_metaclass_alias($type, $metaclass_name, %options)">
+          <variable ilk="argument" name="$type" />
+          <variable ilk="argument" name="$metaclass_name" />
+          <variable ilk="argument" name="%options" />
+        </scope>
+        <scope ilk="function" line="216" lineend="248" name="add_method_modifier" signature="add_method_modifier($class_or_obj, $modifier_name, $args)">
+          <variable ilk="argument" name="$class_or_obj" />
+          <variable ilk="argument" name="$modifier_name" />
+          <variable ilk="argument" name="$args" />
+        </scope>
+        <scope ilk="function" line="250" lineend="261" name="english_list" signature="english_list()">
+          </scope>
+        <scope ilk="function" line="263" lineend="268" name="_caller_info" signature="_caller_info()">
+          </scope>
+        <scope ilk="function" line="270" lineend="276" name="_create_alias" signature="_create_alias($type, $name, $trait, $for)">
+          <variable ilk="argument" name="$type" />
+          <variable ilk="argument" name="$name" />
+          <variable ilk="argument" name="$trait" />
+          <variable ilk="argument" name="$for" />
+        </scope>
+        <scope ilk="function" line="278" lineend="284" name="meta_attribute_alias" signature="meta_attribute_alias($to, $from)">
+          <variable ilk="argument" name="$to" />
+          <variable ilk="argument" name="$from" />
+        </scope>
+        <scope ilk="function" line="286" lineend="292" name="meta_class_alias" signature="meta_class_alias($to, $from)">
+          <variable ilk="argument" name="$to" />
+          <variable ilk="argument" name="$from" />
+        </scope>
+        <scope ilk="function" line="295" lineend="302" name="_STRINGLIKE0" signature="_STRINGLIKE0()" />
+        <scope ilk="function" line="304" lineend="323" name="_reconcile_roles_for_metaclass" signature="_reconcile_roles_for_metaclass($class_meta_name, $super_meta_name)">
+          <variable ilk="argument" name="$class_meta_name" />
+          <variable ilk="argument" name="$super_meta_name" />
+        </scope>
+        <scope ilk="function" line="325" lineend="347" name="_role_differences" signature="_role_differences($class_meta_name, $super_meta_name)">
+          <variable ilk="argument" name="$class_meta_name" />
+          <variable ilk="argument" name="$super_meta_name" />
+        </scope>
+        <scope ilk="function" line="349" lineend="368" name="_classes_differ_by_roles_only" signature="_classes_differ_by_roles_only($self_meta_name, $super_meta_name)">
+          <variable ilk="argument" name="$self_meta_name" />
+          <variable ilk="argument" name="$super_meta_name" />
+        </scope>
+        <scope ilk="function" line="370" lineend="383" name="_find_common_base" signature="_find_common_base()">
+          </scope>
+        <scope ilk="function" line="385" lineend="394" name="_get_ancestors_until" signature="_get_ancestors_until($start_name, $until_name)">
+          <variable ilk="argument" name="$start_name" />
+          <variable ilk="argument" name="$until_name" />
+        </scope>
+        <scope ilk="function" line="396" lineend="454" name="_is_role_only_subclass" signature="_is_role_only_subclass($meta_name)">
+          <variable ilk="argument" name="$meta_name" />
+        </scope>
+      </scope>
+    </scope>
+    

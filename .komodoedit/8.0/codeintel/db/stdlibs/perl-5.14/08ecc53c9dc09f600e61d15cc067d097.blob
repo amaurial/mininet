@@ -1,0 +1,66 @@
+<scope ilk="blob" lang="Perl" name="ExtUtils::Embed">
+      <scope classrefs="Exporter" ilk="class" line="3" lineend="292" name="ExtUtils::Embed">
+        <import line="4" module="Exporter" />
+        <import line="5" module="FileHandle" />
+        <import line="6" module="Config" symbol="*" />
+        <import line="7" module="Getopt::Std" symbol="*" />
+        <import line="8" module="File::Spec" symbol="*" />
+        <variable line="14" name="$VERSION" />
+        <variable line="14" name="@EXPORT" />
+        <variable line="14" name="@ISA" />
+        <variable line="15" name="$lib_ext" />
+        <variable line="15" name="$Verbose" />
+        <variable line="15" name="@Extensions" />
+        <variable line="16" name="$opt_o" />
+        <variable line="16" name="$opt_s" />
+        <scope ilk="function" line="35" lineend="35" name="is_cmd" signature="is_cmd()" />
+        <scope ilk="function" line="37" lineend="45" name="my_return" signature="my_return($val)">
+          <variable ilk="argument" name="$val" />
+        </scope>
+        <scope attributes="__exported__" ilk="function" line="47" lineend="82" name="xsinit" signature="xsinit($file, $std, $mods)">
+          <variable ilk="argument" name="$file" />
+          <variable ilk="argument" name="$std" />
+          <variable ilk="argument" name="$mods" />
+        </scope>
+        <scope attributes="__exported__" ilk="function" line="84" lineend="90" name="xsi_header" signature="xsi_header()" />
+        <scope attributes="__exported__" ilk="function" line="92" lineend="106" name="xsi_protos" signature="xsi_protos(@exts)">
+          <variable ilk="argument" name="@exts" />
+        </scope>
+        <scope attributes="__exported__" ilk="function" line="108" lineend="132" name="xsi_body" signature="xsi_body(@exts)">
+          <variable ilk="argument" name="@exts" />
+        </scope>
+        <scope ilk="function" line="134" lineend="142" name="static_ext" signature="static_ext()">
+          </scope>
+        <scope ilk="function" line="144" lineend="148" name="_escape" signature="_escape($arg)">
+          <variable ilk="argument" name="$arg" />
+        </scope>
+        <scope ilk="function" line="150" lineend="154" name="_ldflags" signature="_ldflags()">
+          </scope>
+        <scope ilk="function" line="156" lineend="160" name="_ccflags" signature="_ccflags()">
+          </scope>
+        <scope ilk="function" line="162" lineend="166" name="_ccdlflags" signature="_ccdlflags()">
+          </scope>
+        <scope attributes="__exported__" ilk="function" line="168" lineend="260" name="ldopts" signature="ldopts($std, $mods, $link_args, $path)">
+          <import line="169" module="ExtUtils::MakeMaker" />
+          <import line="170" module="ExtUtils::Liblist" />
+          <variable ilk="argument" name="$std" />
+          <variable ilk="argument" name="$mods" />
+          <variable ilk="argument" name="$link_args" />
+          <variable ilk="argument" name="$path" />
+          <import line="169" module="ExtUtils::MakeMaker" />
+          <import line="170" module="ExtUtils::Liblist" />
+        </scope>
+        <scope attributes="__exported__" ilk="function" line="262" lineend="265" name="ccflags" signature="ccflags()">
+          </scope>
+        <scope attributes="__exported__" ilk="function" line="267" lineend="270" name="ccdlflags" signature="ccdlflags()">
+          </scope>
+        <scope attributes="__exported__" ilk="function" line="272" lineend="276" name="perl_inc" signature="perl_inc()">
+          </scope>
+        <scope attributes="__exported__" ilk="function" line="278" lineend="280" name="ccopts" signature="ccopts()" />
+        <scope ilk="function" line="282" lineend="292" name="canon" signature="canon($as, @ext)">
+          <variable ilk="argument" name="$as" />
+          <variable ilk="argument" name="@ext" />
+        </scope>
+      </scope>
+    </scope>
+    

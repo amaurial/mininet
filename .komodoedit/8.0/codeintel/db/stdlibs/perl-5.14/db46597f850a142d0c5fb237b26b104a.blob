@@ -1,0 +1,107 @@
+<scope ilk="blob" lang="Perl" name="PurePerl">
+      <scope ilk="class" line="3" lineend="767" name="DBI">
+        <import line="20" module="Carp" symbol="*" />
+        <import line="21" module="Symbol" />
+        <import line="23" module="utf8" />
+        <import line="25" module="bytes" />
+        <import line="41" module="Scalar::Util" />
+        <variable line="24" name="*utf8::is_utf8" />
+        <variable line="30" name="$DBI::PurePerl" />
+        <variable line="31" name="$DBI::PurePerl::VERSION" />
+        <variable line="35" name="$DBI::tfh" />
+        <variable line="47" name="%DBI::last_method_except" />
+        <variable line="553" name="$DBI::dbi_debug" />
+        <variable line="573" name="$DBI::tfh_needs_close" />
+        <scope ilk="function" line="198" lineend="203" name="valid_attribute" signature="valid_attribute($attr)">
+          <variable ilk="argument" name="$attr" />
+        </scope>
+        <scope ilk="function" line="206" lineend="215" name="initial_setup" signature="initial_setup()" />
+        <scope ilk="function" line="217" lineend="460" name="_install_method" signature="_install_method($caller, $method, $from, $param_hash)">
+          <variable ilk="argument" name="$caller" />
+          <variable ilk="argument" name="$method" />
+          <variable ilk="argument" name="$from" />
+          <variable ilk="argument" name="$param_hash" />
+        </scope>
+        <scope attributes="__ctor__" ilk="function" line="463" lineend="482" name="_new_handle" signature="_new_handle($class, $parent, $attr, $imp_data, $imp_class)">
+          <variable ilk="argument" name="$class" />
+          <variable ilk="argument" name="$parent" />
+          <variable ilk="argument" name="$attr" />
+          <variable ilk="argument" name="$imp_data" />
+          <variable ilk="argument" name="$imp_class" />
+        </scope>
+        <scope ilk="function" line="484" lineend="540" name="_setup_handle" signature="_setup_handle($h, $imp_class, $parent, $imp_data)">
+          <variable ilk="argument" name="$h" />
+          <variable ilk="argument" name="$imp_class" />
+          <variable ilk="argument" name="$parent" />
+          <variable ilk="argument" name="$imp_data" />
+        </scope>
+        <scope ilk="function" line="542" lineend="544" name="constant" signature="constant()" />
+        <scope ilk="function" line="546" lineend="560" name="trace" signature="trace($h, $level, $file)">
+          <variable ilk="argument" name="$h" />
+          <variable ilk="argument" name="$level" />
+          <variable ilk="argument" name="$file" />
+        </scope>
+        <scope ilk="function" line="562" lineend="594" name="_set_trace_file" signature="_set_trace_file($file)">
+          <variable ilk="argument" name="$file" />
+        </scope>
+        <scope ilk="function" line="595" lineend="595" name="_get_imp_data" signature="_get_imp_data()" />
+        <scope ilk="function" line="596" lineend="596" name="_svdump" signature="_svdump()" />
+        <scope ilk="function" line="597" lineend="604" name="dump_handle" signature="dump_handle($h, $msg, $level)">
+          <variable ilk="argument" name="$h" />
+          <variable ilk="argument" name="$msg" />
+          <variable ilk="argument" name="$level" />
+        </scope>
+        <scope ilk="function" line="606" lineend="619" name="_handles" signature="_handles($h)">
+          <variable ilk="argument" name="$h" />
+        </scope>
+        <scope ilk="function" line="621" lineend="656" name="hash" signature="hash($key, $type)">
+          <import line="638" module="Math::BigInt" />
+          <variable ilk="argument" name="$key" />
+          <variable ilk="argument" name="$type" />
+          <import line="638" module="Math::BigInt" />
+        </scope>
+        <scope ilk="function" line="658" lineend="669" name="looks_like_number" signature="looks_like_number()">
+          </scope>
+        <scope ilk="function" line="671" lineend="686" name="neat" signature="neat($v, $maxlen)">
+          <variable ilk="argument" name="$v" />
+          <variable ilk="argument" name="$maxlen" />
+        </scope>
+        <scope ilk="function" line="688" lineend="722" name="sql_type_cast" signature="sql_type_cast()">
+          </scope>
+        <scope ilk="function" line="724" lineend="726" name="dbi_time" signature="dbi_time()" />
+        <scope attributes="__ctor__" ilk="function" line="728" lineend="728" name="DBI::st::TIEHASH" signature="DBI::st::TIEHASH()" />
+        <scope ilk="function" line="730" lineend="750" name="_concat_hash_sorted" signature="_concat_hash_sorted($hash_ref, $kv_separator, $pair_separator, $use_neat, $num_sort)">
+          <variable ilk="argument" name="$hash_ref" />
+          <variable ilk="argument" name="$kv_separator" />
+          <variable ilk="argument" name="$pair_separator" />
+          <variable ilk="argument" name="$use_neat" />
+          <variable ilk="argument" name="$num_sort" />
+        </scope>
+        <scope ilk="function" line="752" lineend="767" name="_get_sorted_hash_keys" signature="_get_sorted_hash_keys($hash_ref, $num_sort)">
+          <variable ilk="argument" name="$hash_ref" />
+          <variable ilk="argument" name="$num_sort" />
+        </scope>
+      </scope>
+      <scope ilk="class" line="772" lineend="779" name="DBI::var">
+        <scope ilk="function" line="774" lineend="779" name="FETCH" signature="FETCH()">
+          </scope>
+      </scope>
+      <scope ilk="class" line="782" lineend="1220" name="DBD::_::common">
+        <variable line="798" name="$DBI::dbi_debug" />
+        <variable line="809" name="*debug" />
+        <scope ilk="function" line="784" lineend="789" name="swap_inner_handle" signature="swap_inner_handle($h1, $h2)">
+          <variable ilk="argument" name="$h1" />
+          <variable ilk="argument" name="$h2" />
+        </scope>
+        <scope ilk="function" line="791" lineend="808" name="trace" signature="trace($h, $level, $file)">
+          <variable ilk="argument" name="$h" />
+          <variable ilk="argument" name="$level" />
+          <variable ilk="argument" name="$file" />
+        </scope>
+        <scope ilk="function" line="811" lineend="1220" name="FETCH" signature="FETCH($h, $key)">
+          <variable ilk="argument" name="$h" />
+          <variable ilk="argument" name="$key" />
+        </scope>
+      </scope>
+    </scope>
+    

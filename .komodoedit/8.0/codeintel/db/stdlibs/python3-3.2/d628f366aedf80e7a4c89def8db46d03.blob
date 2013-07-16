@@ -1,0 +1,21 @@
+<scope doc="Routines to help recognizing sound files.&#xA;Function whathdr() recognizes various types of sound file headers. It understands almost all headers that SOX can decode.  The return tuple contains the following items, in this order: - file type (as SOX understands it) - sampling rate (0 if unknown or hard to decode) - number of channels (0 if unknown or hard to decode) - number of frames in the file (-1 if unknown or hard to decode) - number of bits/sample, or &apos;U&apos; for U-LAW, or &apos;A&apos; for A-LAW " ilk="blob" lang="Python" name="sndhdr">
+      <variable citdl="list" name="__all__" />
+      <scope ilk="function" name="get_long_be" signature="get_long_be(b)" />
+      <scope ilk="function" name="get_long_le" signature="get_long_le(b)" />
+      <scope ilk="function" name="get_short_be" signature="get_short_be(b)" />
+      <scope ilk="function" name="get_short_le" signature="get_short_le(b)" />
+      <scope ilk="function" name="test" signature="test()" />
+      <scope ilk="function" name="test_8svx" signature="test_8svx(h, f)" />
+      <scope ilk="function" name="test_aifc" signature="test_aifc(h, f)" />
+      <scope ilk="function" name="test_au" signature="test_au(h, f)" />
+      <scope ilk="function" name="test_hcom" signature="test_hcom(h, f)" />
+      <scope ilk="function" name="test_sndr" signature="test_sndr(h, f)" />
+      <scope ilk="function" name="test_sndt" signature="test_sndt(h, f)" />
+      <scope ilk="function" name="test_voc" signature="test_voc(h, f)" />
+      <scope ilk="function" name="test_wav" signature="test_wav(h, f)" />
+      <scope ilk="function" name="testall" signature="testall(list, recursive, toplevel)" />
+      <variable citdl="list" name="tests" />
+      <scope doc="Guess the type of a sound file." ilk="function" name="what" signature="what(filename)" />
+      <scope doc="Recognize sound headers." ilk="function" name="whathdr" signature="whathdr(filename)" />
+    </scope>
+    

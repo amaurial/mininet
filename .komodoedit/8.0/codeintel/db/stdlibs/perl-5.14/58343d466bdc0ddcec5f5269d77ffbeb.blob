@@ -1,0 +1,199 @@
+<scope ilk="blob" lang="Perl" name="Net::NNTP">
+      <scope classrefs="Net::Cmd IO::Socket::INET" ilk="class" line="7" lineend="697" name="Net::NNTP">
+        <import line="11" module="IO::Socket" symbol="*" />
+        <import line="12" module="Net::Cmd" symbol="*" />
+        <import line="13" module="Carp" symbol="*" />
+        <import line="14" module="Time::Local" symbol="*" />
+        <import line="15" module="Net::Config" symbol="*" />
+        <variable line="10" name="$debug" />
+        <variable line="10" name="$VERSION" />
+        <variable line="10" name="@ISA" />
+        <scope ilk="function" line="21" lineend="90" name="new" signature="new($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="93" lineend="96" name="host" signature="host($me)">
+          <variable ilk="argument" name="$me" />
+        </scope>
+        <scope ilk="function" line="99" lineend="111" name="debug_text" signature="debug_text($nntp, $inout, $text)">
+          <variable ilk="argument" name="$nntp" />
+          <variable ilk="argument" name="$inout" />
+          <variable ilk="argument" name="$text" />
+        </scope>
+        <scope ilk="function" line="114" lineend="118" name="postok" signature="postok($nntp)">
+          <variable ilk="argument" name="$nntp" />
+        </scope>
+        <scope ilk="function" line="121" lineend="131" name="article" signature="article($nntp)">
+          <variable ilk="argument" name="$nntp" />
+        </scope>
+        <scope ilk="function" line="134" lineend="140" name="articlefh" signature="articlefh($nntp)">
+          <variable ilk="argument" name="$nntp" />
+        </scope>
+        <scope ilk="function" line="143" lineend="149" name="authinfo" signature="authinfo($nntp, $user, $pass)">
+          <variable ilk="argument" name="$nntp" />
+          <variable ilk="argument" name="$user" />
+          <variable ilk="argument" name="$pass" />
+        </scope>
+        <scope ilk="function" line="152" lineend="158" name="authinfo_simple" signature="authinfo_simple($nntp, $user, $pass)">
+          <variable ilk="argument" name="$nntp" />
+          <variable ilk="argument" name="$user" />
+          <variable ilk="argument" name="$pass" />
+        </scope>
+        <scope ilk="function" line="161" lineend="171" name="body" signature="body($nntp)">
+          <variable ilk="argument" name="$nntp" />
+        </scope>
+        <scope ilk="function" line="174" lineend="179" name="bodyfh" signature="bodyfh($nntp)">
+          <variable ilk="argument" name="$nntp" />
+        </scope>
+        <scope ilk="function" line="182" lineend="192" name="head" signature="head($nntp)">
+          <variable ilk="argument" name="$nntp" />
+        </scope>
+        <scope ilk="function" line="195" lineend="200" name="headfh" signature="headfh($nntp)">
+          <variable ilk="argument" name="$nntp" />
+        </scope>
+        <scope ilk="function" line="203" lineend="210" name="nntpstat" signature="nntpstat($nntp)">
+          <variable ilk="argument" name="$nntp" />
+        </scope>
+        <scope ilk="function" line="213" lineend="238" name="group" signature="group($nntp, $newgrp)">
+          <variable ilk="argument" name="$nntp" />
+          <variable ilk="argument" name="$newgrp" />
+        </scope>
+        <scope ilk="function" line="241" lineend="248" name="help" signature="help($nntp)">
+          <variable ilk="argument" name="$nntp" />
+        </scope>
+        <scope ilk="function" line="251" lineend="259" name="ihave" signature="ihave($nntp, $mid)">
+          <variable ilk="argument" name="$nntp" />
+          <variable ilk="argument" name="$mid" />
+        </scope>
+        <scope ilk="function" line="262" lineend="269" name="last" signature="last($nntp)">
+          <variable ilk="argument" name="$nntp" />
+        </scope>
+        <scope ilk="function" line="272" lineend="279" name="list" signature="list($nntp)">
+          <variable ilk="argument" name="$nntp" />
+        </scope>
+        <scope ilk="function" line="282" lineend="294" name="newgroups" signature="newgroups($nntp, $dist)">
+          <variable ilk="argument" name="$nntp" />
+          <variable ilk="argument" name="$dist" />
+        </scope>
+        <scope ilk="function" line="297" lineend="315" name="newnews" signature="newnews($nntp, $dist)">
+          <variable ilk="argument" name="$nntp" />
+          <variable ilk="argument" name="$dist" />
+        </scope>
+        <scope ilk="function" line="318" lineend="325" name="next" signature="next($nntp)">
+          <variable ilk="argument" name="$nntp" />
+        </scope>
+        <scope ilk="function" line="328" lineend="335" name="post" signature="post($nntp)">
+          <variable ilk="argument" name="$nntp" />
+        </scope>
+        <scope ilk="function" line="338" lineend="342" name="postfh" signature="postfh($nntp)">
+          <variable ilk="argument" name="$nntp" />
+        </scope>
+        <scope ilk="function" line="345" lineend="351" name="quit" signature="quit($nntp)">
+          <variable ilk="argument" name="$nntp" />
+        </scope>
+        <scope ilk="function" line="354" lineend="359" name="slave" signature="slave($nntp)">
+          <variable ilk="argument" name="$nntp" />
+        </scope>
+        <scope ilk="function" line="366" lineend="373" name="active" signature="active($nntp)">
+          <variable ilk="argument" name="$nntp" />
+        </scope>
+        <scope ilk="function" line="376" lineend="383" name="active_times" signature="active_times($nntp)">
+          <variable ilk="argument" name="$nntp" />
+        </scope>
+        <scope ilk="function" line="386" lineend="393" name="distributions" signature="distributions($nntp)">
+          <variable ilk="argument" name="$nntp" />
+        </scope>
+        <scope ilk="function" line="396" lineend="407" name="distribution_patterns" signature="distribution_patterns($nntp)">
+          <variable ilk="argument" name="$nntp" />
+        </scope>
+        <scope ilk="function" line="410" lineend="417" name="newsgroups" signature="newsgroups($nntp)">
+          <variable ilk="argument" name="$nntp" />
+        </scope>
+        <scope ilk="function" line="420" lineend="427" name="overview_fmt" signature="overview_fmt($nntp)">
+          <variable ilk="argument" name="$nntp" />
+        </scope>
+        <scope ilk="function" line="430" lineend="437" name="subscriptions" signature="subscriptions($nntp)">
+          <variable ilk="argument" name="$nntp" />
+        </scope>
+        <scope ilk="function" line="440" lineend="447" name="listgroup" signature="listgroup($nntp)">
+          <variable ilk="argument" name="$nntp" />
+        </scope>
+        <scope ilk="function" line="450" lineend="455" name="reader" signature="reader($nntp)">
+          <variable ilk="argument" name="$nntp" />
+        </scope>
+        <scope ilk="function" line="458" lineend="465" name="xgtitle" signature="xgtitle($nntp)">
+          <variable ilk="argument" name="$nntp" />
+        </scope>
+        <scope ilk="function" line="468" lineend="477" name="xhdr" signature="xhdr($nntp, $hdr)">
+          <variable ilk="argument" name="$nntp" />
+          <variable ilk="argument" name="$hdr" />
+        </scope>
+        <scope ilk="function" line="480" lineend="488" name="xover" signature="xover($nntp)">
+          <variable ilk="argument" name="$nntp" />
+        </scope>
+        <scope ilk="function" line="491" lineend="504" name="xpat" signature="xpat($nntp, $hdr, $pat)">
+          <variable ilk="argument" name="$nntp" />
+          <variable ilk="argument" name="$hdr" />
+          <variable ilk="argument" name="$pat" />
+        </scope>
+        <scope ilk="function" line="507" lineend="519" name="xpath" signature="xpath($nntp, $mid)">
+          <variable ilk="argument" name="$nntp" />
+          <variable ilk="argument" name="$mid" />
+        </scope>
+        <scope ilk="function" line="522" lineend="530" name="xrover" signature="xrover($nntp)">
+          <variable ilk="argument" name="$nntp" />
+        </scope>
+        <scope ilk="function" line="533" lineend="541" name="date" signature="date($nntp)">
+          <variable ilk="argument" name="$nntp" />
+        </scope>
+        <scope ilk="function" line="549" lineend="575" name="_msg_arg" signature="_msg_arg($spec)">
+          <variable ilk="argument" name="$spec" />
+        </scope>
+        <scope ilk="function" line="578" lineend="584" name="_timestr" signature="_timestr($time)">
+          <variable ilk="argument" name="$time" />
+        </scope>
+        <scope ilk="function" line="587" lineend="601" name="_grouplist" signature="_grouplist($nntp)">
+          <variable ilk="argument" name="$nntp" />
+        </scope>
+        <scope ilk="function" line="604" lineend="619" name="_fieldlist" signature="_fieldlist($nntp)">
+          <variable ilk="argument" name="$nntp" />
+        </scope>
+        <scope ilk="function" line="622" lineend="630" name="_articlelist" signature="_articlelist($nntp)">
+          <variable ilk="argument" name="$nntp" />
+        </scope>
+        <scope ilk="function" line="633" lineend="650" name="_description" signature="_description($nntp)">
+          <variable ilk="argument" name="$nntp" />
+        </scope>
+        <scope ilk="function" line="657" lineend="657" name="_ARTICLE" signature="_ARTICLE()" />
+        <scope ilk="function" line="658" lineend="658" name="_AUTHINFO" signature="_AUTHINFO()" />
+        <scope ilk="function" line="659" lineend="659" name="_BODY" signature="_BODY()" />
+        <scope ilk="function" line="660" lineend="660" name="_DATE" signature="_DATE()" />
+        <scope ilk="function" line="661" lineend="661" name="_GROUP" signature="_GROUP()" />
+        <scope ilk="function" line="662" lineend="662" name="_HEAD" signature="_HEAD()" />
+        <scope ilk="function" line="663" lineend="663" name="_HELP" signature="_HELP()" />
+        <scope ilk="function" line="664" lineend="664" name="_IHAVE" signature="_IHAVE()" />
+        <scope ilk="function" line="665" lineend="665" name="_LAST" signature="_LAST()" />
+        <scope ilk="function" line="666" lineend="666" name="_LIST" signature="_LIST()" />
+        <scope ilk="function" line="667" lineend="667" name="_LISTGROUP" signature="_LISTGROUP()" />
+        <scope ilk="function" line="668" lineend="668" name="_NEWGROUPS" signature="_NEWGROUPS()" />
+        <scope ilk="function" line="669" lineend="669" name="_NEWNEWS" signature="_NEWNEWS()" />
+        <scope ilk="function" line="670" lineend="670" name="_NEXT" signature="_NEXT()" />
+        <scope ilk="function" line="671" lineend="671" name="_POST" signature="_POST()" />
+        <scope ilk="function" line="672" lineend="672" name="_QUIT" signature="_QUIT()" />
+        <scope ilk="function" line="673" lineend="673" name="_SLAVE" signature="_SLAVE()" />
+        <scope ilk="function" line="674" lineend="674" name="_STAT" signature="_STAT()" />
+        <scope ilk="function" line="675" lineend="675" name="_MODE" signature="_MODE()" />
+        <scope ilk="function" line="676" lineend="676" name="_XGTITLE" signature="_XGTITLE()" />
+        <scope ilk="function" line="677" lineend="677" name="_XHDR" signature="_XHDR()" />
+        <scope ilk="function" line="678" lineend="678" name="_XPAT" signature="_XPAT()" />
+        <scope ilk="function" line="679" lineend="679" name="_XPATH" signature="_XPATH()" />
+        <scope ilk="function" line="680" lineend="680" name="_XOVER" signature="_XOVER()" />
+        <scope ilk="function" line="681" lineend="681" name="_XROVER" signature="_XROVER()" />
+        <scope ilk="function" line="682" lineend="682" name="_XTHREAD" signature="_XTHREAD()" />
+        <scope ilk="function" line="683" lineend="683" name="_XSEARCH" signature="_XSEARCH()" />
+        <scope ilk="function" line="684" lineend="684" name="_XINDEX" signature="_XINDEX()" />
+        <scope ilk="function" line="691" lineend="694" name="DESTROY" signature="DESTROY($nntp)">
+          <variable ilk="argument" name="$nntp" />
+        </scope>
+      </scope>
+    </scope>
+    

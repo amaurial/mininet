@@ -1,0 +1,26 @@
+<scope ilk="blob" lang="Perl" name="Devel::SelfStubber">
+      <scope classrefs="SelfLoader" ilk="class" line="1" lineend="75" name="Devel::SelfStubber">
+        <import line="2" module="File::Spec" symbol="*" />
+        <import line="3" module="SelfLoader" />
+        <variable line="6" name="$JUST_STUBS" />
+        <variable line="7" name="$VERSION" />
+        <scope ilk="function" line="8" lineend="8" name="Version" signature="Version()" />
+        <scope ilk="function" line="18" lineend="23" name="_add_to_cache" signature="_add_to_cache($self, $fullname, $pack, $lines, $prototype)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$fullname" />
+          <variable ilk="argument" name="$pack" />
+          <variable ilk="argument" name="$lines" />
+          <variable ilk="argument" name="$prototype" />
+        </scope>
+        <scope ilk="function" line="25" lineend="28" name="_package_defined" signature="_package_defined($self, $line)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$line" />
+        </scope>
+        <scope ilk="function" line="30" lineend="73" name="stub" signature="stub($self, $module, $lib)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$module" />
+          <variable ilk="argument" name="$lib" />
+        </scope>
+      </scope>
+    </scope>
+    

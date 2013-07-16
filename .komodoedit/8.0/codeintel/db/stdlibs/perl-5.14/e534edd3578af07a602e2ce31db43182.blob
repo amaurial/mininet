@@ -1,0 +1,120 @@
+<scope ilk="blob" lang="Perl" name="B">
+      <scope ilk="class" line="8" lineend="335" name="B">
+        <import line="11" module="Exporter" />
+        <import line="26" module="XSLoader" />
+        <variable line="12" name="@B::ISA" />
+        <variable line="18" name="$B::VERSION" />
+        <variable line="19" name="@B::EXPORT_OK" />
+        <variable line="41" name="@B::SV::ISA" />
+        <variable line="42" name="@B::NULL::ISA" />
+        <variable line="43" name="@B::PV::ISA" />
+        <variable line="44" name="@B::IV::ISA" />
+        <variable line="45" name="@B::NV::ISA" />
+        <variable line="47" name="@B::RV::ISA" />
+        <variable line="48" name="@B::PVIV::ISA" />
+        <variable line="49" name="@B::PVNV::ISA" />
+        <variable line="50" name="@B::PVMG::ISA" />
+        <variable line="51" name="@B::REGEXP::ISA" />
+        <variable line="53" name="@B::PVLV::ISA" />
+        <variable line="55" name="@B::BM::ISA" />
+        <variable line="56" name="@B::AV::ISA" />
+        <variable line="57" name="@B::GV::ISA" />
+        <variable line="58" name="@B::HV::ISA" />
+        <variable line="59" name="@B::CV::ISA" />
+        <variable line="60" name="@B::IO::ISA" />
+        <variable line="61" name="@B::FM::ISA" />
+        <variable line="63" name="@B::OP::ISA" />
+        <variable line="64" name="@B::UNOP::ISA" />
+        <variable line="65" name="@B::BINOP::ISA" />
+        <variable line="66" name="@B::LOGOP::ISA" />
+        <variable line="67" name="@B::LISTOP::ISA" />
+        <variable line="68" name="@B::SVOP::ISA" />
+        <variable line="69" name="@B::PADOP::ISA" />
+        <variable line="70" name="@B::PVOP::ISA" />
+        <variable line="71" name="@B::LOOP::ISA" />
+        <variable line="72" name="@B::PMOP::ISA" />
+        <variable line="73" name="@B::COP::ISA" />
+        <variable line="75" name="@B::SPECIAL::ISA" />
+        <variable line="77" name="@B::optype" />
+        <variable line="81" name="@B::specialsv_name" />
+        <variable line="110" name="*B::IV::as_string" />
+        <variable line="111" name="*B::PV::as_string" />
+        <variable line="118" name="*B::IV::RV" />
+        <scope ilk="function" line="89" lineend="102" name="B::GV::SAFENAME" signature="B::GV::SAFENAME()">
+          </scope>
+        <scope ilk="function" line="104" lineend="107" name="B::IV::int_value" signature="B::IV::int_value($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="109" lineend="109" name="B::NULL::as_string" signature="B::NULL::as_string()" />
+        <scope ilk="function" line="124" lineend="128" name="debug" signature="debug($class, $value)">
+          <variable ilk="argument" name="$class" />
+          <variable ilk="argument" name="$value" />
+        </scope>
+        <scope ilk="function" line="130" lineend="135" name="class" signature="class($obj)">
+          <variable ilk="argument" name="$obj" />
+        </scope>
+        <scope ilk="function" line="137" lineend="137" name="parents" signature="parents()" />
+        <scope ilk="function" line="140" lineend="143" name="peekop" signature="peekop($op)">
+          <variable ilk="argument" name="$op" />
+        </scope>
+        <scope ilk="function" line="145" lineend="168" name="walkoptree_slow" signature="walkoptree_slow($op, $method, $level)">
+          <variable ilk="argument" name="$op" />
+          <variable ilk="argument" name="$method" />
+          <variable ilk="argument" name="$level" />
+        </scope>
+        <scope ilk="function" line="170" lineend="172" name="compile_stats" signature="compile_stats()" />
+        <scope ilk="function" line="174" lineend="179" name="timing_info" signature="timing_info()">
+          </scope>
+        <scope ilk="function" line="183" lineend="185" name="clearsym" signature="clearsym()" />
+        <scope ilk="function" line="187" lineend="191" name="savesym" signature="savesym($obj, $value)">
+          <variable ilk="argument" name="$obj" />
+          <variable ilk="argument" name="$value" />
+        </scope>
+        <scope ilk="function" line="193" lineend="196" name="objsym" signature="objsym($obj)">
+          <variable ilk="argument" name="$obj" />
+        </scope>
+        <scope ilk="function" line="198" lineend="247" name="walkoptree_exec" signature="walkoptree_exec($op, $method, $level)">
+          <variable ilk="argument" name="$op" />
+          <variable ilk="argument" name="$method" />
+          <variable ilk="argument" name="$level" />
+        </scope>
+        <scope ilk="function" line="249" lineend="267" name="walksymtable" signature="walksymtable($symref, $method, $recurse, $prefix)">
+          <variable ilk="argument" name="$symref" />
+          <variable ilk="argument" name="$method" />
+          <variable ilk="argument" name="$recurse" />
+          <variable ilk="argument" name="$prefix" />
+        </scope>
+        <scope attributes="__ctor__" ilk="function" line="274" lineend="280" name="new" signature="new($class, $section, $symtable, $default)">
+          <variable ilk="argument" name="$class" />
+          <variable ilk="argument" name="$section" />
+          <variable ilk="argument" name="$symtable" />
+          <variable ilk="argument" name="$default" />
+        </scope>
+        <scope ilk="function" line="282" lineend="285" name="get" signature="get($class, $section)">
+          <variable ilk="argument" name="$class" />
+          <variable ilk="argument" name="$section" />
+        </scope>
+        <scope ilk="function" line="287" lineend="293" name="add" signature="add($section)">
+          <variable ilk="argument" name="$section" />
+        </scope>
+        <scope ilk="function" line="295" lineend="298" name="index" signature="index($section)">
+          <variable ilk="argument" name="$section" />
+        </scope>
+        <scope ilk="function" line="300" lineend="303" name="name" signature="name($section)">
+          <variable ilk="argument" name="$section" />
+        </scope>
+        <scope ilk="function" line="305" lineend="308" name="symtable" signature="symtable($section)">
+          <variable ilk="argument" name="$section" />
+        </scope>
+        <scope ilk="function" line="310" lineend="313" name="default" signature="default($section)">
+          <variable ilk="argument" name="$section" />
+        </scope>
+        <scope ilk="function" line="315" lineend="332" name="output" signature="output($section, $fh, $format)">
+          <variable ilk="argument" name="$section" />
+          <variable ilk="argument" name="$fh" />
+          <variable ilk="argument" name="$format" />
+        </scope>
+      </scope>
+      <scope ilk="class" line="86" lineend="86" name="B::OBJECT" />
+    </scope>
+    

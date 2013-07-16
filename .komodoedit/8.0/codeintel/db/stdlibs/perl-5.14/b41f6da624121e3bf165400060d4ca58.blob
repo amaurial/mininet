@@ -1,0 +1,36 @@
+<scope ilk="blob" lang="Perl" name="Net::FTP::dataconn">
+      <scope classrefs="IO::Socket::INET" ilk="class" line="5" lineend="124" name="Net::FTP::dataconn">
+        <import line="7" module="Carp" symbol="*" />
+        <import line="9" module="Net::Cmd" symbol="*" />
+        <import line="10" module="Errno" symbol="*" />
+        <variable line="8" name="$timeout" />
+        <variable line="8" name="$VERSION" />
+        <variable line="8" name="@ISA" />
+        <scope ilk="function" line="16" lineend="19" name="reading" signature="reading($data)">
+          <variable ilk="argument" name="$data" />
+        </scope>
+        <scope ilk="function" line="22" lineend="45" name="abort" signature="abort($data)">
+          <variable ilk="argument" name="$data" />
+        </scope>
+        <scope ilk="function" line="48" lineend="57" name="_close" signature="_close($data)">
+          <variable ilk="argument" name="$data" />
+        </scope>
+        <scope ilk="function" line="60" lineend="77" name="close" signature="close($data)">
+          <variable ilk="argument" name="$data" />
+        </scope>
+        <scope ilk="function" line="80" lineend="98" name="_select" signature="_select($data, $timeout, $do_read)">
+          <variable ilk="argument" name="$data" />
+          <variable ilk="argument" name="$timeout" />
+          <variable ilk="argument" name="$do_read" />
+        </scope>
+        <scope ilk="function" line="101" lineend="103" name="can_read" signature="can_read()" />
+        <scope ilk="function" line="106" lineend="108" name="can_write" signature="can_write()" />
+        <scope ilk="function" line="111" lineend="115" name="cmd" signature="cmd($ftp)">
+          <variable ilk="argument" name="$ftp" />
+        </scope>
+        <scope ilk="function" line="118" lineend="122" name="bytes_read" signature="bytes_read($ftp)">
+          <variable ilk="argument" name="$ftp" />
+        </scope>
+      </scope>
+    </scope>
+    

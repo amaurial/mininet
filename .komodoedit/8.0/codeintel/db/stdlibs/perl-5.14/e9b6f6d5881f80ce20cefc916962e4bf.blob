@@ -1,0 +1,116 @@
+<scope ilk="blob" lang="Perl" name="CPAN::Meta::Validator">
+      <scope ilk="class" line="4" lineend="996" name="CPAN::Meta::Validator">
+        <variable line="6" name="$CPAN::Meta::Validator::VERSION" />
+        <scope attributes="__ctor__" ilk="function" line="426" lineend="438" name="new" signature="new($class, $data)">
+          <variable ilk="argument" name="$class" />
+          <variable ilk="argument" name="$data" />
+        </scope>
+        <scope ilk="function" line="441" lineend="447" name="is_valid" signature="is_valid($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="450" lineend="454" name="errors" signature="errors($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="460" lineend="516" name="check_map" signature="check_map($self, $spec, $data)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$spec" />
+          <variable ilk="argument" name="$data" />
+        </scope>
+        <scope ilk="function" line="519" lineend="527" name="check_lazylist" signature="check_lazylist($self, $spec, $data)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$spec" />
+          <variable ilk="argument" name="$data" />
+        </scope>
+        <scope ilk="function" line="529" lineend="560" name="check_list" signature="check_list($self, $spec, $data)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$spec" />
+          <variable ilk="argument" name="$data" />
+        </scope>
+        <scope ilk="function" line="563" lineend="570" name="header" signature="header($self, $key, $value)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$key" />
+          <variable ilk="argument" name="$value" />
+        </scope>
+        <scope ilk="function" line="572" lineend="589" name="release_status" signature="release_status($self, $key, $value)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$key" />
+          <variable ilk="argument" name="$value" />
+        </scope>
+        <scope ilk="function" line="592" lineend="594" name="_uri_split" signature="_uri_split()" />
+        <scope ilk="function" line="596" lineend="613" name="url" signature="url($self, $key, $value)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$key" />
+          <variable ilk="argument" name="$value" />
+        </scope>
+        <scope ilk="function" line="615" lineend="626" name="urlspec" signature="urlspec($self, $key, $value)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$key" />
+          <variable ilk="argument" name="$value" />
+        </scope>
+        <scope ilk="function" line="628" lineend="628" name="anything" signature="anything()" />
+        <scope ilk="function" line="630" lineend="637" name="string" signature="string($self, $key, $value)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$key" />
+          <variable ilk="argument" name="$value" />
+        </scope>
+        <scope ilk="function" line="639" lineend="645" name="string_or_undef" signature="string_or_undef($self, $key, $value)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$key" />
+          <variable ilk="argument" name="$value" />
+        </scope>
+        <scope ilk="function" line="647" lineend="652" name="file" signature="file($self, $key, $value)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$key" />
+          <variable ilk="argument" name="$value" />
+        </scope>
+        <scope ilk="function" line="654" lineend="664" name="exversion" signature="exversion($self, $key, $value)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$key" />
+          <variable ilk="argument" name="$value" />
+        </scope>
+        <scope ilk="function" line="666" lineend="676" name="version" signature="version($self, $key, $value)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$key" />
+          <variable ilk="argument" name="$value" />
+        </scope>
+        <scope ilk="function" line="678" lineend="687" name="boolean" signature="boolean($self, $key, $value)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$key" />
+          <variable ilk="argument" name="$value" />
+        </scope>
+        <scope ilk="function" line="736" lineend="746" name="license" signature="license($self, $key, $value)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$key" />
+          <variable ilk="argument" name="$value" />
+        </scope>
+        <scope ilk="function" line="748" lineend="759" name="custom_1" signature="custom_1($self, $key)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$key" />
+        </scope>
+        <scope ilk="function" line="761" lineend="770" name="custom_2" signature="custom_2($self, $key)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$key" />
+        </scope>
+        <scope ilk="function" line="772" lineend="781" name="identifier" signature="identifier($self, $key)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$key" />
+        </scope>
+        <scope ilk="function" line="783" lineend="792" name="module" signature="module($self, $key)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$key" />
+        </scope>
+        <scope ilk="function" line="795" lineend="805" name="phase" signature="phase($self, $key)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$key" />
+        </scope>
+        <scope ilk="function" line="808" lineend="818" name="relation" signature="relation($self, $key)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$key" />
+        </scope>
+        <scope ilk="function" line="820" lineend="828" name="_error" signature="_error($self, $mess)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$mess" />
+        </scope>
+      </scope>
+    </scope>
+    

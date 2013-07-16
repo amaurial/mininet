@@ -1,0 +1,776 @@
+<scope ilk="blob" lang="Perl" name="Date::Calc::PP">
+      <scope classrefs="Exporter" ilk="class" line="12" lineend="3058" name="Date::Calc::PP">
+        <import line="14" module="bytes" />
+        <import line="18" module="Carp::Clan" symbol="^Date::" />
+        <import line="20" module="POSIX" />
+        <import line="22" module="Exporter" />
+        <variable line="16" name="$VERSION" />
+        <variable line="16" name="%EXPORT_TAGS" />
+        <variable line="16" name="@EXPORT" />
+        <variable line="16" name="@EXPORT_OK" />
+        <variable line="16" name="@ISA" />
+        <scope ilk="function" line="111" lineend="114" name="Version" signature="Version()" />
+        <scope ilk="function" line="398" lineend="401" name="DATECALC_USAGE" signature="DATECALC_USAGE()" />
+        <scope ilk="function" line="402" lineend="405" name="DATECALC_ERROR" signature="DATECALC_ERROR()" />
+        <scope ilk="function" line="406" lineend="409" name="DATECALC_DATE_ERROR" signature="DATECALC_DATE_ERROR()" />
+        <scope ilk="function" line="410" lineend="413" name="DATECALC_TIME_ERROR" signature="DATECALC_TIME_ERROR()" />
+        <scope ilk="function" line="414" lineend="417" name="DATECALC_YEAR_ERROR" signature="DATECALC_YEAR_ERROR()" />
+        <scope ilk="function" line="418" lineend="421" name="DATECALC_MONTH_ERROR" signature="DATECALC_MONTH_ERROR()" />
+        <scope ilk="function" line="422" lineend="425" name="DATECALC_WEEK_ERROR" signature="DATECALC_WEEK_ERROR()" />
+        <scope ilk="function" line="426" lineend="429" name="DATECALC_DAYOFWEEK_ERROR" signature="DATECALC_DAYOFWEEK_ERROR()" />
+        <scope ilk="function" line="430" lineend="433" name="DATECALC_DATE_RANGE_ERROR" signature="DATECALC_DATE_RANGE_ERROR()" />
+        <scope ilk="function" line="434" lineend="437" name="DATECALC_TIME_RANGE_ERROR" signature="DATECALC_TIME_RANGE_ERROR()" />
+        <scope ilk="function" line="438" lineend="441" name="DATECALC_FACTOR_ERROR" signature="DATECALC_FACTOR_ERROR()" />
+        <scope ilk="function" line="442" lineend="445" name="DATECALC_LANGUAGE_ERROR" signature="DATECALC_LANGUAGE_ERROR()" />
+        <scope ilk="function" line="446" lineend="449" name="DATECALC_SYSTEM_ERROR" signature="DATECALC_SYSTEM_ERROR()" />
+        <scope ilk="function" line="450" lineend="453" name="DATECALC_MEMORY_ERROR" signature="DATECALC_MEMORY_ERROR()" />
+        <scope ilk="function" line="454" lineend="457" name="DATECALC_STRING_ERROR" signature="DATECALC_STRING_ERROR()" />
+        <scope ilk="function" line="458" lineend="461" name="DATECALC_SCALAR_ERROR" signature="DATECALC_SCALAR_ERROR()" />
+        <scope attributes="__exportable__" ilk="function" line="463" lineend="476" name="Days_in_Year" signature="Days_in_Year($year, $month)">
+          <variable ilk="argument" name="$year" />
+          <variable ilk="argument" name="$month" />
+        </scope>
+        <scope attributes="__exportable__" ilk="function" line="478" lineend="491" name="Days_in_Month" signature="Days_in_Month($year, $month)">
+          <variable ilk="argument" name="$year" />
+          <variable ilk="argument" name="$month" />
+        </scope>
+        <scope attributes="__exportable__" ilk="function" line="493" lineend="502" name="Weeks_in_Year" signature="Weeks_in_Year()">
+          </scope>
+        <scope attributes="__exportable__" ilk="function" line="504" lineend="513" name="leap_year" signature="leap_year()">
+          </scope>
+        <scope attributes="__exportable__" ilk="function" line="515" lineend="520" name="check_date" signature="check_date($year, $month, $day)">
+          <variable ilk="argument" name="$year" />
+          <variable ilk="argument" name="$month" />
+          <variable ilk="argument" name="$day" />
+        </scope>
+        <scope attributes="__exportable__" ilk="function" line="522" lineend="527" name="check_time" signature="check_time($hour, $min, $sec)">
+          <variable ilk="argument" name="$hour" />
+          <variable ilk="argument" name="$min" />
+          <variable ilk="argument" name="$sec" />
+        </scope>
+        <scope attributes="__exportable__" ilk="function" line="529" lineend="534" name="check_business_date" signature="check_business_date($year, $week, $dow)">
+          <variable ilk="argument" name="$year" />
+          <variable ilk="argument" name="$week" />
+          <variable ilk="argument" name="$dow" />
+        </scope>
+        <scope attributes="__exportable__" ilk="function" line="536" lineend="543" name="Day_of_Year" signature="Day_of_Year($year, $month, $day)">
+          <variable ilk="argument" name="$year" />
+          <variable ilk="argument" name="$month" />
+          <variable ilk="argument" name="$day" />
+        </scope>
+        <scope attributes="__exportable__" ilk="function" line="545" lineend="552" name="Date_to_Days" signature="Date_to_Days($year, $month, $day)">
+          <variable ilk="argument" name="$year" />
+          <variable ilk="argument" name="$month" />
+          <variable ilk="argument" name="$day" />
+        </scope>
+        <scope attributes="__exportable__" ilk="function" line="554" lineend="561" name="Day_of_Week" signature="Day_of_Week($year, $month, $day)">
+          <variable ilk="argument" name="$year" />
+          <variable ilk="argument" name="$month" />
+          <variable ilk="argument" name="$day" />
+        </scope>
+        <scope attributes="__exportable__" ilk="function" line="563" lineend="574" name="Week_Number" signature="Week_Number($year, $month, $day)">
+          <variable ilk="argument" name="$year" />
+          <variable ilk="argument" name="$month" />
+          <variable ilk="argument" name="$day" />
+        </scope>
+        <scope attributes="__exportable__" ilk="function" line="576" lineend="587" name="Week_of_Year" signature="Week_of_Year($year, $month, $day)">
+          <variable ilk="argument" name="$year" />
+          <variable ilk="argument" name="$month" />
+          <variable ilk="argument" name="$day" />
+        </scope>
+        <scope attributes="__exportable__" ilk="function" line="589" lineend="607" name="Monday_of_Week" signature="Monday_of_Week($week, $year)">
+          <variable ilk="argument" name="$week" />
+          <variable ilk="argument" name="$year" />
+        </scope>
+        <scope attributes="__exportable__" ilk="function" line="609" lineend="635" name="Nth_Weekday_of_Month_Year" signature="Nth_Weekday_of_Month_Year($year, $month, $dow, $n)">
+          <variable ilk="argument" name="$year" />
+          <variable ilk="argument" name="$month" />
+          <variable ilk="argument" name="$dow" />
+          <variable ilk="argument" name="$n" />
+        </scope>
+        <scope attributes="__exportable__" ilk="function" line="637" lineend="647" name="Standard_to_Business" signature="Standard_to_Business($year, $month, $day)">
+          <variable ilk="argument" name="$year" />
+          <variable ilk="argument" name="$month" />
+          <variable ilk="argument" name="$day" />
+        </scope>
+        <scope attributes="__exportable__" ilk="function" line="649" lineend="659" name="Business_to_Standard" signature="Business_to_Standard($year, $week, $dow)">
+          <variable ilk="argument" name="$year" />
+          <variable ilk="argument" name="$week" />
+          <variable ilk="argument" name="$dow" />
+        </scope>
+        <scope attributes="__exportable__" ilk="function" line="661" lineend="673" name="Delta_Days" signature="Delta_Days($year1, $month1, $day1, $year2, $month2, $day2)">
+          <variable ilk="argument" name="$year1" />
+          <variable ilk="argument" name="$month1" />
+          <variable ilk="argument" name="$day1" />
+          <variable ilk="argument" name="$year2" />
+          <variable ilk="argument" name="$month2" />
+          <variable ilk="argument" name="$day2" />
+        </scope>
+        <scope attributes="__exportable__" ilk="function" line="675" lineend="697" name="Delta_DHMS" signature="Delta_DHMS($year1, $month1, $day1, $hour1, $min1, $sec1, $year2, $month2, $day2, $hour2, $min2, $sec2)">
+          <variable ilk="argument" name="$year1" />
+          <variable ilk="argument" name="$month1" />
+          <variable ilk="argument" name="$day1" />
+          <variable ilk="argument" name="$hour1" />
+          <variable ilk="argument" name="$min1" />
+          <variable ilk="argument" name="$sec1" />
+          <variable ilk="argument" name="$year2" />
+          <variable ilk="argument" name="$month2" />
+          <variable ilk="argument" name="$day2" />
+          <variable ilk="argument" name="$hour2" />
+          <variable ilk="argument" name="$min2" />
+          <variable ilk="argument" name="$sec2" />
+        </scope>
+        <scope attributes="__exportable__" ilk="function" line="699" lineend="708" name="Delta_YMD" signature="Delta_YMD($year1, $month1, $day1, $year2, $month2, $day2)">
+          <variable ilk="argument" name="$year1" />
+          <variable ilk="argument" name="$month1" />
+          <variable ilk="argument" name="$day1" />
+          <variable ilk="argument" name="$year2" />
+          <variable ilk="argument" name="$month2" />
+          <variable ilk="argument" name="$day2" />
+        </scope>
+        <scope attributes="__exportable__" ilk="function" line="710" lineend="732" name="Delta_YMDHMS" signature="Delta_YMDHMS($year1, $month1, $day1, $hour1, $min1, $sec1, $year2, $month2, $day2, $hour2, $min2, $sec2)">
+          <variable ilk="argument" name="$year1" />
+          <variable ilk="argument" name="$month1" />
+          <variable ilk="argument" name="$day1" />
+          <variable ilk="argument" name="$hour1" />
+          <variable ilk="argument" name="$min1" />
+          <variable ilk="argument" name="$sec1" />
+          <variable ilk="argument" name="$year2" />
+          <variable ilk="argument" name="$month2" />
+          <variable ilk="argument" name="$day2" />
+          <variable ilk="argument" name="$hour2" />
+          <variable ilk="argument" name="$min2" />
+          <variable ilk="argument" name="$sec2" />
+        </scope>
+        <scope attributes="__exportable__" ilk="function" line="734" lineend="743" name="N_Delta_YMD" signature="N_Delta_YMD($year1, $month1, $day1, $year2, $month2, $day2)">
+          <variable ilk="argument" name="$year1" />
+          <variable ilk="argument" name="$month1" />
+          <variable ilk="argument" name="$day1" />
+          <variable ilk="argument" name="$year2" />
+          <variable ilk="argument" name="$month2" />
+          <variable ilk="argument" name="$day2" />
+        </scope>
+        <scope attributes="__exportable__" ilk="function" line="745" lineend="767" name="N_Delta_YMDHMS" signature="N_Delta_YMDHMS($year1, $month1, $day1, $hour1, $min1, $sec1, $year2, $month2, $day2, $hour2, $min2, $sec2)">
+          <variable ilk="argument" name="$year1" />
+          <variable ilk="argument" name="$month1" />
+          <variable ilk="argument" name="$day1" />
+          <variable ilk="argument" name="$hour1" />
+          <variable ilk="argument" name="$min1" />
+          <variable ilk="argument" name="$sec1" />
+          <variable ilk="argument" name="$year2" />
+          <variable ilk="argument" name="$month2" />
+          <variable ilk="argument" name="$day2" />
+          <variable ilk="argument" name="$hour2" />
+          <variable ilk="argument" name="$min2" />
+          <variable ilk="argument" name="$sec2" />
+        </scope>
+        <scope attributes="__exportable__" ilk="function" line="769" lineend="775" name="Normalize_DHMS" signature="Normalize_DHMS($Dd, $Dh, $Dm, $Ds)">
+          <variable ilk="argument" name="$Dd" />
+          <variable ilk="argument" name="$Dh" />
+          <variable ilk="argument" name="$Dm" />
+          <variable ilk="argument" name="$Ds" />
+        </scope>
+        <scope attributes="__exportable__" ilk="function" line="777" lineend="786" name="Add_Delta_Days" signature="Add_Delta_Days($year, $month, $day, $Dd)">
+          <variable ilk="argument" name="$year" />
+          <variable ilk="argument" name="$month" />
+          <variable ilk="argument" name="$day" />
+          <variable ilk="argument" name="$Dd" />
+        </scope>
+        <scope attributes="__exportable__" ilk="function" line="788" lineend="807" name="Add_Delta_DHMS" signature="Add_Delta_DHMS($year, $month, $day, $hour, $min, $sec, $Dd, $Dh, $Dm, $Ds)">
+          <variable ilk="argument" name="$year" />
+          <variable ilk="argument" name="$month" />
+          <variable ilk="argument" name="$day" />
+          <variable ilk="argument" name="$hour" />
+          <variable ilk="argument" name="$min" />
+          <variable ilk="argument" name="$sec" />
+          <variable ilk="argument" name="$Dd" />
+          <variable ilk="argument" name="$Dh" />
+          <variable ilk="argument" name="$Dm" />
+          <variable ilk="argument" name="$Ds" />
+        </scope>
+        <scope attributes="__exportable__" ilk="function" line="809" lineend="818" name="Add_Delta_YM" signature="Add_Delta_YM($year, $month, $day, $Dy, $Dm)">
+          <variable ilk="argument" name="$year" />
+          <variable ilk="argument" name="$month" />
+          <variable ilk="argument" name="$day" />
+          <variable ilk="argument" name="$Dy" />
+          <variable ilk="argument" name="$Dm" />
+        </scope>
+        <scope attributes="__exportable__" ilk="function" line="820" lineend="829" name="Add_Delta_YMD" signature="Add_Delta_YMD($year, $month, $day, $Dy, $Dm, $Dd)">
+          <variable ilk="argument" name="$year" />
+          <variable ilk="argument" name="$month" />
+          <variable ilk="argument" name="$day" />
+          <variable ilk="argument" name="$Dy" />
+          <variable ilk="argument" name="$Dm" />
+          <variable ilk="argument" name="$Dd" />
+        </scope>
+        <scope attributes="__exportable__" ilk="function" line="831" lineend="851" name="Add_Delta_YMDHMS" signature="Add_Delta_YMDHMS($year, $month, $day, $hour, $min, $sec, $D_y, $D_m, $D_d, $Dh, $Dm, $Ds)">
+          <variable ilk="argument" name="$year" />
+          <variable ilk="argument" name="$month" />
+          <variable ilk="argument" name="$day" />
+          <variable ilk="argument" name="$hour" />
+          <variable ilk="argument" name="$min" />
+          <variable ilk="argument" name="$sec" />
+          <variable ilk="argument" name="$D_y" />
+          <variable ilk="argument" name="$D_m" />
+          <variable ilk="argument" name="$D_d" />
+          <variable ilk="argument" name="$Dh" />
+          <variable ilk="argument" name="$Dm" />
+          <variable ilk="argument" name="$Ds" />
+        </scope>
+        <scope attributes="__exportable__" ilk="function" line="853" lineend="862" name="Add_N_Delta_YMD" signature="Add_N_Delta_YMD($year, $month, $day, $Dy, $Dm, $Dd)">
+          <variable ilk="argument" name="$year" />
+          <variable ilk="argument" name="$month" />
+          <variable ilk="argument" name="$day" />
+          <variable ilk="argument" name="$Dy" />
+          <variable ilk="argument" name="$Dm" />
+          <variable ilk="argument" name="$Dd" />
+        </scope>
+        <scope attributes="__exportable__" ilk="function" line="864" lineend="884" name="Add_N_Delta_YMDHMS" signature="Add_N_Delta_YMDHMS($year, $month, $day, $hour, $min, $sec, $D_y, $D_m, $D_d, $Dhh, $Dmm, $Dss)">
+          <variable ilk="argument" name="$year" />
+          <variable ilk="argument" name="$month" />
+          <variable ilk="argument" name="$day" />
+          <variable ilk="argument" name="$hour" />
+          <variable ilk="argument" name="$min" />
+          <variable ilk="argument" name="$sec" />
+          <variable ilk="argument" name="$D_y" />
+          <variable ilk="argument" name="$D_m" />
+          <variable ilk="argument" name="$D_d" />
+          <variable ilk="argument" name="$Dhh" />
+          <variable ilk="argument" name="$Dmm" />
+          <variable ilk="argument" name="$Dss" />
+        </scope>
+        <scope attributes="__exportable__" ilk="function" line="886" lineend="900" name="System_Clock" signature="System_Clock()">
+          </scope>
+        <scope attributes="__exportable__" ilk="function" line="902" lineend="916" name="Today" signature="Today()">
+          </scope>
+        <scope attributes="__exportable__" ilk="function" line="918" lineend="932" name="Now" signature="Now()">
+          </scope>
+        <scope attributes="__exportable__" ilk="function" line="934" lineend="948" name="Today_and_Now" signature="Today_and_Now()">
+          </scope>
+        <scope attributes="__exportable__" ilk="function" line="950" lineend="964" name="This_Year" signature="This_Year()">
+          </scope>
+        <scope attributes="__exportable__" ilk="function" line="966" lineend="981" name="Gmtime" signature="Gmtime()">
+          </scope>
+        <scope attributes="__exportable__" ilk="function" line="983" lineend="998" name="Localtime" signature="Localtime()">
+          </scope>
+        <scope attributes="__exportable__" ilk="function" line="1000" lineend="1010" name="Mktime" signature="Mktime($year, $month, $day, $hour, $min, $sec)">
+          <variable ilk="argument" name="$year" />
+          <variable ilk="argument" name="$month" />
+          <variable ilk="argument" name="$day" />
+          <variable ilk="argument" name="$hour" />
+          <variable ilk="argument" name="$min" />
+          <variable ilk="argument" name="$sec" />
+        </scope>
+        <scope attributes="__exportable__" ilk="function" line="1012" lineend="1026" name="Timezone" signature="Timezone()">
+          </scope>
+        <scope attributes="__exportable__" ilk="function" line="1028" lineend="1038" name="Date_to_Time" signature="Date_to_Time($year, $month, $day, $hour, $min, $sec)">
+          <variable ilk="argument" name="$year" />
+          <variable ilk="argument" name="$month" />
+          <variable ilk="argument" name="$day" />
+          <variable ilk="argument" name="$hour" />
+          <variable ilk="argument" name="$min" />
+          <variable ilk="argument" name="$sec" />
+        </scope>
+        <scope attributes="__exportable__" ilk="function" line="1040" lineend="1052" name="Time_to_Date" signature="Time_to_Date()">
+          </scope>
+        <scope attributes="__exportable__" ilk="function" line="1054" lineend="1064" name="Easter_Sunday" signature="Easter_Sunday()">
+          </scope>
+        <scope attributes="__exportable__" ilk="function" line="1066" lineend="1072" name="Decode_Month" signature="Decode_Month()">
+          </scope>
+        <scope attributes="__exportable__" ilk="function" line="1074" lineend="1080" name="Decode_Day_of_Week" signature="Decode_Day_of_Week()">
+          </scope>
+        <scope attributes="__exportable__" ilk="function" line="1082" lineend="1087" name="Decode_Language" signature="Decode_Language()">
+          </scope>
+        <scope attributes="__exportable__" ilk="function" line="1089" lineend="1100" name="Decode_Date_EU" signature="Decode_Date_EU()">
+          </scope>
+        <scope attributes="__exportable__" ilk="function" line="1102" lineend="1113" name="Decode_Date_US" signature="Decode_Date_US()">
+          </scope>
+        <scope attributes="__exportable__" ilk="function" line="1115" lineend="1120" name="Fixed_Window" signature="Fixed_Window()">
+          </scope>
+        <scope attributes="__exportable__" ilk="function" line="1122" lineend="1127" name="Moving_Window" signature="Moving_Window()">
+          </scope>
+        <scope attributes="__exportable__" ilk="function" line="1129" lineend="1134" name="Compress" signature="Compress($year, $month, $day)">
+          <variable ilk="argument" name="$year" />
+          <variable ilk="argument" name="$month" />
+          <variable ilk="argument" name="$day" />
+        </scope>
+        <scope attributes="__exportable__" ilk="function" line="1136" lineend="1146" name="Uncompress" signature="Uncompress()">
+          </scope>
+        <scope attributes="__exportable__" ilk="function" line="1148" lineend="1153" name="check_compressed" signature="check_compressed()">
+          </scope>
+        <scope attributes="__exportable__" ilk="function" line="1155" lineend="1161" name="Compressed_to_Text" signature="Compressed_to_Text()">
+          </scope>
+        <scope attributes="__exportable__" ilk="function" line="1163" lineend="1175" name="Date_to_Text" signature="Date_to_Text()">
+          </scope>
+        <scope attributes="__exportable__" ilk="function" line="1177" lineend="1189" name="Date_to_Text_Long" signature="Date_to_Text_Long()">
+          </scope>
+        <scope attributes="__exportable__" ilk="function" line="1191" lineend="1196" name="English_Ordinal" signature="English_Ordinal()">
+          </scope>
+        <scope attributes="__exportable__" ilk="function" line="1198" lineend="1216" name="Calendar" signature="Calendar()">
+          </scope>
+        <scope attributes="__exportable__" ilk="function" line="1218" lineend="1229" name="Month_to_Text" signature="Month_to_Text()">
+          </scope>
+        <scope attributes="__exportable__" ilk="function" line="1231" lineend="1242" name="Day_of_Week_to_Text" signature="Day_of_Week_to_Text()">
+          </scope>
+        <scope attributes="__exportable__" ilk="function" line="1244" lineend="1262" name="Day_of_Week_Abbreviation" signature="Day_of_Week_Abbreviation()">
+          </scope>
+        <scope attributes="__exportable__" ilk="function" line="1264" lineend="1273" name="Language_to_Text" signature="Language_to_Text()">
+          </scope>
+        <scope attributes="__exportable__" ilk="function" line="1275" lineend="1290" name="Language" signature="Language()">
+          </scope>
+        <scope attributes="__exportable__" ilk="function" line="1292" lineend="1296" name="Languages" signature="Languages()" />
+        <scope attributes="__exportable__" ilk="function" line="1298" lineend="1304" name="ISO_LC" signature="ISO_LC()">
+          </scope>
+        <scope attributes="__exportable__" ilk="function" line="1306" lineend="1312" name="ISO_UC" signature="ISO_UC()">
+          </scope>
+        <scope ilk="function" line="1324" lineend="1328" name="DateCalc_is_digit" signature="DateCalc_is_digit()" />
+        <scope ilk="function" line="1330" lineend="1334" name="DateCalc_is_alnum" signature="DateCalc_is_alnum()" />
+        <scope ilk="function" line="1336" lineend="1341" name="DateCalc_ISO_LC" signature="DateCalc_ISO_LC()">
+          </scope>
+        <scope ilk="function" line="1343" lineend="1348" name="DateCalc_ISO_UC" signature="DateCalc_ISO_UC()">
+          </scope>
+        <scope ilk="function" line="1350" lineend="1356" name="DateCalc_ISO_UC_First" signature="DateCalc_ISO_UC_First()">
+          </scope>
+        <scope ilk="function" line="1358" lineend="1368" name="DateCalc_Year_to_Days" signature="DateCalc_Year_to_Days()">
+          </scope>
+        <scope ilk="function" line="1370" lineend="1377" name="DateCalc_scan9" signature="DateCalc_scan9($str, $buf, $len, $idx, $neg)">
+          <variable ilk="argument" name="$str" />
+          <variable ilk="argument" name="$buf" />
+          <variable ilk="argument" name="$len" />
+          <variable ilk="argument" name="$idx" />
+          <variable ilk="argument" name="$neg" />
+        </scope>
+        <scope ilk="function" line="1379" lineend="1386" name="DateCalc_scanx" signature="DateCalc_scanx($str, $buf, $len, $idx, $neg)">
+          <variable ilk="argument" name="$str" />
+          <variable ilk="argument" name="$buf" />
+          <variable ilk="argument" name="$len" />
+          <variable ilk="argument" name="$idx" />
+          <variable ilk="argument" name="$neg" />
+        </scope>
+        <scope ilk="function" line="1388" lineend="1399" name="DateCalc_Center" signature="DateCalc_Center($_target, $source, $width)">
+          <variable ilk="argument" name="$_target" />
+          <variable ilk="argument" name="$source" />
+          <variable ilk="argument" name="$width" />
+        </scope>
+        <scope ilk="function" line="1401" lineend="1405" name="DateCalc_Blank" signature="DateCalc_Blank($_target, $count)">
+          <variable ilk="argument" name="$_target" />
+          <variable ilk="argument" name="$count" />
+        </scope>
+        <scope ilk="function" line="1407" lineend="1411" name="DateCalc_Newline" signature="DateCalc_Newline($_target, $count)">
+          <variable ilk="argument" name="$_target" />
+          <variable ilk="argument" name="$count" />
+        </scope>
+        <scope ilk="function" line="1413" lineend="1426" name="DateCalc_Normalize_Time" signature="DateCalc_Normalize_Time($_Dd, $_Dh, $_Dm, $_Ds)">
+          <variable ilk="argument" name="$_Dd" />
+          <variable ilk="argument" name="$_Dh" />
+          <variable ilk="argument" name="$_Dm" />
+          <variable ilk="argument" name="$_Ds" />
+        </scope>
+        <scope ilk="function" line="1431" lineend="1442" name="DateCalc_Normalize_Ranges" signature="DateCalc_Normalize_Ranges($_Dd, $_Dh, $_Dm, $_Ds)">
+          <variable ilk="argument" name="$_Dd" />
+          <variable ilk="argument" name="$_Dh" />
+          <variable ilk="argument" name="$_Dm" />
+          <variable ilk="argument" name="$_Ds" />
+        </scope>
+        <scope ilk="function" line="1447" lineend="1476" name="DateCalc_Normalize_Signs" signature="DateCalc_Normalize_Signs($_Dd, $_Dh, $_Dm, $_Ds)">
+          <variable ilk="argument" name="$_Dd" />
+          <variable ilk="argument" name="$_Dh" />
+          <variable ilk="argument" name="$_Dm" />
+          <variable ilk="argument" name="$_Ds" />
+        </scope>
+        <scope ilk="function" line="1478" lineend="1484" name="DateCalc_Normalize_DHMS" signature="DateCalc_Normalize_DHMS($_Dd, $_Dh, $_Dm, $_Ds)">
+          <variable ilk="argument" name="$_Dd" />
+          <variable ilk="argument" name="$_Dh" />
+          <variable ilk="argument" name="$_Dm" />
+          <variable ilk="argument" name="$_Ds" />
+        </scope>
+        <scope ilk="function" line="1490" lineend="1497" name="DateCalc_leap_year" signature="DateCalc_leap_year()">
+          </scope>
+        <scope ilk="function" line="1499" lineend="1508" name="DateCalc_check_date" signature="DateCalc_check_date($year, $month, $day)">
+          <variable ilk="argument" name="$year" />
+          <variable ilk="argument" name="$month" />
+          <variable ilk="argument" name="$day" />
+        </scope>
+        <scope ilk="function" line="1510" lineend="1517" name="DateCalc_check_time" signature="DateCalc_check_time($hour, $min, $sec)">
+          <variable ilk="argument" name="$hour" />
+          <variable ilk="argument" name="$min" />
+          <variable ilk="argument" name="$sec" />
+        </scope>
+        <scope ilk="function" line="1519" lineend="1527" name="DateCalc_check_business_date" signature="DateCalc_check_business_date($year, $week, $dow)">
+          <variable ilk="argument" name="$year" />
+          <variable ilk="argument" name="$week" />
+          <variable ilk="argument" name="$dow" />
+        </scope>
+        <scope ilk="function" line="1529" lineend="1541" name="DateCalc_Day_of_Year" signature="DateCalc_Day_of_Year($year, $month, $day)">
+          <variable ilk="argument" name="$year" />
+          <variable ilk="argument" name="$month" />
+          <variable ilk="argument" name="$day" />
+        </scope>
+        <scope ilk="function" line="1543" lineend="1557" name="DateCalc_Date_to_Days" signature="DateCalc_Date_to_Days($year, $month, $day)">
+          <variable ilk="argument" name="$year" />
+          <variable ilk="argument" name="$month" />
+          <variable ilk="argument" name="$day" />
+        </scope>
+        <scope ilk="function" line="1559" lineend="1571" name="DateCalc_Day_of_Week" signature="DateCalc_Day_of_Week($year, $month, $day)">
+          <variable ilk="argument" name="$year" />
+          <variable ilk="argument" name="$month" />
+          <variable ilk="argument" name="$day" />
+        </scope>
+        <scope ilk="function" line="1573" lineend="1581" name="DateCalc_Weeks_in_Year" signature="DateCalc_Weeks_in_Year()">
+          </scope>
+        <scope ilk="function" line="1583" lineend="1591" name="DateCalc_Week_Number" signature="DateCalc_Week_Number($year, $month, $day)">
+          <variable ilk="argument" name="$year" />
+          <variable ilk="argument" name="$month" />
+          <variable ilk="argument" name="$day" />
+        </scope>
+        <scope ilk="function" line="1593" lineend="1608" name="DateCalc_week_of_year" signature="DateCalc_week_of_year($_week, $_year, $month, $day)">
+          <variable ilk="argument" name="$_week" />
+          <variable ilk="argument" name="$_year" />
+          <variable ilk="argument" name="$month" />
+          <variable ilk="argument" name="$day" />
+        </scope>
+        <scope ilk="function" line="1610" lineend="1618" name="DateCalc_monday_of_week" signature="DateCalc_monday_of_week($week, $_year, $_month, $_day)">
+          <variable ilk="argument" name="$week" />
+          <variable ilk="argument" name="$_year" />
+          <variable ilk="argument" name="$_month" />
+          <variable ilk="argument" name="$_day" />
+        </scope>
+        <scope ilk="function" line="1620" lineend="1637" name="DateCalc_nth_weekday_of_month_year" signature="DateCalc_nth_weekday_of_month_year($_year, $_month, $_day, $dow, $n)">
+          <variable ilk="argument" name="$_year" />
+          <variable ilk="argument" name="$_month" />
+          <variable ilk="argument" name="$_day" />
+          <variable ilk="argument" name="$dow" />
+          <variable ilk="argument" name="$n" />
+        </scope>
+        <scope ilk="function" line="1639" lineend="1650" name="DateCalc_standard_to_business" signature="DateCalc_standard_to_business($_year, $_week, $_dow, $month, $day)">
+          <variable ilk="argument" name="$_year" />
+          <variable ilk="argument" name="$_week" />
+          <variable ilk="argument" name="$_dow" />
+          <variable ilk="argument" name="$month" />
+          <variable ilk="argument" name="$day" />
+        </scope>
+        <scope ilk="function" line="1652" lineend="1665" name="DateCalc_business_to_standard" signature="DateCalc_business_to_standard($_year, $_month, $_day, $week, $dow)">
+          <variable ilk="argument" name="$_year" />
+          <variable ilk="argument" name="$_month" />
+          <variable ilk="argument" name="$_day" />
+          <variable ilk="argument" name="$week" />
+          <variable ilk="argument" name="$dow" />
+        </scope>
+        <scope ilk="function" line="1667" lineend="1671" name="DateCalc_Delta_Days" signature="DateCalc_Delta_Days()" />
+        <scope ilk="function" line="1673" lineend="1685" name="DateCalc_delta_hms" signature="DateCalc_delta_hms($_Dd, $_Dh, $_Dm, $_Ds, $hour1, $min1, $sec1, $hour2, $min2, $sec2)">
+          <variable ilk="argument" name="$_Dd" />
+          <variable ilk="argument" name="$_Dh" />
+          <variable ilk="argument" name="$_Dm" />
+          <variable ilk="argument" name="$_Ds" />
+          <variable ilk="argument" name="$hour1" />
+          <variable ilk="argument" name="$min1" />
+          <variable ilk="argument" name="$sec1" />
+          <variable ilk="argument" name="$hour2" />
+          <variable ilk="argument" name="$min2" />
+          <variable ilk="argument" name="$sec2" />
+        </scope>
+        <scope ilk="function" line="1687" lineend="1698" name="DateCalc_delta_dhms" signature="DateCalc_delta_dhms($_Dd, $_Dh, $_Dm, $_Ds, $year1, $month1, $day1, $hour1, $min1, $sec1, $year2, $month2, $day2, $hour2, $min2, $sec2)">
+          <variable ilk="argument" name="$_Dd" />
+          <variable ilk="argument" name="$_Dh" />
+          <variable ilk="argument" name="$_Dm" />
+          <variable ilk="argument" name="$_Ds" />
+          <variable ilk="argument" name="$year1" />
+          <variable ilk="argument" name="$month1" />
+          <variable ilk="argument" name="$day1" />
+          <variable ilk="argument" name="$hour1" />
+          <variable ilk="argument" name="$min1" />
+          <variable ilk="argument" name="$sec1" />
+          <variable ilk="argument" name="$year2" />
+          <variable ilk="argument" name="$month2" />
+          <variable ilk="argument" name="$day2" />
+          <variable ilk="argument" name="$hour2" />
+          <variable ilk="argument" name="$min2" />
+          <variable ilk="argument" name="$sec2" />
+        </scope>
+        <scope ilk="function" line="1700" lineend="1712" name="DateCalc_delta_ymd" signature="DateCalc_delta_ymd($_year1, $_month1, $_day1, $year2, $month2, $day2)">
+          <variable ilk="argument" name="$_year1" />
+          <variable ilk="argument" name="$_month1" />
+          <variable ilk="argument" name="$_day1" />
+          <variable ilk="argument" name="$year2" />
+          <variable ilk="argument" name="$month2" />
+          <variable ilk="argument" name="$day2" />
+        </scope>
+        <scope ilk="function" line="1714" lineend="1723" name="DateCalc_delta_ymdhms" signature="DateCalc_delta_ymdhms($_D_y, $_D_m, $_D_d, $_Dh, $_Dm, $_Ds, $year1, $month1, $day1, $hour1, $min1, $sec1, $year2, $month2, $day2, $hour2, $min2, $sec2)">
+          <variable ilk="argument" name="$_D_y" />
+          <variable ilk="argument" name="$_D_m" />
+          <variable ilk="argument" name="$_D_d" />
+          <variable ilk="argument" name="$_Dh" />
+          <variable ilk="argument" name="$_Dm" />
+          <variable ilk="argument" name="$_Ds" />
+          <variable ilk="argument" name="$year1" />
+          <variable ilk="argument" name="$month1" />
+          <variable ilk="argument" name="$day1" />
+          <variable ilk="argument" name="$hour1" />
+          <variable ilk="argument" name="$min1" />
+          <variable ilk="argument" name="$sec1" />
+          <variable ilk="argument" name="$year2" />
+          <variable ilk="argument" name="$month2" />
+          <variable ilk="argument" name="$day2" />
+          <variable ilk="argument" name="$hour2" />
+          <variable ilk="argument" name="$min2" />
+          <variable ilk="argument" name="$sec2" />
+        </scope>
+        <scope ilk="function" line="1725" lineend="1762" name="DateCalc_norm_delta_ymd" signature="DateCalc_norm_delta_ymd($_year1, $_month1, $_day1, $year2, $month2, $day2)">
+          <variable ilk="argument" name="$_year1" />
+          <variable ilk="argument" name="$_month1" />
+          <variable ilk="argument" name="$_day1" />
+          <variable ilk="argument" name="$year2" />
+          <variable ilk="argument" name="$month2" />
+          <variable ilk="argument" name="$day2" />
+        </scope>
+        <scope ilk="function" line="1764" lineend="1825" name="DateCalc_norm_delta_ymdhms" signature="DateCalc_norm_delta_ymdhms($_D_y, $_D_m, $_D_d, $_Dhh, $_Dmm, $_Dss, $year1, $month1, $day1, $hour1, $min1, $sec1, $year2, $month2, $day2, $hour2, $min2, $sec2)">
+          <variable ilk="argument" name="$_D_y" />
+          <variable ilk="argument" name="$_D_m" />
+          <variable ilk="argument" name="$_D_d" />
+          <variable ilk="argument" name="$_Dhh" />
+          <variable ilk="argument" name="$_Dmm" />
+          <variable ilk="argument" name="$_Dss" />
+          <variable ilk="argument" name="$year1" />
+          <variable ilk="argument" name="$month1" />
+          <variable ilk="argument" name="$day1" />
+          <variable ilk="argument" name="$hour1" />
+          <variable ilk="argument" name="$min1" />
+          <variable ilk="argument" name="$sec1" />
+          <variable ilk="argument" name="$year2" />
+          <variable ilk="argument" name="$month2" />
+          <variable ilk="argument" name="$day2" />
+          <variable ilk="argument" name="$hour2" />
+          <variable ilk="argument" name="$min2" />
+          <variable ilk="argument" name="$sec2" />
+        </scope>
+        <scope ilk="function" line="1827" lineend="1861" name="DateCalc_add_delta_days" signature="DateCalc_add_delta_days($_year, $_month, $_day, $Dd)">
+          <variable ilk="argument" name="$_year" />
+          <variable ilk="argument" name="$_month" />
+          <variable ilk="argument" name="$_day" />
+          <variable ilk="argument" name="$Dd" />
+        </scope>
+        <scope ilk="function" line="1863" lineend="1890" name="DateCalc_add_delta_dhms" signature="DateCalc_add_delta_dhms($_year, $_month, $_day, $_hour, $_min, $_sec, $Dd, $Dh, $Dm, $Ds)">
+          <variable ilk="argument" name="$_year" />
+          <variable ilk="argument" name="$_month" />
+          <variable ilk="argument" name="$_day" />
+          <variable ilk="argument" name="$_hour" />
+          <variable ilk="argument" name="$_min" />
+          <variable ilk="argument" name="$_sec" />
+          <variable ilk="argument" name="$Dd" />
+          <variable ilk="argument" name="$Dh" />
+          <variable ilk="argument" name="$Dm" />
+          <variable ilk="argument" name="$Ds" />
+        </scope>
+        <scope ilk="function" line="1892" lineend="1916" name="DateCalc_add_year_month" signature="DateCalc_add_year_month($_year, $_month, $Dy, $Dm)">
+          <variable ilk="argument" name="$_year" />
+          <variable ilk="argument" name="$_month" />
+          <variable ilk="argument" name="$Dy" />
+          <variable ilk="argument" name="$Dm" />
+        </scope>
+        <scope ilk="function" line="1918" lineend="1929" name="DateCalc_add_delta_ym" signature="DateCalc_add_delta_ym($_year, $_month, $_day, $Dy, $Dm)">
+          <variable ilk="argument" name="$_year" />
+          <variable ilk="argument" name="$_month" />
+          <variable ilk="argument" name="$_day" />
+          <variable ilk="argument" name="$Dy" />
+          <variable ilk="argument" name="$Dm" />
+        </scope>
+        <scope ilk="function" line="1931" lineend="1939" name="DateCalc_add_delta_ymd" signature="DateCalc_add_delta_ymd($_year, $_month, $_day, $Dy, $Dm, $Dd)">
+          <variable ilk="argument" name="$_year" />
+          <variable ilk="argument" name="$_month" />
+          <variable ilk="argument" name="$_day" />
+          <variable ilk="argument" name="$Dy" />
+          <variable ilk="argument" name="$Dm" />
+          <variable ilk="argument" name="$Dd" />
+        </scope>
+        <scope ilk="function" line="1941" lineend="1949" name="DateCalc_add_delta_ymdhms" signature="DateCalc_add_delta_ymdhms($_year, $_month, $_day, $_hour, $_min, $_sec, $D_y, $D_m, $D_d, $Dh, $Dm, $Ds)">
+          <variable ilk="argument" name="$_year" />
+          <variable ilk="argument" name="$_month" />
+          <variable ilk="argument" name="$_day" />
+          <variable ilk="argument" name="$_hour" />
+          <variable ilk="argument" name="$_min" />
+          <variable ilk="argument" name="$_sec" />
+          <variable ilk="argument" name="$D_y" />
+          <variable ilk="argument" name="$D_m" />
+          <variable ilk="argument" name="$D_d" />
+          <variable ilk="argument" name="$Dh" />
+          <variable ilk="argument" name="$Dm" />
+          <variable ilk="argument" name="$Ds" />
+        </scope>
+        <scope ilk="function" line="1951" lineend="1956" name="DateCalc_add_norm_delta_ymd" signature="DateCalc_add_norm_delta_ymd($_year, $_month, $_day, $Dy, $Dm, $Dd)">
+          <variable ilk="argument" name="$_year" />
+          <variable ilk="argument" name="$_month" />
+          <variable ilk="argument" name="$_day" />
+          <variable ilk="argument" name="$Dy" />
+          <variable ilk="argument" name="$Dm" />
+          <variable ilk="argument" name="$Dd" />
+        </scope>
+        <scope ilk="function" line="1958" lineend="1963" name="DateCalc_add_norm_delta_ymdhms" signature="DateCalc_add_norm_delta_ymdhms($_year, $_month, $_day, $_hour, $_min, $_sec, $D_y, $D_m, $D_d, $Dh, $Dm, $Ds)">
+          <variable ilk="argument" name="$_year" />
+          <variable ilk="argument" name="$_month" />
+          <variable ilk="argument" name="$_day" />
+          <variable ilk="argument" name="$_hour" />
+          <variable ilk="argument" name="$_min" />
+          <variable ilk="argument" name="$_sec" />
+          <variable ilk="argument" name="$D_y" />
+          <variable ilk="argument" name="$D_m" />
+          <variable ilk="argument" name="$D_d" />
+          <variable ilk="argument" name="$Dh" />
+          <variable ilk="argument" name="$Dm" />
+          <variable ilk="argument" name="$Ds" />
+        </scope>
+        <scope ilk="function" line="1965" lineend="1986" name="DateCalc_system_clock" signature="DateCalc_system_clock($_year, $_month, $_day, $_hour, $_min, $_sec, $_doy, $_dow, $_dst, $gmt)">
+          <variable ilk="argument" name="$_year" />
+          <variable ilk="argument" name="$_month" />
+          <variable ilk="argument" name="$_day" />
+          <variable ilk="argument" name="$_hour" />
+          <variable ilk="argument" name="$_min" />
+          <variable ilk="argument" name="$_sec" />
+          <variable ilk="argument" name="$_doy" />
+          <variable ilk="argument" name="$_dow" />
+          <variable ilk="argument" name="$_dst" />
+          <variable ilk="argument" name="$gmt" />
+        </scope>
+        <scope ilk="function" line="1988" lineend="2002" name="DateCalc_gmtime" signature="DateCalc_gmtime($_year, $_month, $_day, $_hour, $_min, $_sec, $_doy, $_dow, $_dst, $seconds)">
+          <variable ilk="argument" name="$_year" />
+          <variable ilk="argument" name="$_month" />
+          <variable ilk="argument" name="$_day" />
+          <variable ilk="argument" name="$_hour" />
+          <variable ilk="argument" name="$_min" />
+          <variable ilk="argument" name="$_sec" />
+          <variable ilk="argument" name="$_doy" />
+          <variable ilk="argument" name="$_dow" />
+          <variable ilk="argument" name="$_dst" />
+          <variable ilk="argument" name="$seconds" />
+        </scope>
+        <scope ilk="function" line="2004" lineend="2022" name="DateCalc_localtime" signature="DateCalc_localtime($_year, $_month, $_day, $_hour, $_min, $_sec, $_doy, $_dow, $_dst, $seconds)">
+          <variable ilk="argument" name="$_year" />
+          <variable ilk="argument" name="$_month" />
+          <variable ilk="argument" name="$_day" />
+          <variable ilk="argument" name="$_hour" />
+          <variable ilk="argument" name="$_min" />
+          <variable ilk="argument" name="$_sec" />
+          <variable ilk="argument" name="$_doy" />
+          <variable ilk="argument" name="$_dow" />
+          <variable ilk="argument" name="$_dst" />
+          <variable ilk="argument" name="$seconds" />
+        </scope>
+        <scope ilk="function" line="2032" lineend="2090" name="DateCalc_mktime" signature="DateCalc_mktime($_seconds, $year, $month, $day, $hour, $min, $sec, $doy, $dow, $dst)">
+          <variable ilk="argument" name="$_seconds" />
+          <variable ilk="argument" name="$year" />
+          <variable ilk="argument" name="$month" />
+          <variable ilk="argument" name="$day" />
+          <variable ilk="argument" name="$hour" />
+          <variable ilk="argument" name="$min" />
+          <variable ilk="argument" name="$sec" />
+          <variable ilk="argument" name="$doy" />
+          <variable ilk="argument" name="$dow" />
+          <variable ilk="argument" name="$dst" />
+        </scope>
+        <scope ilk="function" line="2092" lineend="2117" name="DateCalc_timezone" signature="DateCalc_timezone($_year, $_month, $_day, $_hour, $_min, $_sec, $_dst, $when)">
+          <variable ilk="argument" name="$_year" />
+          <variable ilk="argument" name="$_month" />
+          <variable ilk="argument" name="$_day" />
+          <variable ilk="argument" name="$_hour" />
+          <variable ilk="argument" name="$_min" />
+          <variable ilk="argument" name="$_sec" />
+          <variable ilk="argument" name="$_dst" />
+          <variable ilk="argument" name="$when" />
+        </scope>
+        <scope ilk="function" line="2139" lineend="2158" name="DateCalc_date2time" signature="DateCalc_date2time($_seconds, $year, $month, $day, $hour, $min, $sec)">
+          <variable ilk="argument" name="$_seconds" />
+          <variable ilk="argument" name="$year" />
+          <variable ilk="argument" name="$month" />
+          <variable ilk="argument" name="$day" />
+          <variable ilk="argument" name="$hour" />
+          <variable ilk="argument" name="$min" />
+          <variable ilk="argument" name="$sec" />
+        </scope>
+        <scope ilk="function" line="2162" lineend="2181" name="DateCalc_time2date" signature="DateCalc_time2date($_year, $_month, $_day, $_hour, $_min, $_sec, $ss)">
+          <variable ilk="argument" name="$_year" />
+          <variable ilk="argument" name="$_month" />
+          <variable ilk="argument" name="$_day" />
+          <variable ilk="argument" name="$_hour" />
+          <variable ilk="argument" name="$_min" />
+          <variable ilk="argument" name="$_sec" />
+          <variable ilk="argument" name="$ss" />
+        </scope>
+        <scope ilk="function" line="2183" lineend="2224" name="DateCalc_easter_sunday" signature="DateCalc_easter_sunday($_year, $_month, $_day)">
+          <variable ilk="argument" name="$_year" />
+          <variable ilk="argument" name="$_month" />
+          <variable ilk="argument" name="$_day" />
+        </scope>
+        <scope ilk="function" line="2238" lineend="2257" name="DateCalc_Decode_Month" signature="DateCalc_Decode_Month($string, $lang)">
+          <variable ilk="argument" name="$string" />
+          <variable ilk="argument" name="$lang" />
+        </scope>
+        <scope ilk="function" line="2259" lineend="2278" name="DateCalc_Decode_Day_of_Week" signature="DateCalc_Decode_Day_of_Week($string, $lang)">
+          <variable ilk="argument" name="$string" />
+          <variable ilk="argument" name="$lang" />
+        </scope>
+        <scope ilk="function" line="2280" lineend="2298" name="DateCalc_Decode_Language" signature="DateCalc_Decode_Language()">
+          </scope>
+        <scope ilk="function" line="2300" lineend="2393" name="DateCalc_decode_date_eu" signature="DateCalc_decode_date_eu($string, $_year, $_month, $_day, $lang)">
+          <variable ilk="argument" name="$string" />
+          <variable ilk="argument" name="$_year" />
+          <variable ilk="argument" name="$_month" />
+          <variable ilk="argument" name="$_day" />
+          <variable ilk="argument" name="$lang" />
+        </scope>
+        <scope ilk="function" line="2395" lineend="2561" name="DateCalc_decode_date_us" signature="DateCalc_decode_date_us($string, $_year, $_month, $_day, $lang)">
+          <variable ilk="argument" name="$string" />
+          <variable ilk="argument" name="$_year" />
+          <variable ilk="argument" name="$_month" />
+          <variable ilk="argument" name="$_day" />
+          <variable ilk="argument" name="$lang" />
+        </scope>
+        <scope ilk="function" line="2563" lineend="2573" name="DateCalc_Fixed_Window" signature="DateCalc_Fixed_Window()">
+          </scope>
+        <scope ilk="function" line="2575" lineend="2593" name="DateCalc_Moving_Window" signature="DateCalc_Moving_Window()">
+          </scope>
+        <scope ilk="function" line="2595" lineend="2623" name="DateCalc_Compress" signature="DateCalc_Compress($year, $month, $day)">
+          <variable ilk="argument" name="$year" />
+          <variable ilk="argument" name="$month" />
+          <variable ilk="argument" name="$day" />
+        </scope>
+        <scope ilk="function" line="2625" lineend="2649" name="DateCalc_uncompress" signature="DateCalc_uncompress($date, $_century, $_year, $_month, $_day)">
+          <variable ilk="argument" name="$date" />
+          <variable ilk="argument" name="$_century" />
+          <variable ilk="argument" name="$_year" />
+          <variable ilk="argument" name="$_month" />
+          <variable ilk="argument" name="$_day" />
+        </scope>
+        <scope ilk="function" line="2651" lineend="2655" name="DateCalc_check_compressed" signature="DateCalc_check_compressed()">
+          </scope>
+        <scope ilk="function" line="2657" lineend="2668" name="DateCalc_Compressed_to_Text" signature="DateCalc_Compressed_to_Text($date, $lang)">
+          <variable ilk="argument" name="$date" />
+          <variable ilk="argument" name="$lang" />
+        </scope>
+        <scope ilk="function" line="2670" lineend="2690" name="DateCalc_Date_to_Text" signature="DateCalc_Date_to_Text($year, $month, $day, $lang)">
+          <variable ilk="argument" name="$year" />
+          <variable ilk="argument" name="$month" />
+          <variable ilk="argument" name="$day" />
+          <variable ilk="argument" name="$lang" />
+        </scope>
+        <scope ilk="function" line="2692" lineend="2707" name="DateCalc_English_Ordinal" signature="DateCalc_English_Ordinal()">
+          </scope>
+        <scope ilk="function" line="2709" lineend="2754" name="DateCalc_Date_to_Text_Long" signature="DateCalc_Date_to_Text_Long($year, $month, $day, $lang)">
+          <variable ilk="argument" name="$year" />
+          <variable ilk="argument" name="$month" />
+          <variable ilk="argument" name="$day" />
+          <variable ilk="argument" name="$lang" />
+        </scope>
+        <scope ilk="function" line="2756" lineend="2836" name="DateCalc_Calendar" signature="DateCalc_Calendar($year, $month, $orthodox, $lang)">
+          <variable ilk="argument" name="$year" />
+          <variable ilk="argument" name="$month" />
+          <variable ilk="argument" name="$orthodox" />
+          <variable ilk="argument" name="$lang" />
+        </scope>
+        <scope attributes="__exportable__" ilk="function" line="2844" lineend="2915" name="Decode_Date_EU2" signature="Decode_Date_EU2()">
+          </scope>
+        <scope attributes="__exportable__" ilk="function" line="2917" lineend="3024" name="Decode_Date_US2" signature="Decode_Date_US2()">
+          </scope>
+        <scope attributes="__exportable__" ilk="function" line="3026" lineend="3056" name="Parse_Date" signature="Parse_Date()">
+          </scope>
+      </scope>
+    </scope>
+    

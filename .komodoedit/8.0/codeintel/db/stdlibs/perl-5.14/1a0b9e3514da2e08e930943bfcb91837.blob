@@ -1,0 +1,25 @@
+<scope ilk="blob" lang="Perl" name="Archive::Zip::DirectoryMember">
+      <scope classrefs="Archive::Zip::Member" ilk="class" line="1" lineend="80" name="Archive::Zip::DirectoryMember">
+        <import line="4" module="File::Path" symbol="*" />
+        <import line="13" module="Archive::Zip" symbol="**" />
+        <variable line="6" name="$VERSION" />
+        <variable line="6" name="@ISA" />
+        <scope ilk="function" line="18" lineend="48" name="_newNamed" signature="_newNamed($class, $fileName, $newName)">
+          <variable ilk="argument" name="$class" />
+          <variable ilk="argument" name="$fileName" />
+          <variable ilk="argument" name="$newName" />
+        </scope>
+        <scope ilk="function" line="50" lineend="52" name="externalFileName" signature="externalFileName()" />
+        <scope ilk="function" line="54" lineend="56" name="isDirectory" signature="isDirectory()" />
+        <scope ilk="function" line="58" lineend="65" name="extractToFileNamed" signature="extractToFileNamed($self, $name)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$name" />
+        </scope>
+        <scope ilk="function" line="67" lineend="72" name="fileName" signature="fileName($self, $newName)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$newName" />
+        </scope>
+        <scope ilk="function" line="76" lineend="78" name="contents" signature="contents()" />
+      </scope>
+    </scope>
+    

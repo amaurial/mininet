@@ -1,0 +1,49 @@
+<scope ilk="blob" lang="Perl" name="Devel::NYTProf::Util">
+      <scope ilk="class" line="12" lineend="248" name="Devel::NYTProf::Util">
+        <import line="38" module="Carp" symbol="*" />
+        <import line="39" module="Cwd" symbol="getcwd" />
+        <import line="40" module="List::Util" symbol="sum" />
+        <import line="41" module="Devel::NYTProf::Core" symbol="*" />
+        <variable line="43" name="$VERSION" />
+        <variable line="45" name="@EXPORT_OK" />
+        <scope ilk="function" line="59" lineend="70" name="get_alternation_regex" signature="get_alternation_regex($strings, $suffix_regex)">
+          <variable ilk="argument" name="$strings" />
+          <variable ilk="argument" name="$suffix_regex" />
+        </scope>
+        <scope ilk="function" line="73" lineend="88" name="get_abs_paths_alternation_regex" signature="get_abs_paths_alternation_regex($inc, $cwd)">
+          <variable ilk="argument" name="$inc" />
+          <variable ilk="argument" name="$cwd" />
+        </scope>
+        <scope ilk="function" line="91" lineend="111" name="make_path_strip_editor" signature="make_path_strip_editor($inc_ref, $anchor, $replacement)">
+          <variable ilk="argument" name="$inc_ref" />
+          <variable ilk="argument" name="$anchor" />
+          <variable ilk="argument" name="$replacement" />
+        </scope>
+        <scope ilk="function" line="115" lineend="149" name="strip_prefix_from_paths" signature="strip_prefix_from_paths($inc_ref, $paths, $anchor, $replacement)">
+          <variable ilk="argument" name="$inc_ref" />
+          <variable ilk="argument" name="$paths" />
+          <variable ilk="argument" name="$anchor" />
+          <variable ilk="argument" name="$replacement" />
+        </scope>
+        <scope ilk="function" line="153" lineend="169" name="fmt_float" signature="fmt_float($val, $precision)">
+          <variable ilk="argument" name="$val" />
+          <variable ilk="argument" name="$precision" />
+        </scope>
+        <scope ilk="function" line="176" lineend="188" name="fmt_time" signature="fmt_time($sec, $width)">
+          <variable ilk="argument" name="$sec" />
+          <variable ilk="argument" name="$width" />
+        </scope>
+        <scope ilk="function" line="191" lineend="207" name="fmt_incl_excl_time" signature="fmt_incl_excl_time($incl, $excl)">
+          <variable ilk="argument" name="$incl" />
+          <variable ilk="argument" name="$excl" />
+        </scope>
+        <scope ilk="function" line="213" lineend="227" name="calculate_median_absolute_deviation" signature="calculate_median_absolute_deviation($values_ref, $ignore_zeros)">
+          <variable ilk="argument" name="$values_ref" />
+          <variable ilk="argument" name="$ignore_zeros" />
+        </scope>
+        <scope ilk="function" line="230" lineend="246" name="html_safe_filename" signature="html_safe_filename($fname)">
+          <variable ilk="argument" name="$fname" />
+        </scope>
+      </scope>
+    </scope>
+    

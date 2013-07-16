@@ -1,0 +1,19 @@
+<scope ilk="blob" lang="Perl" name="Perl::Critic::Policy::Miscellanea::ProhibitUselessNoCritic">
+      <scope ilk="class" line="8" lineend="69" name="Perl::Critic::Policy::Miscellanea::ProhibitUselessNoCritic">
+        <import line="14" module="Readonly" symbol="*" />
+        <import line="16" module="List::MoreUtils" symbol="none" />
+        <import line="18" module="Perl::Critic::Utils" symbol="**" />
+        <variable line="21" name="$VERSION" />
+        <scope ilk="function" line="30" lineend="30" name="supported_parameters" signature="supported_parameters()" />
+        <scope ilk="function" line="31" lineend="31" name="default_severity" signature="default_severity()" />
+        <scope ilk="function" line="32" lineend="32" name="default_themes" signature="default_themes()" />
+        <scope ilk="function" line="33" lineend="33" name="applies_to" signature="applies_to()" />
+        <scope ilk="function" line="37" lineend="53" name="violates" signature="violates()">
+          </scope>
+        <scope ilk="function" line="57" lineend="65" name="_annotation_suppresses_violation" signature="_annotation_suppresses_violation($annotation, $violation)">
+          <variable ilk="argument" name="$annotation" />
+          <variable ilk="argument" name="$violation" />
+        </scope>
+      </scope>
+    </scope>
+    

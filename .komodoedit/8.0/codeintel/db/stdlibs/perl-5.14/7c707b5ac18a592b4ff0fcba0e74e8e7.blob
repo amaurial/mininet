@@ -1,0 +1,28 @@
+<scope ilk="blob" lang="Perl" name="PPI::Util">
+      <scope classrefs="Exporter" ilk="class" line="1" lineend="77" name="PPI::Util">
+        <import line="6" module="Exporter" />
+        <import line="7" module="Digest::MD5" />
+        <import line="8" module="Params::Util" symbol="_INSTANCE" />
+        <import line="8" module="Params::Util" symbol="_SCALAR0" />
+        <import line="8" module="Params::Util" symbol="_ARRAY0" />
+        <variable line="10" name="$VERSION" />
+        <variable line="10" name="@EXPORT_OK" />
+        <variable line="10" name="@ISA" />
+        <scope ilk="function" line="26" lineend="26" name="TRUE" signature="TRUE()" />
+        <scope ilk="function" line="27" lineend="27" name="FALSE" signature="FALSE()" />
+        <scope attributes="__exportable__" ilk="function" line="38" lineend="47" name="_Document" signature="_Document()">
+          <import line="41" module="PPI::Document" />
+          <import line="41" module="PPI::Document" />
+        </scope>
+        <scope attributes="__exportable__" ilk="function" line="50" lineend="58" name="_slurp" signature="_slurp($file)">
+          <variable ilk="argument" name="$file" />
+        </scope>
+        <scope ilk="function" line="62" lineend="66" name="md5hex" signature="md5hex($string)">
+          <variable ilk="argument" name="$string" />
+        </scope>
+        <scope ilk="function" line="69" lineend="75" name="md5hex_file" signature="md5hex_file($file)">
+          <variable ilk="argument" name="$file" />
+        </scope>
+      </scope>
+    </scope>
+    

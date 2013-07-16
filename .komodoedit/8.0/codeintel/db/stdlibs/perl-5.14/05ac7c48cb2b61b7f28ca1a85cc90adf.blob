@@ -1,0 +1,62 @@
+<scope ilk="blob" lang="Perl" name="Cwd">
+      <scope classrefs="Exporter" ilk="class" line="1" lineend="831" name="Cwd">
+        <import line="171" module="Exporter" symbol="*" />
+        <import line="247" module="XSLoader" />
+        <import line="250" module="DynaLoader" />
+        <variable line="172" name="$VERSION" />
+        <variable line="172" name="@EXPORT" />
+        <variable line="172" name="@EXPORT_OK" />
+        <variable line="172" name="@ISA" />
+        <variable line="192" name="*cwd" />
+        <variable line="193" name="*getcwd" />
+        <variable line="194" name="*fastgetcwd" />
+        <variable line="195" name="*fastcwd" />
+        <variable line="197" name="*fast_abs_path" />
+        <variable line="198" name="*abs_path" />
+        <variable line="199" name="*realpath" />
+        <variable line="200" name="*fast_realpath" />
+        <variable line="768" name="*_NT_cwd" />
+        <scope ilk="function" line="219" lineend="228" name="_vms_unix_rpt" signature="_vms_unix_rpt()">
+          </scope>
+        <scope ilk="function" line="232" lineend="241" name="_vms_efs" signature="_vms_efs()">
+          </scope>
+        <scope ilk="function" line="356" lineend="356" name="_carp" signature="_carp()">
+          <import line="356" module="Carp" />
+          <import line="356" module="Carp" />
+        </scope>
+        <scope ilk="function" line="357" lineend="357" name="_croak" signature="_croak()">
+          <import line="357" module="Carp" />
+          <import line="357" module="Carp" />
+        </scope>
+        <scope ilk="function" line="360" lineend="371" name="_backtick_pwd" signature="_backtick_pwd()">
+          </scope>
+        <scope ilk="function" line="416" lineend="419" name="_perl_getcwd" signature="_perl_getcwd()" />
+        <scope ilk="function" line="428" lineend="465" name="fastcwd_" signature="fastcwd_()">
+          </scope>
+        <scope ilk="function" line="476" lineend="498" name="chdir_init" signature="chdir_init()">
+          </scope>
+        <scope attributes="__exportable__" ilk="function" line="500" lineend="539" name="chdir" signature="chdir()">
+          </scope>
+        <scope ilk="function" line="542" lineend="617" name="_perl_abs_path" signature="_perl_abs_path()">
+          <import line="565" module="File::Spec" />
+          <import line="565" module="File::Spec" />
+        </scope>
+        <scope attributes="__exportable__" ilk="function" line="621" lineend="665" name="fast_abs_path" signature="fast_abs_path()">
+          <import line="624" module="File::Spec" />
+          <import line="624" module="File::Spec" />
+        </scope>
+        <scope ilk="function" line="682" lineend="684" name="_vms_cwd" signature="_vms_cwd()" />
+        <scope ilk="function" line="686" lineend="741" name="_vms_abs_path" signature="_vms_abs_path($path)">
+          <variable ilk="argument" name="$path" />
+        </scope>
+        <scope ilk="function" line="743" lineend="748" name="_os2_cwd" signature="_os2_cwd()" />
+        <scope ilk="function" line="750" lineend="755" name="_win32_cwd_simple" signature="_win32_cwd_simple()" />
+        <scope ilk="function" line="757" lineend="766" name="_win32_cwd" signature="_win32_cwd()" />
+        <scope ilk="function" line="770" lineend="779" name="_dos_cwd" signature="_dos_cwd()" />
+        <scope ilk="function" line="781" lineend="788" name="_qnx_cwd" signature="_qnx_cwd()" />
+        <scope ilk="function" line="790" lineend="803" name="_qnx_abs_path" signature="_qnx_abs_path()">
+          </scope>
+        <scope ilk="function" line="805" lineend="808" name="_epoc_cwd" signature="_epoc_cwd()" />
+      </scope>
+    </scope>
+    

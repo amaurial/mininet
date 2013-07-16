@@ -1,0 +1,28 @@
+<scope ilk="blob" lang="Perl" name="Perl::Critic::Policy::TestingAndDebugging::RequireUseStrict">
+      <scope ilk="class" line="8" lineend="140" name="Perl::Critic::Policy::TestingAndDebugging::RequireUseStrict">
+        <import line="14" module="version" symbol="*" />
+        <import line="15" module="Readonly" symbol="*" />
+        <import line="16" module="Scalar::Util" symbol="blessed" />
+        <import line="18" module="Perl::Critic::Utils" symbol="**" />
+        <variable line="21" name="$VERSION" />
+        <variable line="108" name="$version" />
+        <scope ilk="function" line="32" lineend="44" name="supported_parameters" signature="supported_parameters()" />
+        <scope ilk="function" line="46" lineend="46" name="default_severity" signature="default_severity()" />
+        <scope ilk="function" line="47" lineend="47" name="default_themes" signature="default_themes()" />
+        <scope ilk="function" line="48" lineend="48" name="applies_to" signature="applies_to()" />
+        <scope ilk="function" line="50" lineend="50" name="default_maximum_violations_per_document" signature="default_maximum_violations_per_document()" />
+        <scope ilk="function" line="54" lineend="79" name="violates" signature="violates()">
+          </scope>
+        <scope ilk="function" line="83" lineend="117" name="_generate_is_use_strict" signature="_generate_is_use_strict($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="124" lineend="129" name="_find_isnt_include_or_package" signature="_find_isnt_include_or_package($self, $doc)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$doc" />
+        </scope>
+        <scope ilk="function" line="133" lineend="138" name="_statement_isnt_include_or_package" signature="_statement_isnt_include_or_package($elem)">
+          <variable ilk="argument" name="$elem" />
+        </scope>
+      </scope>
+    </scope>
+    

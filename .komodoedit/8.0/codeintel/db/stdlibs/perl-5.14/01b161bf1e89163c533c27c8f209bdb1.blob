@@ -1,0 +1,170 @@
+<scope ilk="blob" lang="Perl" name="Archive::Tar">
+      <scope classrefs="Exporter" ilk="class" line="7" lineend="1795" name="Archive::Tar">
+        <import line="10" module="Cwd" symbol="*" />
+        <import line="11" module="IO::Zlib" symbol="*" />
+        <import line="12" module="IO::File" symbol="*" />
+        <import line="13" module="Carp" symbol="carp" />
+        <import line="13" module="Carp" symbol="croak" />
+        <import line="14" module="File::Spec" />
+        <import line="15" module="File::Spec::Unix" />
+        <import line="16" module="File::Path" />
+        <import line="18" module="Archive::Tar::File" symbol="*" />
+        <import line="19" module="Archive::Tar::Constant" symbol="*" />
+        <import line="21" module="Exporter" />
+        <import line="43" module="Config" symbol="*" />
+        <import line="49" module="IO::String" />
+        <variable line="24" name="$CHMOD" />
+        <variable line="24" name="$CHOWN" />
+        <variable line="24" name="$DEBUG" />
+        <variable line="24" name="$error" />
+        <variable line="24" name="$FOLLOW_SYMLINK" />
+        <variable line="24" name="$VERSION" />
+        <variable line="24" name="$WARN" />
+        <variable line="25" name="$DO_NOT_USE_PREFIX" />
+        <variable line="25" name="$HAS_IO_STRING" />
+        <variable line="25" name="$HAS_PERLIO" />
+        <variable line="25" name="$SAME_PERMISSIONS" />
+        <variable line="26" name="$INSECURE_EXTRACT_MODE" />
+        <variable line="26" name="$ZERO_PAD_NUMBERS" />
+        <variable line="26" name="@EXPORT" />
+        <variable line="26" name="@ISA" />
+        <scope attributes="__ctor__" ilk="function" line="115" lineend="131" name="new" signature="new($class)">
+          <variable ilk="argument" name="$class" />
+        </scope>
+        <scope ilk="function" line="189" lineend="210" name="read" signature="read($self, $file, $gzip, $opts)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$file" />
+          <variable ilk="argument" name="$gzip" />
+          <variable ilk="argument" name="$opts" />
+        </scope>
+        <scope ilk="function" line="212" lineend="299" name="_get_handle" signature="_get_handle($self, $file, $compress, $mode)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$file" />
+          <variable ilk="argument" name="$compress" />
+          <variable ilk="argument" name="$mode" />
+        </scope>
+        <scope ilk="function" line="302" lineend="524" name="_read_tar" signature="_read_tar($self, $handle, $opts)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$handle" />
+          <variable ilk="argument" name="$opts" />
+        </scope>
+        <scope ilk="function" line="538" lineend="549" name="contains_file" signature="contains_file($self, $full)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$full" />
+        </scope>
+        <scope ilk="function" line="569" lineend="625" name="extract" signature="extract($self, @args)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="@args" />
+        </scope>
+        <scope ilk="function" line="643" lineend="652" name="extract_file" signature="extract_file($self, $file, $alt)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$file" />
+          <variable ilk="argument" name="$alt" />
+        </scope>
+        <scope ilk="function" line="654" lineend="866" name="_extract_file" signature="_extract_file($self, $entry, $alt)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$entry" />
+          <variable ilk="argument" name="$alt" />
+        </scope>
+        <scope ilk="function" line="868" lineend="920" name="_make_special_file" signature="_make_special_file($self, $entry, $file)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$entry" />
+          <variable ilk="argument" name="$file" />
+        </scope>
+        <scope ilk="function" line="924" lineend="948" name="_extract_special_file_as_plain_file" signature="_extract_special_file_as_plain_file($self, $entry, $file)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$entry" />
+          <variable ilk="argument" name="$file" />
+        </scope>
+        <scope ilk="function" line="967" lineend="991" name="list_files" signature="list_files($self, $aref)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$aref" />
+        </scope>
+        <scope ilk="function" line="993" lineend="1012" name="_find_entry" signature="_find_entry($self, $file)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$file" />
+        </scope>
+        <scope ilk="function" line="1025" lineend="1036" name="get_files" signature="get_files($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="1044" lineend="1049" name="get_content" signature="get_content($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="1057" lineend="1062" name="replace_content" signature="replace_content($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="1075" lineend="1083" name="rename" signature="rename($self, $file, $new)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$file" />
+          <variable ilk="argument" name="$new" />
+        </scope>
+        <scope ilk="function" line="1093" lineend="1103" name="remove" signature="remove($self, @list)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="@list" />
+        </scope>
+        <scope ilk="function" line="1113" lineend="1120" name="clear" signature="clear($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="1157" lineend="1301" name="write" signature="write($self, $file, $gzip, $ext_prefix)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$file" />
+          <variable ilk="argument" name="$gzip" />
+          <variable ilk="argument" name="$ext_prefix" />
+        </scope>
+        <scope ilk="function" line="1303" lineend="1355" name="_format_tar_entry" signature="_format_tar_entry($self, $entry, $ext_prefix, $no_prefix)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$entry" />
+          <variable ilk="argument" name="$ext_prefix" />
+          <variable ilk="argument" name="$no_prefix" />
+        </scope>
+        <scope ilk="function" line="1379" lineend="1411" name="add_files" signature="add_files($self, @files)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="@files" />
+        </scope>
+        <scope ilk="function" line="1466" lineend="1479" name="add_data" signature="add_data($self, $file, $data, $opt)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$file" />
+          <variable ilk="argument" name="$data" />
+          <variable ilk="argument" name="$opt" />
+        </scope>
+        <scope ilk="function" line="1497" lineend="1513" name="_error" signature="_error($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="1515" lineend="1522" name="error" signature="error($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="1558" lineend="1563" name="setcwd" signature="setcwd($self, $cwd)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$cwd" />
+        </scope>
+        <scope ilk="function" line="1603" lineend="1617" name="create_archive" signature="create_archive($class, $file, $gzip, @files)">
+          <variable ilk="argument" name="$class" />
+          <variable ilk="argument" name="$file" />
+          <variable ilk="argument" name="$gzip" />
+          <variable ilk="argument" name="@files" />
+        </scope>
+        <scope ilk="function" line="1645" lineend="1674" name="iter" signature="iter($class, $filename, $compressed, $opts)">
+          <variable ilk="argument" name="$class" />
+          <variable ilk="argument" name="$filename" />
+          <variable ilk="argument" name="$compressed" />
+          <variable ilk="argument" name="$opts" />
+        </scope>
+        <scope ilk="function" line="1696" lineend="1705" name="list_archive" signature="list_archive($class, $file, $gzip)">
+          <variable ilk="argument" name="$class" />
+          <variable ilk="argument" name="$file" />
+          <variable ilk="argument" name="$gzip" />
+        </scope>
+        <scope ilk="function" line="1721" lineend="1729" name="extract_archive" signature="extract_archive($class, $file, $gzip)">
+          <variable ilk="argument" name="$class" />
+          <variable ilk="argument" name="$file" />
+          <variable ilk="argument" name="$gzip" />
+        </scope>
+        <scope ilk="function" line="1743" lineend="1743" name="has_io_string" signature="has_io_string()" />
+        <scope ilk="function" line="1759" lineend="1759" name="has_perlio" signature="has_perlio()" />
+        <scope ilk="function" line="1767" lineend="1767" name="has_zlib_support" signature="has_zlib_support()" />
+        <scope ilk="function" line="1775" lineend="1775" name="has_bzip2_support" signature="has_bzip2_support()" />
+        <scope ilk="function" line="1789" lineend="1789" name="can_handle_compressed_files" signature="can_handle_compressed_files()" />
+        <scope ilk="function" line="1791" lineend="1793" name="no_string_support" signature="no_string_support()" />
+      </scope>
+    </scope>
+    

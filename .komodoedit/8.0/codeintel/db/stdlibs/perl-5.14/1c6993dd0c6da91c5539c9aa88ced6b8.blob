@@ -1,0 +1,54 @@
+<scope ilk="blob" lang="Perl" name="CPANPLUS::Configure">
+      <scope ilk="class" line="1" lineend="633" name="CPANPLUS::Configure">
+        <import line="5" module="CPANPLUS::Internals::Constants" symbol="*" />
+        <import line="6" module="CPANPLUS::Error" symbol="*" />
+        <import line="7" module="CPANPLUS::Config" symbol="*" />
+        <import line="9" module="Log::Message" symbol="*" />
+        <import line="10" module="Module::Load" symbol="load" />
+        <import line="11" module="Params::Check" symbol="check" />
+        <import line="12" module="File::Basename" symbol="dirname" />
+        <import line="13" module="Module::Loaded" />
+        <import line="14" module="Locale::Maketext::Simple" symbol="Class" />
+        <import line="22" module="CPANPLUS::Internals" />
+        <variable line="16" name="$AUTOLOAD" />
+        <variable line="16" name="$MIN_CONFIG_VERSION" />
+        <variable line="16" name="$VERSION" />
+        <scope attributes="__ctor__" ilk="function" line="89" lineend="117" name="new" signature="new($class, %hash)">
+          <variable ilk="argument" name="$class" />
+          <variable ilk="argument" name="%hash" />
+        </scope>
+        <scope ilk="function" line="142" lineend="252" name="init" signature="init($self, %hash)">
+          <import line="181" module="Module::Pluggable" />
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="%hash" />
+          <import line="181" module="Module::Pluggable" />
+        </scope>
+        <scope ilk="function" line="265" lineend="273" name="can_save" signature="can_save($self, $file)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$file" />
+        </scope>
+        <scope ilk="function" line="292" lineend="324" name="_config_pm_to_file" signature="_config_pm_to_file($self, $pm, $dir)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$pm" />
+          <variable ilk="argument" name="$dir" />
+        </scope>
+        <scope ilk="function" line="327" lineend="423" name="save" signature="save($self, $pm, $savedir)">
+          <import line="347" module="Data::Dumper" symbol="*" />
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$pm" />
+          <variable ilk="argument" name="$savedir" />
+          <import line="347" module="Data::Dumper" symbol="*" />
+        </scope>
+        <scope ilk="function" line="435" lineend="453" name="options" signature="options($self, %hash)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="%hash" />
+        </scope>
+        <scope ilk="function" line="512" lineend="598" name="AUTOLOAD" signature="AUTOLOAD($self, %args, %args)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="%args" />
+          <variable ilk="argument" name="%args" />
+        </scope>
+        <scope ilk="function" line="600" lineend="600" name="DESTROY" signature="DESTROY()" />
+      </scope>
+    </scope>
+    

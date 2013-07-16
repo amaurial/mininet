@@ -1,0 +1,37 @@
+<scope doc="A package for parsing, handling, and generating email messages.&#xA;" ilk="blob" lang="Python" name="email">
+      <variable citdl="list" line="9" name="__all__" />
+      <import module="_parseaddr" />
+      <import module="base64mime" />
+      <import module="charset" />
+      <import module="encoders" />
+      <import module="errors" />
+      <import module="feedparser" />
+      <import module="header" />
+      <import module="iterators" />
+      <import module="message" />
+      <scope doc="Read a binary file and parse its contents into a Message&#xA;object model." ilk="function" line="57" lineend="63" name="message_from_binary_file" signature="message_from_binary_file(fp, *args, **kws)">
+        <variable ilk="argument" name="fp" />
+        <variable attributes="kwargs" ilk="argument" name="kws" />
+        <variable attributes="varargs" ilk="argument" name="args" />
+      </scope>
+      <scope doc="Parse a bytes string into a Message object model." ilk="function" line="41" lineend="47" name="message_from_bytes" signature="message_from_bytes(s, *args, **kws)">
+        <variable ilk="argument" name="s" />
+        <variable attributes="varargs" ilk="argument" name="args" />
+        <variable attributes="kwargs" ilk="argument" name="kws" />
+      </scope>
+      <scope doc="Read a file and parse its contents into a Message object&#xA;model." ilk="function" line="49" lineend="55" name="message_from_file" signature="message_from_file(fp, *args, **kws)">
+        <variable ilk="argument" name="fp" />
+        <variable attributes="kwargs" ilk="argument" name="kws" />
+        <variable attributes="varargs" ilk="argument" name="args" />
+      </scope>
+      <scope doc="Parse a string into a Message object model." ilk="function" line="33" lineend="39" name="message_from_string" signature="message_from_string(s, *args, **kws)">
+        <variable ilk="argument" name="s" />
+        <variable attributes="varargs" ilk="argument" name="args" />
+        <variable attributes="kwargs" ilk="argument" name="kws" />
+      </scope>
+      <import module="parser" />
+      <import module="quoprimime" />
+      <import module="utils" />
+      <variable attributes="__hidden__" citdl="str" line="7" name="__version__" />
+    </scope>
+    

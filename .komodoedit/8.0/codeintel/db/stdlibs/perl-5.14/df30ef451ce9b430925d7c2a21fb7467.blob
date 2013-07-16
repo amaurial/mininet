@@ -1,0 +1,68 @@
+<scope ilk="blob" lang="Perl" name="Carp">
+      <scope classrefs="Exporter" ilk="class" line="1" lineend="348" name="Carp">
+        <import line="14" module="Exporter" />
+        <variable line="6" name="$VERSION" />
+        <variable line="8" name="$MaxEvalLen" />
+        <variable line="9" name="$Verbose" />
+        <variable line="10" name="$CarpLevel" />
+        <variable line="11" name="$MaxArgLen" />
+        <variable line="12" name="$MaxArgNums" />
+        <variable line="16" name="@EXPORT" />
+        <variable line="17" name="@EXPORT_OK" />
+        <variable line="18" name="@EXPORT_FAIL" />
+        <variable line="29" name="%CarpInternal" />
+        <variable line="30" name="%Internal" />
+        <variable line="69" name="@CARP_NOT" />
+        <scope ilk="function" line="43" lineend="43" name="export_fail" signature="export_fail()" />
+        <scope ilk="function" line="45" lineend="49" name="_cgc" signature="_cgc()" />
+        <scope ilk="function" line="51" lineend="67" name="longmess" signature="longmess()">
+          </scope>
+        <scope ilk="function" line="71" lineend="77" name="shortmess" signature="shortmess()">
+          </scope>
+        <scope ilk="function" line="79" lineend="79" name="croak" signature="croak()" />
+        <scope ilk="function" line="80" lineend="80" name="confess" signature="confess()" />
+        <scope ilk="function" line="81" lineend="81" name="carp" signature="carp()" />
+        <scope ilk="function" line="82" lineend="82" name="cluck" signature="cluck()" />
+        <scope ilk="function" line="84" lineend="136" name="caller_info" signature="caller_info()">
+          </scope>
+        <scope ilk="function" line="139" lineend="161" name="format_arg" signature="format_arg($arg)">
+          <variable ilk="argument" name="$arg" />
+        </scope>
+        <scope ilk="function" line="167" lineend="172" name="get_status" signature="get_status($cache, $pkg)">
+          <variable ilk="argument" name="$cache" />
+          <variable ilk="argument" name="$pkg" />
+        </scope>
+        <scope ilk="function" line="176" lineend="190" name="get_subname" signature="get_subname($info)">
+          <variable ilk="argument" name="$info" />
+        </scope>
+        <scope ilk="function" line="194" lineend="220" name="long_error_loc" signature="long_error_loc()">
+          </scope>
+        <scope ilk="function" line="222" lineend="226" name="longmess_heavy" signature="longmess_heavy()">
+          </scope>
+        <scope ilk="function" line="230" lineend="250" name="ret_backtrace" signature="ret_backtrace($i, @error)">
+          <variable ilk="argument" name="$i" />
+          <variable ilk="argument" name="@error" />
+        </scope>
+        <scope ilk="function" line="252" lineend="265" name="ret_summary" signature="ret_summary($i, @error)">
+          <variable ilk="argument" name="$i" />
+          <variable ilk="argument" name="@error" />
+        </scope>
+        <scope ilk="function" line="267" lineend="289" name="short_error_loc" signature="short_error_loc()">
+          </scope>
+        <scope ilk="function" line="291" lineend="301" name="shortmess_heavy" signature="shortmess_heavy()">
+          </scope>
+        <scope ilk="function" line="304" lineend="311" name="str_len_trim" signature="str_len_trim($str, $max)">
+          <variable ilk="argument" name="$str" />
+          <variable ilk="argument" name="$max" />
+        </scope>
+        <scope ilk="function" line="319" lineend="336" name="trusts" signature="trusts($child, $parent, $cache)">
+          <variable ilk="argument" name="$child" />
+          <variable ilk="argument" name="$parent" />
+          <variable ilk="argument" name="$cache" />
+        </scope>
+        <scope ilk="function" line="339" lineend="346" name="trusts_directly" signature="trusts_directly($class)">
+          <variable ilk="argument" name="$class" />
+        </scope>
+      </scope>
+    </scope>
+    

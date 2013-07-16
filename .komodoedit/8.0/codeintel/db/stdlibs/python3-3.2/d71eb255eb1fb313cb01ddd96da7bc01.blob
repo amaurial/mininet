@@ -1,0 +1,127 @@
+<scope doc="distutils.core&#xA;The only module that needs to be imported to use the Distutils; provides the &apos;setup&apos; function (which is to be called from the setup script).  Also indirectly provides the Distribution and Command classes, although they are really defined in distutils.dist and distutils.cmd." ilk="blob" lang="Python" name="distutils.core">
+      <scope classrefs="Exception" doc="Some compile/link operation failed.&#xA;" ilk="class" name="CCompilerError" />
+      <scope classrefs="object" doc="Abstract base class for defining command classes, the &quot;worker bees&quot;&#xA;of the Distutils.  A useful analogy for command classes is to think of them as subroutines with local variables called &quot;options&quot;.  The options are &quot;declared&quot; in &apos;initialize_options()&apos; and &quot;defined&quot; (given their final values, aka &quot;finalized&quot;) in &apos;finalize_options()&apos;, both of which must be defined by every command class.  The distinction between the two is necessary because option values might come from the outside world (command line, config file, ...), and any options dependent on other options must be computed *after* these outside influences have been processed -- hence &apos;finalize_options()&apos;.  The &quot;body&quot; of the subroutine, where it does all its work based on the values of its" ilk="class" name="Command">
+        <scope ilk="function" name="_ensure_tested_string" signature="_ensure_tested_string(self, option, tester, what, error_fmt, default=None)" />
+        <scope doc="Spawn an external command respecting dry-run flag." ilk="function" name="spawn" signature="spawn(self, cmd, search_path=1, level=1)" />
+        <scope ilk="function" name="ensure_finalized" signature="ensure_finalized(self)" />
+        <scope doc="Create and initialize a new Command object." ilk="function" name="__init__" signature="__init__(self, dist)" />
+        <scope doc="Set default values for all the options that this command&#xA;supports." ilk="function" name="initialize_options" signature="initialize_options(self)" />
+        <scope ilk="function" name="dump_options" signature="dump_options(self, header=None, indent=&apos;&apos;)" />
+        <scope doc="# XXX A more explicit way to customize dry_run would be&#xA;better." ilk="function" name="__getattr__" signature="__getattr__(self, attr)" />
+        <scope doc="Determine the sub-commands that are relevant in the current&#xA;distribution (ie., that need to be run)." ilk="function" name="get_sub_commands" signature="get_sub_commands(self)" />
+        <scope doc="Copy an entire directory tree respecting verbose, dry-run,&#xA;and force flags." ilk="function" name="copy_tree" signature="copy_tree(self, infile, outfile, preserve_mode=1, preserve_times=1, preserve_symlinks=0, level=1)" />
+        <scope doc="If the current verbosity level is of greater than or equal&#xA;to &apos;level&apos; print &apos;msg&apos; to stdout." ilk="function" name="announce" signature="announce(self, msg, level=1)" />
+        <scope doc="Run some other command: uses the &apos;run_command()&apos; method of&#xA;Distribution, which creates and finalizes the command object&#xA;if necessary and then invokes its &apos;run()&apos; method." ilk="function" name="run_command" signature="run_command(self, command)" />
+        <scope doc="Set the values of any &quot;undefined&quot; options from corresponding&#xA;option values in some other command object." ilk="function" name="set_undefined_options" signature="set_undefined_options(self, src_cmd, *option_pairs)" />
+        <scope doc="A command&apos;s raison d&apos;etre: carry out the action it exists to&#xA;perform, controlled by the options initialized in&#xA;&apos;initialize_options()&apos;, customized by other commands, the&#xA;setup script, the command-line, and config files, and&#xA;finalized in" ilk="function" name="run" signature="run(self)" />
+        <scope doc="# XXX rename to &apos;get_reinitialized_command()&apos;? (should do&#xA;the # same in dist.py, if so)" ilk="function" name="reinitialize_command" signature="reinitialize_command(self, command, reinit_subcommands=0)" />
+        <scope doc="Copy a file respecting verbose, dry-run and force flags." ilk="function" name="copy_file" signature="copy_file(self, infile, outfile, preserve_mode=1, preserve_times=1, link=None, level=1)" />
+        <scope ilk="function" name="warn" signature="warn(self, msg)" />
+        <scope ilk="function" name="ensure_dirname" signature="ensure_dirname(self, option)" />
+        <scope doc="Move a file respecting dry-run flag." ilk="function" name="move_file" signature="move_file(self, src, dst, level=1)" />
+        <scope doc="Ensure that &apos;option&apos; is a list of strings." ilk="function" name="ensure_string_list" signature="ensure_string_list(self, option)" />
+        <scope ilk="function" name="_ensure_stringlike" signature="_ensure_stringlike(self, option, what, default=None)" />
+        <scope doc="Wrapper around Distribution&apos;s &apos;get_command_obj()&apos; method:&#xA;find (create if necessary and &apos;create&apos; is true) the command&#xA;object for &apos;command&apos;, call its &apos;ensure_finalized()&apos; method,&#xA;and return the finalized command object." ilk="function" name="get_finalized_command" signature="get_finalized_command(self, command, create=1)" />
+        <scope ilk="function" name="execute" signature="execute(self, func, args, msg=None, level=1)" />
+        <scope doc="Ensure that &apos;option&apos; is a string; if not defined, set it to&#xA;&apos;default&apos;." ilk="function" name="ensure_string" signature="ensure_string(self, option, default=None)" />
+        <scope ilk="function" name="mkpath" signature="mkpath(self, name, mode=511)" />
+        <scope ilk="function" name="make_archive" signature="make_archive(self, base_name, format, root_dir=None, base_dir=None)" />
+        <scope ilk="function" name="get_command_name" signature="get_command_name(self)" />
+        <scope doc="Special case of &apos;execute()&apos; for operations that process one&#xA;or more input files and generate one output file." ilk="function" name="make_file" signature="make_file(self, infiles, outfile, func, args, exec_msg=None, skip_msg=None, level=1)" />
+        <scope doc="Set final values for all the options that this command&#xA;supports." ilk="function" name="finalize_options" signature="finalize_options(self)" />
+        <scope doc="Ensure that &apos;option&apos; is the name of an existing file." ilk="function" name="ensure_filename" signature="ensure_filename(self, option)" />
+        <scope doc="Print &apos;msg&apos; to stdout if the global DEBUG (taken from the&#xA;DISTUTILS_DEBUG environment variable) flag is true." ilk="function" name="debug_print" signature="debug_print(self, msg)" />
+      </scope>
+      <scope classrefs="CCompilerError" doc="Failure to compile one or more C/C++ source files.&#xA;" ilk="class" name="CompileError" />
+      <variable citdl="NoneType" name="DEBUG" />
+      <scope classrefs="object" doc="The core of the Distutils.  Most of the work hiding behind &apos;setup&apos;&#xA;is really done within a Distribution instance, which farms the work out to the Distutils commands specified on the command line.  Setup scripts will almost never instantiate Distribution directly, unless the &apos;setup()&apos; function is totally inadequate to their needs. However, it is conceivable that a setup script might wish to subclass Distribution for some specialized purpose, and then pass the subclass to &apos;setup()&apos; as the &apos;distclass&apos; keyword argument.  If so, it is necessary to respect the expectations that &apos;setup&apos; has of Distribution. See the code for &apos;setup()&apos;, in core.py, for details." ilk="class" name="Distribution">
+        <scope doc="Parse the setup script&apos;s command line, taken from the&#xA;&apos;script_args&apos; instance attribute (which defaults to&#xA;&apos;sys.argv[1:]&apos; -- see &apos;setup()&apos; in core.py)." ilk="function" name="parse_command_line" signature="parse_command_line(self)" />
+        <scope ilk="function" name="has_modules" signature="has_modules(self)" />
+        <scope doc="Construct a new Distribution instance: initialize all the&#xA;attributes of a Distribution, and then use &apos;attrs&apos; (a&#xA;dictionary mapping attribute names to values) to assign some&#xA;of those attributes their &quot;real&quot; values." ilk="function" name="__init__" signature="__init__(self, attrs=None)" />
+        <scope doc="Run each command that was seen on the setup script command&#xA;line." ilk="function" name="run_commands" signature="run_commands(self)" />
+        <scope doc="Do whatever it takes to run a command (including nothing at&#xA;all, if the command has already been run)." ilk="function" name="run_command" signature="run_command(self, command)" />
+        <scope ilk="function" name="has_headers" signature="has_headers(self)" />
+        <scope ilk="function" name="parse_config_files" signature="parse_config_files(self, filenames=None)" />
+        <scope doc="Return the non-display options recognized at the top level." ilk="function" name="_get_toplevel_options" signature="_get_toplevel_options(self)" />
+        <scope ilk="function" name="announce" signature="announce(self, msg, level=2)" />
+        <scope doc="Return a list of packages from which commands are loaded." ilk="function" name="get_command_packages" signature="get_command_packages(self)" />
+        <scope doc="Set the options for &apos;command_obj&apos; from &apos;option_dict&apos;." ilk="function" name="_set_command_options" signature="_set_command_options(self, command_obj, option_dict=None)" />
+        <scope doc="Reinitializes a command to the state it was in when first&#xA;returned by &apos;get_command_obj()&apos;: ie., initialized but not&#xA;yet finalized." ilk="function" name="reinitialize_command" signature="reinitialize_command(self, command, reinit_subcommands=0)" />
+        <scope doc="Parse the command-line options for a single command." ilk="function" name="_parse_command_opts" signature="_parse_command_opts(self, parser, args)" />
+        <scope ilk="function" name="has_pure_modules" signature="has_pure_modules(self)" />
+        <scope doc="If there were any non-global &quot;display-only&quot; options (--help-&#xA;commands or the metadata display options) on the command&#xA;line, display the requested info and return true; else&#xA;return false." ilk="function" name="handle_display_options" signature="handle_display_options(self, option_order)" />
+        <scope doc="Find as many configuration files as should be processed for&#xA;this platform, and return a list of filenames in the order&#xA;in which they should be parsed." ilk="function" name="find_config_files" signature="find_config_files(self)" />
+        <scope ilk="function" name="has_ext_modules" signature="has_ext_modules(self)" />
+        <scope ilk="function" name="is_pure" signature="is_pure(self)" />
+        <scope ilk="function" name="dump_option_dicts" signature="dump_option_dicts(self, header=None, commands=None, indent=&apos;&apos;)" />
+        <scope doc="Print out a help message listing all available commands with&#xA;a description of each." ilk="function" name="print_commands" signature="print_commands(self)" />
+        <scope doc="Return the command object for &apos;command&apos;." ilk="function" name="get_command_obj" signature="get_command_obj(self, command, create=1)" />
+        <scope doc="Get a list of (command, description) tuples." ilk="function" name="get_command_list" signature="get_command_list(self)" />
+        <scope doc="Show help for the setup script command-line in the form of&#xA;several lists of command-line options." ilk="function" name="_show_help" signature="_show_help(self, parser, global_options=1, display_options=1, commands=[])" />
+        <scope ilk="function" name="has_scripts" signature="has_scripts(self)" />
+        <scope doc="Print a subset of the list of all commands -- used by&#xA;&apos;print_commands()&apos;." ilk="function" name="print_command_list" signature="print_command_list(self, commands, header, max_length)" />
+        <scope ilk="function" name="has_c_libraries" signature="has_c_libraries(self)" />
+        <scope doc="Return the class that implements the Distutils command named&#xA;by &apos;command&apos;." ilk="function" name="get_command_class" signature="get_command_class(self, command)" />
+        <scope doc="Set final values for all the options on the Distribution&#xA;instance, analogous to the .finalize_options() method of&#xA;Command objects." ilk="function" name="finalize_options" signature="finalize_options(self)" />
+        <scope doc="Get the option dictionary for a given command." ilk="function" name="get_option_dict" signature="get_option_dict(self, command)" />
+        <scope ilk="function" name="has_data_files" signature="has_data_files(self)" />
+      </scope>
+      <scope classrefs="DistutilsError" doc="Raised by fancy_getopt in response to getopt.error -- ie. an&#xA;error in the command line usage." ilk="class" name="DistutilsArgError" />
+      <scope classrefs="DistutilsError" doc="Byte compile error.&#xA;" ilk="class" name="DistutilsByteCompileError" />
+      <scope classrefs="DistutilsError" doc="Some command class (or possibly distribution class, if anyone&#xA;feels a need to subclass Distribution) is found not to be holding up its end of the bargain, ie. implementing some part of the &quot;command &quot;interface." ilk="class" name="DistutilsClassError" />
+      <scope classrefs="Exception" doc="The root of all Distutils evil.&#xA;" ilk="class" name="DistutilsError" />
+      <scope classrefs="DistutilsError" doc="Any problems executing an external program (such as the C&#xA;compiler, when compiling C files)." ilk="class" name="DistutilsExecError" />
+      <scope classrefs="DistutilsError" doc="Any problems in the filesystem: expected file not found, etc.&#xA;Typically this is for problems that we detect before IOError or OSError could be raised." ilk="class" name="DistutilsFileError" />
+      <scope classrefs="DistutilsError" doc="The option table provided to &apos;fancy_getopt()&apos; is bogus.&#xA;" ilk="class" name="DistutilsGetoptError" />
+      <scope classrefs="DistutilsError" doc="Internal inconsistencies or impossibilities (obviously, this&#xA;should never be seen if the code is working!)." ilk="class" name="DistutilsInternalError" />
+      <scope classrefs="DistutilsError" doc="Unable to load an expected module, or to find an expected class&#xA;within some module (in particular, command modules and classes)." ilk="class" name="DistutilsModuleError" />
+      <scope classrefs="DistutilsError" doc="Syntactic/semantic errors in command options, such as use of&#xA;mutually conflicting options, or inconsistent options, badly-spelled values, etc.  No distinction is made between option values originating in the setup script, the command line, config files, or what-have-you -- but if we *know* something originated in the setup script, we&apos;ll raise DistutilsSetupError instead." ilk="class" name="DistutilsOptionError" />
+      <scope classrefs="DistutilsError" doc="We don&apos;t know how to do something on the current platform (but&#xA;we do know how to do it on some platform) -- eg. trying to compile C files on a platform not supported by a CCompiler subclass." ilk="class" name="DistutilsPlatformError" />
+      <scope classrefs="DistutilsError" doc="For errors that can be definitely blamed on the setup script,&#xA;such as invalid keyword arguments to &apos;setup()&apos;." ilk="class" name="DistutilsSetupError" />
+      <scope classrefs="DistutilsError" doc="Syntax error in a file list template.&#xA;" ilk="class" name="DistutilsTemplateError" />
+      <scope classrefs="object" doc="Just a collection of attributes that describes an extension&#xA;module and everything needed to build it (hopefully in a portable way, but there are hooks that let you be as unportable as you need).  Instance attributes: name : string the full name of the extension, including any packages -- ie. *not* a filename or pathname, but Python dotted name sources : [string] list of source filenames, relative to the distribution root (where the setup script lives), in Unix form (slash-separated)" ilk="class" name="Extension">
+        <scope doc="# When adding arguments to this constructor, be sure to&#xA;update # setup_keywords in core.py." ilk="function" name="__init__" signature="__init__(self, name, sources, include_dirs=None, define_macros=None, undef_macros=None, library_dirs=None, libraries=None, runtime_library_dirs=None, extra_objects=None, extra_compile_args=None, extra_link_args=None, export_symbols=None, swig_opts=None, depends=None, language=None, optional=None, **kw)" />
+      </scope>
+      <scope classrefs="CCompilerError" doc="Failure to create a static library from one or more C/C++ object&#xA;files." ilk="class" name="LibError" />
+      <scope classrefs="CCompilerError" doc="Failure to link one or more C/C++ object files into an executable&#xA;or shared library file." ilk="class" name="LinkError" />
+      <scope classrefs="CCompilerError" doc="Failure to preprocess one or more C/C++ files.&#xA;" ilk="class" name="PreprocessError" />
+      <scope classrefs="Command" doc="Base command that knows how to handle the .pypirc file&#xA;" ilk="class" name="PyPIRCCommand">
+        <scope doc="Initialize options." ilk="function" name="initialize_options" signature="initialize_options(self)" />
+        <scope doc="Creates a default .pypirc file." ilk="function" name="_store_pypirc" signature="_store_pypirc(self, username, password)" />
+        <scope doc="Finalizes options." ilk="function" name="finalize_options" signature="finalize_options(self)" />
+        <scope doc="Reads the .pypirc file." ilk="function" name="_read_pypirc" signature="_read_pypirc(self)" />
+        <scope doc="Returns rc file path." ilk="function" name="_get_rc_file" signature="_get_rc_file(self)" />
+      </scope>
+      <variable citdl="str" line="26" name="USAGE" />
+      <scope classrefs="CCompilerError" doc="Attempt to process an unknown file type.&#xA;" ilk="class" name="UnknownFileError" />
+      <variable citdl="tuple" line="52" name="extension_keywords" />
+      <scope ilk="function" line="33" lineend="35" name="gen_usage" returns="str" signature="gen_usage(script_name)">
+        <variable ilk="argument" name="script_name" />
+        <variable citdl="os.path.basename()" line="34" name="script" />
+      </scope>
+      <scope doc="Generate a useful error message from an EnvironmentError&#xA;(IOError or OSError) exception object." ilk="function" name="grok_environment_error" signature="grok_environment_error(exc, prefix=&apos;error: &apos;)" />
+      <import module="os" />
+      <scope doc="Run a setup script in a somewhat controlled environment, and&#xA;return the Distribution instance that drives things." ilk="function" line="172" lineend="237" name="run_setup" signature="run_setup(script_name, script_args=None, stop_after=&apos;run&apos;)">
+        <variable attributes="protected" citdl="str" line="207" name="_setup_stop_after" />
+        <variable citdl="dict" line="210" name="g" />
+        <variable citdl="str" ilk="argument" name="stop_after" />
+        <variable ilk="argument" name="script_args" />
+        <variable citdl="sys.argv" line="209" name="save_argv" />
+        <variable citdl="dict" line="211" name="l" />
+        <variable ilk="argument" name="script_name" />
+        <variable citdl="open()" line="218" name="f" />
+      </scope>
+      <scope doc="The gateway to the Distutils: do everything your setup&#xA;script needs to do, in a highly flexible and user-driven&#xA;way." ilk="function" line="58" lineend="167" name="setup" returns="dist" signature="setup(**attrs)">
+        <variable citdl="dist.parse_command_line()" line="134" name="ok" />
+        <variable citdl="grok_environment_error()" line="152" name="error" />
+        <variable attributes="protected" citdl="klass()" line="109" name="_setup_distribution" />
+        <variable citdl="Distribution" line="95" name="klass" />
+        <variable attributes="kwargs" ilk="argument" name="attrs" />
+      </scope>
+      <variable citdl="tuple" line="43" name="setup_keywords" />
+      <import module="sys" />
+      <variable attributes="protected __hidden__" line="39" name="_setup_stop_after" />
+      <variable attributes="protected __hidden__" line="40" name="_setup_distribution" />
+      <variable citdl="str" line="9" name="__revision__" />
+    </scope>
+    

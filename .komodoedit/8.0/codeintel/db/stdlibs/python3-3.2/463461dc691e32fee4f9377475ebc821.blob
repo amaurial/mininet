@@ -1,0 +1,29 @@
+<scope doc="Generic interface to all dbm clones.&#xA;Use  import dbm d = dbm.open(file, &apos;w&apos;, 0o666)  The returned object is a dbm.gnu, dbm.ndbm or dbm.dumb object, dependent on the type of database being opened (determined by the whichdb function) in the case of an existing dbm. If the dbm does not exist and the create or new flag (&apos;c&apos; or &apos;n&apos;) was specified, the dbm type will be determined by the availability of the modules (tested in the above order)." ilk="blob" lang="Python" name="dbm">
+      <variable citdl="list" line="30" name="__all__" />
+      <variable citdl="tuple" line="38" name="error" />
+      <import module="io" />
+      <scope doc="Open or create database at path given by *file*." ilk="function" line="48" lineend="89" name="open" returns="mod.open()" signature="open(file, flag=&apos;r&apos;, mode=438)">
+        <variable citdl="str" ilk="argument" name="flag" />
+        <variable citdl="int" ilk="argument" name="mode" />
+        <variable ilk="argument" name="file" />
+        <variable attributes="protected" citdl="__import__()" line="67" name="_defaultmod" />
+        <variable citdl="__import__()" line="63" name="mod" />
+        <variable citdl="whichdb()" line="73" name="result" />
+      </scope>
+      <import module="os" />
+      <import module="struct" />
+      <import module="sys" />
+      <scope doc="Guess which db package to use to open a db file." ilk="function" line="92" lineend="180" name="whichdb" returns="str" signature="whichdb(filename)">
+        <variable citdl="list" line="156" name="s" />
+        <variable line="164" name="magic" />
+        <variable citdl="ndbm.open()" line="124" name="d" />
+        <variable citdl="io.open()" line="107" name="f" />
+        <variable line="134" name="size" />
+        <variable citdl="f.read()" line="154" name="s16" />
+        <variable ilk="argument" name="filename" />
+      </scope>
+      <variable attributes="protected __hidden__" citdl="list" line="41" name="_names" />
+      <variable attributes="protected __hidden__" line="42" name="_defaultmod" />
+      <variable attributes="protected __hidden__" citdl="dict" line="43" name="_modules" />
+    </scope>
+    

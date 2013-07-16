@@ -1,0 +1,26 @@
+<scope ilk="blob" lang="Perl" name="URI::_idna">
+      <scope ilk="class" line="1" lineend="78" name="URI::_idna">
+        <import line="7" module="URI::_punycode" symbol="encode_punycode" />
+        <import line="7" module="URI::_punycode" symbol="decode_punycode" />
+        <import line="8" module="Carp" symbol="croak" />
+        <scope ilk="function" line="12" lineend="21" name="encode" signature="encode($idomain)">
+          <variable ilk="argument" name="$idomain" />
+        </scope>
+        <scope ilk="function" line="23" lineend="26" name="decode" signature="decode($domain)">
+          <variable ilk="argument" name="$domain" />
+        </scope>
+        <scope ilk="function" line="28" lineend="32" name="nameprep" signature="nameprep($label)">
+          <variable ilk="argument" name="$label" />
+        </scope>
+        <scope ilk="function" line="34" lineend="39" name="check_size" signature="check_size($label)">
+          <variable ilk="argument" name="$label" />
+        </scope>
+        <scope ilk="function" line="41" lineend="64" name="ToASCII" signature="ToASCII($label)">
+          <variable ilk="argument" name="$label" />
+        </scope>
+        <scope ilk="function" line="66" lineend="76" name="ToUnicode" signature="ToUnicode($label)">
+          <variable ilk="argument" name="$label" />
+        </scope>
+      </scope>
+    </scope>
+    

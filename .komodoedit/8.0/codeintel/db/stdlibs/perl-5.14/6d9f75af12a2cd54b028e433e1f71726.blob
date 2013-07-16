@@ -1,0 +1,25 @@
+<scope ilk="blob" lang="Perl" name="URI::Escape">
+      <scope classrefs="Exporter" ilk="class" line="1" lineend="208" name="URI::Escape">
+        <import line="138" module="Exporter" />
+        <import line="145" module="Carp" />
+        <variable line="140" name="%escapes" />
+        <variable line="141" name="@EXPORT" />
+        <variable line="142" name="@EXPORT_OK" />
+        <variable line="143" name="$VERSION" />
+        <scope ilk="function" line="159" lineend="174" name="uri_escape" signature="uri_escape($text, $patn)">
+          <variable ilk="argument" name="$text" />
+          <variable ilk="argument" name="$patn" />
+        </scope>
+        <scope ilk="function" line="176" lineend="179" name="_fail_hi" signature="_fail_hi($chr)">
+          <variable ilk="argument" name="$chr" />
+        </scope>
+        <scope ilk="function" line="181" lineend="185" name="uri_escape_utf8" signature="uri_escape_utf8($text)">
+          <variable ilk="argument" name="$text" />
+        </scope>
+        <scope ilk="function" line="187" lineend="202" name="uri_unescape" signature="uri_unescape($str)">
+          <variable ilk="argument" name="$str" />
+        </scope>
+        <scope ilk="function" line="204" lineend="206" name="escape_char" signature="escape_char()" />
+      </scope>
+    </scope>
+    

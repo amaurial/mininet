@@ -1,0 +1,88 @@
+<scope ilk="blob" lang="Perl" name="Pod::Checker">
+      <scope classrefs="Pod::Parser" ilk="class" line="10" lineend="1253" name="Pod::Checker">
+        <import line="17" module="Pod::ParseUtils" symbol="*" />
+        <import line="344" module="Carp" symbol="croak" />
+        <import line="345" module="Exporter" symbol="*" />
+        <import line="346" module="Pod::Parser" symbol="*" />
+        <variable line="13" name="$VERSION" />
+        <variable line="13" name="%VALID_COMMANDS" />
+        <variable line="13" name="%VALID_SEQUENCES" />
+        <variable line="13" name="@EXPORT" />
+        <variable line="13" name="@ISA" />
+        <scope attributes="__exported__" ilk="function" line="500" lineend="516" name="podchecker" signature="podchecker($infile, $outfile, %options)">
+          <variable ilk="argument" name="$infile" />
+          <variable ilk="argument" name="$outfile" />
+          <variable ilk="argument" name="%options" />
+        </scope>
+        <scope ilk="function" line="555" lineend="574" name="initialize" signature="initialize($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="605" lineend="629" name="poderror" signature="poderror($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="639" lineend="641" name="num_errors" signature="num_errors()" />
+        <scope ilk="function" line="651" lineend="653" name="num_warnings" signature="num_warnings()" />
+        <scope ilk="function" line="664" lineend="667" name="name" signature="name()" />
+        <scope ilk="function" line="680" lineend="692" name="node" signature="node($self, $text)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$text" />
+        </scope>
+        <scope ilk="function" line="705" lineend="717" name="idx" signature="idx($self, $text)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$text" />
+        </scope>
+        <scope ilk="function" line="732" lineend="739" name="hyperlink" signature="hyperlink($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="743" lineend="801" name="end_pod" signature="end_pod($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="804" lineend="1031" name="command" signature="command($self, $cmd, $paragraph, $line_num, $pod_para)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$cmd" />
+          <variable ilk="argument" name="$paragraph" />
+          <variable ilk="argument" name="$line_num" />
+          <variable ilk="argument" name="$pod_para" />
+        </scope>
+        <scope ilk="function" line="1033" lineend="1043" name="_open_list" signature="_open_list($self, $indent, $line, $file)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$indent" />
+          <variable ilk="argument" name="$line" />
+          <variable ilk="argument" name="$file" />
+        </scope>
+        <scope ilk="function" line="1045" lineend="1057" name="_close_list" signature="_close_list($self, $line, $file)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$line" />
+          <variable ilk="argument" name="$file" />
+        </scope>
+        <scope ilk="function" line="1060" lineend="1066" name="interpolate_and_check" signature="interpolate_and_check($self, $paragraph, $line, $file)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$paragraph" />
+          <variable ilk="argument" name="$line" />
+          <variable ilk="argument" name="$file" />
+        </scope>
+        <scope ilk="function" line="1068" lineend="1204" name="_check_ptree" signature="_check_ptree($self, $ptree, $line, $file, $nestlist)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$ptree" />
+          <variable ilk="argument" name="$line" />
+          <variable ilk="argument" name="$file" />
+          <variable ilk="argument" name="$nestlist" />
+        </scope>
+        <scope ilk="function" line="1207" lineend="1219" name="verbatim" signature="verbatim($self, $paragraph, $line_num, $pod_para)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$paragraph" />
+          <variable ilk="argument" name="$line_num" />
+          <variable ilk="argument" name="$pod_para" />
+        </scope>
+        <scope ilk="function" line="1222" lineend="1238" name="textblock" signature="textblock($self, $paragraph, $line_num, $pod_para)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$paragraph" />
+          <variable ilk="argument" name="$line_num" />
+          <variable ilk="argument" name="$pod_para" />
+        </scope>
+        <scope ilk="function" line="1240" lineend="1251" name="_preproc_par" signature="_preproc_par($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+      </scope>
+    </scope>
+    

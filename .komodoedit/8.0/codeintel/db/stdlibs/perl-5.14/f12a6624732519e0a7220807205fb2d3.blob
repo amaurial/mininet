@@ -1,0 +1,37 @@
+<scope ilk="blob" lang="Perl" name="Digest::HMAC">
+      <scope ilk="class" line="1" lineend="64" name="Digest::HMAC">
+        <import line="45" module="Exporter" />
+        <variable line="2" name="$VERSION" />
+        <variable line="46" name="*import" />
+        <variable line="47" name="@EXPORT_OK" />
+        <scope attributes="__ctor__" ilk="function" line="8" lineend="19" name="new" signature="new($class, $key, $hasher, $block_size)">
+          <variable ilk="argument" name="$class" />
+          <variable ilk="argument" name="$key" />
+          <variable ilk="argument" name="$hasher" />
+          <variable ilk="argument" name="$block_size" />
+        </scope>
+        <scope ilk="function" line="21" lineend="26" name="reset" signature="reset($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="28" lineend="28" name="add" signature="add($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="29" lineend="29" name="addfile" signature="addfile($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="31" lineend="36" name="_digest" signature="_digest($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="38" lineend="38" name="digest" signature="digest()" />
+        <scope ilk="function" line="39" lineend="39" name="hexdigest" signature="hexdigest()" />
+        <scope ilk="function" line="40" lineend="40" name="b64digest" signature="b64digest()" />
+        <scope attributes="__exportable__" ilk="function" line="50" lineend="60" name="hmac" signature="hmac($data, $key, $hash_func, $block_size)">
+          <variable ilk="argument" name="$data" />
+          <variable ilk="argument" name="$key" />
+          <variable ilk="argument" name="$hash_func" />
+          <variable ilk="argument" name="$block_size" />
+        </scope>
+        <scope attributes="__exportable__" ilk="function" line="62" lineend="62" name="hmac_hex" signature="hmac_hex()" />
+      </scope>
+    </scope>
+    

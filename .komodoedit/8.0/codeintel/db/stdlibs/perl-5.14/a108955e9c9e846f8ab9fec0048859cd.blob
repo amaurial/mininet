@@ -1,0 +1,72 @@
+<scope ilk="blob" lang="Perl" name="Locale::Script">
+      <scope classrefs="Exporter" ilk="class" line="1" lineend="284" name="Locale::Script">
+        <import line="12" module="Exporter" />
+        <import line="13" module="Carp" symbol="*" />
+        <import line="14" module="Locale::Codes" symbol="*" />
+        <import line="15" module="Locale::Constants" symbol="*" />
+        <import line="16" module="Locale::Codes::Script" symbol="*" />
+        <variable line="22" name="$VERSION" />
+        <variable line="22" name="@EXPORT" />
+        <variable line="22" name="@EXPORT_OK" />
+        <variable line="22" name="@ISA" />
+        <scope ilk="function" line="35" lineend="63" name="_code" signature="_code($code, $codeset)">
+          <variable ilk="argument" name="$code" />
+          <variable ilk="argument" name="$codeset" />
+        </scope>
+        <scope attributes="__exported__" ilk="function" line="71" lineend="77" name="code2script" signature="code2script()">
+          </scope>
+        <scope attributes="__exported__" ilk="function" line="85" lineend="93" name="script2code" signature="script2code($script, $codeset)">
+          <variable ilk="argument" name="$script" />
+          <variable ilk="argument" name="$codeset" />
+        </scope>
+        <scope attributes="__exported__" ilk="function" line="101" lineend="111" name="script_code2code" signature="script_code2code($code, $inset, $outset)">
+          <variable ilk="argument" name="$code" />
+          <variable ilk="argument" name="$inset" />
+          <variable ilk="argument" name="$outset" />
+        </scope>
+        <scope attributes="__exported__" ilk="function" line="119" lineend="126" name="all_script_codes" signature="all_script_codes($codeset)">
+          <variable ilk="argument" name="$codeset" />
+        </scope>
+        <scope attributes="__exported__" ilk="function" line="135" lineend="142" name="all_script_names" signature="all_script_names($codeset)">
+          <variable ilk="argument" name="$codeset" />
+        </scope>
+        <scope ilk="function" line="150" lineend="159" name="rename_script" signature="rename_script($code, $new_name, @args)">
+          <variable ilk="argument" name="$code" />
+          <variable ilk="argument" name="$new_name" />
+          <variable ilk="argument" name="@args" />
+        </scope>
+        <scope ilk="function" line="167" lineend="176" name="add_script" signature="add_script($code, $name, @args)">
+          <variable ilk="argument" name="$code" />
+          <variable ilk="argument" name="$name" />
+          <variable ilk="argument" name="@args" />
+        </scope>
+        <scope ilk="function" line="184" lineend="193" name="delete_script" signature="delete_script($code, @args)">
+          <variable ilk="argument" name="$code" />
+          <variable ilk="argument" name="@args" />
+        </scope>
+        <scope ilk="function" line="201" lineend="206" name="add_script_alias" signature="add_script_alias($name, $new_name, $nowarn)">
+          <variable ilk="argument" name="$name" />
+          <variable ilk="argument" name="$new_name" />
+          <variable ilk="argument" name="$nowarn" />
+        </scope>
+        <scope ilk="function" line="214" lineend="219" name="delete_script_alias" signature="delete_script_alias($name, $nowarn)">
+          <variable ilk="argument" name="$name" />
+          <variable ilk="argument" name="$nowarn" />
+        </scope>
+        <scope ilk="function" line="227" lineend="237" name="rename_script_code" signature="rename_script_code($code, $new_code, @args)">
+          <variable ilk="argument" name="$code" />
+          <variable ilk="argument" name="$new_code" />
+          <variable ilk="argument" name="@args" />
+        </scope>
+        <scope ilk="function" line="245" lineend="255" name="add_script_code_alias" signature="add_script_code_alias($code, $new_code, @args)">
+          <variable ilk="argument" name="$code" />
+          <variable ilk="argument" name="$new_code" />
+          <variable ilk="argument" name="@args" />
+        </scope>
+        <scope ilk="function" line="263" lineend="272" name="delete_script_code_alias" signature="delete_script_code_alias($code, @args)">
+          <variable ilk="argument" name="$code" />
+          <variable ilk="argument" name="@args" />
+        </scope>
+      </scope>
+    </scope>
+    

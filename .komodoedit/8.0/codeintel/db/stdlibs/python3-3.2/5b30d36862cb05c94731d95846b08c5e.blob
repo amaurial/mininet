@@ -1,0 +1,55 @@
+<scope doc="Find modules used by a script, using introspection.&#xA;" ilk="blob" lang="Python" name="modulefinder">
+      <scope doc="# A Public interface" ilk="function" name="AddPackagePath" signature="AddPackagePath(packagename, path)" />
+      <variable citdl="bytes" name="HAVE_ARGUMENT" />
+      <variable citdl="bytes" name="IMPORT_NAME" />
+      <variable citdl="bytes" name="LOAD_CONST" />
+      <scope classrefs="object" doc="&#xA;" ilk="class" name="Module">
+        <scope ilk="function" name="__repr__" signature="__repr__(self)" />
+        <scope ilk="function" name="__init__" signature="__init__(self, name, file=None, path=None)" />
+      </scope>
+      <scope classrefs="object" doc="&#xA;" ilk="class" name="ModuleFinder">
+        <scope ilk="function" name="import_hook" signature="import_hook(self, name, caller=None, fromlist=None, level=-1)" />
+        <scope ilk="function" name="run_script" signature="run_script(self, pathname)" />
+        <scope ilk="function" name="_safe_import_hook" signature="_safe_import_hook(self, name, caller, fromlist, level=-1)" />
+        <scope ilk="function" name="replace_paths_in_code" signature="replace_paths_in_code(self, co)" />
+        <scope ilk="function" name="load_package" signature="load_package(self, fqname, pathname)" />
+        <scope ilk="function" name="_add_badmodule" signature="_add_badmodule(self, name, caller)" />
+        <scope ilk="function" name="load_tail" signature="load_tail(self, q, tail)" />
+        <scope doc="Print a report to stdout, listing the found modules with&#xA;their paths, as well as modules that are missing, or seem to&#xA;be missing." ilk="function" name="report" signature="report(self)" />
+        <scope ilk="function" name="add_module" signature="add_module(self, fqname)" />
+        <scope ilk="function" name="msgin" signature="msgin(self, *args)" />
+        <scope doc="Return a list of modules that appear to be missing." ilk="function" name="any_missing" signature="any_missing(self)" />
+        <scope ilk="function" name="find_module" signature="find_module(self, name, path, parent=None)" />
+        <scope ilk="function" name="find_head_package" signature="find_head_package(self, parent, name)" />
+        <scope ilk="function" name="scan_opcodes" signature="scan_opcodes(self, co, unpack=&lt;built-in function unpack&gt;)" />
+        <scope ilk="function" name="scan_code" signature="scan_code(self, co, m)" />
+        <scope ilk="function" name="determine_parent" signature="determine_parent(self, caller, level=-1)" />
+        <scope ilk="function" name="load_module" signature="load_module(self, fqname, fp, pathname, file_info)" />
+        <scope doc="Return two lists, one with modules that are certainly&#xA;missing and one with modules that *may* be missing." ilk="function" name="any_missing_maybe" signature="any_missing_maybe(self)" />
+        <scope ilk="function" name="__init__" signature="__init__(self, path=None, debug=0, excludes=[], replace_paths=[])" />
+        <scope ilk="function" name="find_all_submodules" signature="find_all_submodules(self, m)" />
+        <scope ilk="function" name="msg" signature="msg(self, level, str, *args)" />
+        <scope ilk="function" name="scan_opcodes_25" signature="scan_opcodes_25(self, co, unpack=&lt;built-in function unpack&gt;)" />
+        <scope ilk="function" name="ensure_fromlist" signature="ensure_fromlist(self, m, fromlist, recursive=0)" />
+        <scope ilk="function" name="import_module" signature="import_module(self, partname, fqname, parent)" />
+        <scope ilk="function" name="load_file" signature="load_file(self, pathname)" />
+        <scope ilk="function" name="msgout" signature="msgout(self, *args)" />
+      </scope>
+      <variable citdl="str" name="READ_MODE" />
+      <scope ilk="function" name="ReplacePackage" signature="ReplacePackage(oldname, newname)" />
+      <variable citdl="bytes" name="STORE_GLOBAL" />
+      <variable citdl="bytes" name="STORE_NAME" />
+      <variable citdl="list" name="STORE_OPS" />
+      <import module="dis" />
+      <variable citdl="_Feature" name="generators" />
+      <import module="imp" />
+      <import module="marshal" />
+      <import module="os" />
+      <variable citdl="dict" name="packagePathMap" />
+      <variable citdl="dict" name="replacePackageMap" />
+      <import module="struct" />
+      <import module="sys" />
+      <scope ilk="function" name="test" signature="test()" />
+      <import module="types" />
+    </scope>
+    

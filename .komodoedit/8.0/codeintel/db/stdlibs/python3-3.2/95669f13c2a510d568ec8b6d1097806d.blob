@@ -1,0 +1,20 @@
+<scope doc="Main program for 2to3.&#xA;" ilk="blob" lang="Python" name="lib2to3.main">
+      <scope classrefs="MultiprocessRefactoringTool" doc="Prints output to stdout.&#xA;" ilk="class" name="StdoutRefactoringTool">
+        <scope ilk="function" name="log_error" signature="log_error(self, msg, *args, **kwargs)" />
+        <scope ilk="function" name="write_file" signature="write_file(self, new_text, filename, old_text, encoding)" />
+        <scope ilk="function" name="print_output" signature="print_output(self, old, new, filename, equal)" />
+        <scope ilk="function" name="__init__" signature="__init__(self, fixers, options, explicit, nobackups, show_diffs)" />
+      </scope>
+      <scope doc="Return a unified diff of two strings." ilk="function" name="diff_texts" signature="diff_texts(a, b, filename)" />
+      <import module="difflib" />
+      <import module="logging" />
+      <scope doc="Main program." ilk="function" name="main" signature="main(fixer_pkg, args=None)" />
+      <import module="optparse" />
+      <import module="os" />
+      <import module="refactor" />
+      <import module="shutil" />
+      <import module="sys" />
+      <scope ilk="function" name="warn" signature="warn(msg)" />
+      <variable citdl="_Feature" name="with_statement" />
+    </scope>
+    

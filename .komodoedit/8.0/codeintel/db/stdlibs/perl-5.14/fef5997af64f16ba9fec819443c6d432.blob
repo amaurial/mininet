@@ -1,0 +1,58 @@
+<scope ilk="blob" lang="Perl" name="Module::Pluggable::Object">
+      <scope ilk="class" line="1" lineend="372" name="Module::Pluggable::Object">
+        <import line="4" module="File::Find" />
+        <import line="5" module="File::Basename" symbol="*" />
+        <import line="6" module="File::Spec::Functions" symbol="splitdir" />
+        <import line="6" module="File::Spec::Functions" symbol="catdir" />
+        <import line="6" module="File::Spec::Functions" symbol="curdir" />
+        <import line="6" module="File::Spec::Functions" symbol="catfile" />
+        <import line="6" module="File::Spec::Functions" symbol="abs2rel" />
+        <import line="7" module="Carp" symbol="croak" />
+        <import line="7" module="Carp" symbol="carp" />
+        <import line="8" module="Devel::InnerPackage" symbol="*" />
+        <variable line="9" name="$VERSION" />
+        <scope attributes="__ctor__" ilk="function" line="14" lineend="20" name="new" signature="new($class, %opts)">
+          <variable ilk="argument" name="$class" />
+          <variable ilk="argument" name="%opts" />
+        </scope>
+        <scope ilk="function" line="27" lineend="86" name="plugins" signature="plugins($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="88" lineend="121" name="_setup_exceptions" signature="_setup_exceptions($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="123" lineend="138" name="_is_legit" signature="_is_legit($self, $plugin)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$plugin" />
+        </scope>
+        <scope ilk="function" line="140" lineend="150" name="search_directories" signature="search_directories($self, @SEARCHDIR)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="@SEARCHDIR" />
+        </scope>
+        <scope ilk="function" line="153" lineend="236" name="search_paths" signature="search_paths($self, $dir)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$dir" />
+        </scope>
+        <scope ilk="function" line="238" lineend="252" name="_is_editor_junk" signature="_is_editor_junk($self, $name)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$name" />
+        </scope>
+        <scope ilk="function" line="254" lineend="261" name="handle_finding_plugin" signature="handle_finding_plugin($self, $plugin)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$plugin" />
+        </scope>
+        <scope ilk="function" line="263" lineend="287" name="find_files" signature="find_files($self, $search_path)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$search_path" />
+        </scope>
+        <scope ilk="function" line="289" lineend="304" name="handle_innerpackages" signature="handle_innerpackages($self, $path)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$path" />
+        </scope>
+        <scope ilk="function" line="307" lineend="313" name="_require" signature="_require($self, $pack)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$pack" />
+        </scope>
+      </scope>
+    </scope>
+    

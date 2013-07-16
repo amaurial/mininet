@@ -1,0 +1,863 @@
+<scope doc="&#xA;" ilk="blob" lang="Python" name="collections">
+      <scope classrefs="Sequence" doc="This unifies bytes and bytearray.&#xA;XXX Should add all their methods." ilk="class" name="ByteString" />
+      <scope classrefs="object" doc="&#xA;" ilk="class" name="Callable">
+        <scope ilk="function" name="__subclasshook__" />
+        <scope ilk="function" name="__call__" signature="__call__(self, *args, **kwds)" />
+      </scope>
+      <scope classrefs="object" doc="&#xA;" ilk="class" name="Container">
+        <scope ilk="function" name="__contains__" signature="__contains__(self, x)" />
+        <scope ilk="function" name="__subclasshook__" />
+      </scope>
+      <scope classrefs="dict" doc="Dict subclass for counting hashable items.  Sometimes called a bag&#xA;or multiset.  Elements are stored as dictionary keys and their counts are stored as dictionary values.  &gt;&gt;&gt; c = Counter(&apos;abcdeabcdabcaba&apos;)  # count elements from a string  &gt;&gt;&gt; c.most_common(3)                # three most common elements [(&apos;a&apos;, 5), (&apos;b&apos;, 4), (&apos;c&apos;, 3)] &gt;&gt;&gt; sorted(c)                       # list all unique elements [&apos;a&apos;, &apos;b&apos;, &apos;c&apos;, &apos;d&apos;, &apos;e&apos;] &gt;&gt;&gt; &apos;&apos;.join(sorted(c.elements()))   # list elements with repetitions" ilk="class" line="397" lineend="671" name="Counter">
+        <scope doc="Iterator over elements repeating each as many times as its&#xA;count." ilk="function" line="480" lineend="500" name="elements" returns="_chain.from_iterable()" signature="elements(self)">
+          <variable citdl="Counter" ilk="argument" name="self" />
+        </scope>
+        <scope ilk="function" line="575" lineend="576" name="__reduce__" returns="tuple" signature="__reduce__(self)">
+          <variable citdl="Counter" ilk="argument" name="self" />
+        </scope>
+        <scope doc="Like dict.update() but add counts instead of replacing them." ilk="function" line="511" lineend="542" name="update" signature="update(self, iterable=None, **kwds)">
+          <variable citdl="Counter" ilk="argument" name="self" />
+          <variable citdl="self.get" line="534" name="self_get" />
+          <variable attributes="kwargs" ilk="argument" name="kwds" />
+          <variable ilk="argument" name="iterable" />
+        </scope>
+        <scope doc="List the n most common elements and their counts from the&#xA;most common to the least." ilk="function" line="467" lineend="478" name="most_common" returns="sorted()" signature="most_common(self, n=None)">
+          <variable citdl="Counter" ilk="argument" name="self" />
+          <variable ilk="argument" name="n" />
+        </scope>
+        <scope doc="Union is the maximum of value in either of the input&#xA;counters." ilk="function" line="636" lineend="654" name="__or__" returns="NotImplemented" signature="__or__(self, other)">
+          <variable line="647" name="other_count" />
+          <variable citdl="Counter" ilk="argument" name="self" />
+          <variable ilk="argument" name="other" />
+          <variable citdl="" line="645" name="result" />
+          <variable line="648" name="newcount" />
+          <variable line="608" name="q" />
+          <variable line="608" name="p" />
+        </scope>
+        <scope doc="Add counts from two counters." ilk="function" line="598" lineend="615" name="__add__" returns="NotImplemented" signature="__add__(self, other)">
+          <variable citdl="Counter" ilk="argument" name="self" />
+          <variable ilk="argument" name="other" />
+          <variable citdl="" line="607" name="result" />
+          <variable citdl="count" line="609" name="newcount" />
+        </scope>
+        <scope doc="Intersection is the minimum of corresponding counts." ilk="function" line="656" lineend="671" name="__and__" returns="NotImplemented" signature="__and__(self, other)">
+          <variable line="667" name="other_count" />
+          <variable citdl="Counter" ilk="argument" name="self" />
+          <variable citdl="Counter" ilk="argument" name="other" />
+          <variable citdl="" line="665" name="result" />
+          <variable line="668" name="newcount" />
+          <variable line="627" name="q" />
+          <variable line="627" name="p" />
+        </scope>
+        <scope doc="Return a shallow copy." ilk="function" line="571" lineend="573" name="copy" returns="Counter" signature="copy(self)">
+          <variable citdl="Counter" ilk="argument" name="self" />
+        </scope>
+        <scope doc="Like dict.update() but subtracts counts instead of replacing&#xA;them." ilk="function" line="544" lineend="569" name="subtract" signature="subtract(self, iterable=None, **kwds)">
+          <variable citdl="Counter" ilk="argument" name="self" />
+          <variable citdl="self.get" line="561" name="self_get" />
+          <variable attributes="kwargs" ilk="argument" name="kwds" />
+          <variable ilk="argument" name="iterable" />
+        </scope>
+        <scope doc="Create a new, empty Counter object." ilk="function" line="448" lineend="460" name="__init__" signature="__init__(self, iterable=None, **kwds)">
+          <variable citdl="Counter" ilk="argument" name="self" />
+          <variable attributes="kwargs" ilk="argument" name="kwds" />
+          <variable ilk="argument" name="iterable" />
+        </scope>
+        <scope doc="Like dict.__delitem__() but does not raise KeyError for&#xA;missing values." ilk="function" line="578" lineend="581" name="__delitem__" signature="__delitem__(self, elem)">
+          <variable citdl="Counter" ilk="argument" name="self" />
+          <variable ilk="argument" name="elem" />
+        </scope>
+        <scope ilk="function" line="505" lineend="509" name="fromkeys" signature="fromkeys(iterable, v=None)">
+          <variable ilk="argument" name="v" />
+          <variable ilk="argument" name="iterable" />
+          <variable citdl="Counter" ilk="argument" name="cls" />
+        </scope>
+        <scope ilk="function" line="583" lineend="587" name="__repr__" returns="tuple" signature="__repr__(self)">
+          <variable citdl="str.join()" line="586" name="items" />
+          <variable citdl="Counter" ilk="argument" name="self" />
+        </scope>
+        <scope doc="Subtract count, but keep only results with positive counts." ilk="function" line="617" lineend="634" name="__sub__" returns="NotImplemented" signature="__sub__(self, other)">
+          <variable citdl="Counter" ilk="argument" name="self" />
+          <variable ilk="argument" name="other" />
+          <variable citdl="" line="626" name="result" />
+          <variable citdl="count" line="628" name="newcount" />
+        </scope>
+        <scope doc="The count of elements not in the Counter is zero." ilk="function" line="462" lineend="465" name="__missing__" returns="int" signature="__missing__(self, key)">
+          <variable citdl="Counter" ilk="argument" name="self" />
+          <variable ilk="argument" name="key" />
+        </scope>
+      </scope>
+      <scope classrefs="object" doc="&#xA;" ilk="class" name="Hashable">
+        <scope ilk="function" name="__subclasshook__" />
+        <scope ilk="function" name="__hash__" signature="__hash__(self)" />
+      </scope>
+      <scope classrefs="MappingView Set" doc="&#xA;" ilk="class" name="ItemsView">
+        <scope ilk="function" name="__contains__" signature="__contains__(self, item)" />
+        <scope ilk="function" name="__iter__" signature="__iter__(self)" />
+        <scope ilk="function" name="_from_iterable" />
+      </scope>
+      <scope classrefs="object" doc="&#xA;" ilk="class" name="Iterable">
+        <scope ilk="function" name="__iter__" signature="__iter__(self)" />
+        <scope ilk="function" name="__subclasshook__" />
+      </scope>
+      <scope classrefs="Iterable" doc="&#xA;" ilk="class" name="Iterator">
+        <scope ilk="function" name="__next__" signature="__next__(self)" />
+        <scope ilk="function" name="__iter__" signature="__iter__(self)" />
+        <scope ilk="function" name="__subclasshook__" />
+      </scope>
+      <scope classrefs="MappingView Set" doc="&#xA;" ilk="class" name="KeysView">
+        <scope ilk="function" name="__contains__" signature="__contains__(self, key)" />
+        <scope ilk="function" name="__iter__" signature="__iter__(self)" />
+        <scope ilk="function" name="_from_iterable" />
+      </scope>
+      <scope classrefs="Sized Iterable Container" doc="&#xA;" ilk="class" name="Mapping">
+        <scope ilk="function" name="__ne__" signature="__ne__(self, other)" />
+        <scope ilk="function" name="__getitem__" signature="__getitem__(self, key)" />
+        <scope ilk="function" name="__contains__" signature="__contains__(self, key)" />
+        <scope ilk="function" name="keys" signature="keys(self)" />
+        <scope ilk="function" name="items" signature="items(self)" />
+        <scope ilk="function" name="get" signature="get(self, key, default=None)" />
+        <scope ilk="function" name="values" signature="values(self)" />
+        <scope ilk="function" name="__eq__" signature="__eq__(self, other)" />
+      </scope>
+      <scope classrefs="Sized" doc="&#xA;" ilk="class" name="MappingView">
+        <scope ilk="function" name="__len__" signature="__len__(self)" />
+        <scope ilk="function" name="__init__" signature="__init__(self, mapping)" />
+        <scope ilk="function" name="__repr__" signature="__repr__(self)" />
+      </scope>
+      <scope classrefs="Mapping" doc="&#xA;" ilk="class" name="MutableMapping">
+        <scope ilk="function" name="__delitem__" signature="__delitem__(self, key)" />
+        <scope ilk="function" name="setdefault" signature="setdefault(self, key, default=None)" />
+        <scope ilk="function" name="clear" signature="clear(self)" />
+        <scope ilk="function" name="update" signature="update(*args, **kwds)" />
+        <scope ilk="function" name="pop" signature="pop(self, key, default=&lt;object object at 0x01CFB610&gt;)" />
+        <scope ilk="function" name="__setitem__" signature="__setitem__(self, key, value)" />
+        <scope ilk="function" name="popitem" signature="popitem(self)" />
+      </scope>
+      <scope classrefs="Sequence" doc="&#xA;" ilk="class" name="MutableSequence">
+        <scope ilk="function" name="__delitem__" signature="__delitem__(self, index)" />
+        <scope ilk="function" name="reverse" signature="reverse(self)" />
+        <scope ilk="function" name="extend" signature="extend(self, values)" />
+        <scope ilk="function" name="insert" signature="insert(self, index, value)" />
+        <scope ilk="function" name="remove" signature="remove(self, value)" />
+        <scope ilk="function" name="pop" signature="pop(self, index=-1)" />
+        <scope ilk="function" name="__setitem__" signature="__setitem__(self, index, value)" />
+        <scope ilk="function" name="__iadd__" signature="__iadd__(self, values)" />
+        <scope ilk="function" name="append" signature="append(self, value)" />
+      </scope>
+      <scope classrefs="Set" doc="&#xA;" ilk="class" name="MutableSet">
+        <scope ilk="function" name="__isub__" signature="__isub__(self, it)" />
+        <scope ilk="function" name="__iand__" signature="__iand__(self, it)" />
+        <scope doc="This is slow (creates N new iterators!) but effective." ilk="function" name="clear" signature="clear(self)" />
+        <scope doc="Remove an element. If not a member, raise a KeyError." ilk="function" name="remove" signature="remove(self, value)" />
+        <scope ilk="function" name="__ior__" signature="__ior__(self, it)" />
+        <scope doc="Add an element." ilk="function" name="add" signature="add(self, value)" />
+        <scope doc="Return the popped value. Raise KeyError if empty." ilk="function" name="pop" signature="pop(self)" />
+        <scope doc="Remove an element. Do not raise an exception if absent." ilk="function" name="discard" signature="discard(self, value)" />
+        <scope ilk="function" name="__ixor__" signature="__ixor__(self, it)" />
+      </scope>
+      <scope classrefs="dict" doc="Dictionary that remembers insertion order&#xA;" ilk="class" line="25" lineend="232" name="OrderedDict">
+        <scope ilk="function" line="167" name="__ne__" signature="__ne__(self, other)" />
+        <scope ilk="function" line="164" name="keys" signature="keys(self)" />
+        <scope doc="Return state information for pickling" ilk="function" line="199" lineend="207" name="__reduce__" returns="tuple" signature="__reduce__(self)">
+          <variable citdl="list" line="201" name="items" />
+          <variable citdl="OrderedDict" ilk="argument" name="self" />
+          <variable line="202" name="inst_dict" />
+          <variable citdl="tuple" line="157" name="tmp" />
+        </scope>
+        <scope ilk="function" line="163" name="update" signature="update(*args, **kwds)" />
+        <scope doc="value." ilk="function" line="171" lineend="183" name="pop" returns="object()" signature="od.pop(k[,d]) -&gt; v, remove specified key and return the corresponding">
+          <variable citdl="object()" ilk="argument" name="default" />
+          <variable citdl="OrderedDict" ilk="argument" name="self" />
+          <variable line="178" name="result" />
+          <variable ilk="argument" name="key" />
+        </scope>
+        <scope doc="Move an existing element to the end (or beginning if&#xA;last==False)." ilk="function" line="130" lineend="152" name="move_to_end" signature="move_to_end(self, key, last=True)">
+          <variable citdl="link.prev" line="138" name="link_prev" />
+          <variable citdl="root.prev" ilk="argument" name="last" />
+          <variable citdl="link.next" line="139" name="link_next" />
+          <variable citdl="OrderedDict" ilk="argument" name="self" />
+          <variable line="137" name="link" />
+          <variable ilk="argument" name="key" />
+          <variable citdl="_proxy()" line="142" name="root" />
+          <variable citdl="root.next" line="149" name="first" />
+        </scope>
+        <scope doc="od.__iter__() &lt;==&gt; iter(od)" ilk="function" line="82" lineend="89" name="__iter__" signature="od.__iter__() &lt;==&gt; iter(od)">
+          <variable citdl="root.next" line="86" name="curr" />
+          <variable citdl="OrderedDict" ilk="argument" name="self" />
+          <variable citdl="_proxy()" line="85" name="root" />
+        </scope>
+        <scope doc="Pairs are returned in LIFO order if last is true or FIFO&#xA;order if false." ilk="function" line="107" lineend="128" name="popitem" returns="tuple" signature="od.popitem() -&gt; (k, v), return and remove a (key, value) pair.">
+          <variable citdl="link.prev" line="117" name="link_prev" />
+          <variable citdl="True" ilk="argument" name="last" />
+          <variable citdl="link.next" line="122" name="link_next" />
+          <variable citdl="OrderedDict" ilk="argument" name="self" />
+          <variable citdl="dict.pop()" line="127" name="value" />
+          <variable citdl="root.prev" line="116" name="link" />
+          <variable citdl="link.key" line="125" name="key" />
+          <variable citdl="_proxy()" line="114" name="root" />
+        </scope>
+        <scope ilk="function" line="154" lineend="161" name="__sizeof__" returns="sizeof()" signature="__sizeof__(self)">
+          <variable citdl="OrderedDict" ilk="argument" name="self" />
+          <variable citdl="sizeof()" line="157" name="size" />
+          <variable citdl="_sys.getsizeof" line="155" name="sizeof" />
+          <variable citdl="len()" line="156" name="n" />
+        </scope>
+        <scope doc="od.copy() -&gt; a shallow copy of od" ilk="function" line="209" lineend="211" name="copy" returns="self.__class__()" signature="od.copy() -&gt; a shallow copy of od">
+          <variable citdl="OrderedDict" ilk="argument" name="self" />
+        </scope>
+        <scope doc="while comparison to a regular mapping is order-insensitive." ilk="function" line="224" lineend="232" name="__eq__" returns="all()" signature="od.__eq__(y) &lt;==&gt; od==y.  Comparison to another OD is order-sensitive">
+          <variable citdl="OrderedDict" ilk="argument" name="self" />
+          <variable ilk="argument" name="other" />
+        </scope>
+        <scope doc="Initialize an ordered dictionary." ilk="function" line="40" lineend="55" name="__init__" signature="__init__(self, *args, **kwds)">
+          <variable citdl="OrderedDict" ilk="argument" name="self" />
+          <variable attributes="varargs" ilk="argument" name="args" />
+          <variable attributes="kwargs" ilk="argument" name="kwds" />
+        </scope>
+        <scope doc="od.__delitem__(y) &lt;==&gt; del od[y]" ilk="function" line="71" lineend="80" name="__delitem__" signature="od.__delitem__(y) &lt;==&gt; del od[y]">
+          <variable citdl="link.prev" line="77" name="link_prev" />
+          <variable citdl="self.__map.pop()" line="76" name="link" />
+          <variable ilk="argument" name="key" />
+          <variable citdl="link.next" line="78" name="link_next" />
+          <variable citdl="OrderedDict" ilk="argument" name="self" />
+          <variable citdl="dict.__delitem__" ilk="argument" name="dict_delitem" />
+        </scope>
+        <scope doc="If not specified, the value defaults to None." ilk="function" line="214" lineend="222" name="fromkeys" returns="cls()" signature="OD.fromkeys(S[, v]) -&gt; New ordered dictionary with keys from S.">
+          <variable citdl="cls()" line="219" name="self" />
+          <variable ilk="argument" name="value" />
+          <variable ilk="argument" name="iterable" />
+          <variable citdl="OrderedDict" ilk="argument" name="cls" />
+          <variable citdl="cls()" line="215" name="d" />
+        </scope>
+        <scope doc="od.setdefault(k[,d]) -&gt; od.get(k,d), also set od[k]=d if k not in od" ilk="function" line="185" lineend="190" name="setdefault" signature="od.setdefault(k[,d]) -&gt; od.get(k,d), also set od[k]=d if k not in od">
+          <variable ilk="argument" name="default" />
+          <variable citdl="OrderedDict" ilk="argument" name="self" />
+          <variable ilk="argument" name="key" />
+        </scope>
+        <scope ilk="function" line="166" name="items" signature="items(self)" />
+        <scope doc="od.clear() -&gt; None.  Remove all items from od." ilk="function" line="100" lineend="105" name="clear" signature="od.clear() -&gt; None.  Remove all items from od.">
+          <variable citdl="OrderedDict" ilk="argument" name="self" />
+          <variable citdl="_proxy()" line="102" name="root" />
+        </scope>
+        <scope doc="od.__setitem__(i, y) &lt;==&gt; od[i]=y" ilk="function" line="57" lineend="69" name="__setitem__" signature="od.__setitem__(i, y) &lt;==&gt; od[i]=y">
+          <variable citdl="root.prev" line="65" name="last" />
+          <variable citdl="dict.__setitem__" ilk="argument" name="dict_setitem" />
+          <variable citdl="OrderedDict" ilk="argument" name="self" />
+          <variable ilk="argument" name="value" />
+          <variable citdl="_Link" ilk="argument" name="Link" />
+          <variable citdl="_proxy" ilk="argument" name="proxy" />
+          <variable ilk="argument" name="key" />
+          <variable citdl="_proxy()" line="64" name="root" />
+        </scope>
+        <scope ilk="function" line="165" name="values" signature="values(self)" />
+        <scope doc="od.__reversed__() &lt;==&gt; reversed(od)" ilk="function" line="91" lineend="98" name="__reversed__" signature="od.__reversed__() &lt;==&gt; reversed(od)">
+          <variable citdl="root.prev" line="95" name="curr" />
+          <variable citdl="OrderedDict" ilk="argument" name="self" />
+          <variable citdl="_proxy()" line="94" name="root" />
+        </scope>
+        <scope ilk="function" name="_OrderedDict__update" signature="_OrderedDict__update(*args, **kwds)" />
+        <scope doc="od.__repr__() &lt;==&gt; repr(od)" ilk="function" line="193" lineend="197" name="__repr__" returns="tuple" signature="od.__repr__() &lt;==&gt; repr(od)">
+          <variable citdl="OrderedDict" ilk="argument" name="self" />
+        </scope>
+        <variable attributes="private __instancevar__" citdl="_proxy()" line="52" name="__root" />
+        <variable attributes="private __instancevar__" citdl="_Link" line="51" name="__hardroot" />
+        <variable attributes="private" citdl="object()" line="169" name="__marker" />
+        <variable attributes="private __instancevar__" citdl="dict" line="54" name="__map" />
+      </scope>
+      <scope classrefs="Sized Iterable Container" doc="All the operations on a read-only sequence.&#xA;Concrete subclasses must override __new__ or __init__, __getitem__, and __len__." ilk="class" name="Sequence">
+        <scope ilk="function" name="count" signature="count(self, value)" />
+        <scope ilk="function" name="index" signature="index(self, value)" />
+        <scope ilk="function" name="__reversed__" signature="__reversed__(self)" />
+        <scope ilk="function" name="__getitem__" signature="__getitem__(self, index)" />
+        <scope ilk="function" name="__contains__" signature="__contains__(self, value)" />
+        <scope ilk="function" name="__iter__" signature="__iter__(self)" />
+      </scope>
+      <scope classrefs="Sized Iterable Container" doc="A set is a finite, iterable container.&#xA;This class provides concrete generic implementations of all methods except for __contains__, __iter__ and __len__.  To override the comparisons (presumably for speed, as the semantics are fixed), all you have to do is redefine __le__ and then the other operations will automatically follow suit." ilk="class" name="Set">
+        <scope ilk="function" name="__ne__" signature="__ne__(self, other)" />
+        <scope ilk="function" name="isdisjoint" signature="isdisjoint(self, other)" />
+        <scope ilk="function" name="__xor__" signature="__xor__(self, other)" />
+        <scope ilk="function" name="__le__" signature="__le__(self, other)" />
+        <scope ilk="function" name="__ge__" signature="__ge__(self, other)" />
+        <scope doc="Compute the hash value of a set." ilk="function" name="_hash" signature="_hash(self)" />
+        <scope ilk="function" name="__gt__" signature="__gt__(self, other)" />
+        <scope ilk="function" name="__and__" signature="__and__(self, other)" />
+        <scope ilk="function" name="__sub__" signature="__sub__(self, other)" />
+        <scope ilk="function" name="__lt__" signature="__lt__(self, other)" />
+        <scope ilk="function" name="__eq__" signature="__eq__(self, other)" />
+        <scope doc="Construct an instance of the class from any iterable input." ilk="function" name="_from_iterable" />
+        <scope ilk="function" name="__or__" signature="__or__(self, other)" />
+      </scope>
+      <scope classrefs="object" doc="&#xA;" ilk="class" name="Sized">
+        <scope ilk="function" name="__subclasshook__" />
+        <scope ilk="function" name="__len__" signature="__len__(self)" />
+      </scope>
+      <scope classrefs="MutableMapping" doc="&#xA;" ilk="class" line="781" lineend="825" name="UserDict">
+        <scope ilk="function" line="798" lineend="798" name="__delitem__" signature="__delitem__(self, key)">
+          <variable citdl="UserDict" ilk="argument" name="self" />
+          <variable ilk="argument" name="key" />
+        </scope>
+        <scope ilk="function" line="821" lineend="825" name="fromkeys" returns="cls()" signature="fromkeys(iterable, value=None)">
+          <variable ilk="argument" name="value" />
+          <variable citdl="cls()" line="822" name="d" />
+          <variable ilk="argument" name="iterable" />
+          <variable citdl="UserDict" ilk="argument" name="cls" />
+        </scope>
+        <scope ilk="function" line="791" lineend="796" name="__getitem__" returns="self.__class__.__missing__()" signature="__getitem__(self, key)">
+          <variable citdl="UserDict" ilk="argument" name="self" />
+          <variable ilk="argument" name="key" />
+        </scope>
+        <scope doc="# Modify __contains__ to work correctly when __missing__ is&#xA;present" ilk="function" line="803" lineend="804" name="__contains__" returns="bool" signature="__contains__(self, key)">
+          <variable citdl="UserDict" ilk="argument" name="self" />
+          <variable ilk="argument" name="key" />
+        </scope>
+        <scope ilk="function" line="797" lineend="797" name="__setitem__" signature="__setitem__(self, key, item)">
+          <variable ilk="argument" name="item" />
+          <variable citdl="UserDict" ilk="argument" name="self" />
+          <variable ilk="argument" name="key" />
+        </scope>
+        <scope ilk="function" line="799" lineend="800" name="__iter__" returns="iter()" signature="__iter__(self)">
+          <variable citdl="UserDict" ilk="argument" name="self" />
+        </scope>
+        <scope ilk="function" line="790" lineend="790" name="__len__" returns="len()" signature="__len__(self)">
+          <variable citdl="UserDict" ilk="argument" name="self" />
+        </scope>
+        <scope ilk="function" line="808" lineend="819" name="copy" returns="copy.copy()" signature="copy(self)">
+          <variable citdl="UserDict" ilk="argument" name="self" />
+          <variable citdl="dict" line="812" name="data" />
+          <variable citdl="copy.copy()" line="815" name="c" />
+        </scope>
+        <scope doc="# Start by filling-out the abstract methods" ilk="function" line="784" lineend="789" name="__init__" signature="__init__(self, dict=None, **kwargs)">
+          <variable citdl="UserDict" ilk="argument" name="self" />
+          <variable ilk="argument" name="dict" />
+          <variable attributes="kwargs" ilk="argument" name="kwargs" />
+        </scope>
+        <scope doc="# Now, add the methods in dicts but not in MutableMapping" ilk="function" line="807" lineend="807" name="__repr__" returns="repr()" signature="__repr__(self)">
+          <variable citdl="UserDict" ilk="argument" name="self" />
+        </scope>
+        <variable attributes="__instancevar__" citdl="dict" line="785" name="data" />
+      </scope>
+      <scope classrefs="MutableSequence" doc="A more or less complete user-defined wrapper around list objects.&#xA;" ilk="class" line="833" lineend="897" name="UserList">
+        <scope ilk="function" line="892" lineend="892" name="sort" signature="sort(self, *args, **kwds)">
+          <variable citdl="UserList" ilk="argument" name="self" />
+          <variable attributes="varargs" ilk="argument" name="args" />
+          <variable attributes="kwargs" ilk="argument" name="kwds" />
+        </scope>
+        <scope ilk="function" line="849" lineend="849" name="__ne__" returns="bool" signature="__ne__(self, other)">
+          <variable citdl="UserList" ilk="argument" name="self" />
+          <variable ilk="argument" name="other" />
+        </scope>
+        <scope ilk="function" line="845" lineend="845" name="__repr__" returns="repr()" signature="__repr__(self)">
+          <variable citdl="UserList" ilk="argument" name="self" />
+        </scope>
+        <scope ilk="function" line="893" lineend="897" name="extend" signature="extend(self, other)">
+          <variable citdl="UserList" ilk="argument" name="self" />
+          <variable ilk="argument" name="other" />
+        </scope>
+        <scope ilk="function" line="886" lineend="886" name="insert" signature="insert(self, i, item)">
+          <variable ilk="argument" name="i" />
+          <variable ilk="argument" name="item" />
+          <variable citdl="UserList" ilk="argument" name="self" />
+        </scope>
+        <scope ilk="function" name="_UserList__cast" signature="_UserList__cast(self, other)" />
+        <scope ilk="function" line="865" lineend="870" name="__radd__" returns="self.__class__()" signature="__radd__(self, other)">
+          <variable citdl="UserList" ilk="argument" name="self" />
+          <variable ilk="argument" name="other" />
+        </scope>
+        <scope ilk="function" line="857" lineend="857" name="__setitem__" signature="__setitem__(self, i, item)">
+          <variable ilk="argument" name="i" />
+          <variable ilk="argument" name="item" />
+          <variable citdl="UserList" ilk="argument" name="self" />
+        </scope>
+        <scope ilk="function" line="882" lineend="884" name="__imul__" returns="UserList" signature="__imul__(self, n)">
+          <variable citdl="UserList" ilk="argument" name="self" />
+          <variable ilk="argument" name="n" />
+        </scope>
+        <scope ilk="function" line="887" lineend="887" name="pop" returns="self.data.pop()" signature="pop(self, i=-1)">
+          <variable citdl="int" ilk="argument" name="i" />
+          <variable citdl="UserList" ilk="argument" name="self" />
+        </scope>
+        <scope ilk="function" line="859" lineend="864" name="__add__" returns="self.__class__()" signature="__add__(self, other)">
+          <variable citdl="UserList" ilk="argument" name="self" />
+          <variable ilk="argument" name="other" />
+        </scope>
+        <scope ilk="function" line="850" lineend="850" name="__gt__" returns="bool" signature="__gt__(self, other)">
+          <variable citdl="UserList" ilk="argument" name="self" />
+          <variable ilk="argument" name="other" />
+        </scope>
+        <scope ilk="function" line="881" name="__rmul__" signature="__rmul__(self, n)" />
+        <scope ilk="function" line="846" lineend="846" name="__lt__" returns="bool" signature="__lt__(self, other)">
+          <variable citdl="UserList" ilk="argument" name="self" />
+          <variable ilk="argument" name="other" />
+        </scope>
+        <scope ilk="function" line="851" lineend="851" name="__ge__" returns="bool" signature="__ge__(self, other)">
+          <variable citdl="UserList" ilk="argument" name="self" />
+          <variable ilk="argument" name="other" />
+        </scope>
+        <scope ilk="function" line="848" lineend="848" name="__eq__" returns="bool" signature="__eq__(self, other)">
+          <variable citdl="UserList" ilk="argument" name="self" />
+          <variable ilk="argument" name="other" />
+        </scope>
+        <scope ilk="function" line="835" lineend="844" name="__init__" signature="__init__(self, initlist=None)">
+          <variable citdl="UserList" ilk="argument" name="self" />
+          <variable ilk="argument" name="initlist" />
+        </scope>
+        <scope ilk="function" line="891" lineend="891" name="reverse" signature="reverse(self)">
+          <variable citdl="UserList" ilk="argument" name="self" />
+        </scope>
+        <scope ilk="function" line="889" lineend="889" name="count" returns="self.data.count()" signature="count(self, item)">
+          <variable ilk="argument" name="item" />
+          <variable citdl="UserList" ilk="argument" name="self" />
+        </scope>
+        <scope ilk="function" line="890" lineend="890" name="index" returns="self.data.index()" signature="index(self, item, *args)">
+          <variable ilk="argument" name="item" />
+          <variable citdl="UserList" ilk="argument" name="self" />
+          <variable attributes="varargs" ilk="argument" name="args" />
+        </scope>
+        <scope ilk="function" line="856" lineend="856" name="__getitem__" signature="__getitem__(self, i)">
+          <variable ilk="argument" name="i" />
+          <variable citdl="UserList" ilk="argument" name="self" />
+        </scope>
+        <scope ilk="function" line="854" lineend="854" name="__contains__" returns="bool" signature="__contains__(self, item)">
+          <variable ilk="argument" name="item" />
+          <variable citdl="UserList" ilk="argument" name="self" />
+        </scope>
+        <scope ilk="function" line="888" lineend="888" name="remove" signature="remove(self, item)">
+          <variable ilk="argument" name="item" />
+          <variable citdl="UserList" ilk="argument" name="self" />
+        </scope>
+        <scope ilk="function" line="871" lineend="878" name="__iadd__" returns="UserList" signature="__iadd__(self, other)">
+          <variable citdl="UserList" ilk="argument" name="self" />
+          <variable ilk="argument" name="other" />
+        </scope>
+        <scope ilk="function" line="847" lineend="847" name="__le__" returns="bool" signature="__le__(self, other)">
+          <variable citdl="UserList" ilk="argument" name="self" />
+          <variable ilk="argument" name="other" />
+        </scope>
+        <scope ilk="function" line="885" lineend="885" name="append" signature="append(self, item)">
+          <variable ilk="argument" name="item" />
+          <variable citdl="UserList" ilk="argument" name="self" />
+        </scope>
+        <scope ilk="function" line="858" lineend="858" name="__delitem__" signature="__delitem__(self, i)">
+          <variable ilk="argument" name="i" />
+          <variable citdl="UserList" ilk="argument" name="self" />
+        </scope>
+        <scope ilk="function" line="855" lineend="855" name="__len__" returns="len()" signature="__len__(self)">
+          <variable citdl="UserList" ilk="argument" name="self" />
+        </scope>
+        <scope ilk="function" line="879" lineend="880" name="__mul__" returns="self.__class__()" signature="__mul__(self, n)">
+          <variable citdl="UserList" ilk="argument" name="self" />
+          <variable ilk="argument" name="n" />
+        </scope>
+        <scope attributes="private" ilk="function" line="852" lineend="853" name="__cast" signature="__cast(other)">
+          <variable citdl="UserList" ilk="argument" name="self" />
+          <variable ilk="argument" name="other" />
+        </scope>
+        <variable attributes="__instancevar__" citdl="list()" line="836" name="data" />
+      </scope>
+      <scope classrefs="Sequence" doc="&#xA;" ilk="class" line="905" lineend="1042" name="UserString">
+        <scope ilk="function" line="915" lineend="915" name="__int__" returns="int()" signature="__int__(self)">
+          <variable citdl="UserString" ilk="argument" name="self" />
+        </scope>
+        <scope ilk="function" line="1041" lineend="1041" name="upper" returns="self.__class__()" signature="upper(self)">
+          <variable citdl="UserString" ilk="argument" name="self" />
+        </scope>
+        <scope ilk="function" line="924" lineend="927" name="__ne__" returns="bool" signature="__ne__(self, string)">
+          <variable citdl="UserString" ilk="argument" name="self" />
+          <variable ilk="argument" name="string" />
+        </scope>
+        <scope ilk="function" line="1008" lineend="1008" name="lstrip" returns="self.__class__()" signature="lstrip(self, chars=None)">
+          <variable citdl="UserString" ilk="argument" name="self" />
+          <variable ilk="argument" name="chars" />
+        </scope>
+        <scope ilk="function" line="913" lineend="913" name="__str__" returns="str()" signature="__str__(self)">
+          <variable citdl="UserString" ilk="argument" name="self" />
+        </scope>
+        <scope ilk="function" line="1025" lineend="1026" name="rpartition" returns="self.data.rpartition()" signature="rpartition(self, sep)">
+          <variable citdl="UserString" ilk="argument" name="self" />
+          <variable ilk="argument" name="sep" />
+        </scope>
+        <scope ilk="function" line="958" lineend="961" name="__radd__" returns="self.__class__()" signature="__radd__(self, other)">
+          <variable citdl="UserString" ilk="argument" name="self" />
+          <variable ilk="argument" name="other" />
+        </scope>
+        <scope ilk="function" line="964" name="__rmul__" signature="__rmul__(self, n)" />
+        <scope ilk="function" line="982" lineend="983" name="endswith" returns="self.data.endswith()" signature="endswith(self, suffix, start=0, end=2147483647)">
+          <variable citdl="int" ilk="argument" name="start" />
+          <variable citdl="UserString" ilk="argument" name="self" />
+          <variable citdl="_sys.maxsize" ilk="argument" name="end" />
+          <variable ilk="argument" name="suffix" />
+        </scope>
+        <scope ilk="function" line="1033" lineend="1033" name="splitlines" returns="self.data.splitlines()" signature="splitlines(self, keepends=0)">
+          <variable citdl="UserString" ilk="argument" name="self" />
+          <variable citdl="int" ilk="argument" name="keepends" />
+        </scope>
+        <scope ilk="function" line="998" lineend="998" name="isidentifier" returns="self.data.isidentifier()" signature="isidentifier(self)">
+          <variable citdl="UserString" ilk="argument" name="self" />
+        </scope>
+        <scope ilk="function" line="1036" lineend="1036" name="strip" returns="self.__class__()" signature="strip(self, chars=None)">
+          <variable citdl="UserString" ilk="argument" name="self" />
+          <variable ilk="argument" name="chars" />
+        </scope>
+        <scope ilk="function" line="997" lineend="997" name="isdigit" returns="self.data.isdigit()" signature="isdigit(self)">
+          <variable citdl="UserString" ilk="argument" name="self" />
+        </scope>
+        <scope ilk="function" line="928" lineend="931" name="__lt__" returns="bool" signature="__lt__(self, string)">
+          <variable citdl="UserString" ilk="argument" name="self" />
+          <variable ilk="argument" name="string" />
+        </scope>
+        <scope ilk="function" line="1005" lineend="1006" name="ljust" returns="self.__class__()" signature="ljust(self, width, *args)">
+          <variable ilk="argument" name="width" />
+          <variable citdl="UserString" ilk="argument" name="self" />
+          <variable attributes="varargs" ilk="argument" name="args" />
+        </scope>
+        <scope ilk="function" line="996" lineend="996" name="isdecimal" returns="self.data.isdecimal()" signature="isdecimal(self)">
+          <variable citdl="UserString" ilk="argument" name="self" />
+        </scope>
+        <scope ilk="function" line="986" lineend="989" name="find" returns="self.data.find()" signature="find(self, sub, start=0, end=2147483647)">
+          <variable citdl="int" ilk="argument" name="start" />
+          <variable citdl="UserString" ilk="argument" name="self" />
+          <variable citdl="_sys.maxsize" ilk="argument" name="end" />
+          <variable citdl="sub.data" ilk="argument" name="sub" />
+        </scope>
+        <scope ilk="function" line="906" lineend="912" name="__init__" signature="__init__(self, seq)">
+          <variable citdl="UserString" ilk="argument" name="self" />
+          <variable ilk="argument" name="seq" />
+        </scope>
+        <scope ilk="function" line="917" lineend="917" name="__complex__" returns="complex()" signature="__complex__(self)">
+          <variable citdl="UserString" ilk="argument" name="self" />
+        </scope>
+        <scope ilk="function" line="992" lineend="993" name="index" returns="self.data.index()" signature="index(self, sub, start=0, end=2147483647)">
+          <variable citdl="int" ilk="argument" name="start" />
+          <variable citdl="UserString" ilk="argument" name="self" />
+          <variable citdl="_sys.maxsize" ilk="argument" name="end" />
+          <variable ilk="argument" name="sub" />
+        </scope>
+        <scope ilk="function" line="995" lineend="995" name="isalnum" returns="self.data.isalnum()" signature="isalnum(self)">
+          <variable citdl="UserString" ilk="argument" name="self" />
+        </scope>
+        <scope ilk="function" line="945" lineend="948" name="__contains__" returns="bool" signature="__contains__(self, char)">
+          <variable citdl="char.data" ilk="argument" name="char" />
+          <variable citdl="UserString" ilk="argument" name="self" />
+        </scope>
+        <scope ilk="function" line="1021" lineend="1022" name="rindex" returns="self.data.rindex()" signature="rindex(self, sub, start=0, end=2147483647)">
+          <variable citdl="int" ilk="argument" name="start" />
+          <variable citdl="UserString" ilk="argument" name="self" />
+          <variable citdl="_sys.maxsize" ilk="argument" name="end" />
+          <variable ilk="argument" name="sub" />
+        </scope>
+        <scope ilk="function" line="920" lineend="923" name="__eq__" returns="bool" signature="__eq__(self, string)">
+          <variable citdl="UserString" ilk="argument" name="self" />
+          <variable ilk="argument" name="string" />
+        </scope>
+        <scope ilk="function" line="994" lineend="994" name="isalpha" returns="self.data.isalpha()" signature="isalpha(self)">
+          <variable citdl="UserString" ilk="argument" name="self" />
+        </scope>
+        <scope ilk="function" line="1029" lineend="1030" name="split" returns="self.data.split()" signature="split(self, sep=None, maxsplit=-1)">
+          <variable citdl="UserString" ilk="argument" name="self" />
+          <variable citdl="int" ilk="argument" name="maxsplit" />
+          <variable ilk="argument" name="sep" />
+        </scope>
+        <scope ilk="function" line="1027" lineend="1028" name="rstrip" returns="self.__class__()" signature="rstrip(self, chars=None)">
+          <variable citdl="UserString" ilk="argument" name="self" />
+          <variable ilk="argument" name="chars" />
+        </scope>
+        <scope ilk="function" line="1000" lineend="1000" name="isnumeric" returns="self.data.isnumeric()" signature="isnumeric(self)">
+          <variable citdl="UserString" ilk="argument" name="self" />
+        </scope>
+        <scope ilk="function" line="916" lineend="916" name="__float__" returns="float()" signature="__float__(self)">
+          <variable citdl="UserString" ilk="argument" name="self" />
+        </scope>
+        <scope ilk="function" line="1001" lineend="1001" name="isspace" returns="self.data.isspace()" signature="isspace(self)">
+          <variable citdl="UserString" ilk="argument" name="self" />
+        </scope>
+        <scope ilk="function" line="950" lineend="950" name="__len__" returns="len()" signature="__len__(self)">
+          <variable citdl="UserString" ilk="argument" name="self" />
+        </scope>
+        <scope ilk="function" line="962" lineend="963" name="__mul__" returns="self.__class__()" signature="__mul__(self, n)">
+          <variable citdl="UserString" ilk="argument" name="self" />
+          <variable ilk="argument" name="n" />
+        </scope>
+        <scope ilk="function" line="1034" lineend="1035" name="startswith" returns="self.data.startswith()" signature="startswith(self, prefix, start=0, end=2147483647)">
+          <variable citdl="int" ilk="argument" name="start" />
+          <variable citdl="UserString" ilk="argument" name="self" />
+          <variable citdl="_sys.maxsize" ilk="argument" name="end" />
+          <variable ilk="argument" name="prefix" />
+        </scope>
+        <scope ilk="function" line="918" lineend="918" name="__hash__" returns="hash()" signature="__hash__(self)">
+          <variable citdl="UserString" ilk="argument" name="self" />
+        </scope>
+        <scope ilk="function" line="951" lineend="951" name="__getitem__" returns="self.__class__()" signature="__getitem__(self, index)">
+          <variable ilk="argument" name="index" />
+          <variable citdl="UserString" ilk="argument" name="self" />
+        </scope>
+        <scope ilk="function" line="990" lineend="991" name="format" returns="self.data.format()" signature="format(self, *args, **kwds)">
+          <variable citdl="UserString" ilk="argument" name="self" />
+          <variable attributes="varargs" ilk="argument" name="args" />
+          <variable attributes="kwargs" ilk="argument" name="kwds" />
+        </scope>
+        <scope ilk="function" line="984" lineend="985" name="expandtabs" returns="self.__class__()" signature="expandtabs(self, tabsize=8)">
+          <variable citdl="UserString" ilk="argument" name="self" />
+          <variable citdl="int" ilk="argument" name="tabsize" />
+        </scope>
+        <scope ilk="function" line="1023" lineend="1024" name="rjust" returns="self.__class__()" signature="rjust(self, width, *args)">
+          <variable ilk="argument" name="width" />
+          <variable citdl="UserString" ilk="argument" name="self" />
+          <variable attributes="varargs" ilk="argument" name="args" />
+        </scope>
+        <scope ilk="function" line="1037" lineend="1037" name="swapcase" returns="self.__class__()" signature="swapcase(self)">
+          <variable citdl="UserString" ilk="argument" name="self" />
+        </scope>
+        <scope ilk="function" line="976" lineend="981" name="encode" returns="self.__class__()" signature="encode(self, encoding=None, errors=None)">
+          <variable citdl="UserString" ilk="argument" name="self" />
+          <variable ilk="argument" name="errors" />
+          <variable ilk="argument" name="encoding" />
+        </scope>
+        <scope ilk="function" line="1042" lineend="1042" name="zfill" returns="self.__class__()" signature="zfill(self, width)">
+          <variable ilk="argument" name="width" />
+          <variable citdl="UserString" ilk="argument" name="self" />
+        </scope>
+        <scope ilk="function" line="952" lineend="957" name="__add__" returns="self.__class__()" signature="__add__(self, other)">
+          <variable citdl="UserString" ilk="argument" name="self" />
+          <variable ilk="argument" name="other" />
+        </scope>
+        <scope ilk="function" line="936" lineend="939" name="__gt__" returns="bool" signature="__gt__(self, string)">
+          <variable citdl="UserString" ilk="argument" name="self" />
+          <variable ilk="argument" name="string" />
+        </scope>
+        <scope ilk="function" line="1011" lineend="1016" name="replace" returns="self.__class__()" signature="replace(self, old, new, maxsplit=-1)">
+          <variable citdl="new.data" ilk="argument" name="new" />
+          <variable citdl="UserString" ilk="argument" name="self" />
+          <variable citdl="old.data" ilk="argument" name="old" />
+          <variable citdl="int" ilk="argument" name="maxsplit" />
+        </scope>
+        <scope doc="# the following methods are defined in alphabetical order:" ilk="function" line="969" lineend="969" name="capitalize" returns="self.__class__()" signature="capitalize(self)">
+          <variable citdl="UserString" ilk="argument" name="self" />
+        </scope>
+        <scope ilk="function" line="972" lineend="975" name="count" returns="self.data.count()" signature="count(self, sub, start=0, end=2147483647)">
+          <variable citdl="int" ilk="argument" name="start" />
+          <variable citdl="UserString" ilk="argument" name="self" />
+          <variable citdl="_sys.maxsize" ilk="argument" name="end" />
+          <variable citdl="sub.data" ilk="argument" name="sub" />
+        </scope>
+        <scope ilk="function" line="1007" lineend="1007" name="lower" returns="self.__class__()" signature="lower(self)">
+          <variable citdl="UserString" ilk="argument" name="self" />
+        </scope>
+        <scope ilk="function" line="1039" lineend="1040" name="translate" returns="self.__class__()" signature="translate(self, *args)">
+          <variable citdl="UserString" ilk="argument" name="self" />
+          <variable attributes="varargs" ilk="argument" name="args" />
+        </scope>
+        <scope ilk="function" line="1004" lineend="1004" name="join" returns="self.data.join()" signature="join(self, seq)">
+          <variable citdl="UserString" ilk="argument" name="self" />
+          <variable ilk="argument" name="seq" />
+        </scope>
+        <scope ilk="function" line="970" lineend="971" name="center" returns="self.__class__()" signature="center(self, width, *args)">
+          <variable ilk="argument" name="width" />
+          <variable citdl="UserString" ilk="argument" name="self" />
+          <variable attributes="varargs" ilk="argument" name="args" />
+        </scope>
+        <scope ilk="function" line="965" lineend="966" name="__mod__" returns="self.__class__()" signature="__mod__(self, args)">
+          <variable citdl="UserString" ilk="argument" name="self" />
+          <variable ilk="argument" name="args" />
+        </scope>
+        <scope ilk="function" line="1009" lineend="1010" name="partition" returns="self.data.partition()" signature="partition(self, sep)">
+          <variable citdl="UserString" ilk="argument" name="self" />
+          <variable ilk="argument" name="sep" />
+        </scope>
+        <scope ilk="function" line="1031" lineend="1032" name="rsplit" returns="self.data.rsplit()" signature="rsplit(self, sep=None, maxsplit=-1)">
+          <variable citdl="UserString" ilk="argument" name="self" />
+          <variable citdl="int" ilk="argument" name="maxsplit" />
+          <variable ilk="argument" name="sep" />
+        </scope>
+        <scope ilk="function" line="1017" lineend="1020" name="rfind" returns="self.data.rfind()" signature="rfind(self, sub, start=0, end=2147483647)">
+          <variable citdl="int" ilk="argument" name="start" />
+          <variable citdl="UserString" ilk="argument" name="self" />
+          <variable citdl="_sys.maxsize" ilk="argument" name="end" />
+          <variable citdl="sub.data" ilk="argument" name="sub" />
+        </scope>
+        <scope ilk="function" line="1002" lineend="1002" name="istitle" returns="self.data.istitle()" signature="istitle(self)">
+          <variable citdl="UserString" ilk="argument" name="self" />
+        </scope>
+        <scope ilk="function" line="932" lineend="935" name="__le__" returns="bool" signature="__le__(self, string)">
+          <variable citdl="UserString" ilk="argument" name="self" />
+          <variable ilk="argument" name="string" />
+        </scope>
+        <scope ilk="function" line="914" lineend="914" name="__repr__" returns="repr()" signature="__repr__(self)">
+          <variable citdl="UserString" ilk="argument" name="self" />
+        </scope>
+        <scope ilk="function" line="999" lineend="999" name="islower" returns="self.data.islower()" signature="islower(self)">
+          <variable citdl="UserString" ilk="argument" name="self" />
+        </scope>
+        <scope ilk="function" line="1038" lineend="1038" name="title" returns="self.__class__()" signature="title(self)">
+          <variable citdl="UserString" ilk="argument" name="self" />
+        </scope>
+        <scope ilk="function" line="1003" lineend="1003" name="isupper" returns="self.data.isupper()" signature="isupper(self)">
+          <variable citdl="UserString" ilk="argument" name="self" />
+        </scope>
+        <scope ilk="function" line="940" lineend="943" name="__ge__" returns="bool" signature="__ge__(self, string)">
+          <variable citdl="UserString" ilk="argument" name="self" />
+          <variable ilk="argument" name="string" />
+        </scope>
+        <variable attributes="__instancevar__" citdl="str()" line="908" name="data" />
+      </scope>
+      <scope classrefs="MappingView" doc="&#xA;" ilk="class" name="ValuesView">
+        <scope ilk="function" name="__contains__" signature="__contains__(self, value)" />
+        <scope ilk="function" name="__iter__" signature="__iter__(self)" />
+      </scope>
+      <variable citdl="list" line="1" name="__all__" />
+      <import module="_abcoll" />
+      <import module="_heapq" />
+      <import module="_sys" />
+      <scope classrefs="dict" doc="defaultdict(default_factory) --&gt; dict with default factory&#xA;The default factory is called without arguments to produce a new value when a key is not present, in __getitem__ only. A defaultdict compares equal to a dict with the same items." ilk="class" name="defaultdict">
+        <scope doc="D.copy() -&gt; a shallow copy of D." ilk="function" name="copy" signature="D.copy() -&gt; a shallow copy of D." />
+        <scope doc="Return state information for pickling." ilk="function" name="__reduce__" />
+        <scope doc="x.__getattribute__(&apos;name&apos;) &lt;==&gt; x.name" ilk="function" name="__getattribute__" signature="x.__getattribute__(&apos;name&apos;) &lt;==&gt; x.name" />
+        <scope doc="if self.default_factory is None: raise KeyError((key,))&#xA;self[key] = value = self.default_factory() return value" ilk="function" name="__missing__" signature="__missing__(key) # Called by __getitem__ for missing key; pseudo-code:" />
+        <scope doc="x.__repr__() &lt;==&gt; repr(x)" ilk="function" name="__repr__" signature="x.__repr__() &lt;==&gt; repr(x)" />
+        <scope doc="D.copy() -&gt; a shallow copy of D." ilk="function" name="__copy__" signature="D.copy() -&gt; a shallow copy of D." />
+        <scope ilk="function" name="__init__" />
+      </scope>
+      <scope classrefs="object" doc="deque(iterable[, maxlen]) --&gt; deque object&#xA;Build an ordered collection with optimized access from its endpoints." ilk="class" name="deque">
+        <scope doc="Add an element to the left side of the deque." ilk="function" name="appendleft" />
+        <scope doc="x.__getattribute__(&apos;name&apos;) &lt;==&gt; x.name" ilk="function" name="__getattribute__" signature="x.__getattribute__(&apos;name&apos;) &lt;==&gt; x.name" />
+        <scope doc="Remove and return the rightmost element." ilk="function" name="pop" />
+        <scope doc="remove first occurrence of value." ilk="function" name="remove" signature="D.remove(value)" />
+        <scope doc="x.__lt__(y) &lt;==&gt; x&lt;y" ilk="function" name="__lt__" signature="x.__lt__(y) &lt;==&gt; x&lt;y" />
+        <scope ilk="function" name="__init__" />
+        <scope doc="Extend the left side of the deque with elements from the&#xA;iterable" ilk="function" name="extendleft" />
+        <scope doc="Add an element to the right side of the deque." ilk="function" name="append" />
+        <scope doc="x.__len__() &lt;==&gt; len(x)" ilk="function" name="__len__" signature="x.__len__() &lt;==&gt; len(x)" />
+        <scope doc="x.__ne__(y) &lt;==&gt; x!=y" ilk="function" name="__ne__" signature="x.__ne__(y) &lt;==&gt; x!=y" />
+        <scope doc="x.__getitem__(y) &lt;==&gt; x[y]" ilk="function" name="__getitem__" signature="x.__getitem__(y) &lt;==&gt; x[y]" />
+        <scope doc="Return state information for pickling." ilk="function" name="__reduce__" />
+        <scope doc="Remove and return the leftmost element." ilk="function" name="popleft" />
+        <scope doc="x.__setitem__(i, y) &lt;==&gt; x[i]=y" ilk="function" name="__setitem__" signature="x.__setitem__(i, y) &lt;==&gt; x[i]=y" />
+        <scope doc="x.__gt__(y) &lt;==&gt; x&gt;y" ilk="function" name="__gt__" signature="x.__gt__(y) &lt;==&gt; x&gt;y" />
+        <scope doc="x.__eq__(y) &lt;==&gt; x==y" ilk="function" name="__eq__" signature="x.__eq__(y) &lt;==&gt; x==y" />
+        <scope doc="D.count(value) -&gt; integer -- return number of occurrences of value" ilk="function" name="count" returns="int" signature="D.count(value) -&gt; integer -- return number of occurrences of value" />
+        <scope doc="x.__delitem__(y) &lt;==&gt; del x[y]" ilk="function" name="__delitem__" signature="x.__delitem__(y) &lt;==&gt; del x[y]" />
+        <scope doc="Extend the right side of the deque with elements from the&#xA;iterable" ilk="function" name="extend" />
+        <scope doc="Rotate the deque n steps to the right (default n=1)." ilk="function" name="rotate" />
+        <scope doc="reverse *IN PLACE*" ilk="function" name="reverse" signature="D.reverse()" />
+        <scope doc="Remove all elements from the deque." ilk="function" name="clear" />
+        <scope doc="x.__iter__() &lt;==&gt; iter(x)" ilk="function" name="__iter__" signature="x.__iter__() &lt;==&gt; iter(x)" />
+        <scope doc="x.__iadd__(y) &lt;==&gt; x+=y" ilk="function" name="__iadd__" signature="x.__iadd__(y) &lt;==&gt; x+=y" />
+        <scope doc="return a reverse iterator over the deque" ilk="function" name="__reversed__" signature="D.__reversed__()" />
+        <scope doc="x.__le__(y) &lt;==&gt; x&lt;=y" ilk="function" name="__le__" signature="x.__le__(y) &lt;==&gt; x&lt;=y" />
+        <scope doc="x.__repr__() &lt;==&gt; repr(x)" ilk="function" name="__repr__" signature="x.__repr__() &lt;==&gt; repr(x)" />
+        <scope doc="Return a shallow copy of a deque." ilk="function" name="__copy__" />
+        <scope doc="x.__ge__(y) &lt;==&gt; x&gt;=y" ilk="function" name="__ge__" signature="x.__ge__(y) &lt;==&gt; x&gt;=y" />
+      </scope>
+      <scope doc="Returns a new subclass of tuple with named fields." ilk="function" line="293" lineend="379" name="namedtuple" signature="namedtuple(typename, field_names, verbose=False, rename=False)">
+        <variable citdl="False" ilk="argument" name="rename" />
+        <variable citdl="False" ilk="argument" name="verbose" />
+        <variable citdl="dict()" line="361" name="namespace" />
+        <variable citdl="_class_template.format()" line="349" name="class_definition" />
+        <variable ilk="argument" name="typename" />
+        <variable line="366" name="result" />
+        <variable citdl="set()" line="323" name="seen" />
+        <variable citdl="list()" ilk="argument" name="field_names" />
+        <variable citdl="set()" line="281" name="seen_names" />
+        <variable citdl="str" line="293" name="template" />
+        <variable citdl="str.join()" line="292" name="reprtxt" />
+        <variable citdl="list" line="291" name="argtxt" />
+        <variable citdl="list()" line="265" name="names" />
+        <variable citdl="len()" line="290" name="numfields" />
+      </scope>
+      <variable attributes="protected __hidden__" citdl="str" line="289" name="_field_template" />
+      <variable attributes="__hidden__" citdl="Point()" line="1054" name="p" />
+      <variable attributes="protected __hidden__" citdl="str" line="287" name="_repr_template" />
+      <scope attributes="protected __hidden__" doc="Tally elements from the iterable." ilk="function" line="386" lineend="390" name="_count_elements" signature="_count_elements(mapping, iterable)">
+        <variable ilk="argument" name="mapping" />
+        <variable ilk="argument" name="iterable" />
+        <variable citdl="mapping.get" line="388" name="mapping_get" />
+      </scope>
+      <variable attributes="protected __hidden__" citdl="str" line="239" name="_class_template" />
+      <scope attributes="__hidden__" classrefs="namedtuple()" doc="Point class with optimized _make() and _replace() without error-checking" ilk="class" line="1069" lineend="1074" name="Point">
+        <variable citdl="tuple" line="1071" name="__slots__" />
+        <variable attributes="protected" citdl="classmethod()" line="1072" name="_make" />
+        <scope attributes="protected" ilk="function" line="1073" lineend="1074" name="_replace" returns="Point._make()" signature="_replace(_map=map, **kwds)">
+          <variable citdl="Point" ilk="argument" name="self" />
+          <variable citdl="map" ilk="argument" name="_map" />
+          <variable attributes="kwargs" ilk="argument" name="kwds" />
+        </scope>
+      </scope>
+      <scope attributes="protected __hidden__" classrefs="object" ilk="class" line="22" lineend="23" name="_Link">
+        <variable citdl="tuple" line="23" name="__slots__" />
+      </scope>
+      <scope attributes="protected __hidden__" classrefs="MutableMapping" doc="A ChainMap groups multiple dicts (or other mappings) together&#xA;   to create a single, updateable view.&#xA;&#xA;   The underlying mappings are stored in a list.  That list is public and can&#xA;   accessed or updated using the *maps* attribute.  There is no other state.&#xA;&#xA;   Lookups search the underlying mappings successively until a key is found.&#xA;   In contrast, writes, updates, and deletions only operate on the first&#xA;   mapping.&#xA;&#xA;   " ilk="class" line="678" lineend="774" name="_ChainMap">
+        <scope attributes="__ctor__" doc="Initialize a ChainMap by setting *maps* to the given mappings.&#xA;If no mappings are provided, a single empty dictionary is used.&#xA;" ilk="function" line="691" lineend="696" name="__init__" signature="_ChainMap(*maps)">
+          <variable citdl="_ChainMap" ilk="argument" name="self" />
+          <variable attributes="varargs" ilk="argument" name="maps" />
+        </scope>
+        <variable attributes="__instancevar__" citdl="list" line="696" name="maps" />
+        <scope ilk="function" line="698" lineend="699" name="__missing__" signature="__missing__(key)">
+          <variable citdl="_ChainMap" ilk="argument" name="self" />
+          <variable ilk="argument" name="key" />
+        </scope>
+        <scope ilk="function" line="701" lineend="707" name="__getitem__" returns="_ChainMap.__missing__()" signature="__getitem__(key)">
+          <variable citdl="_ChainMap" ilk="argument" name="self" />
+          <variable ilk="argument" name="key" />
+        </scope>
+        <scope ilk="function" line="709" lineend="710" name="get" signature="get(key, default=None)">
+          <variable citdl="_ChainMap" ilk="argument" name="self" />
+          <variable ilk="argument" name="key" />
+          <variable ilk="argument" name="default" />
+        </scope>
+        <scope ilk="function" line="712" lineend="713" name="__len__" returns="len()" signature="__len__()">
+          <variable citdl="_ChainMap" ilk="argument" name="self" />
+        </scope>
+        <scope ilk="function" line="715" lineend="716" name="__iter__" returns="iter()" signature="__iter__()">
+          <variable citdl="_ChainMap" ilk="argument" name="self" />
+        </scope>
+        <scope ilk="function" line="718" lineend="719" name="__contains__" returns="any()" signature="__contains__(key)">
+          <variable citdl="_ChainMap" ilk="argument" name="self" />
+          <variable ilk="argument" name="key" />
+        </scope>
+        <scope ilk="function" line="721" lineend="722" name="__bool__" returns="any()" signature="__bool__()">
+          <variable citdl="_ChainMap" ilk="argument" name="self" />
+        </scope>
+        <scope ilk="function" line="725" lineend="727" name="__repr__" returns="str.format()" signature="__repr__()">
+          <variable citdl="_ChainMap" ilk="argument" name="self" />
+        </scope>
+        <scope doc="Create a ChainMap with a single dict created from the iterable." ilk="function" line="730" lineend="732" name="fromkeys" returns="_ChainMap.fromkeys.cls()" signature="fromkeys(iterable, *args)">
+          <variable citdl="_ChainMap" ilk="argument" name="cls" />
+          <variable ilk="argument" name="iterable" />
+          <variable attributes="varargs" ilk="argument" name="args" />
+        </scope>
+        <scope doc="New ChainMap or subclass with a new copy of maps[0] and refs to maps[1:]" ilk="function" line="734" lineend="736" name="copy" returns="self.__class__()" signature="copy()">
+          <variable citdl="_ChainMap" ilk="argument" name="self" />
+        </scope>
+        <variable citdl="_ChainMap.copy" line="738" name="__copy__" />
+        <scope doc="New ChainMap with a new dict followed by all previous maps." ilk="function" line="740" lineend="742" name="new_child" returns="self.__class__()" signature="new_child()">
+          <variable citdl="_ChainMap" ilk="argument" name="self" />
+        </scope>
+        <scope attributes="__hidden__" doc="New ChainMap from maps[1:]." ilk="function" line="745" lineend="747" name="parents (property getter)" returns="self.__class__()" signature="parents (property getter)()">
+          <variable citdl="_ChainMap" ilk="argument" name="self" />
+        </scope>
+        <variable attributes="property" citdl="self.__class__()" line="745" name="parents" />
+        <scope ilk="function" line="749" lineend="750" name="__setitem__" signature="__setitem__(key, value)">
+          <variable citdl="_ChainMap" ilk="argument" name="self" />
+          <variable ilk="argument" name="key" />
+          <variable ilk="argument" name="value" />
+        </scope>
+        <scope ilk="function" line="752" lineend="756" name="__delitem__" signature="__delitem__(key)">
+          <variable citdl="_ChainMap" ilk="argument" name="self" />
+          <variable ilk="argument" name="key" />
+        </scope>
+        <scope doc="Remove and return an item pair from maps[0]. Raise KeyError is maps[0] is empty." ilk="function" line="758" lineend="763" name="popitem" signature="popitem()">
+          <variable citdl="_ChainMap" ilk="argument" name="self" />
+        </scope>
+        <scope doc="Remove *key* from maps[0] and return its value. Raise KeyError if *key* not in maps[0]." ilk="function" line="765" lineend="770" name="pop" signature="pop(key, *args)">
+          <variable citdl="_ChainMap" ilk="argument" name="self" />
+          <variable ilk="argument" name="key" />
+          <variable attributes="varargs" ilk="argument" name="args" />
+        </scope>
+        <scope doc="Clear maps[0], leaving maps[1:] intact." ilk="function" line="772" lineend="774" name="clear" signature="clear()">
+          <variable citdl="_ChainMap" ilk="argument" name="self" />
+        </scope>
+      </scope>
+      <variable attributes="__hidden__" citdl="namedtuple()" line="1082" name="TestResults" />
+      <variable attributes="__hidden__" citdl="namedtuple()" line="1078" name="Point3D" />
+    </scope>
+    

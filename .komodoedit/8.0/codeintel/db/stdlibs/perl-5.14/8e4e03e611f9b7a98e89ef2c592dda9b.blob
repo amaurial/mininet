@@ -1,0 +1,154 @@
+<scope ilk="blob" lang="Perl" name="CPAN::Meta::Converter">
+      <scope ilk="class" line="4" lineend="1371" name="CPAN::Meta::Converter">
+        <import line="11" module="CPAN::Meta::Validator" symbol="*" />
+        <import line="12" module="version" symbol="*" />
+        <import line="13" module="Parse::CPAN::Meta" symbol="*" />
+        <variable line="6" name="$CPAN::Meta::Converter::VERSION" />
+        <variable line="623" name="*_resources_1_4" />
+        <scope ilk="function" line="15" lineend="21" name="_dclone" signature="_dclone($ref)">
+          <variable ilk="argument" name="$ref" />
+        </scope>
+        <scope ilk="function" line="44" lineend="44" name="_keep" signature="_keep()" />
+        <scope ilk="function" line="46" lineend="46" name="_keep_or_one" signature="_keep_or_one()" />
+        <scope ilk="function" line="48" lineend="48" name="_keep_or_zero" signature="_keep_or_zero()" />
+        <scope ilk="function" line="50" lineend="50" name="_keep_or_unknown" signature="_keep_or_unknown()" />
+        <scope ilk="function" line="52" lineend="59" name="_generated_by" signature="_generated_by($gen)">
+          <variable ilk="argument" name="$gen" />
+        </scope>
+        <scope ilk="function" line="61" lineend="61" name="_listify" signature="_listify()" />
+        <scope ilk="function" line="63" lineend="69" name="_prefix_custom" signature="_prefix_custom($key)">
+          <variable ilk="argument" name="$key" />
+        </scope>
+        <scope ilk="function" line="71" lineend="75" name="_ucfirst_custom" signature="_ucfirst_custom($key)">
+          <variable ilk="argument" name="$key" />
+        </scope>
+        <scope ilk="function" line="77" lineend="82" name="_change_meta_spec" signature="_change_meta_spec()" />
+        <scope ilk="function" line="106" lineend="113" name="_license_1" signature="_license_1($element)">
+          <variable ilk="argument" name="$element" />
+        </scope>
+        <scope ilk="function" line="160" lineend="172" name="_license_2" signature="_license_2($element)">
+          <variable ilk="argument" name="$element" />
+        </scope>
+        <scope ilk="function" line="204" lineend="218" name="_downgrade_license" signature="_downgrade_license($element)">
+          <variable ilk="argument" name="$element" />
+        </scope>
+        <scope ilk="function" line="242" lineend="266" name="_no_index_1_2" signature="_no_index_1_2()">
+          </scope>
+        <scope ilk="function" line="268" lineend="295" name="_no_index_directory" signature="_no_index_directory($element, $key, $meta, $version)">
+          <variable ilk="argument" name="$element" />
+          <variable ilk="argument" name="$key" />
+          <variable ilk="argument" name="$meta" />
+          <variable ilk="argument" name="$version" />
+        </scope>
+        <scope ilk="function" line="297" lineend="301" name="_is_module_name" signature="_is_module_name($mod)">
+          <variable ilk="argument" name="$mod" />
+        </scope>
+        <scope ilk="function" line="303" lineend="320" name="_clean_version" signature="_clean_version($element, $key, $meta, $to_version)">
+          <variable ilk="argument" name="$element" />
+          <variable ilk="argument" name="$key" />
+          <variable ilk="argument" name="$meta" />
+          <variable ilk="argument" name="$to_version" />
+        </scope>
+        <scope ilk="function" line="322" lineend="354" name="_version_map" signature="_version_map($element)">
+          <variable ilk="argument" name="$element" />
+        </scope>
+        <scope ilk="function" line="356" lineend="369" name="_prereqs_from_1" signature="_prereqs_from_1()">
+          </scope>
+        <scope ilk="function" line="388" lineend="392" name="_cleanup_prereqs" signature="_cleanup_prereqs($prereqs, $key, $meta, $to_version)">
+          <variable ilk="argument" name="$prereqs" />
+          <variable ilk="argument" name="$key" />
+          <variable ilk="argument" name="$meta" />
+          <variable ilk="argument" name="$to_version" />
+        </scope>
+        <scope ilk="function" line="394" lineend="398" name="_prereqs_rel" signature="_prereqs_rel($relation, $key, $meta, $to_version)">
+          <variable ilk="argument" name="$relation" />
+          <variable ilk="argument" name="$key" />
+          <variable ilk="argument" name="$meta" />
+          <variable ilk="argument" name="$to_version" />
+        </scope>
+        <scope ilk="function" line="421" lineend="432" name="_get_build_requires" signature="_get_build_requires($data, $key, $meta)">
+          <import line="427" module="Version::Requirements" />
+          <variable ilk="argument" name="$data" />
+          <variable ilk="argument" name="$key" />
+          <variable ilk="argument" name="$meta" />
+          <import line="427" module="Version::Requirements" />
+        </scope>
+        <scope ilk="function" line="434" lineend="438" name="_extract_prereqs" signature="_extract_prereqs($prereqs, $phase, $type)">
+          <variable ilk="argument" name="$prereqs" />
+          <variable ilk="argument" name="$phase" />
+          <variable ilk="argument" name="$type" />
+        </scope>
+        <scope ilk="function" line="440" lineend="459" name="_downgrade_optional_features" signature="_downgrade_optional_features()">
+          </scope>
+        <scope ilk="function" line="461" lineend="474" name="_upgrade_optional_features" signature="_upgrade_optional_features()">
+          </scope>
+        <scope ilk="function" line="482" lineend="486" name="_feature_2" signature="_feature_2($element, $key, $meta, $to_version)">
+          <variable ilk="argument" name="$element" />
+          <variable ilk="argument" name="$key" />
+          <variable ilk="argument" name="$meta" />
+          <variable ilk="argument" name="$to_version" />
+        </scope>
+        <scope ilk="function" line="488" lineend="497" name="_cleanup_optional_features_2" signature="_cleanup_optional_features_2($element, $key, $meta, $to_version)">
+          <variable ilk="argument" name="$element" />
+          <variable ilk="argument" name="$key" />
+          <variable ilk="argument" name="$meta" />
+          <variable ilk="argument" name="$to_version" />
+        </scope>
+        <scope ilk="function" line="499" lineend="509" name="_optional_features_1_4" signature="_optional_features_1_4($element)">
+          <variable ilk="argument" name="$element" />
+        </scope>
+        <scope ilk="function" line="511" lineend="523" name="_optional_features_as_map" signature="_optional_features_as_map($element)">
+          <variable ilk="argument" name="$element" />
+        </scope>
+        <scope ilk="function" line="525" lineend="525" name="_is_urlish" signature="_is_urlish()" />
+        <scope ilk="function" line="527" lineend="531" name="_url_or_drop" signature="_url_or_drop($element)">
+          <variable ilk="argument" name="$element" />
+        </scope>
+        <scope ilk="function" line="533" lineend="540" name="_url_list" signature="_url_list($element)">
+          <variable ilk="argument" name="$element" />
+        </scope>
+        <scope ilk="function" line="542" lineend="549" name="_author_list" signature="_author_list($element)">
+          <variable ilk="argument" name="$element" />
+        </scope>
+        <scope ilk="function" line="565" lineend="569" name="_upgrade_resources_2" signature="_upgrade_resources_2()" />
+        <scope ilk="function" line="577" lineend="586" name="_repo_type" signature="_repo_type($element, $key, $meta, $to_version)">
+          <variable ilk="argument" name="$element" />
+          <variable ilk="argument" name="$key" />
+          <variable ilk="argument" name="$meta" />
+          <variable ilk="argument" name="$to_version" />
+        </scope>
+        <scope ilk="function" line="603" lineend="607" name="_cleanup_resources_2" signature="_cleanup_resources_2($resources, $key, $meta, $to_version)">
+          <variable ilk="argument" name="$resources" />
+          <variable ilk="argument" name="$key" />
+          <variable ilk="argument" name="$meta" />
+          <variable ilk="argument" name="$to_version" />
+        </scope>
+        <scope ilk="function" line="617" lineend="621" name="_resources_1_3" signature="_resources_1_3()" />
+        <scope ilk="function" line="625" lineend="634" name="_resources_1_2" signature="_resources_1_2()">
+          </scope>
+        <scope ilk="function" line="644" lineend="648" name="_downgrade_resources" signature="_downgrade_resources()" />
+        <scope ilk="function" line="650" lineend="654" name="_release_status" signature="_release_status()" />
+        <scope ilk="function" line="656" lineend="660" name="_release_status_from_version" signature="_release_status_from_version()">
+          </scope>
+        <scope ilk="function" line="673" lineend="682" name="_provides" signature="_provides($element, $key, $meta, $to_version)">
+          <variable ilk="argument" name="$element" />
+          <variable ilk="argument" name="$key" />
+          <variable ilk="argument" name="$meta" />
+          <variable ilk="argument" name="$to_version" />
+        </scope>
+        <scope ilk="function" line="684" lineend="707" name="_convert" signature="_convert($data, $spec, $to_version)">
+          <variable ilk="argument" name="$data" />
+          <variable ilk="argument" name="$spec" />
+          <variable ilk="argument" name="$to_version" />
+        </scope>
+        <scope attributes="__ctor__" ilk="function" line="1180" lineend="1191" name="new" signature="new($class, $data)">
+          <variable ilk="argument" name="$class" />
+          <variable ilk="argument" name="$data" />
+        </scope>
+        <scope ilk="function" line="1194" lineend="1242" name="convert" signature="convert($self, %args)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="%args" />
+        </scope>
+      </scope>
+    </scope>
+    

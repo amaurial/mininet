@@ -1,0 +1,53 @@
+<scope ilk="blob" lang="Perl" name="JSON">
+      <scope ilk="class" line="1" lineend="394" name="JSON">
+        <import line="5" module="Carp" />
+        <variable line="7" name="@JSON::EXPORT" />
+        <variable line="10" name="$JSON::VERSION" />
+        <variable line="11" name="$JSON::DEBUG" />
+        <variable line="317" name="$JSON::true" />
+        <variable line="318" name="$JSON::false" />
+        <scope ilk="function" line="77" lineend="112" name="import" signature="import($pkg)">
+          <variable ilk="argument" name="$pkg" />
+        </scope>
+        <scope ilk="function" line="117" lineend="124" name="jsonToObj" signature="jsonToObj()">
+          </scope>
+        <scope ilk="function" line="126" lineend="133" name="objToJson" signature="objToJson()">
+          </scope>
+        <scope ilk="function" line="138" lineend="152" name="to_json" signature="to_json()">
+          </scope>
+        <scope ilk="function" line="155" lineend="169" name="from_json" signature="from_json()">
+          </scope>
+        <scope ilk="function" line="172" lineend="172" name="true" signature="true()" />
+        <scope ilk="function" line="174" lineend="174" name="false" signature="false()" />
+        <scope ilk="function" line="176" lineend="176" name="null" signature="null()" />
+        <scope ilk="function" line="179" lineend="179" name="require_xs_version" signature="require_xs_version()" />
+        <scope ilk="function" line="181" lineend="184" name="backend" signature="backend($proto)">
+          <variable ilk="argument" name="$proto" />
+        </scope>
+        <scope ilk="function" line="189" lineend="191" name="is_xs" signature="is_xs()" />
+        <scope ilk="function" line="194" lineend="196" name="is_pp" signature="is_pp()" />
+        <scope ilk="function" line="199" lineend="199" name="pureperl_only_methods" signature="pureperl_only_methods()" />
+        <scope ilk="function" line="202" lineend="234" name="property" signature="property($self, $name, $value)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$name" />
+          <variable ilk="argument" name="$value" />
+        </scope>
+        <scope ilk="function" line="240" lineend="270" name="_load_xs" signature="_load_xs($opt)">
+          <variable ilk="argument" name="$opt" />
+        </scope>
+        <scope ilk="function" line="273" lineend="306" name="_load_pp" signature="_load_pp($opt)">
+          <variable ilk="argument" name="$opt" />
+        </scope>
+        <scope ilk="function" line="309" lineend="333" name="_set_module" signature="_set_module($module)">
+          <variable ilk="argument" name="$module" />
+        </scope>
+      </scope>
+      <scope ilk="class" line="341" lineend="369" name="JSON::Boolean">
+        <scope ilk="function" line="345" lineend="369" name="_overrride_overload" signature="_overrride_overload()">
+          </scope>
+      </scope>
+      <scope ilk="class" line="376" lineend="386" name="JSON::Backend::PP">
+        <scope ilk="function" line="378" lineend="386" name="init" signature="init()" />
+      </scope>
+    </scope>
+    

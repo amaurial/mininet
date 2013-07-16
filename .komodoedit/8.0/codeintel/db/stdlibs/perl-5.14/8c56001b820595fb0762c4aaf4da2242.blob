@@ -1,0 +1,45 @@
+<scope ilk="blob" lang="Perl" name="ActiveState::ModInfo">
+      <scope ilk="class" line="1" lineend="314" name="ActiveState::ModInfo">
+        <import line="19" module="File::Find" symbol="find" />
+        <variable line="9" name="@EXPORT_OK" />
+        <scope ilk="function" line="21" lineend="86" name="list_modules" signature="list_modules(%opts)">
+          <import line="25" module="Config" />
+          <import line="42" module="Carp" />
+          <variable ilk="argument" name="%opts" />
+          <import line="25" module="Config" />
+          <import line="42" module="Carp" />
+        </scope>
+        <scope ilk="function" line="88" lineend="96" name="_canon_file" signature="_canon_file($f)">
+          <variable ilk="argument" name="$f" />
+        </scope>
+        <scope ilk="function" line="98" lineend="104" name="mod2fname" signature="mod2fname($mod)">
+          <variable ilk="argument" name="$mod" />
+        </scope>
+        <scope ilk="function" line="106" lineend="111" name="fname2mod" signature="fname2mod($name)">
+          <variable ilk="argument" name="$name" />
+        </scope>
+        <scope ilk="function" line="113" lineend="122" name="find_inc" signature="find_inc($fname, $inc)">
+          <variable ilk="argument" name="$fname" />
+          <variable ilk="argument" name="$inc" />
+        </scope>
+        <scope ilk="function" line="124" lineend="134" name="open_inc" signature="open_inc($fname, $inc)">
+          <variable ilk="argument" name="$fname" />
+          <variable ilk="argument" name="$inc" />
+        </scope>
+        <scope ilk="function" line="136" lineend="138" name="find_module" signature="find_module()" />
+        <scope ilk="function" line="140" lineend="142" name="open_module" signature="open_module()" />
+        <scope ilk="function" line="144" lineend="175" name="parse_version" signature="parse_version($parsefile)">
+          <variable ilk="argument" name="$parsefile" />
+        </scope>
+        <scope ilk="function" line="177" lineend="240" name="module_version" signature="module_version($filename)">
+          <variable ilk="argument" name="$filename" />
+        </scope>
+        <scope ilk="function" line="242" lineend="312" name="fixup_module_case" signature="fixup_module_case($module, %opts)">
+          <import line="255" module="Carp" />
+          <variable ilk="argument" name="$module" />
+          <variable ilk="argument" name="%opts" />
+          <import line="255" module="Carp" />
+        </scope>
+      </scope>
+    </scope>
+    

@@ -1,0 +1,52 @@
+<scope doc="Core implementation of import.&#xA;This module is NOT meant to be directly imported! It has been designed such that it can be bootstrapped into Python as the implementation of import. As such it requires the injection of specific modules and attributes in order to work. One should use importlib as the public-facing version of this module." ilk="blob" lang="Python" name="importlib._bootstrap">
+      <scope classrefs="object" doc="Meta path import for built-in modules.&#xA;All methods are either class or static methods to avoid the need to instantiate the class." ilk="class" name="BuiltinImporter">
+        <scope doc="Load a built-in module." ilk="function" name="load_module" />
+        <scope doc="Return None as built-in module are never packages." ilk="function" name="is_package" />
+        <scope doc="Return None as built-in modules do not have source code." ilk="function" name="get_source" />
+        <scope doc="Find the built-in module." ilk="function" name="find_module" />
+        <scope doc="Return None as built-in modules do not have code objects." ilk="function" name="get_code" />
+      </scope>
+      <scope classrefs="object" doc="Meta path import for frozen modules.&#xA;All methods are either class or static methods to avoid the need to instantiate the class." ilk="class" name="FrozenImporter">
+        <scope doc="Load a frozen module." ilk="function" name="load_module" />
+        <scope doc="Return if the frozen module is a package." ilk="function" name="is_package" />
+        <scope doc="Return None as frozen modules do not have source code." ilk="function" name="get_source" />
+        <scope doc="Find a frozen module." ilk="function" name="find_module" />
+        <scope doc="Return the code object for the frozen module." ilk="function" name="get_code" />
+      </scope>
+      <scope classrefs="object" doc="Meta path finder for sys.(path|path_hooks|path_importer_cache).&#xA;" ilk="class" name="PathFinder">
+        <scope doc="Search sequence of hooks for a finder for &apos;path&apos;." ilk="function" name="_path_hooks" />
+        <scope doc="Find the module on sys.path or &apos;path&apos; based on&#xA;sys.path_hooks and sys.path_importer_cache." ilk="function" name="find_module" />
+        <scope doc="Get the finder for the path from sys.path_importer_cache." ilk="function" name="_path_importer_cache" />
+      </scope>
+      <scope classrefs="_LoaderBasics" doc="&#xA;" ilk="class" name="SourceLoader">
+        <scope doc="Concrete implementation of Loader.load_module." ilk="function" name="load_module" signature="load_module(self, fullname)" />
+        <scope doc="Optional method that returns the modification time (an int)&#xA;for the specified path, where path is a str." ilk="function" name="path_mtime" signature="path_mtime(self, path)" />
+        <scope doc="Concrete implementation of InspectLoader.get_source." ilk="function" name="get_source" signature="get_source(self, fullname)" />
+        <scope doc="Optional method which writes data (bytes) to a file path (a&#xA;str)." ilk="function" name="set_data" signature="set_data(self, path, data)" />
+        <scope doc="Concrete implementation of InspectLoader.get_code." ilk="function" name="get_code" signature="get_code(self, fullname)" />
+      </scope>
+      <scope doc="Import a module." ilk="function" name="__import__" signature="__import__(name, globals={}, locals={}, fromlist=[], level=0)" />
+      <import module="_io" />
+      <import module="_os" />
+      <import module="_warnings" />
+      <scope classrefs="object" doc="code(argcount, kwonlyargcount, nlocals, stacksize, flags, codestring,&#xA;constants, names, varnames, filename, name, firstlineno, lnotab[, freevars[, cellvars]])  Create a code object.  Not for the faint of heart." ilk="class" name="code_type">
+        <scope doc="x.__getattribute__(&apos;name&apos;) &lt;==&gt; x.name" ilk="function" name="__getattribute__" signature="x.__getattribute__(&apos;name&apos;) &lt;==&gt; x.name" />
+        <scope doc="x.__lt__(y) &lt;==&gt; x&lt;y" ilk="function" name="__lt__" signature="x.__lt__(y) &lt;==&gt; x&lt;y" />
+        <scope doc="x.__le__(y) &lt;==&gt; x&lt;=y" ilk="function" name="__le__" signature="x.__le__(y) &lt;==&gt; x&lt;=y" />
+        <scope doc="x.__ne__(y) &lt;==&gt; x!=y" ilk="function" name="__ne__" signature="x.__ne__(y) &lt;==&gt; x!=y" />
+        <scope doc="x.__gt__(y) &lt;==&gt; x&gt;y" ilk="function" name="__gt__" signature="x.__gt__(y) &lt;==&gt; x&gt;y" />
+        <scope doc="x.__eq__(y) &lt;==&gt; x==y" ilk="function" name="__eq__" signature="x.__eq__(y) &lt;==&gt; x==y" />
+        <scope doc="x.__repr__() &lt;==&gt; repr(x)" ilk="function" name="__repr__" signature="x.__repr__() &lt;==&gt; repr(x)" />
+        <scope doc="x.__hash__() &lt;==&gt; hash(x)" ilk="function" name="__hash__" signature="x.__hash__() &lt;==&gt; hash(x)" />
+        <scope doc="x.__ge__(y) &lt;==&gt; x&gt;=y" ilk="function" name="__ge__" signature="x.__ge__(y) &lt;==&gt; x&gt;=y" />
+      </scope>
+      <import module="errno" />
+      <import module="imp" />
+      <import module="marshal" />
+      <scope doc="Decorator to handle selecting the proper module for loaders." ilk="function" name="module_for_loader" signature="module_for_loader(fxn)" />
+      <variable citdl="str" name="path_sep" />
+      <scope doc="Set __loader__ on the returned module." ilk="function" name="set_loader" signature="set_loader(fxn)" />
+      <scope doc="Set __package__ on the returned module." ilk="function" name="set_package" signature="set_package(fxn)" />
+      <import module="sys" />
+    </scope>
+    

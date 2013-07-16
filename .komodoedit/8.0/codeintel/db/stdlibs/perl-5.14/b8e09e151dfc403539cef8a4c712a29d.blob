@@ -1,0 +1,50 @@
+<scope ilk="blob" lang="Perl" name="Perl::Critic::Policy::Variables::ProhibitEvilVariables">
+      <scope ilk="class" line="7" lineend="312" name="Perl::Critic::Policy::Variables::ProhibitEvilVariables">
+        <import line="13" module="English" symbol="-no_match_vars" />
+        <import line="14" module="Readonly" symbol="*" />
+        <import line="17" module="Perl::Critic::Exception::Configuration::Option::Policy::ParameterValue" symbol="throw_policy_value" />
+        <import line="18" module="Perl::Critic::Utils" symbol="**" />
+        <import line="21" module="Perl::Critic::Utils::DataConversion" symbol="dor" />
+        <variable line="25" name="$VERSION" />
+        <scope ilk="function" line="81" lineend="96" name="supported_parameters" signature="supported_parameters()" />
+        <scope ilk="function" line="98" lineend="98" name="default_severity" signature="default_severity()" />
+        <scope ilk="function" line="99" lineend="99" name="default_themes" signature="default_themes()" />
+        <scope ilk="function" line="100" lineend="100" name="applies_to" signature="applies_to()" />
+        <scope ilk="function" line="104" lineend="137" name="_parse_variables" signature="_parse_variables($self, $parameter, $config_string)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$parameter" />
+          <variable ilk="argument" name="$config_string" />
+        </scope>
+        <scope ilk="function" line="139" lineend="158" name="_parse_variables_file" signature="_parse_variables_file($self, $parameter, $config_string)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$parameter" />
+          <variable ilk="argument" name="$config_string" />
+        </scope>
+        <scope ilk="function" line="160" lineend="190" name="_handle_variable_specification_on_line" signature="_handle_variable_specification_on_line($self, $line, $config_string)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$line" />
+          <variable ilk="argument" name="$config_string" />
+        </scope>
+        <scope ilk="function" line="192" lineend="223" name="_handle_variable_specification" signature="_handle_variable_specification($self, %arguments)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="%arguments" />
+        </scope>
+        <scope ilk="function" line="227" lineend="235" name="initialize_if_enabled" signature="initialize_if_enabled($self, $config)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$config" />
+        </scope>
+        <scope ilk="function" line="239" lineend="270" name="violates" signature="violates()">
+          </scope>
+        <scope ilk="function" line="277" lineend="299" name="_compute_symbol_names" signature="_compute_symbol_names($self, $elem)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$elem" />
+        </scope>
+        <scope ilk="function" line="303" lineend="310" name="_make_violation" signature="_make_violation($self, $variable, $description, $elem)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$variable" />
+          <variable ilk="argument" name="$description" />
+          <variable ilk="argument" name="$elem" />
+        </scope>
+      </scope>
+    </scope>
+    

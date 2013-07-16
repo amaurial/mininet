@@ -1,0 +1,27 @@
+<scope doc="This module performs file control and I/O control on file &#xA;descriptors.  It is an interface to the fcntl() and ioctl() Unix routines.  File descriptors can be obtained with the fileno() method of a file or socket object." ilk="blob" lang="Python" name="fcntl">
+      <variable citdl="int" name="FASYNC" />
+      <variable citdl="int" name="FD_CLOEXEC" />
+      <variable citdl="int" name="F_DUPFD" />
+      <variable citdl="int" name="F_FULLFSYNC" />
+      <variable citdl="int" name="F_GETFD" />
+      <variable citdl="int" name="F_GETFL" />
+      <variable citdl="int" name="F_GETLK" />
+      <variable citdl="int" name="F_GETOWN" />
+      <variable citdl="int" name="F_RDLCK" />
+      <variable citdl="int" name="F_SETFD" />
+      <variable citdl="int" name="F_SETFL" />
+      <variable citdl="int" name="F_SETLK" />
+      <variable citdl="int" name="F_SETLKW" />
+      <variable citdl="int" name="F_SETOWN" />
+      <variable citdl="int" name="F_UNLCK" />
+      <variable citdl="int" name="F_WRLCK" />
+      <variable citdl="int" name="LOCK_EX" />
+      <variable citdl="int" name="LOCK_NB" />
+      <variable citdl="int" name="LOCK_SH" />
+      <variable citdl="int" name="LOCK_UN" />
+      <scope doc="Perform the requested operation on file descriptor fd." ilk="function" name="fcntl" signature="fcntl(fd, opt, [arg])" />
+      <scope doc="Perform the lock operation op on file descriptor fd." ilk="function" name="flock" signature="flock(fd, operation)" />
+      <scope doc="Perform the requested operation on file descriptor fd." ilk="function" name="ioctl" signature="ioctl(fd, opt[, arg[, mutate_flag]])" />
+      <scope doc="This is essentially a wrapper around the fcntl() locking&#xA;calls." ilk="function" name="lockf" signature="lockf (fd, operation, length=0, start=0, whence=0)" />
+    </scope>
+    

@@ -1,0 +1,36 @@
+<scope ilk="blob" lang="Perl" name="DBI::Gofer::Request">
+      <scope ilk="class" line="1" lineend="200" name="DBI::Gofer::Request">
+        <import line="12" module="DBI" symbol="neat" />
+        <import line="12" module="DBI" symbol="neat_list" />
+        <variable line="16" name="$VERSION" />
+        <variable line="21" name="@EXPORT" />
+        <scope ilk="function" line="39" lineend="43" name="new" signature="new($self, $args)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$args" />
+        </scope>
+        <scope ilk="function" line="46" lineend="54" name="reset" signature="reset($self, $flags)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$flags" />
+        </scope>
+        <scope ilk="function" line="57" lineend="61" name="init_request" signature="init_request($self, $method_and_args, $dbh)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$method_and_args" />
+          <variable ilk="argument" name="$dbh" />
+        </scope>
+        <scope ilk="function" line="64" lineend="66" name="is_sth_request" signature="is_sth_request()" />
+        <scope ilk="function" line="69" lineend="78" name="statements" signature="statements($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="81" lineend="98" name="is_idempotent" signature="is_idempotent($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="101" lineend="152" name="summary_as_text" signature="summary_as_text($self, $context)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$context" />
+        </scope>
+        <scope ilk="function" line="155" lineend="177" name="outline_as_text" signature="outline_as_text($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+      </scope>
+    </scope>
+    

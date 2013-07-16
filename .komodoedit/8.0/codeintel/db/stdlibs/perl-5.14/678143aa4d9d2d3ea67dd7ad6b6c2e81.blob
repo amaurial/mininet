@@ -1,0 +1,49 @@
+<scope ilk="blob" lang="Perl" name="ExtUtils::Packlist">
+      <scope ilk="class" line="1" lineend="223" name="ExtUtils::Packlist">
+        <import line="5" module="Carp" />
+        <import line="6" module="Config" symbol="*" />
+        <variable line="7" name="$Relocations" />
+        <variable line="7" name="$VERSION" />
+        <scope ilk="function" line="24" lineend="30" name="mkfh" signature="mkfh()">
+          </scope>
+        <scope ilk="function" line="43" lineend="56" name="__find_relocations" signature="__find_relocations()">
+          </scope>
+        <scope ilk="function" line="58" lineend="65" name="new" signature="new($class, $packfile)">
+          <variable ilk="argument" name="$class" />
+          <variable ilk="argument" name="$packfile" />
+        </scope>
+        <scope attributes="__ctor__" ilk="function" line="67" lineend="74" name="TIEHASH" signature="TIEHASH($class, $packfile)">
+          <variable ilk="argument" name="$class" />
+          <variable ilk="argument" name="$packfile" />
+        </scope>
+        <scope ilk="function" line="76" lineend="79" name="STORE" signature="STORE()" />
+        <scope ilk="function" line="81" lineend="84" name="FETCH" signature="FETCH()" />
+        <scope ilk="function" line="86" lineend="90" name="FIRSTKEY" signature="FIRSTKEY()">
+          </scope>
+        <scope ilk="function" line="92" lineend="95" name="NEXTKEY" signature="NEXTKEY()" />
+        <scope ilk="function" line="97" lineend="100" name="EXISTS" signature="EXISTS()" />
+        <scope ilk="function" line="102" lineend="105" name="DELETE" signature="DELETE()" />
+        <scope ilk="function" line="107" lineend="110" name="CLEAR" signature="CLEAR()" />
+        <scope ilk="function" line="112" lineend="114" name="DESTROY" signature="DESTROY()" />
+        <scope ilk="function" line="116" lineend="150" name="read" signature="read($self, $packfile)">
+          <import line="139" module="File::Spec" />
+          <import line="140" module="Cwd" />
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$packfile" />
+          <import line="139" module="File::Spec" />
+          <import line="140" module="Cwd" />
+        </scope>
+        <scope ilk="function" line="152" lineend="198" name="write" signature="write($self, $packfile)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$packfile" />
+        </scope>
+        <scope ilk="function" line="200" lineend="214" name="validate" signature="validate($self, $remove)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$remove" />
+        </scope>
+        <scope ilk="function" line="216" lineend="221" name="packlist_file" signature="packlist_file($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+      </scope>
+    </scope>
+    

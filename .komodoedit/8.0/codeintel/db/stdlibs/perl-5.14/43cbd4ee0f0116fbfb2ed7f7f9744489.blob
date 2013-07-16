@@ -1,0 +1,33 @@
+<scope ilk="blob" lang="Perl" name="ExtUtils::Mksymlists">
+      <scope classrefs="Exporter" ilk="class" line="1" lineend="204" name="ExtUtils::Mksymlists">
+        <import line="7" module="Carp" symbol="*" />
+        <import line="8" module="Exporter" symbol="*" />
+        <import line="9" module="Config" symbol="*" />
+        <variable line="12" name="@EXPORT" />
+        <variable line="13" name="$VERSION" />
+        <scope ilk="function" line="15" lineend="61" name="Mksymlists" signature="Mksymlists(%spec)">
+          <variable ilk="argument" name="%spec" />
+        </scope>
+        <scope ilk="function" line="64" lineend="74" name="_write_aix" signature="_write_aix($data)">
+          <variable ilk="argument" name="$data" />
+        </scope>
+        <scope ilk="function" line="77" lineend="117" name="_write_os2" signature="_write_os2($data)">
+          <import line="79" module="Config" />
+          <variable ilk="argument" name="$data" />
+          <import line="79" module="Config" />
+        </scope>
+        <scope ilk="function" line="119" lineend="161" name="_write_win32" signature="_write_win32($data)">
+          <import line="122" module="Config" />
+          <variable ilk="argument" name="$data" />
+          <import line="122" module="Config" />
+        </scope>
+        <scope ilk="function" line="164" lineend="202" name="_write_vms" signature="_write_vms($data)">
+          <import line="167" module="Config" />
+          <import line="168" module="ExtUtils::XSSymSet" />
+          <variable ilk="argument" name="$data" />
+          <import line="167" module="Config" />
+          <import line="168" module="ExtUtils::XSSymSet" />
+        </scope>
+      </scope>
+    </scope>
+    

@@ -1,0 +1,100 @@
+<scope ilk="blob" lang="Perl" name="Text::Autoformat">
+      <scope classrefs="Exporter" ilk="class" line="1" lineend="637" name="Text::Autoformat">
+        <import line="3" module="Carp" symbol="*" />
+        <import line="7" module="Exporter" />
+        <import line="9" module="Text::Reform" symbol="form" />
+        <import line="9" module="Text::Reform" symbol="tag" />
+        <import line="9" module="Text::Reform" symbol="break_at" />
+        <import line="9" module="Text::Reform" symbol="break_with" />
+        <import line="9" module="Text::Reform" symbol="break_wrap" />
+        <import line="9" module="Text::Reform" symbol="break_TeX" />
+        <import line="496" module="utf8" symbol="*" />
+        <variable line="3" name="$VERSION" />
+        <variable line="3" name="@EXPORT" />
+        <variable line="3" name="@EXPORT_OK" />
+        <variable line="3" name="@ISA" />
+        <variable line="68" name="$Text::Autoformat::widow_slack" />
+        <variable line="155" name="$tabstop" />
+        <variable line="206" name="$DB::single" />
+        <scope ilk="function" line="71" lineend="75" name="defn" signature="defn()" />
+        <scope attributes="__exportable__" ilk="function" line="88" lineend="88" name="ignore_headers" signature="ignore_headers()" />
+        <scope attributes="__exported__" ilk="function" line="99" lineend="469" name="autoformat" signature="autoformat()">
+          <import line="155" module="Text::Tabs" symbol="*" />
+          <import line="155" module="Text::Tabs" symbol="*" />
+        </scope>
+        <scope ilk="function" line="471" lineend="494" name="_build_ignore" signature="_build_ignore($ignore_arg)">
+          <variable ilk="argument" name="$ignore_arg" />
+        </scope>
+        <scope ilk="function" line="505" lineend="528" name="recase" signature="recase($origtext, $case)">
+          <import line="511" module="Data::Dumper" symbol="Dumper" />
+          <variable ilk="argument" name="$origtext" />
+          <variable ilk="argument" name="$case" />
+          <import line="511" module="Data::Dumper" symbol="Dumper" />
+        </scope>
+        <scope ilk="function" line="532" lineend="549" name="entitle" signature="entitle()">
+          </scope>
+        <scope ilk="function" line="551" lineend="551" name="inv" signature="inv()">
+          </scope>
+        <scope ilk="function" line="575" lineend="595" name="ensentence" signature="ensentence($str, $trailer)">
+          <variable ilk="argument" name="$str" />
+          <variable ilk="argument" name="$trailer" />
+        </scope>
+        <scope ilk="function" line="598" lineend="637" name="blockquote" signature="blockquote($dummy, $para, $format, $tlen, $hang, $args)">
+          <variable ilk="argument" name="$dummy" />
+          <variable ilk="argument" name="$para" />
+          <variable ilk="argument" name="$format" />
+          <variable ilk="argument" name="$tlen" />
+          <variable ilk="argument" name="$hang" />
+          <variable ilk="argument" name="$args" />
+        </scope>
+      </scope>
+      <scope ilk="class" line="639" lineend="839" name="Hang">
+        <scope ilk="function" line="645" lineend="649" name="fromRoman" signature="fromRoman()" />
+        <scope ilk="function" line="651" lineend="657" name="toRoman" signature="toRoman($num, $example)">
+          <variable ilk="argument" name="$num" />
+          <variable ilk="argument" name="$example" />
+        </scope>
+        <scope attributes="__ctor__" ilk="function" line="676" lineend="733" name="new" signature="new($class, $orig, $lists_mode)">
+          <variable ilk="argument" name="$class" />
+          <variable ilk="argument" name="$orig" />
+          <variable ilk="argument" name="$lists_mode" />
+        </scope>
+        <scope ilk="function" line="735" lineend="774" name="incr" signature="incr($self, $prev, $prevsig)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$prev" />
+          <variable ilk="argument" name="$prevsig" />
+        </scope>
+        <scope ilk="function" line="776" lineend="784" name="_incr" signature="_incr()" />
+        <scope ilk="function" line="786" lineend="797" name="_reset" signature="_reset()" />
+        <scope ilk="function" line="799" lineend="807" name="stringify" signature="stringify($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="809" lineend="812" name="val" signature="val($self, $i)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$i" />
+        </scope>
+        <scope ilk="function" line="814" lineend="814" name="fields" signature="fields()" />
+        <scope ilk="function" line="816" lineend="820" name="field" signature="field($self, $i, $newval)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$i" />
+          <variable ilk="argument" name="$newval" />
+        </scope>
+        <scope ilk="function" line="822" lineend="833" name="signature" signature="signature($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="835" lineend="837" name="length" signature="length()" />
+        <scope ilk="function" line="839" lineend="839" name="empty" signature="empty()" />
+      </scope>
+      <scope ilk="class" line="841" lineend="853" name="NullHang">
+        <scope attributes="__ctor__" ilk="function" line="844" lineend="844" name="new" signature="new()" />
+        <scope ilk="function" line="845" lineend="845" name="stringify" signature="stringify()" />
+        <scope ilk="function" line="846" lineend="846" name="length" signature="length()" />
+        <scope ilk="function" line="847" lineend="847" name="incr" signature="incr()" />
+        <scope ilk="function" line="848" lineend="848" name="empty" signature="empty()" />
+        <scope ilk="function" line="849" lineend="849" name="signature" signature="signature()" />
+        <scope ilk="function" line="850" lineend="850" name="fields" signature="fields()" />
+        <scope ilk="function" line="851" lineend="851" name="field" signature="field()" />
+        <scope ilk="function" line="852" lineend="852" name="val" signature="val()" />
+      </scope>
+    </scope>
+    

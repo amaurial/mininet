@@ -1,0 +1,49 @@
+<scope ilk="blob" lang="Perl" name="Class::MOP::Class::Immutable::Trait">
+      <scope ilk="class" line="1" lineend="119" name="Class::MOP::Class::Immutable::Trait">
+        <import line="12" module="MRO::Compat" symbol="*" />
+        <import line="14" module="Carp" symbol="confess" />
+        <import line="15" module="Scalar::Util" symbol="blessed" />
+        <variable line="3" name="$Class::MOP::Class::Immutable::Trait::AUTHORITY" />
+        <variable line="6" name="$Class::MOP::Class::Immutable::Trait::VERSION" />
+        <scope ilk="function" line="18" lineend="18" name="_get_mutable_metaclass_name" signature="_get_mutable_metaclass_name()" />
+        <scope ilk="function" line="20" lineend="20" name="is_mutable" signature="is_mutable()" />
+        <scope ilk="function" line="21" lineend="21" name="is_immutable" signature="is_immutable()" />
+        <scope ilk="function" line="23" lineend="23" name="_immutable_metaclass" signature="_immutable_metaclass()" />
+        <scope ilk="function" line="25" lineend="30" name="superclasses" signature="superclasses($orig, $self)">
+          <variable ilk="argument" name="$orig" />
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="32" lineend="35" name="_immutable_cannot_call" signature="_immutable_cannot_call($name)">
+          <variable ilk="argument" name="$name" />
+        </scope>
+        <scope ilk="function" line="42" lineend="47" name="class_precedence_list" signature="class_precedence_list($orig, $self)">
+          <variable ilk="argument" name="$orig" />
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="49" lineend="53" name="linearized_isa" signature="linearized_isa($orig, $self)">
+          <variable ilk="argument" name="$orig" />
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="55" lineend="59" name="get_all_methods" signature="get_all_methods($orig, $self)">
+          <variable ilk="argument" name="$orig" />
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="61" lineend="65" name="get_all_method_names" signature="get_all_method_names($orig, $self)">
+          <variable ilk="argument" name="$orig" />
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="67" lineend="71" name="get_all_attributes" signature="get_all_attributes($orig, $self)">
+          <variable ilk="argument" name="$orig" />
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="73" lineend="77" name="get_meta_instance" signature="get_meta_instance($orig, $self)">
+          <variable ilk="argument" name="$orig" />
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="79" lineend="83" name="_method_map" signature="_method_map($orig, $self)">
+          <variable ilk="argument" name="$orig" />
+          <variable ilk="argument" name="$self" />
+        </scope>
+      </scope>
+    </scope>
+    

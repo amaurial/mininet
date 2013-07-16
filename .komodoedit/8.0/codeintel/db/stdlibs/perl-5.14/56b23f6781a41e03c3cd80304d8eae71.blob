@@ -1,0 +1,45 @@
+<scope ilk="blob" lang="Perl" name="ActivePerl::PPM::Logger">
+      <scope ilk="class" line="1" lineend="163" name="ActivePerl::PPM::Logger">
+        <import line="11" module="Carp" symbol="croak" />
+        <import line="12" module="HTTP::Date" symbol="time2iso" />
+        <import line="13" module="File::Basename" symbol="basename" />
+        <variable line="6" name="@EXPORT" />
+        <variable line="9" name="@EXPORT_OK" />
+        <scope ilk="function" line="16" lineend="16" name="LOG_EMERG" signature="LOG_EMERG()" />
+        <scope ilk="function" line="17" lineend="17" name="LOG_ALERT" signature="LOG_ALERT()" />
+        <scope ilk="function" line="18" lineend="18" name="LOG_CRIT" signature="LOG_CRIT()" />
+        <scope ilk="function" line="19" lineend="19" name="LOG_ERR" signature="LOG_ERR()" />
+        <scope ilk="function" line="20" lineend="20" name="LOG_WARNING" signature="LOG_WARNING()" />
+        <scope ilk="function" line="21" lineend="21" name="LOG_WARN" signature="LOG_WARN()" />
+        <scope ilk="function" line="22" lineend="22" name="LOG_NOTICE" signature="LOG_NOTICE()" />
+        <scope ilk="function" line="23" lineend="23" name="LOG_INFO" signature="LOG_INFO()" />
+        <scope ilk="function" line="24" lineend="24" name="LOG_DEBUG" signature="LOG_DEBUG()" />
+        <scope ilk="function" line="29" lineend="31" name="ppm_set_logger" signature="ppm_set_logger()" />
+        <scope ilk="function" line="33" lineend="35" name="ppm_set_status" signature="ppm_set_status()" />
+        <scope ilk="function" line="37" lineend="39" name="ppm_logger" signature="ppm_logger()" />
+        <scope ilk="function" line="41" lineend="43" name="ppm_log" signature="ppm_log()" />
+        <scope ilk="function" line="45" lineend="47" name="ppm_debug" signature="ppm_debug()" />
+        <scope ilk="function" line="49" lineend="68" name="ppm_status" signature="ppm_status($method)">
+          <import line="55" module="ActivePerl::PPM::Status::Term" />
+          <import line="60" module="ActivePerl::PPM::Status" />
+          <variable ilk="argument" name="$method" />
+          <import line="55" module="ActivePerl::PPM::Status::Term" />
+          <import line="60" module="ActivePerl::PPM::Status" />
+        </scope>
+        <scope attributes="__ctor__" ilk="function" line="74" lineend="106" name="new" signature="new()">
+          <import line="89" module="IO::Handle" />
+          <import line="89" module="IO::Handle" />
+        </scope>
+        <scope ilk="function" line="108" lineend="142" name="log" signature="log($self, $msg)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$msg" />
+        </scope>
+        <scope ilk="function" line="144" lineend="147" name="logfile" signature="logfile($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="149" lineend="161" name="_num_prio" signature="_num_prio($prio)">
+          <variable ilk="argument" name="$prio" />
+        </scope>
+      </scope>
+    </scope>
+    

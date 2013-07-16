@@ -1,0 +1,34 @@
+<scope ilk="blob" lang="Perl" name="Text::ParseWords">
+      <scope classrefs="Exporter" ilk="class" line="1" lineend="174" name="Text::ParseWords">
+        <import line="8" module="Exporter" symbol="*" />
+        <variable line="5" name="$VERSION" />
+        <variable line="10" name="@EXPORT" />
+        <variable line="11" name="@EXPORT_OK" />
+        <variable line="12" name="$PERL_SINGLE_QUOTE" />
+        <scope ilk="function" line="15" lineend="27" name="shellwords" signature="shellwords(@lines)">
+          <variable ilk="argument" name="@lines" />
+        </scope>
+        <scope ilk="function" line="31" lineend="41" name="quotewords" signature="quotewords($delim, $keep, @lines)">
+          <variable ilk="argument" name="$delim" />
+          <variable ilk="argument" name="$keep" />
+          <variable ilk="argument" name="@lines" />
+        </scope>
+        <scope ilk="function" line="45" lineend="54" name="nested_quotewords" signature="nested_quotewords($delim, $keep, @lines)">
+          <variable ilk="argument" name="$delim" />
+          <variable ilk="argument" name="$keep" />
+          <variable ilk="argument" name="@lines" />
+        </scope>
+        <scope ilk="function" line="58" lineend="119" name="parse_line" signature="parse_line($delimiter, $keep, $line)">
+          <variable ilk="argument" name="$delimiter" />
+          <variable ilk="argument" name="$keep" />
+          <variable ilk="argument" name="$line" />
+        </scope>
+        <scope ilk="function" line="123" lineend="172" name="old_shellwords" signature="old_shellwords()">
+          <import line="145" module="Carp" />
+          <import line="153" module="Carp" />
+          <import line="145" module="Carp" />
+          <import line="153" module="Carp" />
+        </scope>
+      </scope>
+    </scope>
+    

@@ -1,0 +1,27 @@
+<scope ilk="blob" lang="Perl" name="Exception::Class">
+      <scope ilk="class" line="1" lineend="518" name="Exception::Class">
+        <import line="10" module="Exception::Class::Base" symbol="*" />
+        <import line="11" module="Scalar::Util" symbol="blessed" />
+        <variable line="3" name="$Exception::Class::VERSION" />
+        <variable line="13" name="$BASE_EXC_CLASS" />
+        <variable line="16" name="%CLASSES" />
+        <scope ilk="function" line="18" lineend="70" name="import" signature="import($class)">
+          <variable ilk="argument" name="$class" />
+        </scope>
+        <scope ilk="function" line="72" lineend="112" name="_make_parents" signature="_make_parents($class, $needs, $subclass, $seen, $child)">
+          <variable ilk="argument" name="$class" />
+          <variable ilk="argument" name="$needs" />
+          <variable ilk="argument" name="$subclass" />
+          <variable ilk="argument" name="$seen" />
+          <variable ilk="argument" name="$child" />
+        </scope>
+        <scope ilk="function" line="114" lineend="185" name="_make_subclass" signature="_make_subclass($class, %p)">
+          <variable ilk="argument" name="$class" />
+          <variable ilk="argument" name="%p" />
+        </scope>
+        <scope ilk="function" line="187" lineend="194" name="caught" signature="caught()">
+          </scope>
+        <scope ilk="function" line="196" lineend="196" name="Classes" signature="Classes()" />
+      </scope>
+    </scope>
+    

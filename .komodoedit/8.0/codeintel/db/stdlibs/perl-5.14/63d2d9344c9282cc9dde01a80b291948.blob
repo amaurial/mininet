@@ -1,0 +1,67 @@
+<scope ilk="blob" lang="Perl" name="CGI::Carp">
+      <scope classrefs="Exporter" ilk="class" line="1" lineend="636" name="CGI::Carp">
+        <import line="333" module="Exporter" symbol="*" />
+        <import line="336" module="Carp" />
+        <import line="340" module="File::Spec" symbol="*" />
+        <variable line="337" name="*CORE::GLOBAL::die" />
+        <variable line="348" name="$CGI::Carp::VERSION" />
+        <variable line="349" name="$CGI::Carp::CUSTOM_MSG" />
+        <variable line="350" name="$CGI::Carp::DIE_HANDLER" />
+        <variable line="351" name="$CGI::Carp::TO_BROWSER" />
+        <variable line="370" name="$Exporter::ExportLevel" />
+        <variable line="405" name="$CGI::Carp::PROGNAME" />
+        <variable line="524" name="$EMIT_WARNINGS" />
+        <scope ilk="function" line="355" lineend="375" name="import" signature="import($pkg)">
+          <variable ilk="argument" name="$pkg" />
+        </scope>
+        <scope ilk="function" line="378" lineend="378" name="realwarn" signature="realwarn()" />
+        <scope ilk="function" line="379" lineend="379" name="realdie" signature="realdie()" />
+        <scope ilk="function" line="381" lineend="386" name="id" signature="id($level)">
+          <variable ilk="argument" name="$level" />
+        </scope>
+        <scope ilk="function" line="388" lineend="402" name="stamp" signature="stamp()">
+          </scope>
+        <scope attributes="__exportable__" ilk="function" line="404" lineend="407" name="set_progname" signature="set_progname()" />
+        <scope ilk="function" line="410" lineend="418" name="warn" signature="warn($message)">
+          <variable ilk="argument" name="$message" />
+        </scope>
+        <scope ilk="function" line="420" lineend="432" name="_warn" signature="_warn($msg)">
+          <variable ilk="argument" name="$msg" />
+        </scope>
+        <scope ilk="function" line="438" lineend="446" name="_longmess" signature="_longmess()">
+          </scope>
+        <scope ilk="function" line="448" lineend="450" name="ineval" signature="ineval()" />
+        <scope attributes="__exportable__" ilk="function" line="452" lineend="480" name="die" signature="die()">
+          </scope>
+        <scope attributes="__exportable__" ilk="function" line="482" lineend="485" name="set_message" signature="set_message()" />
+        <scope attributes="__exportable__" ilk="function" line="487" lineend="504" name="set_die_handler" signature="set_die_handler()">
+          </scope>
+        <scope attributes="__exported__" ilk="function" line="506" lineend="506" name="confess" signature="confess()" />
+        <scope attributes="__exported__" ilk="function" line="507" lineend="507" name="croak" signature="croak()" />
+        <scope attributes="__exported__" ilk="function" line="508" lineend="508" name="carp" signature="carp()" />
+        <scope attributes="__exportable__" ilk="function" line="509" lineend="509" name="cluck" signature="cluck()" />
+        <scope attributes="__exportable__" ilk="function" line="513" lineend="521" name="carpout" signature="carpout($in)">
+          <variable ilk="argument" name="$in" />
+        </scope>
+        <scope attributes="__exportable__" ilk="function" line="523" lineend="526" name="warningsToBrowser" signature="warningsToBrowser()" />
+        <scope attributes="__exportable__" ilk="function" line="529" lineend="617" name="fatalsToBrowser" signature="fatalsToBrowser($msg)">
+          <import line="579" module="Apache2::RequestRec" />
+          <import line="580" module="Apache2::RequestIO" />
+          <import line="581" module="Apache2::RequestUtil" />
+          <import line="582" module="APR::Pool" />
+          <import line="583" module="ModPerl::Util" />
+          <import line="584" module="Apache2::Response" />
+          <variable ilk="argument" name="$msg" />
+          <import line="579" module="Apache2::RequestRec" />
+          <import line="580" module="Apache2::RequestIO" />
+          <import line="581" module="Apache2::RequestUtil" />
+          <import line="582" module="APR::Pool" />
+          <import line="583" module="ModPerl::Util" />
+          <import line="584" module="Apache2::Response" />
+        </scope>
+        <scope ilk="function" line="621" lineend="634" name="to_filehandle" signature="to_filehandle($thingy)">
+          <variable ilk="argument" name="$thingy" />
+        </scope>
+      </scope>
+    </scope>
+    

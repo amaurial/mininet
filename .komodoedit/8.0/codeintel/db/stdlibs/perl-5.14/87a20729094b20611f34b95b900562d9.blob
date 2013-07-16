@@ -1,0 +1,158 @@
+<scope ilk="blob" lang="Perl" name="PPIx::Regexp::Tokenizer">
+      <scope ilk="class" line="1" lineend="690" name="PPIx::Regexp::Tokenizer">
+        <import line="8" module="Carp" symbol="confess" />
+        <import line="10" module="PPIx::Regexp::Constant" symbol="MINIMUM_PERL" />
+        <import line="11" module="PPIx::Regexp::Constant" symbol="TOKEN_LITERAL" />
+        <import line="12" module="PPIx::Regexp::Constant" symbol="TOKEN_UNKNOWN" />
+        <import line="14" module="PPIx::Regexp::Token::Assertion" />
+        <import line="15" module="PPIx::Regexp::Token::Backreference" />
+        <import line="16" module="PPIx::Regexp::Token::Backtrack" />
+        <import line="17" module="PPIx::Regexp::Token::CharClass::POSIX" />
+        <import line="18" module="PPIx::Regexp::Token::CharClass::POSIX::Unknown" />
+        <import line="19" module="PPIx::Regexp::Token::CharClass::Simple" />
+        <import line="20" module="PPIx::Regexp::Token::Code" />
+        <import line="21" module="PPIx::Regexp::Token::Comment" />
+        <import line="22" module="PPIx::Regexp::Token::Condition" />
+        <import line="23" module="PPIx::Regexp::Token::Control" />
+        <import line="24" module="PPIx::Regexp::Token::Delimiter" />
+        <import line="25" module="PPIx::Regexp::Token::Greediness" />
+        <import line="26" module="PPIx::Regexp::Token::GroupType::Assertion" />
+        <import line="27" module="PPIx::Regexp::Token::GroupType::BranchReset" />
+        <import line="28" module="PPIx::Regexp::Token::GroupType::Code" />
+        <import line="29" module="PPIx::Regexp::Token::GroupType::Modifier" />
+        <import line="30" module="PPIx::Regexp::Token::GroupType::NamedCapture" />
+        <import line="31" module="PPIx::Regexp::Token::GroupType::Subexpression" />
+        <import line="32" module="PPIx::Regexp::Token::GroupType::Switch" />
+        <import line="33" module="PPIx::Regexp::Token::Interpolation" />
+        <import line="34" module="PPIx::Regexp::Token::Literal" />
+        <import line="35" module="PPIx::Regexp::Token::Modifier" />
+        <import line="36" module="PPIx::Regexp::Token::Operator" />
+        <import line="37" module="PPIx::Regexp::Token::Quantifier" />
+        <import line="38" module="PPIx::Regexp::Token::Recursion" />
+        <import line="39" module="PPIx::Regexp::Token::Structure" />
+        <import line="40" module="PPIx::Regexp::Token::Unknown" />
+        <import line="41" module="PPIx::Regexp::Token::Whitespace" />
+        <import line="42" module="PPIx::Regexp::Util" symbol="__instance" />
+        <import line="43" module="Scalar::Util" symbol="looks_like_number" />
+        <variable line="45" name="$VERSION" />
+        <variable line="585" name="*__PPIX_TOKENIZER__repl" />
+        <scope ilk="function" line="91" lineend="113" name="_known_tokenizers" signature="_known_tokenizers($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="115" lineend="131" name="_known_tokenizer_check" signature="_known_tokenizer_check($self, @args)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="@args" />
+        </scope>
+        <scope attributes="__ctor__" ilk="function" line="138" lineend="193" name="new" signature="new($class, $re, %args)">
+          <variable ilk="argument" name="$class" />
+          <variable ilk="argument" name="$re" />
+          <variable ilk="argument" name="%args" />
+        </scope>
+        <scope ilk="function" line="195" lineend="197" name="errstr" signature="errstr()" />
+        <scope ilk="function" line="201" lineend="206" name="capture" signature="capture($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="208" lineend="211" name="content" signature="content($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="213" lineend="226" name="cookie" signature="cookie($self, $name, @args)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$name" />
+          <variable ilk="argument" name="@args" />
+        </scope>
+        <scope ilk="function" line="228" lineend="231" name="encoding" signature="encoding($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="233" lineend="241" name="expect" signature="expect($self, @args)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="@args" />
+        </scope>
+        <scope ilk="function" line="243" lineend="246" name="failures" signature="failures($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="248" lineend="274" name="find_matching_delimiter" signature="find_matching_delimiter($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="276" lineend="311" name="find_regexp" signature="find_regexp($self, $regexp)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$regexp" />
+        </scope>
+        <scope ilk="function" line="313" lineend="329" name="get_token" signature="get_token($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="331" lineend="334" name="interpolates" signature="interpolates($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="336" lineend="381" name="make_token" signature="make_token($self, $length, $class, $arg)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$length" />
+          <variable ilk="argument" name="$class" />
+          <variable ilk="argument" name="$arg" />
+        </scope>
+        <scope ilk="function" line="383" lineend="386" name="match" signature="match($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="388" lineend="391" name="modifier" signature="modifier($self, $modifier)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$modifier" />
+        </scope>
+        <scope ilk="function" line="393" lineend="398" name="modifier_duplicate" signature="modifier_duplicate($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="400" lineend="410" name="modifier_modify" signature="modifier_modify($self, %args)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="%args" />
+        </scope>
+        <scope ilk="function" line="412" lineend="417" name="modifier_pop" signature="modifier_pop($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="419" lineend="446" name="next_token" signature="next_token($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="448" lineend="455" name="peek" signature="peek($self, $offset)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$offset" />
+        </scope>
+        <scope ilk="function" line="457" lineend="463" name="ppi_document" signature="ppi_document($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="465" lineend="473" name="prior" signature="prior($self, $method, @args)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$method" />
+          <variable ilk="argument" name="@args" />
+        </scope>
+        <scope ilk="function" line="475" lineend="477" name="significant" signature="significant()" />
+        <scope ilk="function" line="479" lineend="488" name="tokens" signature="tokens($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="490" lineend="502" name="_remainder" signature="_remainder($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="504" lineend="558" name="__PPIX_TOKENIZER__init" signature="__PPIX_TOKENIZER__init($class, $tokenizer, $character)">
+          <variable ilk="argument" name="$class" />
+          <variable ilk="argument" name="$tokenizer" />
+          <variable ilk="argument" name="$character" />
+        </scope>
+        <scope ilk="function" line="560" lineend="583" name="__PPIX_TOKENIZER__regexp" signature="__PPIX_TOKENIZER__regexp($class, $tokenizer, $character)">
+          <variable ilk="argument" name="$class" />
+          <variable ilk="argument" name="$tokenizer" />
+          <variable ilk="argument" name="$character" />
+        </scope>
+        <scope ilk="function" line="587" lineend="599" name="__PPIX_TOKEN_FALLBACK__regexp" signature="__PPIX_TOKEN_FALLBACK__regexp($class, $tokenizer, $character)">
+          <variable ilk="argument" name="$class" />
+          <variable ilk="argument" name="$tokenizer" />
+          <variable ilk="argument" name="$character" />
+        </scope>
+        <scope ilk="function" line="601" lineend="616" name="__PPIX_TOKEN_FALLBACK__repl" signature="__PPIX_TOKEN_FALLBACK__repl($class, $tokenizer, $character)">
+          <variable ilk="argument" name="$class" />
+          <variable ilk="argument" name="$tokenizer" />
+          <variable ilk="argument" name="$character" />
+        </scope>
+        <scope ilk="function" line="618" lineend="688" name="__PPIX_TOKENIZER__finish" signature="__PPIX_TOKENIZER__finish($class, $tokenizer, $character)">
+          <variable ilk="argument" name="$class" />
+          <variable ilk="argument" name="$tokenizer" />
+          <variable ilk="argument" name="$character" />
+        </scope>
+      </scope>
+    </scope>
+    

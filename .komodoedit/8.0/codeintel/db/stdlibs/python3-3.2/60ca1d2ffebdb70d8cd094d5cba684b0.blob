@@ -1,0 +1,173 @@
+<scope doc="Here&apos;s a sample session to show how to use this module.&#xA;At the moment, this is the only documentation.  The Basics ----------  Importing is easy...  &gt;&gt;&gt; from http import cookies  Most of the time you start by creating a cookie." ilk="blob" lang="Python" name="http.cookies">
+      <scope classrefs="dict" doc="A container class for a set of Morsels.&#xA;" ilk="class" line="453" lineend="556" name="BaseCookie">
+        <scope doc="Load cookies from a string (presumably HTTP_COOKIE) or from&#xA;a dictionary." ilk="function" line="514" name="load" signature="load(self, rawdata)">
+          <variable citdl="BaseCookie" ilk="argument" name="self" />
+          <variable ilk="argument" name="rawdata" />
+        </scope>
+        <scope doc="Private method for setting a cookie&apos;s value" ilk="function" name="_BaseCookie__set" signature="_BaseCookie__set(self, key, real_value, coded_value)" />
+        <scope doc="Return a string suitable for HTTP." ilk="function" line="497" name="__str__" signature="__str__(self, attrs=None, header=&apos;Set-Cookie:&apos;, sep=&apos;\r\n&apos;)" />
+        <scope doc="Return a string suitable for JavaScript." ilk="function" line="506" lineend="512" name="js_output" returns="_nulljoin()" signature="js_output(self, attrs=None)">
+          <variable citdl="sorted()" line="509" name="items" />
+          <variable citdl="BaseCookie" ilk="argument" name="self" />
+          <variable ilk="argument" name="attrs" />
+          <variable citdl="list" line="508" name="result" />
+        </scope>
+        <scope doc="Dictionary style assignment." ilk="function" line="484" lineend="487" name="__setitem__" signature="__setitem__(self, key, value)">
+          <variable citdl="BaseCookie" ilk="argument" name="self" />
+          <variable line="486" name="rval" />
+          <variable line="486" name="cval" />
+          <variable ilk="argument" name="value" />
+          <variable ilk="argument" name="key" />
+        </scope>
+        <scope ilk="function" line="499" lineend="504" name="__repr__" returns="tuple" signature="__repr__(self)">
+          <variable citdl="sorted()" line="501" name="items" />
+          <variable citdl="BaseCookie" ilk="argument" name="self" />
+          <variable citdl="list" line="500" name="l" />
+        </scope>
+        <scope ilk="function" name="_BaseCookie__parse_string" signature="_BaseCookie__parse_string(self, str, patt=&lt;_sre.SRE_Pattern object at 0x021DD4C0&gt;)" />
+        <scope doc="Called prior to setting a cookie&apos;s value from the network&#xA;representation." ilk="function" line="456" lineend="463" name="value_decode" returns="tuple" signature="value_decode(STRING) -&gt; real_value, coded_value">
+          <variable citdl="BaseCookie" ilk="argument" name="self" />
+          <variable ilk="argument" name="val" />
+        </scope>
+        <scope doc="Return a string suitable for HTTP." ilk="function" line="489" lineend="495" name="output" returns="sep.join()" signature="output(self, attrs=None, header=&apos;Set-Cookie:&apos;, sep=&apos;\r\n&apos;)">
+          <variable citdl="str" ilk="argument" name="header" />
+          <variable ilk="argument" name="attrs" />
+          <variable citdl="str" ilk="argument" name="sep" />
+          <variable citdl="sorted()" line="492" name="items" />
+          <variable citdl="BaseCookie" ilk="argument" name="self" />
+          <variable citdl="list" line="491" name="result" />
+        </scope>
+        <scope doc="Called prior to setting a cookie&apos;s value from the dictionary&#xA;representation." ilk="function" line="465" lineend="472" name="value_encode" returns="tuple" signature="value_encode(VALUE) -&gt; real_value, coded_value">
+          <variable citdl="BaseCookie" ilk="argument" name="self" />
+          <variable citdl="str()" line="471" name="strval" />
+          <variable ilk="argument" name="val" />
+        </scope>
+        <scope ilk="function" line="474" lineend="476" name="__init__" signature="__init__(self, input=None)">
+          <variable ilk="argument" name="input" />
+          <variable citdl="BaseCookie" ilk="argument" name="self" />
+        </scope>
+        <scope attributes="private" doc="Private method for setting a cookie&apos;s value" ilk="function" line="478" lineend="482" name="__set" signature="__set(key, real_value, coded_value)">
+          <variable citdl="BaseCookie" ilk="argument" name="self" />
+          <variable ilk="argument" name="key" />
+          <variable ilk="argument" name="real_value" />
+          <variable ilk="argument" name="coded_value" />
+          <variable citdl="self.get()" line="480" name="M" />
+        </scope>
+        <scope attributes="private" ilk="function" line="528" lineend="556" name="__parse_string" signature="__parse_string(str, patt=_CookiePattern)">
+          <variable citdl="BaseCookie" ilk="argument" name="self" />
+          <variable ilk="argument" name="str" />
+          <variable citdl="re.compile()" ilk="argument" name="patt" />
+          <variable citdl="int" line="529" name="i" />
+          <variable citdl="len()" line="530" name="n" />
+          <variable line="531" name="M" />
+          <variable citdl="patt.search()" line="535" name="match" />
+          <variable citdl="match.group()" line="540" name="value" />
+          <variable citdl="match.group()" line="540" name="key" />
+          <variable line="554" name="rval" />
+          <variable line="554" name="cval" />
+        </scope>
+      </scope>
+      <scope classrefs="Exception" doc="# Define an exception visible to External modules&#xA;" ilk="class" line="147" lineend="148" name="CookieError" />
+      <scope classrefs="dict" doc="A class to hold ONE (key, value) pair.&#xA;In a cookie, each such pair may have several attributes, so this class is used to keep the attributes associated with the appropriate key,value pair. This class also includes a coded_value attribute, which is used to hold the network representation of the value.  This is most useful when Python objects are pickled for network transit." ilk="class" line="308" lineend="420" name="Morsel">
+        <scope ilk="function" line="358" lineend="369" name="set" signature="set(self, key, val, coded_val, LegalChars=&quot;abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!#$%&amp;&apos;*+-.^_`|~&quot;)">
+          <variable ilk="argument" name="coded_val" />
+          <variable citdl="string.digits" ilk="argument" name="LegalChars" />
+          <variable citdl="Morsel" ilk="argument" name="self" />
+          <variable ilk="argument" name="val" />
+          <variable ilk="argument" name="key" />
+        </scope>
+        <scope ilk="function" line="374" name="__str__" signature="__str__(self, attrs=None, header=&apos;Set-Cookie:&apos;)" />
+        <scope ilk="function" line="349" lineend="353" name="__setitem__" signature="__setitem__(self, K, V)">
+          <variable citdl="Morsel" ilk="argument" name="self" />
+          <variable citdl="K.lower()" ilk="argument" name="K" />
+          <variable ilk="argument" name="V" />
+        </scope>
+        <scope ilk="function" line="355" lineend="356" name="isReservedKey" returns="bool" signature="isReservedKey(self, K)">
+          <variable citdl="Morsel" ilk="argument" name="self" />
+          <variable ilk="argument" name="K" />
+        </scope>
+        <scope ilk="function" line="376" lineend="378" name="__repr__" returns="tuple" signature="__repr__(self)">
+          <variable citdl="Morsel" ilk="argument" name="self" />
+        </scope>
+        <scope ilk="function" line="380" lineend="388" name="js_output" returns="str" signature="js_output(self, attrs=None)">
+          <variable citdl="Morsel" ilk="argument" name="self" />
+          <variable ilk="argument" name="attrs" />
+        </scope>
+        <scope ilk="function" line="371" lineend="372" name="output" returns="tuple" signature="output(self, attrs=None, header=&apos;Set-Cookie:&apos;)">
+          <variable citdl="str" ilk="argument" name="header" />
+          <variable citdl="Morsel" ilk="argument" name="self" />
+          <variable ilk="argument" name="attrs" />
+        </scope>
+        <scope ilk="function" line="390" lineend="420" name="OutputString" returns="_semispacejoin()" signature="OutputString(self, attrs=None)">
+          <variable citdl="sorted()" line="402" name="items" />
+          <variable citdl="Morsel" ilk="argument" name="self" />
+          <variable citdl="dict" ilk="argument" name="attrs" />
+          <variable citdl="result.append" line="394" name="append" />
+          <variable citdl="list" line="393" name="result" />
+        </scope>
+        <scope ilk="function" line="341" lineend="347" name="__init__" signature="__init__(self)">
+          <variable citdl="Morsel" ilk="argument" name="self" />
+        </scope>
+        <variable attributes="__instancevar__" line="343" name="key" />
+        <variable attributes="__instancevar__" line="369" name="coded_value" />
+        <variable attributes="__instancevar__" line="368" name="value" />
+        <variable attributes="protected" citdl="dict" line="330" name="_reserved" />
+      </scope>
+      <scope classrefs="BaseCookie" doc="SimpleCookie supports strings as cookie values.  When setting&#xA;the value using the dictionary assignment notation, SimpleCookie calls the builtin str() to convert the value to a string.  Values received from HTTP are kept as strings." ilk="class" line="559" lineend="571" name="SimpleCookie">
+        <scope ilk="function" line="566" lineend="567" name="value_decode" returns="tuple" signature="value_decode(self, val)">
+          <variable citdl="SimpleCookie" ilk="argument" name="self" />
+          <variable ilk="argument" name="val" />
+        </scope>
+        <scope ilk="function" line="569" lineend="571" name="value_encode" returns="tuple" signature="value_encode(self, val)">
+          <variable citdl="SimpleCookie" ilk="argument" name="self" />
+          <variable citdl="str()" line="570" name="strval" />
+          <variable ilk="argument" name="val" />
+        </scope>
+      </scope>
+      <variable citdl="list" line="138" name="__all__" />
+      <import module="re" />
+      <import module="string" />
+      <scope attributes="protected __hidden__" ilk="function" line="300" lineend="305" name="_getdate" returns="tuple" signature="_getdate(future=0, weekdayname=_weekdayname, monthname=_monthname)">
+        <import line="301" module="time" symbol="gmtime" />
+        <import line="301" module="time" symbol="time" />
+        <variable citdl="int" ilk="argument" name="future" />
+        <variable citdl="list" ilk="argument" name="weekdayname" />
+        <variable citdl="list" ilk="argument" name="monthname" />
+        <variable citdl="time()" line="302" name="now" />
+        <variable line="303" name="wd" />
+        <variable line="303" name="mm" />
+        <variable line="303" name="month" />
+        <variable line="303" name="ss" />
+        <variable line="303" name="hh" />
+        <variable line="303" name="year" />
+        <variable line="303" name="y" />
+        <variable line="303" name="z" />
+        <variable line="303" name="day" />
+      </scope>
+      <scope attributes="protected __hidden__" doc="Quote a string for use in a cookie header.&#xA;&#xA;If the string does not need to be double-quoted, then just return the&#xA;string.  Otherwise, surround the string in doublequotes and quote&#xA;(with a \) special characters." ilk="function" line="228" lineend="238" name="_quote" returns="str" signature="_quote(str, LegalChars=_LegalChars)">
+        <variable ilk="argument" name="str" />
+        <variable citdl="string.digits" ilk="argument" name="LegalChars" />
+      </scope>
+      <variable attributes="protected __hidden__" citdl="list" line="294" name="_weekdayname" />
+      <variable attributes="protected __hidden__" citdl="str" line="432" name="_LegalCharsPatt" />
+      <variable attributes="protected __hidden__" citdl="str.join" line="140" name="_nulljoin" />
+      <variable attributes="protected __hidden__" citdl="list" line="296" name="_monthname" />
+      <variable attributes="protected __hidden__" citdl="str.join" line="142" name="_spacejoin" />
+      <scope attributes="protected __hidden__" ilk="function" line="244" lineend="285" name="_unquote" returns="_nulljoin()" signature="_unquote(str)">
+        <variable citdl="list" ilk="argument" name="str" />
+        <variable citdl="int" line="262" name="i" />
+        <variable citdl="len()" line="263" name="n" />
+        <variable citdl="list" line="264" name="res" />
+        <variable citdl="_OctalPatt.search()" line="266" name="o_match" />
+        <variable citdl="_QuotePatt.search()" line="267" name="q_match" />
+        <variable citdl="int" line="272" name="j" />
+        <variable citdl="q_match.start()" line="276" name="k" />
+      </scope>
+      <variable attributes="protected __hidden__" citdl="str.join" line="141" name="_semispacejoin" />
+      <variable attributes="protected __hidden__" citdl="re.compile()" line="242" name="_QuotePatt" />
+      <variable attributes="protected __hidden__" citdl="dict" line="163" name="_Translator" />
+      <variable attributes="protected __hidden__" citdl="re.compile()" line="241" name="_OctalPatt" />
+      <variable attributes="protected __hidden__" citdl="re.compile()" line="433" name="_CookiePattern" />
+      <variable attributes="protected __hidden__" citdl="string.digits" line="162" name="_LegalChars" />
+    </scope>
+    

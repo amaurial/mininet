@@ -1,0 +1,49 @@
+<scope ilk="blob" lang="Perl" name="CPANPLUS::Dist::MM">
+      <scope ilk="class" line="1" lineend="1011" name="CPANPLUS::Dist::MM">
+        <import line="8" module="CPANPLUS::Internals::Constants" symbol="*" />
+        <import line="9" module="CPANPLUS::Internals::Constants::Report" symbol="*" />
+        <import line="10" module="CPANPLUS::Error" symbol="*" />
+        <import line="11" module="FileHandle" symbol="*" />
+        <import line="12" module="Cwd" symbol="*" />
+        <import line="14" module="IPC::Cmd" symbol="run" />
+        <import line="15" module="Params::Check" symbol="check" />
+        <import line="16" module="File::Basename" symbol="dirname" />
+        <import line="17" module="Module::Load::Conditional" symbol="can_load" />
+        <import line="17" module="Module::Load::Conditional" symbol="check_install" />
+        <import line="18" module="Locale::Maketext::Simple" symbol="Class" />
+        <variable line="5" name="$STATUS" />
+        <variable line="5" name="@ISA" />
+        <scope ilk="function" line="127" lineend="155" name="format_available" signature="format_available($dist)">
+          <import line="131" module="CPANPLUS::Internals" />
+          <variable ilk="argument" name="$dist" />
+          <import line="131" module="CPANPLUS::Internals" />
+        </scope>
+        <scope ilk="function" line="168" lineend="177" name="init" signature="init($dist)">
+          <variable ilk="argument" name="$dist" />
+        </scope>
+        <scope ilk="function" line="202" lineend="444" name="prepare" signature="prepare($dist, %hash)">
+          <variable ilk="argument" name="$dist" />
+          <variable ilk="argument" name="%hash" />
+        </scope>
+        <scope ilk="function" line="458" lineend="511" name="_find_prereqs" signature="_find_prereqs($dist, %hash)">
+          <variable ilk="argument" name="$dist" />
+          <variable ilk="argument" name="%hash" />
+        </scope>
+        <scope ilk="function" line="534" lineend="738" name="create" signature="create($dist, %hash)">
+          <variable ilk="argument" name="$dist" />
+          <variable ilk="argument" name="%hash" />
+        </scope>
+        <scope ilk="function" line="751" lineend="838" name="install" signature="install(%hash)">
+          <variable ilk="argument" name="%hash" />
+        </scope>
+        <scope ilk="function" line="855" lineend="930" name="write_makefile_pl" signature="write_makefile_pl($dist, %hash)">
+          <variable ilk="argument" name="$dist" />
+          <variable ilk="argument" name="%hash" />
+        </scope>
+        <scope ilk="function" line="932" lineend="1001" name="dist_dir" signature="dist_dir($dist, %hash)">
+          <variable ilk="argument" name="$dist" />
+          <variable ilk="argument" name="%hash" />
+        </scope>
+      </scope>
+    </scope>
+    

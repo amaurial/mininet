@@ -1,0 +1,130 @@
+<scope ilk="blob" lang="Perl" name="Pod::Simple::HTML">
+      <scope classrefs="Pod::Simple::PullParser" ilk="class" line="3" lineend="868" name="Pod::Simple::HTML">
+        <import line="5" module="Pod::Simple::PullParser" />
+        <variable line="7" name="$Computerese" />
+        <variable line="7" name="$LamePad" />
+        <variable line="7" name="$Linearization_Limit" />
+        <variable line="7" name="$VERSION" />
+        <variable line="7" name="%Tagmap" />
+        <variable line="7" name="@ISA" />
+        <variable line="8" name="$Man_URL_Postfix" />
+        <variable line="8" name="$Man_URL_Prefix" />
+        <variable line="8" name="$Perldoc_URL_Postfix" />
+        <variable line="8" name="$Perldoc_URL_Prefix" />
+        <variable line="9" name="$HTML_EXTENSION" />
+        <variable line="9" name="$Title_Postfix" />
+        <variable line="9" name="$Title_Prefix" />
+        <variable line="9" name="%ToIndex" />
+        <variable line="10" name="$Content_decl" />
+        <variable line="10" name="$Doctype_decl" />
+        <variable line="17" name="*DEBUG" />
+        <scope ilk="function" line="166" lineend="170" name="changes" signature="changes()" />
+        <scope ilk="function" line="171" lineend="175" name="changes2" signature="changes2()" />
+        <scope ilk="function" line="178" lineend="178" name="go" signature="go()" />
+        <scope ilk="function" line="183" lineend="214" name="new" signature="new()">
+          </scope>
+        <scope ilk="function" line="216" lineend="229" name="__adjust_html_h_levels" signature="__adjust_html_h_levels($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="231" lineend="238" name="batch_mode_page_object_init" signature="batch_mode_page_object_init($self, $batchconvobj, $module, $infile, $outfile, $depth)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$batchconvobj" />
+          <variable ilk="argument" name="$module" />
+          <variable ilk="argument" name="$infile" />
+          <variable ilk="argument" name="$outfile" />
+          <variable ilk="argument" name="$depth" />
+        </scope>
+        <scope ilk="function" line="240" lineend="245" name="run" signature="run()">
+          </scope>
+        <scope ilk="function" line="249" lineend="308" name="do_beginning" signature="do_beginning()">
+          </scope>
+        <scope ilk="function" line="310" lineend="316" name="_add_top_anchor" signature="_add_top_anchor($self, $text_r)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$text_r" />
+        </scope>
+        <scope ilk="function" line="318" lineend="327" name="version_tag_comment" signature="version_tag_comment($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="329" lineend="342" name="_modnote" signature="_modnote()">
+          </scope>
+        <scope ilk="function" line="344" lineend="348" name="do_end" signature="do_end()">
+          </scope>
+        <scope ilk="function" line="355" lineend="397" name="do_middle" signature="do_middle()">
+          <import line="378" module="Carp" />
+          <import line="378" module="Carp" />
+        </scope>
+        <scope ilk="function" line="401" lineend="445" name="index_as_html" signature="index_as_html()">
+          </scope>
+        <scope ilk="function" line="449" lineend="566" name="_do_middle_main_loop" signature="_do_middle_main_loop()">
+          </scope>
+        <scope ilk="function" line="571" lineend="574" name="do_section" signature="do_section($self, $name, $token)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$name" />
+          <variable ilk="argument" name="$token" />
+        </scope>
+        <scope ilk="function" line="576" lineend="588" name="do_link" signature="do_link($self, $token)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$token" />
+        </scope>
+        <scope ilk="function" line="592" lineend="592" name="do_url_link" signature="do_url_link()" />
+        <scope ilk="function" line="594" lineend="607" name="do_man_link" signature="do_man_link($self, $link)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$link" />
+        </scope>
+        <scope ilk="function" line="610" lineend="674" name="do_pod_link" signature="do_pod_link($self, $link)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$link" />
+        </scope>
+        <scope ilk="function" line="679" lineend="684" name="section_escape" signature="section_escape($self, $section)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$section" />
+        </scope>
+        <scope ilk="function" line="686" lineend="695" name="section_name_tidy" signature="section_name_tidy($self, $section)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$section" />
+        </scope>
+        <scope ilk="function" line="697" lineend="697" name="section_url_escape" signature="section_url_escape()" />
+        <scope ilk="function" line="698" lineend="698" name="pagepath_url_escape" signature="pagepath_url_escape()" />
+        <scope ilk="function" line="699" lineend="699" name="manpage_url_escape" signature="manpage_url_escape()" />
+        <scope ilk="function" line="701" lineend="718" name="general_url_escape" signature="general_url_escape($self, $string)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$string" />
+        </scope>
+        <scope ilk="function" line="725" lineend="732" name="resolve_pod_page_link" signature="resolve_pod_page_link($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="734" lineend="744" name="resolve_pod_page_link_singleton_mode" signature="resolve_pod_page_link_singleton_mode($self, $it)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$it" />
+        </scope>
+        <scope ilk="function" line="746" lineend="759" name="resolve_pod_page_link_batch_mode" signature="resolve_pod_page_link_batch_mode($self, $to)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$to" />
+        </scope>
+        <scope ilk="function" line="761" lineend="771" name="batch_mode_rectify_path" signature="batch_mode_rectify_path($self, $pathbits)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$pathbits" />
+        </scope>
+        <scope ilk="function" line="773" lineend="783" name="resolve_man_page_link" signature="resolve_man_page_link($self, $to, $frag)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$to" />
+          <variable ilk="argument" name="$frag" />
+        </scope>
+        <scope ilk="function" line="787" lineend="803" name="resolve_pod_link_by_table" signature="resolve_pod_link_by_table($self, $to, $section)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$to" />
+          <variable ilk="argument" name="$section" />
+        </scope>
+        <scope ilk="function" line="807" lineend="829" name="linearize_tokens" signature="linearize_tokens($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="833" lineend="838" name="unicode_escape_url" signature="unicode_escape_url($self, $string)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$string" />
+        </scope>
+        <scope ilk="function" line="841" lineend="864" name="esc" signature="esc($x)">
+          <variable ilk="argument" name="$x" />
+        </scope>
+      </scope>
+    </scope>
+    

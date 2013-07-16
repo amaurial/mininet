@@ -1,0 +1,94 @@
+<scope ilk="blob" lang="Perl" name="URI">
+      <scope ilk="class" line="1" lineend="337" name="URI">
+        <import line="21" module="Carp" />
+        <import line="22" module="URI::Escape" />
+        <variable line="4" name="$VERSION" />
+        <variable line="7" name="$ABS_ALLOW_RELATIVE_SCHEME" />
+        <variable line="7" name="$ABS_REMOTE_LEADING_DOTS" />
+        <variable line="7" name="$DEFAULT_QUERY_FORM_DELIMITER" />
+        <variable line="13" name="$mark" />
+        <variable line="13" name="$reserved" />
+        <variable line="13" name="$scheme_re" />
+        <variable line="13" name="$unreserved" />
+        <variable line="13" name="$uric" />
+        <variable line="229" name="*path" />
+        <scope ilk="function" line="31" lineend="33" name="_obj_eq" signature="_obj_eq()" />
+        <scope ilk="function" line="35" lineend="65" name="new" signature="new($class, $uri, $scheme)">
+          <import line="60" module="URI::_foreign" />
+          <variable ilk="argument" name="$class" />
+          <variable ilk="argument" name="$uri" />
+          <variable ilk="argument" name="$scheme" />
+          <import line="60" module="URI::_foreign" />
+        </scope>
+        <scope ilk="function" line="68" lineend="73" name="new_abs" signature="new_abs($class, $uri, $base)">
+          <variable ilk="argument" name="$class" />
+          <variable ilk="argument" name="$uri" />
+          <variable ilk="argument" name="$base" />
+        </scope>
+        <scope attributes="__ctor__" ilk="function" line="76" lineend="86" name="_init" signature="_init($class, $str, $scheme)">
+          <variable ilk="argument" name="$class" />
+          <variable ilk="argument" name="$str" />
+          <variable ilk="argument" name="$scheme" />
+        </scope>
+        <scope ilk="function" line="89" lineend="94" name="_uric_escape" signature="_uric_escape($class, $str)">
+          <variable ilk="argument" name="$class" />
+          <variable ilk="argument" name="$str" />
+        </scope>
+        <scope ilk="function" line="97" lineend="139" name="implementor" signature="implementor($scheme, $impclass)">
+          <import line="101" module="URI::_generic" />
+          <variable ilk="argument" name="$scheme" />
+          <variable ilk="argument" name="$impclass" />
+          <import line="101" module="URI::_generic" />
+        </scope>
+        <scope ilk="function" line="142" lineend="147" name="_init_implementor" signature="_init_implementor($class, $scheme)">
+          <variable ilk="argument" name="$class" />
+          <variable ilk="argument" name="$scheme" />
+        </scope>
+        <scope attributes="__ctor__" ilk="function" line="150" lineend="155" name="clone" signature="clone($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="158" lineend="158" name="_no_scheme_ok" signature="_no_scheme_ok()" />
+        <scope attributes="__ctor__" ilk="function" line="160" lineend="190" name="_scheme" signature="_scheme($self, $new)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$new" />
+        </scope>
+        <scope ilk="function" line="192" lineend="197" name="scheme" signature="scheme()">
+          </scope>
+        <scope ilk="function" line="200" lineend="227" name="opaque" signature="opaque($self, $new_opaque)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$new_opaque" />
+        </scope>
+        <scope ilk="function" line="232" lineend="249" name="fragment" signature="fragment($self, $new_frag)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$new_frag" />
+        </scope>
+        <scope ilk="function" line="252" lineend="256" name="as_string" signature="as_string($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="259" lineend="284" name="as_iri" signature="as_iri($self)">
+          <import line="271" module="Encode" />
+          <variable ilk="argument" name="$self" />
+          <import line="271" module="Encode" />
+        </scope>
+        <scope ilk="function" line="287" lineend="309" name="canonical" signature="canonical($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="312" lineend="318" name="eq" signature="eq($self, $other)">
+          <variable citdl="URI" ilk="argument" name="$self" />
+          <variable citdl="URI" ilk="argument" name="$other" />
+        </scope>
+        <scope ilk="function" line="321" lineend="321" name="abs" signature="abs()" />
+        <scope ilk="function" line="322" lineend="322" name="rel" signature="rel()" />
+        <scope ilk="function" line="324" lineend="324" name="secure" signature="secure()" />
+        <scope ilk="function" line="327" lineend="330" name="STORABLE_freeze" signature="STORABLE_freeze($self, $cloning)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$cloning" />
+        </scope>
+        <scope ilk="function" line="332" lineend="335" name="STORABLE_thaw" signature="STORABLE_thaw($self, $cloning, $str)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$cloning" />
+          <variable ilk="argument" name="$str" />
+        </scope>
+      </scope>
+    </scope>
+    

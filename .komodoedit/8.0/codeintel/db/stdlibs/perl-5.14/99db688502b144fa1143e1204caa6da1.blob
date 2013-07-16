@@ -1,0 +1,115 @@
+<scope ilk="blob" lang="Perl" name="File::Fetch">
+      <scope ilk="class" line="1" lineend="1648" name="File::Fetch">
+        <import line="4" module="FileHandle" symbol="*" />
+        <import line="5" module="File::Temp" symbol="*" />
+        <import line="6" module="File::Copy" symbol="*" />
+        <import line="7" module="File::Spec" symbol="*" />
+        <import line="8" module="File::Spec::Unix" symbol="*" />
+        <import line="9" module="File::Basename" symbol="dirname" />
+        <import line="11" module="Cwd" symbol="cwd" />
+        <import line="12" module="Carp" symbol="carp" />
+        <import line="13" module="IPC::Cmd" symbol="can_run" />
+        <import line="13" module="IPC::Cmd" symbol="run" />
+        <import line="13" module="IPC::Cmd" symbol="QUOTE" />
+        <import line="14" module="File::Path" symbol="mkpath" />
+        <import line="15" module="File::Temp" symbol="tempdir" />
+        <import line="16" module="Params::Check" symbol="check" />
+        <import line="17" module="Module::Load::Conditional" symbol="can_load" />
+        <import line="18" module="Locale::Maketext::Simple" symbol="Style" />
+        <variable line="20" name="$FROM_EMAIL" />
+        <variable line="20" name="$PREFER_BIN" />
+        <variable line="20" name="$USER_AGENT" />
+        <variable line="20" name="$VERBOSE" />
+        <variable line="21" name="$BLACKLIST" />
+        <variable line="21" name="$METHOD_FAIL" />
+        <variable line="21" name="$METHODS" />
+        <variable line="21" name="$VERSION" />
+        <variable line="22" name="$DEBUG" />
+        <variable line="22" name="$FTP_PASSIVE" />
+        <variable line="22" name="$TIMEOUT" />
+        <variable line="22" name="$WARN" />
+        <scope attributes="__ctor__" ilk="function" line="172" lineend="192" name="_create" signature="_create($class, %hash)">
+          <variable ilk="argument" name="$class" />
+          <variable ilk="argument" name="%hash" />
+        </scope>
+        <scope ilk="function" line="209" lineend="216" name="output_file" signature="output_file($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="266" lineend="286" name="new" signature="new($class, %hash)">
+          <variable ilk="argument" name="$class" />
+          <variable ilk="argument" name="%hash" />
+        </scope>
+        <scope ilk="function" line="329" lineend="399" name="_parse_uri" signature="_parse_uri($self, $uri)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$uri" />
+        </scope>
+        <scope ilk="function" line="420" lineend="523" name="fetch" signature="fetch($self, %hash)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="%hash" />
+        </scope>
+        <scope ilk="function" line="530" lineend="585" name="_lwp_fetch" signature="_lwp_fetch($self, %hash)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="%hash" />
+        </scope>
+        <scope ilk="function" line="588" lineend="625" name="_httptiny_fetch" signature="_httptiny_fetch($self, %hash)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="%hash" />
+        </scope>
+        <scope ilk="function" line="628" lineend="700" name="_httplite_fetch" signature="_httplite_fetch($self, %hash)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="%hash" />
+        </scope>
+        <scope ilk="function" line="707" lineend="790" name="_iosock_fetch" signature="_iosock_fetch($self, %hash)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="%hash" />
+        </scope>
+        <scope ilk="function" line="793" lineend="844" name="_netftp_fetch" signature="_netftp_fetch($self, %hash)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="%hash" />
+        </scope>
+        <scope ilk="function" line="847" lineend="898" name="_wget_fetch" signature="_wget_fetch($self, %hash)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="%hash" />
+        </scope>
+        <scope ilk="function" line="901" lineend="972" name="_lftp_fetch" signature="_lftp_fetch($self, %hash)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="%hash" />
+        </scope>
+        <scope ilk="function" line="977" lineend="1014" name="_ftp_fetch" signature="_ftp_fetch($self, %hash)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="%hash" />
+        </scope>
+        <scope ilk="function" line="1018" lineend="1117" name="_lynx_fetch" signature="_lynx_fetch($self, %hash)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="%hash" />
+        </scope>
+        <scope ilk="function" line="1120" lineend="1167" name="_ncftp_fetch" signature="_ncftp_fetch($self, %hash)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="%hash" />
+        </scope>
+        <scope ilk="function" line="1170" lineend="1221" name="_curl_fetch" signature="_curl_fetch($self, %hash)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="%hash" />
+        </scope>
+        <scope ilk="function" line="1224" lineend="1276" name="_fetch_fetch" signature="_fetch_fetch($self, %hash)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="%hash" />
+        </scope>
+        <scope ilk="function" line="1284" lineend="1349" name="_file_fetch" signature="_file_fetch($self, %hash)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="%hash" />
+        </scope>
+        <scope ilk="function" line="1352" lineend="1397" name="_rsync_fetch" signature="_rsync_fetch($self, %hash)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="%hash" />
+        </scope>
+        <scope ilk="function" line="1415" lineend="1427" name="_error" signature="_error($self, $error)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$error" />
+        </scope>
+        <scope ilk="function" line="1429" lineend="1432" name="error" signature="error($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+      </scope>
+    </scope>
+    

@@ -1,0 +1,17 @@
+<scope ilk="blob" lang="Perl" name="Perl::Critic::Policy::InputOutput::RequireCheckedSyscalls">
+      <scope ilk="class" line="8" lineend="117" name="Perl::Critic::Policy::InputOutput::RequireCheckedSyscalls">
+        <import line="13" module="Readonly" symbol="*" />
+        <import line="15" module="Perl::Critic::Utils" symbol="**" />
+        <variable line="20" name="$VERSION" />
+        <scope ilk="function" line="44" lineend="61" name="supported_parameters" signature="supported_parameters()" />
+        <scope ilk="function" line="63" lineend="63" name="default_severity" signature="default_severity()" />
+        <scope ilk="function" line="64" lineend="64" name="default_themes" signature="default_themes()" />
+        <scope ilk="function" line="65" lineend="65" name="applies_to" signature="applies_to()" />
+        <scope ilk="function" line="69" lineend="96" name="initialize_if_enabled" signature="initialize_if_enabled($self, $config)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$config" />
+        </scope>
+        <scope ilk="function" line="100" lineend="114" name="violates" signature="violates()" />
+      </scope>
+    </scope>
+    

@@ -1,0 +1,79 @@
+<scope ilk="blob" lang="Perl" name="PPI::Document">
+      <scope classrefs="PPI::Node" ilk="class" line="1" lineend="958" name="PPI::Document">
+        <import line="67" module="Carp" />
+        <import line="68" module="List::MoreUtils" />
+        <import line="69" module="Params::Util" symbol="_SCALAR0" />
+        <import line="69" module="Params::Util" symbol="_ARRAY0" />
+        <import line="69" module="Params::Util" symbol="_INSTANCE" />
+        <import line="70" module="Digest::MD5" />
+        <import line="71" module="PPI::Util" />
+        <import line="72" module="PPI" />
+        <import line="73" module="PPI::Node" />
+        <import line="74" module="PPI::Exception::ParserTimeout" />
+        <import line="86" module="PPI::Document::Fragment" />
+        <variable line="79" name="$errstr" />
+        <variable line="79" name="$VERSION" />
+        <variable line="79" name="@ISA" />
+        <scope ilk="function" line="148" lineend="269" name="new" signature="new($source, %attr)">
+          <variable ilk="argument" name="$source" />
+          <variable ilk="argument" name="%attr" />
+        </scope>
+        <scope ilk="function" line="271" lineend="273" name="load" signature="load()" />
+        <scope ilk="function" line="275" lineend="279" name="_setattr" signature="_setattr($class, $document, %attr)">
+          <variable ilk="argument" name="$class" />
+          <variable ilk="argument" name="$document" />
+          <variable ilk="argument" name="%attr" />
+        </scope>
+        <scope ilk="function" line="303" lineend="316" name="set_cache" signature="set_cache()">
+          </scope>
+        <scope ilk="function" line="330" lineend="332" name="get_cache" signature="get_cache()" />
+        <scope ilk="function" line="354" lineend="356" name="readonly" signature="readonly()" />
+        <scope ilk="function" line="374" lineend="378" name="tab_width" signature="tab_width($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="392" lineend="399" name="save" signature="save($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="421" lineend="525" name="serialize" signature="serialize($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="567" lineend="569" name="hex_id" signature="hex_id()" />
+        <scope ilk="function" line="590" lineend="634" name="index_locations" signature="index_locations($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="636" lineend="681" name="_add_location" signature="_add_location($self, $start, $Token, $heredoc)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$start" />
+          <variable ilk="argument" name="$Token" />
+          <variable ilk="argument" name="$heredoc" />
+        </scope>
+        <scope ilk="function" line="683" lineend="735" name="_logical_line_and_file" signature="_logical_line_and_file($self, $start, $Token, $newlines)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$start" />
+          <variable ilk="argument" name="$Token" />
+          <variable ilk="argument" name="$newlines" />
+        </scope>
+        <scope ilk="function" line="737" lineend="759" name="_visual_length" signature="_visual_length($self, $content, $pos)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$content" />
+          <variable ilk="argument" name="$pos" />
+        </scope>
+        <scope ilk="function" line="770" lineend="772" name="flush_locations" signature="flush_locations()" />
+        <scope ilk="function" line="793" lineend="798" name="normalized" signature="normalized()" />
+        <scope ilk="function" line="812" lineend="834" name="complete" signature="complete($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="845" lineend="845" name="scope" signature="scope()" />
+        <scope ilk="function" line="854" lineend="857" name="insert_before" signature="insert_before()" />
+        <scope ilk="function" line="859" lineend="862" name="insert_after" signature="insert_after()" />
+        <scope ilk="function" line="864" lineend="867" name="replace" signature="replace()" />
+        <scope ilk="function" line="877" lineend="880" name="_error" signature="_error()" />
+        <scope ilk="function" line="884" lineend="887" name="_clear" signature="_clear()" />
+        <scope ilk="function" line="900" lineend="902" name="errstr" signature="errstr()" />
+        <scope ilk="function" line="911" lineend="916" name="STORABLE_freeze" signature="STORABLE_freeze($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope attributes="__ctor__" ilk="function" line="918" lineend="925" name="STORABLE_thaw" signature="STORABLE_thaw()" />
+      </scope>
+    </scope>
+    

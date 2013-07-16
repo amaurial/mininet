@@ -1,0 +1,137 @@
+<scope ilk="blob" lang="Perl" name="Moose::Util::TypeConstraints">
+      <scope ilk="class" line="2" lineend="1457" name="Moose::Util::TypeConstraints">
+        <import line="10" module="Carp" />
+        <import line="11" module="List::MoreUtils" symbol="all" />
+        <import line="11" module="List::MoreUtils" symbol="any" />
+        <import line="12" module="Scalar::Util" symbol="blessed" />
+        <import line="12" module="Scalar::Util" symbol="reftype" />
+        <import line="13" module="Moose::Exporter" symbol="*" />
+        <import line="30" module="Moose::Deprecated" symbol="*" />
+        <import line="31" module="Moose::Meta::TypeConstraint" symbol="*" />
+        <import line="32" module="Moose::Meta::TypeConstraint::Union" symbol="*" />
+        <import line="33" module="Moose::Meta::TypeConstraint::Parameterized" symbol="*" />
+        <import line="34" module="Moose::Meta::TypeConstraint::Parameterizable" symbol="*" />
+        <import line="35" module="Moose::Meta::TypeConstraint::Class" symbol="*" />
+        <import line="36" module="Moose::Meta::TypeConstraint::Role" symbol="*" />
+        <import line="37" module="Moose::Meta::TypeConstraint::Enum" symbol="*" />
+        <import line="38" module="Moose::Meta::TypeConstraint::DuckType" symbol="*" />
+        <import line="39" module="Moose::Meta::TypeCoercion" symbol="*" />
+        <import line="40" module="Moose::Meta::TypeCoercion::Union" symbol="*" />
+        <import line="41" module="Moose::Meta::TypeConstraint::Registry" symbol="*" />
+        <import line="42" module="Moose::Util::TypeConstraints::OptimizedConstraints" symbol="*" />
+        <variable line="4" name="$Moose::Util::TypeConstraints::AUTHORITY" />
+        <variable line="7" name="$Moose::Util::TypeConstraints::VERSION" />
+        <scope ilk="function" line="63" lineend="63" name="get_type_constraint_registry" signature="get_type_constraint_registry()" />
+        <scope ilk="function" line="64" lineend="64" name="list_all_type_constraints" signature="list_all_type_constraints()" />
+        <scope ilk="function" line="66" lineend="75" name="export_type_constraints_as_functions" signature="export_type_constraints_as_functions()">
+          </scope>
+        <scope ilk="function" line="77" lineend="99" name="create_type_constraint_union" signature="create_type_constraint_union()">
+          </scope>
+        <scope ilk="function" line="101" lineend="121" name="create_parameterized_type_constraint" signature="create_parameterized_type_constraint($type_constraint_name)">
+          <variable ilk="argument" name="$type_constraint_name" />
+        </scope>
+        <scope ilk="function" line="123" lineend="136" name="_create_parameterized_type_constraint" signature="_create_parameterized_type_constraint($base_type_tc, $type_parameter)">
+          <variable ilk="argument" name="$base_type_tc" />
+          <variable ilk="argument" name="$type_parameter" />
+        </scope>
+        <scope ilk="function" line="139" lineend="155" name="create_class_type_constraint" signature="create_class_type_constraint($class, $options)">
+          <variable ilk="argument" name="$class" />
+          <variable ilk="argument" name="$options" />
+        </scope>
+        <scope ilk="function" line="157" lineend="173" name="create_role_type_constraint" signature="create_role_type_constraint($role, $options)">
+          <variable ilk="argument" name="$role" />
+          <variable ilk="argument" name="$options" />
+        </scope>
+        <scope ilk="function" line="175" lineend="202" name="find_or_create_type_constraint" signature="find_or_create_type_constraint($type_constraint_name, $options_for_anon_type)">
+          <variable ilk="argument" name="$type_constraint_name" />
+          <variable ilk="argument" name="$options_for_anon_type" />
+        </scope>
+        <scope ilk="function" line="204" lineend="208" name="find_or_create_isa_type_constraint" signature="find_or_create_isa_type_constraint($type_constraint_name)">
+          <variable ilk="argument" name="$type_constraint_name" />
+        </scope>
+        <scope ilk="function" line="210" lineend="214" name="find_or_create_does_type_constraint" signature="find_or_create_does_type_constraint($type_constraint_name)">
+          <variable ilk="argument" name="$type_constraint_name" />
+        </scope>
+        <scope ilk="function" line="216" lineend="236" name="find_or_parse_type_constraint" signature="find_or_parse_type_constraint()">
+          </scope>
+        <scope ilk="function" line="238" lineend="242" name="normalize_type_constraint_name" signature="normalize_type_constraint_name($type_constraint_name)">
+          <variable ilk="argument" name="$type_constraint_name" />
+        </scope>
+        <scope ilk="function" line="244" lineend="249" name="_confess" signature="_confess($error)">
+          <variable ilk="argument" name="$error" />
+        </scope>
+        <scope ilk="function" line="255" lineend="265" name="find_type_constraint" signature="find_type_constraint($type)">
+          <variable ilk="argument" name="$type" />
+        </scope>
+        <scope ilk="function" line="267" lineend="273" name="register_type_constraint" signature="register_type_constraint($constraint)">
+          <variable ilk="argument" name="$constraint" />
+        </scope>
+        <scope ilk="function" line="277" lineend="298" name="type" signature="type($name)">
+          <variable ilk="argument" name="$name" />
+        </scope>
+        <scope ilk="function" line="300" lineend="361" name="subtype" signature="subtype()">
+          </scope>
+        <scope ilk="function" line="363" lineend="370" name="class_type" signature="class_type()" />
+        <scope ilk="function" line="372" lineend="379" name="role_type" signature="role_type()" />
+        <scope ilk="function" line="381" lineend="387" name="maybe_type" signature="maybe_type($type_parameter)">
+          <variable ilk="argument" name="$type_parameter" />
+        </scope>
+        <scope ilk="function" line="389" lineend="405" name="duck_type" signature="duck_type($type_name, @methods)">
+          <variable ilk="argument" name="$type_name" />
+          <variable ilk="argument" name="@methods" />
+        </scope>
+        <scope ilk="function" line="407" lineend="410" name="coerce" signature="coerce($type_name, @coercion_map)">
+          <variable ilk="argument" name="$type_name" />
+          <variable ilk="argument" name="@coercion_map" />
+        </scope>
+        <scope ilk="function" line="425" lineend="425" name="as" signature="as()" />
+        <scope ilk="function" line="426" lineend="426" name="where" signature="where()" />
+        <scope ilk="function" line="427" lineend="427" name="message" signature="message()" />
+        <scope ilk="function" line="428" lineend="428" name="optimize_as" signature="optimize_as()" />
+        <scope ilk="function" line="430" lineend="430" name="from" signature="from()" />
+        <scope ilk="function" line="431" lineend="431" name="via" signature="via()" />
+        <scope ilk="function" line="433" lineend="457" name="enum" signature="enum($type_name, @values)">
+          <variable ilk="argument" name="$type_name" />
+          <variable ilk="argument" name="@values" />
+        </scope>
+        <scope ilk="function" line="459" lineend="466" name="create_enum_type_constraint" signature="create_enum_type_constraint($type_name, $values)">
+          <variable ilk="argument" name="$type_name" />
+          <variable ilk="argument" name="$values" />
+        </scope>
+        <scope ilk="function" line="468" lineend="475" name="create_duck_type_constraint" signature="create_duck_type_constraint($type_name, $methods)">
+          <variable ilk="argument" name="$type_name" />
+          <variable ilk="argument" name="$methods" />
+        </scope>
+        <scope ilk="function" line="477" lineend="507" name="match_on_type" signature="match_on_type($to_match, @cases)">
+          <variable ilk="argument" name="$to_match" />
+          <variable ilk="argument" name="@cases" />
+        </scope>
+        <scope ilk="function" line="514" lineend="566" name="_create_type_constraint" signature="_create_type_constraint($name, $parent, $check, $message, $optimized)">
+          <variable ilk="argument" name="$name" />
+          <variable ilk="argument" name="$parent" />
+          <variable ilk="argument" name="$check" />
+          <variable ilk="argument" name="$message" />
+          <variable ilk="argument" name="$optimized" />
+        </scope>
+        <scope ilk="function" line="568" lineend="584" name="_install_type_coercions" signature="_install_type_coercions($type_name, $coercion_map)">
+          <variable ilk="argument" name="$type_name" />
+          <variable ilk="argument" name="$coercion_map" />
+        </scope>
+        <scope ilk="function" line="650" lineend="654" name="_parse_parameterized_type_constraint" signature="_parse_parameterized_type_constraint()" />
+        <scope ilk="function" line="656" lineend="659" name="_detect_parameterized_type_constraint" signature="_detect_parameterized_type_constraint()" />
+        <scope ilk="function" line="661" lineend="675" name="_parse_type_constraint_union" signature="_parse_type_constraint_union($given)">
+          <variable ilk="argument" name="$given" />
+        </scope>
+        <scope ilk="function" line="677" lineend="680" name="_detect_type_constraint_union" signature="_detect_type_constraint_union()" />
+        <scope ilk="function" line="852" lineend="852" name="get_all_parameterizable_types" signature="get_all_parameterizable_types()" />
+        <scope ilk="function" line="854" lineend="862" name="add_parameterizable_type" signature="add_parameterizable_type($type)">
+          <variable ilk="argument" name="$type" />
+        </scope>
+        <scope ilk="function" line="870" lineend="870" name="list_all_builtin_type_constraints" signature="list_all_builtin_type_constraints()" />
+        <scope ilk="function" line="873" lineend="878" name="_throw_error" signature="_throw_error()">
+          <import line="875" module="Moose" />
+          <import line="875" module="Moose" />
+        </scope>
+      </scope>
+    </scope>
+    

@@ -1,0 +1,204 @@
+<scope doc="# Module for starting a process object using os.fork() or CreateProcess()&#xA;# # multiprocessing/forking.py # # Copyright (c) 2006-2008, R Oudkerk # All rights reserved. # # Redistribution and use in source and binary forms, with or without # modification, are permitted provided that the following conditions # are met: #" ilk="blob" lang="Python" name="multiprocessing.forking">
+      <scope classrefs="object" doc="Connection type whose constructor signature is&#xA;Connection(handle, readable=True, writable=True).  The constructor does *not* duplicate the handle." ilk="class" name="Connection">
+        <scope doc="file descriptor or handle of the connection" ilk="function" name="fileno" />
+        <scope doc="receive byte data as a string" ilk="function" name="recv_bytes" />
+        <scope doc="send a (picklable) object" ilk="function" name="send" />
+        <scope doc="receive byte data into a writeable buffer-like object&#xA;returns the number of bytes read" ilk="function" name="recv_bytes_into" />
+        <scope doc="x.__repr__() &lt;==&gt; repr(x)" ilk="function" name="__repr__" signature="x.__repr__() &lt;==&gt; repr(x)" />
+        <scope doc="send the byte data from a readable buffer-like object" ilk="function" name="send_bytes" />
+        <scope doc="close the connection" ilk="function" name="close" />
+        <scope doc="whether there is any input available to be read" ilk="function" name="poll" />
+        <scope doc="receive a (picklable) object" ilk="function" name="recv" />
+      </scope>
+      <scope classrefs="object" doc="Class which supports object finalization using weakrefs&#xA;" ilk="class" name="Finalize">
+        <scope doc="Run the callback unless it has already been called or&#xA;cancelled" ilk="function" name="__call__" signature="__call__(self, wr=None)" />
+        <scope ilk="function" name="__repr__" signature="__repr__(self)" />
+        <scope doc="Return whether this finalizer is still waiting to invoke&#xA;callback" ilk="function" name="still_active" signature="still_active(self)" />
+        <scope doc="Cancel finalization of the object" ilk="function" name="cancel" signature="cancel(self)" />
+        <scope ilk="function" name="__init__" signature="__init__(self, obj, callback, args=(), kwargs=None, exitpriority=None)" />
+      </scope>
+      <scope classrefs="_Pickler" doc="&#xA;" ilk="class" line="59" lineend="69" name="ForkingPickler">
+        <scope ilk="function" line="62" lineend="69" name="register" signature="register(type, reduce)">
+          <variable ilk="argument" name="reduce" />
+          <variable ilk="argument" name="type" />
+          <scope ilk="function" line="63" lineend="68" name="dispatcher" signature="dispatcher(self, obj)">
+            <variable ilk="argument" name="self" />
+            <variable ilk="argument" name="obj" />
+            <variable citdl="reduce()" line="64" name="rv" />
+          </scope>
+          <variable citdl="ForkingPickler" ilk="argument" name="cls" />
+        </scope>
+        <variable citdl="Pickler.dispatch.copy()" line="60" name="dispatch" />
+      </scope>
+      <variable citdl="int" name="HIGHEST_PROTOCOL" />
+      <scope classrefs="object" doc="&#xA;" ilk="class" name="Pickler">
+        <scope doc="Write a pickled representation of obj to the open file." ilk="function" name="dump" signature="dump(self, obj)" />
+        <scope doc="# Return a GET (BINGET, LONG_BINGET) opcode string, with&#xA;argument i." ilk="function" name="get" signature="get(self, i, pack=&lt;built-in function pack&gt;)" />
+        <scope ilk="function" name="save_bool" signature="save_bool(self, obj)" />
+        <scope ilk="function" name="save_none" signature="save_none(self, obj)" />
+        <scope ilk="function" name="_batch_setitems" signature="_batch_setitems(self, items)" />
+        <scope ilk="function" name="save_bytes" signature="save_bytes(self, obj, pack=&lt;built-in function pack&gt;)" />
+        <scope ilk="function" name="save_long" signature="save_long(self, obj, pack=&lt;built-in function pack&gt;)" />
+        <scope doc="# Return a PUT (BINPUT, LONG_BINPUT) opcode string, with&#xA;argument i." ilk="function" name="put" signature="put(self, i, pack=&lt;built-in function pack&gt;)" />
+        <scope ilk="function" name="_batch_appends" signature="_batch_appends(self, items)" />
+        <scope ilk="function" name="save_str" signature="save_str(self, obj, pack=&lt;built-in function pack&gt;)" />
+        <scope ilk="function" name="save_float" signature="save_float(self, obj, pack=&lt;built-in function pack&gt;)" />
+        <scope ilk="function" name="save_global" signature="save_global(self, obj, name=None, pack=&lt;built-in function pack&gt;)" />
+        <scope doc="Store an object in the memo." ilk="function" name="memoize" signature="memoize(self, obj)" />
+        <scope ilk="function" name="persistent_id" signature="persistent_id(self, obj)" />
+        <scope ilk="function" name="save_reduce" signature="save_reduce(self, func, args, state=None, listitems=None, dictitems=None, obj=None)" />
+        <scope ilk="function" name="save_pers" signature="save_pers(self, pid)" />
+        <scope doc="This takes a binary file for writing a pickle data stream." ilk="function" name="__init__" signature="__init__(self, file, protocol=None, *, fix_imports=True)" />
+        <scope doc="Clears the pickler&apos;s &quot;memo&quot;." ilk="function" name="clear_memo" signature="clear_memo(self)" />
+        <scope ilk="function" name="save_dict" signature="save_dict(self, obj)" />
+        <scope ilk="function" name="save_tuple" signature="save_tuple(self, obj)" />
+        <scope ilk="function" name="save" signature="save(self, obj, save_persistent_id=True)" />
+        <scope ilk="function" name="save_list" signature="save_list(self, obj)" />
+      </scope>
+      <scope classrefs="object" doc="Connection type whose constructor signature is&#xA;Connection(handle, readable=True, writable=True).  The constructor does *not* duplicate the handle." ilk="class" name="PipeConnection">
+        <scope doc="file descriptor or handle of the connection" ilk="function" name="fileno" />
+        <scope doc="receive byte data as a string" ilk="function" name="recv_bytes" />
+        <scope doc="send a (picklable) object" ilk="function" name="send" />
+        <scope doc="receive byte data into a writeable buffer-like object&#xA;returns the number of bytes read" ilk="function" name="recv_bytes_into" />
+        <scope doc="x.__repr__() &lt;==&gt; repr(x)" ilk="function" name="__repr__" signature="x.__repr__() &lt;==&gt; repr(x)" />
+        <scope doc="send the byte data from a readable buffer-like object" ilk="function" name="send_bytes" />
+        <scope doc="close the connection" ilk="function" name="close" />
+        <scope doc="whether there is any input available to be read" ilk="function" name="poll" />
+        <scope doc="receive a (picklable) object" ilk="function" name="recv" />
+      </scope>
+      <scope classrefs="object" doc="Start a subprocess to run the code of a process object&#xA;" ilk="class" line="234" lineend="306" name="Popen">
+        <scope ilk="function" line="297" lineend="298" name="poll" returns="Popen.wait()" signature="poll(self)">
+          <variable citdl="Popen" ilk="argument" name="self" />
+        </scope>
+        <scope ilk="function" line="278" lineend="279" name="duplicate_for_child" returns="duplicate()" signature="duplicate_for_child(handle)">
+          <variable citdl="Popen" ilk="argument" name="handle" />
+        </scope>
+        <scope ilk="function" line="300" lineend="306" name="terminate" signature="terminate(self)">
+          <variable citdl="Popen" ilk="argument" name="self" />
+        </scope>
+        <scope ilk="function" line="274" lineend="275" name="thread_is_spawning" returns="bool" signature="thread_is_spawning()" />
+        <scope ilk="function" line="240" lineend="271" name="__init__" signature="__init__(self, process_obj)">
+          <variable citdl="os.fdopen()" line="264" name="to_child" />
+          <variable citdl="get_preparation_data()" line="263" name="prep_data" />
+          <variable citdl="Popen" ilk="argument" name="self" />
+          <variable citdl="list" line="249" name="cmd" />
+          <variable line="251" name="pid" />
+          <variable line="242" name="wfd" />
+          <variable line="251" name="ht" />
+          <variable citdl="duplicate()" line="245" name="rhandle" />
+          <variable line="251" name="tid" />
+          <variable ilk="argument" name="process_obj" />
+          <variable line="242" name="rfd" />
+          <variable line="251" name="hp" />
+        </scope>
+        <scope ilk="function" line="281" lineend="295" name="wait" returns="_subprocess.GetExitCodeProcess()" signature="wait(self, timeout=None)">
+          <variable citdl="_subprocess.WaitForSingleObject()" line="288" name="res" />
+          <variable citdl="Popen" ilk="argument" name="self" />
+          <variable citdl="signal.SIGTERM" line="290" name="code" />
+          <variable citdl="max()" line="284" name="msecs" />
+          <variable ilk="argument" name="timeout" />
+        </scope>
+        <variable attributes="protected" citdl="_thread._local()" line="238" name="_tls" />
+        <variable attributes="__instancevar__" citdl="_subprocess.GetExitCodeProcess()" line="259" name="returncode" />
+        <variable attributes="__instancevar__" line="258" name="pid" />
+        <variable attributes="protected __instancevar__" line="260" name="_handle" />
+      </scope>
+      <variable citdl="int" line="196" name="TERMINATE" />
+      <variable citdl="bool" line="197" name="WINEXE" />
+      <variable citdl="bool" line="198" name="WINSERVICE" />
+      <variable citdl="list" line="41" name="__all__" />
+      <import module="_subprocess" />
+      <import module="_thread" />
+      <scope ilk="function" line="47" lineend="51" name="assert_spawning" signature="assert_spawning(self)">
+        <variable ilk="argument" name="self" />
+      </scope>
+      <scope doc="Close a file descriptor (for low level IO)." ilk="function" line="107" name="close" signature="close(fd)" />
+      <scope ilk="function" line="189" lineend="190" name="dump" signature="dump(obj, file, protocol=None)">
+        <variable ilk="argument" name="protocol" />
+        <variable ilk="argument" name="obj" />
+        <variable ilk="argument" name="file" />
+      </scope>
+      <scope doc="Return a duplicate of a file descriptor." ilk="function" line="221" lineend="226" name="duplicate" signature="duplicate(handle, target_process=None, inheritable=False)">
+        <variable citdl="_subprocess.GetCurrentProcess()" ilk="argument" name="target_process" />
+        <variable ilk="argument" name="handle" />
+        <variable citdl="False" ilk="argument" name="inheritable" />
+      </scope>
+      <scope doc="Exit to the system with specified status, without normal&#xA;exit processing." ilk="function" line="105" name="exit" signature="_exit(status)" />
+      <scope doc="Run code for process object if this in not the main process" ilk="function" line="323" lineend="329" name="freeze_support" signature="freeze_support()" />
+      <scope doc="Returns prefix of command line used for spawning a child&#xA;process" ilk="function" line="332" lineend="355" name="get_command_line" returns="list" signature="get_command_line()">
+        <variable citdl="str" line="354" name="prog" />
+      </scope>
+      <scope doc="Return info about parent needed by child to unpickle process&#xA;object" ilk="function" line="380" lineend="408" name="get_preparation_data" returns="dict()" signature="get_preparation_data(name)">
+        <variable ilk="argument" name="name" />
+        <variable citdl="getattr()" line="399" name="main_path" />
+        <variable citdl="dict()" line="386" name="d" />
+      </scope>
+      <scope doc="Return whether commandline indicates we are forking" ilk="function" line="312" lineend="320" name="is_forking" returns="bool" signature="is_forking(argv)">
+        <variable ilk="argument" name="argv" />
+      </scope>
+      <scope doc="Read a pickled object representation from the open file&#xA;object file and return the reconstituted object hierarchy&#xA;specified therein." ilk="function" name="load" returns="object" signature="load(file, *, fix_imports=True, encoding=&apos;ASCII&apos;, errors=&apos;strict&apos;) -&gt; object" />
+      <scope doc="Run code specifed by data received over pipe" ilk="function" line="358" lineend="377" name="main" signature="main()">
+        <variable citdl="int()" line="364" name="handle" />
+        <variable citdl="msvcrt.open_osfhandle()" line="365" name="fd" />
+        <variable citdl="load()" line="371" name="self" />
+        <variable citdl="os.fdopen()" line="366" name="from_parent" />
+        <variable citdl="load()" line="369" name="preparation_data" />
+        <variable citdl="self._bootstrap()" line="376" name="exitcode" />
+      </scope>
+      <import module="msvcrt" />
+      <variable citdl="list" line="430" name="old_main_modules" />
+      <import module="os" />
+      <scope classrefs="object" doc="partial(func, *args, **keywords) - new function with partial application&#xA;of the given arguments and keywords." ilk="class" name="partial">
+        <scope doc="x.__setattr__(&apos;name&apos;, value) &lt;==&gt; x.name = value" ilk="function" name="__setattr__" signature="x.__setattr__(&apos;name&apos;, value) &lt;==&gt; x.name = value" />
+        <scope ilk="function" name="__setstate__" />
+        <scope ilk="function" name="__reduce__" />
+        <scope doc="x.__getattribute__(&apos;name&apos;) &lt;==&gt; x.name" ilk="function" name="__getattribute__" signature="x.__getattribute__(&apos;name&apos;) &lt;==&gt; x.name" />
+        <scope doc="x.__delattr__(&apos;name&apos;) &lt;==&gt; del x.name" ilk="function" name="__delattr__" signature="x.__delattr__(&apos;name&apos;) &lt;==&gt; del x.name" />
+        <scope doc="x.__repr__() &lt;==&gt; repr(x)" ilk="function" name="__repr__" signature="x.__repr__() &lt;==&gt; repr(x)" />
+        <scope doc="x.__call__(...) &lt;==&gt; x(...)" ilk="function" name="__call__" signature="x.__call__(...) &lt;==&gt; x(...)" />
+      </scope>
+      <scope doc="Try to get current process ready to unpickle process object" ilk="function" line="432" lineend="510" name="prepare" signature="prepare(data)">
+        <variable citdl="list" line="480" name="dirs" />
+        <variable line="487" name="path_name" />
+        <variable line="466" name="main_path" />
+        <variable line="487" name="etc" />
+        <variable line="487" name="file" />
+        <variable ilk="argument" name="data" />
+        <variable citdl="imp.load_module()" line="472" name="main_module" />
+        <variable citdl="os.path.basename()" line="467" name="main_name" />
+      </scope>
+      <import module="process" />
+      <scope ilk="function" line="414" lineend="421" name="reduce_connection" returns="tuple" signature="reduce_connection(conn)">
+        <variable ilk="argument" name="conn" />
+      </scope>
+      <scope ilk="function" line="213" lineend="215" name="set_executable" signature="set_executable(exe)">
+        <variable attributes="protected" line="215" name="_python_exe" />
+        <variable ilk="argument" name="exe" />
+      </scope>
+      <import module="signal" />
+      <import module="sys" />
+      <import module="time" />
+      <import module="util" />
+      <scope classrefs="object" doc="&#xA;" ilk="class" name="win32" />
+      <scope attributes="protected __hidden__" ilk="function" line="71" lineend="75" name="_reduce_method" returns="tuple" signature="_reduce_method(m)">
+        <variable ilk="argument" name="m" />
+      </scope>
+      <scope attributes="protected __hidden__" ilk="class" line="76" lineend="78" name="_C">
+        <scope ilk="function" line="77" lineend="78" name="f" signature="f()">
+          <variable citdl="_C" ilk="argument" name="self" />
+        </scope>
+      </scope>
+      <variable attributes="protected __hidden__" citdl="sys.executable" line="209" name="_python_exe" />
+      <scope attributes="protected __hidden__" ilk="function" line="82" lineend="83" name="_reduce_method_descriptor" returns="tuple" signature="_reduce_method_descriptor(m)">
+        <variable ilk="argument" name="m" />
+      </scope>
+      <scope attributes="protected __hidden__" ilk="function" line="94" lineend="95" name="_rebuild_partial" returns="partial()" signature="_rebuild_partial(func, args, keywords)">
+        <variable ilk="argument" name="func" />
+        <variable ilk="argument" name="args" />
+        <variable ilk="argument" name="keywords" />
+      </scope>
+      <scope attributes="protected __hidden__" ilk="function" line="92" lineend="93" name="_reduce_partial" returns="tuple" signature="_reduce_partial(p)">
+        <variable ilk="argument" name="p" />
+      </scope>
+    </scope>
+    

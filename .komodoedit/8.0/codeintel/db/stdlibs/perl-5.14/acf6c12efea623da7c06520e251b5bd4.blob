@@ -1,0 +1,19 @@
+<scope ilk="blob" lang="Perl" name="Net::Config">
+      <scope classrefs="Net::LocalCfg Exporter" ilk="class" line="7" lineend="118" name="Net::Config">
+        <import line="9" module="Exporter" />
+        <import line="11" module="Socket" symbol="inet_aton" />
+        <import line="11" module="Socket" symbol="inet_ntoa" />
+        <import line="18" module="Net::LocalCfg" />
+        <variable line="10" name="$CONFIGURE" />
+        <variable line="10" name="$LIBNET_CFG" />
+        <variable line="10" name="$VERSION" />
+        <variable attributes="__exported__" line="10" name="%NetConfig" />
+        <variable line="10" name="@EXPORT" />
+        <variable line="10" name="@ISA" />
+        <variable line="115" name="*is_external" />
+        <scope ilk="function" line="89" lineend="113" name="requires_firewall" signature="requires_firewall($host)">
+          <variable ilk="argument" name="$host" />
+        </scope>
+      </scope>
+    </scope>
+    

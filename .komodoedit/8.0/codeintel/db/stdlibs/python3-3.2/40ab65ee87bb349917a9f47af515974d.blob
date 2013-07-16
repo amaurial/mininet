@@ -1,0 +1,440 @@
+<scope doc="An FTP client class and some helper functions.&#xA;Based on RFC 959: File Transfer Protocol (FTP), by J. Postel and J. Reynolds  Example:  &gt;&gt;&gt; from ftplib import FTP &gt;&gt;&gt; ftp = FTP(&apos;ftp.python.org&apos;) # connect to host, default port &gt;&gt;&gt; ftp.login() # default, i.e.: user anonymous, passwd anonymous@ &apos;230 Guest login ok, access restrictions apply.&apos; &gt;&gt;&gt; ftp.retrlines(&apos;LIST&apos;) # list directory contents total 9" ilk="blob" lang="Python" name="ftplib">
+      <variable citdl="bytes" line="69" name="B_CRLF" />
+      <variable citdl="str" line="68" name="CRLF" />
+      <scope classrefs="Exception" doc="# Exception raised when an error or invalid response is received&#xA;" ilk="class" line="55" lineend="55" name="Error" />
+      <scope classrefs="object" doc="An FTP client class.&#xA;To create a connection, call the class using these arguments: host, user, passwd, acct, timeout  The first four arguments are all strings, and have default value &apos;&apos;. timeout must be numeric and defaults to None if not passed, meaning that no timeout will be set on any ftp socket(s) If a timeout is passed, then this is now the default timeout for all ftp socket operations for this instance.  Then use self.connect() with optional host and port argument." ilk="class" line="72" lineend="602" name="FTP">
+        <scope doc="Rename a file." ilk="function" line="530" lineend="535" name="rename" returns="FTP.voidcmd()" signature="rename(self, fromname, toname)">
+          <variable ilk="argument" name="toname" />
+          <variable ilk="argument" name="fromname" />
+          <variable citdl="FTP" ilk="argument" name="self" />
+          <variable citdl="sendcmd()" line="532" name="resp" />
+        </scope>
+        <scope doc="Set the debugging level." ilk="function" line="155" lineend="161" name="set_debuglevel" signature="set_debuglevel(self, level)">
+          <variable citdl="FTP" ilk="argument" name="self" />
+          <variable ilk="argument" name="level" />
+        </scope>
+        <scope doc="Send a command and return the response." ilk="function" line="252" lineend="255" name="sendcmd" returns="FTP.getresp()" signature="sendcmd(self, cmd)">
+          <variable citdl="FTP" ilk="argument" name="self" />
+          <variable ilk="argument" name="cmd" />
+        </scope>
+        <scope doc="Send a EPRT command with the current host and the given port&#xA;number." ilk="function" line="272" lineend="283" name="sendeprt" returns="FTP.voidcmd()" signature="sendeprt(self, host, port)">
+          <variable ilk="argument" name="host" />
+          <variable citdl="int" line="274" name="af" />
+          <variable citdl="list" line="281" name="fields" />
+          <variable citdl="FTP" ilk="argument" name="self" />
+          <variable citdl="str.join()" line="282" name="cmd" />
+          <variable ilk="argument" name="port" />
+        </scope>
+        <scope doc="Abort a file transfer. Uses out-of-band data." ilk="function" line="239" lineend="250" name="abort" returns="getmultiline()" signature="abort(self)">
+          <variable citdl="FTP" ilk="argument" name="self" />
+          <variable citdl="str" line="244" name="line" />
+          <variable citdl="getmultiline()" line="247" name="resp" />
+        </scope>
+        <scope doc="Connect to host." ilk="function" line="131" lineend="146" name="connect" returns="self.getresp()" signature="connect(self, host=&apos;&apos;, port=0, timeout=-999)">
+          <variable citdl="FTP" ilk="argument" name="self" />
+          <variable citdl="str" ilk="argument" name="host" />
+          <variable citdl="int" ilk="argument" name="timeout" />
+          <variable citdl="int" ilk="argument" name="port" />
+        </scope>
+        <scope doc="Remove a directory." ilk="function" line="578" lineend="580" name="rmd" returns="FTP.voidcmd()" signature="rmd(self, dirname)">
+          <variable citdl="FTP" ilk="argument" name="self" />
+          <variable ilk="argument" name="dirname" />
+        </scope>
+        <scope doc="Send new account name." ilk="function" line="501" lineend="504" name="acct" returns="FTP.voidcmd()" signature="acct(self, password)">
+          <variable ilk="argument" name="password" />
+          <variable citdl="FTP" ilk="argument" name="self" />
+          <variable citdl="str" line="503" name="cmd" />
+        </scope>
+        <scope doc="Close the connection without assuming anything about it." ilk="function" line="597" lineend="602" name="close" signature="close(self)">
+          <variable citdl="FTP" ilk="argument" name="self" />
+        </scope>
+        <scope doc="# Initialization method (called by class instantiation)." ilk="function" line="109" lineend="115" name="__init__" signature="__init__(self, host=&apos;&apos;, user=&apos;&apos;, passwd=&apos;&apos;, acct=&apos;&apos;, timeout=&lt;object object at 0x02AC9038&gt;)">
+          <variable citdl="str" ilk="argument" name="host" />
+          <variable citdl="str" ilk="argument" name="user" />
+          <variable citdl="_GLOBAL_DEFAULT_TIMEOUT" ilk="argument" name="timeout" />
+          <variable citdl="str" ilk="argument" name="passwd" />
+          <variable citdl="str" ilk="argument" name="acct" />
+          <variable citdl="FTP" ilk="argument" name="self" />
+        </scope>
+        <scope doc="Retrieve the size of a file." ilk="function" line="558" lineend="567" name="size" returns="int()" signature="size(self, filename)">
+          <variable line="563" name="s" />
+          <variable citdl="FTP" ilk="argument" name="self" />
+          <variable citdl="sendcmd()" line="561" name="resp" />
+          <variable ilk="argument" name="filename" />
+        </scope>
+        <scope doc="Quit, and close the connection." ilk="function" line="591" lineend="595" name="quit" returns="voidcmd()" signature="quit(self)">
+          <variable citdl="FTP" ilk="argument" name="self" />
+          <variable citdl="voidcmd()" line="593" name="resp" />
+        </scope>
+        <scope doc="Get the welcome message from the server." ilk="function" line="148" lineend="153" name="getwelcome" returns="self.getresp()" signature="getwelcome(self)">
+          <variable citdl="FTP" ilk="argument" name="self" />
+        </scope>
+        <scope doc="Make a directory, return its full pathname." ilk="function" line="569" lineend="576" name="mkd" returns="str" signature="mkd(self, dirname)">
+          <variable citdl="FTP" ilk="argument" name="self" />
+          <variable ilk="argument" name="dirname" />
+          <variable citdl="voidcmd()" line="571" name="resp" />
+        </scope>
+        <scope ilk="function" line="313" lineend="318" name="makepasv" returns="tuple" signature="makepasv(self)">
+          <variable citdl="FTP" ilk="argument" name="self" />
+          <variable line="315" name="host" />
+          <variable line="315" name="port" />
+        </scope>
+        <scope doc="Like ntransfercmd() but returns only the socket." ilk="function" line="377" lineend="379" name="transfercmd" signature="transfercmd(self, cmd, rest=None)">
+          <variable citdl="FTP" ilk="argument" name="self" />
+          <variable ilk="argument" name="cmd" />
+          <variable ilk="argument" name="rest" />
+        </scope>
+        <scope ilk="function" line="117" lineend="118" name="__enter__" returns="FTP" signature="__enter__(self)">
+          <variable citdl="FTP" ilk="argument" name="self" />
+        </scope>
+        <scope doc="# Internal: get a response from the server, which may&#xA;possibly # consist of multiple lines." ilk="function" line="205" lineend="215" name="getmultiline" returns="str" signature="getmultiline(self)">
+          <variable citdl="getline()" line="210" name="nextline" />
+          <variable citdl="FTP" ilk="argument" name="self" />
+          <variable citdl="list" line="208" name="code" />
+          <variable citdl="getline()" line="206" name="line" />
+        </scope>
+        <scope doc="Create a new socket and send a PORT command for it." ilk="function" line="285" lineend="311" name="makeport" returns="socket.socket()" signature="makeport(self)">
+          <variable line="304" name="host" />
+          <variable citdl="str" line="287" name="msg" />
+          <variable citdl="sendport()" line="306" name="resp" />
+          <variable citdl="socket.socket()" line="288" name="sock" />
+          <variable citdl="FTP" ilk="argument" name="self" />
+          <variable line="303" name="port" />
+        </scope>
+        <scope doc="# Internal: send one line to the server, appending CRLF" ilk="function" line="180" lineend="183" name="putline" signature="putline(self, line)">
+          <variable citdl="FTP" ilk="argument" name="self" />
+          <variable citdl="str" ilk="argument" name="line" />
+        </scope>
+        <scope doc="Return a list of files in a given directory (default the&#xA;current)." ilk="function" line="506" lineend="513" name="nlst" returns="list" signature="nlst(self, *args)">
+          <variable citdl="list" line="511" name="files" />
+          <variable citdl="FTP" ilk="argument" name="self" />
+          <variable citdl="str" line="508" name="cmd" />
+          <variable attributes="varargs" ilk="argument" name="args" />
+        </scope>
+        <scope doc="# Internal: &quot;sanitize&quot; a string for printing" ilk="function" line="171" lineend="177" name="sanitize" returns="repr()" signature="sanitize(self, s)">
+          <variable citdl="len()" line="173" name="i" />
+          <variable citdl="FTP" ilk="argument" name="self" />
+          <variable citdl="list" ilk="argument" name="s" />
+        </scope>
+        <scope doc="Store a file in binary mode. A new port is created for you." ilk="function" line="453" lineend="475" name="storbinary" returns="FTP.voidresp()" signature="storbinary(self, cmd, fp, blocksize=8192, callback=None, rest=None)">
+          <variable ilk="argument" name="fp" />
+          <variable ilk="argument" name="callback" />
+          <variable citdl="int" ilk="argument" name="blocksize" />
+          <variable citdl="FTP" ilk="argument" name="self" />
+          <variable ilk="argument" name="cmd" />
+          <variable citdl="fp.read()" line="471" name="buf" />
+          <variable ilk="argument" name="rest" />
+        </scope>
+        <scope doc="Change to a directory." ilk="function" line="545" lineend="556" name="cwd" returns="FTP.voidcmd()" signature="cwd(self, dirname)">
+          <variable citdl="FTP" ilk="argument" name="self" />
+          <variable citdl="str" line="555" name="cmd" />
+          <variable citdl="str" ilk="argument" name="dirname" />
+        </scope>
+        <scope doc="Send a command and expect a response beginning with &apos;2&apos;." ilk="function" line="257" lineend="260" name="voidcmd" returns="FTP.voidresp()" signature="voidcmd(self, cmd)">
+          <variable citdl="FTP" ilk="argument" name="self" />
+          <variable ilk="argument" name="cmd" />
+        </scope>
+        <scope doc="# Context management protocol: try to quit() if active" ilk="function" line="121" lineend="129" name="__exit__" signature="__exit__(self, *args)">
+          <variable citdl="FTP" ilk="argument" name="self" />
+          <variable attributes="varargs" ilk="argument" name="args" />
+        </scope>
+        <scope doc="Send a PORT command with the current host and the given port&#xA;number." ilk="function" line="262" lineend="270" name="sendport" returns="FTP.voidcmd()" signature="sendport(self, host, port)">
+          <variable ilk="argument" name="host" />
+          <variable citdl="host.split()" line="266" name="hbytes" />
+          <variable citdl="FTP" ilk="argument" name="self" />
+          <variable citdl="str.join()" line="269" name="cmd" />
+          <variable citdl="list" line="268" name="bytes" />
+          <variable ilk="argument" name="port" />
+          <variable citdl="list" line="267" name="pbytes" />
+        </scope>
+        <scope doc="# Internal: send one command to the server (through&#xA;putline())" ilk="function" line="186" lineend="188" name="putcmd" signature="putcmd(self, line)">
+          <variable citdl="FTP" ilk="argument" name="self" />
+          <variable ilk="argument" name="line" />
+        </scope>
+        <scope doc="Expect a response beginning with &apos;2&apos;." ilk="function" line="232" lineend="237" name="voidresp" returns="getresp()" signature="voidresp(self)">
+          <variable citdl="FTP" ilk="argument" name="self" />
+          <variable citdl="getresp()" line="234" name="resp" />
+        </scope>
+        <scope doc="Retrieve data in line mode. A new port is created for you." ilk="function" line="425" lineend="451" name="retrlines" returns="FTP.voidresp()" signature="retrlines(self, cmd, callback=None)">
+          <variable citdl="print_line" ilk="argument" name="callback" />
+          <variable citdl="FTP" ilk="argument" name="self" />
+          <variable ilk="argument" name="cmd" />
+          <variable citdl="list" line="442" name="line" />
+          <variable citdl="sendcmd()" line="438" name="resp" />
+        </scope>
+        <scope doc="Initiate a transfer over the data connection." ilk="function" line="320" lineend="375" name="ntransfercmd" returns="tuple" signature="ntransfercmd(self, cmd, rest=None)">
+          <variable line="367" name="sockaddr" />
+          <variable citdl="sendcmd()" line="342" name="resp" />
+          <variable ilk="argument" name="cmd" />
+          <variable citdl="makeport()" line="357" name="sock" />
+          <variable ilk="argument" name="rest" />
+          <variable line="337" name="port" />
+          <variable line="337" name="host" />
+          <variable citdl="FTP" ilk="argument" name="self" />
+          <variable citdl="socket.create_connection()" line="338" name="conn" />
+          <variable citdl="parse150()" line="335" name="size" />
+        </scope>
+        <scope doc="Return current working directory." ilk="function" line="582" lineend="589" name="pwd" returns="str" signature="pwd(self)">
+          <variable citdl="FTP" ilk="argument" name="self" />
+          <variable citdl="voidcmd()" line="584" name="resp" />
+        </scope>
+        <scope doc="Store a file in line mode. A new port is created for you." ilk="function" line="477" lineend="499" name="storlines" returns="FTP.voidresp()" signature="storlines(self, cmd, fp, callback=None)">
+          <variable ilk="argument" name="fp" />
+          <variable ilk="argument" name="callback" />
+          <variable citdl="FTP" ilk="argument" name="self" />
+          <variable ilk="argument" name="cmd" />
+          <variable citdl="list" line="492" name="buf" />
+        </scope>
+        <scope doc="# Internal: return one line from the server, stripping CRLF." ilk="function" line="192" lineend="199" name="getline" returns="list" signature="getline(self)">
+          <variable citdl="FTP" ilk="argument" name="self" />
+          <variable citdl="list" line="193" name="line" />
+        </scope>
+        <scope doc="Use passive or active mode for data transfers." ilk="function" line="164" lineend="168" name="set_pasv" signature="set_pasv(self, val)">
+          <variable citdl="FTP" ilk="argument" name="self" />
+          <variable ilk="argument" name="val" />
+        </scope>
+        <scope doc="Set the debugging level." ilk="function" line="162" name="debug" signature="debug(self, level)" />
+        <scope doc="Login, default anonymous." ilk="function" line="381" lineend="400" name="login" returns="sendcmd()" signature="login(self, user=&apos;&apos;, passwd=&apos;&apos;, acct=&apos;&apos;)">
+          <variable citdl="str" ilk="argument" name="passwd" />
+          <variable citdl="str" ilk="argument" name="acct" />
+          <variable citdl="FTP" ilk="argument" name="self" />
+          <variable citdl="str" ilk="argument" name="user" />
+          <variable citdl="sendcmd()" line="395" name="resp" />
+        </scope>
+        <scope doc="Retrieve data in binary mode. A new port is created for you." ilk="function" line="402" lineend="423" name="retrbinary" returns="FTP.voidresp()" signature="retrbinary(self, cmd, callback, blocksize=8192, rest=None)">
+          <variable ilk="argument" name="callback" />
+          <variable citdl="int" ilk="argument" name="blocksize" />
+          <variable citdl="FTP" ilk="argument" name="self" />
+          <variable ilk="argument" name="cmd" />
+          <variable citdl="conn.recv()" line="419" name="data" />
+          <variable ilk="argument" name="rest" />
+        </scope>
+        <scope doc="# Internal: get a response from the server." ilk="function" line="219" lineend="230" name="getresp" returns="getmultiline()" signature="getresp(self)">
+          <variable citdl="list" line="223" name="c" />
+          <variable citdl="FTP" ilk="argument" name="self" />
+          <variable citdl="getmultiline()" line="220" name="resp" />
+        </scope>
+        <scope doc="List a directory in long form." ilk="function" line="515" lineend="528" name="dir" signature="dir(self, *args)">
+          <variable attributes="varargs" citdl="list" ilk="argument" name="args" />
+          <variable citdl="FTP" ilk="argument" name="self" />
+          <variable citdl="str" line="521" name="cmd" />
+          <variable line="522" name="func" />
+        </scope>
+        <scope doc="Delete a file." ilk="function" line="537" lineend="543" name="delete" returns="sendcmd()" signature="delete(self, filename)">
+          <variable citdl="FTP" ilk="argument" name="self" />
+          <variable citdl="sendcmd()" line="539" name="resp" />
+          <variable ilk="argument" name="filename" />
+        </scope>
+        <variable citdl="int" line="96" name="debugging" />
+        <variable attributes="__instancevar__" citdl="int" line="111" name="timeout" />
+        <variable attributes="__instancevar__" citdl="list" line="222" name="lastresp" />
+        <variable citdl="str" line="103" name="encoding" />
+        <variable citdl="self.getresp()" line="101" name="welcome" />
+        <variable citdl="socket.create_connection()" line="99" name="sock" />
+        <variable citdl="str" line="97" name="host" />
+        <variable attributes="__instancevar__" citdl="self.sock.family" line="143" name="af" />
+        <variable citdl="self.sock.makefile()" line="100" name="file" />
+        <variable citdl="int" line="102" name="passiveserver" />
+        <variable citdl="int" line="98" name="port" />
+      </scope>
+      <variable citdl="int" line="51" name="FTP_PORT" />
+      <scope classrefs="FTP" doc="A FTP subclass which adds TLS support to FTP as described&#xA;in RFC-4217.  Connect as usual to port 21 implicitly securing the FTP control connection before authenticating.  Securing the data connection requires user to explicitly ask for it by calling prot_p() method.  Usage example: &gt;&gt;&gt; from ftplib import FTP_TLS" ilk="class" line="610" lineend="798" name="FTP_TLS">
+        <scope doc="Set up secure data connection." ilk="function" line="682" lineend="696" name="prot_p" returns="self.voidcmd()" signature="prot_p(self)">
+          <variable citdl="FTP_TLS" ilk="argument" name="self" />
+          <variable citdl="self.voidcmd()" line="694" name="resp" />
+        </scope>
+        <scope ilk="function" line="732" lineend="754" name="retrlines" returns="self.voidresp()" signature="retrlines(self, cmd, callback=None)">
+          <variable citdl="conn.makefile()" line="736" name="fp" />
+          <variable citdl="print_line" ilk="argument" name="callback" />
+          <variable citdl="self.sendcmd()" line="734" name="resp" />
+          <variable ilk="argument" name="cmd" />
+          <variable citdl="list" line="739" name="line" />
+          <variable citdl="self.transfercmd()" line="735" name="conn" />
+          <variable citdl="FTP_TLS" ilk="argument" name="self" />
+        </scope>
+        <scope ilk="function" line="706" lineend="714" name="ntransfercmd" returns="tuple" signature="ntransfercmd(self, cmd, rest=None)">
+          <variable citdl="FTP_TLS" ilk="argument" name="self" />
+          <variable ilk="argument" name="cmd" />
+          <variable ilk="argument" name="rest" />
+          <variable citdl="self.context.wrap_socket()" line="707" name="conn" />
+          <variable line="707" name="size" />
+        </scope>
+        <scope doc="Set up clear text data connection." ilk="function" line="698" lineend="702" name="prot_c" returns="self.voidcmd()" signature="prot_c(self)">
+          <variable citdl="FTP_TLS" ilk="argument" name="self" />
+          <variable citdl="self.voidcmd()" line="700" name="resp" />
+        </scope>
+        <scope doc="Set up secure control connection by using TLS/SSL." ilk="function" line="665" lineend="680" name="auth" returns="self.voidcmd()" signature="auth(self)">
+          <variable citdl="FTP_TLS" ilk="argument" name="self" />
+          <variable citdl="self.voidcmd()" line="670" name="resp" />
+        </scope>
+        <scope ilk="function" line="791" lineend="798" name="abort" returns="self.getmultiline()" signature="abort(self)">
+          <variable citdl="FTP_TLS" ilk="argument" name="self" />
+          <variable citdl="str" line="793" name="line" />
+          <variable citdl="self.getmultiline()" line="795" name="resp" />
+        </scope>
+        <scope ilk="function" line="772" lineend="789" name="storlines" returns="self.voidresp()" signature="storlines(self, cmd, fp, callback=None)">
+          <variable ilk="argument" name="fp" />
+          <variable ilk="argument" name="callback" />
+          <variable citdl="FTP_TLS" ilk="argument" name="self" />
+          <variable ilk="argument" name="cmd" />
+          <variable citdl="list" line="777" name="buf" />
+          <variable citdl="self.transfercmd()" line="774" name="conn" />
+        </scope>
+        <scope ilk="function" line="756" lineend="770" name="storbinary" returns="self.voidresp()" signature="storbinary(self, cmd, fp, blocksize=8192, callback=None, rest=None)">
+          <variable ilk="argument" name="fp" />
+          <variable citdl="int" ilk="argument" name="blocksize" />
+          <variable citdl="FTP_TLS" ilk="argument" name="self" />
+          <variable ilk="argument" name="cmd" />
+          <variable ilk="argument" name="rest" />
+          <variable ilk="argument" name="callback" />
+          <variable citdl="fp.read()" line="761" name="buf" />
+          <variable citdl="self.transfercmd()" line="758" name="conn" />
+        </scope>
+        <scope ilk="function" line="660" lineend="663" name="login" returns="FTP.login()" signature="login(self, user=&apos;&apos;, passwd=&apos;&apos;, acct=&apos;&apos;, secure=True)">
+          <variable citdl="str" ilk="argument" name="passwd" />
+          <variable citdl="str" ilk="argument" name="acct" />
+          <variable citdl="FTP_TLS" ilk="argument" name="self" />
+          <variable citdl="str" ilk="argument" name="user" />
+          <variable citdl="True" ilk="argument" name="secure" />
+        </scope>
+        <scope ilk="function" line="716" lineend="730" name="retrbinary" returns="self.voidresp()" signature="retrbinary(self, cmd, callback, blocksize=8192, rest=None)">
+          <variable ilk="argument" name="callback" />
+          <variable citdl="self.transfercmd()" line="718" name="conn" />
+          <variable citdl="int" ilk="argument" name="blocksize" />
+          <variable citdl="FTP_TLS" ilk="argument" name="self" />
+          <variable ilk="argument" name="cmd" />
+          <variable citdl="conn.recv()" line="721" name="data" />
+          <variable ilk="argument" name="rest" />
+        </scope>
+        <scope ilk="function" line="645" lineend="658" name="__init__" signature="__init__(self, host=&apos;&apos;, user=&apos;&apos;, passwd=&apos;&apos;, acct=&apos;&apos;, keyfile=None, certfile=None, context=None, timeout=&lt;object object at 0x02AC9038&gt;)">
+          <variable ilk="argument" name="certfile" />
+          <variable ilk="argument" name="context" />
+          <variable citdl="str" ilk="argument" name="passwd" />
+          <variable citdl="FTP_TLS" ilk="argument" name="self" />
+          <variable citdl="str" ilk="argument" name="host" />
+          <variable citdl="str" ilk="argument" name="user" />
+          <variable citdl="_GLOBAL_DEFAULT_TIMEOUT" ilk="argument" name="timeout" />
+          <variable citdl="str" ilk="argument" name="acct" />
+          <variable ilk="argument" name="keyfile" />
+        </scope>
+        <variable attributes="__instancevar__" line="655" name="certfile" />
+        <variable attributes="__instancevar__" line="656" name="context" />
+        <variable citdl="ssl.PROTOCOL_TLSv1" line="643" name="ssl_version" />
+        <variable attributes="__instancevar__" citdl="self.context.wrap_socket()" line="674" name="sock" />
+        <variable attributes="protected __instancevar__" citdl="True" line="657" name="_prot_p" />
+        <variable attributes="__instancevar__" citdl="self.sock.makefile()" line="679" name="file" />
+        <variable attributes="__instancevar__" line="654" name="keyfile" />
+      </scope>
+      <variable citdl="int" line="47" name="MSG_OOB" />
+      <scope classrefs="object" doc="Class to parse &amp; provide access to &apos;netrc&apos; format files.&#xA;See the netrc(4) man page for information on the file format.  WARNING: This class is obsolete -- use module netrc instead." ilk="class" line="919" lineend="1021" name="Netrc">
+        <scope doc="Return a sequence of lines which define a named macro." ilk="function" line="1019" lineend="1021" name="get_macro" signature="get_macro(self, macro)">
+          <variable ilk="argument" name="macro" />
+          <variable citdl="Netrc" ilk="argument" name="self" />
+        </scope>
+        <scope doc="Returns login information for the named host." ilk="function" line="999" lineend="1013" name="get_account" returns="tuple" signature="get_account(self, host)">
+          <variable line="1011" name="passwd" />
+          <variable line="1012" name="acct" />
+          <variable citdl="Netrc" ilk="argument" name="self" />
+          <variable citdl="host.lower()" ilk="argument" name="host" />
+          <variable line="1007" name="user" />
+        </scope>
+        <scope doc="Return a list of all defined macro names." ilk="function" line="1015" lineend="1017" name="get_macros" returns="self.__macros.keys()" signature="get_macros(self)">
+          <variable citdl="Netrc" ilk="argument" name="self" />
+        </scope>
+        <scope doc="Return a list of hosts mentioned in the .netrc file." ilk="function" line="995" lineend="997" name="get_hosts" returns="self.__hosts.keys()" signature="get_hosts(self)">
+          <variable citdl="Netrc" ilk="argument" name="self" />
+        </scope>
+        <scope ilk="function" line="931" lineend="993" name="__init__" signature="__init__(self, filename=None)">
+          <variable citdl="open()" line="940" name="fp" />
+          <variable citdl="int" line="941" name="in_macro" />
+          <variable citdl="line.split()" line="951" name="words" />
+          <variable citdl="opasswd" line="970" name="passwd" />
+          <variable citdl="w2.lower()" line="952" name="host" />
+          <variable citdl="list" line="977" name="macro_lines" />
+          <variable line="958" name="w2" />
+          <variable line="956" name="w1" />
+          <variable citdl="oacct" line="973" name="acct" />
+          <variable line="976" name="macro_name" />
+          <variable citdl="fp.readline()" line="943" name="line" />
+          <variable citdl="int" line="953" name="default" />
+          <variable citdl="Netrc" ilk="argument" name="self" />
+          <variable citdl="os.path.join()" ilk="argument" name="filename" />
+          <variable citdl="int" line="954" name="i" />
+          <variable citdl="ouser" line="967" name="user" />
+        </scope>
+        <variable attributes="private __instancevar__" citdl="dict" line="939" name="__macros" />
+        <variable attributes="private" line="928" name="__defpasswd" />
+        <variable attributes="private" line="929" name="__defacct" />
+        <variable attributes="private __instancevar__" citdl="dict" line="938" name="__hosts" />
+        <variable attributes="private" line="927" name="__defuser" />
+      </scope>
+      <variable citdl="list" line="44" name="__all__" />
+      <variable citdl="tuple" line="64" name="all_errors" />
+      <scope classrefs="Error" doc="&#xA;" ilk="class" line="58" lineend="58" name="error_perm" />
+      <scope classrefs="Error" doc="&#xA;" ilk="class" line="59" lineend="59" name="error_proto" />
+      <scope classrefs="Error" doc="&#xA;" ilk="class" line="56" lineend="56" name="error_reply" />
+      <scope classrefs="Error" doc="&#xA;" ilk="class" line="57" lineend="57" name="error_temp" />
+      <scope doc="Copy file from one FTP-instance to another." ilk="function" line="900" lineend="916" name="ftpcp" signature="ftpcp(source, sourcename, target, targetname=&apos;&apos;, type=&apos;I&apos;)">
+        <variable ilk="argument" name="target" />
+        <variable ilk="argument" name="sourcename" />
+        <variable citdl="str" ilk="argument" name="targetname" />
+        <variable citdl="target.sendcmd()" line="911" name="treply" />
+        <variable ilk="argument" name="source" />
+        <variable citdl="source.sendcmd()" line="913" name="sreply" />
+        <variable line="906" name="sourceport" />
+        <variable citdl="str" ilk="argument" name="type" />
+        <variable line="906" name="sourcehost" />
+      </scope>
+      <import module="os" />
+      <scope doc="Parse the &apos;150&apos; response for a RETR request." ilk="function" line="806" lineend="825" name="parse150" returns="int()" signature="parse150(resp)">
+        <variable citdl="m.group()" line="821" name="s" />
+        <variable citdl="_150_re.match()" line="818" name="m" />
+        <variable ilk="argument" name="resp" />
+        <variable attributes="protected" citdl="re.compile()" line="816" name="_150_re" />
+      </scope>
+      <scope doc="Parse the &apos;227&apos; response for a PASV request." ilk="function" line="830" lineend="847" name="parse227" returns="tuple" signature="parse227(resp)">
+        <variable attributes="protected" citdl="re.compile()" line="840" name="_227_re" />
+        <variable citdl="str.join()" line="845" name="host" />
+        <variable citdl="m.groups()" line="844" name="numbers" />
+        <variable ilk="argument" name="resp" />
+        <variable citdl="_227_re.search()" line="841" name="m" />
+        <variable citdl="int()" line="846" name="port" />
+      </scope>
+      <scope doc="Parse the &apos;229&apos; response for a EPSV request." ilk="function" line="850" lineend="869" name="parse229" returns="tuple" signature="parse229(resp, peer)">
+        <variable line="867" name="host" />
+        <variable citdl="resp.find()" line="859" name="right" />
+        <variable ilk="argument" name="peer" />
+        <variable ilk="argument" name="resp" />
+        <variable citdl="resp.find()" line="857" name="left" />
+        <variable line="864" name="parts" />
+        <variable citdl="int()" line="868" name="port" />
+      </scope>
+      <scope doc="Parse the &apos;257&apos; response for a MKD or PWD request." ilk="function" line="872" lineend="892" name="parse257" returns="str" signature="parse257(resp)">
+        <variable citdl="int" line="882" name="i" />
+        <variable ilk="argument" name="resp" />
+        <variable citdl="str" line="881" name="dirname" />
+        <variable line="885" name="c" />
+        <variable citdl="len()" line="883" name="n" />
+      </scope>
+      <scope doc="Default retrlines callback to print a line." ilk="function" line="895" lineend="897" name="print_line" signature="print_line(line)">
+        <variable ilk="argument" name="line" />
+      </scope>
+      <import module="socket" />
+      <import module="ssl" />
+      <import module="sys" />
+      <scope doc="Test program." ilk="function" line="1025" lineend="1077" name="test" signature="test()">
+        <variable citdl="int" line="1038" name="debugging" />
+        <variable citdl="FTP" line="1048" name="ftp" />
+        <variable line="1059" name="passwd" />
+        <variable citdl="ftp.sendcmd()" line="1071" name="resp" />
+        <variable citdl="str" line="1069" name="cmd" />
+        <variable citdl="str" line="1050" name="userid" />
+        <variable citdl="Netrc" line="1052" name="netrc" />
+        <variable line="1047" name="host" />
+        <variable line="1059" name="acct" />
+        <variable citdl="list" line="1039" name="rcfile" />
+      </scope>
+      <variable attributes="protected __hidden__" line="828" name="_227_re" />
+      <variable attributes="protected __hidden__" line="804" name="_150_re" />
+    </scope>
+    

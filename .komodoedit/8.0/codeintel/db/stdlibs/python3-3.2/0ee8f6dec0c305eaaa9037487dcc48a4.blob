@@ -1,0 +1,182 @@
+<scope doc="distutils.command.install&#xA;Implements the Distutils &apos;install&apos; command." ilk="blob" lang="Python" name="distutils.command.install">
+      <scope classrefs="object" doc="Abstract base class for defining command classes, the &quot;worker bees&quot;&#xA;of the Distutils.  A useful analogy for command classes is to think of them as subroutines with local variables called &quot;options&quot;.  The options are &quot;declared&quot; in &apos;initialize_options()&apos; and &quot;defined&quot; (given their final values, aka &quot;finalized&quot;) in &apos;finalize_options()&apos;, both of which must be defined by every command class.  The distinction between the two is necessary because option values might come from the outside world (command line, config file, ...), and any options dependent on other options must be computed *after* these outside influences have been processed -- hence &apos;finalize_options()&apos;.  The &quot;body&quot; of the subroutine, where it does all its work based on the values of its" ilk="class" name="Command">
+        <scope ilk="function" name="_ensure_tested_string" signature="_ensure_tested_string(self, option, tester, what, error_fmt, default=None)" />
+        <scope doc="Spawn an external command respecting dry-run flag." ilk="function" name="spawn" signature="spawn(self, cmd, search_path=1, level=1)" />
+        <scope ilk="function" name="ensure_finalized" signature="ensure_finalized(self)" />
+        <scope doc="Create and initialize a new Command object." ilk="function" name="__init__" signature="__init__(self, dist)" />
+        <scope doc="Set default values for all the options that this command&#xA;supports." ilk="function" name="initialize_options" signature="initialize_options(self)" />
+        <scope ilk="function" name="dump_options" signature="dump_options(self, header=None, indent=&apos;&apos;)" />
+        <scope doc="# XXX A more explicit way to customize dry_run would be&#xA;better." ilk="function" name="__getattr__" signature="__getattr__(self, attr)" />
+        <scope doc="Determine the sub-commands that are relevant in the current&#xA;distribution (ie., that need to be run)." ilk="function" name="get_sub_commands" signature="get_sub_commands(self)" />
+        <scope doc="Copy an entire directory tree respecting verbose, dry-run,&#xA;and force flags." ilk="function" name="copy_tree" signature="copy_tree(self, infile, outfile, preserve_mode=1, preserve_times=1, preserve_symlinks=0, level=1)" />
+        <scope doc="If the current verbosity level is of greater than or equal&#xA;to &apos;level&apos; print &apos;msg&apos; to stdout." ilk="function" name="announce" signature="announce(self, msg, level=1)" />
+        <scope doc="Run some other command: uses the &apos;run_command()&apos; method of&#xA;Distribution, which creates and finalizes the command object&#xA;if necessary and then invokes its &apos;run()&apos; method." ilk="function" name="run_command" signature="run_command(self, command)" />
+        <scope doc="Set the values of any &quot;undefined&quot; options from corresponding&#xA;option values in some other command object." ilk="function" name="set_undefined_options" signature="set_undefined_options(self, src_cmd, *option_pairs)" />
+        <scope doc="A command&apos;s raison d&apos;etre: carry out the action it exists to&#xA;perform, controlled by the options initialized in&#xA;&apos;initialize_options()&apos;, customized by other commands, the&#xA;setup script, the command-line, and config files, and&#xA;finalized in" ilk="function" name="run" signature="run(self)" />
+        <scope doc="# XXX rename to &apos;get_reinitialized_command()&apos;? (should do&#xA;the # same in dist.py, if so)" ilk="function" name="reinitialize_command" signature="reinitialize_command(self, command, reinit_subcommands=0)" />
+        <scope doc="Copy a file respecting verbose, dry-run and force flags." ilk="function" name="copy_file" signature="copy_file(self, infile, outfile, preserve_mode=1, preserve_times=1, link=None, level=1)" />
+        <scope ilk="function" name="warn" signature="warn(self, msg)" />
+        <scope ilk="function" name="ensure_dirname" signature="ensure_dirname(self, option)" />
+        <scope doc="Move a file respecting dry-run flag." ilk="function" name="move_file" signature="move_file(self, src, dst, level=1)" />
+        <scope doc="Ensure that &apos;option&apos; is a list of strings." ilk="function" name="ensure_string_list" signature="ensure_string_list(self, option)" />
+        <scope ilk="function" name="_ensure_stringlike" signature="_ensure_stringlike(self, option, what, default=None)" />
+        <scope doc="Wrapper around Distribution&apos;s &apos;get_command_obj()&apos; method:&#xA;find (create if necessary and &apos;create&apos; is true) the command&#xA;object for &apos;command&apos;, call its &apos;ensure_finalized()&apos; method,&#xA;and return the finalized command object." ilk="function" name="get_finalized_command" signature="get_finalized_command(self, command, create=1)" />
+        <scope ilk="function" name="execute" signature="execute(self, func, args, msg=None, level=1)" />
+        <scope doc="Ensure that &apos;option&apos; is a string; if not defined, set it to&#xA;&apos;default&apos;." ilk="function" name="ensure_string" signature="ensure_string(self, option, default=None)" />
+        <scope ilk="function" name="mkpath" signature="mkpath(self, name, mode=511)" />
+        <scope ilk="function" name="make_archive" signature="make_archive(self, base_name, format, root_dir=None, base_dir=None)" />
+        <scope ilk="function" name="get_command_name" signature="get_command_name(self)" />
+        <scope doc="Special case of &apos;execute()&apos; for operations that process one&#xA;or more input files and generate one output file." ilk="function" name="make_file" signature="make_file(self, infiles, outfile, func, args, exec_msg=None, skip_msg=None, level=1)" />
+        <scope doc="Set final values for all the options that this command&#xA;supports." ilk="function" name="finalize_options" signature="finalize_options(self)" />
+        <scope doc="Ensure that &apos;option&apos; is the name of an existing file." ilk="function" name="ensure_filename" signature="ensure_filename(self, option)" />
+        <scope doc="Print &apos;msg&apos; to stdout if the global DEBUG (taken from the&#xA;DISTUTILS_DEBUG environment variable) flag is true." ilk="function" name="debug_print" signature="debug_print(self, msg)" />
+      </scope>
+      <variable citdl="NoneType" name="DEBUG" />
+      <scope classrefs="DistutilsError" doc="Syntactic/semantic errors in command options, such as use of&#xA;mutually conflicting options, or inconsistent options, badly-spelled values, etc.  No distinction is made between option values originating in the setup script, the command line, config files, or what-have-you -- but if we *know* something originated in the setup script, we&apos;ll raise DistutilsSetupError instead." ilk="class" name="DistutilsOptionError" />
+      <scope classrefs="DistutilsError" doc="We don&apos;t know how to do something on the current platform (but&#xA;we do know how to do it on some platform) -- eg. trying to compile C files on a platform not supported by a CCompiler subclass." ilk="class" name="DistutilsPlatformError" />
+      <variable citdl="bool" line="22" name="HAS_USER_SITE" />
+      <variable citdl="dict" line="45" name="INSTALL_SCHEMES" />
+      <variable citdl="tuple" line="100" name="SCHEME_KEYS" />
+      <variable citdl="str" line="20" name="USER_BASE" />
+      <variable citdl="str" line="21" name="USER_SITE" />
+      <variable citdl="dict" line="29" name="WINDOWS_SCHEME" />
+      <scope doc="Return &apos;pathname&apos; with &apos;new_root&apos; prepended." ilk="function" name="change_root" signature="change_root(new_root, pathname)" />
+      <scope doc="Return &apos;pathname&apos; as a name that will work on the native&#xA;filesystem, i.e." ilk="function" name="convert_path" signature="convert_path(pathname)" />
+      <scope doc="With no arguments, return a dictionary of all configuration&#xA;variables relevant for the current platform." ilk="function" name="get_config_vars" signature="get_config_vars(*args)" />
+      <scope doc="Return a string that identifies the current platform." ilk="function" name="get_platform" signature="get_platform()" />
+      <scope classrefs="Command" doc="&#xA;" ilk="class" line="103" lineend="679" name="install">
+        <scope doc="Runs the command." ilk="function" line="565" lineend="607" name="run" signature="run(self)">
+          <variable citdl="map()" line="598" name="sys_path" />
+          <variable citdl="self.get_outputs()" line="588" name="outputs" />
+          <variable citdl="install" ilk="argument" name="self" />
+          <variable citdl="len()" line="590" name="root_len" />
+          <variable citdl="os.path.normcase()" line="600" name="install_lib" />
+          <variable line="571" name="build_plat" />
+        </scope>
+        <scope doc="Returns the inputs of all the sub-commands" ilk="function" line="640" lineend="648" name="get_inputs" returns="list" signature="get_inputs(self)">
+          <variable citdl="list" line="643" name="inputs" />
+          <variable citdl="install" ilk="argument" name="self" />
+          <variable citdl="self.get_finalized_command()" line="645" name="cmd" />
+        </scope>
+        <scope doc="Finalizes options for non-posix platforms" ilk="function" line="460" lineend="480" name="finalize_other" signature="finalize_other(self)">
+          <variable citdl="install" ilk="argument" name="self" />
+        </scope>
+        <scope doc="Change the install direcories pointed by name using root." ilk="function" line="547" lineend="551" name="change_roots" signature="change_roots(self, *names)">
+          <variable citdl="install" ilk="argument" name="self" />
+          <variable attributes="varargs" ilk="argument" name="names" />
+          <variable citdl="name" line="550" name="attr" />
+        </scope>
+        <scope doc="Returns true if the current distribution has any scripts to." ilk="function" line="663" lineend="666" name="has_scripts" returns="self.distribution.has_scripts()" signature="has_scripts(self)">
+          <variable citdl="install" ilk="argument" name="self" />
+        </scope>
+        <scope doc="Calls `os.path.expanduser` on install_base, install_platbase&#xA;and root." ilk="function" line="500" lineend="503" name="expand_basedirs" signature="expand_basedirs(self)">
+          <variable citdl="install" ilk="argument" name="self" />
+        </scope>
+        <scope doc="Call `convert_path` over `names`." ilk="function" line="511" lineend="515" name="convert_paths" signature="convert_paths(self, *names)">
+          <variable citdl="install" ilk="argument" name="self" />
+          <variable attributes="varargs" ilk="argument" name="names" />
+          <variable citdl="name" line="514" name="attr" />
+        </scope>
+        <scope doc="Set `path_file` and `extra_dirs` using `extra_path`." ilk="function" line="517" lineend="545" name="handle_extra_path" signature="handle_extra_path(self)">
+          <variable citdl="install" ilk="argument" name="self" />
+          <variable citdl="str" line="537" name="extra_dirs" />
+          <variable line="527" name="path_file" />
+        </scope>
+        <scope doc="Creates the .pth file" ilk="function" line="609" lineend="618" name="create_path_file" signature="create_path_file(self)">
+          <variable citdl="install" ilk="argument" name="self" />
+          <variable citdl="os.path.join()" line="611" name="filename" />
+        </scope>
+        <scope doc="Dumps the list of user options." ilk="function" line="401" lineend="418" name="dump_dirs" signature="dump_dirs(self, msg)">
+          <variable ilk="argument" name="msg" />
+          <variable citdl="install" ilk="argument" name="self" />
+          <variable citdl="opt_name.translate()" line="408" name="opt_name" />
+          <variable citdl="bool" line="414" name="val" />
+        </scope>
+        <scope doc="Initializes options." ilk="function" line="176" lineend="244" name="initialize_options" signature="initialize_options(self)">
+          <variable citdl="install" ilk="argument" name="self" />
+        </scope>
+        <scope doc="Returns true if the current distribution has any headers to&#xA;install." ilk="function" line="658" lineend="661" name="has_headers" returns="self.distribution.has_headers()" signature="has_headers(self)">
+          <variable citdl="install" ilk="argument" name="self" />
+        </scope>
+        <scope doc="Sets the install directories by applying the install&#xA;schemes." ilk="function" line="482" lineend="489" name="select_scheme" signature="select_scheme(self, name)">
+          <variable citdl="key" line="487" name="attrname" />
+          <variable citdl="install" ilk="argument" name="self" />
+          <variable line="485" name="scheme" />
+          <variable ilk="argument" name="name" />
+        </scope>
+        <scope ilk="function" line="491" lineend="498" name="_expand_attrs" signature="_expand_attrs(self, attrs)">
+          <variable citdl="install" ilk="argument" name="self" />
+          <variable ilk="argument" name="attrs" />
+          <variable citdl="getattr()" line="493" name="val" />
+        </scope>
+        <scope doc="Create directories under ~." ilk="function" line="553" lineend="561" name="create_home_path" signature="create_home_path(self)">
+          <variable citdl="convert_path()" line="557" name="home" />
+          <variable citdl="install" ilk="argument" name="self" />
+        </scope>
+        <scope doc="Returns true if the current distribution has any Python&#xA;modules to install." ilk="function" line="652" lineend="656" name="has_lib" returns="self.distribution.has_pure_modules()" signature="has_lib(self)">
+          <variable citdl="install" ilk="argument" name="self" />
+        </scope>
+        <scope doc="Assembles the outputs of all the sub-commands." ilk="function" line="623" lineend="638" name="get_outputs" returns="list" signature="get_outputs(self)">
+          <variable citdl="list" line="625" name="outputs" />
+          <variable citdl="install" ilk="argument" name="self" />
+          <variable citdl="self.get_finalized_command()" line="627" name="cmd" />
+        </scope>
+        <scope doc="Finalizes options." ilk="function" line="253" lineend="396" name="finalize_options" signature="finalize_options(self)">
+          <variable line="313" name="exec_prefix" />
+          <variable citdl="install" ilk="argument" name="self" />
+          <variable citdl="sys.abiflags" line="315" name="abiflags" />
+          <variable line="313" name="prefix" />
+          <variable line="312" name="py_version" />
+        </scope>
+        <scope doc="Returns true if the current distribution has any data to." ilk="function" line="668" lineend="671" name="has_data" returns="self.distribution.has_data_files()" signature="has_data(self)">
+          <variable citdl="install" ilk="argument" name="self" />
+        </scope>
+        <scope doc="Calls `os.path.expanduser` on install dirs." ilk="function" line="505" lineend="509" name="expand_dirs" signature="expand_dirs(self)">
+          <variable citdl="install" ilk="argument" name="self" />
+        </scope>
+        <scope doc="Finalizes options for posix platforms." ilk="function" line="420" lineend="458" name="finalize_unix" signature="finalize_unix(self)">
+          <variable citdl="install" ilk="argument" name="self" />
+        </scope>
+        <variable attributes="__instancevar__" citdl="int" line="225" name="force" />
+        <variable attributes="__instancevar__" citdl="int" line="217" name="install_path_file" />
+        <variable citdl="list" line="675" name="sub_commands" />
+        <variable attributes="__instancevar__" citdl="int" line="227" name="warn_dir" />
+        <variable attributes="__instancevar__" citdl="os.path.normpath()" line="180" name="prefix" />
+        <variable attributes="__instancevar__" line="544" name="path_file" />
+        <variable attributes="__instancevar__" citdl="self.distribution.extra_path" line="216" name="extra_path" />
+        <variable attributes="__instancevar__" line="182" name="home" />
+        <variable citdl="dict" line="173" name="negative_opt" />
+        <variable attributes="__instancevar__" citdl="dict" line="319" name="config_vars" />
+        <variable citdl="list" line="107" name="user_options" />
+        <variable attributes="__instancevar__" citdl="convert_path()" line="545" name="extra_dirs" />
+        <variable attributes="__instancevar__" citdl="os.path.normpath()" line="181" name="exec_prefix" />
+        <variable attributes="__instancevar__" line="198" name="install_headers" />
+        <variable attributes="__instancevar__" line="202" name="install_userbase" />
+        <variable attributes="__instancevar__" line="200" name="install_scripts" />
+        <variable attributes="__instancevar__" line="203" name="install_usersite" />
+        <variable citdl="str" line="105" name="description" />
+        <variable attributes="__instancevar__" citdl="os.path.normpath()" line="189" name="install_platbase" />
+        <variable attributes="__instancevar__" line="196" name="install_purelib" />
+        <variable attributes="__instancevar__" citdl="int" line="226" name="skip_build" />
+        <variable citdl="list" line="166" name="boolean_options" />
+        <variable attributes="__instancevar__" citdl="int" line="183" name="user" />
+        <variable attributes="__instancevar__" citdl="os.path.normpath()" line="188" name="install_base" />
+        <variable attributes="__instancevar__" line="206" name="optimize" />
+        <variable attributes="__instancevar__" line="382" name="install_libbase" />
+        <variable attributes="__instancevar__" line="201" name="install_data" />
+        <variable attributes="__instancevar__" line="235" name="build_base" />
+        <variable attributes="__instancevar__" line="197" name="install_platlib" />
+        <variable attributes="__instancevar__" line="205" name="compile" />
+        <variable attributes="__instancevar__" line="244" name="record" />
+        <variable attributes="__instancevar__" citdl="os.path.join()" line="199" name="install_lib" />
+        <variable attributes="__instancevar__" line="190" name="root" />
+        <variable attributes="__instancevar__" line="236" name="build_lib" />
+      </scope>
+      <import module="log" />
+      <import module="os" />
+      <scope doc="Perform shell/Perl-style variable substitution on &apos;string&apos;." ilk="function" name="subst_vars" signature="subst_vars(s, local_vars)" />
+      <import module="sys" />
+      <scope doc="Create a file with the specified name and write &apos;contents&apos;&#xA;(a sequence of strings without line terminators) to it." ilk="function" name="write_file" signature="write_file(filename, contents)" />
+      <variable citdl="str" line="5" name="__revision__" />
+    </scope>
+    

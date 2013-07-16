@@ -1,0 +1,79 @@
+<scope doc="A generally useful event scheduler class.&#xA;Each instance of this class manages its own queue. No multi-threading is implied; you are supposed to hack that yourself, or use a single instance per application.  Each instance is parametrized with two functions, one that is supposed to return the current time, one that is supposed to implement a delay.  You can implement real-time scheduling by substituting time and sleep from built-in module time, or you can implement simulated time by writing your own functions.  This can also be used to integrate scheduling with STDWIN events; the delay" ilk="blob" lang="Python" name="sched">
+      <scope classrefs="Event" doc="&#xA;" ilk="class" line="36" lineend="42" name="Event">
+        <scope ilk="function" line="38" lineend="38" name="__ne__" returns="bool" signature="__ne__(s, o)">
+          <variable citdl="Event" ilk="argument" name="s" />
+          <variable ilk="argument" name="o" />
+        </scope>
+        <scope ilk="function" line="40" lineend="40" name="__le__" returns="bool" signature="__le__(s, o)">
+          <variable citdl="Event" ilk="argument" name="s" />
+          <variable ilk="argument" name="o" />
+        </scope>
+        <scope ilk="function" line="41" lineend="41" name="__gt__" returns="bool" signature="__gt__(s, o)">
+          <variable citdl="Event" ilk="argument" name="s" />
+          <variable ilk="argument" name="o" />
+        </scope>
+        <scope ilk="function" line="39" lineend="39" name="__lt__" returns="bool" signature="__lt__(s, o)">
+          <variable citdl="Event" ilk="argument" name="s" />
+          <variable ilk="argument" name="o" />
+        </scope>
+        <scope ilk="function" line="37" lineend="37" name="__eq__" returns="bool" signature="__eq__(s, o)">
+          <variable citdl="Event" ilk="argument" name="s" />
+          <variable ilk="argument" name="o" />
+        </scope>
+        <scope ilk="function" line="42" lineend="42" name="__ge__" returns="bool" signature="__ge__(s, o)">
+          <variable citdl="Event" ilk="argument" name="s" />
+          <variable ilk="argument" name="o" />
+        </scope>
+      </scope>
+      <variable citdl="list" line="34" name="__all__" />
+      <import module="heapq" />
+      <scope doc="Returns a new subclass of tuple with named fields." ilk="function" name="namedtuple" signature="namedtuple(typename, field_names, verbose=False, rename=False)" />
+      <scope classrefs="object" doc="&#xA;" ilk="class" line="44" lineend="140" name="scheduler">
+        <scope doc="Execute events until the queue is empty." ilk="function" line="86" lineend="126" name="run" signature="run(self)">
+          <variable citdl="list" line="109" name="q" />
+          <variable line="110" name="delayfunc" />
+          <variable line="111" name="timefunc" />
+          <variable citdl="scheduler" ilk="argument" name="self" />
+          <variable citdl="timefunc()" line="115" name="now" />
+          <variable citdl="pop()" line="119" name="event" />
+          <variable citdl="heapq.heappop" line="112" name="pop" />
+        </scope>
+        <scope doc="Enter a new event in the queue at an absolute time." ilk="function" line="52" lineend="61" name="enterabs" returns="Event" signature="enterabs(self, time, priority, action, argument)">
+          <variable ilk="argument" name="priority" />
+          <variable ilk="argument" name="time" />
+          <variable ilk="argument" name="action" />
+          <variable citdl="scheduler" ilk="argument" name="self" />
+          <variable ilk="argument" name="argument" />
+          <variable citdl="Event" line="59" name="event" />
+        </scope>
+        <scope doc="Check whether the queue is empty." ilk="function" line="82" lineend="84" name="empty" returns="bool" signature="empty(self)">
+          <variable citdl="scheduler" ilk="argument" name="self" />
+        </scope>
+        <scope doc="A variant that specifies the time as a relative time." ilk="function" line="63" lineend="70" name="enter" returns="scheduler.enterabs()" signature="enter(self, delay, priority, action, argument)">
+          <variable ilk="argument" name="delay" />
+          <variable ilk="argument" name="priority" />
+          <variable citdl="scheduler.timefunc()" line="69" name="time" />
+          <variable ilk="argument" name="action" />
+          <variable citdl="scheduler" ilk="argument" name="self" />
+          <variable ilk="argument" name="argument" />
+        </scope>
+        <scope doc="Remove an event from the queue." ilk="function" line="72" lineend="80" name="cancel" signature="cancel(self, event)">
+          <variable citdl="scheduler" ilk="argument" name="self" />
+          <variable ilk="argument" name="event" />
+        </scope>
+        <scope doc="Initialize a new instance, passing the time and delay&#xA;functions" ilk="function" line="45" lineend="50" name="__init__" signature="__init__(self, timefunc, delayfunc)">
+          <variable ilk="argument" name="timefunc" />
+          <variable citdl="scheduler" ilk="argument" name="self" />
+          <variable ilk="argument" name="delayfunc" />
+        </scope>
+        <variable attributes="property" citdl="map()" line="129" name="queue" />
+        <variable attributes="__instancevar__" line="49" name="timefunc" />
+        <variable attributes="__instancevar__" line="50" name="delayfunc" />
+        <variable attributes="protected __instancevar__" citdl="list" line="48" name="_queue" />
+        <scope attributes="__hidden__" doc="An ordered list of upcoming events.&#xA;&#xA;Events are named tuples with fields for:&#xA;    time, priority, action, arguments&#xA;" ilk="function" line="129" lineend="140" name="queue (property getter)" returns="map()" signature="queue (property getter)()">
+          <variable citdl="scheduler" ilk="argument" name="self" />
+          <variable citdl="list" line="139" name="events" />
+        </scope>
+      </scope>
+    </scope>
+    

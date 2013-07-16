@@ -1,0 +1,12 @@
+<scope doc="# Mimic the sqlite3 console shell&apos;s .dump command&#xA;# Author: Paul Kippes &lt;kippesp@gmail.com&gt;" ilk="blob" lang="Python" name="sqlite3.dump">
+      <scope attributes="protected __hidden__" doc="Returns an iterator to the dump of the database in an SQL text format.&#xA;&#xA;Used to produce an SQL dump of the database.  Useful to save an in-memory&#xA;database for later restoration.  This function should not be called&#xA;directly but instead called from the Connection method, iterdump()." ilk="function" line="4" lineend="63" name="_iterdump" signature="_iterdump(connection)">
+        <variable ilk="argument" name="connection" />
+        <variable citdl="connection.cursor()" line="13" name="cu" />
+        <variable citdl="str" line="17" name="q" />
+        <variable citdl="cu.execute()" line="23" name="schema_res" />
+        <variable citdl="cu.execute()" line="43" name="res" />
+        <variable citdl="list" line="44" name="column_names" />
+        <variable citdl="cu.execute()" line="48" name="query_res" />
+      </scope>
+    </scope>
+    

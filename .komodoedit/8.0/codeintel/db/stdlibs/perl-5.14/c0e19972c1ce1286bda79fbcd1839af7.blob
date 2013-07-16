@@ -1,0 +1,37 @@
+<scope ilk="blob" lang="Perl" name="SQL::Statement::Term">
+      <scope ilk="class" line="1" lineend="71" name="SQL::Statement::Term">
+        <import line="8" module="Scalar::Util" symbol="weaken" />
+        <import line="9" module="Carp" />
+        <variable line="6" name="$VERSION" />
+        <scope attributes="__ctor__" ilk="function" line="50" lineend="59" name="new" signature="new()">
+          </scope>
+        <scope ilk="function" line="61" lineend="65" name="DESTROY" signature="DESTROY()">
+          </scope>
+        <scope ilk="function" line="67" lineend="71" name="value" signature="value()" />
+      </scope>
+      <scope classrefs="SQL::Statement::Term" ilk="class" line="73" lineend="124" name="SQL::Statement::ConstantTerm">
+        <variable line="75" name="@ISA" />
+        <scope ilk="function" line="114" lineend="122" name="new" signature="new($class, $owner, $value)">
+          <variable ilk="argument" name="$class" />
+          <variable ilk="argument" name="$owner" />
+          <variable ilk="argument" name="$value" />
+        </scope>
+        <scope ilk="function" line="124" lineend="124" name="value" signature="value()" />
+      </scope>
+      <scope classrefs="SQL::Statement::Term" ilk="class" line="126" lineend="228" name="SQL::Statement::ColumnValue">
+        <import line="131" module="Carp" symbol="croak" />
+        <import line="132" module="Params::Util" symbol="_INSTANCE" />
+        <import line="132" module="Params::Util" symbol="_ARRAY0" />
+        <import line="132" module="Params::Util" symbol="_SCALAR" />
+        <import line="133" module="Scalar::Util" symbol="looks_like_number" />
+        <variable line="128" name="@ISA" />
+        <scope ilk="function" line="172" lineend="180" name="new" signature="new($class, $owner, $value)">
+          <variable ilk="argument" name="$class" />
+          <variable ilk="argument" name="$owner" />
+          <variable ilk="argument" name="$value" />
+        </scope>
+        <scope ilk="function" line="182" lineend="214" name="value" signature="value()">
+          </scope>
+      </scope>
+    </scope>
+    

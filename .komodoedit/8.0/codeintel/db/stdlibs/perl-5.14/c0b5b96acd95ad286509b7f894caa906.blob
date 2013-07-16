@@ -1,0 +1,80 @@
+<scope ilk="blob" lang="Perl" name="Perl::Critic::Violation">
+      <scope ilk="class" line="8" lineend="328" name="Perl::Critic::Violation">
+        <import line="14" module="English" symbol="-no_match_vars" />
+        <import line="15" module="Readonly" symbol="*" />
+        <import line="17" module="File::Basename" symbol="basename" />
+        <import line="18" module="IO::String" />
+        <import line="19" module="Pod::PlainText" />
+        <import line="20" module="Scalar::Util" symbol="blessed" />
+        <import line="21" module="ActiveState::Handy" symbol="stringf" />
+        <import line="25" module="Perl::Critic::Utils" symbol="**" />
+        <import line="27" module="Perl::Critic::Utils::POD" symbol="get_pod_section_for_module" />
+        <import line="28" module="Perl::Critic::Utils::POD" symbol="trim_pod_section" />
+        <import line="30" module="Perl::Critic::Exception::Fatal::Internal" symbol="throw_internal" />
+        <variable line="32" name="$VERSION" />
+        <scope attributes="__ctor__" ilk="function" line="50" lineend="92" name="new" signature="new($class, $desc, $expl, $elem, $sev)">
+          <variable ilk="argument" name="$class" />
+          <variable ilk="argument" name="$desc" />
+          <variable ilk="argument" name="$expl" />
+          <variable ilk="argument" name="$elem" />
+          <variable ilk="argument" name="$sev" />
+        </scope>
+        <scope ilk="function" line="96" lineend="96" name="set_format" signature="set_format()" />
+        <scope ilk="function" line="97" lineend="97" name="get_format" signature="get_format()" />
+        <scope ilk="function" line="101" lineend="112" name="sort_by_location" signature="sort_by_location()" />
+        <scope ilk="function" line="116" lineend="127" name="sort_by_severity" signature="sort_by_severity()" />
+        <scope ilk="function" line="131" lineend="135" name="location" signature="location($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="139" lineend="143" name="line_number" signature="line_number($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="147" lineend="151" name="logical_line_number" signature="logical_line_number($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="155" lineend="159" name="column_number" signature="column_number($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="163" lineend="167" name="visual_column_number" signature="visual_column_number($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="171" lineend="186" name="diagnostics" signature="diagnostics($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="190" lineend="193" name="description" signature="description($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="197" lineend="209" name="explanation" signature="explanation($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="213" lineend="216" name="severity" signature="severity($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="220" lineend="223" name="policy" signature="policy($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="227" lineend="230" name="filename" signature="filename($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="234" lineend="238" name="logical_filename" signature="logical_filename($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="242" lineend="245" name="source" signature="source($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="249" lineend="253" name="element_class" signature="element_class($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="257" lineend="282" name="to_string" signature="to_string($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="296" lineend="296" name="_compare" signature="_compare()" />
+        <scope ilk="function" line="300" lineend="309" name="_first_line_of_source" signature="_first_line_of_source($elem)">
+          <variable ilk="argument" name="$elem" />
+        </scope>
+        <scope ilk="function" line="313" lineend="322" name="_chomp_periods" signature="_chomp_periods(@args)">
+          <variable ilk="argument" name="@args" />
+        </scope>
+      </scope>
+    </scope>
+    

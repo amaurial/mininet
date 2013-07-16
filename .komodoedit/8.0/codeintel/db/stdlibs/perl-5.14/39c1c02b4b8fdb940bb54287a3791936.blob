@@ -1,0 +1,47 @@
+<scope ilk="blob" lang="Perl" name="Class::MOP::Package">
+      <scope ilk="class" line="2" lineend="268" name="Class::MOP::Package">
+        <import line="13" module="Scalar::Util" symbol="blessed" />
+        <import line="14" module="Carp" symbol="confess" />
+        <import line="15" module="Package::Stash" symbol="*" />
+        <variable line="4" name="$Class::MOP::Package::AUTHORITY" />
+        <variable line="7" name="$Class::MOP::Package::VERSION" />
+        <scope ilk="function" line="21" lineend="43" name="initialize" signature="initialize($class, @args)">
+          <variable ilk="argument" name="$class" />
+          <variable ilk="argument" name="@args" />
+        </scope>
+        <scope ilk="function" line="45" lineend="63" name="reinitialize" signature="reinitialize($class, @args)">
+          <variable ilk="argument" name="$class" />
+          <variable ilk="argument" name="@args" />
+        </scope>
+        <scope attributes="__ctor__" ilk="function" line="65" lineend="89" name="_new" signature="_new($class)">
+          <variable ilk="argument" name="$class" />
+        </scope>
+        <scope ilk="function" line="97" lineend="99" name="_package_stash" signature="_package_stash()" />
+        <scope ilk="function" line="100" lineend="102" name="namespace" signature="namespace()" />
+        <scope ilk="function" line="108" lineend="111" name="add_package_symbol" signature="add_package_symbol($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="113" lineend="116" name="remove_package_glob" signature="remove_package_glob($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="120" lineend="123" name="has_package_symbol" signature="has_package_symbol($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="125" lineend="128" name="get_package_symbol" signature="get_package_symbol($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="130" lineend="133" name="get_or_add_package_symbol" signature="get_or_add_package_symbol($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="135" lineend="138" name="remove_package_symbol" signature="remove_package_symbol($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="140" lineend="143" name="list_all_package_symbols" signature="list_all_package_symbols($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="145" lineend="148" name="get_all_package_symbols" signature="get_all_package_symbols($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+      </scope>
+    </scope>
+    

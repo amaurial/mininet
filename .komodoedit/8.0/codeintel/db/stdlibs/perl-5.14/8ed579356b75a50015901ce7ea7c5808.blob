@@ -1,0 +1,32 @@
+<scope ilk="blob" lang="Perl" name="Class::MOP::Method::Constructor">
+      <scope ilk="class" line="2" lineend="220" name="Class::MOP::Method::Constructor">
+        <import line="13" module="Carp" symbol="confess" />
+        <import line="14" module="Scalar::Util" symbol="blessed" />
+        <import line="15" module="Try::Tiny" symbol="*" />
+        <variable line="4" name="$Class::MOP::Method::Constructor::AUTHORITY" />
+        <variable line="7" name="$Class::MOP::Method::Constructor::VERSION" />
+        <scope ilk="function" line="19" lineend="40" name="new" signature="new($class, %options)">
+          <variable ilk="argument" name="$class" />
+          <variable ilk="argument" name="%options" />
+        </scope>
+        <scope attributes="__ctor__" ilk="function" line="42" lineend="69" name="_new" signature="_new($class)">
+          <variable ilk="argument" name="$class" />
+        </scope>
+        <scope ilk="function" line="73" lineend="73" name="options" signature="options()" />
+        <scope ilk="function" line="74" lineend="74" name="associated_metaclass" signature="associated_metaclass()" />
+        <scope ilk="function" line="78" lineend="84" name="_attributes" signature="_attributes($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="88" lineend="95" name="_initialize_body" signature="_initialize_body($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="97" lineend="103" name="_eval_environment" signature="_eval_environment($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="105" lineend="107" name="_generate_constructor_method" signature="_generate_constructor_method()" />
+        <scope ilk="function" line="109" lineend="124" name="_generate_constructor_method_inline" signature="_generate_constructor_method_inline($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+      </scope>
+    </scope>
+    

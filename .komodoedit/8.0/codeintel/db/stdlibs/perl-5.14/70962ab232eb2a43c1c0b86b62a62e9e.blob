@@ -1,0 +1,49 @@
+<scope ilk="blob" lang="Perl" name="Archive::Zip::ZipFileMember">
+      <scope classrefs="Archive::Zip::FileMember" ilk="class" line="1" lineend="416" name="Archive::Zip::ZipFileMember">
+        <import line="11" module="Archive::Zip" symbol="**" />
+        <variable line="4" name="$VERSION" />
+        <variable line="4" name="@ISA" />
+        <scope ilk="function" line="21" lineend="38" name="_newFromZipFile" signature="_newFromZipFile($class, $fh, $externalFileName, $possibleEocdOffset)">
+          <variable ilk="argument" name="$class" />
+          <variable ilk="argument" name="$fh" />
+          <variable ilk="argument" name="$externalFileName" />
+          <variable ilk="argument" name="$possibleEocdOffset" />
+        </scope>
+        <scope ilk="function" line="40" lineend="47" name="isDirectory" signature="isDirectory($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="54" lineend="90" name="_seekToLocalHeader" signature="_seekToLocalHeader($self, $where, $previousWhere)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$where" />
+          <variable ilk="argument" name="$previousWhere" />
+        </scope>
+        <scope ilk="function" line="97" lineend="118" name="_become" signature="_become($self, $newClass)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$newClass" />
+        </scope>
+        <scope ilk="function" line="120" lineend="122" name="diskNumberStart" signature="diskNumberStart()" />
+        <scope ilk="function" line="124" lineend="126" name="localHeaderRelativeOffset" signature="localHeaderRelativeOffset()" />
+        <scope ilk="function" line="128" lineend="130" name="dataOffset" signature="dataOffset()" />
+        <scope ilk="function" line="134" lineend="196" name="_skipLocalFileHeader" signature="_skipLocalFileHeader($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="203" lineend="262" name="_readLocalFileHeader" signature="_readLocalFileHeader($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="270" lineend="312" name="_readDataDescriptor" signature="_readDataDescriptor($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="317" lineend="376" name="_readCentralDirectoryFileHeader" signature="_readCentralDirectoryFileHeader($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="378" lineend="403" name="rewindData" signature="rewindData($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="408" lineend="414" name="_readRawChunk" signature="_readRawChunk($self, $dataRef, $chunkSize)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$dataRef" />
+          <variable ilk="argument" name="$chunkSize" />
+        </scope>
+      </scope>
+    </scope>
+    

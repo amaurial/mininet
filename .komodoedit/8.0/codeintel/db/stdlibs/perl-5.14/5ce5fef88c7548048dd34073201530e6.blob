@@ -1,0 +1,40 @@
+<scope ilk="blob" lang="Perl" name="Pod::Usage">
+      <scope classrefs="Pod::Text Pod::PlainText" ilk="class" line="10" lineend="730" name="Pod::Usage">
+        <import line="444" module="Carp" symbol="*" />
+        <import line="445" module="Config" symbol="*" />
+        <import line="446" module="Exporter" symbol="*" />
+        <import line="447" module="File::Spec" symbol="*" />
+        <import line="452" module="Pod::Text" />
+        <import line="456" module="Pod::PlainText" />
+        <import line="461" module="Pod::Select" />
+        <variable line="13" name="$VERSION" />
+        <variable line="13" name="@EXPORT" />
+        <variable line="13" name="@ISA" />
+        <scope attributes="__exported__" ilk="function" line="469" lineend="586" name="pod2usage" signature="pod2usage()">
+          </scope>
+        <scope attributes="__ctor__" ilk="function" line="594" lineend="607" name="new" signature="new($this, %params)">
+          <variable ilk="argument" name="$this" />
+          <variable ilk="argument" name="%params" />
+        </scope>
+        <scope ilk="function" line="609" lineend="635" name="select" signature="select($self, @sections)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="@sections" />
+        </scope>
+        <scope ilk="function" line="638" lineend="638" name="seq_i" signature="seq_i()" />
+        <scope ilk="function" line="643" lineend="693" name="_handle_element_end" signature="_handle_element_end($self, $element)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$element" />
+        </scope>
+        <scope ilk="function" line="696" lineend="699" name="start_document" signature="start_document($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="705" lineend="708" name="begin_pod" signature="begin_pod($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="713" lineend="728" name="preprocess_paragraph" signature="preprocess_paragraph($self, $line)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$line" />
+        </scope>
+      </scope>
+    </scope>
+    

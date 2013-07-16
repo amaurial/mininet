@@ -1,0 +1,36 @@
+<scope ilk="blob" lang="Perl" name="Net::SSLeay">
+      <scope classrefs="Exporter" ilk="class" line="60" lineend="729" name="Net::SSLeay">
+        <import line="63" module="Carp" symbol="*" />
+        <import line="65" module="Socket" symbol="*" />
+        <import line="66" module="Errno" symbol="*" />
+        <import line="68" module="Exporter" />
+        <import line="69" module="AutoLoader" symbol="*" />
+        <import line="673" module="XSLoader" />
+        <import line="677" module="DynaLoader" />
+        <variable line="64" name="$AUTOLOAD" />
+        <variable line="64" name="$CRLF" />
+        <variable line="64" name="$VERSION" />
+        <variable line="64" name="@EXPORT" />
+        <variable line="64" name="@EXPORT_OK" />
+        <variable line="64" name="@ISA" />
+        <variable line="72" name="$Net::SSLeay::trace" />
+        <variable line="80" name="$Net::SSLeay::ssl_version" />
+        <variable line="84" name="$Net::SSLeay::linux_debug" />
+        <variable line="88" name="$Net::SSLeay::slowly" />
+        <variable line="106" name="$Net::SSLeay::random_device" />
+        <variable line="107" name="$Net::SSLeay::how_random" />
+        <variable line="661" name="$AutoLoader::AUTOLOAD" />
+        <scope ilk="function" line="651" lineend="670" name="AUTOLOAD" signature="AUTOLOAD()">
+          </scope>
+        <scope attributes="__exportable__" ilk="function" line="688" lineend="698" name="print_errs" signature="print_errs($msg)">
+          <variable ilk="argument" name="$msg" />
+        </scope>
+        <scope attributes="__exportable__" ilk="function" line="704" lineend="707" name="die_if_ssl_error" signature="die_if_ssl_error($msg)">
+          <variable ilk="argument" name="$msg" />
+        </scope>
+        <scope attributes="__exportable__" ilk="function" line="712" lineend="716" name="die_now" signature="die_now($msg)">
+          <variable ilk="argument" name="$msg" />
+        </scope>
+      </scope>
+    </scope>
+    

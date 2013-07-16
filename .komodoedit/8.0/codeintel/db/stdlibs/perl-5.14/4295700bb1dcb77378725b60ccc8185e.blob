@@ -1,0 +1,24 @@
+<scope ilk="blob" lang="Perl" name="Package::DeprecationManager">
+      <scope ilk="class" line="1" lineend="272" name="Package::DeprecationManager">
+        <import line="9" module="Carp" symbol="croak" />
+        <import line="10" module="List::MoreUtils" symbol="any" />
+        <import line="11" module="Params::Util" symbol="_HASH" />
+        <import line="12" module="Sub::Install" symbol="*" />
+        <variable line="3" name="$Package::DeprecationManager::VERSION" />
+        <variable line="85" name="$package" />
+        <scope ilk="function" line="14" lineend="46" name="import" signature="import(%args)">
+          <variable ilk="argument" name="%args" />
+        </scope>
+        <scope ilk="function" line="48" lineend="62" name="_build_import" signature="_build_import($registry, $class, %args)">
+          <variable ilk="argument" name="$registry" />
+          <variable ilk="argument" name="$class" />
+          <variable ilk="argument" name="%args" />
+        </scope>
+        <scope ilk="function" line="64" lineend="124" name="_build_warn" signature="_build_warn($registry, $deprecated_at, $ignore)">
+          <variable ilk="argument" name="$registry" />
+          <variable ilk="argument" name="$deprecated_at" />
+          <variable ilk="argument" name="$ignore" />
+        </scope>
+      </scope>
+    </scope>
+    

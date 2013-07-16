@@ -1,0 +1,89 @@
+<scope ilk="blob" lang="Perl" name="CPAN::Meta">
+      <scope ilk="class" line="4" lineend="695" name="CPAN::Meta">
+        <import line="11" module="Carp" symbol="carp" />
+        <import line="11" module="Carp" symbol="croak" />
+        <import line="12" module="CPAN::Meta::Feature" symbol="*" />
+        <import line="13" module="CPAN::Meta::Prereqs" symbol="*" />
+        <import line="14" module="CPAN::Meta::Converter" symbol="*" />
+        <import line="15" module="CPAN::Meta::Validator" symbol="*" />
+        <import line="16" module="Parse::CPAN::Meta" symbol="*" />
+        <variable line="6" name="$CPAN::Meta::VERSION" />
+        <scope ilk="function" line="18" lineend="24" name="_dclone" signature="_dclone($ref)">
+          <variable ilk="argument" name="$ref" />
+        </scope>
+        <scope ilk="function" line="64" lineend="64" name="authors" signature="authors()" />
+        <scope ilk="function" line="65" lineend="65" name="licenses" signature="licenses()" />
+        <scope ilk="function" line="91" lineend="93" name="custom_keys" signature="custom_keys()" />
+        <scope ilk="function" line="95" lineend="100" name="custom" signature="custom($self, $attr)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$attr" />
+        </scope>
+        <scope attributes="__ctor__" ilk="function" line="103" lineend="133" name="_new" signature="_new($class, $struct, $options)">
+          <variable ilk="argument" name="$class" />
+          <variable ilk="argument" name="$struct" />
+          <variable ilk="argument" name="$options" />
+        </scope>
+        <scope ilk="function" line="135" lineend="140" name="new" signature="new($class, $struct, $options)">
+          <variable ilk="argument" name="$class" />
+          <variable ilk="argument" name="$struct" />
+          <variable ilk="argument" name="$options" />
+        </scope>
+        <scope ilk="function" line="143" lineend="151" name="create" signature="create($class, $struct, $options)">
+          <variable ilk="argument" name="$class" />
+          <variable ilk="argument" name="$struct" />
+          <variable ilk="argument" name="$options" />
+        </scope>
+        <scope ilk="function" line="154" lineend="168" name="load_file" signature="load_file($class, $file, $options)">
+          <variable ilk="argument" name="$class" />
+          <variable ilk="argument" name="$file" />
+          <variable ilk="argument" name="$options" />
+        </scope>
+        <scope ilk="function" line="171" lineend="182" name="load_yaml_string" signature="load_yaml_string($class, $yaml, $options)">
+          <variable ilk="argument" name="$class" />
+          <variable ilk="argument" name="$yaml" />
+          <variable ilk="argument" name="$options" />
+        </scope>
+        <scope ilk="function" line="185" lineend="196" name="load_json_string" signature="load_json_string($class, $json, $options)">
+          <variable ilk="argument" name="$class" />
+          <variable ilk="argument" name="$json" />
+          <variable ilk="argument" name="$options" />
+        </scope>
+        <scope ilk="function" line="199" lineend="223" name="save" signature="save($self, $file, $options)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$file" />
+          <variable ilk="argument" name="$options" />
+        </scope>
+        <scope ilk="function" line="226" lineend="229" name="meta_spec_version" signature="meta_spec_version($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="232" lineend="243" name="effective_prereqs" signature="effective_prereqs($self, $features)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$features" />
+        </scope>
+        <scope ilk="function" line="246" lineend="259" name="should_index_file" signature="should_index_file($self, $filename)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$filename" />
+        </scope>
+        <scope ilk="function" line="262" lineend="274" name="should_index_package" signature="should_index_package($self, $package)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$package" />
+        </scope>
+        <scope ilk="function" line="277" lineend="285" name="features" signature="features($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="288" lineend="295" name="feature" signature="feature($self, $ident)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$ident" />
+        </scope>
+        <scope ilk="function" line="298" lineend="306" name="as_struct" signature="as_struct($self, $options)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$options" />
+        </scope>
+        <scope ilk="function" line="309" lineend="337" name="as_string" signature="as_string($self, $options)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$options" />
+        </scope>
+        <scope ilk="function" line="340" lineend="342" name="TO_JSON" signature="TO_JSON()" />
+      </scope>
+    </scope>
+    

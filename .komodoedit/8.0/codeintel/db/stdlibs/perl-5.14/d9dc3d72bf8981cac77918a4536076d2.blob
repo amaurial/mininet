@@ -1,0 +1,152 @@
+<scope ilk="blob" lang="Perl" name="Text::CSV_XS">
+      <scope classrefs="DynaLoader" ilk="class" line="1" lineend="592" name="Text::CSV_XS">
+        <import line="29" module="DynaLoader" />
+        <import line="30" module="Carp" symbol="*" />
+        <variable line="32" name="$VERSION" />
+        <variable line="32" name="@ISA" />
+        <scope ilk="function" line="37" lineend="37" name="PV" signature="PV()" />
+        <scope ilk="function" line="38" lineend="38" name="IV" signature="IV()" />
+        <scope ilk="function" line="39" lineend="39" name="NV" signature="NV()" />
+        <scope ilk="function" line="46" lineend="49" name="version" signature="version()" />
+        <scope ilk="function" line="87" lineend="99" name="_check_sanity" signature="_check_sanity($attr)">
+          <variable ilk="argument" name="$attr" />
+        </scope>
+        <scope attributes="__ctor__" ilk="function" line="101" lineend="134" name="new" signature="new($proto, $attr)">
+          <variable ilk="argument" name="$proto" />
+          <variable ilk="argument" name="$attr" />
+        </scope>
+        <scope ilk="function" line="159" lineend="168" name="_set_attr_C" signature="_set_attr_C($self, $name, $val, $ec)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$name" />
+          <variable ilk="argument" name="$val" />
+          <variable ilk="argument" name="$ec" />
+        </scope>
+        <scope ilk="function" line="171" lineend="177" name="_set_attr_X" signature="_set_attr_X($self, $name, $val)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$name" />
+          <variable ilk="argument" name="$val" />
+        </scope>
+        <scope ilk="function" line="180" lineend="185" name="_set_attr_N" signature="_set_attr_N($self, $name, $val)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$name" />
+          <variable ilk="argument" name="$val" />
+        </scope>
+        <scope ilk="function" line="189" lineend="197" name="quote_char" signature="quote_char($self, $qc)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$qc" />
+        </scope>
+        <scope ilk="function" line="199" lineend="207" name="escape_char" signature="escape_char($self, $ec)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$ec" />
+        </scope>
+        <scope ilk="function" line="209" lineend="214" name="sep_char" signature="sep_char($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="216" lineend="226" name="eol" signature="eol($self, $eol)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$eol" />
+        </scope>
+        <scope ilk="function" line="228" lineend="233" name="always_quote" signature="always_quote($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="235" lineend="240" name="quote_space" signature="quote_space($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="242" lineend="247" name="quote_null" signature="quote_null($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="249" lineend="254" name="binary" signature="binary($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="256" lineend="261" name="keep_meta_info" signature="keep_meta_info($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="263" lineend="268" name="allow_loose_quotes" signature="allow_loose_quotes($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="270" lineend="275" name="allow_loose_escapes" signature="allow_loose_escapes($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="277" lineend="289" name="allow_whitespace" signature="allow_whitespace($self, $aw)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$aw" />
+        </scope>
+        <scope ilk="function" line="291" lineend="296" name="blank_is_undef" signature="blank_is_undef($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="298" lineend="303" name="empty_is_undef" signature="empty_is_undef($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="305" lineend="310" name="verbatim" signature="verbatim($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="312" lineend="317" name="auto_diag" signature="auto_diag($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="324" lineend="328" name="status" signature="status($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="330" lineend="334" name="eof" signature="eof($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="341" lineend="345" name="error_input" signature="error_input($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="352" lineend="392" name="error_diag" signature="error_diag($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="400" lineend="404" name="string" signature="string($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="412" lineend="416" name="fields" signature="fields($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="425" lineend="429" name="meta_info" signature="meta_info($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="431" lineend="437" name="is_quoted" signature="is_quoted($self, $idx, $val)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$idx" />
+          <variable ilk="argument" name="$val" />
+        </scope>
+        <scope ilk="function" line="439" lineend="445" name="is_binary" signature="is_binary($self, $idx, $val)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$idx" />
+          <variable ilk="argument" name="$val" />
+        </scope>
+        <scope ilk="function" line="447" lineend="453" name="is_missing" signature="is_missing($self, $idx, $val)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$idx" />
+          <variable ilk="argument" name="$val" />
+        </scope>
+        <scope ilk="function" line="466" lineend="475" name="combine" signature="combine($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="489" lineend="508" name="parse" signature="parse($self, $str)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$str" />
+        </scope>
+        <scope ilk="function" line="510" lineend="531" name="column_names" signature="column_names($self, @keys)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="@keys" />
+        </scope>
+        <scope ilk="function" line="533" lineend="551" name="bind_columns" signature="bind_columns($self, @refs)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="@refs" />
+        </scope>
+        <scope ilk="function" line="553" lineend="563" name="getline_hr" signature="getline_hr($self, @args, %hr)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="@args" />
+          <variable ilk="argument" name="%hr" />
+        </scope>
+        <scope ilk="function" line="565" lineend="571" name="getline_hr_all" signature="getline_hr_all($self, @args, %hr)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="@args" />
+          <variable ilk="argument" name="%hr" />
+        </scope>
+        <scope ilk="function" line="573" lineend="590" name="types" signature="types($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+      </scope>
+    </scope>
+    

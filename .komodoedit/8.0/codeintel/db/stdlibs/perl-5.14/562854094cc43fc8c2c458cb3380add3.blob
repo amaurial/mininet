@@ -1,0 +1,18 @@
+<scope ilk="blob" lang="Perl" name="Perl::Critic::Policy::ControlStructures::ProhibitUnreachableCode">
+      <scope ilk="class" line="8" lineend="105" name="Perl::Critic::Policy::ControlStructures::ProhibitUnreachableCode">
+        <import line="13" module="Readonly" symbol="*" />
+        <import line="15" module="Perl::Critic::Utils" symbol="**" />
+        <variable line="18" name="$VERSION" />
+        <scope ilk="function" line="36" lineend="36" name="supported_parameters" signature="supported_parameters()" />
+        <scope ilk="function" line="37" lineend="37" name="default_severity" signature="default_severity()" />
+        <scope ilk="function" line="38" lineend="38" name="default_themes" signature="default_themes()" />
+        <scope ilk="function" line="39" lineend="39" name="applies_to" signature="applies_to()" />
+        <scope ilk="function" line="43" lineend="72" name="violates" signature="violates()">
+          </scope>
+        <scope ilk="function" line="74" lineend="103" name="_gather_violations" signature="_gather_violations($self, $statement)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$statement" />
+        </scope>
+      </scope>
+    </scope>
+    

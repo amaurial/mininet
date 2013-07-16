@@ -1,0 +1,127 @@
+<scope doc="Shared support for scanning document type declarations in HTML and XHTML.&#xA;This module is used as a foundation for the html.parser module.  It has no documented public API and should not be used directly." ilk="blob" lang="Python" name="_markupbase">
+      <scope classrefs="object" doc="Parser base class which provides some common support methods used&#xA;by the SGML/HTML and XHTML parsers." ilk="class" line="23" lineend="391" name="ParserBase">
+        <scope doc="# Internal -- parse a marked section # Override this to&#xA;handle MS-word extension syntax &lt;![if&#xA;word]&gt;content&lt;![endif]&gt;" ilk="function" line="142" lineend="161" name="parse_marked_section" returns="match.end()" signature="parse_marked_section(self, i, report=1)">
+          <variable line="145" name="sectName" />
+          <variable citdl="int" ilk="argument" name="report" />
+          <variable citdl="self.rawdata" line="143" name="rawdata" />
+          <variable ilk="argument" name="i" />
+          <variable citdl="ParserBase" ilk="argument" name="self" />
+          <variable citdl="match.start()" line="145" name="j" />
+          <variable citdl="_msmarkedsectionclose.search()" line="150" name="match" />
+        </scope>
+        <scope doc="# Internal -- scan past &lt;!ELEMENT declarations" ilk="function" line="245" lineend="253" name="_parse_doctype_element" returns="rawdata.find()" signature="_parse_doctype_element(self, i, declstartpos)">
+          <variable ilk="argument" name="declstartpos" />
+          <variable line="246" name="name" />
+          <variable ilk="argument" name="i" />
+          <variable citdl="ParserBase" ilk="argument" name="self" />
+          <variable line="246" name="j" />
+          <variable citdl="self.rawdata" line="250" name="rawdata" />
+        </scope>
+        <scope doc="# Internal -- scan past &lt;!NOTATION declarations" ilk="function" line="313" lineend="333" name="_parse_doctype_notation" returns="m.end()" signature="_parse_doctype_notation(self, i, declstartpos)">
+          <variable ilk="argument" name="declstartpos" />
+          <variable line="314" name="name" />
+          <variable ilk="argument" name="i" />
+          <variable citdl="ParserBase" ilk="argument" name="self" />
+          <variable citdl="m.end()" line="314" name="j" />
+          <variable citdl="_declstringlit_match()" line="326" name="m" />
+          <variable citdl="list" line="319" name="c" />
+          <variable citdl="self.rawdata" line="317" name="rawdata" />
+        </scope>
+        <scope doc="# Internal -- scan past the internal subset in a &lt;!DOCTYPE&#xA;declaration, # returning the index just past any whitespace&#xA;following the trailing &apos;]&apos;." ilk="function" line="178" lineend="242" name="_parse_doctype_subset" returns="meth()" signature="_parse_doctype_subset(self, i, declstartpos)">
+          <variable line="183" name="c" />
+          <variable line="203" name="name" />
+          <variable ilk="argument" name="i" />
+          <variable citdl="ParserBase" ilk="argument" name="self" />
+          <variable citdl="parse_comment()" line="181" name="j" />
+          <variable ilk="argument" name="declstartpos" />
+          <variable citdl="len()" line="180" name="n" />
+          <variable citdl="list" line="185" name="s" />
+          <variable citdl="self.rawdata" line="179" name="rawdata" />
+          <variable citdl="getattr()" line="211" name="meth" />
+        </scope>
+        <scope doc="# Internal -- scan past &lt;!ENTITY declarations" ilk="function" line="336" lineend="368" name="_parse_doctype_entity" returns="m.end()" signature="_parse_doctype_entity(self, i, declstartpos)">
+          <variable citdl="list" line="341" name="c" />
+          <variable line="350" name="name" />
+          <variable ilk="argument" name="i" />
+          <variable citdl="ParserBase" ilk="argument" name="self" />
+          <variable citdl="int" line="339" name="j" />
+          <variable citdl="_declstringlit_match()" line="358" name="m" />
+          <variable ilk="argument" name="declstartpos" />
+          <variable citdl="self.rawdata" line="337" name="rawdata" />
+        </scope>
+        <scope doc="# Internal -- scan past &lt;!ATTLIST declarations" ilk="function" line="256" lineend="310" name="_parse_doctype_attlist" returns="rawdata.find()" signature="_parse_doctype_attlist(self, i, declstartpos)">
+          <variable ilk="argument" name="declstartpos" />
+          <variable line="258" name="name" />
+          <variable ilk="argument" name="i" />
+          <variable citdl="ParserBase" ilk="argument" name="self" />
+          <variable citdl="rawdata.find()" line="258" name="j" />
+          <variable citdl="_declstringlit_match()" line="290" name="m" />
+          <variable citdl="list" line="259" name="c" />
+          <variable citdl="self.rawdata" line="257" name="rawdata" />
+        </scope>
+        <scope doc="# To be overridden -- handlers for unknown objects" ilk="function" line="390" lineend="391" name="unknown_decl" signature="unknown_decl(self, data)">
+          <variable citdl="ParserBase" ilk="argument" name="self" />
+          <variable ilk="argument" name="data" />
+        </scope>
+        <scope ilk="function" line="27" lineend="30" name="__init__" signature="__init__(self)">
+          <variable citdl="ParserBase" ilk="argument" name="self" />
+        </scope>
+        <scope ilk="function" line="36" lineend="38" name="reset" signature="reset(self)">
+          <variable citdl="ParserBase" ilk="argument" name="self" />
+        </scope>
+        <scope doc="Return current line number and offset." ilk="function" line="40" lineend="42" name="getpos" returns="tuple" signature="getpos(self)">
+          <variable citdl="ParserBase" ilk="argument" name="self" />
+        </scope>
+        <scope doc="# Internal -- parse comment, return length or -1 if not&#xA;terminated" ilk="function" line="164" lineend="174" name="parse_comment" returns="match.end()" signature="parse_comment(self, i, report=1)">
+          <variable citdl="int" ilk="argument" name="report" />
+          <variable citdl="self.rawdata" line="165" name="rawdata" />
+          <variable ilk="argument" name="i" />
+          <variable citdl="ParserBase" ilk="argument" name="self" />
+          <variable citdl="match.start()" line="172" name="j" />
+          <variable citdl="_commentclose.search()" line="168" name="match" />
+        </scope>
+        <scope doc="# Internal -- scan a name token and the new position and the&#xA;token, or # return -1 if we&apos;ve reached the end of the&#xA;buffer." ilk="function" line="372" lineend="387" name="_scan_name" returns="tuple" signature="_scan_name(self, i, declstartpos)">
+          <variable ilk="argument" name="declstartpos" />
+          <variable citdl="s.strip()" line="380" name="name" />
+          <variable ilk="argument" name="i" />
+          <variable citdl="ParserBase" ilk="argument" name="self" />
+          <variable citdl="_declname_match()" line="377" name="m" />
+          <variable citdl="len()" line="374" name="n" />
+          <variable citdl="m.group()" line="379" name="s" />
+          <variable citdl="self.rawdata" line="373" name="rawdata" />
+        </scope>
+        <scope doc="# Internal -- parse declaration (for use by subclasses)." ilk="function" line="64" lineend="138" name="parse_declaration" returns="self.parse_comment()" signature="parse_declaration(self, i)">
+          <variable line="103" name="c" />
+          <variable line="97" name="decltype" />
+          <variable line="118" name="name" />
+          <variable ilk="argument" name="i" />
+          <variable citdl="ParserBase" ilk="argument" name="self" />
+          <variable citdl="m.end()" line="76" name="j" />
+          <variable citdl="_declstringlit_match()" line="113" name="m" />
+          <variable citdl="len()" line="86" name="n" />
+          <variable citdl="self.rawdata" line="75" name="rawdata" />
+          <variable citdl="list" line="106" name="data" />
+        </scope>
+        <scope doc="# Internal -- update line number and offset." ilk="function" line="48" lineend="59" name="updatepos" signature="updatepos(self, i, j)">
+          <variable citdl="self.rawdata" line="51" name="rawdata" />
+          <variable ilk="argument" name="i" />
+          <variable citdl="ParserBase" ilk="argument" name="self" />
+          <variable ilk="argument" name="j" />
+          <variable citdl="rawdata.rindex()" line="55" name="pos" />
+          <variable citdl="rawdata.count()" line="52" name="nlines" />
+        </scope>
+        <scope ilk="function" line="32" lineend="34" name="error" signature="error(self, message)">
+          <variable citdl="ParserBase" ilk="argument" name="self" />
+          <variable ilk="argument" name="message" />
+        </scope>
+        <variable attributes="protected" citdl="str" line="61" name="_decl_otherchars" />
+        <variable attributes="__instancevar__" citdl="int" line="37" name="lineno" />
+        <variable attributes="__instancevar__" citdl="rawdata.rindex()" line="38" name="offset" />
+      </scope>
+      <variable attributes="protected __hidden__" citdl="re.compile()" line="18" name="_msmarkedsectionclose" />
+      <variable attributes="protected __hidden__" line="10" name="_declname_match" />
+      <variable attributes="protected __hidden__" citdl="re.compile()" line="12" name="_commentclose" />
+      <variable attributes="protected __hidden__" line="11" name="_declstringlit_match" />
+      <variable attributes="protected __hidden__" citdl="re.compile()" line="13" name="_markedsectionclose" />
+    </scope>
+    

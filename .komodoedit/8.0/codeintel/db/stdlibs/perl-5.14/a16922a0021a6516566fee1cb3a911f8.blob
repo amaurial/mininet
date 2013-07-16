@@ -1,0 +1,101 @@
+<scope ilk="blob" lang="Perl" name="Unicode::Collate">
+      <scope classrefs="DynaLoader" ilk="class" line="1" lineend="979" name="Unicode::Collate">
+        <import line="12" module="Carp" symbol="*" />
+        <import line="13" module="File::Spec" symbol="*" />
+        <import line="20" module="DynaLoader" />
+        <variable line="17" name="$VERSION" />
+        <variable line="18" name="$PACKAGE" />
+        <variable line="101" name="@ChangeOK" />
+        <variable line="108" name="@ChangeNG" />
+        <scope ilk="function" line="84" lineend="84" name="UCA_Version" signature="UCA_Version()" />
+        <scope ilk="function" line="86" lineend="86" name="Base_Unicode_Version" signature="Base_Unicode_Version()" />
+        <scope ilk="function" line="90" lineend="92" name="pack_U" signature="pack_U()" />
+        <scope ilk="function" line="122" lineend="125" name="version" signature="version($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="131" lineend="153" name="change" signature="change($self, %hash)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="%hash" />
+        </scope>
+        <scope ilk="function" line="155" lineend="164" name="_checkLevel" signature="_checkLevel($level, $key)">
+          <variable ilk="argument" name="$level" />
+          <variable ilk="argument" name="$key" />
+        </scope>
+        <scope ilk="function" line="177" lineend="241" name="checkCollator" signature="checkCollator($self)">
+          <import line="223" module="Unicode::Normalize" />
+          <variable ilk="argument" name="$self" />
+          <import line="223" module="Unicode::Normalize" />
+        </scope>
+        <scope attributes="__ctor__" ilk="function" line="243" lineend="287" name="new" signature="new($class)">
+          <variable ilk="argument" name="$class" />
+        </scope>
+        <scope ilk="function" line="289" lineend="311" name="parseAtmark" signature="parseAtmark($self, $line)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$line" />
+        </scope>
+        <scope ilk="function" line="313" lineend="351" name="read_table" signature="read_table($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="357" lineend="425" name="parseEntry" signature="parseEntry($self, $line)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$line" />
+        </scope>
+        <scope ilk="function" line="428" lineend="432" name="viewSortKey" signature="viewSortKey($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="439" lineend="583" name="splitEnt" signature="splitEnt($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="588" lineend="600" name="_pack_override" signature="_pack_override($r, $u, $der)">
+          <variable ilk="argument" name="$r" />
+          <variable ilk="argument" name="$u" />
+          <variable ilk="argument" name="$der" />
+        </scope>
+        <scope ilk="function" line="605" lineend="672" name="getWt" signature="getWt($self, $u)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$u" />
+        </scope>
+        <scope ilk="function" line="678" lineend="710" name="getSortKey" signature="getSortKey($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="716" lineend="716" name="cmp" signature="cmp()" />
+        <scope ilk="function" line="717" lineend="717" name="eq" signature="eq()" />
+        <scope ilk="function" line="718" lineend="718" name="ne" signature="ne()" />
+        <scope ilk="function" line="719" lineend="719" name="lt" signature="lt()" />
+        <scope ilk="function" line="720" lineend="720" name="le" signature="le()" />
+        <scope ilk="function" line="721" lineend="721" name="gt" signature="gt()" />
+        <scope ilk="function" line="722" lineend="722" name="ge" signature="ge()" />
+        <scope ilk="function" line="727" lineend="733" name="sort" signature="sort($obj)">
+          <variable ilk="argument" name="$obj" />
+        </scope>
+        <scope ilk="function" line="739" lineend="745" name="_nonIgnorAtLevel" signature="_nonIgnorAtLevel($wt, $lv)">
+          <variable ilk="argument" name="$wt" />
+          <variable ilk="argument" name="$lv" />
+        </scope>
+        <scope ilk="function" line="755" lineend="772" name="_eqArray" signature="_eqArray($source, $substr, $lev)">
+          <variable ilk="argument" name="$source" />
+          <variable ilk="argument" name="$substr" />
+          <variable ilk="argument" name="$lev" />
+        </scope>
+        <scope ilk="function" line="781" lineend="904" name="index" signature="index($self, $str, $grob)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$str" />
+          <variable ilk="argument" name="$grob" />
+        </scope>
+        <scope ilk="function" line="909" lineend="921" name="match" signature="match($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="926" lineend="933" name="gmatch" signature="gmatch($self, $str, $sub)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$str" />
+          <variable ilk="argument" name="$sub" />
+        </scope>
+        <scope ilk="function" line="938" lineend="955" name="subst" signature="subst($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="960" lineend="977" name="gsubst" signature="gsubst($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+      </scope>
+    </scope>
+    

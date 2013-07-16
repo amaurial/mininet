@@ -1,0 +1,24 @@
+<scope ilk="blob" lang="Perl" name="URI::gopher">
+      <scope classrefs="URI::_server" ilk="class" line="1" lineend="94" name="URI::gopher">
+        <import line="3" module="URI::_server" />
+        <import line="7" module="URI::Escape" symbol="uri_unescape" />
+        <variable line="61" name="*gtype" />
+        <scope ilk="function" line="29" lineend="29" name="default_port" signature="default_port()" />
+        <scope ilk="function" line="31" lineend="51" name="_gopher_type" signature="_gopher_type($self, $new_type)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$new_type" />
+        </scope>
+        <scope ilk="function" line="53" lineend="59" name="gopher_type" signature="gopher_type($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="63" lineend="63" name="selector" signature="selector()" />
+        <scope ilk="function" line="64" lineend="64" name="search" signature="search()" />
+        <scope ilk="function" line="65" lineend="65" name="string" signature="string()" />
+        <scope ilk="function" line="67" lineend="92" name="_gfield" signature="_gfield($self, $fno, $new)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$fno" />
+          <variable ilk="argument" name="$new" />
+        </scope>
+      </scope>
+    </scope>
+    

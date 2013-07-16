@@ -1,0 +1,34 @@
+<scope doc="This module provides primitive operations to write multi-threaded programs.&#xA;The &apos;threading&apos; module provides a more convenient interface." ilk="blob" lang="Python" name="_thread">
+      <scope classrefs="object" doc="A lock object is a synchronization primitive.  To create a lock,&#xA;call the PyThread_allocate_lock() function.  Methods are:  acquire() -- lock the lock, possibly blocking until it can be obtained release() -- unlock of the lock locked() -- test whether the lock is currently locked  A lock is not owned by the thread that locked it; another thread may unlock it.  A thread attempting to lock a lock that it has already locked will block until another thread unlocks it.  Deadlocks may ensue." ilk="class" name="LockType">
+        <scope doc="(acquire_lock() is an obsolete synonym)" ilk="function" name="__enter__" signature="acquire([wait]) -&gt; None or bool" />
+        <scope doc="(locked_lock() is an obsolete synonym)" ilk="function" name="locked" returns="bool" signature="locked() -&gt; bool" />
+        <scope doc="(acquire_lock() is an obsolete synonym)" ilk="function" name="acquire_lock" signature="acquire([wait]) -&gt; None or bool" />
+        <scope doc="(locked_lock() is an obsolete synonym)" ilk="function" name="locked_lock" returns="bool" signature="locked() -&gt; bool" />
+        <scope doc="(acquire_lock() is an obsolete synonym)" ilk="function" name="acquire" signature="acquire([wait]) -&gt; None or bool" />
+        <scope doc="(release_lock() is an obsolete synonym)" ilk="function" name="release_lock" signature="release()" />
+        <scope doc="(release_lock() is an obsolete synonym)" ilk="function" name="release" signature="release()" />
+        <scope doc="(release_lock() is an obsolete synonym)" ilk="function" name="__exit__" signature="release()" />
+      </scope>
+      <scope classrefs="object" doc="&#xA;" ilk="class" name="RLock">
+        <scope doc="Lock the lock." ilk="function" name="__enter__" returns="bool" signature="acquire(blocking=True) -&gt; bool" />
+        <scope doc="Release the lock, allowing another thread that is blocked&#xA;waiting for the lock to acquire the lock." ilk="function" name="__exit__" signature="release()" />
+        <scope doc="Lock the lock." ilk="function" name="acquire" returns="bool" signature="acquire(blocking=True) -&gt; bool" />
+        <scope doc="For internal use by `threading.Condition`." ilk="function" name="_is_owned" returns="bool" signature="_is_owned() -&gt; bool" />
+        <scope doc="For internal use by `threading.Condition`." ilk="function" name="_release_save" returns="tuple" signature="_release_save() -&gt; tuple" />
+        <scope doc="For internal use by `threading.Condition`." ilk="function" name="_acquire_restore" signature="_acquire_restore(state) -&gt; None" />
+        <scope doc="x.__repr__() &lt;==&gt; repr(x)" ilk="function" name="__repr__" signature="x.__repr__() &lt;==&gt; repr(x)" />
+        <scope doc="Release the lock, allowing another thread that is blocked&#xA;waiting for the lock to acquire the lock." ilk="function" name="release" signature="release()" />
+      </scope>
+      <variable citdl="float" name="TIMEOUT_MAX" />
+      <scope doc="(allocate() is an obsolete synonym)" ilk="function" name="allocate" signature="allocate_lock() -&gt; lock object" />
+      <scope doc="(allocate() is an obsolete synonym)" ilk="function" name="allocate_lock" signature="allocate_lock() -&gt; lock object" />
+      <scope classrefs="Exception" doc="&#xA;" ilk="class" name="error" />
+      <scope doc="(exit_thread() is an obsolete synonym)" ilk="function" name="exit" signature="exit()" />
+      <scope doc="(exit_thread() is an obsolete synonym)" ilk="function" name="exit_thread" signature="exit()" />
+      <scope doc="Return a non-zero integer that uniquely identifies the&#xA;current thread amongst other threads that exist&#xA;simultaneously." ilk="function" name="get_ident" returns="int" signature="get_ident() -&gt; integer" />
+      <scope doc="Raise a KeyboardInterrupt in the main thread." ilk="function" name="interrupt_main" signature="interrupt_main()" />
+      <scope doc="Return the thread stack size used when creating new threads." ilk="function" name="stack_size" signature="stack_size([size]) -&gt; size" />
+      <scope doc="(start_new() is an obsolete synonym)" ilk="function" name="start_new" signature="start_new_thread(function, args[, kwargs])" />
+      <scope doc="(start_new() is an obsolete synonym)" ilk="function" name="start_new_thread" signature="start_new_thread(function, args[, kwargs])" />
+    </scope>
+    

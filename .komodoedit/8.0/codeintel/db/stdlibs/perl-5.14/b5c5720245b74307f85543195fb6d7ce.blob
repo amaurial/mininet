@@ -1,0 +1,30 @@
+<scope ilk="blob" lang="Perl" name="CPAN::LWP::UserAgent">
+      <scope ilk="class" line="3" lineend="77" name="CPAN::LWP::UserAgent">
+        <import line="6" module="CPAN::HTTP::Credentials" symbol="*" />
+        <variable line="5" name="$PASSWD" />
+        <variable line="5" name="$SETUPDONE" />
+        <variable line="5" name="$USER" />
+        <variable line="5" name="@ISA" />
+        <variable line="9" name="$CPAN::LWP::UserAgent::VERSION" />
+        <scope ilk="function" line="12" lineend="21" name="config" signature="config()">
+          <import line="15" module="LWP::UserAgent" />
+          <import line="15" module="LWP::UserAgent" />
+        </scope>
+        <scope ilk="function" line="23" lineend="30" name="get_basic_credentials" signature="get_basic_credentials($self, $realm, $uri, $proxy)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$realm" />
+          <variable ilk="argument" name="$uri" />
+          <variable ilk="argument" name="$proxy" />
+        </scope>
+        <scope ilk="function" line="32" lineend="35" name="no_proxy" signature="no_proxy($self, $no_proxy)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$no_proxy" />
+        </scope>
+        <scope ilk="function" line="67" lineend="75" name="mirror" signature="mirror($self, $url, $aslocal)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$url" />
+          <variable ilk="argument" name="$aslocal" />
+        </scope>
+      </scope>
+    </scope>
+    

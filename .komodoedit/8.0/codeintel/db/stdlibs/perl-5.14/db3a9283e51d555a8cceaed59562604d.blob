@@ -1,0 +1,41 @@
+<scope ilk="blob" lang="Perl" name="ExtUtils::CBuilder::Platform::Windows">
+      <scope classrefs="ExtUtils::CBuilder::Base" ilk="class" line="1" lineend="262" name="ExtUtils::CBuilder::Platform::Windows">
+        <import line="6" module="File::Basename" symbol="*" />
+        <import line="7" module="File::Spec" symbol="*" />
+        <import line="9" module="ExtUtils::CBuilder::Base" symbol="*" />
+        <import line="10" module="IO::File" symbol="*" />
+        <variable line="12" name="$VERSION" />
+        <variable line="12" name="@ISA" />
+        <scope ilk="function" line="34" lineend="45" name="new" signature="new($class)">
+          <variable ilk="argument" name="$class" />
+        </scope>
+        <scope ilk="function" line="47" lineend="54" name="_compiler_type" signature="_compiler_type($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="56" lineend="65" name="split_like_shell" signature="split_like_shell()" />
+        <scope ilk="function" line="67" lineend="75" name="do_system" signature="do_system($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="77" lineend="81" name="arg_defines" signature="arg_defines($self, %args)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="%args" />
+        </scope>
+        <scope ilk="function" line="83" lineend="136" name="compile" signature="compile($self, %args)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="%args" />
+        </scope>
+        <scope ilk="function" line="138" lineend="138" name="need_prelink" signature="need_prelink()" />
+        <scope ilk="function" line="140" lineend="229" name="link" signature="link($self, %args)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="%args" />
+        </scope>
+        <scope ilk="function" line="232" lineend="247" name="normalize_filespecs" signature="normalize_filespecs($self, @specs)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="@specs" />
+        </scope>
+        <scope ilk="function" line="250" lineend="260" name="perl_inc" signature="perl_inc($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+      </scope>
+    </scope>
+    

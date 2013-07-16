@@ -1,0 +1,204 @@
+<scope ilk="blob" lang="Perl" name="Math::BigInt::Calc">
+      <scope ilk="class" line="1" lineend="2508" name="Math::BigInt::Calc">
+        <variable line="7" name="$VERSION" />
+        <variable line="193" name="*_alen" />
+        <scope ilk="function" line="34" lineend="34" name="api_version" signature="api_version()" />
+        <scope ilk="function" line="41" lineend="99" name="_base_len" signature="_base_len($b, $int)">
+          <variable ilk="argument" name="$b" />
+          <variable ilk="argument" name="$int" />
+        </scope>
+        <scope ilk="function" line="101" lineend="114" name="_new" signature="_new()">
+          </scope>
+        <scope ilk="function" line="198" lineend="202" name="_zero" signature="_zero()" />
+        <scope ilk="function" line="204" lineend="208" name="_one" signature="_one()" />
+        <scope ilk="function" line="210" lineend="214" name="_two" signature="_two()" />
+        <scope ilk="function" line="216" lineend="220" name="_ten" signature="_ten()" />
+        <scope ilk="function" line="222" lineend="230" name="_1ex" signature="_1ex()">
+          </scope>
+        <scope ilk="function" line="232" lineend="236" name="_copy" signature="_copy()" />
+        <scope ilk="function" line="239" lineend="239" name="import" signature="import()" />
+        <scope ilk="function" line="244" lineend="271" name="_str" signature="_str()">
+          <import line="254" module="Carp" />
+          <import line="254" module="Carp" />
+        </scope>
+        <scope ilk="function" line="273" lineend="291" name="_num" signature="_num()">
+          </scope>
+        <scope ilk="function" line="296" lineend="327" name="_add" signature="_add($c, $x, $y)">
+          <variable ilk="argument" name="$c" />
+          <variable ilk="argument" name="$x" />
+          <variable ilk="argument" name="$y" />
+        </scope>
+        <scope ilk="function" line="329" lineend="342" name="_inc" signature="_inc($c, $x)">
+          <variable ilk="argument" name="$c" />
+          <variable ilk="argument" name="$x" />
+        </scope>
+        <scope ilk="function" line="344" lineend="358" name="_dec" signature="_dec($c, $x)">
+          <variable ilk="argument" name="$c" />
+          <variable ilk="argument" name="$x" />
+        </scope>
+        <scope ilk="function" line="360" lineend="389" name="_sub" signature="_sub($c, $sx, $sy, $s)">
+          <variable ilk="argument" name="$c" />
+          <variable ilk="argument" name="$sx" />
+          <variable ilk="argument" name="$sy" />
+          <variable ilk="argument" name="$s" />
+        </scope>
+        <scope ilk="function" line="391" lineend="465" name="_mul_use_mul" signature="_mul_use_mul($c, $xv, $yv)">
+          <variable ilk="argument" name="$c" />
+          <variable ilk="argument" name="$xv" />
+          <variable ilk="argument" name="$yv" />
+        </scope>
+        <scope ilk="function" line="467" lineend="528" name="_mul_use_div_64" signature="_mul_use_div_64($c, $xv, $yv)">
+          <variable ilk="argument" name="$c" />
+          <variable ilk="argument" name="$xv" />
+          <variable ilk="argument" name="$yv" />
+        </scope>
+        <scope ilk="function" line="530" lineend="592" name="_mul_use_div" signature="_mul_use_div($c, $xv, $yv)">
+          <variable ilk="argument" name="$c" />
+          <variable ilk="argument" name="$xv" />
+          <variable ilk="argument" name="$yv" />
+        </scope>
+        <scope ilk="function" line="594" lineend="783" name="_div_use_mul" signature="_div_use_mul($c, $x, $yorg)">
+          <variable ilk="argument" name="$c" />
+          <variable ilk="argument" name="$x" />
+          <variable ilk="argument" name="$yorg" />
+        </scope>
+        <scope ilk="function" line="785" lineend="976" name="_div_use_div_64" signature="_div_use_div_64($c, $x, $yorg)">
+          <variable ilk="argument" name="$c" />
+          <variable ilk="argument" name="$x" />
+          <variable ilk="argument" name="$yorg" />
+        </scope>
+        <scope ilk="function" line="978" lineend="1167" name="_div_use_div" signature="_div_use_div($c, $x, $yorg)">
+          <variable ilk="argument" name="$c" />
+          <variable ilk="argument" name="$x" />
+          <variable ilk="argument" name="$yorg" />
+        </scope>
+        <scope ilk="function" line="1172" lineend="1199" name="_acmp" signature="_acmp($c, $cx, $cy)">
+          <variable ilk="argument" name="$c" />
+          <variable ilk="argument" name="$cx" />
+          <variable ilk="argument" name="$cy" />
+        </scope>
+        <scope ilk="function" line="1201" lineend="1210" name="_len" signature="_len()">
+          </scope>
+        <scope ilk="function" line="1212" lineend="1226" name="_digit" signature="_digit($c, $x, $n)">
+          <variable ilk="argument" name="$c" />
+          <variable ilk="argument" name="$x" />
+          <variable ilk="argument" name="$n" />
+        </scope>
+        <scope ilk="function" line="1228" lineend="1251" name="_zeros" signature="_zeros()">
+          </scope>
+        <scope ilk="function" line="1256" lineend="1260" name="_is_zero" signature="_is_zero()" />
+        <scope ilk="function" line="1262" lineend="1266" name="_is_even" signature="_is_even()" />
+        <scope ilk="function" line="1268" lineend="1272" name="_is_odd" signature="_is_odd()" />
+        <scope ilk="function" line="1274" lineend="1278" name="_is_one" signature="_is_one()" />
+        <scope ilk="function" line="1280" lineend="1284" name="_is_two" signature="_is_two()" />
+        <scope ilk="function" line="1286" lineend="1290" name="_is_ten" signature="_is_ten()" />
+        <scope ilk="function" line="1292" lineend="1315" name="__strip_zeros" signature="__strip_zeros($s)">
+          <variable ilk="argument" name="$s" />
+        </scope>
+        <scope ilk="function" line="1353" lineend="1417" name="_mod" signature="_mod($c, $x, $yo)">
+          <variable ilk="argument" name="$c" />
+          <variable ilk="argument" name="$x" />
+          <variable ilk="argument" name="$yo" />
+        </scope>
+        <scope ilk="function" line="1422" lineend="1468" name="_rsft" signature="_rsft($c, $x, $y, $n)">
+          <variable ilk="argument" name="$c" />
+          <variable ilk="argument" name="$x" />
+          <variable ilk="argument" name="$y" />
+          <variable ilk="argument" name="$n" />
+        </scope>
+        <scope ilk="function" line="1470" lineend="1502" name="_lsft" signature="_lsft($c, $x, $y, $n)">
+          <variable ilk="argument" name="$c" />
+          <variable ilk="argument" name="$x" />
+          <variable ilk="argument" name="$y" />
+          <variable ilk="argument" name="$n" />
+        </scope>
+        <scope ilk="function" line="1504" lineend="1538" name="_pow" signature="_pow($c, $cx, $cy)">
+          <variable ilk="argument" name="$c" />
+          <variable ilk="argument" name="$cx" />
+          <variable ilk="argument" name="$cy" />
+        </scope>
+        <scope ilk="function" line="1540" lineend="1601" name="_nok" signature="_nok($c, $n, $k)">
+          <variable ilk="argument" name="$c" />
+          <variable ilk="argument" name="$n" />
+          <variable ilk="argument" name="$k" />
+        </scope>
+        <scope ilk="function" line="1614" lineend="1798" name="_fac" signature="_fac($c, $cx)">
+          <variable ilk="argument" name="$c" />
+          <variable ilk="argument" name="$cx" />
+        </scope>
+        <scope ilk="function" line="1802" lineend="1906" name="_log_int" signature="_log_int($c, $x, $base)">
+          <variable ilk="argument" name="$c" />
+          <variable ilk="argument" name="$x" />
+          <variable ilk="argument" name="$base" />
+        </scope>
+        <scope ilk="function" line="1911" lineend="1911" name="steps" signature="steps()" />
+        <scope ilk="function" line="1913" lineend="1989" name="_sqrt" signature="_sqrt($c, $x)">
+          <variable ilk="argument" name="$c" />
+          <variable ilk="argument" name="$x" />
+          <variable line="1975" name="$steps" />
+        </scope>
+        <scope ilk="function" line="1991" lineend="2094" name="_root" signature="_root($c, $x, $n)">
+          <variable ilk="argument" name="$c" />
+          <variable ilk="argument" name="$x" />
+          <variable ilk="argument" name="$n" />
+        </scope>
+        <scope ilk="function" line="2099" lineend="2135" name="_and" signature="_and($c, $x, $y)">
+          <variable ilk="argument" name="$c" />
+          <variable ilk="argument" name="$x" />
+          <variable ilk="argument" name="$y" />
+        </scope>
+        <scope ilk="function" line="2137" lineend="2171" name="_xor" signature="_xor($c, $x, $y)">
+          <variable ilk="argument" name="$c" />
+          <variable ilk="argument" name="$x" />
+          <variable ilk="argument" name="$y" />
+        </scope>
+        <scope ilk="function" line="2173" lineend="2207" name="_or" signature="_or($c, $x, $y)">
+          <variable ilk="argument" name="$c" />
+          <variable ilk="argument" name="$x" />
+          <variable ilk="argument" name="$y" />
+        </scope>
+        <scope ilk="function" line="2209" lineend="2237" name="_as_hex" signature="_as_hex($c, $x)">
+          <variable ilk="argument" name="$c" />
+          <variable ilk="argument" name="$x" />
+        </scope>
+        <scope ilk="function" line="2239" lineend="2275" name="_as_bin" signature="_as_bin($c, $x)">
+          <variable ilk="argument" name="$c" />
+          <variable ilk="argument" name="$x" />
+        </scope>
+        <scope ilk="function" line="2277" lineend="2298" name="_as_oct" signature="_as_oct($c, $x)">
+          <variable ilk="argument" name="$c" />
+          <variable ilk="argument" name="$x" />
+        </scope>
+        <scope ilk="function" line="2300" lineend="2324" name="_from_oct" signature="_from_oct($c, $os)">
+          <variable ilk="argument" name="$c" />
+          <variable ilk="argument" name="$os" />
+        </scope>
+        <scope ilk="function" line="2326" lineend="2362" name="_from_hex" signature="_from_hex($c, $hs)">
+          <variable ilk="argument" name="$c" />
+          <variable ilk="argument" name="$hs" />
+        </scope>
+        <scope ilk="function" line="2364" lineend="2379" name="_from_bin" signature="_from_bin($c, $bs)">
+          <variable ilk="argument" name="$c" />
+          <variable ilk="argument" name="$bs" />
+        </scope>
+        <scope ilk="function" line="2384" lineend="2425" name="_modinv" signature="_modinv($c, $x, $y)">
+          <variable ilk="argument" name="$c" />
+          <variable ilk="argument" name="$x" />
+          <variable ilk="argument" name="$y" />
+        </scope>
+        <scope ilk="function" line="2427" lineend="2468" name="_modpow" signature="_modpow($c, $num, $exp, $mod)">
+          <variable ilk="argument" name="$c" />
+          <variable ilk="argument" name="$num" />
+          <variable ilk="argument" name="$exp" />
+          <variable ilk="argument" name="$mod" />
+        </scope>
+        <scope ilk="function" line="2470" lineend="2503" name="_gcd" signature="_gcd($c, $x, $y)">
+          <variable ilk="argument" name="$c" />
+          <variable ilk="argument" name="$x" />
+          <variable ilk="argument" name="$y" />
+        </scope>
+        <scope ilk="function" line="1320" lineend="2508" name="_check" signature="_check()">
+          </scope>
+      </scope>
+    </scope>
+    

@@ -1,0 +1,1226 @@
+<scope doc="minidom.py -- a lightweight DOM implementation.&#xA;parse(&quot;foo.xml&quot;)  parseString(&quot;&lt;foo&gt;&lt;bar/&gt;&lt;/foo&gt;&quot;)  Todo: ===== * convenience methods for getting elements and text. * more testing * bring some of the writer and linearizer code into conformance with this interface" ilk="blob" lang="Python" name="xml.dom.minidom">
+      <scope classrefs="Node" doc="&#xA;" ilk="class" line="344" lineend="461" name="Attr">
+        <scope ilk="function" line="372" lineend="373" name="_get_name" returns="self.name" signature="_get_name(self)">
+          <variable citdl="Attr" ilk="argument" name="self" />
+        </scope>
+        <scope ilk="function" line="416" lineend="431" name="unlink" signature="unlink(self)">
+          <variable citdl="Attr" ilk="argument" name="self" />
+          <variable line="421" name="elem" />
+        </scope>
+        <scope ilk="function" line="409" lineend="414" name="_set_value" signature="_set_value(self, value)">
+          <variable citdl="Attr" ilk="argument" name="self" />
+          <variable citdl="dict" line="410" name="d" />
+          <variable ilk="argument" name="value" />
+        </scope>
+        <scope ilk="function" line="367" lineend="370" name="_get_localName" signature="_get_localName(self)">
+          <variable citdl="Attr" ilk="argument" name="self" />
+        </scope>
+        <scope ilk="function" line="378" lineend="391" name="__setattr__" signature="__setattr__(self, name, value)">
+          <variable citdl="Attr" ilk="argument" name="self" />
+          <variable line="382" name="d2" />
+          <variable ilk="argument" name="name" />
+          <variable ilk="argument" name="value" />
+          <variable citdl="dict" line="379" name="d" />
+        </scope>
+        <scope ilk="function" line="393" lineend="407" name="_set_prefix" signature="_set_prefix(self, prefix)">
+          <variable citdl="self.localName" line="402" name="newName" />
+          <variable citdl="Attr" ilk="argument" name="self" />
+          <variable citdl="self.namespaceURI" line="394" name="nsuri" />
+          <variable ilk="argument" name="prefix" />
+          <variable citdl="dict" line="399" name="d" />
+        </scope>
+        <scope ilk="function" line="375" lineend="376" name="_get_specified" returns="bool" signature="_get_specified(self)">
+          <variable citdl="Attr" ilk="argument" name="self" />
+        </scope>
+        <scope ilk="function" line="353" lineend="363" name="__init__" signature="__init__(self, qName, namespaceURI=None, localName=None, prefix=None)">
+          <variable citdl="EMPTY_NAMESPACE" ilk="argument" name="namespaceURI" />
+          <variable ilk="argument" name="prefix" />
+          <variable citdl="dict" line="356" name="d" />
+          <variable ilk="argument" name="localName" />
+          <variable citdl="Attr" ilk="argument" name="self" />
+          <variable ilk="argument" name="qName" />
+        </scope>
+        <scope ilk="function" line="433" lineend="447" name="_get_isId" returns="info.isId()" signature="_get_isId(self)">
+          <variable citdl="doc._get_elem_info()" line="441" name="info" />
+          <variable citdl="self.ownerDocument" line="436" name="doc" />
+          <variable citdl="Attr" ilk="argument" name="self" />
+          <variable line="437" name="elem" />
+        </scope>
+        <scope ilk="function" line="449" lineend="461" name="_get_schemaType" returns="_no_type" signature="_get_schemaType(self)">
+          <variable citdl="doc._get_elem_info()" line="455" name="info" />
+          <variable citdl="self.ownerDocument" line="450" name="doc" />
+          <variable citdl="Attr" ilk="argument" name="self" />
+          <variable line="451" name="elem" />
+        </scope>
+        <variable citdl="Node.ATTRIBUTE_NODE" line="345" name="nodeType" />
+        <variable attributes="protected" citdl="tuple" line="351" name="_child_node_types" />
+        <variable citdl="False" line="348" name="specified" />
+        <variable line="346" name="attributes" />
+        <variable attributes="protected" citdl="False" line="349" name="_is_id" />
+        <variable line="347" name="ownerElement" />
+      </scope>
+      <scope classrefs="object" doc="The attribute list is a transient interface to the underlying&#xA;dictionaries.  Mutations here will change the underlying element&apos;s dictionary.  Ordering is imposed artificially and does not reflect the order of attributes as found in an input document." ilk="class" line="637" name="AttributeList">
+        <scope ilk="function" name="__lt__" signature="__lt__(self, other)" />
+        <scope ilk="function" name="__init__" signature="__init__(self, attrs, attrsNS, ownerElement)" />
+        <scope ilk="function" name="__contains__" signature="__contains__(self, key)" />
+        <scope ilk="function" name="getNamedItemNS" signature="getNamedItemNS(self, namespaceURI, localName)" />
+        <scope ilk="function" name="keysNS" signature="keysNS(self)" />
+        <scope ilk="function" name="_cmp" signature="_cmp(self, other)" />
+        <scope ilk="function" name="removeNamedItem" signature="removeNamedItem(self, name)" />
+        <scope ilk="function" name="get" signature="get(self, name, value=None)" />
+        <scope ilk="function" name="__getstate__" signature="__getstate__(self)" />
+        <scope ilk="function" name="__len__" signature="__len__(self)" />
+        <scope ilk="function" name="__ne__" signature="__ne__(self, other)" />
+        <scope ilk="function" name="setNamedItemNS" signature="setNamedItemNS(self, node)" />
+        <scope ilk="function" name="__getitem__" signature="__getitem__(self, attname_or_tuple)" />
+        <scope ilk="function" name="__setstate__" signature="__setstate__(self, state)" />
+        <scope ilk="function" name="keys" signature="keys(self)" />
+        <scope ilk="function" name="itemsNS" signature="itemsNS(self)" />
+        <scope ilk="function" name="setNamedItem" signature="setNamedItem(self, node)" />
+        <scope doc="# same as set" ilk="function" name="__setitem__" signature="__setitem__(self, attname, value)" />
+        <scope ilk="function" name="__gt__" signature="__gt__(self, other)" />
+        <scope ilk="function" name="__eq__" signature="__eq__(self, other)" />
+        <scope ilk="function" name="_get_length" signature="_get_length(self)" />
+        <scope ilk="function" name="__delitem__" signature="__delitem__(self, attname_or_tuple)" />
+        <scope ilk="function" name="removeNamedItemNS" signature="removeNamedItemNS(self, namespaceURI, localName)" />
+        <scope ilk="function" name="items" signature="items(self)" />
+        <scope ilk="function" name="getNamedItem" signature="getNamedItem(self, name)" />
+        <scope ilk="function" name="item" signature="item(self, index)" />
+        <scope ilk="function" name="__le__" signature="__le__(self, other)" />
+        <scope ilk="function" name="values" signature="values(self)" />
+        <scope ilk="function" name="__ge__" signature="__ge__(self, other)" />
+      </scope>
+      <scope classrefs="Text" doc="&#xA;" ilk="class" line="1165" lineend="1177" name="CDATASection">
+        <scope ilk="function" line="1174" lineend="1177" name="writexml" signature="writexml(self, writer, indent=&apos;&apos;, addindent=&apos;&apos;, newl=&apos;&apos;)">
+          <variable citdl="CDATASection" ilk="argument" name="self" />
+          <variable ilk="argument" name="writer" />
+          <variable citdl="str" ilk="argument" name="indent" />
+          <variable citdl="str" ilk="argument" name="addindent" />
+          <variable citdl="str" ilk="argument" name="newl" />
+        </scope>
+        <variable citdl="Node.CDATA_SECTION_NODE" line="1171" name="nodeType" />
+        <variable citdl="str" line="1172" name="nodeName" />
+      </scope>
+      <scope classrefs="Childless Node" doc="&#xA;" ilk="class" line="964" lineend="1033" name="CharacterData">
+        <scope ilk="function" line="971" lineend="973" name="_set_data" signature="_set_data(self, data)">
+          <variable citdl="CharacterData" ilk="argument" name="self" />
+          <variable ilk="argument" name="data" />
+          <variable citdl="dict" line="972" name="d" />
+        </scope>
+        <scope ilk="function" line="975" name="_get_nodeValue" signature="_get_nodeValue(self)" />
+        <scope ilk="function" line="1024" lineend="1033" name="replaceData" signature="replaceData(self, offset, count, arg)">
+          <variable ilk="argument" name="count" />
+          <variable citdl="CharacterData" ilk="argument" name="self" />
+          <variable ilk="argument" name="arg" />
+          <variable ilk="argument" name="offset" />
+        </scope>
+        <scope ilk="function" line="978" lineend="982" name="__setattr__" signature="__setattr__(self, name, value)">
+          <variable citdl="CharacterData" ilk="argument" name="self" />
+          <variable ilk="argument" name="name" />
+          <variable ilk="argument" name="value" />
+        </scope>
+        <scope ilk="function" line="1005" lineend="1012" name="insertData" signature="insertData(self, offset, arg)">
+          <variable citdl="CharacterData" ilk="argument" name="self" />
+          <variable ilk="argument" name="arg" />
+          <variable ilk="argument" name="offset" />
+        </scope>
+        <scope ilk="function" line="969" lineend="970" name="_get_data" signature="_get_data(self)">
+          <variable citdl="CharacterData" ilk="argument" name="self" />
+        </scope>
+        <scope ilk="function" line="984" lineend="991" name="__repr__" returns="tuple" signature="__repr__(self)">
+          <variable citdl="CharacterData" ilk="argument" name="self" />
+          <variable citdl="self.data" line="985" name="data" />
+          <variable citdl="str" line="987" name="dotdotdot" />
+        </scope>
+        <scope ilk="function" line="1002" lineend="1003" name="appendData" signature="appendData(self, arg)">
+          <variable citdl="CharacterData" ilk="argument" name="self" />
+          <variable ilk="argument" name="arg" />
+        </scope>
+        <scope ilk="function" line="1014" lineend="1022" name="deleteData" signature="deleteData(self, offset, count)">
+          <variable ilk="argument" name="count" />
+          <variable citdl="CharacterData" ilk="argument" name="self" />
+          <variable ilk="argument" name="offset" />
+        </scope>
+        <scope ilk="function" line="993" lineend="1000" name="substringData" returns="list" signature="substringData(self, offset, count)">
+          <variable ilk="argument" name="count" />
+          <variable citdl="CharacterData" ilk="argument" name="self" />
+          <variable ilk="argument" name="offset" />
+        </scope>
+        <scope ilk="function" line="976" name="_set_nodeValue" signature="_set_nodeValue(self, data)" />
+        <scope ilk="function" line="967" name="__len__" signature="__len__(self)" />
+        <scope ilk="function" line="965" lineend="966" name="_get_length" returns="len()" signature="_get_length(self)">
+          <variable citdl="CharacterData" ilk="argument" name="self" />
+        </scope>
+        <variable attributes="__instancevar__" citdl="list" line="1003" name="data" />
+      </scope>
+      <scope classrefs="object" doc="Mixin that makes childless-ness easy to implement and avoids&#xA;the complexity of the Node methods that deal with children." ilk="class" line="893" lineend="930" name="Childless">
+        <scope ilk="function" line="924" lineend="926" name="normalize" signature="normalize(self)">
+          <variable citdl="Childless" ilk="argument" name="self" />
+        </scope>
+        <scope ilk="function" line="909" lineend="911" name="appendChild" signature="appendChild(self, node)">
+          <variable ilk="argument" name="node" />
+          <variable citdl="Childless" ilk="argument" name="self" />
+        </scope>
+        <scope ilk="function" line="916" lineend="918" name="insertBefore" signature="insertBefore(self, newChild, refChild)">
+          <variable citdl="Childless" ilk="argument" name="self" />
+          <variable ilk="argument" name="newChild" />
+          <variable ilk="argument" name="refChild" />
+        </scope>
+        <scope ilk="function" line="903" lineend="904" name="_get_firstChild" signature="_get_firstChild(self)">
+          <variable citdl="Childless" ilk="argument" name="self" />
+        </scope>
+        <scope ilk="function" line="920" lineend="922" name="removeChild" signature="removeChild(self, oldChild)">
+          <variable citdl="Childless" ilk="argument" name="self" />
+          <variable ilk="argument" name="oldChild" />
+        </scope>
+        <scope ilk="function" line="913" lineend="914" name="hasChildNodes" returns="bool" signature="hasChildNodes(self)">
+          <variable citdl="Childless" ilk="argument" name="self" />
+        </scope>
+        <scope ilk="function" line="928" lineend="930" name="replaceChild" signature="replaceChild(self, newChild, oldChild)">
+          <variable citdl="Childless" ilk="argument" name="self" />
+          <variable ilk="argument" name="newChild" />
+          <variable ilk="argument" name="oldChild" />
+        </scope>
+        <scope ilk="function" line="906" lineend="907" name="_get_lastChild" signature="_get_lastChild(self)">
+          <variable citdl="Childless" ilk="argument" name="self" />
+        </scope>
+        <variable citdl="EmptyNodeList()" line="899" name="childNodes" />
+        <variable line="898" name="attributes" />
+        <variable line="901" name="lastChild" />
+        <variable line="900" name="firstChild" />
+      </scope>
+      <scope classrefs="CharacterData" doc="&#xA;" ilk="class" line="1152" lineend="1162" name="Comment">
+        <scope ilk="function" line="1159" lineend="1162" name="writexml" signature="writexml(self, writer, indent=&apos;&apos;, addindent=&apos;&apos;, newl=&apos;&apos;)">
+          <variable citdl="Comment" ilk="argument" name="self" />
+          <variable ilk="argument" name="writer" />
+          <variable citdl="str" ilk="argument" name="indent" />
+          <variable citdl="str" ilk="argument" name="addindent" />
+          <variable citdl="str" ilk="argument" name="newl" />
+        </scope>
+        <scope ilk="function" line="1156" lineend="1157" name="__init__" signature="__init__(self, data)">
+          <variable citdl="Comment" ilk="argument" name="self" />
+          <variable ilk="argument" name="data" />
+        </scope>
+        <variable attributes="__instancevar__" line="1157" name="data" />
+        <variable citdl="Node.COMMENT_NODE" line="1153" name="nodeType" />
+        <variable citdl="str" line="1154" name="nodeName" />
+      </scope>
+      <scope classrefs="DOMImplementationLS" doc="&#xA;" ilk="class" line="1371" lineend="1448" name="DOMImplementation">
+        <scope doc="# internal" ilk="function" line="1447" lineend="1448" name="_create_document" returns="Document()" signature="_create_document(self)">
+          <variable citdl="DOMImplementation" ilk="argument" name="self" />
+        </scope>
+        <scope ilk="function" line="1440" lineend="1444" name="getInterface" returns="DOMImplementation" signature="getInterface(self, feature)">
+          <variable citdl="DOMImplementation" ilk="argument" name="self" />
+          <variable ilk="argument" name="feature" />
+        </scope>
+        <scope ilk="function" line="1382" lineend="1385" name="hasFeature" returns="bool" signature="hasFeature(self, feature, version)">
+          <variable citdl="DOMImplementation" ilk="argument" name="self" />
+          <variable ilk="argument" name="version" />
+          <variable ilk="argument" name="feature" />
+        </scope>
+        <scope ilk="function" line="1387" lineend="1430" name="createDocument" returns="self._create_document()" signature="createDocument(self, namespaceURI, qualifiedName, doctype)">
+          <variable citdl="bool" line="1393" name="add_root_element" />
+          <variable ilk="argument" name="qualifiedName" />
+          <variable citdl="self._create_document()" line="1391" name="doc" />
+          <variable citdl="DOMImplementation" ilk="argument" name="self" />
+          <variable ilk="argument" name="doctype" />
+          <variable citdl="doc.createElementNS()" line="1420" name="element" />
+          <variable ilk="argument" name="namespaceURI" />
+          <variable line="1413" name="prefix" />
+          <variable line="1413" name="localname" />
+        </scope>
+        <scope ilk="function" line="1432" lineend="1436" name="createDocumentType" returns="DocumentType" signature="createDocumentType(self, qualifiedName, publicId, systemId)">
+          <variable ilk="argument" name="systemId" />
+          <variable citdl="DOMImplementation" ilk="argument" name="self" />
+          <variable ilk="argument" name="publicId" />
+          <variable ilk="argument" name="qualifiedName" />
+          <variable citdl="DocumentType" line="1433" name="doctype" />
+        </scope>
+        <variable attributes="protected" citdl="list" line="1372" name="_features" />
+      </scope>
+      <scope classrefs="object" doc="&#xA;" ilk="class" name="DOMImplementationLS">
+        <scope ilk="function" name="createDOMWriter" signature="createDOMWriter(self)" />
+        <scope ilk="function" name="createDOMBuilder" signature="createDOMBuilder(self, mode, schemaType)" />
+        <scope ilk="function" name="createDOMInputSource" signature="createDOMInputSource(self)" />
+      </scope>
+      <scope classrefs="Node DocumentLS" doc="&#xA;" ilk="class" line="1500" lineend="1832" name="Document">
+        <scope ilk="function" line="1565" lineend="1579" name="appendChild" returns="Node.appendChild()" signature="appendChild(self, node)">
+          <variable ilk="argument" name="node" />
+          <variable citdl="Document" ilk="argument" name="self" />
+        </scope>
+        <scope ilk="function" line="1534" lineend="1539" name="_get_elem_info" returns="self._elem_info.get()" signature="_get_elem_info(self, element)">
+          <variable citdl="Document" ilk="argument" name="self" />
+          <variable citdl="element.tagName" line="1536" name="key" />
+          <variable ilk="argument" name="element" />
+        </scope>
+        <scope ilk="function" line="1544" lineend="1545" name="_get_doctype" signature="_get_doctype(self)">
+          <variable citdl="Document" ilk="argument" name="self" />
+        </scope>
+        <scope ilk="function" line="1661" lineend="1665" name="createAttribute" returns="Attr" signature="createAttribute(self, qName)">
+          <variable citdl="Attr" line="1662" name="a" />
+          <variable citdl="Document" ilk="argument" name="self" />
+          <variable ilk="argument" name="qName" />
+        </scope>
+        <scope ilk="function" line="1625" lineend="1628" name="createDocumentFragment" returns="DocumentFragment" signature="createDocumentFragment(self)">
+          <variable citdl="Document" ilk="argument" name="self" />
+          <variable citdl="DocumentFragment" line="1626" name="d" />
+        </scope>
+        <scope ilk="function" line="1562" lineend="1563" name="_get_version" signature="_get_version(self)">
+          <variable citdl="Document" ilk="argument" name="self" />
+        </scope>
+        <scope ilk="function" line="1656" lineend="1659" name="createProcessingInstruction" returns="ProcessingInstruction" signature="createProcessingInstruction(self, target, data)">
+          <variable citdl="ProcessingInstruction" line="1657" name="p" />
+          <variable citdl="Document" ilk="argument" name="self" />
+          <variable ilk="argument" name="data" />
+          <variable ilk="argument" name="target" />
+        </scope>
+        <scope ilk="function" line="1593" lineend="1596" name="_get_documentElement" returns="node" signature="_get_documentElement(self)">
+          <variable citdl="Document" ilk="argument" name="self" />
+        </scope>
+        <scope ilk="function" line="1526" lineend="1532" name="__init__" signature="__init__(self)">
+          <variable citdl="Document" ilk="argument" name="self" />
+        </scope>
+        <scope ilk="function" line="1758" lineend="1759" name="isSupported" returns="self.implementation.hasFeature()" signature="isSupported(self, feature, version)">
+          <variable citdl="Document" ilk="argument" name="self" />
+          <variable ilk="argument" name="version" />
+          <variable ilk="argument" name="feature" />
+        </scope>
+        <scope ilk="function" line="1547" lineend="1548" name="_get_documentURI" signature="_get_documentURI(self)">
+          <variable citdl="Document" ilk="argument" name="self" />
+        </scope>
+        <scope ilk="function" line="1651" lineend="1654" name="createComment" returns="Comment" signature="createComment(self, data)">
+          <variable citdl="Document" ilk="argument" name="self" />
+          <variable ilk="argument" name="data" />
+          <variable citdl="Comment" line="1652" name="c" />
+        </scope>
+        <scope ilk="function" line="1683" lineend="1686" name="_create_entity" returns="Entity" signature="_create_entity(self, name, publicId, systemId, notationName)">
+          <variable ilk="argument" name="publicId" />
+          <variable ilk="argument" name="name" />
+          <variable ilk="argument" name="notationName" />
+          <variable ilk="argument" name="systemId" />
+          <variable citdl="Document" ilk="argument" name="self" />
+          <variable citdl="Entity" line="1684" name="e" />
+        </scope>
+        <scope ilk="function" line="1761" lineend="1766" name="importNode" returns="_clone_node()" signature="importNode(self, node, deep)">
+          <variable ilk="argument" name="node" />
+          <variable citdl="Document" ilk="argument" name="self" />
+          <variable ilk="argument" name="deep" />
+        </scope>
+        <scope ilk="function" line="1541" lineend="1542" name="_get_actualEncoding" signature="_get_actualEncoding(self)">
+          <variable citdl="Document" ilk="argument" name="self" />
+        </scope>
+        <scope ilk="function" line="1556" lineend="1557" name="_get_standalone" signature="_get_standalone(self)">
+          <variable citdl="Document" ilk="argument" name="self" />
+        </scope>
+        <scope ilk="function" line="1643" lineend="1649" name="createCDATASection" returns="CDATASection" signature="createCDATASection(self, data)">
+          <variable citdl="Document" ilk="argument" name="self" />
+          <variable ilk="argument" name="data" />
+          <variable citdl="CDATASection" line="1646" name="c" />
+        </scope>
+        <scope ilk="function" line="1751" lineend="1752" name="getElementsByTagName" returns="_get_elements_by_tagName_helper()" signature="getElementsByTagName(self, name)">
+          <variable citdl="Document" ilk="argument" name="self" />
+          <variable ilk="argument" name="name" />
+        </scope>
+        <scope ilk="function" line="1667" lineend="1671" name="createElementNS" returns="Element" signature="createElementNS(self, namespaceURI, qualifiedName)">
+          <variable ilk="argument" name="namespaceURI" />
+          <variable ilk="argument" name="qualifiedName" />
+          <variable citdl="Element" line="1669" name="e" />
+          <variable line="1668" name="localName" />
+          <variable citdl="Document" ilk="argument" name="self" />
+          <variable line="1668" name="prefix" />
+        </scope>
+        <scope ilk="function" line="1754" lineend="1756" name="getElementsByTagNameNS" returns="_get_elements_by_tagName_ns_helper()" signature="getElementsByTagNameNS(self, namespaceURI, localName)">
+          <variable ilk="argument" name="namespaceURI" />
+          <variable citdl="Document" ilk="argument" name="self" />
+          <variable ilk="argument" name="localName" />
+        </scope>
+        <scope ilk="function" line="1779" lineend="1832" name="renameNode" signature="renameNode(self, n, namespaceURI, name)">
+          <variable ilk="argument" name="name" />
+          <variable citdl="Document" ilk="argument" name="self" />
+          <variable ilk="argument" name="n" />
+          <variable ilk="argument" name="namespaceURI" />
+          <variable line="1789" name="prefix" />
+          <variable citdl="n._is_id" line="1808" name="is_id" />
+          <variable line="1789" name="localName" />
+          <variable citdl="n.ownerElement" line="1806" name="element" />
+          <variable citdl="dict" line="1813" name="d" />
+        </scope>
+        <scope ilk="function" line="1553" lineend="1554" name="_get_errorHandler" signature="_get_errorHandler(self)">
+          <variable citdl="Document" ilk="argument" name="self" />
+        </scope>
+        <scope ilk="function" line="1604" lineend="1623" name="cloneNode" returns="self.implementation.createDocument()" signature="cloneNode(self, deep)">
+          <variable citdl="Document" ilk="argument" name="self" />
+          <variable citdl="_clone_node()" line="1612" name="childclone" />
+          <variable citdl="self.implementation.createDocument()" line="1607" name="clone" />
+          <variable ilk="argument" name="deep" />
+        </scope>
+        <scope ilk="function" line="1630" lineend="1633" name="createElement" returns="Element" signature="createElement(self, tagName)">
+          <variable citdl="Document" ilk="argument" name="self" />
+          <variable citdl="Element" line="1631" name="e" />
+          <variable ilk="argument" name="tagName" />
+        </scope>
+        <scope ilk="function" line="1598" lineend="1602" name="unlink" signature="unlink(self)">
+          <variable citdl="Document" ilk="argument" name="self" />
+        </scope>
+        <scope ilk="function" line="1559" lineend="1560" name="_get_strictErrorChecking" returns="bool" signature="_get_strictErrorChecking(self)">
+          <variable citdl="Document" ilk="argument" name="self" />
+        </scope>
+        <scope ilk="function" line="1550" lineend="1551" name="_get_encoding" signature="_get_encoding(self)">
+          <variable citdl="Document" ilk="argument" name="self" />
+        </scope>
+        <scope ilk="function" line="1768" lineend="1775" name="writexml" signature="writexml(self, writer, indent=&apos;&apos;, addindent=&apos;&apos;, newl=&apos;&apos;, encoding=None)">
+          <variable citdl="str" ilk="argument" name="addindent" />
+          <variable citdl="str" ilk="argument" name="indent" />
+          <variable citdl="str" ilk="argument" name="newl" />
+          <variable ilk="argument" name="encoding" />
+          <variable citdl="Document" ilk="argument" name="self" />
+          <variable ilk="argument" name="writer" />
+        </scope>
+        <scope ilk="function" line="1688" lineend="1691" name="_create_notation" returns="Notation" signature="_create_notation(self, name, publicId, systemId)">
+          <variable ilk="argument" name="systemId" />
+          <variable citdl="Document" ilk="argument" name="self" />
+          <variable ilk="argument" name="publicId" />
+          <variable ilk="argument" name="name" />
+          <variable citdl="Notation" line="1689" name="n" />
+        </scope>
+        <scope ilk="function" line="1581" lineend="1591" name="removeChild" signature="removeChild(self, oldChild)">
+          <variable citdl="Document" ilk="argument" name="self" />
+          <variable ilk="argument" name="oldChild" />
+        </scope>
+        <scope ilk="function" line="1693" lineend="1749" name="getElementById" returns="stack.pop()" signature="getElementById(self, id)">
+          <variable citdl="stack.pop()" line="1711" name="node" />
+          <variable citdl="_get_elem_info()" line="1716" name="info" />
+          <variable citdl="stack.pop()" line="1709" name="result" />
+          <variable citdl="Document" ilk="argument" name="self" />
+          <variable citdl="list" line="1699" name="stack" />
+          <variable ilk="argument" name="id" />
+        </scope>
+        <scope ilk="function" line="1673" lineend="1678" name="createAttributeNS" returns="Attr" signature="createAttributeNS(self, namespaceURI, qualifiedName)">
+          <variable citdl="Attr" line="1675" name="a" />
+          <variable ilk="argument" name="namespaceURI" />
+          <variable ilk="argument" name="qualifiedName" />
+          <variable line="1674" name="localName" />
+          <variable citdl="Document" ilk="argument" name="self" />
+          <variable line="1674" name="prefix" />
+        </scope>
+        <scope ilk="function" line="1635" lineend="1641" name="createTextNode" returns="Text" signature="createTextNode(self, data)">
+          <variable citdl="Document" ilk="argument" name="self" />
+          <variable ilk="argument" name="data" />
+          <variable citdl="Text" line="1638" name="t" />
+        </scope>
+        <variable line="1516" name="actualEncoding" />
+        <variable line="1517" name="encoding" />
+        <variable line="1509" name="parentNode" />
+        <variable attributes="protected __instancevar__" citdl="list" line="1532" name="_id_search_stack" />
+        <variable attributes="__instancevar__" citdl="NodeList()" line="1527" name="childNodes" />
+        <variable line="1522" name="documentURI" />
+        <variable citdl="str" line="1505" name="nodeName" />
+        <variable citdl="DOMImplementation" line="1512" name="implementation" />
+        <variable attributes="protected __instancevar__" citdl="dict" line="1530" name="_elem_info" />
+        <variable line="1521" name="errorHandler" />
+        <variable line="1519" name="version" />
+        <variable attributes="protected" citdl="tuple" line="1501" name="_child_node_types" />
+        <variable line="1510" name="previousSibling" />
+        <variable citdl="Node.DOCUMENT_NODE" line="1504" name="nodeType" />
+        <variable attributes="__instancevar__" line="1589" name="documentElement" />
+        <variable line="1518" name="standalone" />
+        <variable line="1508" name="doctype" />
+        <variable line="1506" name="nodeValue" />
+        <variable citdl="False" line="1520" name="strictErrorChecking" />
+        <variable attributes="protected" citdl="int" line="1524" name="_magic_id_count" />
+        <variable line="1507" name="attributes" />
+        <variable attributes="protected __instancevar__" citdl="dict" line="1531" name="_id_cache" />
+      </scope>
+      <scope classrefs="Node" doc="&#xA;" ilk="class" line="326" lineend="341" name="DocumentFragment">
+        <scope ilk="function" line="340" lineend="341" name="__init__" signature="__init__(self)">
+          <variable citdl="DocumentFragment" ilk="argument" name="self" />
+        </scope>
+        <variable citdl="Node.DOCUMENT_FRAGMENT_NODE" line="327" name="nodeType" />
+        <variable citdl="str" line="328" name="nodeName" />
+        <variable line="329" name="nodeValue" />
+        <variable line="331" name="parentNode" />
+        <variable line="330" name="attributes" />
+        <variable attributes="__instancevar__" citdl="NodeList()" line="341" name="childNodes" />
+        <variable attributes="protected" citdl="tuple" line="332" name="_child_node_types" />
+      </scope>
+      <scope classrefs="object" doc="Mixin to create documents that conform to the load/save spec.&#xA;" ilk="class" name="DocumentLS">
+        <scope ilk="function" name="load" signature="load(self, uri)" />
+        <scope ilk="function" name="saveXML" signature="saveXML(self, snode)" />
+        <scope ilk="function" name="abort" signature="abort(self)" />
+        <scope ilk="function" name="_get_async" signature="_get_async(self)" />
+        <scope ilk="function" name="loadXML" signature="loadXML(self, source)" />
+        <scope ilk="function" name="_set_async" signature="_set_async(self, async)" />
+      </scope>
+      <scope classrefs="Identified Childless Node" doc="&#xA;" ilk="class" line="1262" lineend="1320" name="DocumentType">
+        <scope ilk="function" line="1308" lineend="1320" name="writexml" signature="writexml(self, writer, indent=&apos;&apos;, addindent=&apos;&apos;, newl=&apos;&apos;)">
+          <variable citdl="DocumentType" ilk="argument" name="self" />
+          <variable ilk="argument" name="writer" />
+          <variable citdl="str" ilk="argument" name="indent" />
+          <variable citdl="str" ilk="argument" name="addindent" />
+          <variable citdl="str" ilk="argument" name="newl" />
+        </scope>
+        <scope ilk="function" line="1281" lineend="1306" name="cloneNode" signature="cloneNode(self, deep)">
+          <variable citdl="DocumentType" ilk="argument" name="self" />
+          <variable citdl="Notation()" line="1292" name="notation" />
+          <variable citdl="" line="1284" name="clone" />
+          <variable citdl="xml.dom.UserDataHandler.NODE_CLONED" line="1287" name="operation" />
+          <variable ilk="argument" name="deep" />
+          <variable citdl="Entity()" line="1296" name="entity" />
+        </scope>
+        <scope ilk="function" line="1278" lineend="1279" name="_get_internalSubset" signature="_get_internalSubset(self)">
+          <variable citdl="DocumentType" ilk="argument" name="self" />
+        </scope>
+        <scope ilk="function" line="1270" lineend="1276" name="__init__" signature="__init__(self, qualifiedName)">
+          <variable line="1274" name="localname" />
+          <variable citdl="DocumentType" ilk="argument" name="self" />
+          <variable line="1274" name="prefix" />
+          <variable ilk="argument" name="qualifiedName" />
+        </scope>
+        <variable line="1266" name="publicId" />
+        <variable line="1265" name="name" />
+        <variable line="1264" name="nodeValue" />
+        <variable attributes="__instancevar__" citdl="ReadOnlySequentialNamedNodeMap" line="1272" name="notations" />
+        <variable attributes="__instancevar__" citdl="ReadOnlySequentialNamedNodeMap" line="1271" name="entities" />
+        <variable line="1268" name="internalSubset" />
+        <variable line="1267" name="systemId" />
+        <variable citdl="Node.DOCUMENT_TYPE_NODE" line="1263" name="nodeType" />
+        <variable attributes="__instancevar__" line="1276" name="nodeName" />
+      </scope>
+      <variable citdl="NoneType" name="EMPTY_NAMESPACE" />
+      <variable citdl="NoneType" name="EMPTY_PREFIX" />
+      <scope classrefs="Node" doc="&#xA;" ilk="class" line="661" lineend="874" name="Element">
+        <scope ilk="function" line="780" lineend="785" name="removeAttribute" signature="removeAttribute(self, name)">
+          <variable citdl="Element" ilk="argument" name="self" />
+          <variable ilk="argument" name="name" />
+          <variable line="782" name="attr" />
+        </scope>
+        <scope ilk="function" line="705" lineend="709" name="getAttribute" returns="str" signature="getAttribute(self, attname)">
+          <variable citdl="Element" ilk="argument" name="self" />
+          <variable ilk="argument" name="attname" />
+        </scope>
+        <scope ilk="function" line="717" lineend="730" name="setAttribute" signature="setAttribute(self, attname, value)">
+          <variable citdl="self.getAttributeNode()" line="718" name="attr" />
+          <variable citdl="Element" ilk="argument" name="self" />
+          <variable citdl="dict" line="722" name="d" />
+          <variable ilk="argument" name="value" />
+          <variable ilk="argument" name="attname" />
+        </scope>
+        <scope ilk="function" line="812" lineend="813" name="hasAttributeNS" returns="bool" signature="hasAttributeNS(self, namespaceURI, localName)">
+          <variable ilk="argument" name="namespaceURI" />
+          <variable citdl="Element" ilk="argument" name="self" />
+          <variable ilk="argument" name="localName" />
+        </scope>
+        <scope ilk="function" line="732" lineend="752" name="setAttributeNS" signature="setAttributeNS(self, namespaceURI, qualifiedName, value)">
+          <variable ilk="argument" name="qualifiedName" />
+          <variable citdl="Attr" line="734" name="attr" />
+          <variable citdl="Element" ilk="argument" name="self" />
+          <variable ilk="argument" name="value" />
+          <variable ilk="argument" name="namespaceURI" />
+          <variable line="733" name="prefix" />
+          <variable line="733" name="localname" />
+          <variable citdl="dict" line="738" name="d" />
+        </scope>
+        <scope ilk="function" line="711" lineend="715" name="getAttributeNS" returns="str" signature="getAttributeNS(self, namespaceURI, localName)">
+          <variable ilk="argument" name="namespaceURI" />
+          <variable citdl="Element" ilk="argument" name="self" />
+          <variable ilk="argument" name="localName" />
+        </scope>
+        <scope ilk="function" line="675" lineend="683" name="__init__" signature="__init__(self, tagName, namespaceURI=None, prefix=None, localName=None)">
+          <variable citdl="EMPTY_NAMESPACE" ilk="argument" name="namespaceURI" />
+          <variable citdl="Element" ilk="argument" name="self" />
+          <variable ilk="argument" name="prefix" />
+          <variable ilk="argument" name="tagName" />
+          <variable ilk="argument" name="localName" />
+        </scope>
+        <scope ilk="function" line="794" lineend="805" name="removeAttributeNode" signature="removeAttributeNode(self, node)">
+          <variable ilk="argument" name="node" />
+          <variable citdl="Element" ilk="argument" name="self" />
+        </scope>
+        <scope ilk="function" line="754" lineend="755" name="getAttributeNode" returns="self._attrs.get()" signature="getAttributeNode(self, attrname)">
+          <variable ilk="argument" name="attrname" />
+          <variable citdl="Element" ilk="argument" name="self" />
+        </scope>
+        <scope ilk="function" line="857" lineend="859" name="setIdAttribute" signature="setIdAttribute(self, name)">
+          <variable citdl="getAttributeNode()" line="858" name="idAttr" />
+          <variable citdl="Element" ilk="argument" name="self" />
+          <variable ilk="argument" name="name" />
+        </scope>
+        <scope ilk="function" line="695" lineend="696" name="_get_tagName" signature="_get_tagName(self)">
+          <variable citdl="Element" ilk="argument" name="self" />
+        </scope>
+        <scope ilk="function" line="787" lineend="792" name="removeAttributeNS" signature="removeAttributeNS(self, namespaceURI, localName)">
+          <variable ilk="argument" name="namespaceURI" />
+          <variable citdl="Element" ilk="argument" name="self" />
+          <variable line="789" name="attr" />
+          <variable ilk="argument" name="localName" />
+        </scope>
+        <scope ilk="function" line="778" name="setAttributeNodeNS" signature="setAttributeNodeNS(self, attr)" />
+        <scope ilk="function" line="815" lineend="816" name="getElementsByTagName" returns="_get_elements_by_tagName_helper()" signature="getElementsByTagName(self, name)">
+          <variable citdl="Element" ilk="argument" name="self" />
+          <variable ilk="argument" name="name" />
+        </scope>
+        <scope ilk="function" line="818" lineend="820" name="getElementsByTagNameNS" returns="_get_elements_by_tagName_ns_helper()" signature="getElementsByTagNameNS(self, namespaceURI, localName)">
+          <variable ilk="argument" name="namespaceURI" />
+          <variable citdl="Element" ilk="argument" name="self" />
+          <variable ilk="argument" name="localName" />
+        </scope>
+        <scope ilk="function" line="865" lineend="874" name="setIdAttributeNode" signature="setIdAttributeNode(self, idAttr)">
+          <variable ilk="argument" name="idAttr" />
+          <variable citdl="Element" ilk="argument" name="self" />
+        </scope>
+        <scope ilk="function" line="760" lineend="776" name="setAttributeNode" returns="self._attrs.get()" signature="setAttributeNode(self, attr)">
+          <variable citdl="self._attrs.get()" line="763" name="old1" />
+          <variable citdl="Element" ilk="argument" name="self" />
+          <variable citdl="self._attrsNS.get()" line="766" name="old2" />
+          <variable ilk="argument" name="attr" />
+        </scope>
+        <scope ilk="function" line="698" lineend="703" name="unlink" signature="unlink(self)">
+          <variable citdl="Element" ilk="argument" name="self" />
+        </scope>
+        <scope ilk="function" line="846" lineend="847" name="_get_attributes" returns="NamedNodeMap" signature="_get_attributes(self)">
+          <variable citdl="Element" ilk="argument" name="self" />
+        </scope>
+        <scope ilk="function" line="690" lineend="693" name="_get_localName" signature="_get_localName(self)">
+          <variable citdl="Element" ilk="argument" name="self" />
+        </scope>
+        <scope ilk="function" line="825" lineend="844" name="writexml" signature="writexml(self, writer, indent=&apos;&apos;, addindent=&apos;&apos;, newl=&apos;&apos;)">
+          <variable citdl="str" ilk="argument" name="addindent" />
+          <variable citdl="sorted()" line="832" name="a_names" />
+          <variable citdl="str" ilk="argument" name="indent" />
+          <variable citdl="self._get_attributes()" line="831" name="attrs" />
+          <variable citdl="str" ilk="argument" name="newl" />
+          <variable citdl="Element" ilk="argument" name="self" />
+          <variable ilk="argument" name="writer" />
+        </scope>
+        <scope ilk="function" line="861" lineend="863" name="setIdAttributeNS" signature="setIdAttributeNS(self, namespaceURI, localName)">
+          <variable citdl="getAttributeNodeNS()" line="862" name="idAttr" />
+          <variable ilk="argument" name="namespaceURI" />
+          <variable citdl="Element" ilk="argument" name="self" />
+          <variable ilk="argument" name="localName" />
+        </scope>
+        <scope ilk="function" line="757" lineend="758" name="getAttributeNodeNS" returns="self._attrsNS.get()" signature="getAttributeNodeNS(self, namespaceURI, localName)">
+          <variable ilk="argument" name="namespaceURI" />
+          <variable citdl="Element" ilk="argument" name="self" />
+          <variable ilk="argument" name="localName" />
+        </scope>
+        <scope ilk="function" line="822" lineend="823" name="__repr__" returns="tuple" signature="__repr__(self)">
+          <variable citdl="Element" ilk="argument" name="self" />
+        </scope>
+        <scope ilk="function" line="849" lineend="853" name="hasAttributes" returns="bool" signature="hasAttributes(self)">
+          <variable citdl="Element" ilk="argument" name="self" />
+        </scope>
+        <scope ilk="function" line="807" name="removeAttributeNodeNS" signature="removeAttributeNodeNS(self, node)" />
+        <scope ilk="function" line="809" lineend="810" name="hasAttribute" returns="bool" signature="hasAttribute(self, name)">
+          <variable citdl="Element" ilk="argument" name="self" />
+          <variable ilk="argument" name="name" />
+        </scope>
+        <variable citdl="TypeInfo" line="664" name="schemaType" />
+        <variable citdl="Node.ELEMENT_NODE" line="662" name="nodeType" />
+        <variable line="663" name="nodeValue" />
+        <variable attributes="__instancevar__" citdl="EMPTY_NAMESPACE" line="679" name="namespaceURI" />
+        <variable attributes="__instancevar__" line="678" name="prefix" />
+        <variable attributes="protected __instancevar__" citdl="dict" line="683" name="_attrsNS" />
+        <variable attributes="protected" citdl="tuple" line="668" name="_child_node_types" />
+        <variable attributes="__instancevar__" line="677" name="tagName" />
+        <variable attributes="__instancevar__" citdl="NodeList()" line="680" name="childNodes" />
+        <variable attributes="protected" citdl="int" line="666" name="_magic_id_nodes" />
+        <variable attributes="protected __instancevar__" citdl="dict" line="682" name="_attrs" />
+      </scope>
+      <scope classrefs="object" doc="Object that represents content-model information for an element.&#xA;This implementation is not expected to be used in practice; DOM builders should provide implementations which do the right thing using information available to it." ilk="class" line="1450" lineend="1490" name="ElementInfo">
+        <scope ilk="function" line="1489" lineend="1490" name="__setstate__" signature="__setstate__(self, state)">
+          <variable citdl="ElementInfo" ilk="argument" name="self" />
+          <variable ilk="argument" name="state" />
+        </scope>
+        <scope doc="Returns true iff the named attribute is a DTD-style ID." ilk="function" line="1478" lineend="1480" name="isId" returns="bool" signature="isId(self, aname)">
+          <variable citdl="ElementInfo" ilk="argument" name="self" />
+          <variable ilk="argument" name="aname" />
+        </scope>
+        <scope doc="Returns true iff this element is declared to have an EMPTY&#xA;content model." ilk="function" line="1473" lineend="1476" name="isEmpty" returns="bool" signature="isEmpty(self)">
+          <variable citdl="ElementInfo" ilk="argument" name="self" />
+        </scope>
+        <scope ilk="function" line="1470" lineend="1471" name="isElementContent" returns="bool" signature="isElementContent(self)">
+          <variable citdl="ElementInfo" ilk="argument" name="self" />
+        </scope>
+        <scope doc="Returns true iff the identified attribute is a DTD-style ID." ilk="function" line="1482" lineend="1484" name="isIdNS" returns="bool" signature="isIdNS(self, namespaceURI, localName)">
+          <variable ilk="argument" name="namespaceURI" />
+          <variable citdl="ElementInfo" ilk="argument" name="self" />
+          <variable ilk="argument" name="localName" />
+        </scope>
+        <scope ilk="function" line="1486" lineend="1487" name="__getstate__" signature="__getstate__(self)">
+          <variable citdl="ElementInfo" ilk="argument" name="self" />
+        </scope>
+        <scope ilk="function" line="1464" lineend="1465" name="getAttributeType" returns="TypeInfo" signature="getAttributeType(self, aname)">
+          <variable citdl="ElementInfo" ilk="argument" name="self" />
+          <variable ilk="argument" name="aname" />
+        </scope>
+        <scope ilk="function" line="1461" lineend="1462" name="__init__" signature="__init__(self, name)">
+          <variable citdl="ElementInfo" ilk="argument" name="self" />
+          <variable ilk="argument" name="name" />
+        </scope>
+        <scope ilk="function" line="1467" lineend="1468" name="getAttributeTypeNS" returns="TypeInfo" signature="getAttributeTypeNS(self, namespaceURI, localName)">
+          <variable ilk="argument" name="namespaceURI" />
+          <variable citdl="ElementInfo" ilk="argument" name="self" />
+          <variable ilk="argument" name="localName" />
+        </scope>
+        <variable citdl="tuple" line="1459" name="__slots__" />
+        <variable attributes="__instancevar__" line="1462" name="tagName" />
+      </scope>
+      <scope classrefs="tuple" doc="&#xA;" ilk="class" name="EmptyNodeList">
+        <scope ilk="function" name="__radd__" signature="__radd__(self, other)" />
+        <scope ilk="function" name="item" signature="item(self, index)" />
+        <scope ilk="function" name="__add__" signature="__add__(self, other)" />
+        <scope ilk="function" name="_set_length" signature="_set_length(self, value)" />
+        <scope ilk="function" name="_get_length" signature="_get_length(self)" />
+      </scope>
+      <scope classrefs="Identified Node" doc="&#xA;" ilk="class" line="1322" lineend="1360" name="Entity">
+        <scope ilk="function" line="1346" lineend="1348" name="appendChild" signature="appendChild(self, newChild)">
+          <variable citdl="Entity" ilk="argument" name="self" />
+          <variable ilk="argument" name="newChild" />
+        </scope>
+        <scope ilk="function" line="1350" lineend="1352" name="insertBefore" signature="insertBefore(self, newChild, refChild)">
+          <variable citdl="Entity" ilk="argument" name="self" />
+          <variable ilk="argument" name="newChild" />
+          <variable ilk="argument" name="refChild" />
+        </scope>
+        <scope ilk="function" line="1340" lineend="1341" name="_get_encoding" signature="_get_encoding(self)">
+          <variable citdl="Entity" ilk="argument" name="self" />
+        </scope>
+        <scope ilk="function" line="1354" lineend="1356" name="removeChild" signature="removeChild(self, oldChild)">
+          <variable citdl="Entity" ilk="argument" name="self" />
+          <variable ilk="argument" name="oldChild" />
+        </scope>
+        <scope ilk="function" line="1331" lineend="1335" name="__init__" signature="__init__(self, name, publicId, systemId, notation)">
+          <variable ilk="argument" name="systemId" />
+          <variable citdl="Entity" ilk="argument" name="self" />
+          <variable ilk="argument" name="publicId" />
+          <variable ilk="argument" name="name" />
+          <variable ilk="argument" name="notation" />
+        </scope>
+        <scope ilk="function" line="1358" lineend="1360" name="replaceChild" signature="replaceChild(self, newChild, oldChild)">
+          <variable citdl="Entity" ilk="argument" name="self" />
+          <variable ilk="argument" name="newChild" />
+          <variable ilk="argument" name="oldChild" />
+        </scope>
+        <scope ilk="function" line="1343" lineend="1344" name="_get_version" signature="_get_version(self)">
+          <variable citdl="Entity" ilk="argument" name="self" />
+        </scope>
+        <scope ilk="function" line="1337" lineend="1338" name="_get_actualEncoding" signature="_get_actualEncoding(self)">
+          <variable citdl="Entity" ilk="argument" name="self" />
+        </scope>
+        <variable line="1327" name="actualEncoding" />
+        <variable citdl="Node.ENTITY_NODE" line="1324" name="nodeType" />
+        <variable attributes="__instancevar__" line="1332" name="nodeName" />
+        <variable line="1328" name="encoding" />
+        <variable line="1325" name="nodeValue" />
+        <variable line="1329" name="version" />
+        <variable attributes="__instancevar__" line="1333" name="notationName" />
+        <variable line="1323" name="attributes" />
+        <variable attributes="__instancevar__" citdl="NodeList()" line="1334" name="childNodes" />
+      </scope>
+      <scope classrefs="object" doc="Mix-in class that supports the publicId and systemId attributes.&#xA;" ilk="class" line="1246" lineend="1260" name="Identified">
+        <scope ilk="function" line="1256" lineend="1257" name="_get_publicId" signature="_get_publicId(self)">
+          <variable citdl="Identified" ilk="argument" name="self" />
+        </scope>
+        <scope ilk="function" line="1259" lineend="1260" name="_get_systemId" signature="_get_systemId(self)">
+          <variable citdl="Identified" ilk="argument" name="self" />
+        </scope>
+        <scope ilk="function" line="1252" lineend="1254" name="_identified_mixin_init" signature="_identified_mixin_init(self, publicId, systemId)">
+          <variable ilk="argument" name="systemId" />
+          <variable citdl="Identified" ilk="argument" name="self" />
+          <variable ilk="argument" name="publicId" />
+        </scope>
+        <variable attributes="__instancevar__" line="1254" name="systemId" />
+        <variable attributes="__instancevar__" line="1253" name="publicId" />
+      </scope>
+      <scope classrefs="object" doc="The attribute list is a transient interface to the underlying&#xA;dictionaries.  Mutations here will change the underlying element&apos;s dictionary.  Ordering is imposed artificially and does not reflect the order of attributes as found in an input document." ilk="class" line="468" lineend="632" name="NamedNodeMap">
+        <scope ilk="function" line="543" lineend="544" name="__lt__" returns="bool" signature="__lt__(self, other)">
+          <variable citdl="NamedNodeMap" ilk="argument" name="self" />
+          <variable ilk="argument" name="other" />
+        </scope>
+        <scope ilk="function" line="479" lineend="482" name="__init__" signature="__init__(self, attrs, attrsNS, ownerElement)">
+          <variable citdl="NamedNodeMap" ilk="argument" name="self" />
+          <variable ilk="argument" name="attrs" />
+          <variable ilk="argument" name="attrsNS" />
+          <variable ilk="argument" name="ownerElement" />
+        </scope>
+        <scope ilk="function" line="505" lineend="509" name="__contains__" returns="bool" signature="__contains__(self, key)">
+          <variable citdl="NamedNodeMap" ilk="argument" name="self" />
+          <variable ilk="argument" name="key" />
+        </scope>
+        <scope ilk="function" line="577" lineend="581" name="getNamedItemNS" signature="getNamedItemNS(self, namespaceURI, localName)">
+          <variable ilk="argument" name="namespaceURI" />
+          <variable citdl="NamedNodeMap" ilk="argument" name="self" />
+          <variable ilk="argument" name="localName" />
+        </scope>
+        <scope ilk="function" line="514" lineend="515" name="keysNS" returns="self._attrsNS.keys()" signature="keysNS(self)">
+          <variable citdl="NamedNodeMap" ilk="argument" name="self" />
+        </scope>
+        <scope ilk="function" line="525" lineend="529" name="_cmp" returns="bool" signature="_cmp(self, other)">
+          <variable citdl="NamedNodeMap" ilk="argument" name="self" />
+          <variable ilk="argument" name="other" />
+        </scope>
+        <scope ilk="function" line="583" lineend="593" name="removeNamedItem" returns="getNamedItem()" signature="removeNamedItem(self, name)">
+          <variable citdl="NamedNodeMap" ilk="argument" name="self" />
+          <variable ilk="argument" name="name" />
+          <variable citdl="getNamedItem()" line="584" name="n" />
+        </scope>
+        <scope ilk="function" line="520" lineend="521" name="get" returns="self._attrs.get()" signature="get(self, name, value=None)">
+          <variable citdl="NamedNodeMap" ilk="argument" name="self" />
+          <variable ilk="argument" name="name" />
+          <variable ilk="argument" name="value" />
+        </scope>
+        <scope ilk="function" line="628" lineend="629" name="__getstate__" returns="tuple" signature="__getstate__(self)">
+          <variable citdl="NamedNodeMap" ilk="argument" name="self" />
+        </scope>
+        <scope ilk="function" line="523" name="__len__" signature="__len__(self)" />
+        <scope ilk="function" line="546" lineend="547" name="__ne__" returns="bool" signature="__ne__(self, other)">
+          <variable citdl="NamedNodeMap" ilk="argument" name="self" />
+          <variable ilk="argument" name="other" />
+        </scope>
+        <scope ilk="function" line="620" lineend="621" name="setNamedItemNS" returns="NamedNodeMap.setNamedItem()" signature="setNamedItemNS(self, node)">
+          <variable ilk="argument" name="node" />
+          <variable citdl="NamedNodeMap" ilk="argument" name="self" />
+        </scope>
+        <scope ilk="function" line="549" lineend="553" name="__getitem__" signature="__getitem__(self, attname_or_tuple)">
+          <variable citdl="NamedNodeMap" ilk="argument" name="self" />
+          <variable ilk="argument" name="attname_or_tuple" />
+        </scope>
+        <scope ilk="function" line="631" lineend="632" name="__setstate__" signature="__setstate__(self, state)">
+          <variable citdl="NamedNodeMap" ilk="argument" name="self" />
+          <variable ilk="argument" name="state" />
+        </scope>
+        <scope ilk="function" line="511" lineend="512" name="keys" returns="self._attrs.keys()" signature="keys(self)">
+          <variable citdl="NamedNodeMap" ilk="argument" name="self" />
+        </scope>
+        <scope ilk="function" line="499" lineend="503" name="itemsNS" returns="list" signature="itemsNS(self)">
+          <variable citdl="NamedNodeMap" ilk="argument" name="self" />
+          <variable citdl="list" line="500" name="L" />
+        </scope>
+        <scope ilk="function" line="607" lineend="618" name="setNamedItem" returns="self._attrs.get()" signature="setNamedItem(self, node)">
+          <variable ilk="argument" name="node" />
+          <variable citdl="NamedNodeMap" ilk="argument" name="self" />
+          <variable citdl="self._attrs.get()" line="611" name="old" />
+        </scope>
+        <scope doc="# same as set" ilk="function" line="556" lineend="569" name="__setitem__" signature="__setitem__(self, attname, value)">
+          <variable citdl="Attr" line="559" name="node" />
+          <variable citdl="NamedNodeMap" ilk="argument" name="self" />
+          <variable ilk="argument" name="value" />
+          <variable ilk="argument" name="attname" />
+        </scope>
+        <scope ilk="function" line="537" lineend="538" name="__gt__" returns="bool" signature="__gt__(self, other)">
+          <variable citdl="NamedNodeMap" ilk="argument" name="self" />
+          <variable ilk="argument" name="other" />
+        </scope>
+        <scope ilk="function" line="531" lineend="532" name="__eq__" returns="bool" signature="__eq__(self, other)">
+          <variable citdl="NamedNodeMap" ilk="argument" name="self" />
+          <variable ilk="argument" name="other" />
+        </scope>
+        <scope ilk="function" line="484" lineend="485" name="_get_length" returns="len()" signature="_get_length(self)">
+          <variable citdl="NamedNodeMap" ilk="argument" name="self" />
+        </scope>
+        <scope ilk="function" line="623" lineend="626" name="__delitem__" signature="__delitem__(self, attname_or_tuple)">
+          <variable line="624" name="node" />
+          <variable citdl="NamedNodeMap" ilk="argument" name="self" />
+          <variable ilk="argument" name="attname_or_tuple" />
+        </scope>
+        <scope ilk="function" line="595" lineend="605" name="removeNamedItemNS" returns="getNamedItemNS()" signature="removeNamedItemNS(self, namespaceURI, localName)">
+          <variable ilk="argument" name="namespaceURI" />
+          <variable citdl="NamedNodeMap" ilk="argument" name="self" />
+          <variable citdl="getNamedItemNS()" line="596" name="n" />
+          <variable ilk="argument" name="localName" />
+        </scope>
+        <scope ilk="function" line="493" lineend="497" name="items" returns="list" signature="items(self)">
+          <variable citdl="NamedNodeMap" ilk="argument" name="self" />
+          <variable citdl="list" line="494" name="L" />
+        </scope>
+        <scope ilk="function" line="571" lineend="575" name="getNamedItem" signature="getNamedItem(self, name)">
+          <variable citdl="NamedNodeMap" ilk="argument" name="self" />
+          <variable ilk="argument" name="name" />
+        </scope>
+        <scope ilk="function" line="487" lineend="491" name="item" signature="item(self, index)">
+          <variable ilk="argument" name="index" />
+          <variable citdl="NamedNodeMap" ilk="argument" name="self" />
+        </scope>
+        <scope ilk="function" line="540" lineend="541" name="__le__" returns="bool" signature="__le__(self, other)">
+          <variable citdl="NamedNodeMap" ilk="argument" name="self" />
+          <variable ilk="argument" name="other" />
+        </scope>
+        <scope ilk="function" line="517" lineend="518" name="values" returns="self._attrs.values()" signature="values(self)">
+          <variable citdl="NamedNodeMap" ilk="argument" name="self" />
+        </scope>
+        <scope ilk="function" line="534" lineend="535" name="__ge__" returns="bool" signature="__ge__(self, other)">
+          <variable citdl="NamedNodeMap" ilk="argument" name="self" />
+          <variable ilk="argument" name="other" />
+        </scope>
+        <variable attributes="protected __instancevar__" line="482" name="_ownerElement" />
+        <variable citdl="tuple" line="477" name="__slots__" />
+        <variable attributes="protected __instancevar__" line="481" name="_attrsNS" />
+        <variable attributes="protected __instancevar__" line="480" name="_attrs" />
+      </scope>
+      <scope classrefs="Node" doc="&#xA;" ilk="class" line="34" lineend="277" name="Node">
+        <scope ilk="function" line="113" lineend="128" name="appendChild" signature="appendChild(self, node)">
+          <variable ilk="argument" name="node" />
+          <variable citdl="Node" ilk="argument" name="self" />
+        </scope>
+        <scope ilk="function" line="46" lineend="47" name="toxml" returns="self.toprettyxml()" signature="toxml(self, encoding=None)">
+          <variable citdl="Node" ilk="argument" name="self" />
+          <variable ilk="argument" name="encoding" />
+        </scope>
+        <scope ilk="function" line="276" lineend="277" name="__exit__" signature="__exit__(self, et, ev, tb)">
+          <variable ilk="argument" name="et" />
+          <variable citdl="Node" ilk="argument" name="self" />
+          <variable ilk="argument" name="ev" />
+          <variable ilk="argument" name="tb" />
+        </scope>
+        <scope ilk="function" line="81" lineend="111" name="insertBefore" signature="insertBefore(self, newChild, refChild)">
+          <variable line="105" name="node" />
+          <variable citdl="self.childNodes.index()" line="96" name="index" />
+          <variable citdl="Node" ilk="argument" name="self" />
+          <variable ilk="argument" name="newChild" />
+          <variable ilk="argument" name="refChild" />
+        </scope>
+        <scope ilk="function" line="217" lineend="218" name="isSameNode" returns="bool" signature="isSameNode(self, other)">
+          <variable citdl="Node" ilk="argument" name="self" />
+          <variable ilk="argument" name="other" />
+        </scope>
+        <scope ilk="function" line="73" lineend="75" name="_get_firstChild" signature="_get_firstChild(self)">
+          <variable citdl="Node" ilk="argument" name="self" />
+        </scope>
+        <scope ilk="function" line="205" lineend="206" name="cloneNode" returns="_clone_node()" signature="cloneNode(self, deep)">
+          <variable citdl="Node" ilk="argument" name="self" />
+          <variable ilk="argument" name="deep" />
+        </scope>
+        <scope ilk="function" line="43" lineend="44" name="__bool__" returns="bool" signature="__bool__(self)">
+          <variable citdl="Node" ilk="argument" name="self" />
+        </scope>
+        <scope ilk="function" line="130" lineend="160" name="replaceChild" returns="Node.insertBefore()" signature="replaceChild(self, newChild, oldChild)">
+          <variable citdl="self.childNodes.index()" line="143" name="index" />
+          <variable citdl="Node" ilk="argument" name="self" />
+          <variable citdl="oldChild.nextSibling" line="132" name="refChild" />
+          <variable ilk="argument" name="newChild" />
+          <variable ilk="argument" name="oldChild" />
+        </scope>
+        <scope ilk="function" line="254" lineend="258" name="_call_user_data_handler" signature="_call_user_data_handler(self, operation, src, dst)">
+          <variable ilk="argument" name="src" />
+          <variable citdl="Node" ilk="argument" name="self" />
+          <variable ilk="argument" name="operation" />
+          <variable ilk="argument" name="dst" />
+        </scope>
+        <scope ilk="function" line="220" lineend="224" name="getInterface" returns="Node" signature="getInterface(self, feature)">
+          <variable citdl="Node" ilk="argument" name="self" />
+          <variable ilk="argument" name="feature" />
+        </scope>
+        <scope ilk="function" line="262" lineend="269" name="unlink" signature="unlink(self)">
+          <variable citdl="Node" ilk="argument" name="self" />
+        </scope>
+        <scope ilk="function" line="211" lineend="213" name="_get_localName" signature="_get_localName(self)">
+          <variable citdl="Node" ilk="argument" name="self" />
+        </scope>
+        <scope ilk="function" line="178" lineend="203" name="normalize" signature="normalize(self)">
+          <variable line="191" name="node" />
+          <variable citdl="Node" ilk="argument" name="self" />
+          <variable citdl="list" line="179" name="L" />
+        </scope>
+        <scope ilk="function" line="208" lineend="209" name="isSupported" returns="self.ownerDocument.implementation.hasFeature()" signature="isSupported(self, feature, version)">
+          <variable citdl="Node" ilk="argument" name="self" />
+          <variable ilk="argument" name="version" />
+          <variable ilk="argument" name="feature" />
+        </scope>
+        <scope ilk="function" line="236" lineend="252" name="setUserData" signature="setUserData(self, key, data, handler)">
+          <variable ilk="argument" name="handler" />
+          <variable line="237" name="old" />
+          <variable citdl="self._user_data" line="239" name="d" />
+          <variable ilk="argument" name="key" />
+          <variable citdl="Node" ilk="argument" name="self" />
+          <variable ilk="argument" name="data" />
+        </scope>
+        <scope ilk="function" line="230" lineend="234" name="getUserData" signature="getUserData(self, key)">
+          <variable citdl="Node" ilk="argument" name="self" />
+          <variable ilk="argument" name="key" />
+        </scope>
+        <scope ilk="function" line="162" lineend="176" name="removeChild" signature="removeChild(self, oldChild)">
+          <variable citdl="Node" ilk="argument" name="self" />
+          <variable ilk="argument" name="oldChild" />
+        </scope>
+        <scope ilk="function" line="77" lineend="79" name="_get_lastChild" signature="_get_lastChild(self)">
+          <variable citdl="Node" ilk="argument" name="self" />
+        </scope>
+        <scope doc="# A Node is its own context manager, to ensure that an&#xA;unlink() call occurs." ilk="function" line="273" lineend="274" name="__enter__" returns="Node" signature="__enter__(self)">
+          <variable citdl="Node" ilk="argument" name="self" />
+        </scope>
+        <scope ilk="function" line="64" lineend="68" name="hasChildNodes" returns="bool" signature="hasChildNodes(self)">
+          <variable citdl="Node" ilk="argument" name="self" />
+        </scope>
+        <scope ilk="function" line="49" lineend="62" name="toprettyxml" returns="writer.stream.getvalue()" signature="toprettyxml(self, indent=&apos;\t&apos;, newl=&apos;\n&apos;, encoding=None)">
+          <variable citdl="str" ilk="argument" name="indent" />
+          <variable citdl="str" ilk="argument" name="newl" />
+          <variable ilk="argument" name="encoding" />
+          <variable citdl="Node" ilk="argument" name="self" />
+          <variable citdl="codecs.getwriter()()" line="53" name="writer" />
+          <variable line="52" name="use_encoding" />
+        </scope>
+        <scope ilk="function" line="70" lineend="71" name="_get_childNodes" returns="self.childNodes" signature="_get_childNodes(self)">
+          <variable citdl="Node" ilk="argument" name="self" />
+        </scope>
+        <variable line="37" name="ownerDocument" />
+        <variable line="38" name="nextSibling" />
+        <variable line="36" name="parentNode" />
+        <variable line="35" name="namespaceURI" />
+        <variable citdl="EMPTY_PREFIX" line="41" name="prefix" />
+        <variable attributes="protected __instancevar__" citdl="self._user_data" line="242" name="_user_data" />
+        <variable attributes="__instancevar__" citdl="NodeList()" line="267" name="childNodes" />
+        <variable line="39" name="previousSibling" />
+      </scope>
+      <scope classrefs="list" doc="&#xA;" ilk="class" name="NodeList">
+        <scope ilk="function" name="_set_length" signature="_set_length(self, value)" />
+        <scope ilk="function" name="__setstate__" signature="__setstate__(self, state)" />
+        <scope ilk="function" name="item" signature="item(self, index)" />
+        <scope ilk="function" name="__getstate__" signature="__getstate__(self)" />
+        <scope ilk="function" name="_get_length" signature="_get_length(self)" />
+      </scope>
+      <scope classrefs="Identified Childless Node" doc="&#xA;" ilk="class" line="1362" lineend="1368" name="Notation">
+        <scope ilk="function" line="1366" lineend="1368" name="__init__" signature="__init__(self, name, publicId, systemId)">
+          <variable ilk="argument" name="systemId" />
+          <variable citdl="Notation" ilk="argument" name="self" />
+          <variable ilk="argument" name="publicId" />
+          <variable ilk="argument" name="name" />
+        </scope>
+        <variable citdl="Node.NOTATION_NODE" line="1363" name="nodeType" />
+        <variable attributes="__instancevar__" line="1367" name="nodeName" />
+        <variable line="1364" name="nodeValue" />
+      </scope>
+      <scope classrefs="Childless Node" doc="&#xA;" ilk="class" line="933" lineend="961" name="ProcessingInstruction">
+        <scope ilk="function" line="942" lineend="944" name="_set_data" signature="_set_data(self, value)">
+          <variable citdl="ProcessingInstruction" ilk="argument" name="self" />
+          <variable citdl="dict" line="943" name="d" />
+          <variable ilk="argument" name="value" />
+        </scope>
+        <scope ilk="function" line="946" lineend="947" name="_get_target" signature="_get_target(self)">
+          <variable citdl="ProcessingInstruction" ilk="argument" name="self" />
+        </scope>
+        <scope ilk="function" line="960" lineend="961" name="writexml" signature="writexml(self, writer, indent=&apos;&apos;, addindent=&apos;&apos;, newl=&apos;&apos;)">
+          <variable citdl="ProcessingInstruction" ilk="argument" name="self" />
+          <variable ilk="argument" name="writer" />
+          <variable citdl="str" ilk="argument" name="indent" />
+          <variable citdl="str" ilk="argument" name="addindent" />
+          <variable citdl="str" ilk="argument" name="newl" />
+        </scope>
+        <scope ilk="function" line="952" lineend="958" name="__setattr__" signature="__setattr__(self, name, value)">
+          <variable citdl="ProcessingInstruction" ilk="argument" name="self" />
+          <variable ilk="argument" name="name" />
+          <variable ilk="argument" name="value" />
+        </scope>
+        <scope ilk="function" line="940" lineend="941" name="_get_data" signature="_get_data(self)">
+          <variable citdl="ProcessingInstruction" ilk="argument" name="self" />
+        </scope>
+        <scope ilk="function" line="948" lineend="950" name="_set_target" signature="_set_target(self, value)">
+          <variable citdl="ProcessingInstruction" ilk="argument" name="self" />
+          <variable citdl="dict" line="949" name="d" />
+          <variable ilk="argument" name="value" />
+        </scope>
+        <scope ilk="function" line="936" lineend="938" name="__init__" signature="__init__(self, target, data)">
+          <variable citdl="ProcessingInstruction" ilk="argument" name="self" />
+          <variable ilk="argument" name="data" />
+          <variable ilk="argument" name="target" />
+        </scope>
+        <variable attributes="__instancevar__" line="938" name="data" />
+        <variable citdl="Node.PROCESSING_INSTRUCTION_NODE" line="934" name="nodeType" />
+        <variable attributes="__instancevar__" line="937" name="target" />
+      </scope>
+      <scope classrefs="object" doc="&#xA;" ilk="class" line="1180" lineend="1240" name="ReadOnlySequentialNamedNodeMap">
+        <scope ilk="function" line="1232" lineend="1234" name="setNamedItemNS" signature="setNamedItemNS(self, node)">
+          <variable ilk="argument" name="node" />
+          <variable citdl="ReadOnlySequentialNamedNodeMap" ilk="argument" name="self" />
+        </scope>
+        <scope ilk="function" line="1203" lineend="1210" name="__getitem__" returns="getNamedItemNS()" signature="__getitem__(self, name_or_tuple)">
+          <variable citdl="getNamedItem()" line="1205" name="node" />
+          <variable ilk="argument" name="name_or_tuple" />
+          <variable citdl="ReadOnlySequentialNamedNodeMap" ilk="argument" name="self" />
+        </scope>
+        <scope ilk="function" line="1239" lineend="1240" name="__setstate__" signature="__setstate__(self, state)">
+          <variable citdl="ReadOnlySequentialNamedNodeMap" ilk="argument" name="self" />
+          <variable ilk="argument" name="state" />
+        </scope>
+        <scope ilk="function" line="1198" lineend="1201" name="getNamedItemNS" returns="n" signature="getNamedItemNS(self, namespaceURI, localName)">
+          <variable ilk="argument" name="namespaceURI" />
+          <variable citdl="ReadOnlySequentialNamedNodeMap" ilk="argument" name="self" />
+          <variable ilk="argument" name="localName" />
+        </scope>
+        <scope ilk="function" line="1193" lineend="1196" name="getNamedItem" returns="n" signature="getNamedItem(self, name)">
+          <variable citdl="ReadOnlySequentialNamedNodeMap" ilk="argument" name="self" />
+          <variable ilk="argument" name="name" />
+        </scope>
+        <scope ilk="function" line="1224" lineend="1226" name="removeNamedItemNS" signature="removeNamedItemNS(self, namespaceURI, localName)">
+          <variable ilk="argument" name="namespaceURI" />
+          <variable citdl="ReadOnlySequentialNamedNodeMap" ilk="argument" name="self" />
+          <variable ilk="argument" name="localName" />
+        </scope>
+        <scope ilk="function" line="1228" lineend="1230" name="setNamedItem" signature="setNamedItem(self, node)">
+          <variable ilk="argument" name="node" />
+          <variable citdl="ReadOnlySequentialNamedNodeMap" ilk="argument" name="self" />
+        </scope>
+        <scope ilk="function" line="1212" lineend="1218" name="item" signature="item(self, index)">
+          <variable ilk="argument" name="index" />
+          <variable citdl="ReadOnlySequentialNamedNodeMap" ilk="argument" name="self" />
+        </scope>
+        <scope ilk="function" line="1187" lineend="1188" name="__len__" returns="len()" signature="__len__(self)">
+          <variable citdl="ReadOnlySequentialNamedNodeMap" ilk="argument" name="self" />
+        </scope>
+        <scope ilk="function" line="1220" lineend="1222" name="removeNamedItem" signature="removeNamedItem(self, name)">
+          <variable citdl="ReadOnlySequentialNamedNodeMap" ilk="argument" name="self" />
+          <variable ilk="argument" name="name" />
+        </scope>
+        <scope ilk="function" line="1236" lineend="1237" name="__getstate__" returns="list" signature="__getstate__(self)">
+          <variable citdl="ReadOnlySequentialNamedNodeMap" ilk="argument" name="self" />
+        </scope>
+        <scope ilk="function" line="1183" lineend="1185" name="__init__" signature="__init__(self, seq=())">
+          <variable citdl="ReadOnlySequentialNamedNodeMap" ilk="argument" name="self" />
+          <variable citdl="tuple" ilk="argument" name="seq" />
+        </scope>
+        <scope ilk="function" line="1190" lineend="1191" name="_get_length" returns="len()" signature="_get_length(self)">
+          <variable citdl="ReadOnlySequentialNamedNodeMap" ilk="argument" name="self" />
+        </scope>
+        <variable attributes="protected __instancevar__" citdl="tuple" line="1185" name="_seq" />
+        <variable citdl="tuple" line="1181" name="__slots__" />
+      </scope>
+      <variable citdl="tuple" name="StringTypes" />
+      <scope classrefs="CharacterData" doc="&#xA;" ilk="class" line="1038" lineend="1126" name="Text">
+        <scope ilk="function" line="1063" lineend="1064" name="writexml" signature="writexml(self, writer, indent=&apos;&apos;, addindent=&apos;&apos;, newl=&apos;&apos;)">
+          <variable citdl="Text" ilk="argument" name="self" />
+          <variable ilk="argument" name="writer" />
+          <variable citdl="str" ilk="argument" name="indent" />
+          <variable citdl="str" ilk="argument" name="addindent" />
+          <variable citdl="str" ilk="argument" name="newl" />
+        </scope>
+        <scope ilk="function" line="1068" lineend="1084" name="_get_wholeText" returns="str.join()" signature="_get_wholeText(self)">
+          <variable citdl="Text" ilk="argument" name="self" />
+          <variable citdl="list" line="1069" name="L" />
+          <variable citdl="n.nextSibling" line="1070" name="n" />
+        </scope>
+        <scope ilk="function" line="1086" lineend="1114" name="replaceWholeText" returns="Text" signature="replaceWholeText(self, content)">
+          <variable ilk="argument" name="content" />
+          <variable citdl="dict" line="1109" name="d" />
+          <variable citdl="self.parentNode" line="1089" name="parent" />
+          <variable citdl="Text" ilk="argument" name="self" />
+          <variable citdl="n.previousSibling" line="1093" name="next" />
+          <variable citdl="n.previousSibling" line="1090" name="n" />
+        </scope>
+        <scope ilk="function" line="1048" lineend="1061" name="splitText" returns="self.__class__()" signature="splitText(self, offset)">
+          <variable citdl="self.__class__()" line="1051" name="newText" />
+          <variable citdl="Text" ilk="argument" name="self" />
+          <variable citdl="self.nextSibling" line="1054" name="next" />
+          <variable ilk="argument" name="offset" />
+        </scope>
+        <scope ilk="function" line="1116" lineend="1126" name="_get_isWhitespaceInElementContent" returns="info.isElementContent()" signature="_get_isWhitespaceInElementContent(self)">
+          <variable citdl="self.ownerDocument._get_elem_info()" line="1122" name="info" />
+          <variable citdl="Text" ilk="argument" name="self" />
+          <variable citdl="_get_containing_element()" line="1119" name="elem" />
+        </scope>
+        <variable line="1046" name="attributes" />
+        <variable citdl="Node.TEXT_NODE" line="1044" name="nodeType" />
+        <variable citdl="str" line="1045" name="nodeName" />
+        <variable attributes="__instancevar__" citdl="list" line="1060" name="data" />
+      </scope>
+      <scope classrefs="object" doc="&#xA;" ilk="class" line="640" lineend="657" name="TypeInfo">
+        <scope ilk="function" line="647" lineend="651" name="__repr__" returns="tuple" signature="__repr__(self)">
+          <variable citdl="TypeInfo" ilk="argument" name="self" />
+        </scope>
+        <scope ilk="function" line="653" lineend="654" name="_get_name" signature="_get_name(self)">
+          <variable citdl="TypeInfo" ilk="argument" name="self" />
+        </scope>
+        <scope ilk="function" line="656" lineend="657" name="_get_namespace" signature="_get_namespace(self)">
+          <variable citdl="TypeInfo" ilk="argument" name="self" />
+        </scope>
+        <scope ilk="function" line="643" lineend="645" name="__init__" signature="__init__(self, namespace, name)">
+          <variable citdl="TypeInfo" ilk="argument" name="self" />
+          <variable ilk="argument" name="namespace" />
+          <variable ilk="argument" name="name" />
+        </scope>
+        <variable citdl="tuple" line="641" name="__slots__" />
+        <variable attributes="__instancevar__" line="644" name="namespace" />
+        <variable attributes="__instancevar__" line="645" name="name" />
+      </scope>
+      <variable citdl="str" name="XMLNS_NAMESPACE" />
+      <import module="codecs" />
+      <scope ilk="function" name="defproperty" signature="defproperty(klass, name, doc)" />
+      <import module="domreg" />
+      <scope ilk="function" line="1955" lineend="1962" name="getDOMImplementation" returns="DOMImplementation" signature="getDOMImplementation(features=None)">
+        <variable citdl="domreg._parse_feature_string()" ilk="argument" name="features" />
+      </scope>
+      <import module="io" />
+      <scope doc="Parse a file into a DOM by filename or file object." ilk="function" line="1935" lineend="1943" name="parse" returns="expatbuilder.parse()" signature="parse(file, parser=None, bufsize=None)">
+        <variable ilk="argument" name="parser" />
+        <variable ilk="argument" name="bufsize" />
+        <variable ilk="argument" name="file" />
+      </scope>
+      <scope doc="Parse a file into a DOM from a string." ilk="function" line="1945" lineend="1953" name="parseString" returns="_do_pulldom_parse()" signature="parseString(string, parser=None)">
+        <variable ilk="argument" name="parser" />
+        <variable ilk="argument" name="string" />
+      </scope>
+      <import module="xml" />
+      <scope attributes="protected __hidden__" ilk="function" line="284" lineend="292" name="_append_child" signature="_append_child(self, node)">
+        <variable ilk="argument" name="self" />
+        <variable ilk="argument" name="node" />
+        <variable citdl="self.childNodes" line="286" name="childNodes" />
+        <variable line="288" name="last" />
+      </scope>
+      <scope attributes="protected __hidden__" ilk="function" line="317" lineend="324" name="_get_elements_by_tagName_ns_helper" signature="_get_elements_by_tagName_ns_helper(parent, nsURI, localName, rc)">
+        <variable ilk="argument" name="parent" />
+        <variable ilk="argument" name="nsURI" />
+        <variable ilk="argument" name="localName" />
+        <variable ilk="argument" name="rc" />
+      </scope>
+      <scope attributes="protected __hidden__" ilk="function" line="1492" lineend="1498" name="_clear_id_cache" signature="_clear_id_cache(node)">
+        <variable ilk="argument" name="node" />
+      </scope>
+      <scope attributes="protected __hidden__" ilk="function" line="882" lineend="890" name="_set_attribute_node" signature="_set_attribute_node(element, attr)">
+        <variable ilk="argument" name="element" />
+        <variable ilk="argument" name="attr" />
+      </scope>
+      <scope attributes="protected __hidden__" ilk="function" line="1920" lineend="1925" name="_nssplit" returns="tuple" signature="_nssplit(qualifiedName)">
+        <variable ilk="argument" name="qualifiedName" />
+        <variable citdl="qualifiedName.split()" line="1921" name="fields" />
+      </scope>
+      <scope attributes="protected __hidden__" ilk="function" line="309" lineend="315" name="_get_elements_by_tagName_helper" signature="_get_elements_by_tagName_helper(parent, name, rc)">
+        <variable ilk="argument" name="parent" />
+        <variable ilk="argument" name="name" />
+        <variable ilk="argument" name="rc" />
+      </scope>
+      <variable attributes="protected __hidden__" citdl="TypeInfo" line="659" name="_no_type" />
+      <scope attributes="protected __hidden__" doc="Clone a node and give it the new owner document.&#xA;Called by Node.cloneNode and Document.importNode" ilk="function" line="1838" lineend="1917" name="_clone_node" returns="newOwnerDocument.createAttributeNS()" signature="_clone_node(node, deep, newOwnerDocument)">
+        <variable ilk="argument" name="node" />
+        <variable ilk="argument" name="deep" />
+        <variable ilk="argument" name="newOwnerDocument" />
+        <variable citdl="xml.dom.UserDataHandler.NODE_IMPORTED" line="1844" name="operation" />
+        <variable citdl="newOwnerDocument.createCDATASection()" line="1848" name="clone" />
+        <variable citdl="clone.getAttributeNodeNS()" line="1852" name="a" />
+        <variable citdl="()" line="1857" name="c" />
+        <variable citdl="Notation" line="1891" name="notation" />
+        <variable citdl="Entity" line="1897" name="entity" />
+      </scope>
+      <scope attributes="protected __hidden__" doc="Writes datachars to writer." ilk="function" line="302" lineend="307" name="_write_data" signature="_write_data(writer, data)">
+        <variable ilk="argument" name="writer" />
+        <variable ilk="argument" name="data" />
+      </scope>
+      <variable attributes="protected __hidden__" citdl="tuple" line="30" name="_nodeTypes_with_children" />
+      <scope attributes="protected __hidden__" ilk="function" line="294" lineend="300" name="_in_document" returns="bool" signature="_in_document(node)">
+        <variable citdl="node.parentNode" ilk="argument" name="node" />
+      </scope>
+      <scope attributes="protected __hidden__" ilk="function" line="1143" lineend="1149" name="_get_containing_entref" returns="node.parentNode" signature="_get_containing_entref(node)">
+        <variable ilk="argument" name="node" />
+        <variable citdl="node.parentNode" line="1144" name="c" />
+      </scope>
+      <scope attributes="protected __hidden__" ilk="function" line="1135" lineend="1141" name="_get_containing_element" returns="node.parentNode" signature="_get_containing_element(node)">
+        <variable ilk="argument" name="node" />
+        <variable citdl="node.parentNode" line="1136" name="c" />
+      </scope>
+      <scope attributes="protected __hidden__" ilk="function" line="1928" lineend="1933" name="_do_pulldom_parse" signature="_do_pulldom_parse(func, args, kwargs)">
+        <variable ilk="argument" name="func" />
+        <variable ilk="argument" name="args" />
+        <variable ilk="argument" name="kwargs" />
+        <variable citdl="func()" line="1929" name="events" />
+        <variable line="1930" name="rootNode" />
+        <variable line="1930" name="toktype" />
+      </scope>
+    </scope>
+    

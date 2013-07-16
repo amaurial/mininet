@@ -1,0 +1,122 @@
+<scope ilk="blob" lang="Perl" name="CPANPLUS::Shell::Classic">
+      <scope classrefs="CPANPLUS::Shell::_Base::ReadLine" ilk="class" line="7" lineend="1184" name="CPANPLUS::Shell::Classic">
+        <import line="12" module="CPANPLUS::Error" symbol="*" />
+        <import line="13" module="CPANPLUS::Backend" symbol="*" />
+        <import line="14" module="CPANPLUS::Configure::Setup" symbol="*" />
+        <import line="15" module="CPANPLUS::Internals::Constants" symbol="*" />
+        <import line="17" module="Cwd" symbol="*" />
+        <import line="18" module="IPC::Cmd" symbol="*" />
+        <import line="19" module="Term::UI" symbol="*" />
+        <import line="20" module="Data::Dumper" symbol="*" />
+        <import line="21" module="Term::ReadLine" symbol="*" />
+        <import line="23" module="Module::Load" symbol="load" />
+        <import line="24" module="Params::Check" symbol="check" />
+        <import line="25" module="Module::Load::Conditional" symbol="can_load" />
+        <variable line="27" name="$Params::Check::VERBOSE" />
+        <variable line="28" name="$Params::Check::ALLOW_UNKNOWN" />
+        <variable line="31" name="$VERSION" />
+        <variable line="31" name="@ISA" />
+        <scope ilk="function" line="70" lineend="101" name="new" signature="new($class)">
+          <variable ilk="argument" name="$class" />
+        </scope>
+        <scope ilk="function" line="103" lineend="110" name="shell" signature="shell($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="112" lineend="138" name="_input_loop" signature="_input_loop($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="140" lineend="193" name="_dispatch_on_input" signature="_dispatch_on_input($self, %hash)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="%hash" />
+        </scope>
+        <scope ilk="function" line="196" lineend="200" name="_quit" signature="_quit()" />
+        <scope ilk="function" line="202" lineend="216" name="_not_supported" signature="_not_supported($self, %hash)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="%hash" />
+        </scope>
+        <scope ilk="function" line="218" lineend="247" name="_fetch" signature="_fetch($self, %hash)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="%hash" />
+        </scope>
+        <scope ilk="function" line="249" lineend="281" name="_install" signature="_install($self, %hash)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="%hash" />
+        </scope>
+        <scope ilk="function" line="283" lineend="326" name="_shell" signature="_shell($self, %hash)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="%hash" />
+        </scope>
+        <scope ilk="function" line="328" lineend="355" name="_readme" signature="_readme($self, %hash)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="%hash" />
+        </scope>
+        <scope ilk="function" line="357" lineend="386" name="_reload" signature="_reload($self, %hash)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="%hash" />
+        </scope>
+        <scope ilk="function" line="388" lineend="401" name="_autobundle" signature="_autobundle($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="403" lineend="496" name="_set_conf" signature="_set_conf($self, %hash)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="%hash" />
+        </scope>
+        <scope ilk="function" line="502" lineend="538" name="_author" signature="_author($self, %hash)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="%hash" />
+        </scope>
+        <scope ilk="function" line="541" lineend="573" name="_module" signature="_module($self, %hash)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="%hash" />
+        </scope>
+        <scope ilk="function" line="576" lineend="608" name="_bundle" signature="_bundle($self, %hash)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="%hash" />
+        </scope>
+        <scope ilk="function" line="610" lineend="703" name="_distribution" signature="_distribution($self, %hash)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="%hash" />
+        </scope>
+        <scope ilk="function" line="705" lineend="716" name="_find_all" signature="_find_all($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="718" lineend="761" name="_uptodate" signature="_uptodate($self, %hash)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="%hash" />
+        </scope>
+        <scope ilk="function" line="763" lineend="796" name="_ls" signature="_ls($self, %hash)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="%hash" />
+        </scope>
+        <scope ilk="function" line="803" lineend="853" name="_pp_author" signature="_pp_author($self, %hash)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="%hash" />
+        </scope>
+        <scope ilk="function" line="855" lineend="934" name="_pp_module" signature="_pp_module($self, %hash)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="%hash" />
+        </scope>
+        <scope ilk="function" line="936" lineend="963" name="_pp_dslip" signature="_pp_dslip($self, $dslip)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$dslip" />
+        </scope>
+        <scope ilk="function" line="965" lineend="1028" name="_pp_distribution" signature="_pp_distribution($self, %hash)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="%hash" />
+        </scope>
+        <scope ilk="function" line="1030" lineend="1092" name="_pp_uptodate" signature="_pp_uptodate($self, %hash)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="%hash" />
+        </scope>
+        <scope ilk="function" line="1094" lineend="1126" name="_pp_ls" signature="_pp_ls($self, %hash)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="%hash" />
+        </scope>
+        <scope ilk="function" line="1134" lineend="1151" name="_bang" signature="_bang($self, %hash)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="%hash" />
+        </scope>
+        <scope ilk="function" line="1153" lineend="1180" name="_help" signature="_help()" />
+      </scope>
+    </scope>
+    

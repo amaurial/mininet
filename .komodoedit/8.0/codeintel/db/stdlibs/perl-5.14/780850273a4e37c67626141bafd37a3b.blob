@@ -1,0 +1,55 @@
+<scope ilk="blob" lang="Perl" name="ExtUtils::Constant">
+      <scope classrefs="Exporter" ilk="class" line="1" lineend="557" name="ExtUtils::Constant">
+        <import line="97" module="Carp" symbol="croak" />
+        <import line="97" module="Carp" symbol="cluck" />
+        <import line="99" module="Exporter" symbol="*" />
+        <import line="100" module="ExtUtils::Constant::Utils" symbol="C_stringify" />
+        <import line="101" module="ExtUtils::Constant::XS" symbol="%XS_Constant" />
+        <import line="101" module="ExtUtils::Constant::XS" symbol="%XS_TypeSet" />
+        <variable line="2" name="$VERSION" />
+        <variable line="2" name="%EXPORT_TAGS" />
+        <variable line="2" name="@EXPORT_OK" />
+        <variable line="2" name="@ISA" />
+        <scope ilk="function" line="119" lineend="121" name="constant_types" signature="constant_types()" />
+        <scope ilk="function" line="123" lineend="127" name="memEQ_clause" signature="memEQ_clause()" />
+        <scope ilk="function" line="129" lineend="133" name="return_clause" signature="return_clause($indent)">
+          <variable ilk="argument" name="$indent" />
+        </scope>
+        <scope ilk="function" line="135" lineend="141" name="switch_clause" signature="switch_clause($indent, $comment)">
+          <variable ilk="argument" name="$indent" />
+          <variable ilk="argument" name="$comment" />
+        </scope>
+        <scope ilk="function" line="143" lineend="150" name="C_constant" signature="C_constant($package, $subname, $default_type, $what, $indent, $breakout, @items)">
+          <variable ilk="argument" name="$package" />
+          <variable ilk="argument" name="$subname" />
+          <variable ilk="argument" name="$default_type" />
+          <variable ilk="argument" name="$what" />
+          <variable ilk="argument" name="$indent" />
+          <variable ilk="argument" name="$breakout" />
+          <variable ilk="argument" name="@items" />
+        </scope>
+        <scope ilk="function" line="314" lineend="370" name="autoload" signature="autoload($module, $compat_version, $autoloader)">
+          <variable ilk="argument" name="$module" />
+          <variable ilk="argument" name="$compat_version" />
+          <variable ilk="argument" name="$autoloader" />
+        </scope>
+        <scope ilk="function" line="387" lineend="411" name="WriteMakefileSnippet" signature="WriteMakefileSnippet(%args)">
+          <variable ilk="argument" name="%args" />
+        </scope>
+        <scope ilk="function" line="484" lineend="555" name="WriteConstants" signature="WriteConstants()">
+          <import line="498" module="ExtUtils::Constant::ProxySubs" />
+          <import line="508" module="FileHandle" />
+          <import line="517" module="FileHandle" />
+          <import line="498" module="ExtUtils::Constant::ProxySubs" />
+          <import line="508" module="FileHandle" />
+          <import line="517" module="FileHandle" />
+        </scope>
+        <scope ilk="function" line="172" lineend="557" name="XS_constant" signature="XS_constant($package, $what, $XS_subname, $C_subname)">
+          <variable ilk="argument" name="$package" />
+          <variable ilk="argument" name="$what" />
+          <variable ilk="argument" name="$XS_subname" />
+          <variable ilk="argument" name="$C_subname" />
+        </scope>
+      </scope>
+    </scope>
+    

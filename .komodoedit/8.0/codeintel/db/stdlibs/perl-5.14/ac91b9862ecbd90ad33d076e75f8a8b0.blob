@@ -1,0 +1,55 @@
+<scope ilk="blob" lang="Perl" name="Class::MOP::Method::Accessor">
+      <scope ilk="class" line="2" lineend="344" name="Class::MOP::Method::Accessor">
+        <import line="13" module="Carp" symbol="confess" />
+        <import line="14" module="Scalar::Util" symbol="blessed" />
+        <import line="15" module="Try::Tiny" symbol="*" />
+        <variable line="4" name="$Class::MOP::Method::Accessor::AUTHORITY" />
+        <variable line="7" name="$Class::MOP::Method::Accessor::VERSION" />
+        <scope ilk="function" line="19" lineend="45" name="new" signature="new($class, %options)">
+          <variable ilk="argument" name="$class" />
+          <variable ilk="argument" name="%options" />
+        </scope>
+        <scope attributes="__ctor__" ilk="function" line="47" lineend="71" name="_new" signature="_new($class)">
+          <variable ilk="argument" name="$class" />
+        </scope>
+        <scope ilk="function" line="75" lineend="75" name="associated_attribute" signature="associated_attribute()" />
+        <scope ilk="function" line="76" lineend="76" name="accessor_type" signature="accessor_type()" />
+        <scope ilk="function" line="80" lineend="91" name="_initialize_body" signature="_initialize_body($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="95" lineend="105" name="_generate_accessor_method" signature="_generate_accessor_method($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="107" lineend="124" name="_generate_accessor_method_inline" signature="_generate_accessor_method_inline($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="126" lineend="135" name="_generate_reader_method" signature="_generate_reader_method($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="137" lineend="158" name="_generate_reader_method_inline" signature="_generate_reader_method_inline($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="160" lineend="163" name="_inline_throw_error" signature="_inline_throw_error($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="165" lineend="172" name="_generate_writer_method" signature="_generate_writer_method($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="174" lineend="188" name="_generate_writer_method_inline" signature="_generate_writer_method_inline($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="190" lineend="197" name="_generate_predicate_method" signature="_generate_predicate_method($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="199" lineend="213" name="_generate_predicate_method_inline" signature="_generate_predicate_method_inline($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="215" lineend="222" name="_generate_clearer_method" signature="_generate_clearer_method($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="224" lineend="238" name="_generate_clearer_method_inline" signature="_generate_clearer_method_inline($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+      </scope>
+    </scope>
+    

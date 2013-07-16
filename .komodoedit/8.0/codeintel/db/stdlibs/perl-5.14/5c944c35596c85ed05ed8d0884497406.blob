@@ -1,0 +1,53 @@
+<scope ilk="blob" lang="Perl" name="W32ODBC">
+      <scope classrefs="Win32::ODBC" ilk="class" line="2" lineend="181" name="DBI">
+        <import line="49" module="Carp" symbol="*" />
+        <import line="51" module="Win32::ODBC" symbol="*" />
+        <variable line="57" name="$DBI::dbi_debug" />
+        <variable line="144" name="*fetchrow_arrayref" />
+        <variable line="145" name="*fetchrow_array" />
+        <scope ilk="function" line="46" lineend="46" name="DBI::W32ODBC::import" signature="DBI::W32ODBC::import()" />
+        <scope attributes="__ctor__" ilk="function" line="63" lineend="71" name="connect" signature="connect($class, $dbname, $dbuser, $dbpasswd, $module, $attr)">
+          <variable ilk="argument" name="$class" />
+          <variable ilk="argument" name="$dbname" />
+          <variable ilk="argument" name="$dbuser" />
+          <variable ilk="argument" name="$dbpasswd" />
+          <variable ilk="argument" name="$module" />
+          <variable ilk="argument" name="$attr" />
+        </scope>
+        <scope ilk="function" line="74" lineend="84" name="quote" signature="quote($h, $string)">
+          <variable ilk="argument" name="$h" />
+          <variable ilk="argument" name="$string" />
+        </scope>
+        <scope ilk="function" line="86" lineend="95" name="do" signature="do($h, $statement, $attribs, @params)">
+          <variable ilk="argument" name="$h" />
+          <variable ilk="argument" name="$statement" />
+          <variable ilk="argument" name="$attribs" />
+          <variable ilk="argument" name="@params" />
+        </scope>
+        <scope attributes="__ctor__" ilk="function" line="99" lineend="111" name="prepare" signature="prepare($h, $sql)">
+          <variable ilk="argument" name="$h" />
+          <variable ilk="argument" name="$sql" />
+        </scope>
+        <scope ilk="function" line="113" lineend="121" name="execute" signature="execute($h)">
+          <variable ilk="argument" name="$h" />
+        </scope>
+        <scope ilk="function" line="124" lineend="131" name="fetchrow_hashref" signature="fetchrow_hashref($h, $NAME)">
+          <variable ilk="argument" name="$h" />
+          <variable ilk="argument" name="$NAME" />
+        </scope>
+        <scope ilk="function" line="133" lineend="138" name="fetchrow" signature="fetchrow($h)">
+          <variable ilk="argument" name="$h" />
+        </scope>
+        <scope ilk="function" line="139" lineend="143" name="fetch" signature="fetch()">
+          </scope>
+        <scope ilk="function" line="147" lineend="149" name="rows" signature="rows()" />
+        <scope ilk="function" line="151" lineend="153" name="finish" signature="finish()" />
+        <scope ilk="function" line="157" lineend="159" name="commit" signature="commit()" />
+        <scope ilk="function" line="160" lineend="162" name="rollback" signature="rollback()" />
+        <scope ilk="function" line="164" lineend="170" name="disconnect" signature="disconnect()">
+          </scope>
+        <scope ilk="function" line="172" lineend="174" name="err" signature="err()" />
+        <scope ilk="function" line="175" lineend="177" name="errstr" signature="errstr()" />
+      </scope>
+    </scope>
+    

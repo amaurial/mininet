@@ -1,0 +1,2567 @@
+[2013-05-28 23:20:47,252] [WARNING] ko.less: Clearing local and file cache
+[2013-05-28 23:21:01,360] [DEBUG] places_js: waiting for document complete
+[2013-05-28 23:21:01,435] [WARNING] root: ko.findresults was already loaded, re-creating it.
+
+ERROR:xpcom:Unhandled exception calling 'int8 * run();'
+Traceback (most recent call last):
+  File "/home/mininet/Komodo-Edit-8/lib/mozilla/python/xpcom/server/policy.py", line 310, in _CallMethod_
+    return 0, func(*params)
+  File "/home/mininet/Komodo-Edit-8/lib/mozilla/python/xpcom/components.py", line 236, in run
+    self.result = self.fn(*self.args, **self.kwargs)
+  File "/home/mininet/Komodo-Edit-8/lib/mozilla/components/koCodeIntel.py", line 737, in done
+    return self.obj.done(*args)
+  File "<XPCOMObject method 'done'>", line 3, in done
+Exception: 2153185308 (NS_ERROR_XPC_JS_THREW_JS_OBJECT)
+[2013-05-28 23:53:44,290] [ERROR] codeintel.tree: Unexpected error with evaluator: 'msg.match' at remote_conn.py#58
+Traceback (most recent call last):
+  File "/home/mininet/Komodo-Edit-8/lib/mozilla/python/komodo/codeintel2/tree.py", line 334, in eval
+    self.ctlr.done("success")
+  File "/home/mininet/Komodo-Edit-8/lib/mozilla/components/koCodeIntel.py", line 820, in done
+    self.ui_handler.done()
+  File "/home/mininet/Komodo-Edit-8/lib/mozilla/python/xpcom/components.py", line 262, in wrapperFn
+    threadMgr.mainThread.dispatch(method, dispatch_flags)
+  File "<XPCOMObject method 'dispatch'>", line 3, in dispatch
+Exception: 2147500037 (NS_ERROR_FAILURE)
+ERROR:xpcom:Unhandled exception calling 'int8 * run();'
+Traceback (most recent call last):
+  File "/home/mininet/Komodo-Edit-8/lib/mozilla/python/xpcom/server/policy.py", line 310, in _CallMethod_
+    return 0, func(*params)
+  File "/home/mininet/Komodo-Edit-8/lib/mozilla/python/xpcom/components.py", line 236, in run
+    self.result = self.fn(*self.args, **self.kwargs)
+  File "/home/mininet/Komodo-Edit-8/lib/mozilla/components/koCodeIntel.py", line 737, in done
+    return self.obj.done(*args)
+  File "<XPCOMObject method 'done'>", line 3, in done
+Exception: 2153185308 (NS_ERROR_XPC_JS_THREW_JS_OBJECT)
+[2013-05-29 01:51:20,247] [ERROR] codeintel.tree: Unexpected error with evaluator: 'core.addListeners' at remote_conn.py#84
+Traceback (most recent call last):
+  File "/home/mininet/Komodo-Edit-8/lib/mozilla/python/komodo/codeintel2/tree.py", line 334, in eval
+    self.ctlr.done("success")
+  File "/home/mininet/Komodo-Edit-8/lib/mozilla/components/koCodeIntel.py", line 820, in done
+    self.ui_handler.done()
+  File "/home/mininet/Komodo-Edit-8/lib/mozilla/python/xpcom/components.py", line 262, in wrapperFn
+    threadMgr.mainThread.dispatch(method, dispatch_flags)
+  File "<XPCOMObject method 'dispatch'>", line 3, in dispatch
+Exception: 2147500037 (NS_ERROR_FAILURE)
+[2013-05-29 01:51:25,077] [ERROR] koCodeIntel: error evaluating completions:
+  trigger: <Trigger 'python-complete-object-members' at 2990>
+  log:
+    info: eval 'core.openflow' at remote_conn.py#84  <Trigger 'python-complete-object-members' at 2990>
+    info: start scope is (<blob 'remote_conn'>, ['RemoteConn', '__init__'])
+    info: find 'core ...' starting at (<blob 'remote_conn'>, ['RemoteConn', '__init__']):
+    info: is 'core' accessible on (<blob 'remote_conn'>, ['RemoteConn', '__init__'])? no
+    debug: 'core ...' from <from pox.core import core>?
+    info: is blob 'pox.core' from <Python curdirlib>? no
+    info: is blob 'pox.core' from <Python envlib>? no
+    info: is blob 'pox.core' from <Python cataloglib: >? no
+    info: is blob 'pox.core' from <python-2.7 stdlib>? no
+    info: is blob 'pox.core' from <Python parentdirlib>? yes
+    info: is 'core' accessible on (<blob 'remote_conn'>, [])? yes: <variable 'core'>
+    debug: _hit_from_citdl: first part: [u'core'] -> (<variable 'core'>, (<blob 'core'>, []))
+    debug: _hit_from_citdl: resolve [u'openflow'] on <variable 'core'> in (<blob 'core'>, [])
+    info: resolve getattr 'openflow' on <variable 'core'> in (<blob 'core'>, []):
+    info: resolve 'POXCore' type inference for <variable 'core'>:
+    info: find 'POXCore ...' starting at (<blob 'core'>, []):
+    info: is 'POXCore' accessible on (<blob 'core'>, [])? yes: <class 'POXCore'>
+    debug: _hit_from_citdl: first part: ['POXCore'] -> (<class 'POXCore'>, (<blob 'core'>, []))
+    info: 'POXCore' is <class 'POXCore'> on (<blob 'core'>, [])
+    debug: look for [u'openflow'] from imports in <class 'POXCore'>
+    info: is 'openflow' from base class: 'EventMixin'?
+    info: resolve 'EventMixin' type inference:
+    info: find 'EventMixin ...' starting at (<blob 'core'>, []):
+    debug: 'EventMixin ...' from <from __future__ import print_function>?
+    debug: 'EventMixin ...' from <import logging>?
+    debug: 'EventMixin ...' from <import inspect>?
+    debug: 'EventMixin ...' from <import time>?
+    debug: 'EventMixin ...' from <import os>?
+    debug: 'EventMixin ...' from <from pox.lib.revent import *>?
+    info: is blob 'pox.lib.revent' from <Python curdirlib>? no
+    info: is blob 'pox.lib.revent' from <Python envlib>? no
+    info: is blob 'pox.lib.revent' from <Python cataloglib: >? no
+    info: is blob 'pox.lib.revent' from <python-2.7 stdlib>? no
+    info: is blob 'pox.lib.revent' from <Python parentdirlib>? yes
+    info: imports:: setting reldirlib to: '/home/mininet/new_pox/pox/pox/lib/revent'
+    info: resolve getattr 'EventMixin' on <blob '__init__'> in (<blob '__init__'>, []):
+    debug: 'EventMixin ...' from <from pox.lib.revent.revent import *>?
+    info: is blob 'pox.lib.revent.revent' from <Python reldirlib>? no
+    info: is blob 'pox.lib.revent.revent' from <Python curdirlib>? no
+    info: is blob 'pox.lib.revent.revent' from <Python envlib>? no
+    info: is blob 'pox.lib.revent.revent' from <Python cataloglib: >? no
+    info: is blob 'pox.lib.revent.revent' from <python-2.7 stdlib>? no
+    info: is blob 'pox.lib.revent.revent' from <Python parentdirlib>? yes
+    info: imports:: setting reldirlib to: '/home/mininet/new_pox/pox/pox/lib/revent'
+    info: resolve getattr 'EventMixin' on <blob 'revent'> in (<blob 'revent'>, []):
+    info: attr is <class 'EventMixin'> in <blob 'revent'>
+    info: is 'EventMixin' accessible on (<blob 'core'>, [])? yes: <class 'EventMixin'>
+    debug: _hit_from_citdl: first part: ['EventMixin'] -> (<class 'EventMixin'>, (<blob 'revent'>, []))
+    info: 'EventMixin' is <class 'EventMixin'> on (<blob 'revent'>, [])
+    info: resolve getattr 'openflow' on <class 'EventMixin'> in (<blob 'revent'>, []):
+    debug: look for [u'openflow'] from imports in <class 'EventMixin'>
+    info: is 'openflow' from base class: 'object'?
+    info: resolve 'object' type inference:
+    info: find 'object ...' starting at (<blob 'revent'>, []):
+    debug: 'object ...' from <from __future__ import print_function>?
+    debug: 'object ...' from <import operator>?
+    debug: 'object ...' from <import weakref>?
+    info: is 'object' accessible on (<blob 'revent'>, [])? no
+    info: is 'object' accessible on (<blob '*'>, [])? yes: <class 'object'>
+    debug: _hit_from_citdl: first part: ['object'] -> (<class 'object'>, (<blob '*'>, []))
+    info: 'object' is <class 'object'> on (<blob '*'>, [])
+    info: resolve getattr 'openflow' on <class 'object'> in (<blob '*'>, []):
+    debug: look for [u'openflow'] from imports in <class 'object'>
+    info: could not resolve classref 'object' on scoperef (<blob 'revent'>, [])
+    info: could not resolve classref 'EventMixin' on scoperef (<blob 'core'>, [])
+    error: evaluating 'core.openflow' at remote_conn.py#84: could not resolve 'openflow' getattr on <class 'POXCore'> in (<blob 'core'>, [])
+[2013-05-29 01:52:47,833] [WARNING] views: Inconsistent view count in view_closed event
+[2013-05-30 01:33:41,730] [ERROR] koCodeIntel: error evaluating completions:
+  trigger: <Trigger 'python-complete-object-members' at 6917>
+  log:
+    info: eval 'a' at arp_responder.py#226  <Trigger 'python-complete-object-members' at 6917>
+    info: start scope is (<blob 'arp_responder'>, ['ARPResponder', '_handle_PacketIn'])
+    info: find 'a ...' starting at (<blob 'arp_responder'>, ['ARPResponder', '_handle_PacketIn']):
+    info: is 'a' accessible on (<blob 'arp_responder'>, ['ARPResponder', '_handle_PacketIn'])? yes: <variable 'a'>
+    debug: _hit_from_citdl: first part: [u'a'] -> (<variable 'a'>, (<blob 'arp_responder'>, ['ARPResponder', '_handle_PacketIn']))
+    info: resolve 'packet.find()' type inference for <variable 'a'>:
+    info: find 'packet ...' starting at (<blob 'arp_responder'>, ['ARPResponder', '_handle_PacketIn']):
+    info: is 'packet' accessible on (<blob 'arp_responder'>, ['ARPResponder', '_handle_PacketIn'])? yes: <variable 'packet'>
+    debug: _hit_from_citdl: first part: ['packet'] -> (<variable 'packet'>, (<blob 'arp_responder'>, ['ARPResponder', '_handle_PacketIn']))
+    debug: _hit_from_citdl: resolve ['find', '()'] on <variable 'packet'> in (<blob 'arp_responder'>, ['ARPResponder', '_handle_PacketIn'])
+    info: resolve getattr 'find' on <variable 'packet'> in (<blob 'arp_responder'>, ['ARPResponder', '_handle_PacketIn']):
+    info: resolve 'event.parsed' type inference for <variable 'packet'>:
+    info: find 'event ...' starting at (<blob 'arp_responder'>, ['ARPResponder', '_handle_PacketIn']):
+    info: is 'event' accessible on (<blob 'arp_responder'>, ['ARPResponder', '_handle_PacketIn'])? yes: <argument 'event'>
+    debug: _hit_from_citdl: first part: ['event'] -> (<argument 'event'>, (<blob 'arp_responder'>, ['ARPResponder', '_handle_PacketIn']))
+    debug: _hit_from_citdl: resolve ['parsed'] on <argument 'event'> in (<blob 'arp_responder'>, ['ARPResponder', '_handle_PacketIn'])
+    info: resolve getattr 'parsed' on <argument 'event'> in (<blob 'arp_responder'>, ['ARPResponder', '_handle_PacketIn']):
+    error: evaluating 'a' at arp_responder.py#226: no type-inference info for <argument 'event'>
+[2013-05-30 01:34:40,945] [ERROR] koCodeIntel: error evaluating completions:
+  trigger: <Trigger 'python-complete-object-members' at 7006>
+  log:
+    info: eval 'requests' at arp_responder.py#229  <Trigger 'python-complete-object-members' at 7006>
+    info: start scope is (<blob 'arp_responder'>, ['ARPResponder', '_handle_PacketIn'])
+    info: find 'requests ...' starting at (<blob 'arp_responder'>, ['ARPResponder', '_handle_PacketIn']):
+    info: is 'requests' accessible on (<blob 'arp_responder'>, ['ARPResponder', '_handle_PacketIn'])? no
+    debug: 'requests ...' from <from pox.core import core>?
+    debug: 'requests ...' from <import pox>?
+    debug: 'requests ...' from <from pox.lib.packet.ethernet import ethernet>?
+    debug: 'requests ...' from <from pox.lib.packet.ethernet import ETHER_BROADCAST>?
+    debug: 'requests ...' from <from pox.lib.packet.arp import arp>?
+    debug: 'requests ...' from <from pox.lib.addresses import IPAddr>?
+    debug: 'requests ...' from <from pox.lib.addresses import EthAddr>?
+    debug: 'requests ...' from <from pox.lib.util import dpid_to_str>?
+    debug: 'requests ...' from <from pox.lib.util import str_to_bool>?
+    debug: 'requests ...' from <from pox.lib.recoco import Timer>?
+    debug: 'requests ...' from <from pox.lib.revent import EventHalt>?
+    debug: 'requests ...' from <import pox.openflow.libopenflow_01 as of>?
+    debug: 'requests ...' from <import time>?
+    info: is 'requests' accessible on (<blob 'arp_responder'>, [])? no
+    info: is 'requests' accessible on (<blob '*'>, [])? no
+    error: evaluating 'requests' at arp_responder.py#229: could not resolve first part of 'requests'
+[2013-05-30 01:34:48,312] [ERROR] koCodeIntel: error evaluating calltip:
+  trigger: <Trigger 'python-calltip-call-signature' at 7013>
+  log:
+    info: eval 'requests.append' at arp_responder.py#229  <Trigger 'python-calltip-call-signature' at 7013>
+    info: start scope is (<blob 'arp_responder'>, ['ARPResponder', '_handle_PacketIn'])
+    info: find 'requests ...' starting at (<blob 'arp_responder'>, ['ARPResponder', '_handle_PacketIn']):
+    info: is 'requests' accessible on (<blob 'arp_responder'>, ['ARPResponder', '_handle_PacketIn'])? no
+    debug: 'requests ...' from <from pox.core import core>?
+    debug: 'requests ...' from <import pox>?
+    debug: 'requests ...' from <from pox.lib.packet.ethernet import ethernet>?
+    debug: 'requests ...' from <from pox.lib.packet.ethernet import ETHER_BROADCAST>?
+    debug: 'requests ...' from <from pox.lib.packet.arp import arp>?
+    debug: 'requests ...' from <from pox.lib.addresses import IPAddr>?
+    debug: 'requests ...' from <from pox.lib.addresses import EthAddr>?
+    debug: 'requests ...' from <from pox.lib.util import dpid_to_str>?
+    debug: 'requests ...' from <from pox.lib.util import str_to_bool>?
+    debug: 'requests ...' from <from pox.lib.recoco import Timer>?
+    debug: 'requests ...' from <from pox.lib.revent import EventHalt>?
+    debug: 'requests ...' from <import pox.openflow.libopenflow_01 as of>?
+    debug: 'requests ...' from <import time>?
+    info: is 'requests' accessible on (<blob 'arp_responder'>, [])? no
+    info: is 'requests' accessible on (<blob '*'>, [])? no
+    error: evaluating 'requests.append' at arp_responder.py#229: could not resolve first part of 'requests.append'
+[2013-05-30 01:36:14,297] [ERROR] koCodeIntel: error evaluating completions:
+  trigger: <Trigger 'python-complete-object-members' at 7013>
+  log:
+    info: eval 'event' at arp_responder.py#229  <Trigger 'python-complete-object-members' at 7013>
+    info: start scope is (<blob 'arp_responder'>, ['ARPResponder', '_handle_PacketIn'])
+    info: find 'event ...' starting at (<blob 'arp_responder'>, ['ARPResponder', '_handle_PacketIn']):
+    info: is 'event' accessible on (<blob 'arp_responder'>, ['ARPResponder', '_handle_PacketIn'])? yes: <argument 'event'>
+    debug: _hit_from_citdl: first part: [u'event'] -> (<argument 'event'>, (<blob 'arp_responder'>, ['ARPResponder', '_handle_PacketIn']))
+    error: evaluating 'event' at arp_responder.py#229: no type-inference info for <argument 'event'>
+[2013-05-30 01:36:21,533] [ERROR] koCodeIntel: error evaluating completions:
+  trigger: <Trigger 'python-complete-object-members' at 7026>
+  log:
+    info: eval 'a' at arp_responder.py#229  <Trigger 'python-complete-object-members' at 7026>
+    info: start scope is (<blob 'arp_responder'>, ['ARPResponder', '_handle_PacketIn'])
+    info: find 'a ...' starting at (<blob 'arp_responder'>, ['ARPResponder', '_handle_PacketIn']):
+    info: is 'a' accessible on (<blob 'arp_responder'>, ['ARPResponder', '_handle_PacketIn'])? yes: <variable 'a'>
+    debug: _hit_from_citdl: first part: [u'a'] -> (<variable 'a'>, (<blob 'arp_responder'>, ['ARPResponder', '_handle_PacketIn']))
+    info: resolve 'packet.find()' type inference for <variable 'a'>:
+    info: find 'packet ...' starting at (<blob 'arp_responder'>, ['ARPResponder', '_handle_PacketIn']):
+    info: is 'packet' accessible on (<blob 'arp_responder'>, ['ARPResponder', '_handle_PacketIn'])? yes: <variable 'packet'>
+    debug: _hit_from_citdl: first part: ['packet'] -> (<variable 'packet'>, (<blob 'arp_responder'>, ['ARPResponder', '_handle_PacketIn']))
+    debug: _hit_from_citdl: resolve ['find', '()'] on <variable 'packet'> in (<blob 'arp_responder'>, ['ARPResponder', '_handle_PacketIn'])
+    info: resolve getattr 'find' on <variable 'packet'> in (<blob 'arp_responder'>, ['ARPResponder', '_handle_PacketIn']):
+    info: resolve 'event.parsed' type inference for <variable 'packet'>:
+    info: find 'event ...' starting at (<blob 'arp_responder'>, ['ARPResponder', '_handle_PacketIn']):
+    info: is 'event' accessible on (<blob 'arp_responder'>, ['ARPResponder', '_handle_PacketIn'])? yes: <argument 'event'>
+    debug: _hit_from_citdl: first part: ['event'] -> (<argument 'event'>, (<blob 'arp_responder'>, ['ARPResponder', '_handle_PacketIn']))
+    debug: _hit_from_citdl: resolve ['parsed'] on <argument 'event'> in (<blob 'arp_responder'>, ['ARPResponder', '_handle_PacketIn'])
+    info: resolve getattr 'parsed' on <argument 'event'> in (<blob 'arp_responder'>, ['ARPResponder', '_handle_PacketIn']):
+    error: evaluating 'a' at arp_responder.py#229: no type-inference info for <argument 'event'>
+[2013-05-30 01:36:48,085] [ERROR] koCodeIntel: error evaluating calltip:
+  trigger: <Trigger 'python-calltip-call-signature' at 6916>
+  log:
+    info: eval 'if' at arp_responder.py#226  <Trigger 'python-calltip-call-signature' at 6916>
+    info: start scope is (<blob 'arp_responder'>, ['ARPResponder', '_handle_PacketIn'])
+    info: find 'if ...' starting at (<blob 'arp_responder'>, ['ARPResponder', '_handle_PacketIn']):
+    info: is 'if' accessible on (<blob 'arp_responder'>, ['ARPResponder', '_handle_PacketIn'])? no
+    debug: 'if ...' from <from pox.core import core>?
+    debug: 'if ...' from <import pox>?
+    debug: 'if ...' from <from pox.lib.packet.ethernet import ethernet>?
+    debug: 'if ...' from <from pox.lib.packet.ethernet import ETHER_BROADCAST>?
+    debug: 'if ...' from <from pox.lib.packet.arp import arp>?
+    debug: 'if ...' from <from pox.lib.addresses import IPAddr>?
+    debug: 'if ...' from <from pox.lib.addresses import EthAddr>?
+    debug: 'if ...' from <from pox.lib.util import dpid_to_str>?
+    debug: 'if ...' from <from pox.lib.util import str_to_bool>?
+    debug: 'if ...' from <from pox.lib.recoco import Timer>?
+    debug: 'if ...' from <from pox.lib.revent import EventHalt>?
+    debug: 'if ...' from <import pox.openflow.libopenflow_01 as of>?
+    debug: 'if ...' from <import time>?
+    info: is 'if' accessible on (<blob 'arp_responder'>, [])? no
+    info: is 'if' accessible on (<blob '*'>, [])? no
+    error: evaluating 'if' at arp_responder.py#226: could not resolve first part of 'if'
+[2013-05-30 01:36:58,313] [ERROR] koCodeIntel: error evaluating completions:
+  trigger: <Trigger 'python-complete-object-members' at 6922>
+  log:
+    info: eval 'event' at arp_responder.py#226  <Trigger 'python-complete-object-members' at 6922>
+    info: start scope is (<blob 'arp_responder'>, ['ARPResponder', '_handle_PacketIn'])
+    info: find 'event ...' starting at (<blob 'arp_responder'>, ['ARPResponder', '_handle_PacketIn']):
+    info: is 'event' accessible on (<blob 'arp_responder'>, ['ARPResponder', '_handle_PacketIn'])? yes: <argument 'event'>
+    debug: _hit_from_citdl: first part: [u'event'] -> (<argument 'event'>, (<blob 'arp_responder'>, ['ARPResponder', '_handle_PacketIn']))
+    error: evaluating 'event' at arp_responder.py#226: no type-inference info for <argument 'event'>
+[2013-05-30 01:39:05,341] [ERROR] koCodeIntel: error evaluating completions:
+  trigger: <Trigger 'python-complete-object-members' at 6988>
+  log:
+    info: eval 'requests' at arp_responder.py#227  <Trigger 'python-complete-object-members' at 6988>
+    info: start scope is (<blob 'arp_responder'>, ['ARPResponder', '_handle_PacketIn'])
+    info: find 'requests ...' starting at (<blob 'arp_responder'>, ['ARPResponder', '_handle_PacketIn']):
+    info: is 'requests' accessible on (<blob 'arp_responder'>, ['ARPResponder', '_handle_PacketIn'])? no
+    debug: 'requests ...' from <from pox.core import core>?
+    debug: 'requests ...' from <import pox>?
+    debug: 'requests ...' from <from pox.lib.packet.ethernet import ethernet>?
+    debug: 'requests ...' from <from pox.lib.packet.ethernet import ETHER_BROADCAST>?
+    debug: 'requests ...' from <from pox.lib.packet.arp import arp>?
+    debug: 'requests ...' from <from pox.lib.addresses import IPAddr>?
+    debug: 'requests ...' from <from pox.lib.addresses import EthAddr>?
+    debug: 'requests ...' from <from pox.lib.util import dpid_to_str>?
+    debug: 'requests ...' from <from pox.lib.util import str_to_bool>?
+    debug: 'requests ...' from <from pox.lib.recoco import Timer>?
+    debug: 'requests ...' from <from pox.lib.revent import EventHalt>?
+    debug: 'requests ...' from <import pox.openflow.libopenflow_01 as of>?
+    debug: 'requests ...' from <import time>?
+    info: is 'requests' accessible on (<blob 'arp_responder'>, [])? no
+    info: is 'requests' accessible on (<blob '*'>, [])? no
+    error: evaluating 'requests' at arp_responder.py#227: could not resolve first part of 'requests'
+[2013-05-30 01:39:11,788] [ERROR] koCodeIntel: error evaluating calltip:
+  trigger: <Trigger 'python-calltip-call-signature' at 6992>
+  log:
+    info: eval 'requests.get' at arp_responder.py#227  <Trigger 'python-calltip-call-signature' at 6992>
+    info: start scope is (<blob 'arp_responder'>, ['ARPResponder', '_handle_PacketIn'])
+    info: find 'requests ...' starting at (<blob 'arp_responder'>, ['ARPResponder', '_handle_PacketIn']):
+    info: is 'requests' accessible on (<blob 'arp_responder'>, ['ARPResponder', '_handle_PacketIn'])? no
+    debug: 'requests ...' from <from pox.core import core>?
+    debug: 'requests ...' from <import pox>?
+    debug: 'requests ...' from <from pox.lib.packet.ethernet import ethernet>?
+    debug: 'requests ...' from <from pox.lib.packet.ethernet import ETHER_BROADCAST>?
+    debug: 'requests ...' from <from pox.lib.packet.arp import arp>?
+    debug: 'requests ...' from <from pox.lib.addresses import IPAddr>?
+    debug: 'requests ...' from <from pox.lib.addresses import EthAddr>?
+    debug: 'requests ...' from <from pox.lib.util import dpid_to_str>?
+    debug: 'requests ...' from <from pox.lib.util import str_to_bool>?
+    debug: 'requests ...' from <from pox.lib.recoco import Timer>?
+    debug: 'requests ...' from <from pox.lib.revent import EventHalt>?
+    debug: 'requests ...' from <import pox.openflow.libopenflow_01 as of>?
+    debug: 'requests ...' from <import time>?
+    info: is 'requests' accessible on (<blob 'arp_responder'>, [])? no
+    info: is 'requests' accessible on (<blob '*'>, [])? no
+    error: evaluating 'requests.get' at arp_responder.py#227: could not resolve first part of 'requests.get'
+[2013-05-30 01:40:00,329] [ERROR] koCodeIntel: error evaluating completions:
+  trigger: <Trigger 'python-complete-object-members' at 7295>
+  log:
+    info: eval 'requests' at arp_responder.py#235  <Trigger 'python-complete-object-members' at 7295>
+    info: start scope is (<blob 'arp_responder'>, ['ARPResponder', '_handle_PacketIn'])
+    info: find 'requests ...' starting at (<blob 'arp_responder'>, ['ARPResponder', '_handle_PacketIn']):
+    info: is 'requests' accessible on (<blob 'arp_responder'>, ['ARPResponder', '_handle_PacketIn'])? no
+    debug: 'requests ...' from <from pox.core import core>?
+    debug: 'requests ...' from <import pox>?
+    debug: 'requests ...' from <from pox.lib.packet.ethernet import ethernet>?
+    debug: 'requests ...' from <from pox.lib.packet.ethernet import ETHER_BROADCAST>?
+    debug: 'requests ...' from <from pox.lib.packet.arp import arp>?
+    debug: 'requests ...' from <from pox.lib.addresses import IPAddr>?
+    debug: 'requests ...' from <from pox.lib.addresses import EthAddr>?
+    debug: 'requests ...' from <from pox.lib.util import dpid_to_str>?
+    debug: 'requests ...' from <from pox.lib.util import str_to_bool>?
+    debug: 'requests ...' from <from pox.lib.recoco import Timer>?
+    debug: 'requests ...' from <from pox.lib.revent import EventHalt>?
+    debug: 'requests ...' from <import pox.openflow.libopenflow_01 as of>?
+    debug: 'requests ...' from <import time>?
+    info: is 'requests' accessible on (<blob 'arp_responder'>, [])? no
+    info: is 'requests' accessible on (<blob '*'>, [])? no
+    error: evaluating 'requests' at arp_responder.py#235: could not resolve first part of 'requests'
+[2013-05-30 01:46:25,223] [ERROR] koCodeIntel: error evaluating completions:
+  trigger: <Trigger 'python-complete-object-members' at 7400>
+  log:
+    info: eval 'log' at arp_responder.py#236  <Trigger 'python-complete-object-members' at 7400>
+    info: start scope is (<blob 'arp_responder'>, ['ARPResponder', '_handle_PacketIn'])
+    info: find 'log ...' starting at (<blob 'arp_responder'>, ['ARPResponder', '_handle_PacketIn']):
+    info: is 'log' accessible on (<blob 'arp_responder'>, ['ARPResponder', '_handle_PacketIn'])? no
+    info: is 'log' accessible on (<blob 'arp_responder'>, [])? yes: <variable 'log'>
+    debug: _hit_from_citdl: first part: [u'log'] -> (<variable 'log'>, (<blob 'arp_responder'>, []))
+    info: resolve 'core.getLogger()' type inference for <variable 'log'>:
+    info: find 'core ...' starting at (<blob 'arp_responder'>, []):
+    debug: 'core ...' from <from pox.core import core>?
+    info: is blob 'pox.core' from <Python curdirlib>? no
+    info: is blob 'pox.core' from <Python envlib>? no
+    info: is blob 'pox.core' from <Python cataloglib: >? no
+    info: is blob 'pox.core' from <python-2.7 stdlib>? no
+    info: is blob 'pox.core' from <Python parentdirlib>? yes
+    info: is 'core' accessible on (<blob 'arp_responder'>, [])? yes: <variable 'core'>
+    debug: _hit_from_citdl: first part: ['core'] -> (<variable 'core'>, (<blob 'core'>, []))
+    debug: _hit_from_citdl: resolve ['getLogger', '()'] on <variable 'core'> in (<blob 'core'>, [])
+    info: resolve getattr 'getLogger' on <variable 'core'> in (<blob 'core'>, []):
+    info: resolve 'POXCore' type inference for <variable 'core'>:
+    info: find 'POXCore ...' starting at (<blob 'core'>, []):
+    info: is 'POXCore' accessible on (<blob 'core'>, [])? yes: <class 'POXCore'>
+    debug: _hit_from_citdl: first part: ['POXCore'] -> (<class 'POXCore'>, (<blob 'core'>, []))
+    info: 'POXCore' is <class 'POXCore'> on (<blob 'core'>, [])
+    info: attr is <function 'getLogger'> in <class 'POXCore'>
+    debug: _hit_from_citdl: resolve ['()'] on <function 'getLogger'> in (<blob 'core'>, ['POXCore'])
+    info: _hit_from_call: function with citdl 'POXCore.getLogger()'
+    info: find 'POXCore ...' starting at (<blob 'core'>, ['POXCore', 'getLogger']):
+    info: is 'POXCore' accessible on (<blob 'core'>, ['POXCore', 'getLogger'])? no
+    info: is 'POXCore' accessible on (<blob 'core'>, [])? yes: <class 'POXCore'>
+    debug: _hit_from_citdl: first part: ['POXCore'] -> (<class 'POXCore'>, (<blob 'core'>, []))
+    debug: _hit_from_citdl: resolve ['getLogger', '()'] on <class 'POXCore'> in (<blob 'core'>, [])
+    info: resolve getattr 'getLogger' on <class 'POXCore'> in (<blob 'core'>, []):
+    info: attr is <function 'getLogger'> in <class 'POXCore'>
+    debug: _hit_from_citdl: resolve ['()'] on <function 'getLogger'> in (<blob 'core'>, ['POXCore'])
+    info: _hit_from_call: function with citdl 'POXCore.getLogger()'
+    info: find 'POXCore ...' starting at (<blob 'core'>, ['POXCore', 'getLogger']):
+    info: is 'POXCore' accessible on (<blob 'core'>, ['POXCore', 'getLogger'])? no
+    info: is 'POXCore' accessible on (<blob 'core'>, [])? yes: <class 'POXCore'>
+    debug: _hit_from_citdl: first part: ['POXCore'] -> (<class 'POXCore'>, (<blob 'core'>, []))
+    debug: _hit_from_citdl: resolve ['getLogger', '()'] on <class 'POXCore'> in (<blob 'core'>, [])
+    info: resolve getattr 'getLogger' on <class 'POXCore'> in (<blob 'core'>, []):
+    info: attr is <function 'getLogger'> in <class 'POXCore'>
+    debug: _hit_from_citdl: resolve ['()'] on <function 'getLogger'> in (<blob 'core'>, ['POXCore'])
+    info: _hit_from_call: function with citdl 'POXCore.getLogger()'
+    info: find 'POXCore ...' starting at (<blob 'core'>, ['POXCore', 'getLogger']):
+    info: is 'POXCore' accessible on (<blob 'core'>, ['POXCore', 'getLogger'])? no
+    info: is 'POXCore' accessible on (<blob 'core'>, [])? yes: <class 'POXCore'>
+    debug: _hit_from_citdl: first part: ['POXCore'] -> (<class 'POXCore'>, (<blob 'core'>, []))
+    debug: _hit_from_citdl: resolve ['getLogger', '()'] on <class 'POXCore'> in (<blob 'core'>, [])
+    info: resolve getattr 'getLogger' on <class 'POXCore'> in (<blob 'core'>, []):
+    info: attr is <function 'getLogger'> in <class 'POXCore'>
+    debug: _hit_from_citdl: resolve ['()'] on <function 'getLogger'> in (<blob 'core'>, ['POXCore'])
+    info: _hit_from_call: function with citdl 'POXCore.getLogger()'
+    info: find 'POXCore ...' starting at (<blob 'core'>, ['POXCore', 'getLogger']):
+    info: is 'POXCore' accessible on (<blob 'core'>, ['POXCore', 'getLogger'])? no
+    info: is 'POXCore' accessible on (<blob 'core'>, [])? yes: <class 'POXCore'>
+    debug: _hit_from_citdl: first part: ['POXCore'] -> (<class 'POXCore'>, (<blob 'core'>, []))
+    debug: _hit_from_citdl: resolve ['getLogger', '()'] on <class 'POXCore'> in (<blob 'core'>, [])
+    info: resolve getattr 'getLogger' on <class 'POXCore'> in (<blob 'core'>, []):
+    info: attr is <function 'getLogger'> in <class 'POXCore'>
+    debug: _hit_from_citdl: resolve ['()'] on <function 'getLogger'> in (<blob 'core'>, ['POXCore'])
+    info: _hit_from_call: function with citdl 'POXCore.getLogger()'
+    info: find 'POXCore ...' starting at (<blob 'core'>, ['POXCore', 'getLogger']):
+    info: is 'POXCore' accessible on (<blob 'core'>, ['POXCore', 'getLogger'])? no
+    info: is 'POXCore' accessible on (<blob 'core'>, [])? yes: <class 'POXCore'>
+    debug: _hit_from_citdl: first part: ['POXCore'] -> (<class 'POXCore'>, (<blob 'core'>, []))
+    debug: _hit_from_citdl: resolve ['getLogger', '()'] on <class 'POXCore'> in (<blob 'core'>, [])
+    info: resolve getattr 'getLogger' on <class 'POXCore'> in (<blob 'core'>, []):
+    info: attr is <function 'getLogger'> in <class 'POXCore'>
+    debug: _hit_from_citdl: resolve ['()'] on <function 'getLogger'> in (<blob 'core'>, ['POXCore'])
+    info: _hit_from_call: function with citdl 'POXCore.getLogger()'
+    info: find 'POXCore ...' starting at (<blob 'core'>, ['POXCore', 'getLogger']):
+    info: is 'POXCore' accessible on (<blob 'core'>, ['POXCore', 'getLogger'])? no
+    info: is 'POXCore' accessible on (<blob 'core'>, [])? yes: <class 'POXCore'>
+    debug: _hit_from_citdl: first part: ['POXCore'] -> (<class 'POXCore'>, (<blob 'core'>, []))
+    debug: _hit_from_citdl: resolve ['getLogger', '()'] on <class 'POXCore'> in (<blob 'core'>, [])
+    info: resolve getattr 'getLogger' on <class 'POXCore'> in (<blob 'core'>, []):
+    info: attr is <function 'getLogger'> in <class 'POXCore'>
+    debug: _hit_from_citdl: resolve ['()'] on <function 'getLogger'> in (<blob 'core'>, ['POXCore'])
+    info: _hit_from_call: function with citdl 'POXCore.getLogger()'
+    info: find 'POXCore ...' starting at (<blob 'core'>, ['POXCore', 'getLogger']):
+    info: is 'POXCore' accessible on (<blob 'core'>, ['POXCore', 'getLogger'])? no
+    info: is 'POXCore' accessible on (<blob 'core'>, [])? yes: <class 'POXCore'>
+    debug: _hit_from_citdl: first part: ['POXCore'] -> (<class 'POXCore'>, (<blob 'core'>, []))
+    debug: _hit_from_citdl: resolve ['getLogger', '()'] on <class 'POXCore'> in (<blob 'core'>, [])
+    info: resolve getattr 'getLogger' on <class 'POXCore'> in (<blob 'core'>, []):
+    info: attr is <function 'getLogger'> in <class 'POXCore'>
+    debug: _hit_from_citdl: resolve ['()'] on <function 'getLogger'> in (<blob 'core'>, ['POXCore'])
+    info: _hit_from_call: function with citdl 'POXCore.getLogger()'
+    info: find 'POXCore ...' starting at (<blob 'core'>, ['POXCore', 'getLogger']):
+    info: is 'POXCore' accessible on (<blob 'core'>, ['POXCore', 'getLogger'])? no
+    info: is 'POXCore' accessible on (<blob 'core'>, [])? yes: <class 'POXCore'>
+    debug: _hit_from_citdl: first part: ['POXCore'] -> (<class 'POXCore'>, (<blob 'core'>, []))
+    debug: _hit_from_citdl: resolve ['getLogger', '()'] on <class 'POXCore'> in (<blob 'core'>, [])
+    info: resolve getattr 'getLogger' on <class 'POXCore'> in (<blob 'core'>, []):
+    info: attr is <function 'getLogger'> in <class 'POXCore'>
+    debug: _hit_from_citdl: resolve ['()'] on <function 'getLogger'> in (<blob 'core'>, ['POXCore'])
+    info: _hit_from_call: function with citdl 'POXCore.getLogger()'
+    info: find 'POXCore ...' starting at (<blob 'core'>, ['POXCore', 'getLogger']):
+    error: evaluating 'log' at arp_responder.py#236: hit eval sentinel: expr 'POXCore' eval count is 10 (abort)
+[2013-05-30 01:46:29,157] [ERROR] koCodeIntel: error evaluating calltip:
+  trigger: <Trigger 'python-calltip-call-signature' at 7406>
+  log:
+    info: eval 'log.debug' at arp_responder.py#236  <Trigger 'python-calltip-call-signature' at 7406>
+    info: start scope is (<blob 'arp_responder'>, ['ARPResponder', '_handle_PacketIn'])
+    info: find 'log ...' starting at (<blob 'arp_responder'>, ['ARPResponder', '_handle_PacketIn']):
+    info: is 'log' accessible on (<blob 'arp_responder'>, ['ARPResponder', '_handle_PacketIn'])? no
+    info: is 'log' accessible on (<blob 'arp_responder'>, [])? yes: <variable 'log'>
+    debug: _hit_from_citdl: first part: [u'log'] -> (<variable 'log'>, (<blob 'arp_responder'>, []))
+    debug: _hit_from_citdl: resolve [u'debug'] on <variable 'log'> in (<blob 'arp_responder'>, [])
+    info: resolve getattr 'debug' on <variable 'log'> in (<blob 'arp_responder'>, []):
+    info: resolve 'core.getLogger()' type inference for <variable 'log'>:
+    info: find 'core ...' starting at (<blob 'arp_responder'>, []):
+    debug: 'core ...' from <from pox.core import core>?
+    info: is blob 'pox.core' from <Python curdirlib>? no
+    info: is blob 'pox.core' from <Python envlib>? no
+    info: is blob 'pox.core' from <Python cataloglib: >? no
+    info: is blob 'pox.core' from <python-2.7 stdlib>? no
+    info: is blob 'pox.core' from <Python parentdirlib>? yes
+    info: is 'core' accessible on (<blob 'arp_responder'>, [])? yes: <variable 'core'>
+    debug: _hit_from_citdl: first part: ['core'] -> (<variable 'core'>, (<blob 'core'>, []))
+    debug: _hit_from_citdl: resolve ['getLogger', '()'] on <variable 'core'> in (<blob 'core'>, [])
+    info: resolve getattr 'getLogger' on <variable 'core'> in (<blob 'core'>, []):
+    info: resolve 'POXCore' type inference for <variable 'core'>:
+    info: find 'POXCore ...' starting at (<blob 'core'>, []):
+    info: is 'POXCore' accessible on (<blob 'core'>, [])? yes: <class 'POXCore'>
+    debug: _hit_from_citdl: first part: ['POXCore'] -> (<class 'POXCore'>, (<blob 'core'>, []))
+    info: 'POXCore' is <class 'POXCore'> on (<blob 'core'>, [])
+    info: attr is <function 'getLogger'> in <class 'POXCore'>
+    debug: _hit_from_citdl: resolve ['()'] on <function 'getLogger'> in (<blob 'core'>, ['POXCore'])
+    info: _hit_from_call: function with citdl 'POXCore.getLogger()'
+    info: find 'POXCore ...' starting at (<blob 'core'>, ['POXCore', 'getLogger']):
+    info: is 'POXCore' accessible on (<blob 'core'>, ['POXCore', 'getLogger'])? no
+    info: is 'POXCore' accessible on (<blob 'core'>, [])? yes: <class 'POXCore'>
+    debug: _hit_from_citdl: first part: ['POXCore'] -> (<class 'POXCore'>, (<blob 'core'>, []))
+    debug: _hit_from_citdl: resolve ['getLogger', '()'] on <class 'POXCore'> in (<blob 'core'>, [])
+    info: resolve getattr 'getLogger' on <class 'POXCore'> in (<blob 'core'>, []):
+    info: attr is <function 'getLogger'> in <class 'POXCore'>
+    debug: _hit_from_citdl: resolve ['()'] on <function 'getLogger'> in (<blob 'core'>, ['POXCore'])
+    info: _hit_from_call: function with citdl 'POXCore.getLogger()'
+    info: find 'POXCore ...' starting at (<blob 'core'>, ['POXCore', 'getLogger']):
+    info: is 'POXCore' accessible on (<blob 'core'>, ['POXCore', 'getLogger'])? no
+    info: is 'POXCore' accessible on (<blob 'core'>, [])? yes: <class 'POXCore'>
+    debug: _hit_from_citdl: first part: ['POXCore'] -> (<class 'POXCore'>, (<blob 'core'>, []))
+    debug: _hit_from_citdl: resolve ['getLogger', '()'] on <class 'POXCore'> in (<blob 'core'>, [])
+    info: resolve getattr 'getLogger' on <class 'POXCore'> in (<blob 'core'>, []):
+    info: attr is <function 'getLogger'> in <class 'POXCore'>
+    debug: _hit_from_citdl: resolve ['()'] on <function 'getLogger'> in (<blob 'core'>, ['POXCore'])
+    info: _hit_from_call: function with citdl 'POXCore.getLogger()'
+    info: find 'POXCore ...' starting at (<blob 'core'>, ['POXCore', 'getLogger']):
+    info: is 'POXCore' accessible on (<blob 'core'>, ['POXCore', 'getLogger'])? no
+    info: is 'POXCore' accessible on (<blob 'core'>, [])? yes: <class 'POXCore'>
+    debug: _hit_from_citdl: first part: ['POXCore'] -> (<class 'POXCore'>, (<blob 'core'>, []))
+    debug: _hit_from_citdl: resolve ['getLogger', '()'] on <class 'POXCore'> in (<blob 'core'>, [])
+    info: resolve getattr 'getLogger' on <class 'POXCore'> in (<blob 'core'>, []):
+    info: attr is <function 'getLogger'> in <class 'POXCore'>
+    debug: _hit_from_citdl: resolve ['()'] on <function 'getLogger'> in (<blob 'core'>, ['POXCore'])
+    info: _hit_from_call: function with citdl 'POXCore.getLogger()'
+    info: find 'POXCore ...' starting at (<blob 'core'>, ['POXCore', 'getLogger']):
+    info: is 'POXCore' accessible on (<blob 'core'>, ['POXCore', 'getLogger'])? no
+    info: is 'POXCore' accessible on (<blob 'core'>, [])? yes: <class 'POXCore'>
+    debug: _hit_from_citdl: first part: ['POXCore'] -> (<class 'POXCore'>, (<blob 'core'>, []))
+    debug: _hit_from_citdl: resolve ['getLogger', '()'] on <class 'POXCore'> in (<blob 'core'>, [])
+    info: resolve getattr 'getLogger' on <class 'POXCore'> in (<blob 'core'>, []):
+    info: attr is <function 'getLogger'> in <class 'POXCore'>
+    debug: _hit_from_citdl: resolve ['()'] on <function 'getLogger'> in (<blob 'core'>, ['POXCore'])
+    info: _hit_from_call: function with citdl 'POXCore.getLogger()'
+    info: find 'POXCore ...' starting at (<blob 'core'>, ['POXCore', 'getLogger']):
+    info: is 'POXCore' accessible on (<blob 'core'>, ['POXCore', 'getLogger'])? no
+    info: is 'POXCore' accessible on (<blob 'core'>, [])? yes: <class 'POXCore'>
+    debug: _hit_from_citdl: first part: ['POXCore'] -> (<class 'POXCore'>, (<blob 'core'>, []))
+    debug: _hit_from_citdl: resolve ['getLogger', '()'] on <class 'POXCore'> in (<blob 'core'>, [])
+    info: resolve getattr 'getLogger' on <class 'POXCore'> in (<blob 'core'>, []):
+    info: attr is <function 'getLogger'> in <class 'POXCore'>
+    debug: _hit_from_citdl: resolve ['()'] on <function 'getLogger'> in (<blob 'core'>, ['POXCore'])
+    info: _hit_from_call: function with citdl 'POXCore.getLogger()'
+    info: find 'POXCore ...' starting at (<blob 'core'>, ['POXCore', 'getLogger']):
+    info: is 'POXCore' accessible on (<blob 'core'>, ['POXCore', 'getLogger'])? no
+    info: is 'POXCore' accessible on (<blob 'core'>, [])? yes: <class 'POXCore'>
+    debug: _hit_from_citdl: first part: ['POXCore'] -> (<class 'POXCore'>, (<blob 'core'>, []))
+    debug: _hit_from_citdl: resolve ['getLogger', '()'] on <class 'POXCore'> in (<blob 'core'>, [])
+    info: resolve getattr 'getLogger' on <class 'POXCore'> in (<blob 'core'>, []):
+    info: attr is <function 'getLogger'> in <class 'POXCore'>
+    debug: _hit_from_citdl: resolve ['()'] on <function 'getLogger'> in (<blob 'core'>, ['POXCore'])
+    info: _hit_from_call: function with citdl 'POXCore.getLogger()'
+    info: find 'POXCore ...' starting at (<blob 'core'>, ['POXCore', 'getLogger']):
+    info: is 'POXCore' accessible on (<blob 'core'>, ['POXCore', 'getLogger'])? no
+    info: is 'POXCore' accessible on (<blob 'core'>, [])? yes: <class 'POXCore'>
+    debug: _hit_from_citdl: first part: ['POXCore'] -> (<class 'POXCore'>, (<blob 'core'>, []))
+    debug: _hit_from_citdl: resolve ['getLogger', '()'] on <class 'POXCore'> in (<blob 'core'>, [])
+    info: resolve getattr 'getLogger' on <class 'POXCore'> in (<blob 'core'>, []):
+    info: attr is <function 'getLogger'> in <class 'POXCore'>
+    debug: _hit_from_citdl: resolve ['()'] on <function 'getLogger'> in (<blob 'core'>, ['POXCore'])
+    info: _hit_from_call: function with citdl 'POXCore.getLogger()'
+    info: find 'POXCore ...' starting at (<blob 'core'>, ['POXCore', 'getLogger']):
+    info: is 'POXCore' accessible on (<blob 'core'>, ['POXCore', 'getLogger'])? no
+    info: is 'POXCore' accessible on (<blob 'core'>, [])? yes: <class 'POXCore'>
+    debug: _hit_from_citdl: first part: ['POXCore'] -> (<class 'POXCore'>, (<blob 'core'>, []))
+    debug: _hit_from_citdl: resolve ['getLogger', '()'] on <class 'POXCore'> in (<blob 'core'>, [])
+    info: resolve getattr 'getLogger' on <class 'POXCore'> in (<blob 'core'>, []):
+    info: attr is <function 'getLogger'> in <class 'POXCore'>
+    debug: _hit_from_citdl: resolve ['()'] on <function 'getLogger'> in (<blob 'core'>, ['POXCore'])
+    info: _hit_from_call: function with citdl 'POXCore.getLogger()'
+    info: find 'POXCore ...' starting at (<blob 'core'>, ['POXCore', 'getLogger']):
+    error: evaluating 'log.debug' at arp_responder.py#236: hit eval sentinel: expr 'POXCore' eval count is 10 (abort)
+[2013-05-30 01:56:41,229] [ERROR] koCodeIntel: error evaluating completions:
+  trigger: <Trigger 'python-complete-object-members' at 7117>
+  log:
+    info: eval 'log' at arp_responder.py#230  <Trigger 'python-complete-object-members' at 7117>
+    info: start scope is (<blob 'arp_responder'>, ['ARPResponder', '_handle_PacketIn'])
+    info: find 'log ...' starting at (<blob 'arp_responder'>, ['ARPResponder', '_handle_PacketIn']):
+    info: is 'log' accessible on (<blob 'arp_responder'>, ['ARPResponder', '_handle_PacketIn'])? no
+    info: is 'log' accessible on (<blob 'arp_responder'>, [])? yes: <variable 'log'>
+    debug: _hit_from_citdl: first part: [u'log'] -> (<variable 'log'>, (<blob 'arp_responder'>, []))
+    info: resolve 'core.getLogger()' type inference for <variable 'log'>:
+    info: find 'core ...' starting at (<blob 'arp_responder'>, []):
+    debug: 'core ...' from <from pox.core import core>?
+    info: is blob 'pox.core' from <Python curdirlib>? no
+    info: is blob 'pox.core' from <Python envlib>? no
+    info: is blob 'pox.core' from <Python cataloglib: >? no
+    info: is blob 'pox.core' from <python-2.7 stdlib>? no
+    info: is blob 'pox.core' from <Python parentdirlib>? yes
+    info: is 'core' accessible on (<blob 'arp_responder'>, [])? yes: <variable 'core'>
+    debug: _hit_from_citdl: first part: ['core'] -> (<variable 'core'>, (<blob 'core'>, []))
+    debug: _hit_from_citdl: resolve ['getLogger', '()'] on <variable 'core'> in (<blob 'core'>, [])
+    info: resolve getattr 'getLogger' on <variable 'core'> in (<blob 'core'>, []):
+    info: resolve 'POXCore' type inference for <variable 'core'>:
+    info: find 'POXCore ...' starting at (<blob 'core'>, []):
+    info: is 'POXCore' accessible on (<blob 'core'>, [])? yes: <class 'POXCore'>
+    debug: _hit_from_citdl: first part: ['POXCore'] -> (<class 'POXCore'>, (<blob 'core'>, []))
+    info: 'POXCore' is <class 'POXCore'> on (<blob 'core'>, [])
+    info: attr is <function 'getLogger'> in <class 'POXCore'>
+    debug: _hit_from_citdl: resolve ['()'] on <function 'getLogger'> in (<blob 'core'>, ['POXCore'])
+    info: _hit_from_call: function with citdl 'POXCore.getLogger()'
+    info: find 'POXCore ...' starting at (<blob 'core'>, ['POXCore', 'getLogger']):
+    info: is 'POXCore' accessible on (<blob 'core'>, ['POXCore', 'getLogger'])? no
+    info: is 'POXCore' accessible on (<blob 'core'>, [])? yes: <class 'POXCore'>
+    debug: _hit_from_citdl: first part: ['POXCore'] -> (<class 'POXCore'>, (<blob 'core'>, []))
+    debug: _hit_from_citdl: resolve ['getLogger', '()'] on <class 'POXCore'> in (<blob 'core'>, [])
+    info: resolve getattr 'getLogger' on <class 'POXCore'> in (<blob 'core'>, []):
+    info: attr is <function 'getLogger'> in <class 'POXCore'>
+    debug: _hit_from_citdl: resolve ['()'] on <function 'getLogger'> in (<blob 'core'>, ['POXCore'])
+    info: _hit_from_call: function with citdl 'POXCore.getLogger()'
+    info: find 'POXCore ...' starting at (<blob 'core'>, ['POXCore', 'getLogger']):
+    info: is 'POXCore' accessible on (<blob 'core'>, ['POXCore', 'getLogger'])? no
+    info: is 'POXCore' accessible on (<blob 'core'>, [])? yes: <class 'POXCore'>
+    debug: _hit_from_citdl: first part: ['POXCore'] -> (<class 'POXCore'>, (<blob 'core'>, []))
+    debug: _hit_from_citdl: resolve ['getLogger', '()'] on <class 'POXCore'> in (<blob 'core'>, [])
+    info: resolve getattr 'getLogger' on <class 'POXCore'> in (<blob 'core'>, []):
+    info: attr is <function 'getLogger'> in <class 'POXCore'>
+    debug: _hit_from_citdl: resolve ['()'] on <function 'getLogger'> in (<blob 'core'>, ['POXCore'])
+    info: _hit_from_call: function with citdl 'POXCore.getLogger()'
+    info: find 'POXCore ...' starting at (<blob 'core'>, ['POXCore', 'getLogger']):
+    info: is 'POXCore' accessible on (<blob 'core'>, ['POXCore', 'getLogger'])? no
+    info: is 'POXCore' accessible on (<blob 'core'>, [])? yes: <class 'POXCore'>
+    debug: _hit_from_citdl: first part: ['POXCore'] -> (<class 'POXCore'>, (<blob 'core'>, []))
+    debug: _hit_from_citdl: resolve ['getLogger', '()'] on <class 'POXCore'> in (<blob 'core'>, [])
+    info: resolve getattr 'getLogger' on <class 'POXCore'> in (<blob 'core'>, []):
+    info: attr is <function 'getLogger'> in <class 'POXCore'>
+    debug: _hit_from_citdl: resolve ['()'] on <function 'getLogger'> in (<blob 'core'>, ['POXCore'])
+    info: _hit_from_call: function with citdl 'POXCore.getLogger()'
+    info: find 'POXCore ...' starting at (<blob 'core'>, ['POXCore', 'getLogger']):
+    info: is 'POXCore' accessible on (<blob 'core'>, ['POXCore', 'getLogger'])? no
+    info: is 'POXCore' accessible on (<blob 'core'>, [])? yes: <class 'POXCore'>
+    debug: _hit_from_citdl: first part: ['POXCore'] -> (<class 'POXCore'>, (<blob 'core'>, []))
+    debug: _hit_from_citdl: resolve ['getLogger', '()'] on <class 'POXCore'> in (<blob 'core'>, [])
+    info: resolve getattr 'getLogger' on <class 'POXCore'> in (<blob 'core'>, []):
+    info: attr is <function 'getLogger'> in <class 'POXCore'>
+    debug: _hit_from_citdl: resolve ['()'] on <function 'getLogger'> in (<blob 'core'>, ['POXCore'])
+    info: _hit_from_call: function with citdl 'POXCore.getLogger()'
+    info: find 'POXCore ...' starting at (<blob 'core'>, ['POXCore', 'getLogger']):
+    info: is 'POXCore' accessible on (<blob 'core'>, ['POXCore', 'getLogger'])? no
+    info: is 'POXCore' accessible on (<blob 'core'>, [])? yes: <class 'POXCore'>
+    debug: _hit_from_citdl: first part: ['POXCore'] -> (<class 'POXCore'>, (<blob 'core'>, []))
+    debug: _hit_from_citdl: resolve ['getLogger', '()'] on <class 'POXCore'> in (<blob 'core'>, [])
+    info: resolve getattr 'getLogger' on <class 'POXCore'> in (<blob 'core'>, []):
+    info: attr is <function 'getLogger'> in <class 'POXCore'>
+    debug: _hit_from_citdl: resolve ['()'] on <function 'getLogger'> in (<blob 'core'>, ['POXCore'])
+    info: _hit_from_call: function with citdl 'POXCore.getLogger()'
+    info: find 'POXCore ...' starting at (<blob 'core'>, ['POXCore', 'getLogger']):
+    info: is 'POXCore' accessible on (<blob 'core'>, ['POXCore', 'getLogger'])? no
+    info: is 'POXCore' accessible on (<blob 'core'>, [])? yes: <class 'POXCore'>
+    debug: _hit_from_citdl: first part: ['POXCore'] -> (<class 'POXCore'>, (<blob 'core'>, []))
+    debug: _hit_from_citdl: resolve ['getLogger', '()'] on <class 'POXCore'> in (<blob 'core'>, [])
+    info: resolve getattr 'getLogger' on <class 'POXCore'> in (<blob 'core'>, []):
+    info: attr is <function 'getLogger'> in <class 'POXCore'>
+    debug: _hit_from_citdl: resolve ['()'] on <function 'getLogger'> in (<blob 'core'>, ['POXCore'])
+    info: _hit_from_call: function with citdl 'POXCore.getLogger()'
+    info: find 'POXCore ...' starting at (<blob 'core'>, ['POXCore', 'getLogger']):
+    info: is 'POXCore' accessible on (<blob 'core'>, ['POXCore', 'getLogger'])? no
+    info: is 'POXCore' accessible on (<blob 'core'>, [])? yes: <class 'POXCore'>
+    debug: _hit_from_citdl: first part: ['POXCore'] -> (<class 'POXCore'>, (<blob 'core'>, []))
+    debug: _hit_from_citdl: resolve ['getLogger', '()'] on <class 'POXCore'> in (<blob 'core'>, [])
+    info: resolve getattr 'getLogger' on <class 'POXCore'> in (<blob 'core'>, []):
+    info: attr is <function 'getLogger'> in <class 'POXCore'>
+    debug: _hit_from_citdl: resolve ['()'] on <function 'getLogger'> in (<blob 'core'>, ['POXCore'])
+    info: _hit_from_call: function with citdl 'POXCore.getLogger()'
+    info: find 'POXCore ...' starting at (<blob 'core'>, ['POXCore', 'getLogger']):
+    info: is 'POXCore' accessible on (<blob 'core'>, ['POXCore', 'getLogger'])? no
+    info: is 'POXCore' accessible on (<blob 'core'>, [])? yes: <class 'POXCore'>
+    debug: _hit_from_citdl: first part: ['POXCore'] -> (<class 'POXCore'>, (<blob 'core'>, []))
+    debug: _hit_from_citdl: resolve ['getLogger', '()'] on <class 'POXCore'> in (<blob 'core'>, [])
+    info: resolve getattr 'getLogger' on <class 'POXCore'> in (<blob 'core'>, []):
+    info: attr is <function 'getLogger'> in <class 'POXCore'>
+    debug: _hit_from_citdl: resolve ['()'] on <function 'getLogger'> in (<blob 'core'>, ['POXCore'])
+    info: _hit_from_call: function with citdl 'POXCore.getLogger()'
+    info: find 'POXCore ...' starting at (<blob 'core'>, ['POXCore', 'getLogger']):
+    error: evaluating 'log' at arp_responder.py#230: hit eval sentinel: expr 'POXCore' eval count is 10 (abort)
+[2013-05-30 01:56:44,211] [ERROR] koCodeIntel: error evaluating calltip:
+  trigger: <Trigger 'python-calltip-call-signature' at 7123>
+  log:
+    info: eval 'log.debug' at arp_responder.py#230  <Trigger 'python-calltip-call-signature' at 7123>
+    info: start scope is (<blob 'arp_responder'>, ['ARPResponder', '_handle_PacketIn'])
+    info: find 'log ...' starting at (<blob 'arp_responder'>, ['ARPResponder', '_handle_PacketIn']):
+    info: is 'log' accessible on (<blob 'arp_responder'>, ['ARPResponder', '_handle_PacketIn'])? no
+    info: is 'log' accessible on (<blob 'arp_responder'>, [])? yes: <variable 'log'>
+    debug: _hit_from_citdl: first part: [u'log'] -> (<variable 'log'>, (<blob 'arp_responder'>, []))
+    debug: _hit_from_citdl: resolve [u'debug'] on <variable 'log'> in (<blob 'arp_responder'>, [])
+    info: resolve getattr 'debug' on <variable 'log'> in (<blob 'arp_responder'>, []):
+    info: resolve 'core.getLogger()' type inference for <variable 'log'>:
+    info: find 'core ...' starting at (<blob 'arp_responder'>, []):
+    debug: 'core ...' from <from pox.core import core>?
+    info: is blob 'pox.core' from <Python curdirlib>? no
+    info: is blob 'pox.core' from <Python envlib>? no
+    info: is blob 'pox.core' from <Python cataloglib: >? no
+    info: is blob 'pox.core' from <python-2.7 stdlib>? no
+    info: is blob 'pox.core' from <Python parentdirlib>? yes
+    info: is 'core' accessible on (<blob 'arp_responder'>, [])? yes: <variable 'core'>
+    debug: _hit_from_citdl: first part: ['core'] -> (<variable 'core'>, (<blob 'core'>, []))
+    debug: _hit_from_citdl: resolve ['getLogger', '()'] on <variable 'core'> in (<blob 'core'>, [])
+    info: resolve getattr 'getLogger' on <variable 'core'> in (<blob 'core'>, []):
+    info: resolve 'POXCore' type inference for <variable 'core'>:
+    info: find 'POXCore ...' starting at (<blob 'core'>, []):
+    info: is 'POXCore' accessible on (<blob 'core'>, [])? yes: <class 'POXCore'>
+    debug: _hit_from_citdl: first part: ['POXCore'] -> (<class 'POXCore'>, (<blob 'core'>, []))
+    info: 'POXCore' is <class 'POXCore'> on (<blob 'core'>, [])
+    info: attr is <function 'getLogger'> in <class 'POXCore'>
+    debug: _hit_from_citdl: resolve ['()'] on <function 'getLogger'> in (<blob 'core'>, ['POXCore'])
+    info: _hit_from_call: function with citdl 'POXCore.getLogger()'
+    info: find 'POXCore ...' starting at (<blob 'core'>, ['POXCore', 'getLogger']):
+    info: is 'POXCore' accessible on (<blob 'core'>, ['POXCore', 'getLogger'])? no
+    info: is 'POXCore' accessible on (<blob 'core'>, [])? yes: <class 'POXCore'>
+    debug: _hit_from_citdl: first part: ['POXCore'] -> (<class 'POXCore'>, (<blob 'core'>, []))
+    debug: _hit_from_citdl: resolve ['getLogger', '()'] on <class 'POXCore'> in (<blob 'core'>, [])
+    info: resolve getattr 'getLogger' on <class 'POXCore'> in (<blob 'core'>, []):
+    info: attr is <function 'getLogger'> in <class 'POXCore'>
+    debug: _hit_from_citdl: resolve ['()'] on <function 'getLogger'> in (<blob 'core'>, ['POXCore'])
+    info: _hit_from_call: function with citdl 'POXCore.getLogger()'
+    info: find 'POXCore ...' starting at (<blob 'core'>, ['POXCore', 'getLogger']):
+    info: is 'POXCore' accessible on (<blob 'core'>, ['POXCore', 'getLogger'])? no
+    info: is 'POXCore' accessible on (<blob 'core'>, [])? yes: <class 'POXCore'>
+    debug: _hit_from_citdl: first part: ['POXCore'] -> (<class 'POXCore'>, (<blob 'core'>, []))
+    debug: _hit_from_citdl: resolve ['getLogger', '()'] on <class 'POXCore'> in (<blob 'core'>, [])
+    info: resolve getattr 'getLogger' on <class 'POXCore'> in (<blob 'core'>, []):
+    info: attr is <function 'getLogger'> in <class 'POXCore'>
+    debug: _hit_from_citdl: resolve ['()'] on <function 'getLogger'> in (<blob 'core'>, ['POXCore'])
+    info: _hit_from_call: function with citdl 'POXCore.getLogger()'
+    info: find 'POXCore ...' starting at (<blob 'core'>, ['POXCore', 'getLogger']):
+    info: is 'POXCore' accessible on (<blob 'core'>, ['POXCore', 'getLogger'])? no
+    info: is 'POXCore' accessible on (<blob 'core'>, [])? yes: <class 'POXCore'>
+    debug: _hit_from_citdl: first part: ['POXCore'] -> (<class 'POXCore'>, (<blob 'core'>, []))
+    debug: _hit_from_citdl: resolve ['getLogger', '()'] on <class 'POXCore'> in (<blob 'core'>, [])
+    info: resolve getattr 'getLogger' on <class 'POXCore'> in (<blob 'core'>, []):
+    info: attr is <function 'getLogger'> in <class 'POXCore'>
+    debug: _hit_from_citdl: resolve ['()'] on <function 'getLogger'> in (<blob 'core'>, ['POXCore'])
+    info: _hit_from_call: function with citdl 'POXCore.getLogger()'
+    info: find 'POXCore ...' starting at (<blob 'core'>, ['POXCore', 'getLogger']):
+    info: is 'POXCore' accessible on (<blob 'core'>, ['POXCore', 'getLogger'])? no
+    info: is 'POXCore' accessible on (<blob 'core'>, [])? yes: <class 'POXCore'>
+    debug: _hit_from_citdl: first part: ['POXCore'] -> (<class 'POXCore'>, (<blob 'core'>, []))
+    debug: _hit_from_citdl: resolve ['getLogger', '()'] on <class 'POXCore'> in (<blob 'core'>, [])
+    info: resolve getattr 'getLogger' on <class 'POXCore'> in (<blob 'core'>, []):
+    info: attr is <function 'getLogger'> in <class 'POXCore'>
+    debug: _hit_from_citdl: resolve ['()'] on <function 'getLogger'> in (<blob 'core'>, ['POXCore'])
+    info: _hit_from_call: function with citdl 'POXCore.getLogger()'
+    info: find 'POXCore ...' starting at (<blob 'core'>, ['POXCore', 'getLogger']):
+    info: is 'POXCore' accessible on (<blob 'core'>, ['POXCore', 'getLogger'])? no
+    info: is 'POXCore' accessible on (<blob 'core'>, [])? yes: <class 'POXCore'>
+    debug: _hit_from_citdl: first part: ['POXCore'] -> (<class 'POXCore'>, (<blob 'core'>, []))
+    debug: _hit_from_citdl: resolve ['getLogger', '()'] on <class 'POXCore'> in (<blob 'core'>, [])
+    info: resolve getattr 'getLogger' on <class 'POXCore'> in (<blob 'core'>, []):
+    info: attr is <function 'getLogger'> in <class 'POXCore'>
+    debug: _hit_from_citdl: resolve ['()'] on <function 'getLogger'> in (<blob 'core'>, ['POXCore'])
+    info: _hit_from_call: function with citdl 'POXCore.getLogger()'
+    info: find 'POXCore ...' starting at (<blob 'core'>, ['POXCore', 'getLogger']):
+    info: is 'POXCore' accessible on (<blob 'core'>, ['POXCore', 'getLogger'])? no
+    info: is 'POXCore' accessible on (<blob 'core'>, [])? yes: <class 'POXCore'>
+    debug: _hit_from_citdl: first part: ['POXCore'] -> (<class 'POXCore'>, (<blob 'core'>, []))
+    debug: _hit_from_citdl: resolve ['getLogger', '()'] on <class 'POXCore'> in (<blob 'core'>, [])
+    info: resolve getattr 'getLogger' on <class 'POXCore'> in (<blob 'core'>, []):
+    info: attr is <function 'getLogger'> in <class 'POXCore'>
+    debug: _hit_from_citdl: resolve ['()'] on <function 'getLogger'> in (<blob 'core'>, ['POXCore'])
+    info: _hit_from_call: function with citdl 'POXCore.getLogger()'
+    info: find 'POXCore ...' starting at (<blob 'core'>, ['POXCore', 'getLogger']):
+    info: is 'POXCore' accessible on (<blob 'core'>, ['POXCore', 'getLogger'])? no
+    info: is 'POXCore' accessible on (<blob 'core'>, [])? yes: <class 'POXCore'>
+    debug: _hit_from_citdl: first part: ['POXCore'] -> (<class 'POXCore'>, (<blob 'core'>, []))
+    debug: _hit_from_citdl: resolve ['getLogger', '()'] on <class 'POXCore'> in (<blob 'core'>, [])
+    info: resolve getattr 'getLogger' on <class 'POXCore'> in (<blob 'core'>, []):
+    info: attr is <function 'getLogger'> in <class 'POXCore'>
+    debug: _hit_from_citdl: resolve ['()'] on <function 'getLogger'> in (<blob 'core'>, ['POXCore'])
+    info: _hit_from_call: function with citdl 'POXCore.getLogger()'
+    info: find 'POXCore ...' starting at (<blob 'core'>, ['POXCore', 'getLogger']):
+    info: is 'POXCore' accessible on (<blob 'core'>, ['POXCore', 'getLogger'])? no
+    info: is 'POXCore' accessible on (<blob 'core'>, [])? yes: <class 'POXCore'>
+    debug: _hit_from_citdl: first part: ['POXCore'] -> (<class 'POXCore'>, (<blob 'core'>, []))
+    debug: _hit_from_citdl: resolve ['getLogger', '()'] on <class 'POXCore'> in (<blob 'core'>, [])
+    info: resolve getattr 'getLogger' on <class 'POXCore'> in (<blob 'core'>, []):
+    info: attr is <function 'getLogger'> in <class 'POXCore'>
+    debug: _hit_from_citdl: resolve ['()'] on <function 'getLogger'> in (<blob 'core'>, ['POXCore'])
+    info: _hit_from_call: function with citdl 'POXCore.getLogger()'
+    info: find 'POXCore ...' starting at (<blob 'core'>, ['POXCore', 'getLogger']):
+    error: evaluating 'log.debug' at arp_responder.py#230: hit eval sentinel: expr 'POXCore' eval count is 10 (abort)
+[2013-05-30 02:23:31,306] [ERROR] koCodeIntel: error evaluating definition:
+  trigger: <Trigger 'python-defn-defn' at 7282 (explicit)>
+  log:
+    info: eval 'a.protodst' at arp_responder.py#232  <Trigger 'python-defn-defn' at 7282 (explicit)>
+    info: start scope is (<blob 'arp_responder'>, ['ARPResponder', '_handle_PacketIn'])
+    info: find 'a ...' starting at (<blob 'arp_responder'>, ['ARPResponder', '_handle_PacketIn']):
+    info: is 'a' accessible on (<blob 'arp_responder'>, ['ARPResponder', '_handle_PacketIn'])? yes: <variable 'a'>
+    debug: _hit_from_citdl: first part: [u'a'] -> (<variable 'a'>, (<blob 'arp_responder'>, ['ARPResponder', '_handle_PacketIn']))
+    debug: _hit_from_citdl: resolve [u'protodst'] on <variable 'a'> in (<blob 'arp_responder'>, ['ARPResponder', '_handle_PacketIn'])
+    info: resolve getattr 'protodst' on <variable 'a'> in (<blob 'arp_responder'>, ['ARPResponder', '_handle_PacketIn']):
+    info: resolve 'packet.find()' type inference for <variable 'a'>:
+    info: find 'packet ...' starting at (<blob 'arp_responder'>, ['ARPResponder', '_handle_PacketIn']):
+    info: is 'packet' accessible on (<blob 'arp_responder'>, ['ARPResponder', '_handle_PacketIn'])? yes: <variable 'packet'>
+    debug: _hit_from_citdl: first part: ['packet'] -> (<variable 'packet'>, (<blob 'arp_responder'>, ['ARPResponder', '_handle_PacketIn']))
+    debug: _hit_from_citdl: resolve ['find', '()'] on <variable 'packet'> in (<blob 'arp_responder'>, ['ARPResponder', '_handle_PacketIn'])
+    info: resolve getattr 'find' on <variable 'packet'> in (<blob 'arp_responder'>, ['ARPResponder', '_handle_PacketIn']):
+    info: resolve 'event.parsed' type inference for <variable 'packet'>:
+    info: find 'event ...' starting at (<blob 'arp_responder'>, ['ARPResponder', '_handle_PacketIn']):
+    info: is 'event' accessible on (<blob 'arp_responder'>, ['ARPResponder', '_handle_PacketIn'])? yes: <argument 'event'>
+    debug: _hit_from_citdl: first part: ['event'] -> (<argument 'event'>, (<blob 'arp_responder'>, ['ARPResponder', '_handle_PacketIn']))
+    debug: _hit_from_citdl: resolve ['parsed'] on <argument 'event'> in (<blob 'arp_responder'>, ['ARPResponder', '_handle_PacketIn'])
+    info: resolve getattr 'parsed' on <argument 'event'> in (<blob 'arp_responder'>, ['ARPResponder', '_handle_PacketIn']):
+    error: evaluating 'a.protodst' at arp_responder.py#232: no type-inference info for <argument 'event'>
+[2013-05-30 02:36:56,354] [ERROR] koCodeIntel: error evaluating completions:
+  trigger: <Trigger 'python-complete-object-members' at 3457>
+  log:
+    info: eval 'event' at remote_conn.py#97  <Trigger 'python-complete-object-members' at 3457>
+    info: start scope is (<blob 'remote_conn'>, ['RemoteConn'])
+    info: find 'event ...' starting at (<blob 'remote_conn'>, ['RemoteConn']):
+    info: is 'event' accessible on (<blob 'remote_conn'>, ['RemoteConn'])? no
+    debug: 'event ...' from <from pox.core import core>?
+    debug: 'event ...' from <import pox.openflow.libopenflow_01 as of>?
+    debug: 'event ...' from <from pox.lib.util import dpid_to_str>?
+    debug: 'event ...' from <from pox.lib.addresses import IPAddr>?
+    debug: 'event ...' from <from pox.lib.addresses import EthAddr>?
+    debug: 'event ...' from <import pox.lib.packet as pkg>?
+    debug: 'event ...' from <import time>?
+    debug: 'event ...' from <import SocketServer>?
+    debug: 'event ...' from <import threading>?
+    info: is 'event' accessible on (<blob 'remote_conn'>, [])? no
+    info: is 'event' accessible on (<blob '*'>, [])? no
+    error: evaluating 'event' at remote_conn.py#97: could not resolve first part of 'event'
+[2013-05-30 02:37:02,389] [ERROR] koCodeIntel: error evaluating completions:
+  trigger: <Trigger 'python-complete-object-members' at 3468>
+  log:
+    info: eval 'event.connection' at remote_conn.py#97  <Trigger 'python-complete-object-members' at 3468>
+    info: start scope is (<blob 'remote_conn'>, ['RemoteConn'])
+    info: find 'event ...' starting at (<blob 'remote_conn'>, ['RemoteConn']):
+    info: is 'event' accessible on (<blob 'remote_conn'>, ['RemoteConn'])? no
+    debug: 'event ...' from <from pox.core import core>?
+    debug: 'event ...' from <import pox.openflow.libopenflow_01 as of>?
+    debug: 'event ...' from <from pox.lib.util import dpid_to_str>?
+    debug: 'event ...' from <from pox.lib.addresses import IPAddr>?
+    debug: 'event ...' from <from pox.lib.addresses import EthAddr>?
+    debug: 'event ...' from <import pox.lib.packet as pkg>?
+    debug: 'event ...' from <import time>?
+    debug: 'event ...' from <import SocketServer>?
+    debug: 'event ...' from <import threading>?
+    info: is 'event' accessible on (<blob 'remote_conn'>, [])? no
+    info: is 'event' accessible on (<blob '*'>, [])? no
+    error: evaluating 'event.connection' at remote_conn.py#97: could not resolve first part of 'event.connection'
+[2013-05-30 02:41:00,455] [WARNING] koDocument: For file boot.py, favoring contents language Bash over filename language Python
+[2013-05-30 02:50:06,599] [ERROR] koCodeIntel: error evaluating completions:
+  trigger: <Trigger 'python-complete-object-members' at 2061>
+  log:
+    info: eval 'conn' at remote_conn.py#53  <Trigger 'python-complete-object-members' at 2061>
+    info: start scope is (<blob 'remote_conn'>, ['ConnectionHandler', 'setFlow'])
+    info: find 'conn ...' starting at (<blob 'remote_conn'>, ['ConnectionHandler', 'setFlow']):
+    info: is 'conn' accessible on (<blob 'remote_conn'>, ['ConnectionHandler', 'setFlow'])? no
+    debug: 'conn ...' from <from pox.core import core>?
+    debug: 'conn ...' from <import pox.openflow.libopenflow_01 as of>?
+    debug: 'conn ...' from <from pox.lib.util import dpid_to_str>?
+    debug: 'conn ...' from <from pox.lib.addresses import IPAddr>?
+    debug: 'conn ...' from <from pox.lib.addresses import EthAddr>?
+    debug: 'conn ...' from <import pox.lib.packet as pkg>?
+    debug: 'conn ...' from <import time>?
+    debug: 'conn ...' from <import SocketServer>?
+    debug: 'conn ...' from <import threading>?
+    info: is 'conn' accessible on (<blob 'remote_conn'>, [])? no
+    info: is 'conn' accessible on (<blob '*'>, [])? no
+    error: evaluating 'conn' at remote_conn.py#53: could not resolve first part of 'conn'
+[2013-05-30 02:50:27,808] [ERROR] koCodeIntel: error evaluating completions:
+  trigger: <Trigger 'python-complete-object-members' at 2072>
+  log:
+    info: eval 'self.connection' at remote_conn.py#53  <Trigger 'python-complete-object-members' at 2072>
+    info: start scope is (<blob 'remote_conn'>, ['ConnectionHandler', 'setFlow'])
+    info: find 'self ...' starting at (<blob 'remote_conn'>, ['ConnectionHandler', 'setFlow']):
+    info: is 'self' accessible on (<blob 'remote_conn'>, ['ConnectionHandler', 'setFlow'])? yes: <argument 'self'>
+    debug: _hit_from_citdl: first part: [u'self'] -> (<argument 'self'>, (<blob 'remote_conn'>, ['ConnectionHandler', 'setFlow']))
+    debug: _hit_from_citdl: resolve [u'connection'] on <argument 'self'> in (<blob 'remote_conn'>, ['ConnectionHandler', 'setFlow'])
+    info: resolve getattr 'connection' on <argument 'self'> in (<blob 'remote_conn'>, ['ConnectionHandler', 'setFlow']):
+    info: resolve 'ConnectionHandler' type inference for <argument 'self'>:
+    info: find 'ConnectionHandler ...' starting at (<blob 'remote_conn'>, ['ConnectionHandler', 'setFlow']):
+    info: is 'ConnectionHandler' accessible on (<blob 'remote_conn'>, ['ConnectionHandler', 'setFlow'])? no
+    info: is 'ConnectionHandler' accessible on (<blob 'remote_conn'>, [])? yes: <class 'ConnectionHandler'>
+    debug: _hit_from_citdl: first part: ['ConnectionHandler'] -> (<class 'ConnectionHandler'>, (<blob 'remote_conn'>, []))
+    info: 'ConnectionHandler' is <class 'ConnectionHandler'> on (<blob 'remote_conn'>, [])
+    debug: look for [u'connection'] from imports in <class 'ConnectionHandler'>
+    info: is 'connection' from base class: 'SocketServer.StreamRequestHandler'?
+    info: resolve 'SocketServer.StreamRequestHandler' type inference:
+    info: find 'SocketServer ...' starting at (<blob 'remote_conn'>, []):
+    debug: 'SocketServer ...' from <from pox.core import core>?
+    debug: 'SocketServer ...' from <import pox.openflow.libopenflow_01 as of>?
+    debug: 'SocketServer ...' from <from pox.lib.util import dpid_to_str>?
+    debug: 'SocketServer ...' from <from pox.lib.addresses import IPAddr>?
+    debug: 'SocketServer ...' from <from pox.lib.addresses import EthAddr>?
+    debug: 'SocketServer ...' from <import pox.lib.packet as pkg>?
+    debug: 'SocketServer ...' from <import time>?
+    debug: 'SocketServer ...' from <import SocketServer>?
+    info: is blob 'SocketServer' from <Python curdirlib>? no
+    info: is blob 'SocketServer' from <Python envlib>? no
+    info: is blob 'SocketServer' from <Python cataloglib: >? no
+    info: is blob 'SocketServer' from <python-2.7 stdlib>? yes
+    info: is 'SocketServer' accessible on (<blob 'remote_conn'>, [])? yes: <blob 'SocketServer'>
+    debug: _hit_from_citdl: first part: ['SocketServer'] -> (<blob 'SocketServer'>, (<blob 'SocketServer'>, []))
+    debug: _hit_from_citdl: resolve ['StreamRequestHandler'] on <blob 'SocketServer'> in (<blob 'SocketServer'>, [])
+    info: resolve getattr 'StreamRequestHandler' on <blob 'SocketServer'> in (<blob 'SocketServer'>, []):
+    info: attr is <class 'StreamRequestHandler'> in <blob 'SocketServer'>
+    info: 'SocketServer.StreamRequestHandler' is <class 'StreamRequestHandler'> on (<blob 'SocketServer'>, [])
+    info: resolve getattr 'connection' on <class 'StreamRequestHandler'> in (<blob 'SocketServer'>, []):
+    info: attr is <variable 'connection'> in <class 'StreamRequestHandler'>
+    info: resolve 'self.request' type inference for <variable 'connection'>:
+    info: find 'self ...' starting at (<blob 'SocketServer'>, ['StreamRequestHandler']):
+    info: is 'self' accessible on (<blob 'SocketServer'>, ['StreamRequestHandler'])? no
+    debug: 'self ...' from <import os>?
+    debug: 'self ...' from <import select>?
+    debug: 'self ...' from <import socket>?
+    debug: 'self ...' from <import sys>?
+    debug: 'self ...' from <import threading>?
+    info: is 'self' accessible on (<blob 'SocketServer'>, [])? no
+    info: is 'self' accessible on (<blob '*'>, [])? no
+    error: evaluating 'self.connection' at remote_conn.py#53: could not resolve first part of 'self.request'
+[2013-05-30 03:01:22,833] [ERROR] koCodeIntel: error evaluating completions:
+  trigger: <Trigger 'python-complete-object-members' at 3423>
+  log:
+    info: eval 'event' at remote_conn.py#96  <Trigger 'python-complete-object-members' at 3423>
+    info: start scope is (<blob 'remote_conn'>, ['RemoteConn', '_handle_ConnectionUp'])
+    info: find 'event ...' starting at (<blob 'remote_conn'>, ['RemoteConn', '_handle_ConnectionUp']):
+    info: is 'event' accessible on (<blob 'remote_conn'>, ['RemoteConn', '_handle_ConnectionUp'])? yes: <argument 'event'>
+    debug: _hit_from_citdl: first part: [u'event'] -> (<argument 'event'>, (<blob 'remote_conn'>, ['RemoteConn', '_handle_ConnectionUp']))
+    error: evaluating 'event' at remote_conn.py#96: no type-inference info for <argument 'event'>
+[2013-05-30 03:01:25,573] [ERROR] koCodeIntel: error evaluating completions:
+  trigger: <Trigger 'python-complete-object-members' at 3434>
+  log:
+    info: eval 'event.connection' at remote_conn.py#96  <Trigger 'python-complete-object-members' at 3434>
+    info: start scope is (<blob 'remote_conn'>, ['RemoteConn', '_handle_ConnectionUp'])
+    info: find 'event ...' starting at (<blob 'remote_conn'>, ['RemoteConn', '_handle_ConnectionUp']):
+    info: is 'event' accessible on (<blob 'remote_conn'>, ['RemoteConn', '_handle_ConnectionUp'])? yes: <argument 'event'>
+    debug: _hit_from_citdl: first part: [u'event'] -> (<argument 'event'>, (<blob 'remote_conn'>, ['RemoteConn', '_handle_ConnectionUp']))
+    debug: _hit_from_citdl: resolve [u'connection'] on <argument 'event'> in (<blob 'remote_conn'>, ['RemoteConn', '_handle_ConnectionUp'])
+    info: resolve getattr 'connection' on <argument 'event'> in (<blob 'remote_conn'>, ['RemoteConn', '_handle_ConnectionUp']):
+    error: evaluating 'event.connection' at remote_conn.py#96: no type-inference info for <argument 'event'>
+[2013-05-30 03:01:29,069] [ERROR] koCodeIntel: error evaluating completions:
+  trigger: <Trigger 'python-complete-object-members' at 3438>
+  log:
+    info: eval 'event.connection.ofp' at remote_conn.py#96  <Trigger 'python-complete-object-members' at 3438>
+    info: start scope is (<blob 'remote_conn'>, ['RemoteConn', '_handle_ConnectionUp'])
+    info: find 'event ...' starting at (<blob 'remote_conn'>, ['RemoteConn', '_handle_ConnectionUp']):
+    info: is 'event' accessible on (<blob 'remote_conn'>, ['RemoteConn', '_handle_ConnectionUp'])? yes: <argument 'event'>
+    debug: _hit_from_citdl: first part: [u'event'] -> (<argument 'event'>, (<blob 'remote_conn'>, ['RemoteConn', '_handle_ConnectionUp']))
+    debug: _hit_from_citdl: resolve [u'connection', u'ofp'] on <argument 'event'> in (<blob 'remote_conn'>, ['RemoteConn', '_handle_ConnectionUp'])
+    info: resolve getattr 'connection' on <argument 'event'> in (<blob 'remote_conn'>, ['RemoteConn', '_handle_ConnectionUp']):
+    error: evaluating 'event.connection.ofp' at remote_conn.py#96: no type-inference info for <argument 'event'>
+[2013-06-12 00:59:35,937] [ERROR] koCodeIntel: error evaluating completions:
+  trigger: <Trigger 'python-complete-object-members' at 3716>
+  log:
+    info: eval 'con' at remote_conn.py#104  <Trigger 'python-complete-object-members' at 3716>
+    info: start scope is (<blob 'remote_conn'>, ['RemoteConn', '_handle_ConnectionDown'])
+    info: find 'con ...' starting at (<blob 'remote_conn'>, ['RemoteConn', '_handle_ConnectionDown']):
+    info: is 'con' accessible on (<blob 'remote_conn'>, ['RemoteConn', '_handle_ConnectionDown'])? no
+    debug: 'con ...' from <from pox.core import core>?
+    debug: 'con ...' from <import pox.openflow.libopenflow_01 as of>?
+    debug: 'con ...' from <from pox.lib.util import dpid_to_str>?
+    debug: 'con ...' from <from pox.lib.addresses import IPAddr>?
+    debug: 'con ...' from <from pox.lib.addresses import EthAddr>?
+    debug: 'con ...' from <import pox.lib.packet as pkg>?
+    debug: 'con ...' from <import time>?
+    debug: 'con ...' from <import SocketServer>?
+    debug: 'con ...' from <import threading>?
+    info: is 'con' accessible on (<blob 'remote_conn'>, [])? no
+    info: is 'con' accessible on (<blob '*'>, [])? no
+    error: evaluating 'con' at remote_conn.py#104: could not resolve first part of 'con'
+ERROR:xpcom:Unhandled exception calling 'int8 * run();'
+Traceback (most recent call last):
+  File "/home/mininet/Komodo-Edit-8/lib/mozilla/python/xpcom/server/policy.py", line 310, in _CallMethod_
+    return 0, func(*params)
+  File "/home/mininet/Komodo-Edit-8/lib/mozilla/python/xpcom/components.py", line 236, in run
+    self.result = self.fn(*self.args, **self.kwargs)
+  File "/home/mininet/Komodo-Edit-8/lib/mozilla/components/koCodeIntel.py", line 737, in done
+    return self.obj.done(*args)
+  File "<XPCOMObject method 'done'>", line 3, in done
+Exception: 2153185308 (NS_ERROR_XPC_JS_THREW_JS_OBJECT)
+[2013-06-12 01:42:31,361] [ERROR] codeintel.tree: Unexpected error with evaluator: 'network.run' at tree1024.py#18
+Traceback (most recent call last):
+  File "/home/mininet/Komodo-Edit-8/lib/mozilla/python/komodo/codeintel2/tree.py", line 334, in eval
+    self.ctlr.done("success")
+  File "/home/mininet/Komodo-Edit-8/lib/mozilla/components/koCodeIntel.py", line 820, in done
+    self.ui_handler.done()
+  File "/home/mininet/Komodo-Edit-8/lib/mozilla/python/xpcom/components.py", line 262, in wrapperFn
+    threadMgr.mainThread.dispatch(method, dispatch_flags)
+  File "<XPCOMObject method 'dispatch'>", line 3, in dispatch
+Exception: 2147500037 (NS_ERROR_FAILURE)
+ERROR:xpcom:Unhandled exception calling 'int8 * run();'
+Traceback (most recent call last):
+  File "/home/mininet/Komodo-Edit-8/lib/mozilla/python/xpcom/server/policy.py", line 310, in _CallMethod_
+    return 0, func(*params)
+  File "/home/mininet/Komodo-Edit-8/lib/mozilla/python/xpcom/components.py", line 236, in run
+    self.result = self.fn(*self.args, **self.kwargs)
+  File "/home/mininet/Komodo-Edit-8/lib/mozilla/components/koCodeIntel.py", line 737, in done
+    return self.obj.done(*args)
+  File "<XPCOMObject method 'done'>", line 3, in done
+Exception: 2153185308 (NS_ERROR_XPC_JS_THREW_JS_OBJECT)
+[2013-06-12 01:56:31,464] [ERROR] codeintel.tree: Unexpected error with evaluator: 'self.xid' at webservice.py#138
+Traceback (most recent call last):
+  File "/home/mininet/Komodo-Edit-8/lib/mozilla/python/komodo/codeintel2/tree.py", line 334, in eval
+    self.ctlr.done("success")
+  File "/home/mininet/Komodo-Edit-8/lib/mozilla/components/koCodeIntel.py", line 820, in done
+    self.ui_handler.done()
+  File "/home/mininet/Komodo-Edit-8/lib/mozilla/python/xpcom/components.py", line 262, in wrapperFn
+    threadMgr.mainThread.dispatch(method, dispatch_flags)
+  File "<XPCOMObject method 'dispatch'>", line 3, in dispatch
+Exception: 2147500037 (NS_ERROR_FAILURE)
+[2013-06-12 02:49:22,648] [ERROR] koCodeIntel: error evaluating completions:
+  trigger: <Trigger 'python-complete-object-members' at 1123>
+  log:
+    info: eval 'self.wfile' at remote_conn.py#32  <Trigger 'python-complete-object-members' at 1123>
+    info: start scope is (<blob 'remote_conn'>, ['ConnectionHandler', 'handle'])
+    info: find 'self ...' starting at (<blob 'remote_conn'>, ['ConnectionHandler', 'handle']):
+    info: is 'self' accessible on (<blob 'remote_conn'>, ['ConnectionHandler', 'handle'])? yes: <argument 'self'>
+    debug: _hit_from_citdl: first part: [u'self'] -> (<argument 'self'>, (<blob 'remote_conn'>, ['ConnectionHandler', 'handle']))
+    debug: _hit_from_citdl: resolve [u'wfile'] on <argument 'self'> in (<blob 'remote_conn'>, ['ConnectionHandler', 'handle'])
+    info: resolve getattr 'wfile' on <argument 'self'> in (<blob 'remote_conn'>, ['ConnectionHandler', 'handle']):
+    info: resolve 'ConnectionHandler' type inference for <argument 'self'>:
+    info: find 'ConnectionHandler ...' starting at (<blob 'remote_conn'>, ['ConnectionHandler', 'handle']):
+    info: is 'ConnectionHandler' accessible on (<blob 'remote_conn'>, ['ConnectionHandler', 'handle'])? no
+    info: is 'ConnectionHandler' accessible on (<blob 'remote_conn'>, [])? yes: <class 'ConnectionHandler'>
+    debug: _hit_from_citdl: first part: ['ConnectionHandler'] -> (<class 'ConnectionHandler'>, (<blob 'remote_conn'>, []))
+    info: 'ConnectionHandler' is <class 'ConnectionHandler'> on (<blob 'remote_conn'>, [])
+    debug: look for [u'wfile'] from imports in <class 'ConnectionHandler'>
+    info: is 'wfile' from base class: 'SocketServer.StreamRequestHandler'?
+    info: resolve 'SocketServer.StreamRequestHandler' type inference:
+    info: find 'SocketServer ...' starting at (<blob 'remote_conn'>, []):
+    debug: 'SocketServer ...' from <from pox.core import core>?
+    debug: 'SocketServer ...' from <import pox.openflow.libopenflow_01 as of>?
+    debug: 'SocketServer ...' from <from pox.lib.util import dpid_to_str>?
+    debug: 'SocketServer ...' from <from pox.lib.addresses import IPAddr>?
+    debug: 'SocketServer ...' from <from pox.lib.addresses import EthAddr>?
+    debug: 'SocketServer ...' from <import pox.lib.packet as pkg>?
+    debug: 'SocketServer ...' from <import time>?
+    debug: 'SocketServer ...' from <import SocketServer>?
+    info: is blob 'SocketServer' from <Python curdirlib>? no
+    info: is blob 'SocketServer' from <Python envlib>? no
+    info: is blob 'SocketServer' from <Python cataloglib: >? no
+    info: is blob 'SocketServer' from <python-2.7 stdlib>? yes
+    info: is 'SocketServer' accessible on (<blob 'remote_conn'>, [])? yes: <blob 'SocketServer'>
+    debug: _hit_from_citdl: first part: ['SocketServer'] -> (<blob 'SocketServer'>, (<blob 'SocketServer'>, []))
+    debug: _hit_from_citdl: resolve ['StreamRequestHandler'] on <blob 'SocketServer'> in (<blob 'SocketServer'>, [])
+    info: resolve getattr 'StreamRequestHandler' on <blob 'SocketServer'> in (<blob 'SocketServer'>, []):
+    info: attr is <class 'StreamRequestHandler'> in <blob 'SocketServer'>
+    info: 'SocketServer.StreamRequestHandler' is <class 'StreamRequestHandler'> on (<blob 'SocketServer'>, [])
+    info: resolve getattr 'wfile' on <class 'StreamRequestHandler'> in (<blob 'SocketServer'>, []):
+    info: attr is <variable 'wfile'> in <class 'StreamRequestHandler'>
+    info: resolve 'self.connection.makefile()' type inference for <variable 'wfile'>:
+    info: find 'self ...' starting at (<blob 'SocketServer'>, ['StreamRequestHandler']):
+    info: is 'self' accessible on (<blob 'SocketServer'>, ['StreamRequestHandler'])? no
+    debug: 'self ...' from <import os>?
+    debug: 'self ...' from <import select>?
+    debug: 'self ...' from <import socket>?
+    debug: 'self ...' from <import sys>?
+    debug: 'self ...' from <import threading>?
+    info: is 'self' accessible on (<blob 'SocketServer'>, [])? no
+    info: is 'self' accessible on (<blob '*'>, [])? no
+    error: evaluating 'self.wfile' at remote_conn.py#32: could not resolve first part of 'self.connection.makefile()'
+[2013-06-12 02:49:25,785] [ERROR] koCodeIntel: error evaluating calltip:
+  trigger: <Trigger 'python-calltip-call-signature' at 1129>
+  log:
+    info: eval 'self.wfile.write' at remote_conn.py#32  <Trigger 'python-calltip-call-signature' at 1129>
+    info: start scope is (<blob 'remote_conn'>, ['ConnectionHandler', 'handle'])
+    info: find 'self ...' starting at (<blob 'remote_conn'>, ['ConnectionHandler', 'handle']):
+    info: is 'self' accessible on (<blob 'remote_conn'>, ['ConnectionHandler', 'handle'])? yes: <argument 'self'>
+    debug: _hit_from_citdl: first part: [u'self'] -> (<argument 'self'>, (<blob 'remote_conn'>, ['ConnectionHandler', 'handle']))
+    debug: _hit_from_citdl: resolve [u'wfile', u'write'] on <argument 'self'> in (<blob 'remote_conn'>, ['ConnectionHandler', 'handle'])
+    info: resolve getattr 'wfile' on <argument 'self'> in (<blob 'remote_conn'>, ['ConnectionHandler', 'handle']):
+    info: resolve 'ConnectionHandler' type inference for <argument 'self'>:
+    info: find 'ConnectionHandler ...' starting at (<blob 'remote_conn'>, ['ConnectionHandler', 'handle']):
+    info: is 'ConnectionHandler' accessible on (<blob 'remote_conn'>, ['ConnectionHandler', 'handle'])? no
+    info: is 'ConnectionHandler' accessible on (<blob 'remote_conn'>, [])? yes: <class 'ConnectionHandler'>
+    debug: _hit_from_citdl: first part: ['ConnectionHandler'] -> (<class 'ConnectionHandler'>, (<blob 'remote_conn'>, []))
+    info: 'ConnectionHandler' is <class 'ConnectionHandler'> on (<blob 'remote_conn'>, [])
+    debug: look for [u'wfile', u'write'] from imports in <class 'ConnectionHandler'>
+    info: is 'wfile' from base class: 'SocketServer.StreamRequestHandler'?
+    info: resolve 'SocketServer.StreamRequestHandler' type inference:
+    info: find 'SocketServer ...' starting at (<blob 'remote_conn'>, []):
+    debug: 'SocketServer ...' from <from pox.core import core>?
+    debug: 'SocketServer ...' from <import pox.openflow.libopenflow_01 as of>?
+    debug: 'SocketServer ...' from <from pox.lib.util import dpid_to_str>?
+    debug: 'SocketServer ...' from <from pox.lib.addresses import IPAddr>?
+    debug: 'SocketServer ...' from <from pox.lib.addresses import EthAddr>?
+    debug: 'SocketServer ...' from <import pox.lib.packet as pkg>?
+    debug: 'SocketServer ...' from <import time>?
+    debug: 'SocketServer ...' from <import SocketServer>?
+    info: is blob 'SocketServer' from <Python curdirlib>? no
+    info: is blob 'SocketServer' from <Python envlib>? no
+    info: is blob 'SocketServer' from <Python cataloglib: >? no
+    info: is blob 'SocketServer' from <python-2.7 stdlib>? yes
+    info: is 'SocketServer' accessible on (<blob 'remote_conn'>, [])? yes: <blob 'SocketServer'>
+    debug: _hit_from_citdl: first part: ['SocketServer'] -> (<blob 'SocketServer'>, (<blob 'SocketServer'>, []))
+    debug: _hit_from_citdl: resolve ['StreamRequestHandler'] on <blob 'SocketServer'> in (<blob 'SocketServer'>, [])
+    info: resolve getattr 'StreamRequestHandler' on <blob 'SocketServer'> in (<blob 'SocketServer'>, []):
+    info: attr is <class 'StreamRequestHandler'> in <blob 'SocketServer'>
+    info: 'SocketServer.StreamRequestHandler' is <class 'StreamRequestHandler'> on (<blob 'SocketServer'>, [])
+    info: resolve getattr 'wfile' on <class 'StreamRequestHandler'> in (<blob 'SocketServer'>, []):
+    info: attr is <variable 'wfile'> in <class 'StreamRequestHandler'>
+    debug: _hit_from_citdl: resolve [u'write'] on <variable 'wfile'> in (<blob 'SocketServer'>, ['StreamRequestHandler'])
+    info: resolve getattr 'write' on <variable 'wfile'> in (<blob 'SocketServer'>, ['StreamRequestHandler']):
+    info: resolve 'self.connection.makefile()' type inference for <variable 'wfile'>:
+    info: find 'self ...' starting at (<blob 'SocketServer'>, ['StreamRequestHandler']):
+    info: is 'self' accessible on (<blob 'SocketServer'>, ['StreamRequestHandler'])? no
+    debug: 'self ...' from <import os>?
+    debug: 'self ...' from <import select>?
+    debug: 'self ...' from <import socket>?
+    debug: 'self ...' from <import sys>?
+    debug: 'self ...' from <import threading>?
+    info: is 'self' accessible on (<blob 'SocketServer'>, [])? no
+    info: is 'self' accessible on (<blob '*'>, [])? no
+    error: evaluating 'self.wfile.write' at remote_conn.py#32: could not resolve first part of 'self.connection.makefile()'
+[2013-06-12 02:49:47,739] [ERROR] koCodeIntel: error evaluating completions:
+  trigger: <Trigger 'python-complete-object-members' at 1178>
+  log:
+    info: eval 'conn' at remote_conn.py#33  <Trigger 'python-complete-object-members' at 1178>
+    info: start scope is (<blob 'remote_conn'>, ['ConnectionHandler', 'handle'])
+    info: find 'conn ...' starting at (<blob 'remote_conn'>, ['ConnectionHandler', 'handle']):
+    info: is 'conn' accessible on (<blob 'remote_conn'>, ['ConnectionHandler', 'handle'])? no
+    debug: 'conn ...' from <from pox.core import core>?
+    debug: 'conn ...' from <import pox.openflow.libopenflow_01 as of>?
+    debug: 'conn ...' from <from pox.lib.util import dpid_to_str>?
+    debug: 'conn ...' from <from pox.lib.addresses import IPAddr>?
+    debug: 'conn ...' from <from pox.lib.addresses import EthAddr>?
+    debug: 'conn ...' from <import pox.lib.packet as pkg>?
+    debug: 'conn ...' from <import time>?
+    debug: 'conn ...' from <import SocketServer>?
+    debug: 'conn ...' from <import threading>?
+    info: is 'conn' accessible on (<blob 'remote_conn'>, [])? no
+    info: is 'conn' accessible on (<blob '*'>, [])? no
+    error: evaluating 'conn' at remote_conn.py#33: could not resolve first part of 'conn'
+[2013-06-12 02:50:02,500] [ERROR] koCodeIntel: error evaluating completions:
+  trigger: <Trigger 'python-complete-object-members' at 1182>
+  log:
+    info: eval 'conn' at remote_conn.py#33  <Trigger 'python-complete-object-members' at 1182>
+    info: start scope is (<blob 'remote_conn'>, ['ConnectionHandler', 'handle'])
+    info: find 'conn ...' starting at (<blob 'remote_conn'>, ['ConnectionHandler', 'handle']):
+    info: is 'conn' accessible on (<blob 'remote_conn'>, ['ConnectionHandler', 'handle'])? no
+    debug: 'conn ...' from <from pox.core import core>?
+    debug: 'conn ...' from <import pox.openflow.libopenflow_01 as of>?
+    debug: 'conn ...' from <from pox.lib.util import dpid_to_str>?
+    debug: 'conn ...' from <from pox.lib.addresses import IPAddr>?
+    debug: 'conn ...' from <from pox.lib.addresses import EthAddr>?
+    debug: 'conn ...' from <import pox.lib.packet as pkg>?
+    debug: 'conn ...' from <import time>?
+    debug: 'conn ...' from <import SocketServer>?
+    debug: 'conn ...' from <import threading>?
+    info: is 'conn' accessible on (<blob 'remote_conn'>, [])? no
+    info: is 'conn' accessible on (<blob '*'>, [])? no
+    error: evaluating 'conn' at remote_conn.py#33: could not resolve first part of 'conn'
+[2013-06-12 04:24:29,285] [WARNING] codeintel.python: limitation in handling imports in imported modules
+[2013-06-12 04:24:29,287] [WARNING] codeintel.python: could not find data for Python blob 'pox.lib.util' (skipping members for <from pox.lib.util import fields_of>)
+[2013-06-12 04:24:29,293] [WARNING] codeintel.python: limitation in handling imports in imported modules
+[2013-06-12 04:24:29,293] [WARNING] codeintel.python: could not find data for Python blob 'pox.lib.util' (skipping members for <from pox.lib.util import is_scalar>)
+[2013-06-12 04:24:29,295] [WARNING] codeintel.python: limitation in handling imports in imported modules
+[2013-06-12 04:24:29,296] [WARNING] codeintel.python: could not find data for Python blob 'pox.lib.packet' (skipping members for <from pox.lib.packet import ethernet>)
+[2013-06-12 04:24:29,297] [WARNING] codeintel.python: limitation in handling imports in imported modules
+[2013-06-12 04:24:29,298] [WARNING] codeintel.python: could not find data for Python blob 'pox.lib.packet' (skipping members for <from pox.lib.packet import ipv4>)
+[2013-06-12 04:24:29,302] [WARNING] codeintel.python: limitation in handling imports in imported modules
+[2013-06-12 04:24:29,303] [WARNING] codeintel.python: could not find data for Python blob 'pox.lib.packet.packet_utils' (skipping members for <from pox.lib.packet.packet_utils import ethtype_to_str>)
+[2013-06-12 04:24:29,304] [WARNING] codeintel.python: limitation in handling imports in imported modules
+[2013-06-12 04:24:29,304] [WARNING] codeintel.python: could not find data for Python blob 'pox.lib.util' (skipping members for <from pox.lib.util import dpidToStr>)
+[2013-06-12 04:24:29,305] [WARNING] codeintel.python: limitation in handling imports in imported modules
+[2013-06-12 04:24:29,305] [WARNING] codeintel.python: could not find data for Python blob 'pox.lib.addresses' (skipping members for <from pox.lib.addresses import EthAddr>)
+[2013-06-12 04:24:29,306] [WARNING] codeintel.python: limitation in handling imports in imported modules
+[2013-06-12 04:24:29,306] [WARNING] codeintel.python: could not find data for Python blob 'pox.lib.addresses' (skipping members for <from pox.lib.addresses import IPAddr>)
+[2013-06-12 04:24:29,307] [WARNING] codeintel.python: limitation in handling imports in imported modules
+[2013-06-12 04:24:29,307] [WARNING] codeintel.python: could not find data for Python blob 'pox.lib.addresses' (skipping members for <from pox.lib.addresses import parse_cidr>)
+[2013-06-12 04:24:29,309] [WARNING] codeintel.python: limitation in handling imports in imported modules
+[2013-06-12 04:24:29,309] [WARNING] codeintel.python: could not find data for Python blob 'pox.lib.addresses' (skipping members for <from pox.lib.addresses import EthAddr>)
+[2013-06-12 04:24:29,310] [WARNING] codeintel.python: limitation in handling imports in imported modules
+[2013-06-12 04:24:29,311] [WARNING] codeintel.python: could not find data for Python blob 'pox.lib.packet.packet_base' (skipping members for <from pox.lib.packet.packet_base import packet_base>)
+ERROR:xpcom:Unhandled exception calling 'int8 * run();'
+Traceback (most recent call last):
+  File "/home/mininet/Komodo-Edit-8/lib/mozilla/python/xpcom/server/policy.py", line 310, in _CallMethod_
+    return 0, func(*params)
+  File "/home/mininet/Komodo-Edit-8/lib/mozilla/python/xpcom/components.py", line 236, in run
+    self.result = self.fn(*self.args, **self.kwargs)
+  File "/home/mininet/Komodo-Edit-8/lib/mozilla/components/koCodeIntel.py", line 737, in done
+    return self.obj.done(*args)
+  File "<XPCOMObject method 'done'>", line 3, in done
+Exception: 2153185308 (NS_ERROR_XPC_JS_THREW_JS_OBJECT)
+[2013-07-06 10:59:07,334] [ERROR] codeintel.tree: Unexpected error with evaluator: 'fm.actions' at arp_responder.py#151
+Traceback (most recent call last):
+  File "/home/mininet/Komodo-Edit-8/lib/mozilla/python/komodo/codeintel2/tree.py", line 334, in eval
+    self.ctlr.done("success")
+  File "/home/mininet/Komodo-Edit-8/lib/mozilla/components/koCodeIntel.py", line 820, in done
+    self.ui_handler.done()
+  File "/home/mininet/Komodo-Edit-8/lib/mozilla/python/xpcom/components.py", line 262, in wrapperFn
+    threadMgr.mainThread.dispatch(method, dispatch_flags)
+  File "<XPCOMObject method 'dispatch'>", line 3, in dispatch
+Exception: 2147500037 (NS_ERROR_FAILURE)
+[2013-07-08 02:00:47,262] [ERROR] koCodeIntel: error evaluating definition:
+  trigger: <Trigger 'python-defn-defn' at 7549 (explicit)>
+  log:
+    info: eval '4' at arp_responder.py#237  <Trigger 'python-defn-defn' at 7549 (explicit)>
+    info: start scope is (<blob 'arp_responder'>, ['ARPResponder', '_handle_PacketIn'])
+    info: find '4 ...' starting at (<blob 'arp_responder'>, ['ARPResponder', '_handle_PacketIn']):
+    info: is '4' accessible on (<blob 'arp_responder'>, ['ARPResponder', '_handle_PacketIn'])? no
+    debug: '4 ...' from <from pox.core import core>?
+    debug: '4 ...' from <import pox>?
+    debug: '4 ...' from <from pox.lib.packet.ethernet import ethernet>?
+    debug: '4 ...' from <from pox.lib.packet.ethernet import ETHER_BROADCAST>?
+    debug: '4 ...' from <from pox.lib.packet.arp import arp>?
+    debug: '4 ...' from <from pox.lib.addresses import IPAddr>?
+    debug: '4 ...' from <from pox.lib.addresses import EthAddr>?
+    debug: '4 ...' from <from pox.lib.util import dpid_to_str>?
+    debug: '4 ...' from <from pox.lib.util import str_to_bool>?
+    debug: '4 ...' from <from pox.lib.recoco import Timer>?
+    debug: '4 ...' from <from pox.lib.revent import EventHalt>?
+    debug: '4 ...' from <import pox.openflow.libopenflow_01 as of>?
+    debug: '4 ...' from <import time>?
+    info: is '4' accessible on (<blob 'arp_responder'>, [])? no
+    info: is '4' accessible on (<blob '*'>, [])? no
+    error: evaluating '4' at arp_responder.py#237: could not resolve first part of '4'
+[2013-07-08 03:13:14,171] [ERROR] koCodeIntel: error evaluating definition:
+  trigger: <Trigger 'python-defn-defn' at 742 (explicit)>
+  log:
+    info: eval 'dpid' at simple_topo.py#25  <Trigger 'python-defn-defn' at 742 (explicit)>
+    info: start scope is (<blob 'simple_topo'>, ['FatTreeTopo', '__init__'])
+    info: find 'dpid ...' starting at (<blob 'simple_topo'>, ['FatTreeTopo', '__init__']):
+    info: is 'dpid' accessible on (<blob 'simple_topo'>, ['FatTreeTopo', '__init__'])? no
+    debug: 'dpid ...' from <from mininet.topo import Topo>?
+    info: is 'dpid' accessible on (<blob 'simple_topo'>, [])? no
+    info: is 'dpid' accessible on (<blob '*'>, [])? no
+    error: evaluating 'dpid' at simple_topo.py#25: could not resolve first part of 'dpid'
+[2013-07-08 03:13:15,619] [ERROR] koCodeIntel: error evaluating definition:
+  trigger: <Trigger 'python-defn-defn' at 852 (explicit)>
+  log:
+    info: eval 'mac' at simple_topo.py#27  <Trigger 'python-defn-defn' at 852 (explicit)>
+    info: start scope is (<blob 'simple_topo'>, ['FatTreeTopo', '__init__'])
+    info: find 'mac ...' starting at (<blob 'simple_topo'>, ['FatTreeTopo', '__init__']):
+    info: is 'mac' accessible on (<blob 'simple_topo'>, ['FatTreeTopo', '__init__'])? no
+    debug: 'mac ...' from <from mininet.topo import Topo>?
+    info: is 'mac' accessible on (<blob 'simple_topo'>, [])? no
+    info: is 'mac' accessible on (<blob '*'>, [])? no
+    error: evaluating 'mac' at simple_topo.py#27: could not resolve first part of 'mac'
+ERROR:xpcom:Unhandled exception calling 'int8 * run();'
+Traceback (most recent call last):
+  File "/home/mininet/Komodo-Edit-8/lib/mozilla/python/xpcom/server/policy.py", line 310, in _CallMethod_
+    return 0, func(*params)
+  File "/home/mininet/Komodo-Edit-8/lib/mozilla/python/xpcom/components.py", line 236, in run
+    self.result = self.fn(*self.args, **self.kwargs)
+  File "/home/mininet/Komodo-Edit-8/lib/mozilla/components/koCodeIntel.py", line 737, in done
+    return self.obj.done(*args)
+  File "<XPCOMObject method 'done'>", line 3, in done
+Exception: 2153185308 (NS_ERROR_XPC_JS_THREW_JS_OBJECT)
+[2013-07-10 02:23:02,738] [ERROR] codeintel.tree: Unexpected error with evaluator: 'opts.parse_args' at mn#201
+Traceback (most recent call last):
+  File "/home/mininet/Komodo-Edit-8/lib/mozilla/python/komodo/codeintel2/tree.py", line 334, in eval
+    self.ctlr.done("success")
+  File "/home/mininet/Komodo-Edit-8/lib/mozilla/components/koCodeIntel.py", line 820, in done
+    self.ui_handler.done()
+  File "/home/mininet/Komodo-Edit-8/lib/mozilla/python/xpcom/components.py", line 262, in wrapperFn
+    threadMgr.mainThread.dispatch(method, dispatch_flags)
+  File "<XPCOMObject method 'dispatch'>", line 3, in dispatch
+Exception: 2147500037 (NS_ERROR_FAILURE)
+[2013-07-10 02:24:15,138] [ERROR] koCodeIntel: error evaluating completions:
+  trigger: <Trigger 'python-complete-object-members' at 8494>
+  log:
+    info: eval 'log' at mn#224  <Trigger 'python-complete-object-members' at 8494>
+    info: start scope is (<blob 'mn'>, ['MininetRunner', 'begin'])
+    info: find 'log ...' starting at (<blob 'mn'>, ['MininetRunner', 'begin']):
+    info: is 'log' accessible on (<blob 'mn'>, ['MininetRunner', 'begin'])? no
+    debug: 'log ...' from <from optparse import OptionParser>?
+    debug: 'log ...' from <import os>?
+    debug: 'log ...' from <import sys>?
+    debug: 'log ...' from <import time>?
+    debug: 'log ...' from <from mininet.clean import cleanup>?
+    debug: 'log ...' from <from mininet.cli import CLI>?
+    debug: 'log ...' from <from mininet.log import lg>?
+    debug: 'log ...' from <from mininet.log import LEVELS>?
+    debug: 'log ...' from <from mininet.log import info>?
+    debug: 'log ...' from <from mininet.net import Mininet>?
+    debug: 'log ...' from <from mininet.net import MininetWithControlNet>?
+    debug: 'log ...' from <from mininet.net import VERSION>?
+    debug: 'log ...' from <from mininet.node import Host>?
+    debug: 'log ...' from <from mininet.node import CPULimitedHost>?
+    debug: 'log ...' from <from mininet.node import Controller>?
+    debug: 'log ...' from <from mininet.node import OVSController>?
+    debug: 'log ...' from <from mininet.node import NOX>?
+    debug: 'log ...' from <from mininet.node import RemoteController>?
+    debug: 'log ...' from <from mininet.node import UserSwitch>?
+    debug: 'log ...' from <from mininet.node import OVSKernelSwitch>?
+    debug: 'log ...' from <from mininet.node import OVSLegacyKernelSwitch>?
+    debug: 'log ...' from <from mininet.link import Link>?
+    debug: 'log ...' from <from mininet.link import TCLink>?
+    debug: 'log ...' from <from mininet.topo import SingleSwitchTopo>?
+    debug: 'log ...' from <from mininet.topo import LinearTopo>?
+    debug: 'log ...' from <from mininet.topo import SingleSwitchReversedTopo>?
+    debug: 'log ...' from <from mininet.topolib import TreeTopo>?
+    debug: 'log ...' from <from mininet.util import custom>?
+    debug: 'log ...' from <from mininet.util import customConstructor>?
+    debug: 'log ...' from <from mininet.util import buildTopo>?
+    info: is 'log' accessible on (<blob 'mn'>, [])? no
+    info: is 'log' accessible on (<blob '*'>, [])? no
+    error: evaluating 'log' at mn#224: could not resolve first part of 'log'
+[2013-07-10 02:24:18,032] [ERROR] koCodeIntel: error evaluating calltip:
+  trigger: <Trigger 'python-calltip-call-signature' at 8499>
+  log:
+    info: eval 'log.info' at mn#224  <Trigger 'python-calltip-call-signature' at 8499>
+    info: start scope is (<blob 'mn'>, ['MininetRunner', 'begin'])
+    info: find 'log ...' starting at (<blob 'mn'>, ['MininetRunner', 'begin']):
+    info: is 'log' accessible on (<blob 'mn'>, ['MininetRunner', 'begin'])? no
+    debug: 'log ...' from <from optparse import OptionParser>?
+    debug: 'log ...' from <import os>?
+    debug: 'log ...' from <import sys>?
+    debug: 'log ...' from <import time>?
+    debug: 'log ...' from <from mininet.clean import cleanup>?
+    debug: 'log ...' from <from mininet.cli import CLI>?
+    debug: 'log ...' from <from mininet.log import lg>?
+    debug: 'log ...' from <from mininet.log import LEVELS>?
+    debug: 'log ...' from <from mininet.log import info>?
+    debug: 'log ...' from <from mininet.net import Mininet>?
+    debug: 'log ...' from <from mininet.net import MininetWithControlNet>?
+    debug: 'log ...' from <from mininet.net import VERSION>?
+    debug: 'log ...' from <from mininet.node import Host>?
+    debug: 'log ...' from <from mininet.node import CPULimitedHost>?
+    debug: 'log ...' from <from mininet.node import Controller>?
+    debug: 'log ...' from <from mininet.node import OVSController>?
+    debug: 'log ...' from <from mininet.node import NOX>?
+    debug: 'log ...' from <from mininet.node import RemoteController>?
+    debug: 'log ...' from <from mininet.node import UserSwitch>?
+    debug: 'log ...' from <from mininet.node import OVSKernelSwitch>?
+    debug: 'log ...' from <from mininet.node import OVSLegacyKernelSwitch>?
+    debug: 'log ...' from <from mininet.link import Link>?
+    debug: 'log ...' from <from mininet.link import TCLink>?
+    debug: 'log ...' from <from mininet.topo import SingleSwitchTopo>?
+    debug: 'log ...' from <from mininet.topo import LinearTopo>?
+    debug: 'log ...' from <from mininet.topo import SingleSwitchReversedTopo>?
+    debug: 'log ...' from <from mininet.topolib import TreeTopo>?
+    debug: 'log ...' from <from mininet.util import custom>?
+    debug: 'log ...' from <from mininet.util import customConstructor>?
+    debug: 'log ...' from <from mininet.util import buildTopo>?
+    info: is 'log' accessible on (<blob 'mn'>, [])? no
+    info: is 'log' accessible on (<blob '*'>, [])? no
+    error: evaluating 'log.info' at mn#224: could not resolve first part of 'log.info'
+[2013-07-10 02:24:23,910] [ERROR] koCodeIntel: error evaluating completions:
+  trigger: <Trigger 'python-complete-object-members' at 8495>
+  log:
+    info: eval 'topo' at mn#224  <Trigger 'python-complete-object-members' at 8495>
+    info: start scope is (<blob 'mn'>, ['MininetRunner', 'begin'])
+    info: find 'topo ...' starting at (<blob 'mn'>, ['MininetRunner', 'begin']):
+    info: is 'topo' accessible on (<blob 'mn'>, ['MininetRunner', 'begin'])? yes: <variable 'topo'>
+    debug: _hit_from_citdl: first part: [u'topo'] -> (<variable 'topo'>, (<blob 'mn'>, ['MininetRunner', 'begin']))
+    info: resolve 'buildTopo()' type inference for <variable 'topo'>:
+    info: find 'buildTopo ...' starting at (<blob 'mn'>, ['MininetRunner', 'begin']):
+    info: is 'buildTopo' accessible on (<blob 'mn'>, ['MininetRunner', 'begin'])? no
+    debug: 'buildTopo ...' from <from optparse import OptionParser>?
+    debug: 'buildTopo ...' from <import os>?
+    debug: 'buildTopo ...' from <import sys>?
+    debug: 'buildTopo ...' from <import time>?
+    debug: 'buildTopo ...' from <from mininet.clean import cleanup>?
+    debug: 'buildTopo ...' from <from mininet.cli import CLI>?
+    debug: 'buildTopo ...' from <from mininet.log import lg>?
+    debug: 'buildTopo ...' from <from mininet.log import LEVELS>?
+    debug: 'buildTopo ...' from <from mininet.log import info>?
+    debug: 'buildTopo ...' from <from mininet.net import Mininet>?
+    debug: 'buildTopo ...' from <from mininet.net import MininetWithControlNet>?
+    debug: 'buildTopo ...' from <from mininet.net import VERSION>?
+    debug: 'buildTopo ...' from <from mininet.node import Host>?
+    debug: 'buildTopo ...' from <from mininet.node import CPULimitedHost>?
+    debug: 'buildTopo ...' from <from mininet.node import Controller>?
+    debug: 'buildTopo ...' from <from mininet.node import OVSController>?
+    debug: 'buildTopo ...' from <from mininet.node import NOX>?
+    debug: 'buildTopo ...' from <from mininet.node import RemoteController>?
+    debug: 'buildTopo ...' from <from mininet.node import UserSwitch>?
+    debug: 'buildTopo ...' from <from mininet.node import OVSKernelSwitch>?
+    debug: 'buildTopo ...' from <from mininet.node import OVSLegacyKernelSwitch>?
+    debug: 'buildTopo ...' from <from mininet.link import Link>?
+    debug: 'buildTopo ...' from <from mininet.link import TCLink>?
+    debug: 'buildTopo ...' from <from mininet.topo import SingleSwitchTopo>?
+    debug: 'buildTopo ...' from <from mininet.topo import LinearTopo>?
+    debug: 'buildTopo ...' from <from mininet.topo import SingleSwitchReversedTopo>?
+    debug: 'buildTopo ...' from <from mininet.topolib import TreeTopo>?
+    debug: 'buildTopo ...' from <from mininet.util import custom>?
+    debug: 'buildTopo ...' from <from mininet.util import customConstructor>?
+    debug: 'buildTopo ...' from <from mininet.util import buildTopo>?
+    info: is blob 'mininet.util' from <Python curdirlib>? no
+    info: is blob 'mininet.util' from <Python envlib>? yes
+    info: is 'buildTopo' accessible on (<blob 'mn'>, [])? yes: <function 'buildTopo'>
+    debug: _hit_from_citdl: first part: ['buildTopo'] -> (<function 'buildTopo'>, (<blob 'util'>, []))
+    debug: _hit_from_citdl: resolve ['()'] on <function 'buildTopo'> in (<blob 'util'>, [])
+    error: evaluating 'topo' at mn#224: no return type info for <function 'buildTopo'>
+No handlers could be found for logger "URIlib"
+[2013-07-10 02:26:05,107] [ERROR] koDocument: save: can't write to file u'/usr/local/lib/python2.7/dist-packages/mininet-2.0.0-py2.7.egg/mininet/util.py'
+Traceback (most recent call last):
+  File "/home/mininet/Komodo-Edit-8/lib/mozilla/components/koDocument.py", line 1616, in save
+    self.file.open('wb+')
+  File "<XPCOMObject method 'open'>", line 3, in open
+Exception: 2147500037 (NS_ERROR_FAILURE)
+[2013-07-10 02:26:13,190] [ERROR] koDocument: save: can't write to file u'/usr/local/lib/python2.7/dist-packages/mininet-2.0.0-py2.7.egg/mininet/util.py'
+Traceback (most recent call last):
+  File "/home/mininet/Komodo-Edit-8/lib/mozilla/components/koDocument.py", line 1616, in save
+    self.file.open('wb+')
+  File "<XPCOMObject method 'open'>", line 3, in open
+Exception: 2147500037 (NS_ERROR_FAILURE)
+[2013-07-10 02:27:10,533] [ERROR] koDocument: save: can't write to file u'/usr/local/lib/python2.7/dist-packages/mininet-2.0.0-py2.7.egg/mininet/util.py'
+Traceback (most recent call last):
+  File "/home/mininet/Komodo-Edit-8/lib/mozilla/components/koDocument.py", line 1616, in save
+    self.file.open('wb+')
+  File "<XPCOMObject method 'open'>", line 3, in open
+Exception: 2147500037 (NS_ERROR_FAILURE)
+[2013-07-10 02:28:02,524] [ERROR] koDocument: save: can't write to file u'/usr/local/lib/python2.7/dist-packages/mininet-2.0.0-py2.7.egg/mininet/util.py'
+Traceback (most recent call last):
+  File "/home/mininet/Komodo-Edit-8/lib/mozilla/components/koDocument.py", line 1616, in save
+    self.file.open('wb+')
+  File "<XPCOMObject method 'open'>", line 3, in open
+Exception: 2147500037 (NS_ERROR_FAILURE)
+[2013-07-10 02:34:22,709] [ERROR] koCodeIntel: error evaluating definition:
+  trigger: <Trigger 'python-defn-defn' at 766 (explicit)>
+  log:
+    info: eval 'dpid1' at simple_topo.py#28  <Trigger 'python-defn-defn' at 766 (explicit)>
+    info: start scope is (<blob 'simple_topo'>, ['FatTreeTopo', '__init__'])
+    info: find 'dpid1 ...' starting at (<blob 'simple_topo'>, ['FatTreeTopo', '__init__']):
+    info: is 'dpid1' accessible on (<blob 'simple_topo'>, ['FatTreeTopo', '__init__'])? no
+    debug: 'dpid1 ...' from <from mininet.topo import Topo>?
+    info: is 'dpid1' accessible on (<blob 'simple_topo'>, [])? no
+    info: is 'dpid1' accessible on (<blob '*'>, [])? no
+    error: evaluating 'dpid1' at simple_topo.py#28: could not resolve first part of 'dpid1'
+[2013-07-10 02:34:24,132] [ERROR] koCodeIntel: error evaluating definition:
+  trigger: <Trigger 'python-defn-defn' at 849 (explicit)>
+  log:
+    info: eval 'mac1' at simple_topo.py#29  <Trigger 'python-defn-defn' at 849 (explicit)>
+    info: start scope is (<blob 'simple_topo'>, ['FatTreeTopo', '__init__'])
+    info: find 'mac1 ...' starting at (<blob 'simple_topo'>, ['FatTreeTopo', '__init__']):
+    info: is 'mac1' accessible on (<blob 'simple_topo'>, ['FatTreeTopo', '__init__'])? no
+    debug: 'mac1 ...' from <from mininet.topo import Topo>?
+    info: is 'mac1' accessible on (<blob 'simple_topo'>, [])? no
+    info: is 'mac1' accessible on (<blob '*'>, [])? no
+    error: evaluating 'mac1' at simple_topo.py#29: could not resolve first part of 'mac1'
+[2013-07-10 03:44:37,692] [ERROR] koCodeIntel: error evaluating calltip:
+  trigger: <Trigger 'python-calltip-call-signature' at 3808>
+  log:
+    info: eval 'while' at remote_conn.py#97  <Trigger 'python-calltip-call-signature' at 3808>
+    info: start scope is (<blob 'remote_conn'>, ['ConnectionHandler'])
+    info: find 'while ...' starting at (<blob 'remote_conn'>, ['ConnectionHandler']):
+    info: is 'while' accessible on (<blob 'remote_conn'>, ['ConnectionHandler'])? no
+    debug: 'while ...' from <from pox.core import core>?
+    debug: 'while ...' from <import pox.openflow.libopenflow_01 as of>?
+    debug: 'while ...' from <from pox.lib.util import dpid_to_str>?
+    debug: 'while ...' from <from pox.lib.addresses import IPAddr>?
+    debug: 'while ...' from <from pox.lib.addresses import EthAddr>?
+    debug: 'while ...' from <from pox.openflow.of_json import *>?
+    info: is blob 'pox.openflow.of_json' from <Python curdirlib>? no
+    info: is blob 'pox.openflow.of_json' from <Python envlib>? no
+    info: is blob 'pox.openflow.of_json' from <Python cataloglib: >? no
+    info: is blob 'pox.openflow.of_json' from <python-2.7 stdlib>? no
+    info: is blob 'pox.openflow.of_json' from <Python parentdirlib>? yes
+    info: imports:: setting reldirlib to: '/home/mininet/new_pox/pox/pox/openflow'
+    info: resolve getattr 'while' on <blob 'of_json'> in (<blob 'of_json'>, []):
+    debug: 'while ...' from <from pox.lib.util import fields_of>?
+    debug: 'while ...' from <from pox.lib.util import is_scalar>?
+    debug: 'while ...' from <import pox.openflow.libopenflow_01 as of>?
+    debug: 'while ...' from <from pox.lib.packet import ethernet>?
+    debug: 'while ...' from <from pox.lib.packet import ipv4>?
+    debug: 'while ...' from <from pox.lib.packet.packet_utils import ethtype_to_str>?
+    debug: 'while ...' from <from pox.lib.util import dpidToStr>?
+    debug: 'while ...' from <from pox.lib.addresses import EthAddr>?
+    debug: 'while ...' from <from pox.lib.addresses import IPAddr>?
+    debug: 'while ...' from <from pox.lib.addresses import parse_cidr>?
+    debug: 'while ...' from <from pox.lib.addresses import EthAddr>?
+    debug: 'while ...' from <import socket>?
+    debug: 'while ...' from <import pox.lib.packet as packetlib>?
+    debug: 'while ...' from <from pox.lib.packet.packet_base import packet_base>?
+    debug: 'while ...' from <import pox.lib.packet as pkg>?
+    debug: 'while ...' from <import time>?
+    debug: 'while ...' from <import SocketServer>?
+    debug: 'while ...' from <import threading>?
+    info: is 'while' accessible on (<blob 'remote_conn'>, [])? no
+    info: is 'while' accessible on (<blob '*'>, [])? no
+    error: evaluating 'while' at remote_conn.py#97: could not resolve first part of 'while'
+[2013-07-10 03:44:39,699] [ERROR] koCodeIntel: error evaluating completions:
+  trigger: <Trigger 'python-complete-object-members' at 3810>
+  log:
+    info: eval 'f' at remote_conn.py#97  <Trigger 'python-complete-object-members' at 3810>
+    info: start scope is (<blob 'remote_conn'>, ['ConnectionHandler'])
+    info: find 'f ...' starting at (<blob 'remote_conn'>, ['ConnectionHandler']):
+    info: is 'f' accessible on (<blob 'remote_conn'>, ['ConnectionHandler'])? no
+    debug: 'f ...' from <from pox.core import core>?
+    debug: 'f ...' from <import pox.openflow.libopenflow_01 as of>?
+    debug: 'f ...' from <from pox.lib.util import dpid_to_str>?
+    debug: 'f ...' from <from pox.lib.addresses import IPAddr>?
+    debug: 'f ...' from <from pox.lib.addresses import EthAddr>?
+    debug: 'f ...' from <from pox.openflow.of_json import *>?
+    info: is blob 'pox.openflow.of_json' from <Python curdirlib>? no
+    info: is blob 'pox.openflow.of_json' from <Python envlib>? no
+    info: is blob 'pox.openflow.of_json' from <Python cataloglib: >? no
+    info: is blob 'pox.openflow.of_json' from <python-2.7 stdlib>? no
+    info: is blob 'pox.openflow.of_json' from <Python parentdirlib>? yes
+    info: imports:: setting reldirlib to: '/home/mininet/new_pox/pox/pox/openflow'
+    info: resolve getattr 'f' on <blob 'of_json'> in (<blob 'of_json'>, []):
+    debug: 'f ...' from <from pox.lib.util import fields_of>?
+    debug: 'f ...' from <from pox.lib.util import is_scalar>?
+    debug: 'f ...' from <import pox.openflow.libopenflow_01 as of>?
+    debug: 'f ...' from <from pox.lib.packet import ethernet>?
+    debug: 'f ...' from <from pox.lib.packet import ipv4>?
+    debug: 'f ...' from <from pox.lib.packet.packet_utils import ethtype_to_str>?
+    debug: 'f ...' from <from pox.lib.util import dpidToStr>?
+    debug: 'f ...' from <from pox.lib.addresses import EthAddr>?
+    debug: 'f ...' from <from pox.lib.addresses import IPAddr>?
+    debug: 'f ...' from <from pox.lib.addresses import parse_cidr>?
+    debug: 'f ...' from <from pox.lib.addresses import EthAddr>?
+    debug: 'f ...' from <import socket>?
+    debug: 'f ...' from <import pox.lib.packet as packetlib>?
+    debug: 'f ...' from <from pox.lib.packet.packet_base import packet_base>?
+    debug: 'f ...' from <import pox.lib.packet as pkg>?
+    debug: 'f ...' from <import time>?
+    debug: 'f ...' from <import SocketServer>?
+    debug: 'f ...' from <import threading>?
+    info: is 'f' accessible on (<blob 'remote_conn'>, [])? no
+    info: is 'f' accessible on (<blob '*'>, [])? no
+    error: evaluating 'f' at remote_conn.py#97: could not resolve first part of 'f'
+[2013-07-10 03:45:30,590] [ERROR] koCodeIntel: error evaluating calltip:
+  trigger: <Trigger 'python-calltip-call-signature' at 3834>
+  log:
+    info: eval 'while' at remote_conn.py#98  <Trigger 'python-calltip-call-signature' at 3834>
+    info: start scope is (<blob 'remote_conn'>, ['ConnectionHandler'])
+    info: find 'while ...' starting at (<blob 'remote_conn'>, ['ConnectionHandler']):
+    info: is 'while' accessible on (<blob 'remote_conn'>, ['ConnectionHandler'])? no
+    debug: 'while ...' from <from pox.core import core>?
+    debug: 'while ...' from <import pox.openflow.libopenflow_01 as of>?
+    debug: 'while ...' from <from pox.lib.util import dpid_to_str>?
+    debug: 'while ...' from <from pox.lib.addresses import IPAddr>?
+    debug: 'while ...' from <from pox.lib.addresses import EthAddr>?
+    debug: 'while ...' from <from pox.openflow.of_json import *>?
+    info: is blob 'pox.openflow.of_json' from <Python curdirlib>? no
+    info: is blob 'pox.openflow.of_json' from <Python envlib>? no
+    info: is blob 'pox.openflow.of_json' from <Python cataloglib: >? no
+    info: is blob 'pox.openflow.of_json' from <python-2.7 stdlib>? no
+    info: is blob 'pox.openflow.of_json' from <Python parentdirlib>? yes
+    info: imports:: setting reldirlib to: '/home/mininet/new_pox/pox/pox/openflow'
+    info: resolve getattr 'while' on <blob 'of_json'> in (<blob 'of_json'>, []):
+    debug: 'while ...' from <from pox.lib.util import fields_of>?
+    debug: 'while ...' from <from pox.lib.util import is_scalar>?
+    debug: 'while ...' from <import pox.openflow.libopenflow_01 as of>?
+    debug: 'while ...' from <from pox.lib.packet import ethernet>?
+    debug: 'while ...' from <from pox.lib.packet import ipv4>?
+    debug: 'while ...' from <from pox.lib.packet.packet_utils import ethtype_to_str>?
+    debug: 'while ...' from <from pox.lib.util import dpidToStr>?
+    debug: 'while ...' from <from pox.lib.addresses import EthAddr>?
+    debug: 'while ...' from <from pox.lib.addresses import IPAddr>?
+    debug: 'while ...' from <from pox.lib.addresses import parse_cidr>?
+    debug: 'while ...' from <from pox.lib.addresses import EthAddr>?
+    debug: 'while ...' from <import socket>?
+    debug: 'while ...' from <import pox.lib.packet as packetlib>?
+    debug: 'while ...' from <from pox.lib.packet.packet_base import packet_base>?
+    debug: 'while ...' from <import pox.lib.packet as pkg>?
+    debug: 'while ...' from <import time>?
+    debug: 'while ...' from <import SocketServer>?
+    debug: 'while ...' from <import threading>?
+    info: is 'while' accessible on (<blob 'remote_conn'>, [])? no
+    info: is 'while' accessible on (<blob '*'>, [])? no
+    error: evaluating 'while' at remote_conn.py#98: could not resolve first part of 'while'
+[2013-07-10 03:45:48,838] [ERROR] koCodeIntel: error evaluating completions:
+  trigger: <Trigger 'python-complete-object-members' at 3860>
+  log:
+    info: eval 'f' at remote_conn.py#99  <Trigger 'python-complete-object-members' at 3860>
+    info: start scope is (<blob 'remote_conn'>, ['ConnectionHandler'])
+    info: find 'f ...' starting at (<blob 'remote_conn'>, ['ConnectionHandler']):
+    info: is 'f' accessible on (<blob 'remote_conn'>, ['ConnectionHandler'])? no
+    debug: 'f ...' from <from pox.core import core>?
+    debug: 'f ...' from <import pox.openflow.libopenflow_01 as of>?
+    debug: 'f ...' from <from pox.lib.util import dpid_to_str>?
+    debug: 'f ...' from <from pox.lib.addresses import IPAddr>?
+    debug: 'f ...' from <from pox.lib.addresses import EthAddr>?
+    debug: 'f ...' from <from pox.openflow.of_json import *>?
+    info: is blob 'pox.openflow.of_json' from <Python curdirlib>? no
+    info: is blob 'pox.openflow.of_json' from <Python envlib>? no
+    info: is blob 'pox.openflow.of_json' from <Python cataloglib: >? no
+    info: is blob 'pox.openflow.of_json' from <python-2.7 stdlib>? no
+    info: is blob 'pox.openflow.of_json' from <Python parentdirlib>? yes
+    info: imports:: setting reldirlib to: '/home/mininet/new_pox/pox/pox/openflow'
+    info: resolve getattr 'f' on <blob 'of_json'> in (<blob 'of_json'>, []):
+    debug: 'f ...' from <from pox.lib.util import fields_of>?
+    debug: 'f ...' from <from pox.lib.util import is_scalar>?
+    debug: 'f ...' from <import pox.openflow.libopenflow_01 as of>?
+    debug: 'f ...' from <from pox.lib.packet import ethernet>?
+    debug: 'f ...' from <from pox.lib.packet import ipv4>?
+    debug: 'f ...' from <from pox.lib.packet.packet_utils import ethtype_to_str>?
+    debug: 'f ...' from <from pox.lib.util import dpidToStr>?
+    debug: 'f ...' from <from pox.lib.addresses import EthAddr>?
+    debug: 'f ...' from <from pox.lib.addresses import IPAddr>?
+    debug: 'f ...' from <from pox.lib.addresses import parse_cidr>?
+    debug: 'f ...' from <from pox.lib.addresses import EthAddr>?
+    debug: 'f ...' from <import socket>?
+    debug: 'f ...' from <import pox.lib.packet as packetlib>?
+    debug: 'f ...' from <from pox.lib.packet.packet_base import packet_base>?
+    debug: 'f ...' from <import pox.lib.packet as pkg>?
+    debug: 'f ...' from <import time>?
+    debug: 'f ...' from <import SocketServer>?
+    debug: 'f ...' from <import threading>?
+    info: is 'f' accessible on (<blob 'remote_conn'>, [])? no
+    info: is 'f' accessible on (<blob '*'>, [])? no
+    error: evaluating 'f' at remote_conn.py#99: could not resolve first part of 'f'
+[2013-07-10 03:45:52,222] [ERROR] koCodeIntel: error evaluating calltip:
+  trigger: <Trigger 'python-calltip-call-signature' at 3869>
+  log:
+    info: eval 'f.readline' at remote_conn.py#99  <Trigger 'python-calltip-call-signature' at 3869>
+    info: start scope is (<blob 'remote_conn'>, ['ConnectionHandler'])
+    info: find 'f ...' starting at (<blob 'remote_conn'>, ['ConnectionHandler']):
+    info: is 'f' accessible on (<blob 'remote_conn'>, ['ConnectionHandler'])? no
+    debug: 'f ...' from <from pox.core import core>?
+    debug: 'f ...' from <import pox.openflow.libopenflow_01 as of>?
+    debug: 'f ...' from <from pox.lib.util import dpid_to_str>?
+    debug: 'f ...' from <from pox.lib.addresses import IPAddr>?
+    debug: 'f ...' from <from pox.lib.addresses import EthAddr>?
+    debug: 'f ...' from <from pox.openflow.of_json import *>?
+    info: is blob 'pox.openflow.of_json' from <Python curdirlib>? no
+    info: is blob 'pox.openflow.of_json' from <Python envlib>? no
+    info: is blob 'pox.openflow.of_json' from <Python cataloglib: >? no
+    info: is blob 'pox.openflow.of_json' from <python-2.7 stdlib>? no
+    info: is blob 'pox.openflow.of_json' from <Python parentdirlib>? yes
+    info: imports:: setting reldirlib to: '/home/mininet/new_pox/pox/pox/openflow'
+    info: resolve getattr 'f' on <blob 'of_json'> in (<blob 'of_json'>, []):
+    debug: 'f ...' from <from pox.lib.util import fields_of>?
+    debug: 'f ...' from <from pox.lib.util import is_scalar>?
+    debug: 'f ...' from <import pox.openflow.libopenflow_01 as of>?
+    debug: 'f ...' from <from pox.lib.packet import ethernet>?
+    debug: 'f ...' from <from pox.lib.packet import ipv4>?
+    debug: 'f ...' from <from pox.lib.packet.packet_utils import ethtype_to_str>?
+    debug: 'f ...' from <from pox.lib.util import dpidToStr>?
+    debug: 'f ...' from <from pox.lib.addresses import EthAddr>?
+    debug: 'f ...' from <from pox.lib.addresses import IPAddr>?
+    debug: 'f ...' from <from pox.lib.addresses import parse_cidr>?
+    debug: 'f ...' from <from pox.lib.addresses import EthAddr>?
+    debug: 'f ...' from <import socket>?
+    debug: 'f ...' from <import pox.lib.packet as packetlib>?
+    debug: 'f ...' from <from pox.lib.packet.packet_base import packet_base>?
+    debug: 'f ...' from <import pox.lib.packet as pkg>?
+    debug: 'f ...' from <import time>?
+    debug: 'f ...' from <import SocketServer>?
+    debug: 'f ...' from <import threading>?
+    info: is 'f' accessible on (<blob 'remote_conn'>, [])? no
+    info: is 'f' accessible on (<blob '*'>, [])? no
+    error: evaluating 'f.readline' at remote_conn.py#99: could not resolve first part of 'f.readline'
+[2013-07-10 03:46:36,733] [ERROR] koCodeIntel: error evaluating completions:
+  trigger: <Trigger 'python-complete-object-members' at 3865>
+  log:
+    info: eval 'line' at remote_conn.py#99  <Trigger 'python-complete-object-members' at 3865>
+    info: start scope is (<blob 'remote_conn'>, ['ConnectionHandler', 'loadFlows'])
+    info: find 'line ...' starting at (<blob 'remote_conn'>, ['ConnectionHandler', 'loadFlows']):
+    info: is 'line' accessible on (<blob 'remote_conn'>, ['ConnectionHandler', 'loadFlows'])? yes: <variable 'line'>
+    debug: _hit_from_citdl: first part: [u'line'] -> (<variable 'line'>, (<blob 'remote_conn'>, ['ConnectionHandler', 'loadFlows']))
+    info: resolve 'f.readline()' type inference for <variable 'line'>:
+    info: find 'f ...' starting at (<blob 'remote_conn'>, ['ConnectionHandler', 'loadFlows']):
+    info: is 'f' accessible on (<blob 'remote_conn'>, ['ConnectionHandler', 'loadFlows'])? yes: <variable 'f'>
+    debug: _hit_from_citdl: first part: ['f'] -> (<variable 'f'>, (<blob 'remote_conn'>, ['ConnectionHandler', 'loadFlows']))
+    debug: _hit_from_citdl: resolve ['readline', '()'] on <variable 'f'> in (<blob 'remote_conn'>, ['ConnectionHandler', 'loadFlows'])
+    info: resolve getattr 'readline' on <variable 'f'> in (<blob 'remote_conn'>, ['ConnectionHandler', 'loadFlows']):
+    info: resolve 'open()' type inference for <variable 'f'>:
+    info: find 'open ...' starting at (<blob 'remote_conn'>, ['ConnectionHandler', 'loadFlows']):
+    info: is 'open' accessible on (<blob 'remote_conn'>, ['ConnectionHandler', 'loadFlows'])? no
+    debug: 'open ...' from <from pox.core import core>?
+    debug: 'open ...' from <import pox.openflow.libopenflow_01 as of>?
+    debug: 'open ...' from <from pox.lib.util import dpid_to_str>?
+    debug: 'open ...' from <from pox.lib.addresses import IPAddr>?
+    debug: 'open ...' from <from pox.lib.addresses import EthAddr>?
+    debug: 'open ...' from <from pox.openflow.of_json import *>?
+    info: is blob 'pox.openflow.of_json' from <Python curdirlib>? no
+    info: is blob 'pox.openflow.of_json' from <Python envlib>? no
+    info: is blob 'pox.openflow.of_json' from <Python cataloglib: >? no
+    info: is blob 'pox.openflow.of_json' from <python-2.7 stdlib>? no
+    info: is blob 'pox.openflow.of_json' from <Python parentdirlib>? yes
+    info: imports:: setting reldirlib to: '/home/mininet/new_pox/pox/pox/openflow'
+    info: resolve getattr 'open' on <blob 'of_json'> in (<blob 'of_json'>, []):
+    debug: 'open ...' from <from pox.lib.util import fields_of>?
+    debug: 'open ...' from <from pox.lib.util import is_scalar>?
+    debug: 'open ...' from <import pox.openflow.libopenflow_01 as of>?
+    debug: 'open ...' from <from pox.lib.packet import ethernet>?
+    debug: 'open ...' from <from pox.lib.packet import ipv4>?
+    debug: 'open ...' from <from pox.lib.packet.packet_utils import ethtype_to_str>?
+    debug: 'open ...' from <from pox.lib.util import dpidToStr>?
+    debug: 'open ...' from <from pox.lib.addresses import EthAddr>?
+    debug: 'open ...' from <from pox.lib.addresses import IPAddr>?
+    debug: 'open ...' from <from pox.lib.addresses import parse_cidr>?
+    debug: 'open ...' from <from pox.lib.addresses import EthAddr>?
+    debug: 'open ...' from <import socket>?
+    debug: 'open ...' from <import pox.lib.packet as packetlib>?
+    debug: 'open ...' from <from pox.lib.packet.packet_base import packet_base>?
+    debug: 'open ...' from <import pox.lib.packet as pkg>?
+    debug: 'open ...' from <import time>?
+    debug: 'open ...' from <import SocketServer>?
+    debug: 'open ...' from <import threading>?
+    info: is 'open' accessible on (<blob 'remote_conn'>, [])? no
+    info: is 'open' accessible on (<blob '*'>, [])? yes: <function 'open'>
+    debug: _hit_from_citdl: first part: ['open'] -> (<function 'open'>, (<blob '*'>, []))
+    debug: _hit_from_citdl: resolve ['()'] on <function 'open'> in (<blob '*'>, [])
+    info: _hit_from_call: function with citdl 'file'
+    info: find 'file ...' starting at (<blob '*'>, ['open']):
+    info: is 'file' accessible on (<blob '*'>, ['open'])? no
+    info: is 'file' accessible on (<blob '*'>, [])? yes: <class 'file'>
+    debug: _hit_from_citdl: first part: ['file'] -> (<class 'file'>, (<blob '*'>, []))
+    info: 'file' is <class 'file'> on (<blob '*'>, [])
+    info: 'open()' is <class 'file'> on (<blob '*'>, [])
+    info: attr is <function 'readline'> in <class 'file'>
+    debug: _hit_from_citdl: resolve ['()'] on <function 'readline'> in (<blob '*'>, ['file'])
+    error: evaluating 'line' at remote_conn.py#99: no return type info for <function 'readline'>
+[2013-07-10 03:46:39,159] [ERROR] koCodeIntel: error evaluating calltip:
+  trigger: <Trigger 'python-calltip-call-signature' at 3871>
+  log:
+    info: eval 'line.split' at remote_conn.py#99  <Trigger 'python-calltip-call-signature' at 3871>
+    info: start scope is (<blob 'remote_conn'>, ['ConnectionHandler', 'loadFlows'])
+    info: find 'line ...' starting at (<blob 'remote_conn'>, ['ConnectionHandler', 'loadFlows']):
+    info: is 'line' accessible on (<blob 'remote_conn'>, ['ConnectionHandler', 'loadFlows'])? yes: <variable 'line'>
+    debug: _hit_from_citdl: first part: [u'line'] -> (<variable 'line'>, (<blob 'remote_conn'>, ['ConnectionHandler', 'loadFlows']))
+    debug: _hit_from_citdl: resolve [u'split'] on <variable 'line'> in (<blob 'remote_conn'>, ['ConnectionHandler', 'loadFlows'])
+    info: resolve getattr 'split' on <variable 'line'> in (<blob 'remote_conn'>, ['ConnectionHandler', 'loadFlows']):
+    info: resolve 'f.readline()' type inference for <variable 'line'>:
+    info: find 'f ...' starting at (<blob 'remote_conn'>, ['ConnectionHandler', 'loadFlows']):
+    info: is 'f' accessible on (<blob 'remote_conn'>, ['ConnectionHandler', 'loadFlows'])? yes: <variable 'f'>
+    debug: _hit_from_citdl: first part: ['f'] -> (<variable 'f'>, (<blob 'remote_conn'>, ['ConnectionHandler', 'loadFlows']))
+    debug: _hit_from_citdl: resolve ['readline', '()'] on <variable 'f'> in (<blob 'remote_conn'>, ['ConnectionHandler', 'loadFlows'])
+    info: resolve getattr 'readline' on <variable 'f'> in (<blob 'remote_conn'>, ['ConnectionHandler', 'loadFlows']):
+    info: resolve 'open()' type inference for <variable 'f'>:
+    info: find 'open ...' starting at (<blob 'remote_conn'>, ['ConnectionHandler', 'loadFlows']):
+    info: is 'open' accessible on (<blob 'remote_conn'>, ['ConnectionHandler', 'loadFlows'])? no
+    debug: 'open ...' from <from pox.core import core>?
+    debug: 'open ...' from <import pox.openflow.libopenflow_01 as of>?
+    debug: 'open ...' from <from pox.lib.util import dpid_to_str>?
+    debug: 'open ...' from <from pox.lib.addresses import IPAddr>?
+    debug: 'open ...' from <from pox.lib.addresses import EthAddr>?
+    debug: 'open ...' from <from pox.openflow.of_json import *>?
+    info: is blob 'pox.openflow.of_json' from <Python curdirlib>? no
+    info: is blob 'pox.openflow.of_json' from <Python envlib>? no
+    info: is blob 'pox.openflow.of_json' from <Python cataloglib: >? no
+    info: is blob 'pox.openflow.of_json' from <python-2.7 stdlib>? no
+    info: is blob 'pox.openflow.of_json' from <Python parentdirlib>? yes
+    info: imports:: setting reldirlib to: '/home/mininet/new_pox/pox/pox/openflow'
+    info: resolve getattr 'open' on <blob 'of_json'> in (<blob 'of_json'>, []):
+    debug: 'open ...' from <from pox.lib.util import fields_of>?
+    debug: 'open ...' from <from pox.lib.util import is_scalar>?
+    debug: 'open ...' from <import pox.openflow.libopenflow_01 as of>?
+    debug: 'open ...' from <from pox.lib.packet import ethernet>?
+    debug: 'open ...' from <from pox.lib.packet import ipv4>?
+    debug: 'open ...' from <from pox.lib.packet.packet_utils import ethtype_to_str>?
+    debug: 'open ...' from <from pox.lib.util import dpidToStr>?
+    debug: 'open ...' from <from pox.lib.addresses import EthAddr>?
+    debug: 'open ...' from <from pox.lib.addresses import IPAddr>?
+    debug: 'open ...' from <from pox.lib.addresses import parse_cidr>?
+    debug: 'open ...' from <from pox.lib.addresses import EthAddr>?
+    debug: 'open ...' from <import socket>?
+    debug: 'open ...' from <import pox.lib.packet as packetlib>?
+    debug: 'open ...' from <from pox.lib.packet.packet_base import packet_base>?
+    debug: 'open ...' from <import pox.lib.packet as pkg>?
+    debug: 'open ...' from <import time>?
+    debug: 'open ...' from <import SocketServer>?
+    debug: 'open ...' from <import threading>?
+    info: is 'open' accessible on (<blob 'remote_conn'>, [])? no
+    info: is 'open' accessible on (<blob '*'>, [])? yes: <function 'open'>
+    debug: _hit_from_citdl: first part: ['open'] -> (<function 'open'>, (<blob '*'>, []))
+    debug: _hit_from_citdl: resolve ['()'] on <function 'open'> in (<blob '*'>, [])
+    info: _hit_from_call: function with citdl 'file'
+    info: find 'file ...' starting at (<blob '*'>, ['open']):
+    info: is 'file' accessible on (<blob '*'>, ['open'])? no
+    info: is 'file' accessible on (<blob '*'>, [])? yes: <class 'file'>
+    debug: _hit_from_citdl: first part: ['file'] -> (<class 'file'>, (<blob '*'>, []))
+    info: 'file' is <class 'file'> on (<blob '*'>, [])
+    info: 'open()' is <class 'file'> on (<blob '*'>, [])
+    info: attr is <function 'readline'> in <class 'file'>
+    debug: _hit_from_citdl: resolve ['()'] on <function 'readline'> in (<blob '*'>, ['file'])
+    error: evaluating 'line.split' at remote_conn.py#99: no return type info for <function 'readline'>
+[2013-07-10 03:50:17,502] [ERROR] koCodeIntel: error evaluating calltip:
+  trigger: <Trigger 'python-calltip-call-signature' at 4175>
+  log:
+    info: eval 'setFlow' at remote_conn.py#109  <Trigger 'python-calltip-call-signature' at 4175>
+    info: start scope is (<blob 'remote_conn'>, ['ConnectionHandler', 'loadFlows'])
+    info: find 'setFlow ...' starting at (<blob 'remote_conn'>, ['ConnectionHandler', 'loadFlows']):
+    info: is 'setFlow' accessible on (<blob 'remote_conn'>, ['ConnectionHandler', 'loadFlows'])? no
+    debug: 'setFlow ...' from <from pox.core import core>?
+    debug: 'setFlow ...' from <import pox.openflow.libopenflow_01 as of>?
+    debug: 'setFlow ...' from <from pox.lib.util import dpid_to_str>?
+    debug: 'setFlow ...' from <from pox.lib.addresses import IPAddr>?
+    debug: 'setFlow ...' from <from pox.lib.addresses import EthAddr>?
+    debug: 'setFlow ...' from <from pox.openflow.of_json import *>?
+    info: is blob 'pox.openflow.of_json' from <Python curdirlib>? no
+    info: is blob 'pox.openflow.of_json' from <Python envlib>? no
+    info: is blob 'pox.openflow.of_json' from <Python cataloglib: >? no
+    info: is blob 'pox.openflow.of_json' from <python-2.7 stdlib>? no
+    info: is blob 'pox.openflow.of_json' from <Python parentdirlib>? yes
+    info: imports:: setting reldirlib to: '/home/mininet/new_pox/pox/pox/openflow'
+    info: resolve getattr 'setFlow' on <blob 'of_json'> in (<blob 'of_json'>, []):
+    debug: 'setFlow ...' from <from pox.lib.util import fields_of>?
+    debug: 'setFlow ...' from <from pox.lib.util import is_scalar>?
+    debug: 'setFlow ...' from <import pox.openflow.libopenflow_01 as of>?
+    debug: 'setFlow ...' from <from pox.lib.packet import ethernet>?
+    debug: 'setFlow ...' from <from pox.lib.packet import ipv4>?
+    debug: 'setFlow ...' from <from pox.lib.packet.packet_utils import ethtype_to_str>?
+    debug: 'setFlow ...' from <from pox.lib.util import dpidToStr>?
+    debug: 'setFlow ...' from <from pox.lib.addresses import EthAddr>?
+    debug: 'setFlow ...' from <from pox.lib.addresses import IPAddr>?
+    debug: 'setFlow ...' from <from pox.lib.addresses import parse_cidr>?
+    debug: 'setFlow ...' from <from pox.lib.addresses import EthAddr>?
+    debug: 'setFlow ...' from <import socket>?
+    debug: 'setFlow ...' from <import pox.lib.packet as packetlib>?
+    debug: 'setFlow ...' from <from pox.lib.packet.packet_base import packet_base>?
+    debug: 'setFlow ...' from <import pox.lib.packet as pkg>?
+    debug: 'setFlow ...' from <import time>?
+    debug: 'setFlow ...' from <import SocketServer>?
+    debug: 'setFlow ...' from <import threading>?
+    info: is 'setFlow' accessible on (<blob 'remote_conn'>, [])? no
+    info: is 'setFlow' accessible on (<blob '*'>, [])? no
+    error: evaluating 'setFlow' at remote_conn.py#109: could not resolve first part of 'setFlow'
+[2013-07-10 03:51:47,756] [ERROR] koCodeIntel: error evaluating calltip:
+  trigger: <Trigger 'python-calltip-call-signature' at 4278>
+  log:
+    info: eval 'removeFlow' at remote_conn.py#112  <Trigger 'python-calltip-call-signature' at 4278>
+    info: start scope is (<blob 'remote_conn'>, ['ConnectionHandler', 'loadFlows'])
+    info: find 'removeFlow ...' starting at (<blob 'remote_conn'>, ['ConnectionHandler', 'loadFlows']):
+    info: is 'removeFlow' accessible on (<blob 'remote_conn'>, ['ConnectionHandler', 'loadFlows'])? no
+    debug: 'removeFlow ...' from <from pox.core import core>?
+    debug: 'removeFlow ...' from <import pox.openflow.libopenflow_01 as of>?
+    debug: 'removeFlow ...' from <from pox.lib.util import dpid_to_str>?
+    debug: 'removeFlow ...' from <from pox.lib.addresses import IPAddr>?
+    debug: 'removeFlow ...' from <from pox.lib.addresses import EthAddr>?
+    debug: 'removeFlow ...' from <from pox.openflow.of_json import *>?
+    info: is blob 'pox.openflow.of_json' from <Python curdirlib>? no
+    info: is blob 'pox.openflow.of_json' from <Python envlib>? no
+    info: is blob 'pox.openflow.of_json' from <Python cataloglib: >? no
+    info: is blob 'pox.openflow.of_json' from <python-2.7 stdlib>? no
+    info: is blob 'pox.openflow.of_json' from <Python parentdirlib>? yes
+    info: imports:: setting reldirlib to: '/home/mininet/new_pox/pox/pox/openflow'
+    info: resolve getattr 'removeFlow' on <blob 'of_json'> in (<blob 'of_json'>, []):
+    debug: 'removeFlow ...' from <from pox.lib.util import fields_of>?
+    debug: 'removeFlow ...' from <from pox.lib.util import is_scalar>?
+    debug: 'removeFlow ...' from <import pox.openflow.libopenflow_01 as of>?
+    debug: 'removeFlow ...' from <from pox.lib.packet import ethernet>?
+    debug: 'removeFlow ...' from <from pox.lib.packet import ipv4>?
+    debug: 'removeFlow ...' from <from pox.lib.packet.packet_utils import ethtype_to_str>?
+    debug: 'removeFlow ...' from <from pox.lib.util import dpidToStr>?
+    debug: 'removeFlow ...' from <from pox.lib.addresses import EthAddr>?
+    debug: 'removeFlow ...' from <from pox.lib.addresses import IPAddr>?
+    debug: 'removeFlow ...' from <from pox.lib.addresses import parse_cidr>?
+    debug: 'removeFlow ...' from <from pox.lib.addresses import EthAddr>?
+    debug: 'removeFlow ...' from <import socket>?
+    debug: 'removeFlow ...' from <import pox.lib.packet as packetlib>?
+    debug: 'removeFlow ...' from <from pox.lib.packet.packet_base import packet_base>?
+    debug: 'removeFlow ...' from <import pox.lib.packet as pkg>?
+    debug: 'removeFlow ...' from <import time>?
+    debug: 'removeFlow ...' from <import SocketServer>?
+    debug: 'removeFlow ...' from <import threading>?
+    info: is 'removeFlow' accessible on (<blob 'remote_conn'>, [])? no
+    info: is 'removeFlow' accessible on (<blob '*'>, [])? no
+    error: evaluating 'removeFlow' at remote_conn.py#112: could not resolve first part of 'removeFlow'
+[2013-07-10 03:56:47,285] [WARNING] koDocument: setting `koDocument.codePage` is DEPRECATED, hardwired to 65001 (unicode mode): 65001 ignored
+[2013-07-10 04:02:17,718] [ERROR] koCodeIntel: error evaluating definition:
+  trigger: <Trigger 'python-defn-defn' at 2771 (explicit)>
+  log:
+    info: eval 'loadFlows' at remote_conn.py#69  <Trigger 'python-defn-defn' at 2771 (explicit)>
+    info: start scope is (<blob 'remote_conn'>, ['ConnectionHandler', 'handle'])
+    info: find 'loadFlows ...' starting at (<blob 'remote_conn'>, ['ConnectionHandler', 'handle']):
+    info: is 'loadFlows' accessible on (<blob 'remote_conn'>, ['ConnectionHandler', 'handle'])? no
+    debug: 'loadFlows ...' from <from pox.core import core>?
+    debug: 'loadFlows ...' from <import pox.openflow.libopenflow_01 as of>?
+    debug: 'loadFlows ...' from <from pox.lib.util import dpid_to_str>?
+    debug: 'loadFlows ...' from <from pox.lib.addresses import IPAddr>?
+    debug: 'loadFlows ...' from <from pox.lib.addresses import EthAddr>?
+    debug: 'loadFlows ...' from <from pox.openflow.of_json import *>?
+    info: is blob 'pox.openflow.of_json' from <Python curdirlib>? no
+    info: is blob 'pox.openflow.of_json' from <Python envlib>? no
+    info: is blob 'pox.openflow.of_json' from <Python cataloglib: >? no
+    info: is blob 'pox.openflow.of_json' from <python-2.7 stdlib>? no
+    info: is blob 'pox.openflow.of_json' from <Python parentdirlib>? yes
+    info: imports:: setting reldirlib to: '/home/mininet/new_pox/pox/pox/openflow'
+    info: resolve getattr 'loadFlows' on <blob 'of_json'> in (<blob 'of_json'>, []):
+    debug: 'loadFlows ...' from <from pox.lib.util import fields_of>?
+    debug: 'loadFlows ...' from <from pox.lib.util import is_scalar>?
+    debug: 'loadFlows ...' from <import pox.openflow.libopenflow_01 as of>?
+    debug: 'loadFlows ...' from <from pox.lib.packet import ethernet>?
+    debug: 'loadFlows ...' from <from pox.lib.packet import ipv4>?
+    debug: 'loadFlows ...' from <from pox.lib.packet.packet_utils import ethtype_to_str>?
+    debug: 'loadFlows ...' from <from pox.lib.util import dpidToStr>?
+    debug: 'loadFlows ...' from <from pox.lib.addresses import EthAddr>?
+    debug: 'loadFlows ...' from <from pox.lib.addresses import IPAddr>?
+    debug: 'loadFlows ...' from <from pox.lib.addresses import parse_cidr>?
+    debug: 'loadFlows ...' from <from pox.lib.addresses import EthAddr>?
+    debug: 'loadFlows ...' from <import socket>?
+    debug: 'loadFlows ...' from <import pox.lib.packet as packetlib>?
+    debug: 'loadFlows ...' from <from pox.lib.packet.packet_base import packet_base>?
+    debug: 'loadFlows ...' from <import pox.lib.packet as pkg>?
+    debug: 'loadFlows ...' from <import time>?
+    debug: 'loadFlows ...' from <import SocketServer>?
+    debug: 'loadFlows ...' from <import threading>?
+    info: is 'loadFlows' accessible on (<blob 'remote_conn'>, [])? no
+    info: is 'loadFlows' accessible on (<blob '*'>, [])? no
+    error: evaluating 'loadFlows' at remote_conn.py#69: could not resolve first part of 'loadFlows'
+[2013-07-10 04:14:39,101] [WARNING] koDocument: setting `koDocument.codePage` is DEPRECATED, hardwired to 65001 (unicode mode): 65001 ignored
+[2013-07-12 02:36:44,888] [ERROR] koCodeIntel: error evaluating completions:
+  trigger: <Trigger 'python-complete-object-members' at 4521>
+  log:
+    info: eval 'message' at remote_conn.py#118  <Trigger 'python-complete-object-members' at 4521>
+    info: start scope is (<blob 'remote_conn'>, ['ConnectionHandler', 'loadFlows'])
+    info: find 'message ...' starting at (<blob 'remote_conn'>, ['ConnectionHandler', 'loadFlows']):
+    info: is 'message' accessible on (<blob 'remote_conn'>, ['ConnectionHandler', 'loadFlows'])? yes: <variable 'message'>
+    debug: _hit_from_citdl: first part: [u'message'] -> (<variable 'message'>, (<blob 'remote_conn'>, ['ConnectionHandler', 'loadFlows']))
+    error: evaluating 'message' at remote_conn.py#118: no type-inference info for <variable 'message'>
+[2013-07-12 02:36:47,349] [ERROR] koCodeIntel: error evaluating calltip:
+  trigger: <Trigger 'python-calltip-call-signature' at 4526>
+  log:
+    info: eval 'message.find' at remote_conn.py#118  <Trigger 'python-calltip-call-signature' at 4526>
+    info: start scope is (<blob 'remote_conn'>, ['ConnectionHandler', 'loadFlows'])
+    info: find 'message ...' starting at (<blob 'remote_conn'>, ['ConnectionHandler', 'loadFlows']):
+    info: is 'message' accessible on (<blob 'remote_conn'>, ['ConnectionHandler', 'loadFlows'])? yes: <variable 'message'>
+    debug: _hit_from_citdl: first part: [u'message'] -> (<variable 'message'>, (<blob 'remote_conn'>, ['ConnectionHandler', 'loadFlows']))
+    debug: _hit_from_citdl: resolve [u'find'] on <variable 'message'> in (<blob 'remote_conn'>, ['ConnectionHandler', 'loadFlows'])
+    info: resolve getattr 'find' on <variable 'message'> in (<blob 'remote_conn'>, ['ConnectionHandler', 'loadFlows']):
+    error: evaluating 'message.find' at remote_conn.py#118: no type-inference info for <variable 'message'>
+[2013-07-12 03:11:39,872] [ERROR] koCodeIntel: error evaluating calltip:
+  trigger: <Trigger 'python-calltip-call-signature' at 3158>
+  log:
+    info: eval 'IP' at remote_conn.py#78  <Trigger 'python-calltip-call-signature' at 3158>
+    info: start scope is (<blob 'remote_conn'>, ['ConnectionHandler', 'handle'])
+    info: find 'IP ...' starting at (<blob 'remote_conn'>, ['ConnectionHandler', 'handle']):
+    info: is 'IP' accessible on (<blob 'remote_conn'>, ['ConnectionHandler', 'handle'])? yes: <variable 'IP'>
+    debug: _hit_from_citdl: first part: [u'IP'] -> (<variable 'IP'>, (<blob 'remote_conn'>, ['ConnectionHandler', 'handle']))
+    error: evaluating 'IP' at remote_conn.py#78: no type-inference info for <variable 'IP'>
+ERROR:xpcom:Unhandled exception calling 'int8 * run();'
+Traceback (most recent call last):
+  File "/home/mininet/Komodo-Edit-8/lib/mozilla/python/xpcom/server/policy.py", line 310, in _CallMethod_
+    return 0, func(*params)
+  File "/home/mininet/Komodo-Edit-8/lib/mozilla/python/xpcom/components.py", line 236, in run
+    self.result = self.fn(*self.args, **self.kwargs)
+  File "/home/mininet/Komodo-Edit-8/lib/mozilla/components/koCodeIntel.py", line 737, in done
+    return self.obj.done(*args)
+  File "<XPCOMObject method 'done'>", line 3, in done
+Exception: 2153185308 (NS_ERROR_XPC_JS_THREW_JS_OBJECT)
+[2013-07-12 03:15:41,804] [ERROR] codeintel.tree: Unexpected error with evaluator: 'msg.match.nw_dst' at remote_conn.py#99
+Traceback (most recent call last):
+  File "/home/mininet/Komodo-Edit-8/lib/mozilla/python/komodo/codeintel2/tree.py", line 334, in eval
+    self.ctlr.done("success")
+  File "/home/mininet/Komodo-Edit-8/lib/mozilla/components/koCodeIntel.py", line 820, in done
+    self.ui_handler.done()
+  File "/home/mininet/Komodo-Edit-8/lib/mozilla/python/xpcom/components.py", line 262, in wrapperFn
+    threadMgr.mainThread.dispatch(method, dispatch_flags)
+  File "<XPCOMObject method 'dispatch'>", line 3, in dispatch
+Exception: 2147500037 (NS_ERROR_FAILURE)
+ERROR:xpcom:Unhandled exception calling 'int8 * run();'
+Traceback (most recent call last):
+  File "/home/mininet/Komodo-Edit-8/lib/mozilla/python/xpcom/server/policy.py", line 310, in _CallMethod_
+    return 0, func(*params)
+  File "/home/mininet/Komodo-Edit-8/lib/mozilla/python/xpcom/components.py", line 236, in run
+    self.result = self.fn(*self.args, **self.kwargs)
+  File "/home/mininet/Komodo-Edit-8/lib/mozilla/components/koCodeIntel.py", line 737, in done
+    return self.obj.done(*args)
+  File "<XPCOMObject method 'done'>", line 3, in done
+Exception: 2153185308 (NS_ERROR_XPC_JS_THREW_JS_OBJECT)
+[2013-07-12 03:16:10,907] [ERROR] codeintel.tree: Unexpected error with evaluator: 'msg.match.nw_dst' at remote_conn.py#78
+Traceback (most recent call last):
+  File "/home/mininet/Komodo-Edit-8/lib/mozilla/python/komodo/codeintel2/tree.py", line 334, in eval
+    self.ctlr.done("success")
+  File "/home/mininet/Komodo-Edit-8/lib/mozilla/components/koCodeIntel.py", line 820, in done
+    self.ui_handler.done()
+  File "/home/mininet/Komodo-Edit-8/lib/mozilla/python/xpcom/components.py", line 262, in wrapperFn
+    threadMgr.mainThread.dispatch(method, dispatch_flags)
+  File "<XPCOMObject method 'dispatch'>", line 3, in dispatch
+Exception: 2147500037 (NS_ERROR_FAILURE)
+[2013-07-12 03:18:31,131] [ERROR] koCodeIntel: error evaluating completions:
+  trigger: <Trigger 'python-complete-object-members' at 2615>
+  log:
+    info: eval 'tokens' at remote_conn.py#66  <Trigger 'python-complete-object-members' at 2615>
+    info: start scope is (<blob 'remote_conn'>, ['ConnectionHandler', 'handle'])
+    info: find 'tokens ...' starting at (<blob 'remote_conn'>, ['ConnectionHandler', 'handle']):
+    info: is 'tokens' accessible on (<blob 'remote_conn'>, ['ConnectionHandler', 'handle'])? yes: <variable 'tokens'>
+    debug: _hit_from_citdl: first part: [u'tokens'] -> (<variable 'tokens'>, (<blob 'remote_conn'>, ['ConnectionHandler', 'handle']))
+    info: resolve 'message.split()' type inference for <variable 'tokens'>:
+    info: find 'message ...' starting at (<blob 'remote_conn'>, ['ConnectionHandler', 'handle']):
+    info: is 'message' accessible on (<blob 'remote_conn'>, ['ConnectionHandler', 'handle'])? yes: <variable 'message'>
+    debug: _hit_from_citdl: first part: ['message'] -> (<variable 'message'>, (<blob 'remote_conn'>, ['ConnectionHandler', 'handle']))
+    debug: _hit_from_citdl: resolve ['split', '()'] on <variable 'message'> in (<blob 'remote_conn'>, ['ConnectionHandler', 'handle'])
+    info: resolve getattr 'split' on <variable 'message'> in (<blob 'remote_conn'>, ['ConnectionHandler', 'handle']):
+    info: resolve 'self.data.strip()' type inference for <variable 'message'>:
+    info: find 'self ...' starting at (<blob 'remote_conn'>, ['ConnectionHandler', 'handle']):
+    info: is 'self' accessible on (<blob 'remote_conn'>, ['ConnectionHandler', 'handle'])? yes: <argument 'self'>
+    debug: _hit_from_citdl: first part: ['self'] -> (<argument 'self'>, (<blob 'remote_conn'>, ['ConnectionHandler', 'handle']))
+    debug: _hit_from_citdl: resolve ['data', 'strip', '()'] on <argument 'self'> in (<blob 'remote_conn'>, ['ConnectionHandler', 'handle'])
+    info: resolve getattr 'data' on <argument 'self'> in (<blob 'remote_conn'>, ['ConnectionHandler', 'handle']):
+    info: resolve 'ConnectionHandler' type inference for <argument 'self'>:
+    info: find 'ConnectionHandler ...' starting at (<blob 'remote_conn'>, ['ConnectionHandler', 'handle']):
+    info: is 'ConnectionHandler' accessible on (<blob 'remote_conn'>, ['ConnectionHandler', 'handle'])? no
+    info: is 'ConnectionHandler' accessible on (<blob 'remote_conn'>, [])? yes: <class 'ConnectionHandler'>
+    debug: _hit_from_citdl: first part: ['ConnectionHandler'] -> (<class 'ConnectionHandler'>, (<blob 'remote_conn'>, []))
+    info: 'ConnectionHandler' is <class 'ConnectionHandler'> on (<blob 'remote_conn'>, [])
+    info: attr is <variable 'data'> in <class 'ConnectionHandler'>
+    debug: _hit_from_citdl: resolve ['strip', '()'] on <variable 'data'> in (<blob 'remote_conn'>, ['ConnectionHandler'])
+    info: resolve getattr 'strip' on <variable 'data'> in (<blob 'remote_conn'>, ['ConnectionHandler']):
+    info: resolve 'self.rfile.readline()' type inference for <variable 'data'>:
+    info: find 'self ...' starting at (<blob 'remote_conn'>, ['ConnectionHandler']):
+    info: is 'self' accessible on (<blob 'remote_conn'>, ['ConnectionHandler'])? no
+    debug: 'self ...' from <from pox.core import core>?
+    debug: 'self ...' from <import pox.openflow.libopenflow_01 as of>?
+    debug: 'self ...' from <from pox.lib.util import dpid_to_str>?
+    debug: 'self ...' from <from pox.lib.addresses import IPAddr>?
+    debug: 'self ...' from <from pox.lib.addresses import EthAddr>?
+    debug: 'self ...' from <from pox.openflow.of_json import *>?
+    info: is blob 'pox.openflow.of_json' from <Python curdirlib>? no
+    info: is blob 'pox.openflow.of_json' from <Python envlib>? no
+    info: is blob 'pox.openflow.of_json' from <Python cataloglib: >? no
+    info: is blob 'pox.openflow.of_json' from <python-2.7 stdlib>? no
+    info: is blob 'pox.openflow.of_json' from <Python parentdirlib>? yes
+    info: imports:: setting reldirlib to: '/home/mininet/new_pox/pox/pox/openflow'
+    info: resolve getattr 'self' on <blob 'of_json'> in (<blob 'of_json'>, []):
+    debug: 'self ...' from <from pox.lib.util import fields_of>?
+    debug: 'self ...' from <from pox.lib.util import is_scalar>?
+    debug: 'self ...' from <import pox.openflow.libopenflow_01 as of>?
+    debug: 'self ...' from <from pox.lib.packet import ethernet>?
+    debug: 'self ...' from <from pox.lib.packet import ipv4>?
+    debug: 'self ...' from <from pox.lib.packet.packet_utils import ethtype_to_str>?
+    debug: 'self ...' from <from pox.lib.util import dpidToStr>?
+    debug: 'self ...' from <from pox.lib.addresses import EthAddr>?
+    debug: 'self ...' from <from pox.lib.addresses import IPAddr>?
+    debug: 'self ...' from <from pox.lib.addresses import parse_cidr>?
+    debug: 'self ...' from <from pox.lib.addresses import EthAddr>?
+    debug: 'self ...' from <import socket>?
+    debug: 'self ...' from <import pox.lib.packet as packetlib>?
+    debug: 'self ...' from <from pox.lib.packet.packet_base import packet_base>?
+    debug: 'self ...' from <import pox.lib.packet as pkg>?
+    debug: 'self ...' from <import time>?
+    debug: 'self ...' from <import SocketServer>?
+    debug: 'self ...' from <import threading>?
+    info: is 'self' accessible on (<blob 'remote_conn'>, [])? no
+    info: is 'self' accessible on (<blob '*'>, [])? no
+    error: evaluating 'tokens' at remote_conn.py#66: could not resolve first part of 'self.rfile.readline()'
+[2013-07-12 03:22:41,000] [ERROR] koCodeIntel: error evaluating calltip:
+  trigger: <Trigger 'python-calltip-call-signature' at 5760>
+  log:
+    info: eval 'self.wfile.write' at remote_conn.py#148  <Trigger 'python-calltip-call-signature' at 5760>
+    info: start scope is (<blob 'remote_conn'>, ['ConnectionHandler', 'loadFlows'])
+    info: find 'self ...' starting at (<blob 'remote_conn'>, ['ConnectionHandler', 'loadFlows']):
+    info: is 'self' accessible on (<blob 'remote_conn'>, ['ConnectionHandler', 'loadFlows'])? yes: <argument 'self'>
+    debug: _hit_from_citdl: first part: [u'self'] -> (<argument 'self'>, (<blob 'remote_conn'>, ['ConnectionHandler', 'loadFlows']))
+    debug: _hit_from_citdl: resolve [u'wfile', u'write'] on <argument 'self'> in (<blob 'remote_conn'>, ['ConnectionHandler', 'loadFlows'])
+    info: resolve getattr 'wfile' on <argument 'self'> in (<blob 'remote_conn'>, ['ConnectionHandler', 'loadFlows']):
+    info: resolve 'ConnectionHandler' type inference for <argument 'self'>:
+    info: find 'ConnectionHandler ...' starting at (<blob 'remote_conn'>, ['ConnectionHandler', 'loadFlows']):
+    info: is 'ConnectionHandler' accessible on (<blob 'remote_conn'>, ['ConnectionHandler', 'loadFlows'])? no
+    info: is 'ConnectionHandler' accessible on (<blob 'remote_conn'>, [])? yes: <class 'ConnectionHandler'>
+    debug: _hit_from_citdl: first part: ['ConnectionHandler'] -> (<class 'ConnectionHandler'>, (<blob 'remote_conn'>, []))
+    info: 'ConnectionHandler' is <class 'ConnectionHandler'> on (<blob 'remote_conn'>, [])
+    debug: look for [u'wfile', u'write'] from imports in <class 'ConnectionHandler'>
+    info: is 'wfile' from base class: 'SocketServer.StreamRequestHandler'?
+    info: resolve 'SocketServer.StreamRequestHandler' type inference:
+    info: find 'SocketServer ...' starting at (<blob 'remote_conn'>, []):
+    debug: 'SocketServer ...' from <from pox.core import core>?
+    debug: 'SocketServer ...' from <import pox.openflow.libopenflow_01 as of>?
+    debug: 'SocketServer ...' from <from pox.lib.util import dpid_to_str>?
+    debug: 'SocketServer ...' from <from pox.lib.addresses import IPAddr>?
+    debug: 'SocketServer ...' from <from pox.lib.addresses import EthAddr>?
+    debug: 'SocketServer ...' from <from pox.openflow.of_json import *>?
+    info: is blob 'pox.openflow.of_json' from <Python curdirlib>? no
+    info: is blob 'pox.openflow.of_json' from <Python envlib>? no
+    info: is blob 'pox.openflow.of_json' from <Python cataloglib: >? no
+    info: is blob 'pox.openflow.of_json' from <python-2.7 stdlib>? no
+    info: is blob 'pox.openflow.of_json' from <Python parentdirlib>? yes
+    info: imports:: setting reldirlib to: '/home/mininet/new_pox/pox/pox/openflow'
+    info: resolve getattr 'SocketServer' on <blob 'of_json'> in (<blob 'of_json'>, []):
+    debug: 'SocketServer ...' from <from pox.lib.util import fields_of>?
+    debug: 'SocketServer ...' from <from pox.lib.util import is_scalar>?
+    debug: 'SocketServer ...' from <import pox.openflow.libopenflow_01 as of>?
+    debug: 'SocketServer ...' from <from pox.lib.packet import ethernet>?
+    debug: 'SocketServer ...' from <from pox.lib.packet import ipv4>?
+    debug: 'SocketServer ...' from <from pox.lib.packet.packet_utils import ethtype_to_str>?
+    debug: 'SocketServer ...' from <from pox.lib.util import dpidToStr>?
+    debug: 'SocketServer ...' from <from pox.lib.addresses import EthAddr>?
+    debug: 'SocketServer ...' from <from pox.lib.addresses import IPAddr>?
+    debug: 'SocketServer ...' from <from pox.lib.addresses import parse_cidr>?
+    debug: 'SocketServer ...' from <from pox.lib.addresses import EthAddr>?
+    debug: 'SocketServer ...' from <import socket>?
+    debug: 'SocketServer ...' from <import pox.lib.packet as packetlib>?
+    debug: 'SocketServer ...' from <from pox.lib.packet.packet_base import packet_base>?
+    debug: 'SocketServer ...' from <import pox.lib.packet as pkg>?
+    debug: 'SocketServer ...' from <import time>?
+    debug: 'SocketServer ...' from <import SocketServer>?
+    info: is blob 'SocketServer' from <Python curdirlib>? no
+    info: is blob 'SocketServer' from <Python envlib>? no
+    info: is blob 'SocketServer' from <Python cataloglib: >? no
+    info: is blob 'SocketServer' from <python-2.7 stdlib>? yes
+    info: is 'SocketServer' accessible on (<blob 'remote_conn'>, [])? yes: <blob 'SocketServer'>
+    debug: _hit_from_citdl: first part: ['SocketServer'] -> (<blob 'SocketServer'>, (<blob 'SocketServer'>, []))
+    debug: _hit_from_citdl: resolve ['StreamRequestHandler'] on <blob 'SocketServer'> in (<blob 'SocketServer'>, [])
+    info: resolve getattr 'StreamRequestHandler' on <blob 'SocketServer'> in (<blob 'SocketServer'>, []):
+    info: attr is <class 'StreamRequestHandler'> in <blob 'SocketServer'>
+    info: 'SocketServer.StreamRequestHandler' is <class 'StreamRequestHandler'> on (<blob 'SocketServer'>, [])
+    info: resolve getattr 'wfile' on <class 'StreamRequestHandler'> in (<blob 'SocketServer'>, []):
+    info: attr is <variable 'wfile'> in <class 'StreamRequestHandler'>
+    debug: _hit_from_citdl: resolve [u'write'] on <variable 'wfile'> in (<blob 'SocketServer'>, ['StreamRequestHandler'])
+    info: resolve getattr 'write' on <variable 'wfile'> in (<blob 'SocketServer'>, ['StreamRequestHandler']):
+    info: resolve 'self.connection.makefile()' type inference for <variable 'wfile'>:
+    info: find 'self ...' starting at (<blob 'SocketServer'>, ['StreamRequestHandler']):
+    info: is 'self' accessible on (<blob 'SocketServer'>, ['StreamRequestHandler'])? no
+    debug: 'self ...' from <import os>?
+    debug: 'self ...' from <import select>?
+    debug: 'self ...' from <import socket>?
+    debug: 'self ...' from <import sys>?
+    debug: 'self ...' from <import threading>?
+    info: is 'self' accessible on (<blob 'SocketServer'>, [])? no
+    info: is 'self' accessible on (<blob '*'>, [])? no
+    error: evaluating 'self.wfile.write' at remote_conn.py#148: could not resolve first part of 'self.connection.makefile()'
+[2013-07-12 05:10:38,918] [ERROR] koCodeIntel: error evaluating completions:
+  trigger: <Trigger 'python-complete-object-members' at 3591>
+  log:
+    info: eval 'conn' at remote_conn.py#85  <Trigger 'python-complete-object-members' at 3591>
+    info: start scope is (<blob 'remote_conn'>, ['ConnectionHandler', 'handle'])
+    info: find 'conn ...' starting at (<blob 'remote_conn'>, ['ConnectionHandler', 'handle']):
+    info: is 'conn' accessible on (<blob 'remote_conn'>, ['ConnectionHandler', 'handle'])? no
+    debug: 'conn ...' from <from pox.core import core>?
+    debug: 'conn ...' from <import pox.openflow.libopenflow_01 as of>?
+    debug: 'conn ...' from <from pox.lib.util import dpid_to_str>?
+    debug: 'conn ...' from <from pox.lib.addresses import IPAddr>?
+    debug: 'conn ...' from <from pox.lib.addresses import EthAddr>?
+    debug: 'conn ...' from <from pox.openflow.of_json import *>?
+    info: is blob 'pox.openflow.of_json' from <Python curdirlib>? no
+    info: is blob 'pox.openflow.of_json' from <Python envlib>? no
+    info: is blob 'pox.openflow.of_json' from <Python cataloglib: >? no
+    info: is blob 'pox.openflow.of_json' from <python-2.7 stdlib>? no
+    info: is blob 'pox.openflow.of_json' from <Python parentdirlib>? yes
+    info: imports:: setting reldirlib to: '/home/mininet/new_pox/pox/pox/openflow'
+    info: resolve getattr 'conn' on <blob 'of_json'> in (<blob 'of_json'>, []):
+    debug: 'conn ...' from <from pox.lib.util import fields_of>?
+    debug: 'conn ...' from <from pox.lib.util import is_scalar>?
+    debug: 'conn ...' from <import pox.openflow.libopenflow_01 as of>?
+    debug: 'conn ...' from <from pox.lib.packet import ethernet>?
+    debug: 'conn ...' from <from pox.lib.packet import ipv4>?
+    debug: 'conn ...' from <from pox.lib.packet.packet_utils import ethtype_to_str>?
+    debug: 'conn ...' from <from pox.lib.util import dpidToStr>?
+    debug: 'conn ...' from <from pox.lib.addresses import EthAddr>?
+    debug: 'conn ...' from <from pox.lib.addresses import IPAddr>?
+    debug: 'conn ...' from <from pox.lib.addresses import parse_cidr>?
+    debug: 'conn ...' from <from pox.lib.addresses import EthAddr>?
+    debug: 'conn ...' from <import socket>?
+    debug: 'conn ...' from <import pox.lib.packet as packetlib>?
+    debug: 'conn ...' from <from pox.lib.packet.packet_base import packet_base>?
+    debug: 'conn ...' from <import pox.lib.packet as pkg>?
+    debug: 'conn ...' from <import time>?
+    debug: 'conn ...' from <import SocketServer>?
+    debug: 'conn ...' from <import threading>?
+    info: is 'conn' accessible on (<blob 'remote_conn'>, [])? no
+    info: is 'conn' accessible on (<blob '*'>, [])? no
+    error: evaluating 'conn' at remote_conn.py#85: could not resolve first part of 'conn'
+[2013-07-16 02:22:00,819] [WARNING] koDocument: setting `koDocument.codePage` is DEPRECATED, hardwired to 65001 (unicode mode): 65001 ignored
+[2013-07-16 02:22:42,022] [WARNING] koDocument: setting `koDocument.codePage` is DEPRECATED, hardwired to 65001 (unicode mode): 65001 ignored
+[2013-07-16 02:34:19,688] [ERROR] koCodeIntel: error evaluating completions:
+  trigger: <Trigger 'python-complete-object-members' at 5137>
+  log:
+    info: eval 'log' at remote_conn.py#120  <Trigger 'python-complete-object-members' at 5137>
+    info: start scope is (<blob 'remote_conn'>, ['ConnectionHandler', 'setFlow'])
+    info: find 'log ...' starting at (<blob 'remote_conn'>, ['ConnectionHandler', 'setFlow']):
+    info: is 'log' accessible on (<blob 'remote_conn'>, ['ConnectionHandler', 'setFlow'])? no
+    info: is 'log' accessible on (<blob 'remote_conn'>, [])? yes: <variable 'log'>
+    debug: _hit_from_citdl: first part: [u'log'] -> (<variable 'log'>, (<blob 'remote_conn'>, []))
+    info: resolve 'core.getLogger()' type inference for <variable 'log'>:
+    info: find 'core ...' starting at (<blob 'remote_conn'>, []):
+    debug: 'core ...' from <from pox.core import core>?
+    info: is blob 'pox.core' from <Python curdirlib>? no
+    info: is blob 'pox.core' from <Python envlib>? no
+    info: is blob 'pox.core' from <Python cataloglib: >? no
+    info: is blob 'pox.core' from <python-2.7 stdlib>? no
+    info: is blob 'pox.core' from <Python parentdirlib>? yes
+    info: is 'core' accessible on (<blob 'remote_conn'>, [])? yes: <variable 'core'>
+    debug: _hit_from_citdl: first part: ['core'] -> (<variable 'core'>, (<blob 'core'>, []))
+    debug: _hit_from_citdl: resolve ['getLogger', '()'] on <variable 'core'> in (<blob 'core'>, [])
+    info: resolve getattr 'getLogger' on <variable 'core'> in (<blob 'core'>, []):
+    info: resolve 'POXCore' type inference for <variable 'core'>:
+    info: find 'POXCore ...' starting at (<blob 'core'>, []):
+    info: is 'POXCore' accessible on (<blob 'core'>, [])? yes: <class 'POXCore'>
+    debug: _hit_from_citdl: first part: ['POXCore'] -> (<class 'POXCore'>, (<blob 'core'>, []))
+    info: 'POXCore' is <class 'POXCore'> on (<blob 'core'>, [])
+    info: attr is <function 'getLogger'> in <class 'POXCore'>
+    debug: _hit_from_citdl: resolve ['()'] on <function 'getLogger'> in (<blob 'core'>, ['POXCore'])
+    info: _hit_from_call: function with citdl 'POXCore.getLogger()'
+    info: find 'POXCore ...' starting at (<blob 'core'>, ['POXCore', 'getLogger']):
+    info: is 'POXCore' accessible on (<blob 'core'>, ['POXCore', 'getLogger'])? no
+    info: is 'POXCore' accessible on (<blob 'core'>, [])? yes: <class 'POXCore'>
+    debug: _hit_from_citdl: first part: ['POXCore'] -> (<class 'POXCore'>, (<blob 'core'>, []))
+    debug: _hit_from_citdl: resolve ['getLogger', '()'] on <class 'POXCore'> in (<blob 'core'>, [])
+    info: resolve getattr 'getLogger' on <class 'POXCore'> in (<blob 'core'>, []):
+    info: attr is <function 'getLogger'> in <class 'POXCore'>
+    debug: _hit_from_citdl: resolve ['()'] on <function 'getLogger'> in (<blob 'core'>, ['POXCore'])
+    info: _hit_from_call: function with citdl 'POXCore.getLogger()'
+    info: find 'POXCore ...' starting at (<blob 'core'>, ['POXCore', 'getLogger']):
+    info: is 'POXCore' accessible on (<blob 'core'>, ['POXCore', 'getLogger'])? no
+    info: is 'POXCore' accessible on (<blob 'core'>, [])? yes: <class 'POXCore'>
+    debug: _hit_from_citdl: first part: ['POXCore'] -> (<class 'POXCore'>, (<blob 'core'>, []))
+    debug: _hit_from_citdl: resolve ['getLogger', '()'] on <class 'POXCore'> in (<blob 'core'>, [])
+    info: resolve getattr 'getLogger' on <class 'POXCore'> in (<blob 'core'>, []):
+    info: attr is <function 'getLogger'> in <class 'POXCore'>
+    debug: _hit_from_citdl: resolve ['()'] on <function 'getLogger'> in (<blob 'core'>, ['POXCore'])
+    info: _hit_from_call: function with citdl 'POXCore.getLogger()'
+    info: find 'POXCore ...' starting at (<blob 'core'>, ['POXCore', 'getLogger']):
+    info: is 'POXCore' accessible on (<blob 'core'>, ['POXCore', 'getLogger'])? no
+    info: is 'POXCore' accessible on (<blob 'core'>, [])? yes: <class 'POXCore'>
+    debug: _hit_from_citdl: first part: ['POXCore'] -> (<class 'POXCore'>, (<blob 'core'>, []))
+    debug: _hit_from_citdl: resolve ['getLogger', '()'] on <class 'POXCore'> in (<blob 'core'>, [])
+    info: resolve getattr 'getLogger' on <class 'POXCore'> in (<blob 'core'>, []):
+    info: attr is <function 'getLogger'> in <class 'POXCore'>
+    debug: _hit_from_citdl: resolve ['()'] on <function 'getLogger'> in (<blob 'core'>, ['POXCore'])
+    info: _hit_from_call: function with citdl 'POXCore.getLogger()'
+    info: find 'POXCore ...' starting at (<blob 'core'>, ['POXCore', 'getLogger']):
+    info: is 'POXCore' accessible on (<blob 'core'>, ['POXCore', 'getLogger'])? no
+    info: is 'POXCore' accessible on (<blob 'core'>, [])? yes: <class 'POXCore'>
+    debug: _hit_from_citdl: first part: ['POXCore'] -> (<class 'POXCore'>, (<blob 'core'>, []))
+    debug: _hit_from_citdl: resolve ['getLogger', '()'] on <class 'POXCore'> in (<blob 'core'>, [])
+    info: resolve getattr 'getLogger' on <class 'POXCore'> in (<blob 'core'>, []):
+    info: attr is <function 'getLogger'> in <class 'POXCore'>
+    debug: _hit_from_citdl: resolve ['()'] on <function 'getLogger'> in (<blob 'core'>, ['POXCore'])
+    info: _hit_from_call: function with citdl 'POXCore.getLogger()'
+    info: find 'POXCore ...' starting at (<blob 'core'>, ['POXCore', 'getLogger']):
+    info: is 'POXCore' accessible on (<blob 'core'>, ['POXCore', 'getLogger'])? no
+    info: is 'POXCore' accessible on (<blob 'core'>, [])? yes: <class 'POXCore'>
+    debug: _hit_from_citdl: first part: ['POXCore'] -> (<class 'POXCore'>, (<blob 'core'>, []))
+    debug: _hit_from_citdl: resolve ['getLogger', '()'] on <class 'POXCore'> in (<blob 'core'>, [])
+    info: resolve getattr 'getLogger' on <class 'POXCore'> in (<blob 'core'>, []):
+    info: attr is <function 'getLogger'> in <class 'POXCore'>
+    debug: _hit_from_citdl: resolve ['()'] on <function 'getLogger'> in (<blob 'core'>, ['POXCore'])
+    info: _hit_from_call: function with citdl 'POXCore.getLogger()'
+    info: find 'POXCore ...' starting at (<blob 'core'>, ['POXCore', 'getLogger']):
+    info: is 'POXCore' accessible on (<blob 'core'>, ['POXCore', 'getLogger'])? no
+    info: is 'POXCore' accessible on (<blob 'core'>, [])? yes: <class 'POXCore'>
+    debug: _hit_from_citdl: first part: ['POXCore'] -> (<class 'POXCore'>, (<blob 'core'>, []))
+    debug: _hit_from_citdl: resolve ['getLogger', '()'] on <class 'POXCore'> in (<blob 'core'>, [])
+    info: resolve getattr 'getLogger' on <class 'POXCore'> in (<blob 'core'>, []):
+    info: attr is <function 'getLogger'> in <class 'POXCore'>
+    debug: _hit_from_citdl: resolve ['()'] on <function 'getLogger'> in (<blob 'core'>, ['POXCore'])
+    info: _hit_from_call: function with citdl 'POXCore.getLogger()'
+    info: find 'POXCore ...' starting at (<blob 'core'>, ['POXCore', 'getLogger']):
+    info: is 'POXCore' accessible on (<blob 'core'>, ['POXCore', 'getLogger'])? no
+    info: is 'POXCore' accessible on (<blob 'core'>, [])? yes: <class 'POXCore'>
+    debug: _hit_from_citdl: first part: ['POXCore'] -> (<class 'POXCore'>, (<blob 'core'>, []))
+    debug: _hit_from_citdl: resolve ['getLogger', '()'] on <class 'POXCore'> in (<blob 'core'>, [])
+    info: resolve getattr 'getLogger' on <class 'POXCore'> in (<blob 'core'>, []):
+    info: attr is <function 'getLogger'> in <class 'POXCore'>
+    debug: _hit_from_citdl: resolve ['()'] on <function 'getLogger'> in (<blob 'core'>, ['POXCore'])
+    info: _hit_from_call: function with citdl 'POXCore.getLogger()'
+    info: find 'POXCore ...' starting at (<blob 'core'>, ['POXCore', 'getLogger']):
+    info: is 'POXCore' accessible on (<blob 'core'>, ['POXCore', 'getLogger'])? no
+    info: is 'POXCore' accessible on (<blob 'core'>, [])? yes: <class 'POXCore'>
+    debug: _hit_from_citdl: first part: ['POXCore'] -> (<class 'POXCore'>, (<blob 'core'>, []))
+    debug: _hit_from_citdl: resolve ['getLogger', '()'] on <class 'POXCore'> in (<blob 'core'>, [])
+    info: resolve getattr 'getLogger' on <class 'POXCore'> in (<blob 'core'>, []):
+    info: attr is <function 'getLogger'> in <class 'POXCore'>
+    debug: _hit_from_citdl: resolve ['()'] on <function 'getLogger'> in (<blob 'core'>, ['POXCore'])
+    info: _hit_from_call: function with citdl 'POXCore.getLogger()'
+    info: find 'POXCore ...' starting at (<blob 'core'>, ['POXCore', 'getLogger']):
+    error: evaluating 'log' at remote_conn.py#120: hit eval sentinel: expr 'POXCore' eval count is 10 (abort)
+[2013-07-16 02:34:25,425] [ERROR] koCodeIntel: error evaluating calltip:
+  trigger: <Trigger 'python-calltip-call-signature' at 5142>
+  log:
+    info: eval 'log.info' at remote_conn.py#120  <Trigger 'python-calltip-call-signature' at 5142>
+    info: start scope is (<blob 'remote_conn'>, ['ConnectionHandler', 'setFlow'])
+    info: find 'log ...' starting at (<blob 'remote_conn'>, ['ConnectionHandler', 'setFlow']):
+    info: is 'log' accessible on (<blob 'remote_conn'>, ['ConnectionHandler', 'setFlow'])? no
+    info: is 'log' accessible on (<blob 'remote_conn'>, [])? yes: <variable 'log'>
+    debug: _hit_from_citdl: first part: [u'log'] -> (<variable 'log'>, (<blob 'remote_conn'>, []))
+    debug: _hit_from_citdl: resolve [u'info'] on <variable 'log'> in (<blob 'remote_conn'>, [])
+    info: resolve getattr 'info' on <variable 'log'> in (<blob 'remote_conn'>, []):
+    info: resolve 'core.getLogger()' type inference for <variable 'log'>:
+    info: find 'core ...' starting at (<blob 'remote_conn'>, []):
+    debug: 'core ...' from <from pox.core import core>?
+    info: is blob 'pox.core' from <Python curdirlib>? no
+    info: is blob 'pox.core' from <Python envlib>? no
+    info: is blob 'pox.core' from <Python cataloglib: >? no
+    info: is blob 'pox.core' from <python-2.7 stdlib>? no
+    info: is blob 'pox.core' from <Python parentdirlib>? yes
+    info: is 'core' accessible on (<blob 'remote_conn'>, [])? yes: <variable 'core'>
+    debug: _hit_from_citdl: first part: ['core'] -> (<variable 'core'>, (<blob 'core'>, []))
+    debug: _hit_from_citdl: resolve ['getLogger', '()'] on <variable 'core'> in (<blob 'core'>, [])
+    info: resolve getattr 'getLogger' on <variable 'core'> in (<blob 'core'>, []):
+    info: resolve 'POXCore' type inference for <variable 'core'>:
+    info: find 'POXCore ...' starting at (<blob 'core'>, []):
+    info: is 'POXCore' accessible on (<blob 'core'>, [])? yes: <class 'POXCore'>
+    debug: _hit_from_citdl: first part: ['POXCore'] -> (<class 'POXCore'>, (<blob 'core'>, []))
+    info: 'POXCore' is <class 'POXCore'> on (<blob 'core'>, [])
+    info: attr is <function 'getLogger'> in <class 'POXCore'>
+    debug: _hit_from_citdl: resolve ['()'] on <function 'getLogger'> in (<blob 'core'>, ['POXCore'])
+    info: _hit_from_call: function with citdl 'POXCore.getLogger()'
+    info: find 'POXCore ...' starting at (<blob 'core'>, ['POXCore', 'getLogger']):
+    info: is 'POXCore' accessible on (<blob 'core'>, ['POXCore', 'getLogger'])? no
+    info: is 'POXCore' accessible on (<blob 'core'>, [])? yes: <class 'POXCore'>
+    debug: _hit_from_citdl: first part: ['POXCore'] -> (<class 'POXCore'>, (<blob 'core'>, []))
+    debug: _hit_from_citdl: resolve ['getLogger', '()'] on <class 'POXCore'> in (<blob 'core'>, [])
+    info: resolve getattr 'getLogger' on <class 'POXCore'> in (<blob 'core'>, []):
+    info: attr is <function 'getLogger'> in <class 'POXCore'>
+    debug: _hit_from_citdl: resolve ['()'] on <function 'getLogger'> in (<blob 'core'>, ['POXCore'])
+    info: _hit_from_call: function with citdl 'POXCore.getLogger()'
+    info: find 'POXCore ...' starting at (<blob 'core'>, ['POXCore', 'getLogger']):
+    info: is 'POXCore' accessible on (<blob 'core'>, ['POXCore', 'getLogger'])? no
+    info: is 'POXCore' accessible on (<blob 'core'>, [])? yes: <class 'POXCore'>
+    debug: _hit_from_citdl: first part: ['POXCore'] -> (<class 'POXCore'>, (<blob 'core'>, []))
+    debug: _hit_from_citdl: resolve ['getLogger', '()'] on <class 'POXCore'> in (<blob 'core'>, [])
+    info: resolve getattr 'getLogger' on <class 'POXCore'> in (<blob 'core'>, []):
+    info: attr is <function 'getLogger'> in <class 'POXCore'>
+    debug: _hit_from_citdl: resolve ['()'] on <function 'getLogger'> in (<blob 'core'>, ['POXCore'])
+    info: _hit_from_call: function with citdl 'POXCore.getLogger()'
+    info: find 'POXCore ...' starting at (<blob 'core'>, ['POXCore', 'getLogger']):
+    info: is 'POXCore' accessible on (<blob 'core'>, ['POXCore', 'getLogger'])? no
+    info: is 'POXCore' accessible on (<blob 'core'>, [])? yes: <class 'POXCore'>
+    debug: _hit_from_citdl: first part: ['POXCore'] -> (<class 'POXCore'>, (<blob 'core'>, []))
+    debug: _hit_from_citdl: resolve ['getLogger', '()'] on <class 'POXCore'> in (<blob 'core'>, [])
+    info: resolve getattr 'getLogger' on <class 'POXCore'> in (<blob 'core'>, []):
+    info: attr is <function 'getLogger'> in <class 'POXCore'>
+    debug: _hit_from_citdl: resolve ['()'] on <function 'getLogger'> in (<blob 'core'>, ['POXCore'])
+    info: _hit_from_call: function with citdl 'POXCore.getLogger()'
+    info: find 'POXCore ...' starting at (<blob 'core'>, ['POXCore', 'getLogger']):
+    info: is 'POXCore' accessible on (<blob 'core'>, ['POXCore', 'getLogger'])? no
+    info: is 'POXCore' accessible on (<blob 'core'>, [])? yes: <class 'POXCore'>
+    debug: _hit_from_citdl: first part: ['POXCore'] -> (<class 'POXCore'>, (<blob 'core'>, []))
+    debug: _hit_from_citdl: resolve ['getLogger', '()'] on <class 'POXCore'> in (<blob 'core'>, [])
+    info: resolve getattr 'getLogger' on <class 'POXCore'> in (<blob 'core'>, []):
+    info: attr is <function 'getLogger'> in <class 'POXCore'>
+    debug: _hit_from_citdl: resolve ['()'] on <function 'getLogger'> in (<blob 'core'>, ['POXCore'])
+    info: _hit_from_call: function with citdl 'POXCore.getLogger()'
+    info: find 'POXCore ...' starting at (<blob 'core'>, ['POXCore', 'getLogger']):
+    info: is 'POXCore' accessible on (<blob 'core'>, ['POXCore', 'getLogger'])? no
+    info: is 'POXCore' accessible on (<blob 'core'>, [])? yes: <class 'POXCore'>
+    debug: _hit_from_citdl: first part: ['POXCore'] -> (<class 'POXCore'>, (<blob 'core'>, []))
+    debug: _hit_from_citdl: resolve ['getLogger', '()'] on <class 'POXCore'> in (<blob 'core'>, [])
+    info: resolve getattr 'getLogger' on <class 'POXCore'> in (<blob 'core'>, []):
+    info: attr is <function 'getLogger'> in <class 'POXCore'>
+    debug: _hit_from_citdl: resolve ['()'] on <function 'getLogger'> in (<blob 'core'>, ['POXCore'])
+    info: _hit_from_call: function with citdl 'POXCore.getLogger()'
+    info: find 'POXCore ...' starting at (<blob 'core'>, ['POXCore', 'getLogger']):
+    info: is 'POXCore' accessible on (<blob 'core'>, ['POXCore', 'getLogger'])? no
+    info: is 'POXCore' accessible on (<blob 'core'>, [])? yes: <class 'POXCore'>
+    debug: _hit_from_citdl: first part: ['POXCore'] -> (<class 'POXCore'>, (<blob 'core'>, []))
+    debug: _hit_from_citdl: resolve ['getLogger', '()'] on <class 'POXCore'> in (<blob 'core'>, [])
+    info: resolve getattr 'getLogger' on <class 'POXCore'> in (<blob 'core'>, []):
+    info: attr is <function 'getLogger'> in <class 'POXCore'>
+    debug: _hit_from_citdl: resolve ['()'] on <function 'getLogger'> in (<blob 'core'>, ['POXCore'])
+    info: _hit_from_call: function with citdl 'POXCore.getLogger()'
+    info: find 'POXCore ...' starting at (<blob 'core'>, ['POXCore', 'getLogger']):
+    info: is 'POXCore' accessible on (<blob 'core'>, ['POXCore', 'getLogger'])? no
+    info: is 'POXCore' accessible on (<blob 'core'>, [])? yes: <class 'POXCore'>
+    debug: _hit_from_citdl: first part: ['POXCore'] -> (<class 'POXCore'>, (<blob 'core'>, []))
+    debug: _hit_from_citdl: resolve ['getLogger', '()'] on <class 'POXCore'> in (<blob 'core'>, [])
+    info: resolve getattr 'getLogger' on <class 'POXCore'> in (<blob 'core'>, []):
+    info: attr is <function 'getLogger'> in <class 'POXCore'>
+    debug: _hit_from_citdl: resolve ['()'] on <function 'getLogger'> in (<blob 'core'>, ['POXCore'])
+    info: _hit_from_call: function with citdl 'POXCore.getLogger()'
+    info: find 'POXCore ...' starting at (<blob 'core'>, ['POXCore', 'getLogger']):
+    info: is 'POXCore' accessible on (<blob 'core'>, ['POXCore', 'getLogger'])? no
+    info: is 'POXCore' accessible on (<blob 'core'>, [])? yes: <class 'POXCore'>
+    debug: _hit_from_citdl: first part: ['POXCore'] -> (<class 'POXCore'>, (<blob 'core'>, []))
+    debug: _hit_from_citdl: resolve ['getLogger', '()'] on <class 'POXCore'> in (<blob 'core'>, [])
+    info: resolve getattr 'getLogger' on <class 'POXCore'> in (<blob 'core'>, []):
+    info: attr is <function 'getLogger'> in <class 'POXCore'>
+    debug: _hit_from_citdl: resolve ['()'] on <function 'getLogger'> in (<blob 'core'>, ['POXCore'])
+    info: _hit_from_call: function with citdl 'POXCore.getLogger()'
+    info: find 'POXCore ...' starting at (<blob 'core'>, ['POXCore', 'getLogger']):
+    error: evaluating 'log.info' at remote_conn.py#120: hit eval sentinel: expr 'POXCore' eval count is 10 (abort)
+[2013-07-16 03:02:01,624] [WARNING] koDocument: setting `koDocument.codePage` is DEPRECATED, hardwired to 65001 (unicode mode): 65001 ignored
+[2013-07-16 03:16:46,826] [ERROR] koCodeIntel: error evaluating completions:
+  trigger: <Trigger 'python-complete-object-members' at 4613>
+  log:
+    info: eval 'log' at remote_conn.py#112  <Trigger 'python-complete-object-members' at 4613>
+    info: start scope is (<blob 'remote_conn'>, ['ConnectionHandler', 'handle'])
+    info: find 'log ...' starting at (<blob 'remote_conn'>, ['ConnectionHandler', 'handle']):
+    info: is 'log' accessible on (<blob 'remote_conn'>, ['ConnectionHandler', 'handle'])? no
+    info: is 'log' accessible on (<blob 'remote_conn'>, [])? yes: <variable 'log'>
+    debug: _hit_from_citdl: first part: [u'log'] -> (<variable 'log'>, (<blob 'remote_conn'>, []))
+    info: resolve 'core.getLogger()' type inference for <variable 'log'>:
+    info: find 'core ...' starting at (<blob 'remote_conn'>, []):
+    debug: 'core ...' from <from pox.core import core>?
+    info: is blob 'pox.core' from <Python curdirlib>? no
+    info: is blob 'pox.core' from <Python envlib>? no
+    info: is blob 'pox.core' from <Python cataloglib: >? no
+    info: is blob 'pox.core' from <python-2.7 stdlib>? no
+    info: is blob 'pox.core' from <Python parentdirlib>? yes
+    info: is 'core' accessible on (<blob 'remote_conn'>, [])? yes: <variable 'core'>
+    debug: _hit_from_citdl: first part: ['core'] -> (<variable 'core'>, (<blob 'core'>, []))
+    debug: _hit_from_citdl: resolve ['getLogger', '()'] on <variable 'core'> in (<blob 'core'>, [])
+    info: resolve getattr 'getLogger' on <variable 'core'> in (<blob 'core'>, []):
+    info: resolve 'POXCore' type inference for <variable 'core'>:
+    info: find 'POXCore ...' starting at (<blob 'core'>, []):
+    info: is 'POXCore' accessible on (<blob 'core'>, [])? yes: <class 'POXCore'>
+    debug: _hit_from_citdl: first part: ['POXCore'] -> (<class 'POXCore'>, (<blob 'core'>, []))
+    info: 'POXCore' is <class 'POXCore'> on (<blob 'core'>, [])
+    info: attr is <function 'getLogger'> in <class 'POXCore'>
+    debug: _hit_from_citdl: resolve ['()'] on <function 'getLogger'> in (<blob 'core'>, ['POXCore'])
+    info: _hit_from_call: function with citdl 'POXCore.getLogger()'
+    info: find 'POXCore ...' starting at (<blob 'core'>, ['POXCore', 'getLogger']):
+    info: is 'POXCore' accessible on (<blob 'core'>, ['POXCore', 'getLogger'])? no
+    info: is 'POXCore' accessible on (<blob 'core'>, [])? yes: <class 'POXCore'>
+    debug: _hit_from_citdl: first part: ['POXCore'] -> (<class 'POXCore'>, (<blob 'core'>, []))
+    debug: _hit_from_citdl: resolve ['getLogger', '()'] on <class 'POXCore'> in (<blob 'core'>, [])
+    info: resolve getattr 'getLogger' on <class 'POXCore'> in (<blob 'core'>, []):
+    info: attr is <function 'getLogger'> in <class 'POXCore'>
+    debug: _hit_from_citdl: resolve ['()'] on <function 'getLogger'> in (<blob 'core'>, ['POXCore'])
+    info: _hit_from_call: function with citdl 'POXCore.getLogger()'
+    info: find 'POXCore ...' starting at (<blob 'core'>, ['POXCore', 'getLogger']):
+    info: is 'POXCore' accessible on (<blob 'core'>, ['POXCore', 'getLogger'])? no
+    info: is 'POXCore' accessible on (<blob 'core'>, [])? yes: <class 'POXCore'>
+    debug: _hit_from_citdl: first part: ['POXCore'] -> (<class 'POXCore'>, (<blob 'core'>, []))
+    debug: _hit_from_citdl: resolve ['getLogger', '()'] on <class 'POXCore'> in (<blob 'core'>, [])
+    info: resolve getattr 'getLogger' on <class 'POXCore'> in (<blob 'core'>, []):
+    info: attr is <function 'getLogger'> in <class 'POXCore'>
+    debug: _hit_from_citdl: resolve ['()'] on <function 'getLogger'> in (<blob 'core'>, ['POXCore'])
+    info: _hit_from_call: function with citdl 'POXCore.getLogger()'
+    info: find 'POXCore ...' starting at (<blob 'core'>, ['POXCore', 'getLogger']):
+    info: is 'POXCore' accessible on (<blob 'core'>, ['POXCore', 'getLogger'])? no
+    info: is 'POXCore' accessible on (<blob 'core'>, [])? yes: <class 'POXCore'>
+    debug: _hit_from_citdl: first part: ['POXCore'] -> (<class 'POXCore'>, (<blob 'core'>, []))
+    debug: _hit_from_citdl: resolve ['getLogger', '()'] on <class 'POXCore'> in (<blob 'core'>, [])
+    info: resolve getattr 'getLogger' on <class 'POXCore'> in (<blob 'core'>, []):
+    info: attr is <function 'getLogger'> in <class 'POXCore'>
+    debug: _hit_from_citdl: resolve ['()'] on <function 'getLogger'> in (<blob 'core'>, ['POXCore'])
+    info: _hit_from_call: function with citdl 'POXCore.getLogger()'
+    info: find 'POXCore ...' starting at (<blob 'core'>, ['POXCore', 'getLogger']):
+    info: is 'POXCore' accessible on (<blob 'core'>, ['POXCore', 'getLogger'])? no
+    info: is 'POXCore' accessible on (<blob 'core'>, [])? yes: <class 'POXCore'>
+    debug: _hit_from_citdl: first part: ['POXCore'] -> (<class 'POXCore'>, (<blob 'core'>, []))
+    debug: _hit_from_citdl: resolve ['getLogger', '()'] on <class 'POXCore'> in (<blob 'core'>, [])
+    info: resolve getattr 'getLogger' on <class 'POXCore'> in (<blob 'core'>, []):
+    info: attr is <function 'getLogger'> in <class 'POXCore'>
+    debug: _hit_from_citdl: resolve ['()'] on <function 'getLogger'> in (<blob 'core'>, ['POXCore'])
+    info: _hit_from_call: function with citdl 'POXCore.getLogger()'
+    info: find 'POXCore ...' starting at (<blob 'core'>, ['POXCore', 'getLogger']):
+    info: is 'POXCore' accessible on (<blob 'core'>, ['POXCore', 'getLogger'])? no
+    info: is 'POXCore' accessible on (<blob 'core'>, [])? yes: <class 'POXCore'>
+    debug: _hit_from_citdl: first part: ['POXCore'] -> (<class 'POXCore'>, (<blob 'core'>, []))
+    debug: _hit_from_citdl: resolve ['getLogger', '()'] on <class 'POXCore'> in (<blob 'core'>, [])
+    info: resolve getattr 'getLogger' on <class 'POXCore'> in (<blob 'core'>, []):
+    info: attr is <function 'getLogger'> in <class 'POXCore'>
+    debug: _hit_from_citdl: resolve ['()'] on <function 'getLogger'> in (<blob 'core'>, ['POXCore'])
+    info: _hit_from_call: function with citdl 'POXCore.getLogger()'
+    info: find 'POXCore ...' starting at (<blob 'core'>, ['POXCore', 'getLogger']):
+    info: is 'POXCore' accessible on (<blob 'core'>, ['POXCore', 'getLogger'])? no
+    info: is 'POXCore' accessible on (<blob 'core'>, [])? yes: <class 'POXCore'>
+    debug: _hit_from_citdl: first part: ['POXCore'] -> (<class 'POXCore'>, (<blob 'core'>, []))
+    debug: _hit_from_citdl: resolve ['getLogger', '()'] on <class 'POXCore'> in (<blob 'core'>, [])
+    info: resolve getattr 'getLogger' on <class 'POXCore'> in (<blob 'core'>, []):
+    info: attr is <function 'getLogger'> in <class 'POXCore'>
+    debug: _hit_from_citdl: resolve ['()'] on <function 'getLogger'> in (<blob 'core'>, ['POXCore'])
+    info: _hit_from_call: function with citdl 'POXCore.getLogger()'
+    info: find 'POXCore ...' starting at (<blob 'core'>, ['POXCore', 'getLogger']):
+    info: is 'POXCore' accessible on (<blob 'core'>, ['POXCore', 'getLogger'])? no
+    info: is 'POXCore' accessible on (<blob 'core'>, [])? yes: <class 'POXCore'>
+    debug: _hit_from_citdl: first part: ['POXCore'] -> (<class 'POXCore'>, (<blob 'core'>, []))
+    debug: _hit_from_citdl: resolve ['getLogger', '()'] on <class 'POXCore'> in (<blob 'core'>, [])
+    info: resolve getattr 'getLogger' on <class 'POXCore'> in (<blob 'core'>, []):
+    info: attr is <function 'getLogger'> in <class 'POXCore'>
+    debug: _hit_from_citdl: resolve ['()'] on <function 'getLogger'> in (<blob 'core'>, ['POXCore'])
+    info: _hit_from_call: function with citdl 'POXCore.getLogger()'
+    info: find 'POXCore ...' starting at (<blob 'core'>, ['POXCore', 'getLogger']):
+    info: is 'POXCore' accessible on (<blob 'core'>, ['POXCore', 'getLogger'])? no
+    info: is 'POXCore' accessible on (<blob 'core'>, [])? yes: <class 'POXCore'>
+    debug: _hit_from_citdl: first part: ['POXCore'] -> (<class 'POXCore'>, (<blob 'core'>, []))
+    debug: _hit_from_citdl: resolve ['getLogger', '()'] on <class 'POXCore'> in (<blob 'core'>, [])
+    info: resolve getattr 'getLogger' on <class 'POXCore'> in (<blob 'core'>, []):
+    info: attr is <function 'getLogger'> in <class 'POXCore'>
+    debug: _hit_from_citdl: resolve ['()'] on <function 'getLogger'> in (<blob 'core'>, ['POXCore'])
+    info: _hit_from_call: function with citdl 'POXCore.getLogger()'
+    info: find 'POXCore ...' starting at (<blob 'core'>, ['POXCore', 'getLogger']):
+    error: evaluating 'log' at remote_conn.py#112: hit eval sentinel: expr 'POXCore' eval count is 10 (abort)
+[2013-07-16 03:16:49,229] [ERROR] koCodeIntel: error evaluating calltip:
+  trigger: <Trigger 'python-calltip-call-signature' at 4618>
+  log:
+    info: eval 'log.info' at remote_conn.py#112  <Trigger 'python-calltip-call-signature' at 4618>
+    info: start scope is (<blob 'remote_conn'>, ['ConnectionHandler', 'handle'])
+    info: find 'log ...' starting at (<blob 'remote_conn'>, ['ConnectionHandler', 'handle']):
+    info: is 'log' accessible on (<blob 'remote_conn'>, ['ConnectionHandler', 'handle'])? no
+    info: is 'log' accessible on (<blob 'remote_conn'>, [])? yes: <variable 'log'>
+    debug: _hit_from_citdl: first part: [u'log'] -> (<variable 'log'>, (<blob 'remote_conn'>, []))
+    debug: _hit_from_citdl: resolve [u'info'] on <variable 'log'> in (<blob 'remote_conn'>, [])
+    info: resolve getattr 'info' on <variable 'log'> in (<blob 'remote_conn'>, []):
+    info: resolve 'core.getLogger()' type inference for <variable 'log'>:
+    info: find 'core ...' starting at (<blob 'remote_conn'>, []):
+    debug: 'core ...' from <from pox.core import core>?
+    info: is blob 'pox.core' from <Python curdirlib>? no
+    info: is blob 'pox.core' from <Python envlib>? no
+    info: is blob 'pox.core' from <Python cataloglib: >? no
+    info: is blob 'pox.core' from <python-2.7 stdlib>? no
+    info: is blob 'pox.core' from <Python parentdirlib>? yes
+    info: is 'core' accessible on (<blob 'remote_conn'>, [])? yes: <variable 'core'>
+    debug: _hit_from_citdl: first part: ['core'] -> (<variable 'core'>, (<blob 'core'>, []))
+    debug: _hit_from_citdl: resolve ['getLogger', '()'] on <variable 'core'> in (<blob 'core'>, [])
+    info: resolve getattr 'getLogger' on <variable 'core'> in (<blob 'core'>, []):
+    info: resolve 'POXCore' type inference for <variable 'core'>:
+    info: find 'POXCore ...' starting at (<blob 'core'>, []):
+    info: is 'POXCore' accessible on (<blob 'core'>, [])? yes: <class 'POXCore'>
+    debug: _hit_from_citdl: first part: ['POXCore'] -> (<class 'POXCore'>, (<blob 'core'>, []))
+    info: 'POXCore' is <class 'POXCore'> on (<blob 'core'>, [])
+    info: attr is <function 'getLogger'> in <class 'POXCore'>
+    debug: _hit_from_citdl: resolve ['()'] on <function 'getLogger'> in (<blob 'core'>, ['POXCore'])
+    info: _hit_from_call: function with citdl 'POXCore.getLogger()'
+    info: find 'POXCore ...' starting at (<blob 'core'>, ['POXCore', 'getLogger']):
+    info: is 'POXCore' accessible on (<blob 'core'>, ['POXCore', 'getLogger'])? no
+    info: is 'POXCore' accessible on (<blob 'core'>, [])? yes: <class 'POXCore'>
+    debug: _hit_from_citdl: first part: ['POXCore'] -> (<class 'POXCore'>, (<blob 'core'>, []))
+    debug: _hit_from_citdl: resolve ['getLogger', '()'] on <class 'POXCore'> in (<blob 'core'>, [])
+    info: resolve getattr 'getLogger' on <class 'POXCore'> in (<blob 'core'>, []):
+    info: attr is <function 'getLogger'> in <class 'POXCore'>
+    debug: _hit_from_citdl: resolve ['()'] on <function 'getLogger'> in (<blob 'core'>, ['POXCore'])
+    info: _hit_from_call: function with citdl 'POXCore.getLogger()'
+    info: find 'POXCore ...' starting at (<blob 'core'>, ['POXCore', 'getLogger']):
+    info: is 'POXCore' accessible on (<blob 'core'>, ['POXCore', 'getLogger'])? no
+    info: is 'POXCore' accessible on (<blob 'core'>, [])? yes: <class 'POXCore'>
+    debug: _hit_from_citdl: first part: ['POXCore'] -> (<class 'POXCore'>, (<blob 'core'>, []))
+    debug: _hit_from_citdl: resolve ['getLogger', '()'] on <class 'POXCore'> in (<blob 'core'>, [])
+    info: resolve getattr 'getLogger' on <class 'POXCore'> in (<blob 'core'>, []):
+    info: attr is <function 'getLogger'> in <class 'POXCore'>
+    debug: _hit_from_citdl: resolve ['()'] on <function 'getLogger'> in (<blob 'core'>, ['POXCore'])
+    info: _hit_from_call: function with citdl 'POXCore.getLogger()'
+    info: find 'POXCore ...' starting at (<blob 'core'>, ['POXCore', 'getLogger']):
+    info: is 'POXCore' accessible on (<blob 'core'>, ['POXCore', 'getLogger'])? no
+    info: is 'POXCore' accessible on (<blob 'core'>, [])? yes: <class 'POXCore'>
+    debug: _hit_from_citdl: first part: ['POXCore'] -> (<class 'POXCore'>, (<blob 'core'>, []))
+    debug: _hit_from_citdl: resolve ['getLogger', '()'] on <class 'POXCore'> in (<blob 'core'>, [])
+    info: resolve getattr 'getLogger' on <class 'POXCore'> in (<blob 'core'>, []):
+    info: attr is <function 'getLogger'> in <class 'POXCore'>
+    debug: _hit_from_citdl: resolve ['()'] on <function 'getLogger'> in (<blob 'core'>, ['POXCore'])
+    info: _hit_from_call: function with citdl 'POXCore.getLogger()'
+    info: find 'POXCore ...' starting at (<blob 'core'>, ['POXCore', 'getLogger']):
+    info: is 'POXCore' accessible on (<blob 'core'>, ['POXCore', 'getLogger'])? no
+    info: is 'POXCore' accessible on (<blob 'core'>, [])? yes: <class 'POXCore'>
+    debug: _hit_from_citdl: first part: ['POXCore'] -> (<class 'POXCore'>, (<blob 'core'>, []))
+    debug: _hit_from_citdl: resolve ['getLogger', '()'] on <class 'POXCore'> in (<blob 'core'>, [])
+    info: resolve getattr 'getLogger' on <class 'POXCore'> in (<blob 'core'>, []):
+    info: attr is <function 'getLogger'> in <class 'POXCore'>
+    debug: _hit_from_citdl: resolve ['()'] on <function 'getLogger'> in (<blob 'core'>, ['POXCore'])
+    info: _hit_from_call: function with citdl 'POXCore.getLogger()'
+    info: find 'POXCore ...' starting at (<blob 'core'>, ['POXCore', 'getLogger']):
+    info: is 'POXCore' accessible on (<blob 'core'>, ['POXCore', 'getLogger'])? no
+    info: is 'POXCore' accessible on (<blob 'core'>, [])? yes: <class 'POXCore'>
+    debug: _hit_from_citdl: first part: ['POXCore'] -> (<class 'POXCore'>, (<blob 'core'>, []))
+    debug: _hit_from_citdl: resolve ['getLogger', '()'] on <class 'POXCore'> in (<blob 'core'>, [])
+    info: resolve getattr 'getLogger' on <class 'POXCore'> in (<blob 'core'>, []):
+    info: attr is <function 'getLogger'> in <class 'POXCore'>
+    debug: _hit_from_citdl: resolve ['()'] on <function 'getLogger'> in (<blob 'core'>, ['POXCore'])
+    info: _hit_from_call: function with citdl 'POXCore.getLogger()'
+    info: find 'POXCore ...' starting at (<blob 'core'>, ['POXCore', 'getLogger']):
+    info: is 'POXCore' accessible on (<blob 'core'>, ['POXCore', 'getLogger'])? no
+    info: is 'POXCore' accessible on (<blob 'core'>, [])? yes: <class 'POXCore'>
+    debug: _hit_from_citdl: first part: ['POXCore'] -> (<class 'POXCore'>, (<blob 'core'>, []))
+    debug: _hit_from_citdl: resolve ['getLogger', '()'] on <class 'POXCore'> in (<blob 'core'>, [])
+    info: resolve getattr 'getLogger' on <class 'POXCore'> in (<blob 'core'>, []):
+    info: attr is <function 'getLogger'> in <class 'POXCore'>
+    debug: _hit_from_citdl: resolve ['()'] on <function 'getLogger'> in (<blob 'core'>, ['POXCore'])
+    info: _hit_from_call: function with citdl 'POXCore.getLogger()'
+    info: find 'POXCore ...' starting at (<blob 'core'>, ['POXCore', 'getLogger']):
+    info: is 'POXCore' accessible on (<blob 'core'>, ['POXCore', 'getLogger'])? no
+    info: is 'POXCore' accessible on (<blob 'core'>, [])? yes: <class 'POXCore'>
+    debug: _hit_from_citdl: first part: ['POXCore'] -> (<class 'POXCore'>, (<blob 'core'>, []))
+    debug: _hit_from_citdl: resolve ['getLogger', '()'] on <class 'POXCore'> in (<blob 'core'>, [])
+    info: resolve getattr 'getLogger' on <class 'POXCore'> in (<blob 'core'>, []):
+    info: attr is <function 'getLogger'> in <class 'POXCore'>
+    debug: _hit_from_citdl: resolve ['()'] on <function 'getLogger'> in (<blob 'core'>, ['POXCore'])
+    info: _hit_from_call: function with citdl 'POXCore.getLogger()'
+    info: find 'POXCore ...' starting at (<blob 'core'>, ['POXCore', 'getLogger']):
+    info: is 'POXCore' accessible on (<blob 'core'>, ['POXCore', 'getLogger'])? no
+    info: is 'POXCore' accessible on (<blob 'core'>, [])? yes: <class 'POXCore'>
+    debug: _hit_from_citdl: first part: ['POXCore'] -> (<class 'POXCore'>, (<blob 'core'>, []))
+    debug: _hit_from_citdl: resolve ['getLogger', '()'] on <class 'POXCore'> in (<blob 'core'>, [])
+    info: resolve getattr 'getLogger' on <class 'POXCore'> in (<blob 'core'>, []):
+    info: attr is <function 'getLogger'> in <class 'POXCore'>
+    debug: _hit_from_citdl: resolve ['()'] on <function 'getLogger'> in (<blob 'core'>, ['POXCore'])
+    info: _hit_from_call: function with citdl 'POXCore.getLogger()'
+    info: find 'POXCore ...' starting at (<blob 'core'>, ['POXCore', 'getLogger']):
+    error: evaluating 'log.info' at remote_conn.py#112: hit eval sentinel: expr 'POXCore' eval count is 10 (abort)
+[2013-07-16 03:17:59,915] [ERROR] koCodeIntel: error evaluating completions:
+  trigger: <Trigger 'python-complete-object-members' at 6533>
+  log:
+    info: eval 'tokens' at remote_conn.py#165  <Trigger 'python-complete-object-members' at 6533>
+    info: start scope is (<blob 'remote_conn'>, ['ConnectionHandler', 'loadFlows'])
+    info: find 'tokens ...' starting at (<blob 'remote_conn'>, ['ConnectionHandler', 'loadFlows']):
+    info: is 'tokens' accessible on (<blob 'remote_conn'>, ['ConnectionHandler', 'loadFlows'])? yes: <variable 'tokens'>
+    debug: _hit_from_citdl: first part: [u'tokens'] -> (<variable 'tokens'>, (<blob 'remote_conn'>, ['ConnectionHandler', 'loadFlows']))
+    info: resolve 'line.split()' type inference for <variable 'tokens'>:
+    info: find 'line ...' starting at (<blob 'remote_conn'>, ['ConnectionHandler', 'loadFlows']):
+    info: is 'line' accessible on (<blob 'remote_conn'>, ['ConnectionHandler', 'loadFlows'])? yes: <variable 'line'>
+    debug: _hit_from_citdl: first part: ['line'] -> (<variable 'line'>, (<blob 'remote_conn'>, ['ConnectionHandler', 'loadFlows']))
+    debug: _hit_from_citdl: resolve ['split', '()'] on <variable 'line'> in (<blob 'remote_conn'>, ['ConnectionHandler', 'loadFlows'])
+    info: resolve getattr 'split' on <variable 'line'> in (<blob 'remote_conn'>, ['ConnectionHandler', 'loadFlows']):
+    info: resolve 'f.readline()' type inference for <variable 'line'>:
+    info: find 'f ...' starting at (<blob 'remote_conn'>, ['ConnectionHandler', 'loadFlows']):
+    info: is 'f' accessible on (<blob 'remote_conn'>, ['ConnectionHandler', 'loadFlows'])? yes: <variable 'f'>
+    debug: _hit_from_citdl: first part: ['f'] -> (<variable 'f'>, (<blob 'remote_conn'>, ['ConnectionHandler', 'loadFlows']))
+    debug: _hit_from_citdl: resolve ['readline', '()'] on <variable 'f'> in (<blob 'remote_conn'>, ['ConnectionHandler', 'loadFlows'])
+    info: resolve getattr 'readline' on <variable 'f'> in (<blob 'remote_conn'>, ['ConnectionHandler', 'loadFlows']):
+    info: resolve 'open()' type inference for <variable 'f'>:
+    info: find 'open ...' starting at (<blob 'remote_conn'>, ['ConnectionHandler', 'loadFlows']):
+    info: is 'open' accessible on (<blob 'remote_conn'>, ['ConnectionHandler', 'loadFlows'])? no
+    debug: 'open ...' from <from pox.core import core>?
+    debug: 'open ...' from <import pox.openflow.libopenflow_01 as of>?
+    debug: 'open ...' from <from pox.lib.util import dpid_to_str>?
+    debug: 'open ...' from <from pox.lib.addresses import IPAddr>?
+    debug: 'open ...' from <from pox.lib.addresses import EthAddr>?
+    debug: 'open ...' from <from pox.openflow.of_json import *>?
+    info: is blob 'pox.openflow.of_json' from <Python curdirlib>? no
+    info: is blob 'pox.openflow.of_json' from <Python envlib>? no
+    info: is blob 'pox.openflow.of_json' from <Python cataloglib: >? no
+    info: is blob 'pox.openflow.of_json' from <python-2.7 stdlib>? no
+    info: is blob 'pox.openflow.of_json' from <Python parentdirlib>? yes
+    info: imports:: setting reldirlib to: '/home/mininet/new_pox/pox/pox/openflow'
+    info: resolve getattr 'open' on <blob 'of_json'> in (<blob 'of_json'>, []):
+    debug: 'open ...' from <from pox.lib.util import fields_of>?
+    debug: 'open ...' from <from pox.lib.util import is_scalar>?
+    debug: 'open ...' from <import pox.openflow.libopenflow_01 as of>?
+    debug: 'open ...' from <from pox.lib.packet import ethernet>?
+    debug: 'open ...' from <from pox.lib.packet import ipv4>?
+    debug: 'open ...' from <from pox.lib.packet.packet_utils import ethtype_to_str>?
+    debug: 'open ...' from <from pox.lib.util import dpidToStr>?
+    debug: 'open ...' from <from pox.lib.addresses import EthAddr>?
+    debug: 'open ...' from <from pox.lib.addresses import IPAddr>?
+    debug: 'open ...' from <from pox.lib.addresses import parse_cidr>?
+    debug: 'open ...' from <from pox.lib.addresses import EthAddr>?
+    debug: 'open ...' from <import socket>?
+    debug: 'open ...' from <import pox.lib.packet as packetlib>?
+    debug: 'open ...' from <from pox.lib.packet.packet_base import packet_base>?
+    debug: 'open ...' from <import pox.lib.packet as pkg>?
+    debug: 'open ...' from <import time>?
+    debug: 'open ...' from <import SocketServer>?
+    debug: 'open ...' from <import threading>?
+    info: is 'open' accessible on (<blob 'remote_conn'>, [])? no
+    info: is 'open' accessible on (<blob '*'>, [])? yes: <function 'open'>
+    debug: _hit_from_citdl: first part: ['open'] -> (<function 'open'>, (<blob '*'>, []))
+    debug: _hit_from_citdl: resolve ['()'] on <function 'open'> in (<blob '*'>, [])
+    info: _hit_from_call: function with citdl 'file'
+    info: find 'file ...' starting at (<blob '*'>, ['open']):
+    info: is 'file' accessible on (<blob '*'>, ['open'])? no
+    info: is 'file' accessible on (<blob '*'>, [])? yes: <class 'file'>
+    debug: _hit_from_citdl: first part: ['file'] -> (<class 'file'>, (<blob '*'>, []))
+    info: 'file' is <class 'file'> on (<blob '*'>, [])
+    info: 'open()' is <class 'file'> on (<blob '*'>, [])
+    info: attr is <function 'readline'> in <class 'file'>
+    debug: _hit_from_citdl: resolve ['()'] on <function 'readline'> in (<blob '*'>, ['file'])
+    error: evaluating 'tokens' at remote_conn.py#165: no return type info for <function 'readline'>

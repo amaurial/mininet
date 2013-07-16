@@ -1,0 +1,26 @@
+<scope ilk="blob" lang="Perl" name="Perl::Critic::Policy::ControlStructures::ProhibitNegativeExpressionsInUnlessAndUntilConditions">
+      <scope ilk="class" line="8" lineend="137" name="Perl::Critic::Policy::ControlStructures::ProhibitNegativeExpressionsInUnlessAndUntilConditions">
+        <import line="13" module="English" symbol="-no_match_vars" />
+        <import line="14" module="Readonly" symbol="*" />
+        <import line="16" module="Perl::Critic::Utils" symbol="**" />
+        <variable line="20" name="$VERSION" />
+        <scope ilk="function" line="28" lineend="28" name="supported_parameters" signature="supported_parameters()" />
+        <scope ilk="function" line="29" lineend="29" name="default_severity" signature="default_severity()" />
+        <scope ilk="function" line="30" lineend="30" name="default_themes" signature="default_themes()" />
+        <scope ilk="function" line="31" lineend="31" name="applies_to" signature="applies_to()" />
+        <scope ilk="function" line="35" lineend="49" name="violates" signature="violates()" />
+        <scope ilk="function" line="53" lineend="72" name="_get_negative_operators" signature="_get_negative_operators($token)">
+          <variable ilk="argument" name="$token" />
+        </scope>
+        <scope ilk="function" line="76" lineend="101" name="_get_condition_elements" signature="_get_condition_elements($token)">
+          <variable ilk="argument" name="$token" />
+        </scope>
+        <scope ilk="function" line="114" lineend="120" name="_is_negative_operator" signature="_is_negative_operator()" />
+        <scope ilk="function" line="124" lineend="133" name="_violation_for_operator" signature="_violation_for_operator($self, $operator, $control_structure)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$operator" />
+          <variable ilk="argument" name="$control_structure" />
+        </scope>
+      </scope>
+    </scope>
+    

@@ -1,0 +1,126 @@
+<scope ilk="blob" lang="Perl" name="IPC::Cmd">
+      <scope classrefs="Exporter" ilk="class" line="1" lineend="1876" name="IPC::Cmd">
+        <import line="14" module="Exporter" />
+        <import line="29" module="POSIX" />
+        <import line="30" module="IPC::Open3" />
+        <import line="31" module="IO::Select" />
+        <import line="32" module="IO::Handle" />
+        <import line="33" module="FileHandle" />
+        <import line="34" module="Socket" />
+        <import line="35" module="Time::HiRes" />
+        <import line="36" module="Win32" />
+        <import line="44" module="Carp" />
+        <import line="45" module="File::Spec" symbol="*" />
+        <import line="46" module="Params::Check" symbol="check" />
+        <import line="47" module="Text::ParseWords" />
+        <import line="48" module="Module::Load::Conditional" symbol="can_load" />
+        <import line="49" module="Locale::Maketext::Simple" symbol="Style" />
+        <import line="1571" module="File::Spec" symbol="*" />
+        <import line="1572" module="Symbol" symbol="*" />
+        <variable line="15" name="$DEBUG" />
+        <variable line="15" name="$VERBOSE" />
+        <variable line="15" name="$VERSION" />
+        <variable line="15" name="@EXPORT_OK" />
+        <variable line="15" name="@ISA" />
+        <variable line="16" name="$CAN_USE_RUN_FORKED" />
+        <variable line="16" name="$USE_IPC_OPEN3" />
+        <variable line="16" name="$USE_IPC_RUN" />
+        <variable line="16" name="$WARN" />
+        <variable line="17" name="$INSTANCES" />
+        <variable line="875" name="$l" />
+        <scope ilk="function" line="118" lineend="133" name="can_use_ipc_run" signature="can_use_ipc_run($self, $verbose)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$verbose" />
+        </scope>
+        <scope ilk="function" line="144" lineend="159" name="can_use_ipc_open3" signature="can_use_ipc_open3($self, $verbose)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$verbose" />
+        </scope>
+        <scope ilk="function" line="168" lineend="174" name="can_capture_buffer" signature="can_capture_buffer($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope attributes="__exportable__" ilk="function" line="202" lineend="234" name="can_run" signature="can_run($command)">
+          <import line="208" module="VMS::DCLsym" />
+          <import line="213" module="Config" />
+          <import line="214" module="File::Spec" />
+          <import line="215" module="ExtUtils::MakeMaker" />
+          <variable ilk="argument" name="$command" />
+          <import line="208" module="VMS::DCLsym" />
+          <import line="213" module="Config" />
+          <import line="214" module="File::Spec" />
+          <import line="215" module="ExtUtils::MakeMaker" />
+        </scope>
+        <scope ilk="function" line="344" lineend="346" name="can_use_run_forked" signature="can_use_run_forked()" />
+        <scope ilk="function" line="350" lineend="393" name="install_layered_signal" signature="install_layered_signal($s, $handler_code, $called_sig_name, @sig_param)">
+          <variable ilk="argument" name="$s" />
+          <variable ilk="argument" name="$handler_code" />
+          <variable ilk="argument" name="$called_sig_name" />
+          <variable ilk="argument" name="@sig_param" />
+        </scope>
+        <scope ilk="function" line="398" lineend="432" name="kill_gently" signature="kill_gently($pid, $opts)">
+          <variable ilk="argument" name="$pid" />
+          <variable ilk="argument" name="$opts" />
+        </scope>
+        <scope ilk="function" line="434" lineend="602" name="open3_run" signature="open3_run($cmd, $opts)">
+          <variable ilk="argument" name="$cmd" />
+          <variable ilk="argument" name="$opts" />
+        </scope>
+        <scope attributes="__ctor__ __exportable__" ilk="function" line="704" lineend="1045" name="run_forked" signature="run_forked($cmd, $opts)">
+          <variable ilk="argument" name="$cmd" />
+          <variable ilk="argument" name="$opts" />
+        </scope>
+        <scope attributes="__ctor__ __exportable__" ilk="function" line="1047" lineend="1189" name="run" signature="run(%hash, $buf, $buf)">
+          <variable ilk="argument" name="%hash" />
+          <variable ilk="argument" name="$buf" />
+          <variable ilk="argument" name="$buf" />
+        </scope>
+        <scope ilk="function" line="1191" lineend="1305" name="_open3_run" signature="_open3_run($self, $cmd, $_out_handler, $_err_handler, $verbose)">
+          <import line="1205" module="Symbol" symbol="*" />
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$cmd" />
+          <variable ilk="argument" name="$_out_handler" />
+          <variable ilk="argument" name="$_err_handler" />
+          <variable ilk="argument" name="$verbose" />
+          <import line="1205" module="Symbol" symbol="*" />
+        </scope>
+        <scope ilk="function" line="1313" lineend="1417" name="_ipc_run" signature="_ipc_run($self, $cmd, $_out_handler, $_err_handler)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$cmd" />
+          <variable ilk="argument" name="$_out_handler" />
+          <variable ilk="argument" name="$_err_handler" />
+        </scope>
+        <scope ilk="function" line="1420" lineend="1445" name="_system_run" signature="_system_run($self, $cmd, $verbose)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$cmd" />
+          <variable ilk="argument" name="$verbose" />
+        </scope>
+        <scope ilk="function" line="1450" lineend="1471" name="__fix_cmd_whitespace_and_special_chars" signature="__fix_cmd_whitespace_and_special_chars($self, $cmd)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$cmd" />
+        </scope>
+        <scope ilk="function" line="1478" lineend="1507" name="_quote_args_vms" signature="_quote_args_vms(@args)">
+          <variable ilk="argument" name="@args" />
+        </scope>
+        <scope ilk="function" line="1513" lineend="1567" name="_split_like_shell_win32" signature="_split_like_shell_win32()">
+          </scope>
+        <scope ilk="function" line="1581" lineend="1612" name="__dup_fds" signature="__dup_fds($self, @fds)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="@fds" />
+        </scope>
+        <scope ilk="function" line="1615" lineend="1638" name="__reopen_fds" signature="__reopen_fds($self, @fds)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="@fds" />
+        </scope>
+        <scope ilk="function" line="1641" lineend="1650" name="_debug" signature="_debug($self, $msg, $level)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$msg" />
+          <variable ilk="argument" name="$level" />
+        </scope>
+        <scope ilk="function" line="1652" lineend="1679" name="_pp_child_error" signature="_pp_child_error($self, $cmd, $ce)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$cmd" />
+          <variable ilk="argument" name="$ce" />
+        </scope>
+      </scope>
+    </scope>
+    

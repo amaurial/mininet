@@ -1,0 +1,74 @@
+<scope ilk="blob" lang="Perl" name="CGI::Cookie">
+      <scope ilk="class" line="1" lineend="540" name="CGI::Cookie">
+        <import line="21" module="CGI::Util" symbol="rearrange" />
+        <import line="21" module="CGI::Util" symbol="unescape" />
+        <import line="21" module="CGI::Util" symbol="escape" />
+        <import line="34" module="Apache2::RequestUtil" />
+        <import line="35" module="APR::Table" />
+        <import line="38" module="Apache" />
+        <variable line="19" name="$VERSION" />
+        <scope ilk="function" line="45" lineend="49" name="fetch" signature="fetch($class)">
+          <variable ilk="argument" name="$class" />
+        </scope>
+        <scope ilk="function" line="53" lineend="68" name="raw_fetch" signature="raw_fetch($class)">
+          <variable ilk="argument" name="$class" />
+        </scope>
+        <scope ilk="function" line="70" lineend="82" name="get_raw_cookie" signature="get_raw_cookie($r)">
+          <variable ilk="argument" name="$r" />
+        </scope>
+        <scope ilk="function" line="85" lineend="112" name="parse" signature="parse($self, $raw_cookie)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$raw_cookie" />
+        </scope>
+        <scope attributes="__ctor__" ilk="function" line="114" lineend="143" name="new" signature="new($class, @params)">
+          <variable ilk="argument" name="$class" />
+          <variable ilk="argument" name="@params" />
+        </scope>
+        <scope ilk="function" line="145" lineend="163" name="as_string" signature="as_string($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="165" lineend="168" name="compare" signature="compare($self, $value)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$value" />
+        </scope>
+        <scope ilk="function" line="170" lineend="185" name="bake" signature="bake($self, $r)">
+          <import line="181" module="CGI" />
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$r" />
+          <import line="181" module="CGI" />
+        </scope>
+        <scope ilk="function" line="188" lineend="192" name="name" signature="name($self, $name)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$name" />
+        </scope>
+        <scope ilk="function" line="194" lineend="204" name="value" signature="value($self, $value)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$value" />
+        </scope>
+        <scope ilk="function" line="206" lineend="210" name="domain" signature="domain($self, $domain)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$domain" />
+        </scope>
+        <scope ilk="function" line="212" lineend="216" name="secure" signature="secure($self, $secure)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$secure" />
+        </scope>
+        <scope ilk="function" line="218" lineend="222" name="expires" signature="expires($self, $expires)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$expires" />
+        </scope>
+        <scope ilk="function" line="224" lineend="228" name="max_age" signature="max_age($self, $max_age)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$max_age" />
+        </scope>
+        <scope ilk="function" line="230" lineend="234" name="path" signature="path($self, $path)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$path" />
+        </scope>
+        <scope ilk="function" line="237" lineend="241" name="httponly" signature="httponly($self, $httponly)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$httponly" />
+        </scope>
+      </scope>
+    </scope>
+    

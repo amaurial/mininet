@@ -1,0 +1,15 @@
+<scope ilk="blob" lang="Perl" name="metaclass">
+      <scope ilk="class" line="2" lineend="117" name="metaclass">
+        <import line="13" module="Carp" symbol="confess" />
+        <import line="14" module="Scalar::Util" symbol="blessed" />
+        <import line="15" module="Try::Tiny" symbol="*" />
+        <import line="17" module="Class::MOP" symbol="*" />
+        <variable line="4" name="$metaclass::AUTHORITY" />
+        <variable line="7" name="$metaclass::VERSION" />
+        <scope ilk="function" line="19" lineend="50" name="import" signature="import($class, @args)">
+          <variable ilk="argument" name="$class" />
+          <variable ilk="argument" name="@args" />
+        </scope>
+      </scope>
+    </scope>
+    

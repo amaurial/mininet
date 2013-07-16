@@ -1,0 +1,61 @@
+<scope ilk="blob" lang="Perl" name="DBD::Sponge">
+      <scope ilk="class" line="2" lineend="39" name="DBD::Sponge">
+        <import line="4" module="DBI" />
+        <import line="5" module="Carp" />
+        <variable line="7" name="@EXPORT" />
+        <variable line="8" name="$VERSION" />
+        <variable line="18" name="$drh" />
+        <scope ilk="function" line="21" lineend="35" name="driver" signature="driver($class, $attr)">
+          <variable ilk="argument" name="$class" />
+          <variable ilk="argument" name="$attr" />
+        </scope>
+        <scope ilk="function" line="37" lineend="39" name="CLONE" signature="CLONE()" />
+      </scope>
+      <scope ilk="class" line="43" lineend="49" name="DBD::Sponge::dr">
+        <variable line="44" name="$imp_data_size" />
+      </scope>
+      <scope ilk="class" line="49" lineend="159" name="DBD::Sponge::db">
+        <variable line="50" name="$imp_data_size" />
+        <scope ilk="function" line="53" lineend="104" name="prepare" signature="prepare($dbh, $statement, $attribs)">
+          <variable ilk="argument" name="$dbh" />
+          <variable ilk="argument" name="$statement" />
+          <variable ilk="argument" name="$attribs" />
+        </scope>
+        <scope ilk="function" line="106" lineend="128" name="type_info_all" signature="type_info_all($dbh)">
+          <variable ilk="argument" name="$dbh" />
+        </scope>
+        <scope ilk="function" line="130" lineend="138" name="FETCH" signature="FETCH($dbh, $attrib)">
+          <variable ilk="argument" name="$dbh" />
+          <variable ilk="argument" name="$attrib" />
+        </scope>
+        <scope ilk="function" line="140" lineend="149" name="STORE" signature="STORE($dbh, $attrib, $value)">
+          <variable ilk="argument" name="$dbh" />
+          <variable ilk="argument" name="$attrib" />
+          <variable ilk="argument" name="$value" />
+        </scope>
+        <scope ilk="function" line="151" lineend="155" name="sponge_test_installed_method" signature="sponge_test_installed_method($dbh, @args)">
+          <variable ilk="argument" name="$dbh" />
+          <variable ilk="argument" name="@args" />
+        </scope>
+      </scope>
+      <scope ilk="class" line="159" lineend="215" name="DBD::Sponge::st">
+        <variable line="160" name="$imp_data_size" />
+        <variable line="198" name="*fetchrow_arrayref" />
+        <scope ilk="function" line="163" lineend="187" name="execute" signature="execute($sth)">
+          <variable ilk="argument" name="$sth" />
+        </scope>
+        <scope ilk="function" line="189" lineend="197" name="fetch" signature="fetch($sth)">
+          <variable ilk="argument" name="$sth" />
+        </scope>
+        <scope ilk="function" line="200" lineend="205" name="FETCH" signature="FETCH($sth, $attrib)">
+          <variable ilk="argument" name="$sth" />
+          <variable ilk="argument" name="$attrib" />
+        </scope>
+        <scope ilk="function" line="207" lineend="212" name="STORE" signature="STORE($sth, $attrib, $value)">
+          <variable ilk="argument" name="$sth" />
+          <variable ilk="argument" name="$attrib" />
+          <variable ilk="argument" name="$value" />
+        </scope>
+      </scope>
+    </scope>
+    

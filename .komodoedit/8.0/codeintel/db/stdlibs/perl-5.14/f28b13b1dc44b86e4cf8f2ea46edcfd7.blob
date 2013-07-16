@@ -1,0 +1,102 @@
+<scope ilk="blob" lang="Perl" name="Fatal">
+      <scope ilk="class" line="1" lineend="1270" name="Fatal">
+        <import line="4" module="Carp" symbol="*" />
+        <import line="7" module="Tie::RefHash" symbol="*" />
+        <import line="8" module="Config" symbol="*" />
+        <variable line="43" name="$VERSION" />
+        <variable line="45" name="$Debug" />
+        <variable line="52" name="%_EWOULDBLOCK" />
+        <scope ilk="function" line="186" lineend="341" name="import" signature="import(@original_args, @fatalise_these)">
+          <variable ilk="argument" name="@original_args" />
+          <variable ilk="argument" name="@fatalise_these" />
+        </scope>
+        <scope ilk="function" line="354" lineend="392" name="_install_subs" signature="_install_subs($class, $pkg, $subs_to_reinstate)">
+          <variable ilk="argument" name="$class" />
+          <variable ilk="argument" name="$pkg" />
+          <variable ilk="argument" name="$subs_to_reinstate" />
+        </scope>
+        <scope ilk="function" line="394" lineend="453" name="unimport" signature="unimport($class)">
+          <variable ilk="argument" name="$class" />
+        </scope>
+        <scope ilk="function" line="463" lineend="492" name="_expand_tag" signature="_expand_tag($class, $tag)">
+          <variable ilk="argument" name="$class" />
+          <variable ilk="argument" name="$tag" />
+        </scope>
+        <scope ilk="function" line="500" lineend="514" name="fill_protos" signature="fill_protos($proto)">
+          <variable ilk="argument" name="$proto" />
+        </scope>
+        <scope ilk="function" line="519" lineend="529" name="write_invocation" signature="write_invocation($core, $call, $name, $void, @args)">
+          <variable ilk="argument" name="$core" />
+          <variable ilk="argument" name="$call" />
+          <variable ilk="argument" name="$name" />
+          <variable ilk="argument" name="$void" />
+          <variable ilk="argument" name="@args" />
+        </scope>
+        <scope ilk="function" line="535" lineend="575" name="_write_invocation" signature="_write_invocation($class, $core, $call, $name, $void, $lexical, $sub, $sref, @argvs)">
+          <variable ilk="argument" name="$class" />
+          <variable ilk="argument" name="$core" />
+          <variable ilk="argument" name="$call" />
+          <variable ilk="argument" name="$name" />
+          <variable ilk="argument" name="$void" />
+          <variable ilk="argument" name="$lexical" />
+          <variable ilk="argument" name="$sub" />
+          <variable ilk="argument" name="$sref" />
+          <variable ilk="argument" name="@argvs" />
+        </scope>
+        <scope ilk="function" line="581" lineend="592" name="one_invocation" signature="one_invocation($core, $call, $name, $void, @argv)">
+          <variable ilk="argument" name="$core" />
+          <variable ilk="argument" name="$call" />
+          <variable ilk="argument" name="$name" />
+          <variable ilk="argument" name="$void" />
+          <variable ilk="argument" name="@argv" />
+        </scope>
+        <scope ilk="function" line="601" lineend="895" name="_one_invocation" signature="_one_invocation($class, $core, $call, $name, $void, $sub, $back_compat, $sref, @argv)">
+          <import line="676" module="autodie::hints" />
+          <import line="752" module="POSIX" />
+          <import line="769" module="Fcntl" />
+          <variable ilk="argument" name="$class" />
+          <variable ilk="argument" name="$core" />
+          <variable ilk="argument" name="$call" />
+          <variable ilk="argument" name="$name" />
+          <variable ilk="argument" name="$void" />
+          <variable ilk="argument" name="$sub" />
+          <variable ilk="argument" name="$back_compat" />
+          <variable ilk="argument" name="$sref" />
+          <variable ilk="argument" name="@argv" />
+          <import line="676" module="autodie::hints" />
+          <import line="752" module="POSIX" />
+          <import line="769" module="Fcntl" />
+        </scope>
+        <scope ilk="function" line="907" lineend="1210" name="_make_fatal" signature="_make_fatal($class, $sub, $pkg, $void, $lexical, $filename, $insist)">
+          <import line="970" module="autodie::hints" />
+          <import line="1006" module="IPC::System::Simple" />
+          <import line="1007" module="autodie::exception::system" />
+          <variable ilk="argument" name="$class" />
+          <variable ilk="argument" name="$sub" />
+          <variable ilk="argument" name="$pkg" />
+          <variable ilk="argument" name="$void" />
+          <variable ilk="argument" name="$lexical" />
+          <variable ilk="argument" name="$filename" />
+          <variable ilk="argument" name="$insist" />
+          <import line="970" module="autodie::hints" />
+          <import line="1006" module="IPC::System::Simple" />
+          <import line="1007" module="autodie::exception::system" />
+        </scope>
+        <scope ilk="function" line="1216" lineend="1216" name="exception_class" signature="exception_class()" />
+        <scope ilk="function" line="1222" lineend="1257" name="throw" signature="throw($class, @args)">
+          <variable ilk="argument" name="$class" />
+          <variable ilk="argument" name="@args" />
+        </scope>
+        <scope ilk="function" line="1267" lineend="1270" name="_autocroak" signature="_autocroak()" />
+      </scope>
+      <scope ilk="class" line="1272" lineend="1290" name="autodie::Scope::Guard">
+        <scope attributes="__ctor__" ilk="function" line="1278" lineend="1282" name="new" signature="new($class, $handler)">
+          <variable ilk="argument" name="$class" />
+          <variable ilk="argument" name="$handler" />
+        </scope>
+        <scope ilk="function" line="1284" lineend="1288" name="DESTROY" signature="DESTROY($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+      </scope>
+    </scope>
+    

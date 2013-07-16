@@ -1,0 +1,34 @@
+<scope ilk="blob" lang="Perl" name="CPAN::Meta::Prereqs">
+      <scope ilk="class" line="4" lineend="271" name="CPAN::Meta::Prereqs">
+        <import line="11" module="Carp" symbol="confess" />
+        <import line="12" module="Scalar::Util" symbol="blessed" />
+        <import line="13" module="Version::Requirements" symbol="*" />
+        <variable line="6" name="$CPAN::Meta::Prereqs::VERSION" />
+        <scope ilk="function" line="16" lineend="16" name="__legal_phases" signature="__legal_phases()" />
+        <scope ilk="function" line="17" lineend="17" name="__legal_types" signature="__legal_types()" />
+        <scope attributes="__ctor__" ilk="function" line="20" lineend="48" name="new" signature="new($class, $prereq_spec)">
+          <variable ilk="argument" name="$class" />
+          <variable ilk="argument" name="$prereq_spec" />
+        </scope>
+        <scope ilk="function" line="51" lineend="70" name="requirements_for" signature="requirements_for($self, $phase, $type)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$phase" />
+          <variable ilk="argument" name="$type" />
+        </scope>
+        <scope ilk="function" line="73" lineend="100" name="with_merged_prereqs" signature="with_merged_prereqs($self, $other)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$other" />
+        </scope>
+        <scope ilk="function" line="103" lineend="118" name="as_string_hash" signature="as_string_hash($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="121" lineend="121" name="is_finalized" signature="is_finalized()" />
+        <scope ilk="function" line="124" lineend="132" name="finalize" signature="finalize($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="135" lineend="139" name="clone" signature="clone($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+      </scope>
+    </scope>
+    

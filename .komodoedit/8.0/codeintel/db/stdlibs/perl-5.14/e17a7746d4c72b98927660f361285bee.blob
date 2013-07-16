@@ -1,0 +1,290 @@
+<scope ilk="blob" lang="Perl" name="SQL::Parser">
+      <scope ilk="class" line="2" lineend="2955" name="SQL::Parser">
+        <import line="18" module="Carp" symbol="carp" />
+        <import line="18" module="Carp" symbol="croak" />
+        <import line="19" module="Params::Util" symbol="_ARRAY0" />
+        <import line="19" module="Params::Util" symbol="_ARRAY" />
+        <import line="19" module="Params::Util" symbol="_HASH" />
+        <import line="20" module="Scalar::Util" symbol="looks_like_number" />
+        <import line="26" module="SQL::UserDefs" />
+        <variable line="16" name="$VERSION" />
+        <scope attributes="__ctor__" ilk="function" line="33" lineend="52" name="new" signature="new($class, $dialect, $flags)">
+          <variable ilk="argument" name="$class" />
+          <variable ilk="argument" name="$dialect" />
+          <variable ilk="argument" name="$flags" />
+        </scope>
+        <scope ilk="function" line="54" lineend="178" name="parse" signature="parse($self, $sql)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$sql" />
+        </scope>
+        <scope ilk="function" line="180" lineend="185" name="replace_quoted_commas" signature="replace_quoted_commas($self, $id)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$id" />
+        </scope>
+        <scope ilk="function" line="187" lineend="215" name="replace_quoted_ids" signature="replace_quoted_ids($self, $id)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$id" />
+        </scope>
+        <scope ilk="function" line="217" lineend="217" name="structure" signature="structure()" />
+        <scope ilk="function" line="218" lineend="218" name="command" signature="command()">
+          </scope>
+        <scope ilk="function" line="220" lineend="246" name="feature" signature="feature($self, $opt_class, $opt_name, $opt_value)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$opt_class" />
+          <variable ilk="argument" name="$opt_name" />
+          <variable ilk="argument" name="$opt_value" />
+        </scope>
+        <scope ilk="function" line="248" lineend="248" name="errstr" signature="errstr()" />
+        <scope ilk="function" line="250" lineend="277" name="list" signature="list($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="279" lineend="301" name="dialect" signature="dialect($self, $dialect)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$dialect" />
+        </scope>
+        <scope ilk="function" line="303" lineend="315" name="_load_class" signature="_load_class($self, $class)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$class" />
+        </scope>
+        <scope ilk="function" line="317" lineend="326" name="_inject_role" signature="_inject_role($self, $role, $dest)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$role" />
+          <variable ilk="argument" name="$dest" />
+        </scope>
+        <scope ilk="function" line="328" lineend="377" name="create_op_regexen" signature="create_op_regexen($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="386" lineend="429" name="DROP" signature="DROP($self, $stmt)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$stmt" />
+        </scope>
+        <scope ilk="function" line="434" lineend="459" name="DELETE" signature="DELETE($self, $str)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$str" />
+        </scope>
+        <scope ilk="function" line="472" lineend="528" name="SELECT" signature="SELECT($self, $str)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$str" />
+        </scope>
+        <scope ilk="function" line="530" lineend="538" name="GROUPBY_LIST" signature="GROUPBY_LIST($self, $gclause)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$gclause" />
+        </scope>
+        <scope ilk="function" line="540" lineend="563" name="IMPLICIT_JOIN" signature="IMPLICIT_JOIN()">
+          </scope>
+        <scope ilk="function" line="565" lineend="681" name="EXPLICIT_JOIN" signature="EXPLICIT_JOIN($self, $remainder)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$remainder" />
+        </scope>
+        <scope ilk="function" line="683" lineend="692" name="SELECT_CLAUSE" signature="SELECT_CLAUSE($self, $str)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$str" />
+        </scope>
+        <scope ilk="function" line="694" lineend="706" name="FROM_CLAUSE" signature="FROM_CLAUSE($self, $str)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$str" />
+        </scope>
+        <scope ilk="function" line="708" lineend="744" name="INSERT" signature="INSERT($self, $str)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$str" />
+        </scope>
+        <scope ilk="function" line="752" lineend="779" name="UPDATE" signature="UPDATE($self, $str)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$str" />
+        </scope>
+        <scope ilk="function" line="784" lineend="805" name="LOAD" signature="LOAD($self, $str)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$str" />
+        </scope>
+        <scope ilk="function" line="807" lineend="834" name="CREATE_RAM_TABLE" signature="CREATE_RAM_TABLE($self, $stmt)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$stmt" />
+        </scope>
+        <scope ilk="function" line="863" lineend="870" name="CALL" signature="CALL($self, $stmt)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$stmt" />
+        </scope>
+        <scope ilk="function" line="872" lineend="878" name="CREATE_TYPE" signature="CREATE_TYPE($self, $type)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$type" />
+        </scope>
+        <scope ilk="function" line="880" lineend="886" name="DROP_TYPE" signature="DROP_TYPE($self, $type)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$type" />
+        </scope>
+        <scope ilk="function" line="888" lineend="894" name="CREATE_KEYWORD" signature="CREATE_KEYWORD($self, $type)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$type" />
+        </scope>
+        <scope ilk="function" line="896" lineend="902" name="DROP_KEYWORD" signature="DROP_KEYWORD($self, $type)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$type" />
+        </scope>
+        <scope ilk="function" line="933" lineend="940" name="DROP_OPERATOR" signature="DROP_OPERATOR($self, $type)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$type" />
+        </scope>
+        <scope ilk="function" line="942" lineend="947" name="replace_quoted" signature="replace_quoted($self, $str)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$str" />
+        </scope>
+        <scope ilk="function" line="952" lineend="1178" name="CREATE" signature="CREATE($self, $stmt)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$stmt" />
+        </scope>
+        <scope ilk="function" line="1184" lineend="1200" name="SET_CLAUSE_LIST" signature="SET_CLAUSE_LIST($self, $set_string)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$set_string" />
+        </scope>
+        <scope ilk="function" line="1202" lineend="1211" name="SET_QUANTIFIER" signature="SET_QUANTIFIER($self, $str)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$str" />
+        </scope>
+        <scope ilk="function" line="1221" lineend="1264" name="transform_concat" signature="transform_concat($obj, $colstr)">
+          <variable ilk="argument" name="$obj" />
+          <variable ilk="argument" name="$colstr" />
+        </scope>
+        <scope ilk="function" line="1276" lineend="1318" name="extract_column_list" signature="extract_column_list($self, $colstr)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$colstr" />
+        </scope>
+        <scope ilk="function" line="1320" lineend="1401" name="SELECT_LIST" signature="SELECT_LIST($self, $col_str)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$col_str" />
+        </scope>
+        <scope ilk="function" line="1403" lineend="1451" name="SET_FUNCTION_SPEC" signature="SET_FUNCTION_SPEC($self, $col_str)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$col_str" />
+        </scope>
+        <scope ilk="function" line="1453" lineend="1477" name="LIMIT_CLAUSE" signature="LIMIT_CLAUSE($self, $limit_clause)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$limit_clause" />
+        </scope>
+        <scope ilk="function" line="1479" lineend="1513" name="SORT_SPEC_LIST" signature="SORT_SPEC_LIST($self, $order_clause)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$order_clause" />
+        </scope>
+        <scope ilk="function" line="1515" lineend="1550" name="SEARCH_CONDITION" signature="SEARCH_CONDITION($self, $str)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$str" />
+        </scope>
+        <scope ilk="function" line="1556" lineend="1584" name="repl_btwin" signature="repl_btwin($self, $str)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$str" />
+        </scope>
+        <scope ilk="function" line="1593" lineend="1647" name="parens_search" signature="parens_search($self, $str, $predicates)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$str" />
+          <variable ilk="argument" name="$predicates" />
+        </scope>
+        <scope ilk="function" line="1655" lineend="1737" name="non_parens_search" signature="non_parens_search($self, $str, $predicates)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$str" />
+          <variable ilk="argument" name="$predicates" />
+        </scope>
+        <scope ilk="function" line="1741" lineend="1763" name="group_ands" signature="group_ands($str, $and_preds)">
+          <variable ilk="argument" name="$str" />
+          <variable ilk="argument" name="$and_preds" />
+        </scope>
+        <scope ilk="function" line="1771" lineend="1834" name="nongroup_string" signature="nongroup_string($self, $str)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$str" />
+        </scope>
+        <scope ilk="function" line="1839" lineend="1869" name="nongroup_numeric" signature="nongroup_numeric()">
+          </scope>
+        <scope ilk="function" line="1875" lineend="1889" name="LITERAL_LIST" signature="LITERAL_LIST($self, $str)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$str" />
+        </scope>
+        <scope ilk="function" line="1894" lineend="1919" name="LITERAL" signature="LITERAL($self, $str)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$str" />
+        </scope>
+        <scope ilk="function" line="1923" lineend="2006" name="PREDICATE" signature="PREDICATE($self, $str)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$str" />
+        </scope>
+        <scope ilk="function" line="2008" lineend="2051" name="undo_string_funcs" signature="undo_string_funcs($self, $str)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$str" />
+        </scope>
+        <scope ilk="function" line="2053" lineend="2063" name="undo_math_funcs" signature="undo_math_funcs()">
+          </scope>
+        <scope ilk="function" line="2069" lineend="2100" name="extract_func_args" signature="extract_func_args($self, $value)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$value" />
+        </scope>
+        <scope ilk="function" line="2105" lineend="2404" name="ROW_VALUE" signature="ROW_VALUE($self, $str)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$str" />
+        </scope>
+        <scope ilk="function" line="2409" lineend="2428" name="ROW_VALUE_LIST" signature="ROW_VALUE_LIST($self, $row_str)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$row_str" />
+        </scope>
+        <scope ilk="function" line="2434" lineend="2505" name="COLUMN_NAME" signature="COLUMN_NAME($self, $str)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$str" />
+        </scope>
+        <scope ilk="function" line="2510" lineend="2529" name="COLUMN_NAME_LIST" signature="COLUMN_NAME_LIST($self, $col_str)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$col_str" />
+        </scope>
+        <scope ilk="function" line="2534" lineend="2619" name="TABLE_NAME_LIST" signature="TABLE_NAME_LIST($self, $table_name_str)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$table_name_str" />
+        </scope>
+        <scope ilk="function" line="2621" lineend="2628" name="is_func" signature="is_func($self, $name)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$name" />
+        </scope>
+        <scope ilk="function" line="2633" lineend="2654" name="TABLE_NAME" signature="TABLE_NAME($self, $table_name)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$table_name" />
+        </scope>
+        <scope ilk="function" line="2656" lineend="2694" name="_verify_tablename" signature="_verify_tablename($self, $table_name, $location)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$table_name" />
+          <variable ilk="argument" name="$location" />
+        </scope>
+        <scope ilk="function" line="2701" lineend="2739" name="IDENTIFIER" signature="IDENTIFIER($self, $id)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$id" />
+        </scope>
+        <scope ilk="function" line="2744" lineend="2791" name="order_joins" signature="order_joins($self, $links)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$links" />
+        </scope>
+        <scope ilk="function" line="2796" lineend="2816" name="set_feature_flags" signature="set_feature_flags($self, $select, $create)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$select" />
+          <variable ilk="argument" name="$create" />
+        </scope>
+        <scope ilk="function" line="2913" lineend="2919" name="trim" signature="trim()">
+          </scope>
+        <scope ilk="function" line="2921" lineend="2931" name="do_err" signature="do_err($self, $err, $errstr)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$err" />
+          <variable ilk="argument" name="$errstr" />
+        </scope>
+        <scope ilk="function" line="2938" lineend="2942" name="transform_syntax" signature="transform_syntax($self, $str)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$str" />
+        </scope>
+        <scope ilk="function" line="2944" lineend="2953" name="DESTROY" signature="DESTROY()">
+          </scope>
+        <scope ilk="function" line="2818" lineend="2955" name="clean_sql" signature="clean_sql($self, $sql)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$sql" />
+        </scope>
+        <scope ilk="function" line="904" lineend="2955" name="CREATE_OPERATOR" signature="CREATE_OPERATOR($self, $stmt)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$stmt" />
+        </scope>
+        <scope ilk="function" line="836" lineend="2955" name="CREATE_FUNCTION" signature="CREATE_FUNCTION($self, $stmt)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$stmt" />
+        </scope>
+      </scope>
+    </scope>
+    

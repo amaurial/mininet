@@ -1,0 +1,27 @@
+<scope ilk="blob" lang="Perl" name="Encode::GSM0338">
+      <scope ilk="class" line="4" lineend="235" name="Encode::GSM0338">
+        <import line="8" module="Carp" symbol="*" />
+        <import line="13" module="Encode" symbol="**" />
+        <import line="21" module="utf8" symbol="*" />
+        <variable line="10" name="$VERSION" />
+        <variable line="22" name="%UNI2GSM" />
+        <variable line="163" name="%GSM2UNI" />
+        <variable line="164" name="$ESC" />
+        <variable line="165" name="$ATMARK" />
+        <variable line="166" name="$FBCHAR" />
+        <variable line="167" name="$NBSP" />
+        <scope ilk="function" line="18" lineend="18" name="needs_lines" signature="needs_lines()" />
+        <scope ilk="function" line="19" lineend="19" name="perlio_ok" signature="perlio_ok()" />
+        <scope ilk="function" line="171" lineend="212" name="decode" signature="decode($obj, $bytes, $chk)">
+          <variable ilk="argument" name="$obj" />
+          <variable ilk="argument" name="$bytes" />
+          <variable ilk="argument" name="$chk" />
+        </scope>
+        <scope ilk="function" line="216" lineend="233" name="encode" signature="encode($obj, $str, $chk)">
+          <variable ilk="argument" name="$obj" />
+          <variable ilk="argument" name="$str" />
+          <variable ilk="argument" name="$chk" />
+        </scope>
+      </scope>
+    </scope>
+    

@@ -1,0 +1,324 @@
+<scope doc="Debugger basics&#xA;" ilk="blob" lang="Python" name="bdb">
+      <scope classrefs="object" doc="Generic Python debugger base class.&#xA;This class takes care of details of the trace facility; a derived class should implement user interaction. The standard debugger class (pdb.Pdb) is an example." ilk="class" line="13" lineend="432" name="Bdb">
+        <scope ilk="function" line="320" lineend="325" name="get_file_breaks" returns="list" signature="get_file_breaks(self, filename)">
+          <variable citdl="Bdb" ilk="argument" name="self" />
+          <variable citdl="canonic()" ilk="argument" name="filename" />
+        </scope>
+        <scope ilk="function" line="268" lineend="274" name="clear_bpbynumber" returns="str()" signature="clear_bpbynumber(self, arg)">
+          <variable citdl="Bdb" ilk="argument" name="self" />
+          <variable citdl="self.get_bpbynumber()" line="270" name="bp" />
+          <variable ilk="argument" name="arg" />
+        </scope>
+        <scope ilk="function" line="286" lineend="292" name="clear_all_breaks" returns="str" signature="clear_all_breaks(self)">
+          <variable citdl="Bdb" ilk="argument" name="self" />
+        </scope>
+        <scope ilk="function" line="81" lineend="85" name="dispatch_return" returns="Bdb.trace_dispatch" signature="dispatch_return(self, frame, arg)">
+          <variable citdl="Bdb" ilk="argument" name="self" />
+          <variable ilk="argument" name="frame" />
+          <variable ilk="argument" name="arg" />
+        </scope>
+        <scope doc="This method is called if an exception occurs, but only if we&#xA;are to stop at or just below this level." ilk="function" line="163" lineend="166" name="user_exception" signature="user_exception(self, frame, exc_info)">
+          <variable ilk="argument" name="exc_info" />
+          <variable citdl="Bdb" ilk="argument" name="self" />
+          <variable ilk="argument" name="frame" />
+        </scope>
+        <scope doc="Start debugging from `frame`." ilk="function" line="199" lineend="212" name="set_trace" signature="set_trace(self, frame=None)">
+          <variable citdl="Bdb" ilk="argument" name="self" />
+          <variable citdl="frame.f_back" ilk="argument" name="frame" />
+        </scope>
+        <scope ilk="function" line="309" lineend="312" name="get_break" returns="bool" signature="get_break(self, filename, lineno)">
+          <variable citdl="Bdb" ilk="argument" name="self" />
+          <variable ilk="argument" name="lineno" />
+          <variable citdl="canonic()" ilk="argument" name="filename" />
+        </scope>
+        <scope doc="Stop when the line with the line no greater than the current&#xA;one is reached or when returning from current frame" ilk="function" line="179" lineend="185" name="set_until" signature="set_until(self, frame, lineno=None)">
+          <variable citdl="Bdb" ilk="argument" name="self" />
+          <variable ilk="argument" name="frame" />
+          <variable citdl="frame.f_lineno" ilk="argument" name="lineno" />
+        </scope>
+        <scope doc="Stop on the next line in or below the given frame." ilk="function" line="191" lineend="193" name="set_next" signature="set_next(self, frame)">
+          <variable citdl="Bdb" ilk="argument" name="self" />
+          <variable ilk="argument" name="frame" />
+        </scope>
+        <scope ilk="function" line="225" lineend="229" name="set_quit" signature="set_quit(self)">
+          <variable citdl="Bdb" ilk="argument" name="self" />
+        </scope>
+        <scope ilk="function" line="294" lineend="307" name="get_bpbynumber" signature="get_bpbynumber(self, arg)">
+          <variable citdl="Bdb" ilk="argument" name="self" />
+          <variable line="302" name="bp" />
+          <variable citdl="int()" line="298" name="number" />
+          <variable ilk="argument" name="arg" />
+        </scope>
+        <scope ilk="function" line="214" lineend="223" name="set_continue" signature="set_continue(self)">
+          <variable citdl="Bdb" ilk="argument" name="self" />
+          <variable citdl="frame.f_back" line="220" name="frame" />
+        </scope>
+        <scope ilk="function" line="256" lineend="266" name="clear_break" returns="tuple" signature="clear_break(self, filename, lineno)">
+          <variable citdl="Bdb" ilk="argument" name="self" />
+          <variable ilk="argument" name="lineno" />
+          <variable citdl="canonic()" ilk="argument" name="filename" />
+        </scope>
+        <scope ilk="function" line="21" lineend="24" name="__init__" signature="__init__(self, skip=None)">
+          <variable ilk="argument" name="skip" />
+          <variable citdl="Bdb" ilk="argument" name="self" />
+        </scope>
+        <scope ilk="function" line="68" lineend="79" name="dispatch_call" returns="Bdb.trace_dispatch" signature="dispatch_call(self, frame, arg)">
+          <variable citdl="Bdb" ilk="argument" name="self" />
+          <variable ilk="argument" name="frame" />
+          <variable ilk="argument" name="arg" />
+        </scope>
+        <scope ilk="function" line="250" lineend="254" name="_prune_breaks" signature="_prune_breaks(self, filename, lineno)">
+          <variable citdl="Bdb" ilk="argument" name="self" />
+          <variable ilk="argument" name="lineno" />
+          <variable ilk="argument" name="filename" />
+        </scope>
+        <scope ilk="function" line="87" lineend="91" name="dispatch_exception" returns="Bdb.trace_dispatch" signature="dispatch_exception(self, frame, arg)">
+          <variable citdl="Bdb" ilk="argument" name="self" />
+          <variable ilk="argument" name="frame" />
+          <variable ilk="argument" name="arg" />
+        </scope>
+        <scope ilk="function" line="144" lineend="145" name="break_anywhere" returns="bool" signature="break_anywhere(self, frame)">
+          <variable citdl="Bdb" ilk="argument" name="self" />
+          <variable ilk="argument" name="frame" />
+        </scope>
+        <scope ilk="function" line="381" lineend="397" name="run" signature="run(self, cmd, globals=None, locals=None)">
+          <variable citdl="dict" ilk="argument" name="globals" />
+          <variable citdl="Bdb" ilk="argument" name="self" />
+          <variable citdl="compile()" ilk="argument" name="cmd" />
+          <variable citdl="dict" ilk="argument" name="locals" />
+        </scope>
+        <scope ilk="function" line="415" lineend="417" name="runctx" signature="runctx(self, cmd, globals, locals)">
+          <variable ilk="argument" name="globals" />
+          <variable citdl="Bdb" ilk="argument" name="self" />
+          <variable ilk="argument" name="cmd" />
+          <variable ilk="argument" name="locals" />
+        </scope>
+        <scope ilk="function" line="351" lineend="375" name="format_stack_entry" returns="tuple" signature="format_stack_entry(self, frame_lineno, lprefix=&apos;: &apos;)">
+          <variable line="369" name="rv" />
+          <variable citdl="str" ilk="argument" name="lprefix" />
+          <variable citdl="Bdb" ilk="argument" name="self" />
+          <variable line="361" name="args" />
+          <variable citdl="canonic()" line="354" name="filename" />
+          <variable citdl="str" line="355" name="s" />
+          <variable ilk="argument" name="frame_lineno" />
+          <variable citdl="linecache.getline()" line="372" name="line" />
+        </scope>
+        <scope ilk="function" line="103" lineend="117" name="stop_here" returns="bool" signature="stop_here(self, frame)">
+          <variable citdl="Bdb" ilk="argument" name="self" />
+          <variable citdl="frame.f_back" ilk="argument" name="frame" />
+        </scope>
+        <scope ilk="function" line="421" lineend="432" name="runcall" returns="func()" signature="runcall(self, func, *args, **kwds)">
+          <variable citdl="func()" line="424" name="res" />
+          <variable citdl="Bdb" ilk="argument" name="self" />
+          <variable attributes="varargs" ilk="argument" name="args" />
+          <variable attributes="kwargs" ilk="argument" name="kwds" />
+          <variable ilk="argument" name="func" />
+        </scope>
+        <scope ilk="function" line="168" lineend="174" name="_set_stopinfo" signature="_set_stopinfo(self, stopframe, returnframe, stoplineno=0)">
+          <variable citdl="int" ilk="argument" name="stoplineno" />
+          <variable citdl="Bdb" ilk="argument" name="self" />
+          <variable ilk="argument" name="returnframe" />
+          <variable ilk="argument" name="stopframe" />
+        </scope>
+        <scope ilk="function" line="238" lineend="248" name="set_break" returns="tuple" signature="set_break(self, filename, lineno, temporary=False, cond=None, funcname=None)">
+          <variable citdl="False" ilk="argument" name="temporary" />
+          <variable citdl="Bdb" ilk="argument" name="self" />
+          <variable citdl="self.breaks.setdefault()" line="245" name="list" />
+          <variable ilk="argument" name="funcname" />
+          <variable ilk="argument" name="cond" />
+          <variable ilk="argument" name="lineno" />
+          <variable citdl="Breakpoint()" line="248" name="bp" />
+          <variable citdl="linecache.getline()" line="242" name="line" />
+          <variable citdl="canonic()" ilk="argument" name="filename" />
+        </scope>
+        <scope ilk="function" line="62" lineend="66" name="dispatch_line" returns="Bdb.trace_dispatch" signature="dispatch_line(self, frame)">
+          <variable citdl="Bdb" ilk="argument" name="self" />
+          <variable ilk="argument" name="frame" />
+        </scope>
+        <scope ilk="function" line="141" lineend="142" name="do_clear" signature="do_clear(self, arg)">
+          <variable citdl="Bdb" ilk="argument" name="self" />
+          <variable ilk="argument" name="arg" />
+        </scope>
+        <scope ilk="function" line="314" lineend="318" name="get_breaks" returns="bool" signature="get_breaks(self, filename, lineno)">
+          <variable citdl="Bdb" ilk="argument" name="self" />
+          <variable ilk="argument" name="lineno" />
+          <variable citdl="canonic()" ilk="argument" name="filename" />
+        </scope>
+        <scope ilk="function" line="119" lineend="139" name="break_here" returns="bool" signature="break_here(self, frame)">
+          <variable line="132" name="flag" />
+          <variable line="132" name="bp" />
+          <variable citdl="frame.f_lineno" line="123" name="lineno" />
+          <variable citdl="Bdb" ilk="argument" name="self" />
+          <variable ilk="argument" name="frame" />
+          <variable citdl="canonic()" line="120" name="filename" />
+        </scope>
+        <scope ilk="function" line="36" lineend="40" name="reset" signature="reset(self)">
+          <variable citdl="Bdb" ilk="argument" name="self" />
+        </scope>
+        <scope doc="Stop after one line of code." ilk="function" line="187" lineend="189" name="set_step" signature="set_step(self)">
+          <variable citdl="Bdb" ilk="argument" name="self" />
+        </scope>
+        <scope ilk="function" line="97" lineend="101" name="is_skipped_module" returns="bool" signature="is_skipped_module(self, module_name)">
+          <variable ilk="argument" name="module_name" />
+          <variable citdl="Bdb" ilk="argument" name="self" />
+        </scope>
+        <scope doc="Stop when returning from the given frame." ilk="function" line="195" lineend="197" name="set_return" signature="set_return(self, frame)">
+          <variable citdl="Bdb" ilk="argument" name="self" />
+          <variable ilk="argument" name="frame" />
+        </scope>
+        <scope ilk="function" line="399" lineend="413" name="runeval" returns="eval()" signature="runeval(self, expr, globals=None, locals=None)">
+          <variable ilk="argument" name="expr" />
+          <variable citdl="Bdb" ilk="argument" name="self" />
+          <variable citdl="dict" ilk="argument" name="globals" />
+          <variable citdl="dict" ilk="argument" name="locals" />
+        </scope>
+        <scope ilk="function" line="276" lineend="284" name="clear_all_file_breaks" returns="str" signature="clear_all_file_breaks(self, filename)">
+          <variable citdl="Bdb" ilk="argument" name="self" />
+          <variable line="281" name="blist" />
+          <variable citdl="canonic()" ilk="argument" name="filename" />
+        </scope>
+        <scope ilk="function" line="327" lineend="328" name="get_all_breaks" returns="dict" signature="get_all_breaks(self)">
+          <variable citdl="Bdb" ilk="argument" name="self" />
+        </scope>
+        <scope ilk="function" line="26" lineend="34" name="canonic" returns="os.path.abspath()" signature="canonic(self, filename)">
+          <variable citdl="Bdb" ilk="argument" name="self" />
+          <variable citdl="self.fncache.get()" line="29" name="canonic" />
+          <variable ilk="argument" name="filename" />
+        </scope>
+        <scope ilk="function" line="333" lineend="349" name="get_stack" returns="tuple" signature="get_stack(self, f, t)">
+          <variable citdl="max()" line="343" name="i" />
+          <variable citdl="Bdb" ilk="argument" name="self" />
+          <variable citdl="t.tb_next" ilk="argument" name="t" />
+          <variable citdl="list" line="334" name="stack" />
+          <variable citdl="f.f_back" ilk="argument" name="f" />
+        </scope>
+        <scope doc="This method is called when a return trap is set here." ilk="function" line="159" lineend="161" name="user_return" signature="user_return(self, frame, return_value)">
+          <variable citdl="Bdb" ilk="argument" name="self" />
+          <variable ilk="argument" name="return_value" />
+          <variable ilk="argument" name="frame" />
+        </scope>
+        <scope ilk="function" line="42" lineend="60" name="trace_dispatch" returns="Bdb.trace_dispatch" signature="trace_dispatch(self, frame, event, arg)">
+          <variable citdl="Bdb" ilk="argument" name="self" />
+          <variable ilk="argument" name="event" />
+          <variable ilk="argument" name="frame" />
+          <variable ilk="argument" name="arg" />
+        </scope>
+        <scope doc="This method is called when we stop or break at this line." ilk="function" line="155" lineend="157" name="user_line" signature="user_line(self, frame)">
+          <variable citdl="Bdb" ilk="argument" name="self" />
+          <variable ilk="argument" name="frame" />
+        </scope>
+        <scope doc="This method is called when there is the remote possibility&#xA;that we ever need to stop in this function." ilk="function" line="150" lineend="153" name="user_call" signature="user_call(self, frame, argument_list)">
+          <variable citdl="Bdb" ilk="argument" name="self" />
+          <variable ilk="argument" name="frame" />
+          <variable ilk="argument" name="argument_list" />
+        </scope>
+        <variable attributes="__instancevar__" citdl="int" line="174" name="stoplineno" />
+        <variable attributes="__instancevar__" citdl="frame.f_back" line="39" name="botframe" />
+        <variable attributes="__instancevar__" line="22" name="skip" />
+        <variable attributes="__instancevar__" citdl="dict" line="23" name="breaks" />
+        <variable attributes="__instancevar__" citdl="bp.number" line="134" name="currentbp" />
+        <variable attributes="__instancevar__" citdl="dict" line="24" name="fncache" />
+        <variable attributes="__instancevar__" line="170" name="returnframe" />
+        <variable attributes="__instancevar__" citdl="True" line="171" name="quitting" />
+        <variable attributes="__instancevar__" citdl="frame.f_back" line="169" name="stopframe" />
+      </scope>
+      <scope classrefs="Exception" doc="Exception to give up completely.&#xA;" ilk="class" line="9" name="BdbQuit" />
+      <scope classrefs="object" doc="Breakpoint class.&#xA;Implements temporary breakpoints, ignore counts, disabling and (re)-enabling, and conditionals.  Breakpoints are indexed by number through bpbynumber and by the file,line tuple using bplist.  The former points to a single instance of class Breakpoint.  The latter points to a list of such instances since there may be more than one breakpoint per line." ilk="class" line="439" lineend="525" name="Breakpoint">
+        <scope ilk="function" line="490" lineend="491" name="enable" signature="enable(self)">
+          <variable citdl="Breakpoint" ilk="argument" name="self" />
+        </scope>
+        <scope ilk="function" line="524" lineend="525" name="__str__" returns="tuple" signature="__str__(self)">
+          <variable citdl="Breakpoint" ilk="argument" name="self" />
+        </scope>
+        <scope ilk="function" line="493" lineend="494" name="disable" signature="disable(self)">
+          <variable citdl="Breakpoint" ilk="argument" name="self" />
+        </scope>
+        <scope ilk="function" line="496" lineend="499" name="bpprint" signature="bpprint(self, out=None)">
+          <variable citdl="Breakpoint" ilk="argument" name="self" />
+          <variable citdl="sys.stdout" ilk="argument" name="out" />
+        </scope>
+        <scope ilk="function" line="501" lineend="522" name="bpformat" returns="tuple" signature="bpformat(self)">
+          <variable citdl="str" line="503" name="disp" />
+          <variable citdl="str" line="518" name="ss" />
+          <variable citdl="Breakpoint" ilk="argument" name="self" />
+          <variable citdl="str" line="510" name="ret" />
+        </scope>
+        <scope ilk="function" line="462" lineend="480" name="__init__" signature="__init__(self, file, line, temporary=False, cond=None, funcname=None)">
+          <variable citdl="False" ilk="argument" name="temporary" />
+          <variable ilk="argument" name="file" />
+          <variable ilk="argument" name="cond" />
+          <variable citdl="Breakpoint" ilk="argument" name="self" />
+          <variable ilk="argument" name="line" />
+          <variable ilk="argument" name="funcname" />
+        </scope>
+        <scope ilk="function" line="482" lineend="488" name="deleteMe" signature="deleteMe(self)">
+          <variable citdl="tuple" line="483" name="index" />
+          <variable citdl="Breakpoint" ilk="argument" name="self" />
+        </scope>
+        <variable attributes="__instancevar__" citdl="int" line="472" name="hits" />
+        <variable attributes="__instancevar__" citdl="False" line="468" name="temporary" />
+        <variable attributes="__instancevar__" line="465" name="func_first_executable_line" />
+        <variable attributes="__instancevar__" citdl="False" line="470" name="enabled" />
+        <variable attributes="__instancevar__" citdl="int" line="473" name="number" />
+        <variable attributes="__instancevar__" line="463" name="funcname" />
+        <variable attributes="__instancevar__" citdl="int" line="471" name="ignore" />
+        <variable citdl="list" line="458" name="bpbynumber" />
+        <variable attributes="__instancevar__" line="466" name="file" />
+        <variable attributes="__instancevar__" line="469" name="cond" />
+        <variable attributes="__instancevar__" line="467" name="line" />
+        <variable citdl="int" line="456" name="next" />
+        <variable citdl="dict" line="457" name="bplist" />
+      </scope>
+      <scope classrefs="Bdb" doc="&#xA;" ilk="class" line="605" lineend="621" name="Tdb">
+        <scope ilk="function" line="619" lineend="621" name="user_exception" signature="user_exception(self, frame, exc_stuff)">
+          <variable citdl="Tdb" ilk="argument" name="self" />
+          <variable ilk="argument" name="exc_stuff" />
+          <variable ilk="argument" name="frame" />
+        </scope>
+        <scope ilk="function" line="606" lineend="609" name="user_call" signature="user_call(self, frame, args)">
+          <variable citdl="Tdb" ilk="argument" name="self" />
+          <variable ilk="argument" name="args" />
+          <variable ilk="argument" name="frame" />
+          <variable citdl="frame.f_code.co_name" line="607" name="name" />
+        </scope>
+        <scope ilk="function" line="610" lineend="616" name="user_line" signature="user_line(self, frame)">
+          <variable citdl="frame.f_code.co_name" line="612" name="name" />
+          <variable citdl="Tdb" ilk="argument" name="self" />
+          <variable citdl="linecache.getline()" line="615" name="line" />
+          <variable citdl="self.canonic()" line="614" name="fn" />
+          <variable ilk="argument" name="frame" />
+        </scope>
+        <scope ilk="function" line="617" lineend="618" name="user_return" signature="user_return(self, frame, retval)">
+          <variable citdl="Tdb" ilk="argument" name="self" />
+          <variable ilk="argument" name="retval" />
+          <variable ilk="argument" name="frame" />
+        </scope>
+      </scope>
+      <variable citdl="list" line="7" name="__all__" />
+      <scope ilk="function" line="628" lineend="630" name="bar" returns="int" signature="bar(a)">
+        <variable ilk="argument" name="a" />
+      </scope>
+      <scope doc="Check whether we should break here because of `b.funcname`." ilk="function" line="529" lineend="553" name="checkfuncname" returns="bool" signature="checkfuncname(b, frame)">
+        <variable ilk="argument" name="frame" />
+        <variable ilk="argument" name="b" />
+      </scope>
+      <scope doc="Determine which breakpoint for this file:line is to be acted&#xA;upon." ilk="function" line="557" lineend="600" name="effective" returns="tuple" signature="effective(file, line, frame)">
+        <variable ilk="argument" name="line" />
+        <variable citdl="eval()" line="586" name="val" />
+        <variable ilk="argument" name="frame" />
+        <variable ilk="argument" name="file" />
+        <variable line="565" name="possibles" />
+      </scope>
+      <import module="fnmatch" />
+      <scope ilk="function" line="623" lineend="626" name="foo" signature="foo(n)">
+        <variable citdl="bar()" line="625" name="x" />
+        <variable ilk="argument" name="n" />
+      </scope>
+      <import module="os" />
+      <scope ilk="function" line="435" lineend="436" name="set_trace" signature="set_trace()" />
+      <import module="sys" />
+      <scope ilk="function" line="632" lineend="634" name="test" signature="test()">
+        <variable citdl="Tdb" line="633" name="t" />
+      </scope>
+    </scope>
+    

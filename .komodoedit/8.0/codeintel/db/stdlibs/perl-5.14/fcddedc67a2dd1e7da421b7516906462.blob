@@ -1,0 +1,111 @@
+<scope ilk="blob" lang="Perl" name="HTTP::Daemon">
+      <scope classrefs="IO::Socket::INET" ilk="class" line="1" lineend="70" name="HTTP::Daemon">
+        <import line="8" module="IO::Socket" symbol="AF_INET" />
+        <import line="8" module="IO::Socket" symbol="INADDR_ANY" />
+        <import line="8" module="IO::Socket" symbol="inet_ntoa" />
+        <variable line="4" name="$DEBUG" />
+        <variable line="4" name="$PROTO" />
+        <variable line="4" name="$VERSION" />
+        <variable line="4" name="@ISA" />
+        <scope ilk="function" line="14" lineend="20" name="new" signature="new($class, %args)">
+          <variable ilk="argument" name="$class" />
+          <variable ilk="argument" name="%args" />
+        </scope>
+        <scope ilk="function" line="23" lineend="35" name="accept" signature="accept($self, $pkg)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$pkg" />
+        </scope>
+        <scope ilk="function" line="38" lineend="54" name="url" signature="url($self)">
+          <import line="44" module="Sys::Hostname" />
+          <variable ilk="argument" name="$self" />
+          <import line="44" module="Sys::Hostname" />
+        </scope>
+        <scope ilk="function" line="57" lineend="59" name="_default_port" signature="_default_port()" />
+        <scope ilk="function" line="62" lineend="64" name="_default_scheme" signature="_default_scheme()" />
+        <scope ilk="function" line="67" lineend="70" name="product_tokens" signature="product_tokens()" />
+      </scope>
+      <scope classrefs="IO::Socket::INET" ilk="class" line="74" lineend="612" name="HTTP::Daemon::ClientConn">
+        <import line="77" module="IO::Socket" />
+        <import line="81" module="HTTP::Request" />
+        <import line="82" module="HTTP::Response" />
+        <import line="83" module="HTTP::Status" symbol="*" />
+        <import line="84" module="HTTP::Date" symbol="time2str" />
+        <import line="85" module="LWP::MediaTypes" symbol="guess_media_type" />
+        <import line="86" module="Carp" />
+        <variable line="76" name="$DEBUG" />
+        <variable line="76" name="@ISA" />
+        <variable line="79" name="*DEBUG" />
+        <scope ilk="function" line="93" lineend="317" name="get_request" signature="get_request($self, $only_headers)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$only_headers" />
+        </scope>
+        <scope ilk="function" line="320" lineend="337" name="_need_more" signature="_need_more($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="340" lineend="348" name="read_buffer" signature="read_buffer($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="351" lineend="359" name="reason" signature="reason($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="362" lineend="366" name="proto_ge" signature="proto_ge($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="369" lineend="374" name="_http_version" signature="_http_version()" />
+        <scope ilk="function" line="377" lineend="381" name="antique_client" signature="antique_client($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="384" lineend="388" name="force_last_request" signature="force_last_request($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="390" lineend="394" name="head_request" signature="head_request($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="397" lineend="405" name="send_status_line" signature="send_status_line($self, $status, $message, $proto)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$status" />
+          <variable ilk="argument" name="$message" />
+          <variable ilk="argument" name="$proto" />
+        </scope>
+        <scope ilk="function" line="408" lineend="412" name="send_crlf" signature="send_crlf($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="415" lineend="423" name="send_basic_header" signature="send_basic_header($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="426" lineend="434" name="send_header" signature="send_header($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="437" lineend="496" name="send_response" signature="send_response($self, $res)">
+          <variable ilk="argument" name="$self" />
+          <variable citdl="HTTP::Response" ilk="argument" name="$res" />
+        </scope>
+        <scope ilk="function" line="499" lineend="516" name="send_redirect" signature="send_redirect($self, $loc, $status, $content)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$loc" />
+          <variable ilk="argument" name="$status" />
+          <variable ilk="argument" name="$content" />
+        </scope>
+        <scope ilk="function" line="519" lineend="539" name="send_error" signature="send_error($self, $status, $error)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$status" />
+          <variable ilk="argument" name="$error" />
+        </scope>
+        <scope ilk="function" line="542" lineend="570" name="send_file_response" signature="send_file_response($self, $file)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$file" />
+        </scope>
+        <scope ilk="function" line="573" lineend="578" name="send_dir" signature="send_dir($self, $dir)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$dir" />
+        </scope>
+        <scope ilk="function" line="581" lineend="602" name="send_file" signature="send_file($self, $file)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$file" />
+        </scope>
+        <scope ilk="function" line="605" lineend="609" name="daemon" signature="daemon($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+      </scope>
+    </scope>
+    

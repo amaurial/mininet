@@ -1,0 +1,18 @@
+<scope ilk="blob" lang="Perl" name="Perl::Critic::Policy::ValuesAndExpressions::ProhibitLongChainsOfMethodCalls">
+      <scope ilk="class" line="8" lineend="121" name="Perl::Critic::Policy::ValuesAndExpressions::ProhibitLongChainsOfMethodCalls">
+        <import line="13" module="Readonly" symbol="*" />
+        <import line="15" module="Perl::Critic::Utils" symbol="**" />
+        <import line="16" module="Perl::Critic::Utils::PPI" symbol="is_ppi_expression_or_generic_statement" />
+        <variable line="20" name="$VERSION" />
+        <scope ilk="function" line="29" lineend="39" name="supported_parameters" signature="supported_parameters()" />
+        <scope ilk="function" line="41" lineend="41" name="default_severity" signature="default_severity()" />
+        <scope ilk="function" line="42" lineend="42" name="default_themes" signature="default_themes()" />
+        <scope ilk="function" line="43" lineend="43" name="applies_to" signature="applies_to()" />
+        <scope ilk="function" line="47" lineend="51" name="_max_chain_length" signature="_max_chain_length($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="55" lineend="118" name="violates" signature="violates()">
+          </scope>
+      </scope>
+    </scope>
+    

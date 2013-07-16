@@ -1,0 +1,192 @@
+<scope ilk="blob" lang="Perl" name="HTML::Template">
+      <scope ilk="class" line="1" lineend="3019" name="HTML::Template">
+        <import line="913" module="Carp" symbol="*" />
+        <import line="914" module="File::Spec" symbol="*" />
+        <import line="915" module="Digest::MD5" symbol="md5_hex" />
+        <import line="916" module="Scalar::Util" symbol="tainted" />
+        <variable line="3" name="$HTML::Template::VERSION" />
+        <variable line="1260" name="%CACHE" />
+        <variable line="2633" name="%URLESCAPE_MAP" />
+        <scope attributes="__ctor__" ilk="function" line="942" lineend="1136" name="new" signature="new($pkg)">
+          <import line="1074" module="GTop" />
+          <import line="1089" module="Storable" />
+          <import line="1096" module="IPC::SharedCache" />
+          <variable ilk="argument" name="$pkg" />
+          <import line="1074" module="GTop" />
+          <import line="1089" module="Storable" />
+          <import line="1096" module="IPC::SharedCache" />
+        </scope>
+        <scope ilk="function" line="1138" lineend="1147" name="_load_supplied_options" signature="_load_supplied_options($argsref, $options)">
+          <variable ilk="argument" name="$argsref" />
+          <variable ilk="argument" name="$options" />
+        </scope>
+        <scope attributes="__ctor__" ilk="function" line="1150" lineend="1178" name="_new_from_loop" signature="_new_from_loop($pkg)">
+          <variable ilk="argument" name="$pkg" />
+        </scope>
+        <scope ilk="function" line="1181" lineend="1183" name="new_file" signature="new_file($pkg)">
+          <variable ilk="argument" name="$pkg" />
+        </scope>
+        <scope ilk="function" line="1184" lineend="1186" name="new_filehandle" signature="new_filehandle($pkg)">
+          <variable ilk="argument" name="$pkg" />
+        </scope>
+        <scope ilk="function" line="1187" lineend="1189" name="new_array_ref" signature="new_array_ref($pkg)">
+          <variable ilk="argument" name="$pkg" />
+        </scope>
+        <scope ilk="function" line="1190" lineend="1192" name="new_scalar_ref" signature="new_scalar_ref($pkg)">
+          <variable ilk="argument" name="$pkg" />
+        </scope>
+        <scope ilk="function" line="1196" lineend="1254" name="_init" signature="_init($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="1261" lineend="1315" name="_fetch_from_cache" signature="_fetch_from_cache($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="1317" lineend="1331" name="_commit_to_cache" signature="_commit_to_cache($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="1336" lineend="1349" name="_cache_key" signature="_cache_key($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="1352" lineend="1370" name="_get_cache_filename" signature="_get_cache_filename($self, $filepath)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$filepath" />
+        </scope>
+        <scope ilk="function" line="1373" lineend="1440" name="_fetch_from_file_cache" signature="_fetch_from_file_cache($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="1442" lineend="1480" name="_commit_to_file_cache" signature="_commit_to_file_cache($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="1483" lineend="1506" name="_fetch_from_shared_cache" signature="_fetch_from_shared_cache($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="1508" lineend="1542" name="_validate_shared_cache" signature="_validate_shared_cache($self, $filename, $record)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$filename" />
+          <variable ilk="argument" name="$record" />
+        </scope>
+        <scope ilk="function" line="1544" lineend="1561" name="_load_shared_cache" signature="_load_shared_cache($self, $filename)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$filename" />
+        </scope>
+        <scope ilk="function" line="1565" lineend="1605" name="_find_file" signature="_find_file($self, $filename, $extra_path)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$filename" />
+          <variable ilk="argument" name="$extra_path" />
+        </scope>
+        <scope ilk="function" line="1608" lineend="1619" name="_mtime" signature="_mtime($self, $filepath)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$filepath" />
+        </scope>
+        <scope ilk="function" line="1623" lineend="1644" name="_normalize_options" signature="_normalize_options($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="1647" lineend="1700" name="_init_template" signature="_init_template($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="1703" lineend="1750" name="_call_filters" signature="_call_filters($self, $template_ref)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$template_ref" />
+        </scope>
+        <scope ilk="function" line="1757" lineend="2381" name="_parse" signature="_parse($self)">
+          <variable ilk="argument" name="$self" />
+          <variable line="1766" name="%pmap" />
+          <variable line="1766" name="%top_pmap" />
+          <variable line="1766" name="@ifstack" />
+          <variable line="1766" name="@pstack" />
+          <variable line="1766" name="@ucstack" />
+          <variable line="1807" name="$fcounter" />
+          <variable line="1807" name="$fmax" />
+          <variable line="1807" name="$fname" />
+        </scope>
+        <scope ilk="function" line="2385" lineend="2397" name="_globalize_vars" signature="_globalize_vars($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="2400" lineend="2410" name="_unglobalize_vars" signature="_unglobalize_vars($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="2495" lineend="2573" name="param" signature="param($self, $first)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$first" />
+        </scope>
+        <scope ilk="function" line="2583" lineend="2593" name="clear_params" signature="clear_params($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="2597" lineend="2604" name="associateCGI" signature="associateCGI($self, $cgi)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$cgi" />
+        </scope>
+        <scope ilk="function" line="2634" lineend="2868" name="output" signature="output($self, %args)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="%args" />
+          <variable line="2688" name="$line" />
+          <variable line="2688" name="@parse_stack" />
+        </scope>
+        <scope ilk="function" line="2949" lineend="2998" name="query" signature="query($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="3002" lineend="3019" name="_find_param" signature="_find_param($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+      </scope>
+      <scope ilk="class" line="921" lineend="3078" name="HTML::Template::LOOP">
+        <variable line="3065" name="$odd" />
+        <scope ilk="function" line="922" lineend="922" name="TEMPLATE_HASH" signature="TEMPLATE_HASH()" />
+        <scope ilk="function" line="923" lineend="923" name="PARAM_SET" signature="PARAM_SET()" />
+        <scope attributes="__ctor__" ilk="function" line="3041" lineend="3043" name="new" signature="new()" />
+        <scope ilk="function" line="3045" lineend="3060" name="output" signature="output($self, $index, $loop_context_vars)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$index" />
+          <variable ilk="argument" name="$loop_context_vars" />
+        </scope>
+      </scope>
+      <scope ilk="class" line="925" lineend="3090" name="HTML::Template::COND">
+        <scope ilk="function" line="926" lineend="926" name="VARIABLE" signature="VARIABLE()" />
+        <scope ilk="function" line="927" lineend="927" name="VARIABLE_TYPE" signature="VARIABLE_TYPE()" />
+        <scope ilk="function" line="928" lineend="928" name="VARIABLE_TYPE_VAR" signature="VARIABLE_TYPE_VAR()" />
+        <scope ilk="function" line="929" lineend="929" name="VARIABLE_TYPE_LOOP" signature="VARIABLE_TYPE_LOOP()" />
+        <scope ilk="function" line="930" lineend="930" name="JUMP_IF_TRUE" signature="JUMP_IF_TRUE()" />
+        <scope ilk="function" line="931" lineend="931" name="JUMP_ADDRESS" signature="JUMP_ADDRESS()" />
+        <scope ilk="function" line="932" lineend="932" name="WHICH" signature="WHICH()" />
+        <scope ilk="function" line="933" lineend="933" name="UNCONDITIONAL_JUMP" signature="UNCONDITIONAL_JUMP()" />
+        <scope ilk="function" line="934" lineend="934" name="IS_ELSE" signature="IS_ELSE()" />
+        <scope ilk="function" line="935" lineend="935" name="WHICH_IF" signature="WHICH_IF()" />
+        <scope ilk="function" line="936" lineend="936" name="WHICH_UNLESS" signature="WHICH_UNLESS()" />
+        <scope attributes="__ctor__" ilk="function" line="3082" lineend="3090" name="new" signature="new($pkg, $var)">
+          <variable ilk="argument" name="$pkg" />
+          <variable ilk="argument" name="$var" />
+        </scope>
+      </scope>
+      <scope ilk="class" line="3025" lineend="3030" name="HTML::Template::VAR">
+        <scope attributes="__ctor__" ilk="function" line="3027" lineend="3030" name="new" signature="new()">
+          </scope>
+      </scope>
+      <scope ilk="class" line="3032" lineend="3037" name="HTML::Template::DEFAULT">
+        <scope attributes="__ctor__" ilk="function" line="3034" lineend="3037" name="new" signature="new()">
+          </scope>
+      </scope>
+      <scope ilk="class" line="3092" lineend="3098" name="HTML::Template::NOOP">
+        <scope attributes="__ctor__" ilk="function" line="3093" lineend="3098" name="new" signature="new()">
+          </scope>
+      </scope>
+      <scope ilk="class" line="3100" lineend="3106" name="HTML::Template::ESCAPE">
+        <scope attributes="__ctor__" ilk="function" line="3101" lineend="3106" name="new" signature="new()">
+          </scope>
+      </scope>
+      <scope ilk="class" line="3108" lineend="3114" name="HTML::Template::JSESCAPE">
+        <scope attributes="__ctor__" ilk="function" line="3109" lineend="3114" name="new" signature="new()">
+          </scope>
+      </scope>
+      <scope ilk="class" line="3116" lineend="3122" name="HTML::Template::URLESCAPE">
+        <scope attributes="__ctor__" ilk="function" line="3117" lineend="3122" name="new" signature="new()">
+          </scope>
+      </scope>
+      <scope ilk="class" line="3125" lineend="3135" name="HTML::Template::PRINTSCALAR">
+        <scope attributes="__ctor__" ilk="function" line="3128" lineend="3128" name="TIESCALAR" signature="TIESCALAR()" />
+        <scope ilk="function" line="3129" lineend="3129" name="FETCH" signature="FETCH()" />
+        <scope ilk="function" line="3130" lineend="3134" name="STORE" signature="STORE($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+      </scope>
+    </scope>
+    

@@ -1,0 +1,49 @@
+<scope ilk="blob" lang="Perl" name="Perl::Critic::Annotation">
+      <scope ilk="class" line="8" lineend="275" name="Perl::Critic::Annotation">
+        <import line="14" module="Carp" symbol="confess" />
+        <import line="15" module="English" symbol="-no_match_vars" />
+        <import line="17" module="Perl::Critic::PolicyFactory" symbol="*" />
+        <import line="18" module="Perl::Critic::Utils" symbol="**" />
+        <import line="19" module="Readonly" symbol="*" />
+        <variable line="23" name="$VERSION" />
+        <scope ilk="function" line="30" lineend="41" name="create_annotations" signature="create_annotations($class, $doc)">
+          <variable ilk="argument" name="$class" />
+          <variable ilk="argument" name="$doc" />
+        </scope>
+        <scope attributes="__ctor__" ilk="function" line="45" lineend="50" name="new" signature="new($class, @args)">
+          <variable ilk="argument" name="$class" />
+          <variable ilk="argument" name="@args" />
+        </scope>
+        <scope ilk="function" line="55" lineend="130" name="_init" signature="_init($self, %args)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="%args" />
+        </scope>
+        <scope ilk="function" line="134" lineend="137" name="element" signature="element($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="141" lineend="144" name="effective_range" signature="effective_range($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="148" lineend="151" name="disabled_policies" signature="disabled_policies($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="155" lineend="160" name="disables_policy" signature="disables_policy($self, $policy_name)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$policy_name" />
+        </scope>
+        <scope ilk="function" line="164" lineend="167" name="disables_all_policies" signature="disables_all_policies($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="171" lineend="177" name="disables_line" signature="disables_line($self, $line_number)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$line_number" />
+        </scope>
+        <scope ilk="function" line="182" lineend="219" name="_is_single_line_annotation_on_simple_statement" signature="_is_single_line_annotation_on_simple_statement($annotation_element)">
+          <variable ilk="argument" name="$annotation_element" />
+        </scope>
+        <scope ilk="function" line="223" lineend="271" name="_parse_annotation" signature="_parse_annotation($annotation_element)">
+          <variable ilk="argument" name="$annotation_element" />
+        </scope>
+      </scope>
+    </scope>
+    

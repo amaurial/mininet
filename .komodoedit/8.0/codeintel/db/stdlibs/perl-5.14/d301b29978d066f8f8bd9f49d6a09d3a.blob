@@ -1,0 +1,159 @@
+<scope ilk="blob" lang="Perl" name="IO::Compress::Base::Common">
+      <scope classrefs="Exporter" ilk="class" line="1" lineend="956" name="IO::Compress::Base::Common">
+        <import line="7" module="Carp" symbol="*" />
+        <import line="8" module="Scalar::Util" symbol="blessed" />
+        <import line="8" module="Scalar::Util" symbol="readonly" />
+        <import line="9" module="File::GlobMapper" symbol="*" />
+        <import line="11" module="Exporter" />
+        <import line="503" module="Carp" symbol="*" />
+        <variable line="12" name="$HAS_ENCODE" />
+        <variable line="12" name="$VERSION" />
+        <variable line="12" name="%EXPORT_TAGS" />
+        <variable line="12" name="@EXPORT" />
+        <variable line="12" name="@ISA" />
+        <variable line="78" name="$needBinmode" />
+        <scope ilk="function" line="46" lineend="59" name="hasEncode" signature="hasEncode()">
+          <import line="51" module="Encode" />
+          <import line="51" module="Encode" />
+        </scope>
+        <scope attributes="__exported__" ilk="function" line="61" lineend="76" name="getEncoding" signature="getEncoding($obj, $class, $want_encoding)">
+          <variable ilk="argument" name="$obj" />
+          <variable ilk="argument" name="$class" />
+          <variable ilk="argument" name="$want_encoding" />
+        </scope>
+        <scope attributes="__exported__" ilk="function" line="83" lineend="89" name="setBinModeInput" signature="setBinModeInput($handle)">
+          <variable ilk="argument" name="$handle" />
+        </scope>
+        <scope attributes="__exported__" ilk="function" line="91" lineend="97" name="setBinModeOutput" signature="setBinModeOutput($handle)">
+          <variable ilk="argument" name="$handle" />
+        </scope>
+        <scope attributes="__exported__" ilk="function" line="99" lineend="107" name="isaFilehandle" signature="isaFilehandle()">
+          <import line="101" module="utf8" symbol="*" />
+          <import line="101" module="utf8" symbol="*" />
+        </scope>
+        <scope attributes="__exported__" ilk="function" line="109" lineend="114" name="isaFilename" signature="isaFilename()" />
+        <scope attributes="__exported__" ilk="function" line="116" lineend="119" name="isaFileGlobString" signature="isaFileGlobString()" />
+        <scope attributes="__exported__" ilk="function" line="121" lineend="128" name="cleanFileGlobString" signature="cleanFileGlobString($string)">
+          <variable ilk="argument" name="$string" />
+        </scope>
+        <scope attributes="__exported__" ilk="function" line="136" lineend="149" name="whatIsInput" signature="whatIsInput()">
+          </scope>
+        <scope attributes="__exported__" ilk="function" line="151" lineend="163" name="whatIsOutput" signature="whatIsOutput()">
+          </scope>
+        <scope ilk="function" line="165" lineend="188" name="whatIs" signature="whatIs()">
+          </scope>
+        <scope attributes="__exported__" ilk="function" line="190" lineend="193" name="oneTarget" signature="oneTarget()" />
+        <scope attributes="__ctor__" ilk="function" line="195" lineend="321" name="IO::Compress::Base::Validator::new" signature="IO::Compress::Base::Validator::new($class, $Class, $error_ref, $reportClass)">
+          <variable ilk="argument" name="$class" />
+          <variable ilk="argument" name="$Class" />
+          <variable ilk="argument" name="$error_ref" />
+          <variable ilk="argument" name="$reportClass" />
+        </scope>
+        <scope ilk="function" line="323" lineend="329" name="IO::Compress::Base::Validator::saveErrorString" signature="IO::Compress::Base::Validator::saveErrorString($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="331" lineend="336" name="IO::Compress::Base::Validator::croakError" signature="IO::Compress::Base::Validator::croakError($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="340" lineend="368" name="IO::Compress::Base::Validator::validateInputFilenames" signature="IO::Compress::Base::Validator::validateInputFilenames($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="370" lineend="399" name="IO::Compress::Base::Validator::validateInputArray" signature="IO::Compress::Base::Validator::validateInputArray($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope attributes="__ctor__ __exported__" ilk="function" line="426" lineend="440" name="createSelfTiedObject" signature="createSelfTiedObject($class, $error_ref)">
+          <variable ilk="argument" name="$class" />
+          <variable ilk="argument" name="$error_ref" />
+        </scope>
+        <scope ilk="function" line="482" lineend="497" name="ParseParameters" signature="ParseParameters($level)">
+          <variable ilk="argument" name="$level" />
+        </scope>
+        <scope attributes="__ctor__" ilk="function" line="505" lineend="515" name="IO::Compress::Base::Parameters::new" signature="IO::Compress::Base::Parameters::new($class)">
+          <variable ilk="argument" name="$class" />
+        </scope>
+        <scope ilk="function" line="517" lineend="525" name="IO::Compress::Base::Parameters::setError" signature="IO::Compress::Base::Parameters::setError($self, $error)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$error" />
+        </scope>
+        <scope ilk="function" line="533" lineend="663" name="IO::Compress::Base::Parameters::parse" signature="IO::Compress::Base::Parameters::parse($self, $default, $count)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$default" />
+          <variable ilk="argument" name="$count" />
+        </scope>
+        <scope ilk="function" line="665" lineend="752" name="IO::Compress::Base::Parameters::_checkType" signature="IO::Compress::Base::Parameters::_checkType($self, $key, $value, $type, $validate, $output)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$key" />
+          <variable ilk="argument" name="$value" />
+          <variable ilk="argument" name="$type" />
+          <variable ilk="argument" name="$validate" />
+          <variable ilk="argument" name="$output" />
+        </scope>
+        <scope ilk="function" line="756" lineend="762" name="IO::Compress::Base::Parameters::parsed" signature="IO::Compress::Base::Parameters::parsed($self, $name)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$name" />
+        </scope>
+        <scope ilk="function" line="764" lineend="777" name="IO::Compress::Base::Parameters::value" signature="IO::Compress::Base::Parameters::value($self, $name)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$name" />
+        </scope>
+        <scope attributes="__ctor__" ilk="function" line="800" lineend="814" name="IO::Compress::Base::Parameters::clone" signature="IO::Compress::Base::Parameters::clone($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope attributes="__ctor__" ilk="function" line="823" lineend="839" name="new" signature="new($class)">
+          <variable ilk="argument" name="$class" />
+        </scope>
+        <scope attributes="__ctor__" ilk="function" line="841" lineend="847" name="newUnpack_V64" signature="newUnpack_V64($string)">
+          <variable ilk="argument" name="$string" />
+        </scope>
+        <scope attributes="__ctor__" ilk="function" line="849" lineend="855" name="newUnpack_V32" signature="newUnpack_V32($string)">
+          <variable ilk="argument" name="$string" />
+        </scope>
+        <scope ilk="function" line="857" lineend="861" name="reset" signature="reset($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope attributes="__ctor__" ilk="function" line="863" lineend="867" name="clone" signature="clone($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="869" lineend="873" name="getHigh" signature="getHigh($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="875" lineend="879" name="getLow" signature="getLow($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="881" lineend="885" name="get32bit" signature="get32bit($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="887" lineend="893" name="get64bit" signature="get64bit($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="917" lineend="924" name="equal" signature="equal($self, $other)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$other" />
+        </scope>
+        <scope ilk="function" line="926" lineend="930" name="is64bit" signature="is64bit($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="932" lineend="937" name="getPacked_V64" signature="getPacked_V64($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="939" lineend="944" name="getPacked_V32" signature="getPacked_V32($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="946" lineend="951" name="pack_V64" signature="pack_V64($low)">
+          <variable ilk="argument" name="$low" />
+        </scope>
+        <scope ilk="function" line="895" lineend="956" name="add" signature="add($self, $value)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$value" />
+          <variable line="905" name="$available" />
+        </scope>
+        <scope ilk="function" line="779" lineend="956" name="IO::Compress::Base::Parameters::valueOrDefault" signature="IO::Compress::Base::Parameters::valueOrDefault($self, $name, $default, $self, $name)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$name" />
+          <variable ilk="argument" name="$default" />
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$name" />
+        </scope>
+      </scope>
+    </scope>
+    

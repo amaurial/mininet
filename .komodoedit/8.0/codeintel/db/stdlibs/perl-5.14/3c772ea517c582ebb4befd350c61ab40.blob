@@ -1,0 +1,36 @@
+<scope ilk="blob" lang="Perl" name="Encode::Guess">
+      <scope ilk="class" line="1" lineend="164" name="Encode::Guess">
+        <import line="4" module="Encode" symbol="**" />
+        <variable line="5" name="$VERSION" />
+        <variable line="9" name="%DEF_SUSPECTS" />
+        <variable line="19" name="@EXPORT" />
+        <variable line="20" name="$NoUTFAutoGuess" />
+        <variable line="21" name="$UTF8_BOM" />
+        <scope ilk="function" line="8" lineend="8" name="DEBUG" signature="DEBUG()" />
+        <scope ilk="function" line="16" lineend="16" name="needs_lines" signature="needs_lines()" />
+        <scope ilk="function" line="17" lineend="17" name="perlio_ok" signature="perlio_ok()" />
+        <scope ilk="function" line="23" lineend="30" name="import" signature="import()">
+          </scope>
+        <scope ilk="function" line="32" lineend="37" name="set_suspects" signature="set_suspects($class)">
+          <variable ilk="argument" name="$class" />
+        </scope>
+        <scope ilk="function" line="39" lineend="47" name="add_suspects" signature="add_suspects($class)">
+          <variable ilk="argument" name="$class" />
+        </scope>
+        <scope ilk="function" line="49" lineend="59" name="decode" signature="decode($obj, $octet, $chk)">
+          <import line="53" module="Carp" />
+          <variable ilk="argument" name="$obj" />
+          <variable ilk="argument" name="$octet" />
+          <variable ilk="argument" name="$chk" />
+          <import line="53" module="Carp" />
+        </scope>
+        <scope ilk="function" line="61" lineend="63" name="guess_encoding" signature="guess_encoding()" />
+        <scope ilk="function" line="65" lineend="162" name="guess" signature="guess($class, $octet)">
+          <import line="80" module="Encode::Unicode" symbol="*" />
+          <variable ilk="argument" name="$class" />
+          <variable ilk="argument" name="$octet" />
+          <import line="80" module="Encode::Unicode" symbol="*" />
+        </scope>
+      </scope>
+    </scope>
+    

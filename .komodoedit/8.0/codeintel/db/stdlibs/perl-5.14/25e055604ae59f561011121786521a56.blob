@@ -1,0 +1,79 @@
+<scope ilk="blob" lang="Perl" name="Devel::NYTProf::Reader">
+      <scope ilk="class" line="12" lineend="595" name="Devel::NYTProf::Reader">
+        <import line="18" module="Carp" symbol="*" />
+        <import line="19" module="Config" symbol="*" />
+        <import line="21" module="List::Util" symbol="sum" />
+        <import line="21" module="List::Util" symbol="max" />
+        <import line="22" module="Data::Dumper" symbol="*" />
+        <import line="24" module="Devel::NYTProf::Data" symbol="*" />
+        <import line="26" module="Devel::NYTProf::Util" symbol="fmt_float" />
+        <import line="27" module="Devel::NYTProf::Util" symbol="fmt_time" />
+        <import line="28" module="Devel::NYTProf::Util" symbol="html_safe_filename" />
+        <import line="29" module="Devel::NYTProf::Util" symbol="calculate_median_absolute_deviation" />
+        <import line="30" module="Devel::NYTProf::Util" symbol="trace_level" />
+        <variable line="14" name="$VERSION" />
+        <variable line="41" name="$FLOAT_FORMAT" />
+        <scope attributes="__ctor__" ilk="function" line="45" lineend="89" name="new" signature="new($class, $file, $opts)">
+          <variable ilk="argument" name="$class" />
+          <variable ilk="argument" name="$file" />
+          <variable ilk="argument" name="$opts" />
+        </scope>
+        <scope ilk="function" line="94" lineend="105" name="set_param" signature="set_param($self, $param, $value)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$param" />
+          <variable ilk="argument" name="$value" />
+        </scope>
+        <scope ilk="function" line="108" lineend="116" name="get_param" signature="get_param($self, $param, $code_args)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$param" />
+          <variable ilk="argument" name="$code_args" />
+        </scope>
+        <scope ilk="function" line="119" lineend="125" name="file_has_been_modified" signature="file_has_been_modified($self, $file)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$file" />
+        </scope>
+        <scope ilk="function" line="128" lineend="134" name="_output_additional" signature="_output_additional($self, $fname, $content)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$fname" />
+          <variable ilk="argument" name="$content" />
+        </scope>
+        <scope ilk="function" line="137" lineend="144" name="output_dir" signature="output_dir($self, $dir)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$dir" />
+        </scope>
+        <scope ilk="function" line="147" lineend="164" name="report" signature="report($self, $opts)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$opts" />
+        </scope>
+        <scope ilk="function" line="166" lineend="170" name="current_level" signature="current_level($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="172" lineend="194" name="fname_for_fileinfo" signature="fname_for_fileinfo($self, $fi, $level)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$fi" />
+          <variable ilk="argument" name="$level" />
+        </scope>
+        <scope ilk="function" line="198" lineend="549" name="_generate_report" signature="_generate_report($self, $profile, $LEVEL, %opts)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$profile" />
+          <variable ilk="argument" name="$LEVEL" />
+          <variable ilk="argument" name="%opts" />
+        </scope>
+        <scope ilk="function" line="552" lineend="565" name="url_for_file" signature="url_for_file($self, $file, $anchor, $level)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$file" />
+          <variable ilk="argument" name="$anchor" />
+          <variable ilk="argument" name="$level" />
+        </scope>
+        <scope ilk="function" line="567" lineend="571" name="href_for_file" signature="href_for_file()">
+          </scope>
+        <scope ilk="function" line="574" lineend="586" name="url_for_sub" signature="url_for_sub($self, $sub, %opts)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$sub" />
+          <variable ilk="argument" name="%opts" />
+        </scope>
+        <scope ilk="function" line="588" lineend="592" name="href_for_sub" signature="href_for_sub()">
+          </scope>
+      </scope>
+    </scope>
+    

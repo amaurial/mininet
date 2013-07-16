@@ -1,0 +1,357 @@
+<scope ilk="blob" lang="Perl" name="Class::MOP::Class">
+      <scope ilk="class" line="2" lineend="2218" name="Class::MOP::Class">
+        <import line="13" module="Class::MOP::Instance" symbol="*" />
+        <import line="14" module="Class::MOP::Method::Wrapped" symbol="*" />
+        <import line="15" module="Class::MOP::Method::Accessor" symbol="*" />
+        <import line="16" module="Class::MOP::Method::Constructor" symbol="*" />
+        <import line="17" module="Class::MOP::MiniTrait" symbol="*" />
+        <import line="19" module="Carp" symbol="confess" />
+        <import line="20" module="Scalar::Util" symbol="blessed" />
+        <import line="21" module="Sub::Name" symbol="subname" />
+        <import line="22" module="Devel::GlobalDestruction" symbol="in_global_destruction" />
+        <import line="23" module="Try::Tiny" symbol="*" />
+        <import line="24" module="List::MoreUtils" symbol="all" />
+        <variable line="4" name="$Class::MOP::Class::AUTHORITY" />
+        <variable line="7" name="$Class::MOP::Class::VERSION" />
+        <scope ilk="function" line="32" lineend="49" name="initialize" signature="initialize($class, %options)">
+          <variable ilk="argument" name="$class" />
+          <variable ilk="argument" name="%options" />
+        </scope>
+        <scope ilk="function" line="51" lineend="68" name="reinitialize" signature="reinitialize($class, @args)">
+          <variable ilk="argument" name="$class" />
+          <variable ilk="argument" name="@args" />
+        </scope>
+        <scope ilk="function" line="76" lineend="121" name="_construct_class_instance" signature="_construct_class_instance($class)">
+          <variable ilk="argument" name="$class" />
+        </scope>
+        <scope ilk="function" line="123" lineend="131" name="_real_ref_name" signature="_real_ref_name($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope attributes="__ctor__" ilk="function" line="133" lineend="184" name="_new" signature="_new($class)">
+          <variable ilk="argument" name="$class" />
+        </scope>
+        <scope ilk="function" line="197" lineend="197" name="_base_metaclasses" signature="_base_metaclasses()" />
+        <scope ilk="function" line="200" lineend="230" name="_check_metaclass_compatibility" signature="_check_metaclass_compatibility($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="232" lineend="246" name="_check_class_metaclass_compatibility" signature="_check_class_metaclass_compatibility($self, $superclass_name)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$superclass_name" />
+        </scope>
+        <scope ilk="function" line="248" lineend="258" name="_class_metaclass_is_compatible" signature="_class_metaclass_is_compatible($self, $superclass_name)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$superclass_name" />
+        </scope>
+        <scope ilk="function" line="260" lineend="276" name="_check_single_metaclass_compatibility" signature="_check_single_metaclass_compatibility($self, $metaclass_type, $superclass_name)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$metaclass_type" />
+          <variable ilk="argument" name="$superclass_name" />
+        </scope>
+        <scope ilk="function" line="278" lineend="296" name="_single_metaclass_is_compatible" signature="_single_metaclass_is_compatible($self, $metaclass_type, $superclass_name)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$metaclass_type" />
+          <variable ilk="argument" name="$superclass_name" />
+        </scope>
+        <scope ilk="function" line="298" lineend="325" name="_fix_metaclass_incompatibility" signature="_fix_metaclass_incompatibility($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="327" lineend="339" name="_can_fix_metaclass_incompatibility" signature="_can_fix_metaclass_incompatibility($self, $super_meta)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$super_meta" />
+        </scope>
+        <scope ilk="function" line="341" lineend="346" name="_class_metaclass_can_be_made_compatible" signature="_class_metaclass_can_be_made_compatible($self, $super_meta)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$super_meta" />
+        </scope>
+        <scope ilk="function" line="348" lineend="366" name="_single_metaclass_can_be_made_compatible" signature="_single_metaclass_can_be_made_compatible($self, $super_meta, $metaclass_type)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$super_meta" />
+          <variable ilk="argument" name="$metaclass_type" />
+        </scope>
+        <scope ilk="function" line="368" lineend="382" name="_fix_class_metaclass_incompatibility" signature="_fix_class_metaclass_incompatibility($self, $super_meta)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$super_meta" />
+        </scope>
+        <scope ilk="function" line="384" lineend="399" name="_fix_single_metaclass_incompatibility" signature="_fix_single_metaclass_incompatibility($self, $metaclass_type, $super_meta)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$metaclass_type" />
+          <variable ilk="argument" name="$super_meta" />
+        </scope>
+        <scope ilk="function" line="401" lineend="407" name="_restore_metaobjects_from" signature="_restore_metaobjects_from($self, $old_meta)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$old_meta" />
+        </scope>
+        <scope ilk="function" line="409" lineend="415" name="_remove_generated_metaobjects" signature="_remove_generated_metaobjects($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="433" lineend="437" name="is_anon_class" signature="is_anon_class($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="439" lineend="444" name="create_anon_class" signature="create_anon_class($class, %options)">
+          <variable ilk="argument" name="$class" />
+          <variable ilk="argument" name="%options" />
+        </scope>
+        <scope ilk="function" line="452" lineend="476" name="DESTROY" signature="DESTROY($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="482" lineend="540" name="create" signature="create($class, @args)">
+          <variable ilk="argument" name="$class" />
+          <variable ilk="argument" name="@args" />
+        </scope>
+        <scope ilk="function" line="544" lineend="555" name="new_object" signature="new_object($class)">
+          <variable ilk="argument" name="$class" />
+        </scope>
+        <scope ilk="function" line="557" lineend="587" name="_construct_instance" signature="_construct_instance($class)">
+          <variable ilk="argument" name="$class" />
+        </scope>
+        <scope ilk="function" line="589" lineend="603" name="_inline_new_object" signature="_inline_new_object($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="605" lineend="612" name="_inline_fallback_constructor" signature="_inline_fallback_constructor($self, $class)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$class" />
+        </scope>
+        <scope ilk="function" line="614" lineend="618" name="_generate_fallback_constructor" signature="_generate_fallback_constructor($self, $class)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$class" />
+        </scope>
+        <scope ilk="function" line="620" lineend="626" name="_inline_params" signature="_inline_params($self, $params, $class)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$params" />
+          <variable ilk="argument" name="$class" />
+        </scope>
+        <scope ilk="function" line="628" lineend="634" name="_inline_generate_instance" signature="_inline_generate_instance($self, $inst, $class)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$inst" />
+          <variable ilk="argument" name="$class" />
+        </scope>
+        <scope ilk="function" line="636" lineend="640" name="_inline_create_instance" signature="_inline_create_instance($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="642" lineend="649" name="_inline_slot_initializers" signature="_inline_slot_initializers($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="651" lineend="680" name="_inline_slot_initializer" signature="_inline_slot_initializer($self, $attr, $idx)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$attr" />
+          <variable ilk="argument" name="$idx" />
+        </scope>
+        <scope ilk="function" line="682" lineend="698" name="_inline_init_attr_from_constructor" signature="_inline_init_attr_from_constructor($self, $attr, $idx)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$attr" />
+          <variable ilk="argument" name="$idx" />
+        </scope>
+        <scope ilk="function" line="700" lineend="717" name="_inline_init_attr_from_default" signature="_inline_init_attr_from_default($self, $attr, $idx)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$attr" />
+          <variable ilk="argument" name="$idx" />
+        </scope>
+        <scope ilk="function" line="719" lineend="743" name="_inline_default_value" signature="_inline_default_value($self, $attr, $index)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$attr" />
+          <variable ilk="argument" name="$index" />
+        </scope>
+        <scope ilk="function" line="745" lineend="757" name="_inline_preserve_weak_metaclasses" signature="_inline_preserve_weak_metaclasses($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="759" lineend="759" name="_inline_extra_init" signature="_inline_extra_init()" />
+        <scope ilk="function" line="762" lineend="765" name="get_meta_instance" signature="get_meta_instance($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="767" lineend="779" name="_create_meta_instance" signature="_create_meta_instance($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="781" lineend="785" name="_inline_rebless_instance" signature="_inline_rebless_instance($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="787" lineend="791" name="_inline_get_mop_slot" signature="_inline_get_mop_slot($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="793" lineend="797" name="_inline_set_mop_slot" signature="_inline_set_mop_slot($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="799" lineend="803" name="_inline_clear_mop_slot" signature="_inline_clear_mop_slot($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="805" lineend="817" name="clone_object" signature="clone_object($class, $instance)">
+          <variable ilk="argument" name="$class" />
+          <variable ilk="argument" name="$instance" />
+        </scope>
+        <scope ilk="function" line="819" lineend="833" name="_clone_instance" signature="_clone_instance($class, $instance, %params)">
+          <variable ilk="argument" name="$class" />
+          <variable ilk="argument" name="$instance" />
+          <variable ilk="argument" name="%params" />
+        </scope>
+        <scope ilk="function" line="835" lineend="857" name="_force_rebless_instance" signature="_force_rebless_instance($self, $instance, %params)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$instance" />
+          <variable ilk="argument" name="%params" />
+        </scope>
+        <scope ilk="function" line="859" lineend="870" name="rebless_instance" signature="rebless_instance($self, $instance, %params)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$instance" />
+          <variable ilk="argument" name="%params" />
+        </scope>
+        <scope ilk="function" line="872" lineend="887" name="rebless_instance_back" signature="rebless_instance_back($self, $instance)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$instance" />
+        </scope>
+        <scope ilk="function" line="889" lineend="891" name="rebless_instance_away" signature="rebless_instance_away()" />
+        <scope ilk="function" line="893" lineend="918" name="_fixup_attributes_after_rebless" signature="_fixup_attributes_after_rebless($self, $instance, $rebless_from, %params)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$instance" />
+          <variable ilk="argument" name="$rebless_from" />
+          <variable ilk="argument" name="%params" />
+        </scope>
+        <scope ilk="function" line="920" lineend="923" name="_attach_attribute" signature="_attach_attribute($self, $attribute)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$attribute" />
+        </scope>
+        <scope ilk="function" line="925" lineend="939" name="_post_add_attribute" signature="_post_add_attribute($self, $attribute)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$attribute" />
+        </scope>
+        <scope ilk="function" line="941" lineend="953" name="remove_attribute" signature="remove_attribute($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="955" lineend="966" name="find_attribute_by_name" signature="find_attribute_by_name($self, $attr_name)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$attr_name" />
+        </scope>
+        <scope ilk="function" line="968" lineend="973" name="get_all_attributes" signature="get_all_attributes($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="977" lineend="1005" name="superclasses" signature="superclasses($self, @supers)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="@supers" />
+        </scope>
+        <scope ilk="function" line="1007" lineend="1015" name="_superclasses_updated" signature="_superclasses_updated($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="1017" lineend="1020" name="_superclass_metas" signature="_superclass_metas($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="1022" lineend="1027" name="subclasses" signature="subclasses($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="1029" lineend="1038" name="direct_subclasses" signature="direct_subclasses($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="1040" lineend="1042" name="linearized_isa" signature="linearized_isa()" />
+        <scope ilk="function" line="1044" lineend="1076" name="class_precedence_list" signature="class_precedence_list($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="1112" lineend="1120" name="add_before_method_modifier" signature="add_before_method_modifier($self, $method_name, $method_modifier)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$method_name" />
+          <variable ilk="argument" name="$method_modifier" />
+        </scope>
+        <scope ilk="function" line="1122" lineend="1130" name="add_after_method_modifier" signature="add_after_method_modifier($self, $method_name, $method_modifier)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$method_name" />
+          <variable ilk="argument" name="$method_modifier" />
+        </scope>
+        <scope ilk="function" line="1132" lineend="1140" name="add_around_method_modifier" signature="add_around_method_modifier($self, $method_name, $method_modifier)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$method_name" />
+          <variable ilk="argument" name="$method_modifier" />
+        </scope>
+        <scope ilk="function" line="1156" lineend="1165" name="find_method_by_name" signature="find_method_by_name($self, $method_name)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$method_name" />
+        </scope>
+        <scope ilk="function" line="1167" lineend="1178" name="get_all_methods" signature="get_all_methods($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="1180" lineend="1184" name="get_all_method_names" signature="get_all_method_names($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="1186" lineend="1201" name="find_all_methods_by_name" signature="find_all_methods_by_name($self, $method_name)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$method_name" />
+        </scope>
+        <scope ilk="function" line="1203" lineend="1214" name="find_next_method_by_name" signature="find_next_method_by_name($self, $method_name)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$method_name" />
+        </scope>
+        <scope ilk="function" line="1216" lineend="1222" name="update_meta_instance_dependencies" signature="update_meta_instance_dependencies($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="1224" lineend="1240" name="add_meta_instance_dependencies" signature="add_meta_instance_dependencies($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="1242" lineend="1255" name="remove_meta_instance_dependencies" signature="remove_meta_instance_dependencies($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="1257" lineend="1260" name="add_dependent_meta_instance" signature="add_dependent_meta_instance($self, $metaclass)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$metaclass" />
+        </scope>
+        <scope ilk="function" line="1262" lineend="1267" name="remove_dependent_meta_instance" signature="remove_dependent_meta_instance($self, $metaclass)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$metaclass" />
+        </scope>
+        <scope ilk="function" line="1269" lineend="1273" name="invalidate_meta_instances" signature="invalidate_meta_instances($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="1275" lineend="1278" name="invalidate_meta_instance" signature="invalidate_meta_instance($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="1281" lineend="1294" name="is_pristine" signature="is_pristine($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="1298" lineend="1298" name="is_mutable" signature="is_mutable()" />
+        <scope ilk="function" line="1299" lineend="1299" name="is_immutable" signature="is_immutable()" />
+        <scope ilk="function" line="1301" lineend="1301" name="immutable_options" signature="immutable_options()" />
+        <scope ilk="function" line="1303" lineend="1317" name="_immutable_options" signature="_immutable_options($self, @args)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="@args" />
+        </scope>
+        <scope ilk="function" line="1319" lineend="1330" name="make_immutable" signature="make_immutable($self, @args)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="@args" />
+        </scope>
+        <scope ilk="function" line="1332" lineend="1345" name="make_mutable" signature="make_mutable($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope attributes="__ctor__" ilk="function" line="1347" lineend="1353" name="_rebless_as_immutable" signature="_rebless_as_immutable($self, @args)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="@args" />
+        </scope>
+        <scope ilk="function" line="1355" lineend="1402" name="_immutable_metaclass" signature="_immutable_metaclass($self, %args)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="%args" />
+        </scope>
+        <scope ilk="function" line="1404" lineend="1410" name="_remove_inlined_code" signature="_remove_inlined_code($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="1412" lineend="1412" name="_inlined_methods" signature="_inlined_methods()" />
+        <scope ilk="function" line="1414" lineend="1418" name="_add_inlined_method" signature="_add_inlined_method($self, $method)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$method" />
+        </scope>
+        <scope ilk="function" line="1420" lineend="1425" name="_initialize_immutable" signature="_initialize_immutable($self, %args)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="%args" />
+        </scope>
+        <scope ilk="function" line="1427" lineend="1434" name="_install_inlined_code" signature="_install_inlined_code($self, %args)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="%args" />
+        </scope>
+        <scope attributes="__ctor__" ilk="function" line="1436" lineend="1442" name="_rebless_as_mutable" signature="_rebless_as_mutable($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="1444" lineend="1450" name="_inline_accessors" signature="_inline_accessors($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="1452" lineend="1485" name="_inline_constructor" signature="_inline_constructor($self, %args)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="%args" />
+        </scope>
+        <scope ilk="function" line="1487" lineend="1518" name="_inline_destructor" signature="_inline_destructor($self, %args)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="%args" />
+        </scope>
+      </scope>
+    </scope>
+    

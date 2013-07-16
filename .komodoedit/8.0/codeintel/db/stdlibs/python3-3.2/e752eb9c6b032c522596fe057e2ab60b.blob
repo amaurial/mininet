@@ -1,0 +1,156 @@
+<scope doc="distutils.cygwinccompiler&#xA;Provides the CygwinCCompiler class, a subclass of UnixCCompiler that handles the Cygwin port of the GNU C compiler to Windows.  It also contains the Mingw32CCompiler class which handles the mingw32 port of GCC (same as cygwin in no-cygwin mode)." ilk="blob" lang="Python" name="distutils.cygwinccompiler">
+      <variable citdl="str" line="317" name="CONFIG_H_NOTOK" />
+      <variable citdl="str" line="316" name="CONFIG_H_OK" />
+      <variable citdl="str" line="318" name="CONFIG_H_UNCERTAIN" />
+      <scope classrefs="CCompilerError" doc="Failure to compile one or more C/C++ source files.&#xA;" ilk="class" name="CompileError" />
+      <scope classrefs="UnixCCompiler" doc="Handles the Cygwin port of the GNU C compiler to Windows.&#xA;" ilk="class" line="85" lineend="268" name="CygwinCCompiler">
+        <scope ilk="function" line="96" lineend="153" name="__init__" signature="__init__(self, verbose=0, dry_run=0, force=0)">
+          <variable line="100" name="status" />
+          <variable citdl="int" ilk="argument" name="force" />
+          <variable citdl="int" ilk="argument" name="verbose" />
+          <variable citdl="int" ilk="argument" name="dry_run" />
+          <variable citdl="str" line="130" name="shared_option" />
+          <variable citdl="CygwinCCompiler" ilk="argument" name="self" />
+          <variable line="100" name="details" />
+        </scope>
+        <scope doc="Link the objects." ilk="function" line="170" lineend="244" name="link" signature="link(self, target_desc, objects, output_filename, output_dir=None, libraries=None, library_dirs=None, runtime_library_dirs=None, export_symbols=None, debug=0, extra_preargs=None, extra_postargs=None, build_temp=None, target_lang=None)">
+          <variable ilk="argument" name="target_lang" />
+          <variable line="197" name="dll_name" />
+          <variable citdl="os.path.join()" line="202" name="lib_file" />
+          <variable ilk="argument" name="output_filename" />
+          <variable ilk="argument" name="build_temp" />
+          <variable ilk="argument" name="extra_postargs" />
+          <variable citdl="copy.copy()" ilk="argument" name="objects" />
+          <variable line="197" name="dll_extension" />
+          <variable citdl="list" line="205" name="contents" />
+          <variable ilk="argument" name="export_symbols" />
+          <variable ilk="argument" name="target_desc" />
+          <variable citdl="copy.copy()" ilk="argument" name="extra_preargs" />
+          <variable ilk="argument" name="runtime_library_dirs" />
+          <variable citdl="copy.copy()" ilk="argument" name="libraries" />
+          <variable citdl="os.path.join()" line="201" name="def_file" />
+          <variable ilk="argument" name="output_dir" />
+          <variable citdl="os.path.dirname()" line="195" name="temp_dir" />
+          <variable citdl="int" ilk="argument" name="debug" />
+          <variable ilk="argument" name="library_dirs" />
+          <variable citdl="CygwinCCompiler" ilk="argument" name="self" />
+        </scope>
+        <scope doc="Compiles the source by spawning GCC and windres if needed." ilk="function" line="155" lineend="168" name="_compile" signature="_compile(self, obj, src, ext, cc_args, extra_postargs, pp_opts)">
+          <variable ilk="argument" name="src" />
+          <variable ilk="argument" name="extra_postargs" />
+          <variable ilk="argument" name="obj" />
+          <variable ilk="argument" name="cc_args" />
+          <variable ilk="argument" name="pp_opts" />
+          <variable citdl="CygwinCCompiler" ilk="argument" name="self" />
+          <variable ilk="argument" name="ext" />
+        </scope>
+        <scope doc="Adds supports for rc and res files." ilk="function" line="248" lineend="268" name="object_filenames" returns="list" signature="object_filenames(self, source_filenames, strip_dir=0, output_dir=&apos;&apos;)">
+          <variable line="255" name="ext" />
+          <variable citdl="os.path.basename()" line="255" name="base" />
+          <variable citdl="str" ilk="argument" name="output_dir" />
+          <variable citdl="int" ilk="argument" name="strip_dir" />
+          <variable ilk="argument" name="source_filenames" />
+          <variable citdl="CygwinCCompiler" ilk="argument" name="self" />
+          <variable citdl="list" line="252" name="obj_names" />
+        </scope>
+        <variable citdl="str" line="89" name="obj_extension" />
+        <variable citdl="str" line="92" name="static_lib_format" />
+        <variable attributes="__instancevar__" line="110" name="gcc_version" />
+        <variable attributes="__instancevar__" line="110" name="ld_version" />
+        <variable citdl="str" line="90" name="static_lib_extension" />
+        <variable attributes="__instancevar__" citdl="str" line="123" name="linker_dll" />
+        <variable citdl="str" line="88" name="compiler_type" />
+        <variable citdl="str" line="91" name="shared_lib_extension" />
+        <variable attributes="__instancevar__" line="110" name="dllwrap_version" />
+        <variable citdl="str" line="94" name="exe_extension" />
+        <variable citdl="str" line="93" name="shared_lib_format" />
+        <variable attributes="__instancevar__" citdl="list" line="147" name="dll_libraries" />
+      </scope>
+      <scope classrefs="DistutilsError" doc="Any problems executing an external program (such as the C&#xA;compiler, when compiling C files)." ilk="class" name="DistutilsExecError" />
+      <scope classrefs="Version" doc="Version numbering for anarchists and software realists.&#xA;Implements the standard interface for version number classes as described above.  A version number consists of a series of numbers, separated by either periods or strings of letters.  When comparing version numbers, the numeric components will be compared numerically, and the alphabetic components lexically.  The following are all valid version numbers, in no particular order:  1.5.1 1.5.2b2 161" ilk="class" name="LooseVersion">
+        <scope ilk="function" name="__str__" signature="__str__(self)" />
+        <scope ilk="function" name="parse" signature="parse(self, vstring)" />
+        <scope ilk="function" name="_cmp" signature="_cmp(self, other)" />
+        <scope ilk="function" name="__repr__" signature="__repr__(self)" />
+        <scope ilk="function" name="__init__" signature="__init__(self, vstring=None)" />
+      </scope>
+      <scope classrefs="CygwinCCompiler" doc="Handles the Mingw32 port of the GNU C compiler to Windows.&#xA;" ilk="class" line="271" lineend="310" name="Mingw32CCompiler">
+        <scope ilk="function" line="276" lineend="310" name="__init__" signature="__init__(self, verbose=0, dry_run=0, force=0)">
+          <variable citdl="int" ilk="argument" name="force" />
+          <variable citdl="int" ilk="argument" name="verbose" />
+          <variable citdl="int" ilk="argument" name="dry_run" />
+          <variable citdl="str" line="290" name="entry_point" />
+          <variable citdl="Mingw32CCompiler" ilk="argument" name="self" />
+          <variable citdl="str" line="283" name="shared_option" />
+        </scope>
+        <variable attributes="__instancevar__" citdl="list" line="306" name="dll_libraries" />
+        <variable citdl="str" line="274" name="compiler_type" />
+      </scope>
+      <variable citdl="int" name="PIPE" />
+      <scope classrefs="object" doc="&#xA;" ilk="class" name="Popen">
+        <scope doc="Return a duplicate of handle, which is inheritable" ilk="function" name="_make_inheritable" signature="_make_inheritable(self, handle)" />
+        <scope ilk="function" name="__del__" signature="__del__(self, _maxsize=2147483647, _active=[])" />
+        <scope doc="Interact with process: Send data to stdin." ilk="function" name="communicate" signature="communicate(self, input=None)" />
+        <scope doc="Terminates the process" ilk="function" name="terminate" signature="terminate(self)" />
+        <scope ilk="function" name="_readerthread" signature="_readerthread(self, fh, buffer)" />
+        <scope doc="Terminates the process" ilk="function" name="kill" signature="kill(self)" />
+        <scope doc="Check if child process has terminated." ilk="function" name="_internal_poll" signature="_internal_poll(self, _deadstate=None, _WaitForSingleObject=&lt;built-in function WaitForSingleObject&gt;, _WAIT_OBJECT_0=0, _GetExitCodeProcess=&lt;built-in function GetExitCodeProcess&gt;)" />
+        <scope doc="Execute program (MS Windows version)" ilk="function" name="_execute_child" signature="_execute_child(self, args, executable, preexec_fn, close_fds, pass_fds, cwd, env, universal_newlines, startupinfo, creationflags, shell, p2cread, p2cwrite, c2pread, c2pwrite, errread, errwrite, unused_restore_signals, unused_start_new_session)" />
+        <scope doc="Construct and return tuple with IO objects: p2cread,&#xA;p2cwrite, c2pread, c2pwrite, errread, errwrite" ilk="function" name="_get_handles" signature="_get_handles(self, stdin, stdout, stderr)" />
+        <scope ilk="function" name="__exit__" signature="__exit__(self, type, value, traceback)" />
+        <scope ilk="function" name="poll" signature="poll(self)" />
+        <scope doc="Create new Popen instance." ilk="function" name="__init__" signature="__init__(self, args, bufsize=0, executable=None, stdin=None, stdout=None, stderr=None, preexec_fn=None, close_fds=&lt;object object at 0x021B8308&gt;, shell=False, cwd=None, env=None, universal_newlines=False, startupinfo=None, creationflags=0, restore_signals=True, start_new_session=False, pass_fds=())" />
+        <scope doc="Wait for child process to terminate." ilk="function" name="wait" signature="wait(self)" />
+        <scope doc="Find and return absolut path to w9xpopen.exe" ilk="function" name="_find_w9xpopen" signature="_find_w9xpopen(self)" />
+        <scope ilk="function" name="_translate_newlines" signature="_translate_newlines(self, data, encoding)" />
+        <scope ilk="function" name="__enter__" signature="__enter__(self)" />
+        <scope ilk="function" name="_communicate" signature="_communicate(self, input)" />
+        <scope doc="Send a signal to the process" ilk="function" name="send_signal" signature="send_signal(self, sig)" />
+        <scope ilk="function" name="_handle_exitstatus" signature="_handle_exitstatus(self, sts, _WIFSIGNALED=&lt;built-in function WIFSIGNALED&gt;, _WTERMSIG=&lt;built-in function WTERMSIG&gt;, _WIFEXITED=&lt;built-in function WIFEXITED&gt;, _WEXITSTATUS=&lt;built-in function WEXITSTATUS&gt;)" />
+        <scope ilk="function" name="_communicate_with_select" signature="_communicate_with_select(self, input)" />
+        <scope ilk="function" name="_communicate_with_poll" signature="_communicate_with_poll(self, input)" />
+        <scope ilk="function" name="_close_fds" signature="_close_fds(self, fds_to_keep)" />
+      </scope>
+      <variable citdl="SRE_Pattern" line="363" name="RE_VERSION" />
+      <scope classrefs="CCompiler" doc="&#xA;" ilk="class" name="UnixCCompiler">
+        <scope ilk="function" name="link" signature="link(self, target_desc, objects, output_filename, output_dir=None, libraries=None, library_dirs=None, runtime_library_dirs=None, export_symbols=None, debug=0, extra_preargs=None, extra_postargs=None, build_temp=None, target_lang=None)" />
+        <scope ilk="function" name="runtime_library_dir_option" signature="runtime_library_dir_option(self, dir)" />
+        <scope ilk="function" name="library_option" signature="library_option(self, lib)" />
+        <scope ilk="function" name="create_static_lib" signature="create_static_lib(self, objects, output_libname, output_dir=None, debug=0, target_lang=None)" />
+        <scope ilk="function" name="library_dir_option" signature="library_dir_option(self, dir)" />
+        <scope ilk="function" name="preprocess" signature="preprocess(self, source, output_file=None, macros=None, include_dirs=None, extra_preargs=None, extra_postargs=None)" />
+        <scope ilk="function" name="_is_gcc" signature="_is_gcc(self, compiler_name)" />
+        <scope ilk="function" name="_compile" signature="_compile(self, obj, src, ext, cc_args, extra_postargs, pp_opts)" />
+        <scope ilk="function" name="find_library_file" signature="find_library_file(self, dirs, lib, debug=0)" />
+      </scope>
+      <scope classrefs="CCompilerError" doc="Attempt to process an unknown file type.&#xA;" ilk="class" name="UnknownFileError" />
+      <scope doc="Check if the current Python installation appears amenable to&#xA;building extensions with GCC." ilk="function" line="320" lineend="361" name="check_config_h" returns="tuple" signature="check_config_h()">
+        <variable citdl="open()" line="351" name="config_h" />
+        <variable citdl="sysconfig.get_config_h_filename()" line="349" name="fn" />
+      </scope>
+      <import module="copy" />
+      <scope doc="Tries to find &apos;executable&apos; in the directories listed in&#xA;&apos;path&apos;." ilk="function" name="find_executable" signature="find_executable(executable, path=None)" />
+      <scope doc="Generate linker options for searching library directories&#xA;and linking with specific libraries." ilk="function" name="gen_lib_options" signature="gen_lib_options(compiler, library_dirs, runtime_library_dirs, libraries)" />
+      <scope doc="Generate C pre-processor options (-D, -U, -I) as used by at&#xA;least two types of compilers: the typical Unix compiler and&#xA;Visual C++." ilk="function" name="gen_preprocess_options" signature="gen_preprocess_options(macros, include_dirs)" />
+      <scope doc="Include the appropriate MSVC runtime library if Python was&#xA;built with MSVC 7.0 or later." ilk="function" line="62" lineend="82" name="get_msvcr" returns="list" signature="get_msvcr()">
+        <variable citdl="list" line="68" name="msc_ver" />
+        <variable citdl="sys.version.find()" line="66" name="msc_pos" />
+      </scope>
+      <scope doc="Try to find out the versions of gcc, ld and dllwrap." ilk="function" line="386" lineend="392" name="get_versions" returns="tuple()" signature="get_versions()">
+        <variable citdl="list" line="391" name="commands" />
+      </scope>
+      <import module="log" />
+      <import module="os" />
+      <import module="re" />
+      <import module="sys" />
+      <scope doc="Create a file with the specified name and write &apos;contents&apos;&#xA;(a sequence of strings without line terminators) to it." ilk="function" name="write_file" signature="write_file(filename, contents)" />
+      <scope attributes="protected __hidden__" doc="Find the version of an executable by running `cmd` in the shell.&#xA;&#xA;If the command is not found, or the output does not match&#xA;`RE_VERSION`, returns None." ilk="function" line="365" lineend="384" name="_find_exe_version" returns="LooseVersion()" signature="_find_exe_version(cmd)">
+        <variable ilk="argument" name="cmd" />
+        <variable line="371" name="executable" />
+        <variable line="374" name="out" />
+        <variable citdl="out.read()" line="376" name="out_string" />
+        <variable citdl="RE_VERSION.search()" line="379" name="result" />
+      </scope>
+      <variable citdl="str" line="48" name="__revision__" />
+    </scope>
+    

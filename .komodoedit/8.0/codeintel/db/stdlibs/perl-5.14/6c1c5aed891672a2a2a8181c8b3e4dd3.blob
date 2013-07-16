@@ -1,0 +1,36 @@
+<scope ilk="blob" lang="Perl" name="DynaLoader">
+      <scope ilk="class" line="4" lineend="326" name="DynaLoader">
+        <import line="23" module="Config" symbol="*" />
+        <variable line="19" name="$VERSION" />
+        <variable line="20" name="$XS_VERSION" />
+        <variable line="26" name="$dl_debug" />
+        <variable line="44" name="$do_expand" />
+        <variable line="46" name="@dl_require_symbols" />
+        <variable line="47" name="@dl_resolve_using" />
+        <variable line="48" name="@dl_library_path" />
+        <variable line="159" name="$file" />
+        <scope ilk="function" line="39" lineend="39" name="dl_load_flags" signature="dl_load_flags()" />
+        <scope ilk="function" line="99" lineend="99" name="croak" signature="croak()">
+          <import line="99" module="Carp" />
+          <import line="99" module="Carp" />
+        </scope>
+        <scope ilk="function" line="101" lineend="107" name="bootstrap_inherit" signature="bootstrap_inherit()">
+          </scope>
+        <scope ilk="function" line="109" lineend="215" name="bootstrap" signature="bootstrap()">
+          <import line="116" module="Carp" />
+          <import line="198" module="Carp" />
+          <import line="116" module="Carp" />
+          <import line="198" module="Carp" />
+        </scope>
+        <scope ilk="function" line="217" lineend="292" name="dl_findfile" signature="dl_findfile(@args)">
+          <variable ilk="argument" name="@args" />
+        </scope>
+        <scope ilk="function" line="296" lineend="315" name="dl_expandspec" signature="dl_expandspec($spec)">
+          <variable ilk="argument" name="$spec" />
+        </scope>
+        <scope ilk="function" line="317" lineend="326" name="dl_find_symbol_anywhere" signature="dl_find_symbol_anywhere($sym)">
+          <variable ilk="argument" name="$sym" />
+        </scope>
+      </scope>
+    </scope>
+    

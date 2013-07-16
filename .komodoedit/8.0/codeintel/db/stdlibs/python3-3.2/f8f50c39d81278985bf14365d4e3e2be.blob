@@ -1,0 +1,54 @@
+<scope doc="distutils.archive_util&#xA;Utility functions for creating archive files (tarballs, zip files, that sort of thing)." ilk="blob" lang="Python" name="distutils.archive_util">
+      <variable citdl="dict" line="124" name="ARCHIVE_FORMATS" />
+      <scope classrefs="DistutilsError" doc="Any problems executing an external program (such as the C&#xA;compiler, when compiling C files)." ilk="class" name="DistutilsExecError" />
+      <scope doc="Returns the first format from the &apos;format&apos; list that is&#xA;unknown." ilk="function" line="132" lineend="140" name="check_archive_formats" returns="format" signature="check_archive_formats(formats)">
+        <variable ilk="argument" name="formats" />
+      </scope>
+      <import module="log" />
+      <scope doc="Create an archive file (eg. zip or tar)." ilk="function" line="142" lineend="184" name="make_archive" returns="func()" signature="make_archive(base_name, format, root_dir=None, base_dir=None, verbose=0, dry_run=0)">
+        <variable line="170" name="format_info" />
+        <variable ilk="argument" name="root_dir" />
+        <variable citdl="int" ilk="argument" name="verbose" />
+        <variable citdl="os.path.abspath()" ilk="argument" name="base_name" />
+        <variable citdl="int" ilk="argument" name="dry_run" />
+        <variable ilk="argument" name="format" />
+        <variable citdl="func()" line="178" name="filename" />
+        <variable line="174" name="func" />
+        <variable citdl="dict" line="167" name="kwargs" />
+        <variable citdl="os.getcwd()" line="157" name="save_cwd" />
+        <variable citdl="os.curdir" ilk="argument" name="base_dir" />
+      </scope>
+      <scope doc="Create a (possibly compressed) tar file from all the files&#xA;under &apos;base_dir&apos;." ilk="function" line="21" lineend="70" name="make_tarball" returns="str" signature="make_tarball(base_name, base_dir, compress=&apos;gzip&apos;, verbose=0, dry_run=0)">
+        <variable citdl="str" line="41" name="archive_name" />
+        <variable citdl="int" ilk="argument" name="verbose" />
+        <variable ilk="argument" name="base_name" />
+        <variable citdl="int" ilk="argument" name="dry_run" />
+        <variable citdl="list" line="64" name="cmd" />
+        <variable citdl="str" ilk="argument" name="compress" />
+        <variable citdl="dict" line="32" name="tar_compression" />
+        <variable citdl="str" line="62" name="compressed_name" />
+        <variable citdl="dict" line="33" name="compress_ext" />
+        <variable citdl="tarfile.open()" line="52" name="tar" />
+        <variable ilk="argument" name="base_dir" />
+      </scope>
+      <scope doc="Create a zip file from all the files under &apos;base_dir&apos;." ilk="function" line="72" lineend="122" name="make_zipfile" returns="str" signature="make_zipfile(base_name, base_dir, verbose=0, dry_run=0)">
+        <variable citdl="int" ilk="argument" name="verbose" />
+        <variable citdl="zipfile.ZipFile()" line="108" name="zip" />
+        <variable citdl="int" ilk="argument" name="dry_run" />
+        <variable ilk="argument" name="base_name" />
+        <variable citdl="str" line="88" name="zipoptions" />
+        <variable citdl="os.path.normpath()" line="116" name="path" />
+        <variable citdl="str" line="81" name="zip_filename" />
+        <variable ilk="argument" name="base_dir" />
+        <variable line="80" name="zipfile" />
+      </scope>
+      <scope doc="Create a directory and any missing ancestor directories." ilk="function" name="mkpath" signature="mkpath(name, mode=511, verbose=1, dry_run=0)" />
+      <import module="os" />
+      <scope doc="Run another program, specified as a command list &apos;cmd&apos;, in a&#xA;new process." ilk="function" name="spawn" signature="spawn(cmd, search_path=1, verbose=0, dry_run=0)" />
+      <import module="sys" />
+      <scope doc="Issue a warning, or maybe ignore it or raise an exception." ilk="function" name="warn" />
+      <import module="zipfile" />
+      <variable attributes="__hidden__" line="13" name="zipfile" />
+      <variable citdl="str" line="6" name="__revision__" />
+    </scope>
+    

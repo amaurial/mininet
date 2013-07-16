@@ -1,0 +1,33 @@
+<scope ilk="blob" lang="Perl" name="Filter::Simple">
+      <scope ilk="class" line="1" lineend="229" name="Filter::Simple">
+        <import line="3" module="Text::Balanced" symbol="**" />
+        <import line="9" module="Filter::Util::Call" symbol="*" />
+        <import line="10" module="Carp" symbol="*" />
+        <variable line="5" name="$VERSION" />
+        <variable line="5" name="@EXPORT" />
+        <scope ilk="function" line="15" lineend="18" name="import" signature="import()" />
+        <scope ilk="function" line="20" lineend="22" name="fail" signature="fail()" />
+        <scope ilk="function" line="101" lineend="127" name="gen_std_filter_for" signature="gen_std_filter_for($type, $transform)">
+          <variable ilk="argument" name="$type" />
+          <variable ilk="argument" name="$transform" />
+        </scope>
+        <scope attributes="__exported__" ilk="function" line="129" lineend="135" name="FILTER" signature="FILTER($filter, $terminator)">
+          <variable ilk="argument" name="$filter" />
+          <variable ilk="argument" name="$terminator" />
+        </scope>
+        <scope attributes="__exported__" ilk="function" line="137" lineend="158" name="FILTER_ONLY" signature="FILTER_ONLY($terminator)">
+          <variable ilk="argument" name="$terminator" />
+        </scope>
+        <scope ilk="function" line="162" lineend="219" name="gen_filter_import" signature="gen_filter_import($class, $filter, $terminator, $imported_class, @args)">
+          <variable ilk="argument" name="$class" />
+          <variable ilk="argument" name="$filter" />
+          <variable ilk="argument" name="$terminator" />
+          <variable ilk="argument" name="$imported_class" />
+          <variable ilk="argument" name="@args" />
+        </scope>
+        <scope ilk="function" line="221" lineend="227" name="gen_filter_unimport" signature="gen_filter_unimport($class)">
+          <variable ilk="argument" name="$class" />
+        </scope>
+      </scope>
+    </scope>
+    

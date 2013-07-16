@@ -1,0 +1,216 @@
+<scope ilk="blob" lang="Perl" name="HTML::Form">
+      <scope ilk="class" line="1" lineend="810" name="HTML::Form">
+        <import line="4" module="URI" symbol="*" />
+        <import line="5" module="Carp" />
+        <import line="6" module="Encode" />
+        <variable line="8" name="$VERSION" />
+        <variable line="385" name="*uri" />
+        <scope ilk="function" line="135" lineend="302" name="parse" signature="parse($class, $html, %opt)">
+          <import line="142" module="HTML::TokeParser" />
+          <variable ilk="argument" name="$class" />
+          <variable ilk="argument" name="$html" />
+          <variable ilk="argument" name="%opt" />
+          <import line="142" module="HTML::TokeParser" />
+        </scope>
+        <scope attributes="__ctor__" ilk="function" line="304" lineend="314" name="new" signature="new($class)">
+          <variable ilk="argument" name="$class" />
+        </scope>
+        <scope ilk="function" line="317" lineend="338" name="push_input" signature="push_input($self, $type, $attr, $verbose)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$type" />
+          <variable ilk="argument" name="$attr" />
+          <variable ilk="argument" name="$verbose" />
+        </scope>
+        <scope ilk="function" line="404" lineend="412" name="attr" signature="attr($self, $name)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$name" />
+        </scope>
+        <scope ilk="function" line="424" lineend="434" name="strict" signature="strict($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="446" lineend="450" name="inputs" signature="inputs($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="478" lineend="504" name="find_input" signature="find_input($self, $name, $type, $no)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$name" />
+          <variable ilk="argument" name="$type" />
+          <variable ilk="argument" name="$no" />
+        </scope>
+        <scope ilk="function" line="506" lineend="512" name="fixup" signature="fixup($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="535" lineend="547" name="value" signature="value($self, $key)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$key" />
+        </scope>
+        <scope ilk="function" line="580" lineend="640" name="param" signature="param($self, $name, @v)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$name" />
+          <variable ilk="argument" name="@v" />
+        </scope>
+        <scope ilk="function" line="653" lineend="664" name="try_others" signature="try_others($self, $cb)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$cb" />
+        </scope>
+        <scope ilk="function" line="666" lineend="674" name="_try" signature="_try($self, $cb, $try, $i)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$cb" />
+          <variable ilk="argument" name="$try" />
+          <variable ilk="argument" name="$i" />
+        </scope>
+        <scope ilk="function" line="684" lineend="711" name="make_request" signature="make_request($self)">
+          <import line="698" module="HTTP::Request" />
+          <import line="704" module="HTTP::Request::Common" />
+          <variable ilk="argument" name="$self" />
+          <import line="698" module="HTTP::Request" />
+          <import line="704" module="HTTP::Request::Common" />
+        </scope>
+        <scope ilk="function" line="749" lineend="764" name="click" signature="click($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="778" lineend="782" name="form" signature="form($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="793" lineend="810" name="dump" signature="dump($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+      </scope>
+      <scope ilk="class" line="814" lineend="1090" name="HTML::Form::Input">
+        <scope attributes="__ctor__" ilk="function" line="848" lineend="853" name="new" signature="new($class)">
+          <variable ilk="argument" name="$class" />
+        </scope>
+        <scope ilk="function" line="855" lineend="860" name="add_to_form" signature="add_to_form($self, $form)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$form" />
+        </scope>
+        <scope ilk="function" line="862" lineend="869" name="strict" signature="strict($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="871" lineend="871" name="fixup" signature="fixup()" />
+        <scope ilk="function" line="882" lineend="885" name="type" signature="type()" />
+        <scope ilk="function" line="920" lineend="926" name="name" signature="name($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="928" lineend="934" name="id" signature="id($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="936" lineend="942" name="class" signature="class($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="944" lineend="954" name="selected" signature="selected($self, $sel)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$sel" />
+        </scope>
+        <scope ilk="function" line="956" lineend="962" name="value" signature="value($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="971" lineend="974" name="possible_values" signature="possible_values()" />
+        <scope ilk="function" line="982" lineend="985" name="other_possible_values" signature="other_possible_values()" />
+        <scope ilk="function" line="998" lineend="1000" name="value_names" signature="value_names()" />
+        <scope ilk="function" line="1013" lineend="1018" name="readonly" signature="readonly($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="1030" lineend="1035" name="disabled" signature="disabled($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="1044" lineend="1053" name="form_name_value" signature="form_name_value($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="1055" lineend="1090" name="dump" signature="dump($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+      </scope>
+      <scope ilk="class" line="1094" lineend="1117" name="HTML::Form::TextInput">
+        <variable line="1095" name="@HTML::Form::TextInput::ISA" />
+        <scope ilk="function" line="1102" lineend="1117" name="value" signature="value($self, $new)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$new" />
+        </scope>
+      </scope>
+      <scope ilk="class" line="1120" lineend="1126" name="HTML::Form::IgnoreInput">
+        <variable line="1121" name="@HTML::Form::IgnoreInput::ISA" />
+        <scope ilk="function" line="1126" lineend="1126" name="value" signature="value()" />
+      </scope>
+      <scope ilk="class" line="1130" lineend="1352" name="HTML::Form::ListInput">
+        <variable line="1131" name="@HTML::Form::ListInput::ISA" />
+        <scope ilk="function" line="1138" lineend="1174" name="new" signature="new($class)">
+          <variable ilk="argument" name="$class" />
+        </scope>
+        <scope ilk="function" line="1176" lineend="1199" name="add_to_form" signature="add_to_form($self, $form)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$form" />
+        </scope>
+        <scope ilk="function" line="1201" lineend="1208" name="fixup" signature="fixup($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="1210" lineend="1224" name="disabled" signature="disabled($self, $v)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$v" />
+        </scope>
+        <scope ilk="function" line="1226" lineend="1231" name="_menu_all_disabled" signature="_menu_all_disabled()" />
+        <scope ilk="function" line="1233" lineend="1305" name="value" signature="value($self, $val)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$val" />
+        </scope>
+        <scope ilk="function" line="1324" lineend="1329" name="check" signature="check($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="1331" lineend="1335" name="possible_values" signature="possible_values($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="1337" lineend="1341" name="other_possible_values" signature="other_possible_values($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="1343" lineend="1352" name="value_names" signature="value_names($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+      </scope>
+      <scope ilk="class" line="1356" lineend="1383" name="HTML::Form::SubmitInput">
+        <variable line="1357" name="@HTML::Form::SubmitInput::ISA" />
+        <scope ilk="function" line="1370" lineend="1376" name="click" signature="click($self, $form, $x, $y)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$form" />
+          <variable ilk="argument" name="$x" />
+          <variable ilk="argument" name="$y" />
+        </scope>
+        <scope ilk="function" line="1378" lineend="1383" name="form_name_value" signature="form_name_value($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+      </scope>
+      <scope ilk="class" line="1387" lineend="1401" name="HTML::Form::ImageInput">
+        <variable line="1388" name="@HTML::Form::ImageInput::ISA" />
+        <scope ilk="function" line="1390" lineend="1401" name="form_name_value" signature="form_name_value($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+      </scope>
+      <scope ilk="class" line="1404" lineend="1513" name="HTML::Form::FileInput">
+        <variable line="1405" name="@HTML::Form::FileInput::ISA" />
+        <scope ilk="function" line="1424" lineend="1427" name="file" signature="file($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="1438" lineend="1444" name="filename" signature="filename($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="1456" lineend="1461" name="content" signature="content($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="1473" lineend="1478" name="headers" signature="headers($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="1480" lineend="1513" name="form_name_value" signature="form_name_value($self, $form)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$form" />
+        </scope>
+      </scope>
+      <scope ilk="class" line="1515" lineend="1528" name="HTML::Form::KeygenInput">
+        <variable line="1516" name="@HTML::Form::KeygenInput::ISA" />
+        <scope ilk="function" line="1518" lineend="1521" name="challenge" signature="challenge($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="1523" lineend="1526" name="keytype" signature="keytype($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+      </scope>
+    </scope>
+    

@@ -1,0 +1,114 @@
+<scope doc="# Module which supports allocation of memory from an mmap&#xA;# # multiprocessing/heap.py # # Copyright (c) 2006-2008, R Oudkerk # All rights reserved. # # Redistribution and use in source and binary forms, with or without # modification, are permitted provided that the following conditions # are met: #" ilk="blob" lang="Python" name="multiprocessing.heap">
+      <scope classrefs="object" doc="&#xA;" ilk="class" line="79" lineend="84" name="Arena">
+        <scope ilk="function" name="__setstate__" signature="__setstate__(self, state)" />
+        <scope ilk="function" name="__getstate__" signature="__getstate__(self)" />
+        <scope ilk="function" line="81" lineend="84" name="__init__" signature="__init__(self, size)">
+          <variable citdl="Arena" ilk="argument" name="self" />
+          <variable ilk="argument" name="size" />
+        </scope>
+        <variable attributes="__instancevar__" citdl="mmap.mmap()" line="82" name="buffer" />
+        <variable attributes="__instancevar__" line="84" name="name" />
+        <variable attributes="__instancevar__" line="83" name="size" />
+      </scope>
+      <scope classrefs="object" doc="&#xA;" ilk="class" line="237" lineend="254" name="BufferWrapper">
+        <scope ilk="function" line="247" lineend="251" name="get_address" returns="start" signature="get_address(self)">
+          <variable citdl="BufferWrapper" ilk="argument" name="self" />
+          <variable line="249" name="length" />
+          <variable line="249" name="address" />
+        </scope>
+        <scope ilk="function" line="253" lineend="254" name="get_size" signature="get_size(self)">
+          <variable citdl="BufferWrapper" ilk="argument" name="self" />
+        </scope>
+        <scope ilk="function" line="241" lineend="245" name="__init__" signature="__init__(self, size)">
+          <variable citdl="BufferWrapper" ilk="argument" name="self" />
+          <variable citdl="BufferWrapper._heap.malloc()" line="243" name="block" />
+          <variable ilk="argument" name="size" />
+        </scope>
+        <variable attributes="protected" citdl="Heap" line="239" name="_heap" />
+        <variable attributes="protected __instancevar__" citdl="tuple" line="244" name="_state" />
+      </scope>
+      <scope classrefs="object" doc="Class which supports object finalization using weakrefs&#xA;" ilk="class" name="Finalize">
+        <scope doc="Run the callback unless it has already been called or&#xA;cancelled" ilk="function" name="__call__" signature="__call__(self, wr=None)" />
+        <scope ilk="function" name="__repr__" signature="__repr__(self)" />
+        <scope doc="Return whether this finalizer is still waiting to invoke&#xA;callback" ilk="function" name="still_active" signature="still_active(self)" />
+        <scope doc="Cancel finalization of the object" ilk="function" name="cancel" signature="cancel(self)" />
+        <scope ilk="function" name="__init__" signature="__init__(self, obj, callback, args=(), kwargs=None, exitpriority=None)" />
+      </scope>
+      <scope classrefs="object" doc="&#xA;" ilk="class" line="90" lineend="231" name="Heap">
+        <scope ilk="function" line="135" lineend="163" name="_free" signature="_free(self, block)">
+          <variable citdl="Heap" ilk="argument" name="self" />
+          <variable line="140" name="prev_block" />
+          <variable line="151" name="stop" />
+          <variable line="144" name="start" />
+          <variable line="154" name="length" />
+          <variable citdl="tuple" ilk="argument" name="block" />
+          <variable attributes="protected" line="144" name="_" />
+          <variable line="147" name="next_block" />
+        </scope>
+        <scope ilk="function" line="214" lineend="231" name="malloc" returns="tuple" signature="malloc(self, size)">
+          <variable line="223" name="arena" />
+          <variable citdl="_roundup()" line="224" name="new_stop" />
+          <variable line="223" name="start" />
+          <variable citdl="Heap" ilk="argument" name="self" />
+          <variable line="223" name="stop" />
+          <variable citdl="tuple" line="227" name="block" />
+          <variable citdl="_roundup()" ilk="argument" name="size" />
+        </scope>
+        <scope ilk="function" line="190" lineend="212" name="free" signature="free(self, block)">
+          <variable citdl="Heap" ilk="argument" name="self" />
+          <variable ilk="argument" name="block" />
+        </scope>
+        <scope ilk="function" line="113" lineend="133" name="_malloc" returns="tuple" signature="_malloc(self, size)">
+          <variable citdl="Arena" line="120" name="arena" />
+          <variable citdl="_roundup()" line="117" name="length" />
+          <variable line="125" name="seq" />
+          <variable citdl="bisect.bisect_left()" line="115" name="i" />
+          <variable citdl="Heap" ilk="argument" name="self" />
+          <variable citdl="seq.pop()" line="126" name="block" />
+          <variable ilk="argument" name="size" />
+        </scope>
+        <scope ilk="function" line="180" lineend="188" name="_free_pending_blocks" signature="_free_pending_blocks(self)">
+          <variable citdl="Heap" ilk="argument" name="self" />
+          <variable citdl="self._pending_free_blocks.pop()" line="184" name="block" />
+        </scope>
+        <scope ilk="function" line="165" lineend="178" name="_absorb" returns="tuple" signature="_absorb(self, block)">
+          <variable citdl="Heap" ilk="argument" name="self" />
+          <variable line="172" name="seq" />
+          <variable citdl="stop" line="171" name="length" />
+          <variable ilk="argument" name="block" />
+        </scope>
+        <scope ilk="function" line="108" lineend="111" name="_roundup" returns="int" signature="_roundup(n, alignment)">
+          <variable citdl="int" line="110" name="mask" />
+          <variable ilk="argument" name="alignment" />
+          <variable citdl="Heap" ilk="argument" name="n" />
+        </scope>
+        <scope ilk="function" line="94" lineend="105" name="__init__" signature="__init__(self, size=4096)">
+          <variable citdl="Heap" ilk="argument" name="self" />
+          <variable citdl="mmap.PAGESIZE" ilk="argument" name="size" />
+        </scope>
+        <variable attributes="protected __instancevar__" citdl="dict" line="101" name="_stop_to_block" />
+        <variable attributes="protected __instancevar__" citdl="list" line="105" name="_pending_free_blocks" />
+        <variable attributes="protected __instancevar__" citdl="list" line="98" name="_lengths" />
+        <variable attributes="protected __instancevar__" citdl="threading.Lock()" line="96" name="_lock" />
+        <variable attributes="protected __instancevar__" citdl="os.getpid()" line="95" name="_lastpid" />
+        <variable attributes="protected __instancevar__" citdl="set()" line="102" name="_allocated_blocks" />
+        <variable attributes="protected __instancevar__" citdl="list" line="103" name="_arenas" />
+        <variable attributes="protected __instancevar__" citdl="dict" line="99" name="_len_to_seq" />
+        <variable attributes="protected" citdl="int" line="92" name="_alignment" />
+        <variable attributes="protected __instancevar__" citdl="mmap.PAGESIZE" line="97" name="_size" />
+        <variable attributes="protected __instancevar__" citdl="dict" line="100" name="_start_to_block" />
+      </scope>
+      <variable citdl="list" line="47" name="__all__" />
+      <import module="_multiprocessing" />
+      <scope ilk="function" name="assert_spawning" signature="assert_spawning(self)" />
+      <import module="bisect" />
+      <scope ilk="function" name="info" signature="info(msg, *args)" />
+      <import module="itertools" />
+      <import module="mmap" />
+      <import module="os" />
+      <import module="sys" />
+      <import module="tempfile" />
+      <import module="threading" />
+      <scope classrefs="object" doc="&#xA;" ilk="class" name="win32" />
+    </scope>
+    

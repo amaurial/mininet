@@ -1,0 +1,214 @@
+<scope ilk="blob" lang="Perl" name="Math::BigFloat">
+      <scope classrefs="Math::BigInt" ilk="class" line="1" lineend="3810" name="Math::BigFloat">
+        <import line="18" module="Exporter" />
+        <variable line="15" name="$VERSION" />
+        <variable line="24" name="$accuracy" />
+        <variable line="24" name="$AUTOLOAD" />
+        <variable line="24" name="$div_scale" />
+        <variable line="24" name="$precision" />
+        <variable line="24" name="$rnd_mode" />
+        <variable line="24" name="$round_mode" />
+        <variable line="25" name="$_trap_inf" />
+        <variable line="25" name="$_trap_nan" />
+        <variable line="25" name="$downgrade" />
+        <variable line="25" name="$upgrade" />
+        <variable line="99" name="*as_int" />
+        <scope attributes="__ctor__" ilk="function" line="88" lineend="88" name="TIESCALAR" signature="TIESCALAR($class)">
+          <variable ilk="argument" name="$class" />
+        </scope>
+        <scope ilk="function" line="89" lineend="89" name="FETCH" signature="FETCH()" />
+        <scope ilk="function" line="90" lineend="90" name="STORE" signature="STORE()" />
+        <scope ilk="function" line="120" lineend="120" name="_method_alias" signature="_method_alias()" />
+        <scope ilk="function" line="121" lineend="121" name="_method_hand_up" signature="_method_hand_up()" />
+        <scope attributes="__ctor__" ilk="function" line="127" lineend="242" name="new" signature="new($class, $wanted, @r)">
+          <import line="179" module="Carp" />
+          <variable ilk="argument" name="$class" />
+          <variable ilk="argument" name="$wanted" />
+          <variable ilk="argument" name="@r" />
+          <import line="179" module="Carp" />
+        </scope>
+        <scope attributes="__ctor__" ilk="function" line="244" lineend="271" name="copy" signature="copy()">
+          </scope>
+        <scope ilk="function" line="273" lineend="289" name="_bnan" signature="_bnan($self)">
+          <import line="280" module="Carp" />
+          <variable ilk="argument" name="$self" />
+          <import line="280" module="Carp" />
+        </scope>
+        <scope ilk="function" line="291" lineend="307" name="_binf" signature="_binf($self)">
+          <import line="298" module="Carp" />
+          <variable ilk="argument" name="$self" />
+          <import line="298" module="Carp" />
+        </scope>
+        <scope ilk="function" line="309" lineend="317" name="_bone" signature="_bone($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="319" lineend="327" name="_bzero" signature="_bzero($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="329" lineend="334" name="isa" signature="isa($self, $class)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$class" />
+        </scope>
+        <scope ilk="function" line="336" lineend="353" name="config" signature="config($class)">
+          <variable ilk="argument" name="$class" />
+        </scope>
+        <scope ilk="function" line="358" lineend="419" name="bstr" signature="bstr()">
+          </scope>
+        <scope ilk="function" line="421" lineend="436" name="bsstr" signature="bsstr()">
+          </scope>
+        <scope ilk="function" line="438" lineend="444" name="numify" signature="numify()">
+          </scope>
+        <scope ilk="function" line="449" lineend="460" name="bneg" signature="bneg()">
+          </scope>
+        <scope ilk="function" line="470" lineend="630" name="bcmp" signature="bcmp()">
+          </scope>
+        <scope ilk="function" line="632" lineend="692" name="bacmp" signature="bacmp()">
+          </scope>
+        <scope ilk="function" line="694" lineend="778" name="badd" signature="badd()">
+          </scope>
+        <scope ilk="function" line="782" lineend="817" name="binc" signature="binc()">
+          </scope>
+        <scope ilk="function" line="819" lineend="855" name="bdec" signature="bdec()">
+          </scope>
+        <scope ilk="function" line="857" lineend="857" name="DEBUG" signature="DEBUG()" />
+        <scope ilk="function" line="859" lineend="993" name="blog" signature="blog()">
+          </scope>
+        <scope ilk="function" line="995" lineend="1023" name="_len_to_steps" signature="_len_to_steps($d)">
+          <variable ilk="argument" name="$d" />
+        </scope>
+        <scope ilk="function" line="1025" lineend="1050" name="bnok" signature="bnok()">
+          </scope>
+        <scope ilk="function" line="1052" lineend="1226" name="bexp" signature="bexp()">
+          </scope>
+        <scope ilk="function" line="1228" lineend="1306" name="_log" signature="_log($self, $x, $scale)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$x" />
+          <variable ilk="argument" name="$scale" />
+        </scope>
+        <scope ilk="function" line="1308" lineend="1508" name="_log_10" signature="_log_10($self, $x, $scale)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$x" />
+          <variable ilk="argument" name="$scale" />
+        </scope>
+        <scope ilk="function" line="1510" lineend="1520" name="blcm" signature="blcm()">
+          </scope>
+        <scope ilk="function" line="1522" lineend="1552" name="bgcd" signature="bgcd($y, $t)">
+          <variable ilk="argument" name="$y" />
+          <variable ilk="argument" name="$t" />
+        </scope>
+        <scope ilk="function" line="1556" lineend="1587" name="_e_add" signature="_e_add($x, $y, $xs, $ys)">
+          <variable ilk="argument" name="$x" />
+          <variable ilk="argument" name="$y" />
+          <variable ilk="argument" name="$xs" />
+          <variable ilk="argument" name="$ys" />
+        </scope>
+        <scope ilk="function" line="1589" lineend="1599" name="_e_sub" signature="_e_sub($x, $y, $xs, $ys)">
+          <variable ilk="argument" name="$x" />
+          <variable ilk="argument" name="$y" />
+          <variable ilk="argument" name="$xs" />
+          <variable ilk="argument" name="$ys" />
+        </scope>
+        <scope ilk="function" line="1604" lineend="1611" name="is_int" signature="is_int()">
+          </scope>
+        <scope ilk="function" line="1613" lineend="1619" name="is_zero" signature="is_zero()">
+          </scope>
+        <scope ilk="function" line="1621" lineend="1631" name="is_one" signature="is_one()">
+          </scope>
+        <scope ilk="function" line="1633" lineend="1641" name="is_odd" signature="is_odd()">
+          </scope>
+        <scope ilk="function" line="1643" lineend="1651" name="is_even" signature="is_even()">
+          </scope>
+        <scope ilk="function" line="1653" lineend="1693" name="bmul" signature="bmul()">
+          </scope>
+        <scope ilk="function" line="1695" lineend="1770" name="bmuladd" signature="bmuladd()">
+          </scope>
+        <scope ilk="function" line="1772" lineend="1908" name="bdiv" signature="bdiv()">
+          </scope>
+        <scope ilk="function" line="1910" lineend="2005" name="bmod" signature="bmod()">
+          </scope>
+        <scope ilk="function" line="2007" lineend="2138" name="broot" signature="broot()">
+          </scope>
+        <scope ilk="function" line="2140" lineend="2305" name="bsqrt" signature="bsqrt()">
+          </scope>
+        <scope ilk="function" line="2307" lineend="2333" name="bfac" signature="bfac()">
+          </scope>
+        <scope ilk="function" line="2335" lineend="2434" name="_pow" signature="_pow($x, $y, @r)">
+          <variable ilk="argument" name="$x" />
+          <variable ilk="argument" name="$y" />
+          <variable ilk="argument" name="@r" />
+        </scope>
+        <scope ilk="function" line="2436" lineend="2494" name="bpow" signature="bpow()">
+          </scope>
+        <scope ilk="function" line="2496" lineend="2525" name="bmodpow" signature="bmodpow()">
+          </scope>
+        <scope ilk="function" line="2532" lineend="2662" name="_atan_inv" signature="_atan_inv($self, $x, $limit)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$x" />
+          <variable ilk="argument" name="$limit" />
+        </scope>
+        <scope attributes="__exportable__" ilk="function" line="2664" lineend="2723" name="bpi" signature="bpi($self, $n)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$n" />
+        </scope>
+        <scope ilk="function" line="2725" lineend="2821" name="bcos" signature="bcos()">
+          </scope>
+        <scope ilk="function" line="2823" lineend="2920" name="bsin" signature="bsin()">
+          </scope>
+        <scope ilk="function" line="2922" lineend="3093" name="batan2" signature="batan2()">
+          </scope>
+        <scope ilk="function" line="3095" lineend="3249" name="batan" signature="batan($x, @r)">
+          <variable ilk="argument" name="$x" />
+          <variable ilk="argument" name="@r" />
+        </scope>
+        <scope attributes="__ctor__" ilk="function" line="3254" lineend="3360" name="bfround" signature="bfround($x)">
+          <variable ilk="argument" name="$x" />
+        </scope>
+        <scope attributes="__ctor__" ilk="function" line="3362" lineend="3402" name="bround" signature="bround($x)">
+          <import line="3369" module="Carp" />
+          <variable ilk="argument" name="$x" />
+          <import line="3369" module="Carp" />
+        </scope>
+        <scope ilk="function" line="3404" lineend="3422" name="bfloor" signature="bfloor()">
+          </scope>
+        <scope ilk="function" line="3424" lineend="3441" name="bceil" signature="bceil()">
+          </scope>
+        <scope ilk="function" line="3443" lineend="3465" name="brsft" signature="brsft()">
+          </scope>
+        <scope ilk="function" line="3467" lineend="3488" name="blsft" signature="blsft()">
+          </scope>
+        <scope ilk="function" line="3492" lineend="3495" name="DESTROY" signature="DESTROY()" />
+        <scope ilk="function" line="3497" lineend="3529" name="AUTOLOAD" signature="AUTOLOAD()">
+          <import line="3512" module="Carp" />
+          <import line="3518" module="Carp" />
+          <import line="3512" module="Carp" />
+          <import line="3518" module="Carp" />
+        </scope>
+        <scope ilk="function" line="3531" lineend="3542" name="exponent" signature="exponent()">
+          </scope>
+        <scope ilk="function" line="3544" lineend="3558" name="mantissa" signature="mantissa()">
+          </scope>
+        <scope ilk="function" line="3560" lineend="3574" name="parts" signature="parts()">
+          </scope>
+        <scope ilk="function" line="3579" lineend="3658" name="import" signature="import($self)">
+          <import line="3644" module="Math::BigInt" />
+          <import line="3649" module="Carp" />
+          <variable ilk="argument" name="$self" />
+          <import line="3644" module="Math::BigInt" />
+          <import line="3649" module="Carp" />
+        </scope>
+        <scope ilk="function" line="3660" lineend="3699" name="bnorm" signature="bnorm()">
+          </scope>
+        <scope ilk="function" line="3703" lineend="3720" name="as_hex" signature="as_hex()">
+          </scope>
+        <scope ilk="function" line="3722" lineend="3739" name="as_bin" signature="as_bin()">
+          </scope>
+        <scope ilk="function" line="3741" lineend="3758" name="as_oct" signature="as_oct()">
+          </scope>
+        <scope ilk="function" line="3760" lineend="3789" name="as_number" signature="as_number()">
+          </scope>
+        <scope ilk="function" line="3791" lineend="3808" name="length" signature="length($x)">
+          <variable ilk="argument" name="$x" />
+        </scope>
+      </scope>
+    </scope>
+    

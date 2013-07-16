@@ -1,0 +1,186 @@
+<scope ilk="blob" lang="Perl" name="Date::Calc::Object">
+      <scope classrefs="Exporter Date::Calc" ilk="class" line="22" lineend="200" name="Date::Calc::Object">
+        <import line="24" module="bytes" />
+        <import line="28" module="Carp::Clan" symbol="^Date::" />
+        <import line="32" module="Exporter" />
+        <import line="33" module="Date::Calc" />
+        <variable line="26" name="$VERSION" />
+        <variable line="26" name="%EXPORT_TAGS" />
+        <variable line="26" name="@AUXILIARY" />
+        <variable line="26" name="@EXPORT" />
+        <variable line="26" name="@EXPORT_OK" />
+        <variable line="26" name="@ISA" />
+        <scope ilk="function" line="45" lineend="82" name="shift_year" signature="shift_year()" />
+        <scope ilk="function" line="84" lineend="121" name="shift_date" signature="shift_date()" />
+        <scope ilk="function" line="123" lineend="160" name="shift_time" signature="shift_time()" />
+        <scope ilk="function" line="162" lineend="200" name="shift_datetime" signature="shift_datetime()" />
+      </scope>
+      <scope ilk="class" line="202" lineend="1780" name="Date::Calc">
+        <import line="206" module="Carp::Clan" symbol="^Date::" />
+        <scope ilk="function" line="234" lineend="237" name="OVERLOAD" signature="OVERLOAD()" />
+        <scope ilk="function" line="241" lineend="245" name="_times_" signature="_times_()" />
+        <scope ilk="function" line="247" lineend="251" name="_times_equal_" signature="_times_equal_()" />
+        <scope ilk="function" line="259" lineend="268" name="accurate_mode" signature="accurate_mode()">
+          </scope>
+        <scope ilk="function" line="270" lineend="279" name="normalized_mode" signature="normalized_mode()">
+          </scope>
+        <scope ilk="function" line="281" lineend="290" name="number_format" signature="number_format()">
+          </scope>
+        <scope ilk="function" line="292" lineend="314" name="delta_format" signature="delta_format()">
+          </scope>
+        <scope ilk="function" line="316" lineend="338" name="date_format" signature="date_format()">
+          </scope>
+        <scope ilk="function" line="340" lineend="387" name="language" signature="language()">
+          </scope>
+        <scope ilk="function" line="389" lineend="403" name="is_delta" signature="is_delta($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="405" lineend="419" name="is_date" signature="is_date($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="421" lineend="433" name="is_short" signature="is_short($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="435" lineend="447" name="is_long" signature="is_long($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="449" lineend="509" name="is_valid" signature="is_valid($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="511" lineend="563" name="normalize" signature="normalize()">
+          </scope>
+        <scope attributes="__ctor__" ilk="function" line="565" lineend="592" name="new" signature="new()">
+          </scope>
+        <scope ilk="function" line="594" lineend="605" name="clone" signature="clone($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="607" lineend="626" name="copy" signature="copy()">
+          </scope>
+        <scope ilk="function" line="628" lineend="654" name="date" signature="date()">
+          </scope>
+        <scope ilk="function" line="656" lineend="683" name="time" signature="time()">
+          </scope>
+        <scope ilk="function" line="685" lineend="716" name="datetime" signature="datetime()">
+          </scope>
+        <scope ilk="function" line="718" lineend="733" name="today" signature="today()">
+          </scope>
+        <scope ilk="function" line="735" lineend="750" name="now" signature="now()">
+          </scope>
+        <scope ilk="function" line="752" lineend="767" name="today_and_now" signature="today_and_now()">
+          </scope>
+        <scope ilk="function" line="769" lineend="794" name="gmtime" signature="gmtime()">
+          </scope>
+        <scope ilk="function" line="796" lineend="821" name="localtime" signature="localtime()">
+          </scope>
+        <scope ilk="function" line="823" lineend="848" name="mktime" signature="mktime($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="850" lineend="875" name="tzoffset" signature="tzoffset()">
+          </scope>
+        <scope ilk="function" line="877" lineend="902" name="date2time" signature="date2time($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="904" lineend="929" name="time2date" signature="time2date()">
+          </scope>
+        <scope ilk="function" line="931" lineend="942" name="year" signature="year()">
+          </scope>
+        <scope ilk="function" line="944" lineend="955" name="month" signature="month()">
+          </scope>
+        <scope ilk="function" line="957" lineend="968" name="day" signature="day()">
+          </scope>
+        <scope ilk="function" line="970" lineend="994" name="hours" signature="hours()">
+          </scope>
+        <scope ilk="function" line="996" lineend="1020" name="minutes" signature="minutes()">
+          </scope>
+        <scope ilk="function" line="1022" lineend="1046" name="seconds" signature="seconds()">
+          </scope>
+        <scope ilk="function" line="1065" lineend="1163" name="number" signature="number($self, $format)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$format" />
+        </scope>
+        <scope ilk="function" line="1165" lineend="1331" name="string" signature="string($self, $format, $lang)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$format" />
+          <variable ilk="argument" name="$lang" />
+        </scope>
+        <scope ilk="function" line="1333" lineend="1472" name="_process_" signature="_process_($self, $this, $flag, $code)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$this" />
+          <variable ilk="argument" name="$flag" />
+          <variable ilk="argument" name="$code" />
+        </scope>
+        <scope ilk="function" line="1474" lineend="1479" name="_unary_minus_" signature="_unary_minus_($self, $this, $flag)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$this" />
+          <variable ilk="argument" name="$flag" />
+        </scope>
+        <scope ilk="function" line="1481" lineend="1486" name="_compare_date_" signature="_compare_date_($self, $this, $flag)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$this" />
+          <variable ilk="argument" name="$flag" />
+        </scope>
+        <scope ilk="function" line="1488" lineend="1493" name="_compare_date_time_" signature="_compare_date_time_($self, $this, $flag)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$this" />
+          <variable ilk="argument" name="$flag" />
+        </scope>
+        <scope ilk="function" line="1495" lineend="1500" name="_equal_date_" signature="_equal_date_($self, $this, $flag)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$this" />
+          <variable ilk="argument" name="$flag" />
+        </scope>
+        <scope ilk="function" line="1502" lineend="1507" name="_not_equal_date_" signature="_not_equal_date_($self, $this, $flag)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$this" />
+          <variable ilk="argument" name="$flag" />
+        </scope>
+        <scope ilk="function" line="1509" lineend="1514" name="_equal_date_time_" signature="_equal_date_time_($self, $this, $flag)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$this" />
+          <variable ilk="argument" name="$flag" />
+        </scope>
+        <scope ilk="function" line="1516" lineend="1521" name="_not_equal_date_time_" signature="_not_equal_date_time_($self, $this, $flag)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$this" />
+          <variable ilk="argument" name="$flag" />
+        </scope>
+        <scope ilk="function" line="1523" lineend="1529" name="_date_time_" signature="_date_time_($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="1531" lineend="1600" name="_add_" signature="_add_($result, $self, $this, $flag, $val1, $val2, $len1, $len2)">
+          <variable ilk="argument" name="$result" />
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$this" />
+          <variable ilk="argument" name="$flag" />
+          <variable ilk="argument" name="$val1" />
+          <variable ilk="argument" name="$val2" />
+          <variable ilk="argument" name="$len1" />
+          <variable ilk="argument" name="$len2" />
+        </scope>
+        <scope ilk="function" line="1602" lineend="1613" name="_plus_" signature="_plus_($self, $this, $flag)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$this" />
+          <variable ilk="argument" name="$flag" />
+        </scope>
+        <scope ilk="function" line="1615" lineend="1750" name="_minus_" signature="_minus_($self, $this, $flag)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$this" />
+          <variable ilk="argument" name="$flag" />
+        </scope>
+        <scope ilk="function" line="1752" lineend="1757" name="_plus_equal_" signature="_plus_equal_($self, $this)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$this" />
+        </scope>
+        <scope ilk="function" line="1759" lineend="1764" name="_minus_equal_" signature="_minus_equal_($self, $this)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$this" />
+        </scope>
+        <scope ilk="function" line="1766" lineend="1771" name="_increment_" signature="_increment_($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="1773" lineend="1778" name="_decrement_" signature="_decrement_($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+      </scope>
+    </scope>
+    

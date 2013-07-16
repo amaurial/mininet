@@ -1,0 +1,71 @@
+<scope ilk="blob" lang="Perl" name="Module::Metadata">
+      <scope ilk="class" line="3" lineend="755" name="Module::Metadata">
+        <import line="17" module="File::Spec" symbol="*" />
+        <import line="18" module="IO::File" symbol="*" />
+        <import line="19" module="version" symbol="*" />
+        <import line="27" module="File::Find" symbol="find" />
+        <variable line="13" name="$VERSION" />
+        <variable line="24" name="*log_info" />
+        <scope ilk="function" line="64" lineend="70" name="new_from_file" signature="new_from_file($class)">
+          <variable ilk="argument" name="$class" />
+        </scope>
+        <scope ilk="function" line="72" lineend="81" name="new_from_module" signature="new_from_module($class, $module, %props)">
+          <variable ilk="argument" name="$class" />
+          <variable ilk="argument" name="$module" />
+          <variable ilk="argument" name="%props" />
+        </scope>
+        <scope ilk="function" line="151" lineend="275" name="package_versions_from_directory" signature="package_versions_from_directory($class, $dir, $files)">
+          <variable ilk="argument" name="$class" />
+          <variable ilk="argument" name="$dir" />
+          <variable ilk="argument" name="$files" />
+        </scope>
+        <scope attributes="__ctor__" ilk="function" line="279" lineend="328" name="_init" signature="_init($class, $module, $filename, %props)">
+          <variable ilk="argument" name="$class" />
+          <variable ilk="argument" name="$module" />
+          <variable ilk="argument" name="$filename" />
+          <variable ilk="argument" name="%props" />
+        </scope>
+        <scope ilk="function" line="331" lineend="345" name="_do_find_module" signature="_do_find_module($class, $module, $dirs)">
+          <variable ilk="argument" name="$class" />
+          <variable ilk="argument" name="$module" />
+          <variable ilk="argument" name="$dirs" />
+        </scope>
+        <scope ilk="function" line="348" lineend="351" name="find_module_by_name" signature="find_module_by_name()">
+          </scope>
+        <scope ilk="function" line="354" lineend="357" name="find_module_dir_by_name" signature="find_module_dir_by_name()">
+          </scope>
+        <scope ilk="function" line="362" lineend="376" name="_parse_version_expression" signature="_parse_version_expression($self, $line)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$line" />
+        </scope>
+        <scope ilk="function" line="378" lineend="386" name="_parse_file" signature="_parse_file($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="388" lineend="501" name="_parse_fh" signature="_parse_fh($self, $fh)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$fh" />
+        </scope>
+        <scope ilk="function" line="505" lineend="552" name="_evaluate_version_line" signature="_evaluate_version_line($self, $sigil, $var, $line)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$sigil" />
+          <variable ilk="argument" name="$var" />
+          <variable ilk="argument" name="$line" />
+        </scope>
+        <scope ilk="function" line="593" lineend="609" name="_dwim_version" signature="_dwim_version()">
+          </scope>
+        <scope ilk="function" line="615" lineend="615" name="name" signature="name()" />
+        <scope ilk="function" line="617" lineend="617" name="filename" signature="filename()" />
+        <scope ilk="function" line="618" lineend="618" name="packages_inside" signature="packages_inside()" />
+        <scope ilk="function" line="619" lineend="619" name="pod_inside" signature="pod_inside()" />
+        <scope ilk="function" line="620" lineend="620" name="contains_pod" signature="contains_pod()" />
+        <scope ilk="function" line="622" lineend="632" name="version" signature="version($self, $mod)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$mod" />
+        </scope>
+        <scope ilk="function" line="634" lineend="643" name="pod" signature="pod($self, $sect)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$sect" />
+        </scope>
+      </scope>
+    </scope>
+    

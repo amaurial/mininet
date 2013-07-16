@@ -1,0 +1,16 @@
+<scope ilk="blob" lang="Perl" name="URI::ldapi">
+      <scope classrefs="URI::_ldap URI::_generic" ilk="class" line="1" lineend="30" name="URI::ldapi">
+        <import line="7" module="URI::_generic" />
+        <import line="8" module="URI::_ldap" />
+        <import line="11" module="URI::Escape" />
+        <variable line="5" name="@ISA" />
+        <scope ilk="function" line="13" lineend="23" name="un_path" signature="un_path($self, $p)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$p" />
+        </scope>
+        <scope ilk="function" line="25" lineend="28" name="_nonldap_canonical" signature="_nonldap_canonical($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+      </scope>
+    </scope>
+    

@@ -1,0 +1,42 @@
+<scope ilk="blob" lang="Perl" name="Socket">
+      <scope classrefs="Exporter" ilk="class" line="1" lineend="804" name="Socket">
+        <import line="310" module="Carp" symbol="*" />
+        <import line="311" module="warnings::register" symbol="*" />
+        <import line="313" module="Exporter" />
+        <import line="314" module="XSLoader" />
+        <import line="597" module="Scalar::Util" />
+        <variable line="5" name="$VERSION" />
+        <variable line="5" name="%EXPORT_TAGS" />
+        <variable line="5" name="@EXPORT" />
+        <variable line="5" name="@EXPORT_OK" />
+        <variable line="5" name="@ISA" />
+        <variable line="547" name="*CR" />
+        <variable line="548" name="*LF" />
+        <variable line="549" name="*CRLF" />
+        <variable line="599" name="*getaddrinfo" />
+        <variable line="600" name="*getnameinfo" />
+        <scope attributes="__exportable__" ilk="function" line="542" lineend="542" name="CR" signature="CR()" />
+        <scope attributes="__exportable__" ilk="function" line="543" lineend="543" name="LF" signature="LF()" />
+        <scope attributes="__exportable__" ilk="function" line="544" lineend="544" name="CRLF" signature="CRLF()" />
+        <scope attributes="__exported__" ilk="function" line="551" lineend="564" name="sockaddr_in" signature="sockaddr_in($af, $port, @quad)">
+          <variable ilk="argument" name="$af" />
+          <variable ilk="argument" name="$port" />
+          <variable ilk="argument" name="@quad" />
+        </scope>
+        <scope attributes="__exported__" ilk="function" line="566" lineend="575" name="sockaddr_in6" signature="sockaddr_in6()" />
+        <scope attributes="__exported__" ilk="function" line="577" lineend="585" name="sockaddr_un" signature="sockaddr_un()" />
+        <scope ilk="function" line="650" lineend="655" name="fake_makeerr" signature="fake_makeerr($errno)">
+          <variable ilk="argument" name="$errno" />
+        </scope>
+        <scope ilk="function" line="657" lineend="756" name="fake_getaddrinfo" signature="fake_getaddrinfo($node, $service, $hints)">
+          <variable ilk="argument" name="$node" />
+          <variable ilk="argument" name="$service" />
+          <variable ilk="argument" name="$hints" />
+        </scope>
+        <scope ilk="function" line="758" lineend="802" name="fake_getnameinfo" signature="fake_getnameinfo($addr, $flags)">
+          <variable ilk="argument" name="$addr" />
+          <variable ilk="argument" name="$flags" />
+        </scope>
+      </scope>
+    </scope>
+    

@@ -1,0 +1,72 @@
+<scope ilk="blob" lang="Perl" name="Sub::Exporter">
+      <scope ilk="class" line="4" lineend="1101" name="Sub::Exporter">
+        <import line="6" module="Carp" />
+        <import line="7" module="Data::OptList" />
+        <import line="8" module="Params::Util" />
+        <import line="9" module="Sub::Install" symbol="*" />
+        <variable line="21" name="$VERSION" />
+        <scope ilk="function" line="403" lineend="408" name="_group_name" signature="_group_name($name)">
+          <variable ilk="argument" name="$name" />
+        </scope>
+        <scope ilk="function" line="414" lineend="453" name="_expand_groups" signature="_expand_groups($class, $config, $groups, $collection, $seen, $merge)">
+          <variable ilk="argument" name="$class" />
+          <variable ilk="argument" name="$config" />
+          <variable ilk="argument" name="$groups" />
+          <variable ilk="argument" name="$collection" />
+          <variable ilk="argument" name="$seen" />
+          <variable ilk="argument" name="$merge" />
+        </scope>
+        <scope ilk="function" line="456" lineend="512" name="_expand_group" signature="_expand_group($class, $config, $group, $collection, $seen, $merge)">
+          <variable ilk="argument" name="$class" />
+          <variable ilk="argument" name="$config" />
+          <variable ilk="argument" name="$group" />
+          <variable ilk="argument" name="$collection" />
+          <variable ilk="argument" name="$seen" />
+          <variable ilk="argument" name="$merge" />
+        </scope>
+        <scope ilk="function" line="514" lineend="545" name="_mk_collection_builder" signature="_mk_collection_builder($col, $etc, $collection)">
+          <variable ilk="argument" name="$col" />
+          <variable ilk="argument" name="$etc" />
+          <variable ilk="argument" name="$collection" />
+        </scope>
+        <scope ilk="function" line="549" lineend="566" name="_collect_collections" signature="_collect_collections($config, $import_args, $class, $into)">
+          <variable ilk="argument" name="$config" />
+          <variable ilk="argument" name="$import_args" />
+          <variable ilk="argument" name="$class" />
+          <variable ilk="argument" name="$into" />
+        </scope>
+        <scope ilk="function" line="593" lineend="612" name="setup_exporter" signature="setup_exporter($config)">
+          <variable ilk="argument" name="$config" />
+        </scope>
+        <scope ilk="function" line="625" lineend="629" name="_key_intersection" signature="_key_intersection($x, $y)">
+          <variable ilk="argument" name="$x" />
+          <variable ilk="argument" name="$y" />
+        </scope>
+        <scope ilk="function" line="643" lineend="650" name="_assert_collector_names_ok" signature="_assert_collector_names_ok($collectors)">
+          <variable ilk="argument" name="$collectors" />
+        </scope>
+        <scope ilk="function" line="652" lineend="704" name="_rewrite_build_config" signature="_rewrite_build_config($config)">
+          <variable ilk="argument" name="$config" />
+        </scope>
+        <scope ilk="function" line="706" lineend="759" name="build_exporter" signature="build_exporter($config)">
+          <variable ilk="argument" name="$config" />
+        </scope>
+        <scope ilk="function" line="761" lineend="807" name="_do_import" signature="_do_import($arg, $to_import)">
+          <variable ilk="argument" name="$arg" />
+          <variable ilk="argument" name="$to_import" />
+        </scope>
+        <scope ilk="function" line="843" lineend="862" name="default_generator" signature="default_generator($arg)">
+          <variable ilk="argument" name="$arg" />
+        </scope>
+        <scope ilk="function" line="882" lineend="903" name="default_installer" signature="default_installer($arg, $to_export)">
+          <variable ilk="argument" name="$arg" />
+          <variable ilk="argument" name="$to_export" />
+        </scope>
+        <scope ilk="function" line="905" lineend="908" name="default_exporter" signature="default_exporter()" />
+        <scope ilk="function" line="945" lineend="957" name="_setup" signature="_setup($value, $arg)">
+          <variable ilk="argument" name="$value" />
+          <variable ilk="argument" name="$arg" />
+        </scope>
+      </scope>
+    </scope>
+    

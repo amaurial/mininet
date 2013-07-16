@@ -1,0 +1,109 @@
+<scope ilk="blob" lang="Perl" name="PPI::Element">
+      <scope ilk="class" line="1" lineend="1126" name="PPI::Element">
+        <import line="25" module="Clone" />
+        <import line="26" module="Scalar::Util" symbol="refaddr" />
+        <import line="27" module="Params::Util" symbol="_INSTANCE" />
+        <import line="27" module="Params::Util" symbol="_ARRAY" />
+        <import line="28" module="List::MoreUtils" />
+        <import line="29" module="PPI::Util" />
+        <import line="30" module="PPI::Node" />
+        <variable line="32" name="$errstr" />
+        <variable line="32" name="$VERSION" />
+        <variable line="32" name="%_PARENT" />
+        <scope ilk="function" line="70" lineend="70" name="significant" signature="significant()" />
+        <scope ilk="function" line="85" lineend="85" name="class" signature="class()" />
+        <scope ilk="function" line="100" lineend="100" name="tokens" signature="tokens()" />
+        <scope ilk="function" line="125" lineend="125" name="content" signature="content()" />
+        <scope ilk="function" line="147" lineend="147" name="parent" signature="parent()" />
+        <scope ilk="function" line="198" lineend="205" name="descendant_of" signature="descendant_of($cursor, $parent)">
+          <variable ilk="argument" name="$cursor" />
+          <variable ilk="argument" name="$parent" />
+        </scope>
+        <scope ilk="function" line="256" lineend="263" name="ancestor_of" signature="ancestor_of($self, $cursor)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$cursor" />
+        </scope>
+        <scope ilk="function" line="281" lineend="287" name="statement" signature="statement($cursor)">
+          <variable ilk="argument" name="$cursor" />
+        </scope>
+        <scope ilk="function" line="304" lineend="310" name="top" signature="top($cursor)">
+          <variable ilk="argument" name="$cursor" />
+        </scope>
+        <scope ilk="function" line="324" lineend="327" name="document" signature="document()">
+          </scope>
+        <scope ilk="function" line="339" lineend="346" name="next_sibling" signature="next_sibling($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="362" lineend="369" name="snext_sibling" signature="snext_sibling($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="387" lineend="394" name="previous_sibling" signature="previous_sibling($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="410" lineend="417" name="sprevious_sibling" signature="sprevious_sibling($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="442" lineend="449" name="first_token" signature="first_token($cursor)">
+          <variable ilk="argument" name="$cursor" />
+        </scope>
+        <scope ilk="function" line="470" lineend="477" name="last_token" signature="last_token($cursor)">
+          <variable ilk="argument" name="$cursor" />
+        </scope>
+        <scope ilk="function" line="499" lineend="514" name="next_token" signature="next_token($cursor)">
+          <variable ilk="argument" name="$cursor" />
+        </scope>
+        <scope ilk="function" line="535" lineend="550" name="previous_token" signature="previous_token($cursor)">
+          <variable ilk="argument" name="$cursor" />
+        </scope>
+        <scope ilk="function" line="570" lineend="572" name="clone" signature="clone()" />
+        <scope ilk="function" line="627" lineend="630" name="__insert_before" signature="__insert_before($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="684" lineend="687" name="__insert_after" signature="__insert_after($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="701" lineend="705" name="remove" signature="remove($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="720" lineend="724" name="delete" signature="delete()" />
+        <scope ilk="function" line="740" lineend="744" name="replace" signature="replace()">
+          </scope>
+        <scope ilk="function" line="773" lineend="780" name="location" signature="location($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="811" lineend="816" name="line_number" signature="line_number($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="847" lineend="852" name="column_number" signature="column_number($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="890" lineend="895" name="visual_column_number" signature="visual_column_number($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="929" lineend="933" name="logical_line_number" signature="logical_line_number($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="971" lineend="976" name="logical_filename" signature="logical_filename($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="978" lineend="1001" name="_ensure_location_present" signature="_ensure_location_present($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="1007" lineend="1036" name="_flush_locations" signature="_flush_locations($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="1045" lineend="1049" name="_xml_name" signature="_xml_name()">
+          </scope>
+        <scope ilk="function" line="1051" lineend="1053" name="_xml_attr" signature="_xml_attr()" />
+        <scope ilk="function" line="1055" lineend="1057" name="_xml_content" signature="_xml_content()" />
+        <scope ilk="function" line="1067" lineend="1070" name="_error" signature="_error()" />
+        <scope ilk="function" line="1073" lineend="1076" name="_clear" signature="_clear()" />
+        <scope ilk="function" line="1083" lineend="1083" name="DESTROY" signature="DESTROY()" />
+        <scope ilk="function" line="1086" lineend="1086" name="__equals" signature="__equals()" />
+        <scope ilk="function" line="1087" lineend="1087" name="__nequals" signature="__nequals()" />
+        <scope ilk="function" line="1088" lineend="1092" name="__eq" signature="__eq()">
+          </scope>
+        <scope ilk="function" line="1093" lineend="1093" name="__ne" signature="__ne()" />
+      </scope>
+    </scope>
+    

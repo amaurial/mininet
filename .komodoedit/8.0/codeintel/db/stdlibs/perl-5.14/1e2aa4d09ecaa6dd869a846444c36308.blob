@@ -1,0 +1,57 @@
+<scope ilk="blob" lang="Perl" name="CPAN::HTTP::Client">
+      <scope ilk="class" line="3" lineend="254" name="CPAN::HTTP::Client">
+        <import line="6" module="CPAN::HTTP::Credentials" symbol="*" />
+        <import line="7" module="HTTP::Tiny" symbol="*" />
+        <variable line="5" name="@ISA" />
+        <variable line="9" name="$CPAN::HTTP::Client::VERSION" />
+        <scope attributes="__ctor__" ilk="function" line="14" lineend="22" name="new" signature="new($class, %args)">
+          <variable ilk="argument" name="$class" />
+          <variable ilk="argument" name="%args" />
+        </scope>
+        <scope ilk="function" line="30" lineend="58" name="mirror" signature="mirror($self, $uri, $path)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$uri" />
+          <variable ilk="argument" name="$path" />
+        </scope>
+        <scope ilk="function" line="60" lineend="65" name="_want_proxy" signature="_want_proxy($self, $uri)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$uri" />
+        </scope>
+        <scope ilk="function" line="71" lineend="90" name="_auth_headers" signature="_auth_headers($self, $uri, $mode)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$uri" />
+          <variable ilk="argument" name="$mode" />
+        </scope>
+        <scope ilk="function" line="94" lineend="106" name="_get_auth_params" signature="_get_auth_params($self, $response, $mode)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$response" />
+          <variable ilk="argument" name="$mode" />
+        </scope>
+        <scope ilk="function" line="109" lineend="131" name="_get_challenge" signature="_get_challenge($self, $response, $auth_header)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$response" />
+          <variable ilk="argument" name="$auth_header" />
+        </scope>
+        <scope ilk="function" line="134" lineend="143" name="_basic_auth" signature="_basic_auth($self, $user, $pass)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$user" />
+          <variable ilk="argument" name="$pass" />
+        </scope>
+        <scope ilk="function" line="146" lineend="199" name="_digest_auth" signature="_digest_auth($self, $user, $pass, $auth_param, $uri)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$user" />
+          <variable ilk="argument" name="$pass" />
+          <variable ilk="argument" name="$auth_param" />
+          <variable ilk="argument" name="$uri" />
+        </scope>
+        <scope ilk="function" line="202" lineend="211" name="split_header_words" signature="split_header_words($self, @words)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="@words" />
+        </scope>
+        <scope ilk="function" line="213" lineend="252" name="_split_header_words" signature="_split_header_words($self, @val)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="@val" />
+        </scope>
+      </scope>
+    </scope>
+    

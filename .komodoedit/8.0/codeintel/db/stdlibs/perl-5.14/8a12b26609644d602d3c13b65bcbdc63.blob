@@ -1,0 +1,66 @@
+<scope ilk="blob" lang="Perl" name="Class::MOP::Deprecated">
+      <scope ilk="class" line="1" lineend="51" name="Class::MOP::Deprecated">
+        <import line="12" module="Package::DeprecationManager" symbol="*" />
+        <variable line="3" name="$Class::MOP::Deprecated::AUTHORITY" />
+        <variable line="6" name="$Class::MOP::Deprecated::VERSION" />
+      </scope>
+      <scope ilk="class" line="55" lineend="77" name="Class::MOP">
+        <scope ilk="function" line="57" lineend="62" name="HAVE_ISAREV" signature="HAVE_ISAREV()" />
+        <scope ilk="function" line="64" lineend="69" name="subname" signature="subname()">
+          <import line="67" module="Sub::Name" />
+          <import line="67" module="Sub::Name" />
+        </scope>
+        <scope ilk="function" line="71" lineend="77" name="in_global_destruction" signature="in_global_destruction()">
+          <import line="75" module="Devel::GlobalDestruction" />
+          <import line="75" module="Devel::GlobalDestruction" />
+        </scope>
+      </scope>
+      <scope ilk="class" line="80" lineend="92" name="Class::MOP::Package">
+        <import line="82" module="Scalar::Util" symbol="blessed" />
+        <scope ilk="function" line="84" lineend="92" name="get_method_map" signature="get_method_map($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+      </scope>
+      <scope ilk="class" line="95" lineend="95" name="Class::MOP::Module" />
+      <scope ilk="class" line="98" lineend="174" name="Class::MOP::Class">
+        <scope ilk="function" line="100" lineend="106" name="construct_class_instance" signature="construct_class_instance()" />
+        <scope ilk="function" line="108" lineend="114" name="check_metaclass_compatibility" signature="check_metaclass_compatibility()" />
+        <scope ilk="function" line="116" lineend="122" name="construct_instance" signature="construct_instance()" />
+        <scope ilk="function" line="124" lineend="130" name="create_meta_instance" signature="create_meta_instance()" />
+        <scope ilk="function" line="132" lineend="138" name="clone_instance" signature="clone_instance()" />
+        <scope ilk="function" line="140" lineend="145" name="alias_method" signature="alias_method()" />
+        <scope ilk="function" line="147" lineend="159" name="compute_all_applicable_methods" signature="compute_all_applicable_methods()" />
+        <scope ilk="function" line="161" lineend="167" name="compute_all_applicable_attributes" signature="compute_all_applicable_attributes()" />
+        <scope ilk="function" line="169" lineend="174" name="get_attribute_map" signature="get_attribute_map()" />
+      </scope>
+      <scope ilk="class" line="177" lineend="186" name="Class::MOP::Instance">
+        <scope attributes="__ctor__" ilk="function" line="179" lineend="186" name="bless_instance_structure" signature="bless_instance_structure($self, $instance_structure)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$instance_structure" />
+        </scope>
+      </scope>
+      <scope ilk="class" line="189" lineend="197" name="Class::MOP::Attribute">
+        <scope ilk="function" line="191" lineend="197" name="process_accessors" signature="process_accessors()" />
+      </scope>
+      <scope ilk="class" line="200" lineend="288" name="Class::MOP::Method::Accessor">
+        <scope ilk="function" line="202" lineend="208" name="initialize_body" signature="initialize_body()" />
+        <scope ilk="function" line="210" lineend="216" name="generate_accessor_method" signature="generate_accessor_method()" />
+        <scope ilk="function" line="218" lineend="224" name="generate_reader_method" signature="generate_reader_method()" />
+        <scope ilk="function" line="226" lineend="232" name="generate_writer_method" signature="generate_writer_method()" />
+        <scope ilk="function" line="234" lineend="240" name="generate_predicate_method" signature="generate_predicate_method()" />
+        <scope ilk="function" line="242" lineend="248" name="generate_clearer_method" signature="generate_clearer_method()" />
+        <scope ilk="function" line="250" lineend="256" name="generate_accessor_method_inline" signature="generate_accessor_method_inline()" />
+        <scope ilk="function" line="258" lineend="264" name="generate_reader_method_inline" signature="generate_reader_method_inline()" />
+        <scope ilk="function" line="266" lineend="272" name="generate_writer_method_inline" signature="generate_writer_method_inline()" />
+        <scope ilk="function" line="274" lineend="280" name="generate_predicate_method_inline" signature="generate_predicate_method_inline()" />
+        <scope ilk="function" line="282" lineend="288" name="generate_clearer_method_inline" signature="generate_clearer_method_inline()" />
+      </scope>
+      <scope ilk="class" line="291" lineend="334" name="Class::MOP::Method::Constructor">
+        <scope ilk="function" line="293" lineend="299" name="meta_instance" signature="meta_instance()" />
+        <scope ilk="function" line="301" lineend="308" name="attributes" signature="attributes()" />
+        <scope ilk="function" line="310" lineend="316" name="initialize_body" signature="initialize_body()" />
+        <scope ilk="function" line="318" lineend="324" name="generate_constructor_method" signature="generate_constructor_method()" />
+        <scope ilk="function" line="326" lineend="332" name="generate_constructor_method_inline" signature="generate_constructor_method_inline()" />
+      </scope>
+    </scope>
+    

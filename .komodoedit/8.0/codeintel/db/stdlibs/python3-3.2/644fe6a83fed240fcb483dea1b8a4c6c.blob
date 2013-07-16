@@ -1,0 +1,138 @@
+<scope doc="Configuration file parser.&#xA;A configuration file consists of sections, lead by a &quot;[section]&quot; header, and followed by &quot;name: value&quot; entries, with continuations and such in the style of RFC 822.  Intrinsic defaults can be specified by passing them into the ConfigParser constructor as a dictionary.  class:  ConfigParser -- responsible for parsing a list of" ilk="blob" lang="Python" name="configparser">
+      <scope classrefs="Interpolation" doc="Interpolation as implemented in the classic ConfigParser.&#xA;The option values can contain format strings which refer to other values in the same section, or values in the special default section.  For example:  something: %(dir)s/whatever  would resolve the &quot;%(dir)s&quot; to the value of dir.  All reference expansions are done late, on demand. If a user needs to use a bare % in a configuration file, she can escape it by writing %%. Other other % usage" ilk="class" name="BasicInterpolation">
+        <scope ilk="function" name="before_set" signature="before_set(self, parser, section, option, value)" />
+        <scope ilk="function" name="_interpolate_some" signature="_interpolate_some(self, parser, option, accum, rest, section, map, depth)" />
+        <scope ilk="function" name="before_get" signature="before_get(self, parser, section, option, value, defaults)" />
+      </scope>
+      <scope classrefs="RawConfigParser" doc="ConfigParser implementing interpolation.&#xA;" ilk="class" name="ConfigParser">
+        <scope doc="Set an option." ilk="function" name="set" signature="set(self, section, option, value=None)" />
+        <scope doc="Create a new section in the configuration." ilk="function" name="add_section" signature="add_section(self, section)" />
+      </scope>
+      <variable citdl="str" name="DEFAULTSECT" />
+      <scope classrefs="Error" doc="Raised by strict parsers when an option is repeated in an input source.&#xA;Current implementation raises this exception only when an option is found more than once in a single file, string or dictionary." ilk="class" name="DuplicateOptionError">
+        <scope ilk="function" name="__init__" signature="__init__(self, section, option, source=None, lineno=None)" />
+      </scope>
+      <scope classrefs="Error" doc="Raised when a section is repeated in an input source.&#xA;Possible repetitions that raise this exception are: multiple creation using the API or in strict parsers when a section is found more than once in a single input file, string or dictionary." ilk="class" name="DuplicateSectionError">
+        <scope ilk="function" name="__init__" signature="__init__(self, section, source=None, lineno=None)" />
+      </scope>
+      <scope classrefs="Exception" doc="Base class for ConfigParser exceptions.&#xA;" ilk="class" name="Error">
+        <scope doc="Setter for &apos;message&apos;; needed only to override deprecation in&#xA;BaseException." ilk="function" name="_set_message" signature="_set_message(self, value)" />
+        <scope ilk="function" name="__str__" signature="__str__(self)" />
+        <scope doc="Getter for &apos;message&apos;; needed only to override deprecation in&#xA;BaseException." ilk="function" name="_get_message" signature="_get_message(self)" />
+        <scope ilk="function" name="__repr__" signature="__repr__(self)" />
+        <scope ilk="function" name="__init__" signature="__init__(self, msg=&apos;&apos;)" />
+      </scope>
+      <scope classrefs="Interpolation" doc="Advanced variant of interpolation, supports the syntax used by&#xA;`zc.buildout&apos;. Enables interpolation between sections." ilk="class" name="ExtendedInterpolation">
+        <scope ilk="function" name="before_set" signature="before_set(self, parser, section, option, value)" />
+        <scope ilk="function" name="_interpolate_some" signature="_interpolate_some(self, parser, option, accum, rest, section, map, depth)" />
+        <scope ilk="function" name="before_get" signature="before_get(self, parser, section, option, value, defaults)" />
+      </scope>
+      <scope classrefs="object" doc="Dummy interpolation that passes the value through with no changes.&#xA;" ilk="class" name="Interpolation">
+        <scope ilk="function" name="before_write" signature="before_write(self, parser, section, option, value)" />
+        <scope ilk="function" name="before_set" signature="before_set(self, parser, section, option, value)" />
+        <scope ilk="function" name="before_read" signature="before_read(self, parser, section, option, value)" />
+        <scope ilk="function" name="before_get" signature="before_get(self, parser, section, option, value, defaults)" />
+      </scope>
+      <scope classrefs="InterpolationError" doc="Raised when substitutions are nested too deeply.&#xA;" ilk="class" name="InterpolationDepthError">
+        <scope ilk="function" name="__init__" signature="__init__(self, option, section, rawval)" />
+      </scope>
+      <scope classrefs="Error" doc="Base class for interpolation-related exceptions.&#xA;" ilk="class" name="InterpolationError">
+        <scope ilk="function" name="__init__" signature="__init__(self, option, section, msg)" />
+      </scope>
+      <scope classrefs="InterpolationError" doc="A string substitution required a setting which was not available.&#xA;" ilk="class" name="InterpolationMissingOptionError">
+        <scope ilk="function" name="__init__" signature="__init__(self, option, section, rawval, reference)" />
+      </scope>
+      <scope classrefs="InterpolationError" doc="Raised when the source text contains invalid syntax.&#xA;Current implementation raises this exception when the source text into which substitutions are made does not conform to the required syntax." ilk="class" name="InterpolationSyntaxError" />
+      <scope classrefs="Interpolation" doc="Deprecated interpolation used in old versions of ConfigParser.&#xA;Use BasicInterpolation or ExtendedInterpolation instead." ilk="class" name="LegacyInterpolation">
+        <scope ilk="function" name="before_set" signature="before_set(self, parser, section, option, value)" />
+        <scope ilk="function" name="_interpolation_replace" signature="_interpolation_replace(match, parser)" />
+        <scope ilk="function" name="before_get" signature="before_get(self, parser, section, option, value, vars)" />
+      </scope>
+      <variable citdl="int" name="MAX_INTERPOLATION_DEPTH" />
+      <scope classrefs="ParsingError" doc="Raised when a key-value pair is found before any section header.&#xA;" ilk="class" name="MissingSectionHeaderError">
+        <scope ilk="function" name="__init__" signature="__init__(self, filename, lineno, line)" />
+      </scope>
+      <scope classrefs="Mapping" doc="&#xA;" ilk="class" name="MutableMapping">
+        <scope ilk="function" name="__delitem__" signature="__delitem__(self, key)" />
+        <scope ilk="function" name="setdefault" signature="setdefault(self, key, default=None)" />
+        <scope ilk="function" name="clear" signature="clear(self)" />
+        <scope ilk="function" name="update" signature="update(*args, **kwds)" />
+        <scope ilk="function" name="pop" signature="pop(self, key, default=&lt;object object at 0x01CFB610&gt;)" />
+        <scope ilk="function" name="__setitem__" signature="__setitem__(self, key, value)" />
+        <scope ilk="function" name="popitem" signature="popitem(self)" />
+      </scope>
+      <scope classrefs="Error" doc="A requested option was not found.&#xA;" ilk="class" name="NoOptionError">
+        <scope ilk="function" name="__init__" signature="__init__(self, option, section)" />
+      </scope>
+      <scope classrefs="Error" doc="Raised when no section matches a requested option.&#xA;" ilk="class" name="NoSectionError">
+        <scope ilk="function" name="__init__" signature="__init__(self, section)" />
+      </scope>
+      <scope classrefs="Error" doc="Raised when a configuration file does not follow legal syntax.&#xA;" ilk="class" name="ParsingError">
+        <scope ilk="function" name="__init__" signature="__init__(self, source=None, filename=None)" />
+        <scope ilk="function" name="append" signature="append(self, lineno, line)" />
+      </scope>
+      <scope classrefs="MutableMapping" doc="ConfigParser that does not do interpolation.&#xA;" ilk="class" name="RawConfigParser">
+        <scope ilk="function" name="optionxform" signature="optionxform(self, optionstr)" />
+        <scope doc="Set an option." ilk="function" name="set" signature="set(self, section, option, value=None)" />
+        <scope ilk="function" name="getfloat" signature="getfloat(self, section, option, *, raw=False, vars=None, fallback=&lt;object object at 0x02EC73A8&gt;)" />
+        <scope doc="Write a single section to the specified `fp&apos;." ilk="function" name="_write_section" signature="_write_section(self, fp, section_name, section_items, delimiter)" />
+        <scope doc="Indicate whether the named section is present in the&#xA;configuration." ilk="function" name="has_section" signature="has_section(self, section)" />
+        <scope doc="Remove an option." ilk="function" name="remove_option" signature="remove_option(self, section, option)" />
+        <scope ilk="function" name="_handle_error" signature="_handle_error(self, exc, fpname, lineno, line)" />
+        <scope doc="Like read() but the argument must be a file-like object." ilk="function" name="read_file" signature="read_file(self, f, source=None)" />
+        <scope doc="Remove a file section." ilk="function" name="remove_section" signature="remove_section(self, section)" />
+        <scope ilk="function" name="__init__" signature="__init__(self, defaults=None, dict_type=&lt;class &apos;collections.OrderedDict&apos;&gt;, allow_no_value=False, *, delimiters=(&apos;=&apos;, &apos;:&apos;), comment_prefixes=(&apos;#&apos;, &apos;;&apos;), inline_comment_prefixes=None, strict=True, empty_lines_in_values=True, default_section=&apos;DEFAULT&apos;, interpolation=&lt;object object at 0x02EC73A8&gt;)" />
+        <scope doc="Create a sequence of lookups with &apos;vars&apos; taking priority&#xA;over the &apos;section&apos; which takes priority over the&#xA;DEFAULTSECT." ilk="function" name="_unify_values" signature="_unify_values(self, section, vars)" />
+        <scope doc="Deprecated, use read_file instead." ilk="function" name="readfp" signature="readfp(self, fp, filename=None)" />
+        <scope ilk="function" name="getboolean" signature="getboolean(self, section, option, *, raw=False, vars=None, fallback=&lt;object object at 0x02EC73A8&gt;)" />
+        <scope ilk="function" name="__getitem__" signature="__getitem__(self, key)" />
+        <scope doc="Check for the existence of a given option in a given&#xA;section." ilk="function" name="has_option" signature="has_option(self, section, option)" />
+        <scope ilk="function" name="__contains__" signature="__contains__(self, key)" />
+        <scope doc="Write an .ini-format representation of the configuration&#xA;state." ilk="function" name="write" signature="write(self, fp, space_around_delimiters=True)" />
+        <scope doc="Create a new section in the configuration." ilk="function" name="add_section" signature="add_section(self, section)" />
+        <scope doc="Return a list of section names, excluding [DEFAULT]" ilk="function" name="sections" signature="sections(self)" />
+        <scope ilk="function" name="__len__" signature="__len__(self)" />
+        <scope ilk="function" name="_join_multiline_values" signature="_join_multiline_values(self)" />
+        <scope doc="Get an option value for a given section." ilk="function" name="get" signature="get(self, section, option, *, raw=False, vars=None, fallback=&lt;object object at 0x02EC73A8&gt;)" />
+        <scope doc="Read and parse a filename or a list of filenames." ilk="function" name="read" signature="read(self, filenames, encoding=None)" />
+        <scope doc="Return a boolean value translating from other types if&#xA;necessary." ilk="function" name="_convert_to_boolean" signature="_convert_to_boolean(self, value)" />
+        <scope doc="Read configuration from a given string." ilk="function" name="read_string" signature="read_string(self, string, source=&apos;&lt;string&gt;&apos;)" />
+        <scope ilk="function" name="__setitem__" signature="__setitem__(self, key, value)" />
+        <scope doc="Read configuration from a dictionary." ilk="function" name="read_dict" signature="read_dict(self, dictionary, source=&apos;&lt;dict&gt;&apos;)" />
+        <scope ilk="function" name="__delitem__" signature="__delitem__(self, key)" />
+        <scope ilk="function" name="_get" signature="_get(self, section, conv, option, **kwargs)" />
+        <scope doc="Return a list of (name, value) tuples for each option in a&#xA;section." ilk="function" name="items" signature="items(self, section=&lt;object object at 0x02EC73A8&gt;, raw=False, vars=None)" />
+        <scope doc="Parse a sectioned configuration file." ilk="function" name="_read" signature="_read(self, fp, fpname)" />
+        <scope ilk="function" name="__iter__" signature="__iter__(self)" />
+        <scope doc="Return a list of option names for the given section name." ilk="function" name="options" signature="options(self, section)" />
+        <scope doc="Raises a TypeError for non-string values." ilk="function" name="_validate_value_types" signature="_validate_value_types(self, *, section=&apos;&apos;, option=&apos;&apos;, value=&apos;&apos;)" />
+        <scope ilk="function" name="getint" signature="getint(self, section, option, *, raw=False, vars=None, fallback=&lt;object object at 0x02EC73A8&gt;)" />
+        <scope ilk="function" name="defaults" signature="defaults(self)" />
+      </scope>
+      <scope classrefs="ConfigParser" doc="ConfigParser alias for backwards compatibility purposes.&#xA;" ilk="class" name="SafeConfigParser">
+        <scope ilk="function" name="__init__" signature="__init__(self, *args, **kwargs)" />
+      </scope>
+      <scope classrefs="MutableMapping" doc="A proxy for a single section from a parser.&#xA;" ilk="class" name="SectionProxy">
+        <scope ilk="function" name="__getitem__" signature="__getitem__(self, key)" />
+        <scope ilk="function" name="get" signature="get(self, option, fallback=None, *, raw=False, vars=None)" />
+        <scope ilk="function" name="getfloat" signature="getfloat(self, option, fallback=None, *, raw=False, vars=None)" />
+        <scope ilk="function" name="__iter__" signature="__iter__(self)" />
+        <scope doc="Creates a view on a section of the specified `name` in&#xA;`parser`." ilk="function" name="__init__" signature="__init__(self, parser, name)" />
+        <scope ilk="function" name="__delitem__" signature="__delitem__(self, key)" />
+        <scope ilk="function" name="getboolean" signature="getboolean(self, option, fallback=None, *, raw=False, vars=None)" />
+        <scope ilk="function" name="__contains__" signature="__contains__(self, key)" />
+        <scope ilk="function" name="_options" signature="_options(self)" />
+        <scope ilk="function" name="__setitem__" signature="__setitem__(self, key, value)" />
+        <scope ilk="function" name="getint" signature="getint(self, option, fallback=None, *, raw=False, vars=None)" />
+        <scope ilk="function" name="__repr__" signature="__repr__(self)" />
+        <scope ilk="function" name="__len__" signature="__len__(self)" />
+      </scope>
+      <variable citdl="list" name="__all__" />
+      <import module="functools" />
+      <import module="io" />
+      <import module="itertools" />
+      <import module="re" />
+      <import module="sys" />
+      <import module="warnings" />
+    </scope>
+    

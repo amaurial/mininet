@@ -1,0 +1,162 @@
+<scope doc="Middleware to check for obedience to the WSGI specification.&#xA;Some of the things this checks:  * Signature of the application and start_response (including that keyword arguments are not used).  * Environment checks:  - Environment is a dictionary (and not a subclass).  - That all the required keys are in the environment: REQUEST_METHOD," ilk="blob" lang="Python" name="wsgiref.validate">
+      <scope classrefs="object" doc="&#xA;" ilk="class" line="226" lineend="243" name="ErrorWrapper">
+        <scope ilk="function" line="231" lineend="233" name="write" signature="write(self, s)">
+          <variable citdl="ErrorWrapper" ilk="argument" name="self" />
+          <variable ilk="argument" name="s" />
+        </scope>
+        <scope ilk="function" line="238" lineend="240" name="writelines" signature="writelines(self, seq)">
+          <variable citdl="ErrorWrapper" ilk="argument" name="self" />
+          <variable ilk="argument" name="seq" />
+        </scope>
+        <scope ilk="function" line="235" lineend="236" name="flush" signature="flush(self)">
+          <variable citdl="ErrorWrapper" ilk="argument" name="self" />
+        </scope>
+        <scope ilk="function" line="242" lineend="243" name="close" signature="close(self)">
+          <variable citdl="ErrorWrapper" ilk="argument" name="self" />
+        </scope>
+        <scope ilk="function" line="228" lineend="229" name="__init__" signature="__init__(self, wsgi_errors)">
+          <variable citdl="ErrorWrapper" ilk="argument" name="self" />
+          <variable ilk="argument" name="wsgi_errors" />
+        </scope>
+        <variable attributes="__instancevar__" line="229" name="errors" />
+      </scope>
+      <scope classrefs="object" doc="&#xA;" ilk="class" line="191" lineend="224" name="InputWrapper">
+        <scope ilk="function" line="196" lineend="200" name="read" returns="self.input.read()" signature="read(self, *args)">
+          <variable citdl="InputWrapper" ilk="argument" name="self" />
+          <variable attributes="varargs" ilk="argument" name="args" />
+          <variable citdl="self.input.read()" line="198" name="v" />
+        </scope>
+        <scope ilk="function" line="223" lineend="224" name="close" signature="close(self)">
+          <variable citdl="InputWrapper" ilk="argument" name="self" />
+        </scope>
+        <scope ilk="function" line="202" lineend="206" name="readline" returns="self.input.readline()" signature="readline(self, *args)">
+          <variable citdl="InputWrapper" ilk="argument" name="self" />
+          <variable attributes="varargs" ilk="argument" name="args" />
+          <variable citdl="self.input.readline()" line="204" name="v" />
+        </scope>
+        <scope ilk="function" line="208" lineend="214" name="readlines" returns="self.input.readlines()" signature="readlines(self, *args)">
+          <variable citdl="InputWrapper" ilk="argument" name="self" />
+          <variable attributes="varargs" ilk="argument" name="args" />
+          <variable citdl="self.input.readlines()" line="210" name="lines" />
+        </scope>
+        <scope ilk="function" line="216" lineend="221" name="__iter__" signature="__iter__(self)">
+          <variable citdl="InputWrapper" ilk="argument" name="self" />
+          <variable citdl="readline()" line="218" name="line" />
+        </scope>
+        <scope ilk="function" line="193" lineend="194" name="__init__" signature="__init__(self, wsgi_input)">
+          <variable citdl="InputWrapper" ilk="argument" name="self" />
+          <variable ilk="argument" name="wsgi_input" />
+        </scope>
+        <variable attributes="__instancevar__" line="194" name="input" />
+      </scope>
+      <scope classrefs="object" doc="&#xA;" ilk="class" line="263" lineend="296" name="IteratorWrapper">
+        <scope ilk="function" line="291" lineend="296" name="__del__" signature="__del__(self)">
+          <variable citdl="IteratorWrapper" ilk="argument" name="self" />
+        </scope>
+        <scope ilk="function" line="286" lineend="289" name="close" signature="close(self)">
+          <variable citdl="IteratorWrapper" ilk="argument" name="self" />
+        </scope>
+        <scope ilk="function" line="274" lineend="284" name="__next__" returns="next()" signature="__next__(self)">
+          <variable citdl="IteratorWrapper" ilk="argument" name="self" />
+          <variable citdl="next()" line="277" name="v" />
+        </scope>
+        <scope ilk="function" line="271" lineend="272" name="__iter__" returns="IteratorWrapper" signature="__iter__(self)">
+          <variable citdl="IteratorWrapper" ilk="argument" name="self" />
+        </scope>
+        <scope ilk="function" line="265" lineend="269" name="__init__" signature="__init__(self, wsgi_iterator, check_start_response)">
+          <variable ilk="argument" name="check_start_response" />
+          <variable citdl="IteratorWrapper" ilk="argument" name="self" />
+          <variable ilk="argument" name="wsgi_iterator" />
+        </scope>
+        <variable attributes="__instancevar__" line="269" name="check_start_response" />
+        <variable attributes="__instancevar__" citdl="False" line="268" name="closed" />
+        <variable attributes="__instancevar__" citdl="iter()" line="267" name="iterator" />
+        <variable attributes="__instancevar__" line="266" name="original_iterator" />
+      </scope>
+      <scope classrefs="object" doc="&#xA;" ilk="class" line="254" lineend="261" name="PartialIteratorWrapper">
+        <scope ilk="function" line="259" lineend="261" name="__iter__" returns="IteratorWrapper()" signature="__iter__(self)">
+          <variable citdl="PartialIteratorWrapper" ilk="argument" name="self" />
+        </scope>
+        <scope ilk="function" line="256" lineend="257" name="__init__" signature="__init__(self, wsgi_iterator)">
+          <variable citdl="PartialIteratorWrapper" ilk="argument" name="self" />
+          <variable ilk="argument" name="wsgi_iterator" />
+        </scope>
+        <variable attributes="__instancevar__" line="257" name="iterator" />
+      </scope>
+      <scope classrefs="Warning" doc="Raised in response to WSGI-spec-related warnings&#xA;" ilk="class" line="121" name="WSGIWarning" />
+      <scope classrefs="object" doc="&#xA;" ilk="class" line="245" lineend="252" name="WriteWrapper">
+        <scope ilk="function" line="250" lineend="252" name="__call__" signature="__call__(self, s)">
+          <variable citdl="WriteWrapper" ilk="argument" name="self" />
+          <variable ilk="argument" name="s" />
+        </scope>
+        <scope ilk="function" line="247" lineend="248" name="__init__" signature="__init__(self, wsgi_writer)">
+          <variable citdl="WriteWrapper" ilk="argument" name="self" />
+          <variable ilk="argument" name="wsgi_writer" />
+        </scope>
+        <variable attributes="__instancevar__" line="248" name="writer" />
+      </scope>
+      <variable citdl="list" line="111" name="__all__" />
+      <scope ilk="function" line="126" lineend="128" name="assert_" signature="assert_(cond, *args)">
+        <variable attributes="varargs" ilk="argument" name="args" />
+        <variable ilk="argument" name="cond" />
+      </scope>
+      <variable citdl="SRE_Pattern" line="119" name="bad_header_value_re" />
+      <scope ilk="function" line="416" lineend="430" name="check_content_type" signature="check_content_type(status, headers)">
+        <variable citdl="check_string_type()" ilk="argument" name="status" />
+        <variable ilk="argument" name="headers" />
+        <variable citdl="tuple" line="421" name="NO_MESSAGE_BODY" />
+        <variable citdl="check_string_type()" line="423" name="name" />
+        <variable citdl="int()" line="418" name="code" />
+      </scope>
+      <scope ilk="function" line="298" lineend="360" name="check_environ" signature="check_environ(environ)">
+        <variable ilk="argument" name="environ" />
+      </scope>
+      <scope ilk="function" line="369" lineend="373" name="check_errors" signature="check_errors(wsgi_errors)">
+        <variable ilk="argument" name="wsgi_errors" />
+      </scope>
+      <scope ilk="function" line="432" lineend="434" name="check_exc_info" signature="check_exc_info(exc_info)">
+        <variable ilk="argument" name="exc_info" />
+      </scope>
+      <scope ilk="function" line="389" lineend="414" name="check_headers" signature="check_headers(headers)">
+        <variable ilk="argument" name="headers" />
+        <variable citdl="dict" line="393" name="header_names" />
+        <variable citdl="check_string_type()" line="400" name="name" />
+        <variable citdl="check_string_type()" line="401" name="value" />
+      </scope>
+      <scope ilk="function" line="363" lineend="367" name="check_input" signature="check_input(wsgi_input)">
+        <variable ilk="argument" name="wsgi_input" />
+      </scope>
+      <scope ilk="function" line="437" lineend="442" name="check_iterator" signature="check_iterator(iterator)">
+        <variable ilk="argument" name="iterator" />
+      </scope>
+      <scope ilk="function" line="375" lineend="387" name="check_status" signature="check_status(status)">
+        <variable citdl="check_string_type()" ilk="argument" name="status" />
+        <variable line="378" name="status_code" />
+        <variable citdl="int()" line="381" name="status_int" />
+      </scope>
+      <scope ilk="function" line="130" lineend="134" name="check_string_type" signature="check_string_type(value, title)">
+        <variable ilk="argument" name="value" />
+        <variable ilk="argument" name="title" />
+      </scope>
+      <variable citdl="SRE_Pattern" line="118" name="header_re" />
+      <import module="re" />
+      <import module="sys" />
+      <scope doc="When applied between a WSGI server and a WSGI application,&#xA;this middleware will check for WSGI compliancy on a number&#xA;of levels." ilk="function" line="136" lineend="189" name="validator" returns="validator.lint_app" signature="validator(application)">
+        <variable ilk="argument" name="application" />
+        <scope ilk="function" line="148" lineend="187" name="lint_app" returns="IteratorWrapper()" signature="lint_app(*args, **kw)">
+          <variable attributes="varargs" ilk="argument" name="args" />
+          <variable attributes="kwargs" ilk="argument" name="kw" />
+          <variable citdl="list" line="157" name="start_response_started" />
+          <scope ilk="function" line="159" lineend="176" name="start_response_wrapper" returns="WriteWrapper()" signature="start_response_wrapper(*args, **kw)">
+            <variable attributes="varargs" ilk="argument" name="args" />
+            <variable attributes="kwargs" ilk="argument" name="kw" />
+            <variable line="163" name="status" />
+            <variable line="164" name="headers" />
+            <variable line="166" name="exc_info" />
+          </scope>
+          <variable citdl="application()" line="181" name="iterator" />
+        </scope>
+      </scope>
+      <import module="warnings" />
+    </scope>
+    

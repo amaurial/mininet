@@ -1,0 +1,86 @@
+<scope ilk="blob" lang="Perl" name="PPI::Lexer">
+      <scope ilk="class" line="1" lineend="1597" name="PPI::Lexer">
+        <import line="57" module="Scalar::Util" />
+        <import line="58" module="Params::Util" symbol="_STRING" />
+        <import line="58" module="Params::Util" symbol="_INSTANCE" />
+        <import line="59" module="List::MoreUtils" />
+        <import line="60" module="PPI" />
+        <import line="61" module="PPI::Exception" />
+        <variable line="63" name="$errstr" />
+        <variable line="63" name="$VERSION" />
+        <variable line="63" name="%RESOLVE" />
+        <variable line="63" name="%ROUND" />
+        <variable line="63" name="*_PARENT" />
+        <variable line="96" name="$X_TOKENIZER" />
+        <variable line="360" name="%STATEMENT_CLASSES" />
+        <variable line="1051" name="%CURLY_CLASSES" />
+        <variable line="1051" name="@CURLY_LOOKAHEAD_CLASSES" />
+        <scope attributes="__ctor__" ilk="function" line="121" lineend="128" name="new" signature="new()">
+          </scope>
+        <scope ilk="function" line="150" lineend="168" name="lex_file" signature="lex_file()">
+          </scope>
+        <scope ilk="function" line="182" lineend="200" name="lex_source" signature="lex_source($source)">
+          <variable ilk="argument" name="$source" />
+        </scope>
+        <scope ilk="function" line="213" lineend="239" name="lex_tokenizer" signature="lex_tokenizer()">
+          </scope>
+        <scope ilk="function" line="263" lineend="351" name="_lex_document" signature="_lex_document($self, $Document)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$Document" />
+        </scope>
+        <scope ilk="function" line="413" lineend="592" name="_statement" signature="_statement($self, $Parent, $Token)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$Parent" />
+          <variable ilk="argument" name="$Token" />
+        </scope>
+        <scope ilk="function" line="594" lineend="666" name="_lex_statement" signature="_lex_statement($self, $Statement)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$Statement" />
+        </scope>
+        <scope ilk="function" line="668" lineend="691" name="_lex_end" signature="_lex_end($self, $Statement)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$Statement" />
+        </scope>
+        <scope ilk="function" line="697" lineend="973" name="_continues" signature="_continues($self, $Statement, $Token)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$Statement" />
+          <variable ilk="argument" name="$Token" />
+        </scope>
+        <scope ilk="function" line="984" lineend="1016" name="_round" signature="_round($self, $Parent)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$Parent" />
+        </scope>
+        <scope ilk="function" line="1020" lineend="1049" name="_square" signature="_square($self, $Parent)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$Parent" />
+        </scope>
+        <scope attributes="__ctor__" ilk="function" line="1183" lineend="1292" name="_curly" signature="_curly($self, $Parent)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$Parent" />
+        </scope>
+        <scope attributes="__ctor__" ilk="function" line="1312" lineend="1402" name="_lex_structure" signature="_lex_structure($self, $Structure)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$Structure" />
+        </scope>
+        <scope ilk="function" line="1412" lineend="1414" name="_get_token" signature="_get_token()" />
+        <scope attributes="__ctor__" ilk="function" line="1436" lineend="1468" name="_add_element" signature="_add_element($self, $Parent, $Element)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$Parent" />
+          <variable ilk="argument" name="$Element" />
+        </scope>
+        <scope ilk="function" line="1471" lineend="1487" name="_add_delayed" signature="_add_delayed($self, $Parent)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$Parent" />
+        </scope>
+        <scope ilk="function" line="1492" lineend="1506" name="_rollback" signature="_rollback($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="1509" lineend="1518" name="_buffer" signature="_buffer($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="1528" lineend="1531" name="_error" signature="_error()" />
+        <scope ilk="function" line="1535" lineend="1538" name="_clear" signature="_clear()" />
+        <scope ilk="function" line="1551" lineend="1553" name="errstr" signature="errstr()" />
+      </scope>
+    </scope>
+    

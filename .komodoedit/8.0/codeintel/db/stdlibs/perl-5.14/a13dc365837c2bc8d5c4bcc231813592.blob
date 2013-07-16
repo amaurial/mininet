@@ -1,0 +1,46 @@
+<scope ilk="blob" lang="Perl" name="TAP::Parser::Source">
+      <scope classrefs="TAP::Object" ilk="class" line="1" lineend="370" name="TAP::Parser::Source">
+        <import line="6" module="TAP::Object" />
+        <import line="7" module="File::Basename" symbol="fileparse" />
+        <variable line="4" name="$VERSION" />
+        <variable line="4" name="@ISA" />
+        <scope ilk="function" line="64" lineend="69" name="_initialize" signature="_initialize($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="130" lineend="135" name="raw" signature="raw($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="137" lineend="142" name="meta" signature="meta($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="144" lineend="146" name="has_meta" signature="has_meta()" />
+        <scope ilk="function" line="148" lineend="153" name="config" signature="config($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="155" lineend="160" name="merge" signature="merge($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="162" lineend="167" name="switches" signature="switches($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="169" lineend="174" name="test_args" signature="test_args($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="229" lineend="308" name="assemble_meta" signature="assemble_meta($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="325" lineend="338" name="_read_shebang" signature="_read_shebang($self, $file)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$file" />
+        </scope>
+        <scope ilk="function" line="340" lineend="345" name="shebang" signature="shebang($class, $file)">
+          <variable ilk="argument" name="$class" />
+          <variable ilk="argument" name="$file" />
+        </scope>
+        <scope ilk="function" line="363" lineend="368" name="config_for" signature="config_for($self, $class)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$class" />
+        </scope>
+      </scope>
+    </scope>
+    

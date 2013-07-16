@@ -1,0 +1,241 @@
+<scope ilk="blob" lang="Perl" name="*">
+      <scope doc="File is readable by effective uid/gid." ilk="function" name="-r" signature="-r FILEHANDLE&#xA;-r EXPR&#xA;-r" />
+      <scope doc="File is writable by effective uid/gid." ilk="function" name="-w" signature="-w FILEHANDLE&#xA;-w EXPR&#xA;-w" />
+      <scope doc="File is executable by effective uid/gid." ilk="function" name="-x" signature="-x FILEHANDLE&#xA;-x EXPR&#xA;-x" />
+      <scope doc="File is owned by effective uid." ilk="function" name="-o" signature="-o FILEHANDLE&#xA;-o EXPR&#xA;-o" />
+      <scope doc="File is readable by real uid/gid." ilk="function" name="-R" signature="-R FILEHANDLE&#xA;-R EXPR&#xA;-R" />
+      <scope doc="File is writable by real uid/gid." ilk="function" name="-W" signature="-W FILEHANDLE&#xA;-W EXPR&#xA;-W" />
+      <scope doc="File is executable by real uid/gid." ilk="function" name="-X" signature="-X FILEHANDLE&#xA;-X EXPR&#xA;-X" />
+      <scope doc="File is owned by real uid." ilk="function" name="-O" signature="-O FILEHANDLE&#xA;-O EXPR&#xA;-O" />
+      <scope doc="File exists." ilk="function" name="-e" signature="-e FILEHANDLE&#xA;-e EXPR&#xA;-e" />
+      <scope doc="File has zero size (is empty)." ilk="function" name="-z" signature="-z FILEHANDLE&#xA;-z EXPR&#xA;-z" />
+      <scope doc="File has nonzero size (returns size in bytes)." ilk="function" name="-s" signature="-s FILEHANDLE&#xA;-s EXPR&#xA;-s" />
+      <scope doc="File is a plain file." ilk="function" name="-f" signature="-f FILEHANDLE&#xA;-f EXPR&#xA;-f" />
+      <scope doc="File is a directory." ilk="function" name="-d" signature="-d FILEHANDLE&#xA;-d EXPR&#xA;-d" />
+      <scope doc="File is a symbolic link." ilk="function" name="-l" signature="-l FILEHANDLE&#xA;-l EXPR&#xA;-l" />
+      <scope doc="File is a named pipe (FIFO), or Filehandle is a pipe." ilk="function" name="-p" signature="-p FILEHANDLE&#xA;-p EXPR&#xA;-p" />
+      <scope doc="File is a socket." ilk="function" name="-S" signature="-S FILEHANDLE&#xA;-S EXPR&#xA;-S" />
+      <scope doc="File is a block special file." ilk="function" name="-b" signature="-b FILEHANDLE&#xA;-b EXPR&#xA;-b" />
+      <scope doc="File is a character special file." ilk="function" name="-c" signature="-c FILEHANDLE&#xA;-c EXPR&#xA;-c" />
+      <scope doc="Filehandle is opened to a tty." ilk="function" name="-t" signature="-t FILEHANDLE&#xA;-t EXPR&#xA;-t" />
+      <scope doc="File has setuid bit set." ilk="function" name="-u" signature="-u FILEHANDLE&#xA;-u EXPR&#xA;-u" />
+      <scope doc="File has setgid bit set." ilk="function" name="-g" signature="-g FILEHANDLE&#xA;-g EXPR&#xA;-g" />
+      <scope doc="File has sticky bit set." ilk="function" name="-k" signature="-k FILEHANDLE&#xA;-k EXPR&#xA;-k" />
+      <scope doc="File is an ASCII text file (heuristic guess)." ilk="function" name="-T" signature="-T FILEHANDLE&#xA;-T EXPR&#xA;-T" />
+      <scope doc="File is a &quot;binary&quot; file (opposite of -T)." ilk="function" name="-B" signature="-B FILEHANDLE&#xA;-B EXPR&#xA;-B" />
+      <scope doc="Script start time minus file modification time, in days." ilk="function" name="-M" signature="-M FILEHANDLE&#xA;-M EXPR&#xA;-M" />
+      <scope doc="Same for access time." ilk="function" name="-A" signature="-A FILEHANDLE&#xA;-A EXPR&#xA;-A" />
+      <scope doc="Same for inode change time (Unix, may differ for other&#xA;platforms)" ilk="function" name="-C" signature="-C FILEHANDLE&#xA;-C EXPR&#xA;-C" />
+      <scope doc="Returns the absolute value of its argument." ilk="function" name="abs" signature="abs VALUE&#xA;abs" />
+      <scope doc="Accepts an incoming socket connect, just as the accept(2)&#xA;system call does." ilk="function" name="accept" signature="accept NEWSOCKET,GENERICSOCKET" />
+      <scope doc="Arranges to have a SIGALRM delivered to this process after&#xA;the specified number of wallclock seconds have elapsed." ilk="function" name="alarm" signature="alarm SECONDS&#xA;alarm" />
+      <scope doc="Returns the arctangent of Y/X in the range -PI to PI." ilk="function" name="atan2" signature="atan2 Y,X" />
+      <scope doc="Binds a network address to a socket, just as the bind system&#xA;call does." ilk="function" name="bind" signature="bind SOCKET,NAME" />
+      <scope doc="Arranges for FILEHANDLE to be read or written in &quot;binary&quot; or&#xA;&quot;text&quot; mode on systems where the run-time libraries&#xA;distinguish between binary and text files." ilk="function" name="binmode" signature="binmode FILEHANDLE, LAYER&#xA;binmode FILEHANDLE" />
+      <scope doc="This function tells the thingy referenced by REF that it is&#xA;now an object in the CLASSNAME package." ilk="function" name="bless" signature="bless REF,CLASSNAME&#xA;bless REF" />
+      <scope doc="Returns the context of the current subroutine call." ilk="function" name="caller" signature="caller EXPR&#xA;caller" />
+      <scope doc="Changes the working directory to EXPR, if possible." ilk="function" name="chdir" signature="chdir EXPR" />
+      <scope doc="Changes the permissions of a list of files." ilk="function" name="chmod" signature="chmod LIST" />
+      <scope doc="This safer version of &apos;chop&apos; removes any trailing string&#xA;that corresponds to the current value of $/ (also known as&#xA;$INPUT_RECORD_SEPARATOR in the English module)." ilk="function" name="chomp" signature="chomp VARIABLE&#xA;chomp( LIST )&#xA;chomp" />
+      <scope doc="Chops off the last character of a string and returns the&#xA;character chopped." ilk="function" name="chop" signature="chop VARIABLE&#xA;chop( LIST )&#xA;chop" />
+      <scope doc="Changes the owner (and group) of a list of files." ilk="function" name="chown" signature="chown LIST" />
+      <scope doc="Returns the character represented by that NUMBER in the&#xA;character set." ilk="function" name="chr" signature="chr NUMBER&#xA;chr" />
+      <scope doc="This function works like the system call by the same name:&#xA;it makes the named directory the new root directory for all&#xA;further pathnames that begin with a / by your process and" ilk="function" name="chroot" signature="chroot FILENAME&#xA;chroot" />
+      <scope doc="Closes the file or pipe associated with the file handle,&#xA;returning true only if IO buffers are successfully flushed&#xA;and closes the system file descriptor." ilk="function" name="close" signature="close FILEHANDLE&#xA;close" />
+      <scope doc="Closes a directory opened by opendir and returns the success&#xA;of that system call." ilk="function" name="closedir" signature="closedir DIRHANDLE" />
+      <scope doc="Attempts to connect to a remote socket, just as the connect&#xA;system call does." ilk="function" name="connect" signature="connect SOCKET,NAME" />
+      <scope doc="Actually a flow control statement rather than a function." ilk="function" name="continue" signature="continue BLOCK" />
+      <scope doc="Returns the cosine of EXPR (expressed in radians)." ilk="function" name="cos" signature="cos EXPR&#xA;cos" />
+      <scope doc="Encrypts a string exactly like the crypt(3) function in the&#xA;C library (assuming that you actually have a version there&#xA;that has not been extirpated as a potential munition)." ilk="function" name="crypt" signature="crypt PLAINTEXT,SALT" />
+      <scope doc="Breaks the binding between a DBM file and a hash." ilk="function" name="dbmclose" signature="dbmclose HASH" />
+      <scope doc="This binds a dbm(3), ndbm(3), sdbm(3), gdbm(3), or Berkeley&#xA;DB file to a hash." ilk="function" name="dbmopen" signature="dbmopen HASH,DBNAME,MASK" />
+      <scope doc="Returns a Boolean value telling whether EXPR has a value&#xA;other than the undefined value undef." ilk="function" name="defined" signature="defined EXPR&#xA;defined" />
+      <scope doc="Given an expression that specifies a hash element, array&#xA;element, hash slice, or array slice, deletes the specified&#xA;element(s) from the hash or array." ilk="function" name="delete" signature="delete EXPR" />
+      <scope doc="Outside an eval, prints the value of LIST to STDERR and&#xA;exits with the current value of $! (errno)." ilk="function" name="die" signature="die LIST" />
+      <scope doc="Returns the value of the last command in the sequence of&#xA;commands indicated by BLOCK." ilk="function" name="do" signature="do BLOCK&#xA;do SUBROUTINE(LIST)&#xA;do EXPR" />
+      <scope doc="This function causes an immediate core dump." ilk="function" name="dump" signature="dump LABEL&#xA;dump" />
+      <scope doc="When called in list context, returns a 2-element list&#xA;consisting of the key and value for the next element of a&#xA;hash, so that you can iterate over it." ilk="function" name="each" signature="each HASH" />
+      <scope doc="Returns 1 if the next read on FILEHANDLE will return end of&#xA;file, or if FILEHANDLE is not open." ilk="function" name="eof" signature="eof FILEHANDLE&#xA;eof ()&#xA;eof" />
+      <scope doc="In the first form, the return value of EXPR is parsed and&#xA;executed as if it were a little Perl program." ilk="function" name="eval" signature="eval EXPR&#xA;eval BLOCK" />
+      <scope doc="The exec function executes a system command *and never&#xA;returns*-- use system instead of exec if you want it to&#xA;return." ilk="function" name="exec" signature="exec LIST&#xA;exec PROGRAM LIST" />
+      <scope doc="Given an expression that specifies a hash element or array&#xA;element, returns true if the specified element in the hash&#xA;or array has ever been initialized, even if the" ilk="function" name="exists" signature="exists EXPR" />
+      <scope doc="Evaluates EXPR and exits immediately with that value." ilk="function" name="exit" signature="exit EXPR" />
+      <scope doc="Returns *e* (the natural logarithm base) to the power of&#xA;EXPR." ilk="function" name="exp" signature="exp EXPR&#xA;exp" />
+      <scope doc="Implements the fcntl(2) function." ilk="function" name="fcntl" signature="fcntl FILEHANDLE,FUNCTION,SCALAR" />
+      <scope doc="Returns the file descriptor for a filehandle, or undefined&#xA;if the filehandle is not open." ilk="function" name="fileno" signature="fileno FILEHANDLE" />
+      <scope doc="Calls flock(2), or an emulation of it, on FILEHANDLE." ilk="function" name="flock" signature="flock FILEHANDLE,OPERATION" />
+      <scope doc="Does a fork(2) system call to create a new process running&#xA;the same program at the same point." ilk="function" name="fork" signature="fork" />
+      <scope doc="Declare a picture format for use by the write function." ilk="function" name="format" signature="format" />
+      <scope doc="This is an internal function used by formats, though you may&#xA;call it, too." ilk="function" name="formline" signature="formline PICTURE,LIST" />
+      <scope doc="Returns the next character from the input file attached to&#xA;FILEHANDLE, or the undefined value at end of file, or if&#xA;there was an error (in the latter case $! is set)." ilk="function" name="getc" signature="getc FILEHANDLE&#xA;getc" />
+      <scope doc="Implements the C library function of the same name, which on&#xA;most systems returns the current login from /etc/utmp, if&#xA;any." ilk="function" name="getlogin" signature="getlogin" />
+      <scope doc="Returns the packed sockaddr address of other end of the&#xA;SOCKET connection." ilk="function" name="getpeername" signature="getpeername SOCKET" />
+      <scope doc="Returns the current process group for the specified PID." ilk="function" name="getpgrp" signature="getpgrp PID" />
+      <scope doc="Returns the process id of the parent process." ilk="function" name="getppid" signature="getppid" />
+      <scope doc="Returns the current priority for a process, a process group,&#xA;or a user." ilk="function" name="getpriority" signature="getpriority WHICH,WHO" />
+      <scope doc="Performs the same function as the &apos;getpwnam&apos; system call.&#xA;  ($name,$passwd,$uid,$gid,$quota,$comment,&#xA;   $gcos,$dir,$shell,$expire) = getpwnam NAME" ilk="function" name="getpwnam" signature="getpwnam NAME" />
+      <scope doc="Performs the same function as the &apos;getgrnam&apos; system call.&#xA;  ($name,$passwd,$gid,$members) = getgrnam NAME&#xA;in list context or:" ilk="function" name="getgrnam" signature="getgrnam NAME" />
+      <scope doc="Performs the same function as the &apos;gethostbyname&apos; system&#xA;call.&#xA;  ($name,$aliases,$addrtype,$length,@addrs) = gethostbyname NAME" ilk="function" name="gethostbyname" signature="gethostbyname NAME" />
+      <scope doc="Performs the same function as the &apos;getnetbyname&apos; system&#xA;call.&#xA;  ($name,$aliases,$addrtype,$net) = getnetbyname NAME" ilk="function" name="getnetbyname" signature="getnetbyname NAME" />
+      <scope doc="Performs the same function as the &apos;getprotobyname&apos; system&#xA;call.&#xA;  ($name,$aliases,$proto) = getprotobyname NAME" ilk="function" name="getprotobyname" signature="getprotobyname NAME" />
+      <scope doc="Performs the same function as the &apos;getpwuid&apos; system call.&#xA;  ($name,$passwd,$uid,$gid,$quota,$comment,&#xA;   $gcos,$dir,$shell,$expire) = getpwuid UID" ilk="function" name="getpwuid" signature="getpwuid UID" />
+      <scope doc="Performs the same function as the &apos;getgrgid&apos; system call.&#xA;  ($name,$passwd,$gid,$members) = getgrgid GID&#xA;in list context or:" ilk="function" name="getgrgid" signature="getgrgid GID" />
+      <scope doc="Performs the same function as the &apos;getservbyname&apos; system&#xA;call.&#xA;  ($name,$aliases,$port,$proto) = getservbyname NAME,PROTO" ilk="function" name="getservbyname" signature="getservbyname NAME,PROTO" />
+      <scope doc="Performs the same function as the &apos;gethostbyaddr&apos; system&#xA;call.&#xA;  ($name,$aliases,$addrtype,$length,@addrs) = gethostbyaddr ADDR,ADDRTYPE" ilk="function" name="gethostbyaddr" signature="gethostbyaddr ADDR,ADDRTYPE" />
+      <scope doc="Performs the same function as the &apos;getnetbyaddr&apos; system&#xA;call.&#xA;  ($name,$aliases,$addrtype,$net) = getnetbyaddr ADDR,ADDRTYPE" ilk="function" name="getnetbyaddr" signature="getnetbyaddr ADDR,ADDRTYPE" />
+      <scope doc="Performs the same function as the &apos;getprotobynumber&apos; system&#xA;call.&#xA;  ($name,$aliases,$proto) = getprotobynumber NUMBER" ilk="function" name="getprotobynumber" signature="getprotobynumber NUMBER" />
+      <scope doc="Performs the same function as the &apos;getservbyport&apos; system&#xA;call.&#xA;  ($name,$aliases,$port,$proto) = getservbyport PORT,PROTO" ilk="function" name="getservbyport" signature="getservbyport PORT,PROTO" />
+      <scope doc="Performs the same function as the &apos;getpwent&apos; system call.&#xA;  ($name,$passwd,$uid,$gid,$quota,$comment,&#xA;   $gcos,$dir,$shell,$expire) = getpwent" ilk="function" name="getpwent" signature="getpwent" />
+      <scope doc="Performs the same function as the &apos;getgrent&apos; system call.&#xA;  ($name,$passwd,$gid,$members) = getgrent&#xA;in list context or:" ilk="function" name="getgrent" signature="getgrent" />
+      <scope doc="Performs the same function as the &apos;gethostent&apos; system call.&#xA;  ($name,$aliases,$addrtype,$length,@addrs) = gethostent&#xA;in list context or:" ilk="function" name="gethostent" signature="gethostent" />
+      <scope doc="Performs the same function as the &apos;getnetent&apos; system call.&#xA;  ($name,$aliases,$addrtype,$net) = getnetent&#xA;in list context or:" ilk="function" name="getnetent" signature="getnetent" />
+      <scope doc="Performs the same function as the &apos;getprotoent&apos; system call.&#xA;  ($name,$aliases,$proto) = getprotoent&#xA;in list context or:" ilk="function" name="getprotoent" signature="getprotoent" />
+      <scope doc="Performs the same function as the &apos;getservent&apos; system call.&#xA;  ($name,$aliases,$port,$proto) = getservent&#xA;in list context or:" ilk="function" name="getservent" signature="getservent" />
+      <scope doc="Performs the same function as the &apos;setpwent&apos; system call." ilk="function" name="setpwent" signature="setpwent" />
+      <scope doc="Performs the same function as the &apos;setgrent&apos; system call." ilk="function" name="setgrent" signature="setgrent" />
+      <scope doc="Performs the same function as the &apos;sethostent&apos; system call." ilk="function" name="sethostent" signature="sethostent STAYOPEN" />
+      <scope doc="Performs the same function as the &apos;setnetent&apos; system call." ilk="function" name="setnetent" signature="setnetent STAYOPEN" />
+      <scope doc="Performs the same function as the &apos;setprotoent&apos; system call." ilk="function" name="setprotoent" signature="setprotoent STAYOPEN" />
+      <scope doc="Performs the same function as the &apos;setservent&apos; system call." ilk="function" name="setservent" signature="setservent STAYOPEN" />
+      <scope doc="Performs the same function as the &apos;endpwent&apos; system call." ilk="function" name="endpwent" signature="endpwent" />
+      <scope doc="Performs the same function as the &apos;endgrent&apos; system call." ilk="function" name="endgrent" signature="endgrent" />
+      <scope doc="Performs the same function as the &apos;endhostent&apos; system call." ilk="function" name="endhostent" signature="endhostent" />
+      <scope doc="Performs the same function as the &apos;endnetent&apos; system call." ilk="function" name="endnetent" signature="endnetent" />
+      <scope doc="Performs the same function as the &apos;endprotoent&apos; system call." ilk="function" name="endprotoent" signature="endprotoent" />
+      <scope doc="Performs the same function as the &apos;endservent&apos; system call." ilk="function" name="endservent" signature="endservent" />
+      <scope doc="Returns the packed sockaddr address of this end of the&#xA;SOCKET connection, in case you don&apos;t know the address&#xA;because you have several different IPs that the connection" ilk="function" name="getsockname" signature="getsockname SOCKET" />
+      <scope doc="Queries the option named OPTNAME associated with SOCKET at a&#xA;given LEVEL." ilk="function" name="getsockopt" signature="getsockopt SOCKET,LEVEL,OPTNAME" />
+      <scope doc="In list context, returns a (possibly empty) list of filename&#xA;expansions on the value of EXPR such as the standard Unix&#xA;shell /bin/csh would do." ilk="function" name="glob" signature="glob EXPR&#xA;glob" />
+      <scope doc="Converts a time as returned by the time function to an&#xA;8-element list with the time localized for the standard&#xA;Greenwich time zone." ilk="function" name="gmtime" signature="gmtime EXPR" />
+      <scope doc="The goto-LABEL form finds the statement labeled with LABEL&#xA;and resumes execution there." ilk="function" name="goto" signature="goto LABEL&#xA;goto EXPR&#xA;goto &amp;NAME" />
+      <scope doc="This is similar in spirit to, but not the same as, grep(1)&#xA;and its relatives." ilk="function" name="grep" signature="grep BLOCK LIST&#xA;grep EXPR,LIST" />
+      <scope doc="Interprets EXPR as a hex string and returns the&#xA;corresponding value." ilk="function" name="hex" signature="hex EXPR&#xA;hex" />
+      <scope doc="There is no builtin import function." ilk="function" name="import" signature="import" />
+      <scope doc="The index function searches for one string within another,&#xA;but without the wildcard-like behavior of a full regular-&#xA;expression pattern match." ilk="function" name="index" signature="index STR,SUBSTR,POSITION&#xA;index STR,SUBSTR" />
+      <scope doc="Returns the integer portion of EXPR. If EXPR is omitted,&#xA;uses $_." ilk="function" name="int" signature="int EXPR&#xA;int" />
+      <scope doc="Implements the ioctl(2) function." ilk="function" name="ioctl" signature="ioctl FILEHANDLE,FUNCTION,SCALAR" />
+      <scope doc="Joins the separate strings of LIST into a single string with&#xA;fields separated by the value of EXPR, and returns that new&#xA;string." ilk="function" name="join" signature="join EXPR,LIST" />
+      <scope doc="Returns a list consisting of all the keys of the named hash." ilk="function" name="keys" signature="keys HASH" />
+      <scope doc="Sends a signal to a list of processes." ilk="function" name="kill" signature="kill SIGNAL, LIST" />
+      <scope doc="The last command is like the break statement in C (as used&#xA;in loops); it immediately exits the loop in question." ilk="function" name="last" signature="last LABEL&#xA;last" />
+      <scope doc="Returns a lowercased version of EXPR." ilk="function" name="lc" signature="lc EXPR&#xA;lc" />
+      <scope doc="Returns the value of EXPR with the first character&#xA;lowercased." ilk="function" name="lcfirst" signature="lcfirst EXPR&#xA;lcfirst" />
+      <scope doc="Returns the length in *characters* of the value of EXPR." ilk="function" name="length" signature="length EXPR&#xA;length" />
+      <scope doc="Creates a new filename linked to the old filename." ilk="function" name="link" signature="link OLDFILE,NEWFILE" />
+      <scope doc="Does the same thing that the listen system call does." ilk="function" name="listen" signature="listen SOCKET,QUEUESIZE" />
+      <scope doc="You really probably want to be using my instead, because&#xA;local isn&apos;t what most people think of as &quot;local&quot;." ilk="function" name="local" signature="local EXPR" />
+      <scope doc="Converts a time as returned by the time function to a&#xA;9-element list with the time analyzed for the local time&#xA;zone." ilk="function" name="localtime" signature="localtime EXPR" />
+      <scope doc="This function places an advisory lock on a shared variable,&#xA;or referenced object contained in *THING* until the lock&#xA;goes out of scope." ilk="function" name="lock" signature="lock THING" />
+      <scope doc="Returns the natural logarithm (base *e*) of EXPR." ilk="function" name="log" signature="log EXPR&#xA;log" />
+      <scope doc="Does the same thing as the stat function (including setting&#xA;the special _ filehandle) but stats a symbolic link instead&#xA;of the file the symbolic link points to." ilk="function" name="lstat" signature="lstat EXPR&#xA;lstat" />
+      <scope doc="Searches a string for a pattern match, and in scalar context&#xA;returns true if it succeeds, false if it fails." ilk="function" name="m" signature="m/PATTERN/cgimosx&#xA;/PATTERN/cgimosx" />
+      <scope doc="Evaluates the BLOCK or EXPR for each element of LIST&#xA;(locally setting $_ to each element) and returns the list&#xA;value composed of the results of each such evaluation." ilk="function" name="map" signature="map BLOCK LIST&#xA;map EXPR,LIST" />
+      <scope doc="Creates the directory specified by FILENAME, with&#xA;permissions specified by MASK (as modified by umask)." ilk="function" name="mkdir" signature="mkdir FILENAME,MASK&#xA;mkdir FILENAME" />
+      <scope doc="Calls the System V IPC function msgctl(2)." ilk="function" name="msgctl" signature="msgctl ID,CMD,ARG" />
+      <scope doc="Calls the System V IPC function msgget(2)." ilk="function" name="msgget" signature="msgget KEY,FLAGS" />
+      <scope doc="Calls the System V IPC function msgrcv to receive a message&#xA;from message queue ID into variable VAR with a maximum&#xA;message size of SIZE." ilk="function" name="msgrcv" signature="msgrcv ID,VAR,SIZE,TYPE,FLAGS" />
+      <scope doc="Calls the System V IPC function msgsnd to send the message&#xA;MSG to the message queue ID." ilk="function" name="msgsnd" signature="msgsnd ID,MSG,FLAGS" />
+      <scope doc="A my declares the listed variables to be local (lexically)&#xA;to the enclosing block, file, or eval." ilk="function" name="my" signature="my EXPR&#xA;my TYPE EXPR&#xA;my EXPR : ATTRS&#xA;my TYPE EXPR : ATTRS" />
+      <scope doc="The next command is like the continue statement in C; it&#xA;starts the next iteration of the loop:" ilk="function" name="next" signature="next LABEL&#xA;next" />
+      <scope doc="See the use function, which no is the opposite of." ilk="function" name="no" signature="no Module VERSION LIST&#xA;no Module VERSION&#xA;no Module LIST&#xA;no Module" />
+      <scope doc="Interprets EXPR as an octal string and returns the&#xA;corresponding value." ilk="function" name="oct" signature="oct EXPR&#xA;oct" />
+      <scope doc="Opens the file whose filename is given by EXPR, and&#xA;associates it with FILEHANDLE." ilk="function" name="open" signature="open FILEHANDLE,EXPR&#xA;open FILEHANDLE,MODE,EXPR&#xA;open FILEHANDLE,MODE,EXPR,LIST&#xA;open FILEHANDLE,MODE,REFERENCE&#xA;open FILEHANDLE" />
+      <scope doc="Opens a directory named EXPR for processing by readdir,&#xA;telldir, seekdir, rewinddir, and closedir." ilk="function" name="opendir" signature="opendir DIRHANDLE,EXPR" />
+      <scope doc="Returns the numeric (the native 8-bit encoding, like ASCII&#xA;or EBCDIC, or Unicode) value of the first character of EXPR." ilk="function" name="ord" signature="ord EXPR&#xA;ord" />
+      <scope doc="An our declares the listed variables to be valid globals&#xA;within the enclosing block, file, or eval." ilk="function" name="our" signature="our EXPR&#xA;our EXPR TYPE&#xA;our EXPR : ATTRS&#xA;our TYPE EXPR : ATTRS" />
+      <scope doc="Takes a LIST of values and converts it into a string using&#xA;the rules given by the TEMPLATE." ilk="function" name="pack" signature="pack TEMPLATE,LIST" />
+      <scope doc="Declares the compilation unit as being in the given&#xA;namespace." ilk="function" name="package" signature="package NAMESPACE&#xA;package" />
+      <scope doc="Opens a pair of connected pipes like the corresponding&#xA;system call." ilk="function" name="pipe" signature="pipe READHANDLE,WRITEHANDLE" />
+      <scope doc="Pops and returns the last value of the array, shortening the&#xA;array by one element." ilk="function" name="pop" signature="pop ARRAY&#xA;pop" />
+      <scope doc="Returns the offset of where the last m//g search left off&#xA;for the variable in question ($_ is used when the variable&#xA;is not specified)." ilk="function" name="pos" signature="pos SCALAR&#xA;pos" />
+      <scope doc="Prints a string or a list of strings. Returns true if&#xA;successful." ilk="function" name="print" signature="print FILEHANDLE LIST&#xA;print LIST&#xA;print" />
+      <scope doc="Equivalent to &apos;print FILEHANDLE sprintf(FORMAT, LIST)&apos;,&#xA;except that $\ (the output record separator) is not&#xA;appended." ilk="function" name="printf" signature="printf FILEHANDLE FORMAT, LIST&#xA;printf FORMAT, LIST" />
+      <scope doc="Returns the prototype of a function as a string (or undef if&#xA;the function has no prototype)." ilk="function" name="prototype" signature="prototype FUNCTION" />
+      <scope doc="Treats ARRAY as a stack, and pushes the values of LIST onto&#xA;the end of ARRAY." ilk="function" name="push" signature="push ARRAY,LIST" />
+      <scope doc="A single-quoted, literal string." ilk="function" name="q" signature="q/STRING/&#xA;&apos;STRING&apos;" />
+      <scope doc="A double-quoted, interpolated string." ilk="function" name="qq" signature="qq/STRING/&#xA;&quot;STRING&quot;" />
+      <scope doc="Quotes (and possibly compiles) STRING as a regular&#xA;expression." ilk="function" name="qr" signature="qr/STRING/imosx" />
+      <scope doc="A string which is (possibly) interpolated and then executed&#xA;as a system command." ilk="function" name="qx" signature="qx/STRING/&#xA;`STRING`" />
+      <scope doc="Evaluates to a list of the words extracted out of STRING,&#xA;using embedded whitespace as the word delimiters." ilk="function" name="qw" signature="qw/STRING/" />
+      <scope doc="Returns the value of EXPR with all non-&quot;word&quot; characters&#xA;backslashed." ilk="function" name="quotemeta" signature="quotemeta EXPR&#xA;quotemeta" />
+      <scope doc="Returns a random fractional number greater than or equal to&#xA;0 and less than the value of EXPR." ilk="function" name="rand" signature="rand EXPR&#xA;rand" />
+      <scope doc="Attempts to read LENGTH *characters* of data into variable&#xA;SCALAR from the specified FILEHANDLE." ilk="function" name="read" signature="read FILEHANDLE,SCALAR,LENGTH,OFFSET&#xA;read FILEHANDLE,SCALAR,LENGTH" />
+      <scope doc="Returns the next directory entry for a directory opened by&#xA;opendir." ilk="function" name="readdir" signature="readdir DIRHANDLE" />
+      <scope doc="Reads from the filehandle whose typeglob is contained in&#xA;EXPR." ilk="function" name="readline" signature="readline EXPR" />
+      <scope doc="Returns the value of a symbolic link, if symbolic links are&#xA;implemented." ilk="function" name="readlink" signature="readlink EXPR&#xA;readlink" />
+      <scope doc="EXPR is executed as a system command." ilk="function" name="readpipe" signature="readpipe EXPR" />
+      <scope doc="Receives a message on a socket." ilk="function" name="recv" signature="recv SOCKET,SCALAR,LENGTH,FLAGS" />
+      <scope doc="The redo command restarts the loop block without evaluating&#xA;the conditional again." ilk="function" name="redo" signature="redo LABEL&#xA;redo" />
+      <scope doc="Returns a non-empty string if EXPR is a reference, the empty&#xA;string otherwise." ilk="function" name="ref" signature="ref EXPR&#xA;ref" />
+      <scope doc="Changes the name of a file; an existing file NEWNAME will be&#xA;clobbered." ilk="function" name="rename" signature="rename OLDNAME,NEWNAME" />
+      <scope doc="Generally used in a continue block at the end of a loop to&#xA;clear variables and reset ?? searches so that they work&#xA;again." ilk="function" name="reset" signature="reset EXPR&#xA;reset" />
+      <scope doc="Returns from a subroutine, eval, or &apos;do FILE&apos; with the value&#xA;given in EXPR." ilk="function" name="return" signature="return EXPR&#xA;return" />
+      <scope doc="In list context, returns a list value consisting of the&#xA;elements of LIST in the opposite order." ilk="function" name="reverse" signature="reverse LIST" />
+      <scope doc="Sets the current position to the beginning of the directory&#xA;for the readdir routine on DIRHANDLE." ilk="function" name="rewinddir" signature="rewinddir DIRHANDLE" />
+      <scope doc="Works just like index() except that it returns the position&#xA;of the LAST occurrence of SUBSTR in STR." ilk="function" name="rindex" signature="rindex STR,SUBSTR,POSITION&#xA;rindex STR,SUBSTR" />
+      <scope doc="Deletes the directory specified by FILENAME if that&#xA;directory is empty." ilk="function" name="rmdir" signature="rmdir FILENAME&#xA;rmdir" />
+      <scope doc="Searches a string for a pattern, and if found, replaces that&#xA;pattern with the replacement text and returns the number of&#xA;substitutions made. Otherwise it returns the empty string." ilk="function" name="s" signature="s/PATTERN/REPLACEMENT/egimosx" />
+      <scope doc="Forces EXPR to be interpreted in scalar context and returns&#xA;the value of EXPR." ilk="function" name="scalar" signature="scalar EXPR" />
+      <scope doc="Sets FILEHANDLE&apos;s position, just like the fseek call of&#xA;stdio." ilk="function" name="seek" signature="seek FILEHANDLE,POSITION,WHENCE" />
+      <scope doc="Sets the current position for the readdir routine on&#xA;DIRHANDLE." ilk="function" name="seekdir" signature="seekdir DIRHANDLE,POS" />
+      <scope doc="Returns the currently selected filehandle." ilk="function" name="select" signature="select FILEHANDLE&#xA;select&#xA;select RBITS,WBITS,EBITS,TIMEOUT" />
+      <scope doc="Calls the System V IPC function semctl." ilk="function" name="semctl" signature="semctl ID,SEMNUM,CMD,ARG" />
+      <scope doc="Calls the System V IPC function semget." ilk="function" name="semget" signature="semget KEY,NSEMS,FLAGS" />
+      <scope doc="Calls the System V IPC function semop to perform semaphore&#xA;operations such as signalling and waiting." ilk="function" name="semop" signature="semop KEY,OPSTRING" />
+      <scope doc="Sends a message on a socket." ilk="function" name="send" signature="send SOCKET,MSG,FLAGS,TO&#xA;send SOCKET,MSG,FLAGS" />
+      <scope doc="Sets the current process group for the specified PID, 0 for&#xA;the current process." ilk="function" name="setpgrp" signature="setpgrp PID,PGRP" />
+      <scope doc="Sets the current priority for a process, a process group, or&#xA;a user." ilk="function" name="setpriority" signature="setpriority WHICH,WHO,PRIORITY" />
+      <scope doc="Sets the socket option requested." ilk="function" name="setsockopt" signature="setsockopt SOCKET,LEVEL,OPTNAME,OPTVAL" />
+      <scope doc="Shifts the first value of the array off and returns it,&#xA;shortening the array by 1 and moving everything down." ilk="function" name="shift" signature="shift ARRAY&#xA;shift" />
+      <scope doc="Calls the System V IPC function shmctl." ilk="function" name="shmctl" signature="shmctl ID,CMD,ARG" />
+      <scope doc="Calls the System V IPC function shmget." ilk="function" name="shmget" signature="shmget KEY,SIZE,FLAGS" />
+      <scope doc="Reads the System V shared memory segment ID starting at&#xA;position POS for size SIZE by attaching to it, copying out,&#xA;and detaching from it." ilk="function" name="shmread" signature="shmread ID,VAR,POS,SIZE" />
+      <scope doc="Writes the System V shared memory segment ID starting at&#xA;position POS for size SIZE by attaching to it, copying in,&#xA;and detaching from it." ilk="function" name="shmwrite" signature="shmwrite ID,STRING,POS,SIZE" />
+      <scope doc="Shuts down a socket connection in the manner indicated by&#xA;HOW, which has the same interpretation as in the system call&#xA;of the same name." ilk="function" name="shutdown" signature="shutdown SOCKET,HOW" />
+      <scope doc="Returns the sine of EXPR (expressed in radians)." ilk="function" name="sin" signature="sin EXPR&#xA;sin" />
+      <scope doc="Causes the script to sleep for EXPR seconds, or forever if&#xA;no EXPR." ilk="function" name="sleep" signature="sleep EXPR&#xA;sleep" />
+      <scope doc="Opens a socket of the specified kind and attaches it to&#xA;filehandle SOCKET." ilk="function" name="socket" signature="socket SOCKET,DOMAIN,TYPE,PROTOCOL" />
+      <scope doc="Creates an unnamed pair of sockets in the specified domain,&#xA;of the specified type." ilk="function" name="socketpair" signature="socketpair SOCKET1,SOCKET2,DOMAIN,TYPE,PROTOCOL" />
+      <scope doc="In list context, this sorts the LIST and returns the sorted&#xA;list value." ilk="function" name="sort" signature="sort SUBNAME LIST&#xA;sort BLOCK LIST&#xA;sort LIST" />
+      <scope doc="Removes the elements designated by OFFSET and LENGTH from an&#xA;array, and replaces them with the elements of LIST, if any." ilk="function" name="splice" signature="splice ARRAY,OFFSET,LENGTH,LIST&#xA;splice ARRAY,OFFSET,LENGTH&#xA;splice ARRAY,OFFSET&#xA;splice ARRAY" />
+      <scope doc="Splits the string EXPR into a list of strings and returns&#xA;that list." ilk="function" name="split" signature="split /PATTERN/,EXPR,LIMIT&#xA;split /PATTERN/,EXPR&#xA;split /PATTERN/&#xA;split" />
+      <scope doc="Returns a string formatted by the usual printf conventions&#xA;of the C library function sprintf." ilk="function" name="sprintf" signature="sprintf FORMAT, LIST" />
+      <scope doc="Return the square root of EXPR." ilk="function" name="sqrt" signature="sqrt EXPR&#xA;sqrt" />
+      <scope doc="Sets the random number seed for the rand operator." ilk="function" name="srand" signature="srand EXPR&#xA;srand" />
+      <scope doc="Returns a 13-element list giving the status info for a file,&#xA;either the file opened via FILEHANDLE, or named by EXPR." ilk="function" name="stat" signature="stat FILEHANDLE&#xA;stat EXPR&#xA;stat" />
+      <scope doc="Takes extra time to study SCALAR ($_ if unspecified) in&#xA;anticipation of doing many pattern matches on the string&#xA;before it is next modified." ilk="function" name="study" signature="study SCALAR&#xA;study" />
+      <scope doc="Extracts a substring out of EXPR and returns it." ilk="function" name="substr" signature="substr EXPR,OFFSET,LENGTH,REPLACEMENT&#xA;substr EXPR,OFFSET,LENGTH&#xA;substr EXPR,OFFSET" />
+      <scope doc="Creates a new filename symbolically linked to the old&#xA;filename." ilk="function" name="symlink" signature="symlink OLDFILE,NEWFILE" />
+      <scope doc="Calls the system call specified as the first element of the&#xA;list, passing the remaining elements as arguments to the&#xA;system call." ilk="function" name="syscall" signature="syscall NUMBER, LIST" />
+      <scope doc="Opens the file whose filename is given by FILENAME, and&#xA;associates it with FILEHANDLE." ilk="function" name="sysopen" signature="sysopen FILEHANDLE,FILENAME,MODE&#xA;sysopen FILEHANDLE,FILENAME,MODE,PERMS" />
+      <scope doc="Attempts to read LENGTH bytes of data into variable SCALAR&#xA;from the specified FILEHANDLE, using the system call&#xA;read(2)." ilk="function" name="sysread" signature="sysread FILEHANDLE,SCALAR,LENGTH,OFFSET&#xA;sysread FILEHANDLE,SCALAR,LENGTH" />
+      <scope doc="Sets FILEHANDLE&apos;s system position in bytes using the system&#xA;call lseek(2)." ilk="function" name="sysseek" signature="sysseek FILEHANDLE,POSITION,WHENCE" />
+      <scope doc="Does exactly the same thing as &apos;exec LIST&apos;, except that a&#xA;fork is done first, and the parent process waits for the&#xA;child process to complete." ilk="function" name="system" signature="system LIST&#xA;system PROGRAM LIST" />
+      <scope doc="Attempts to write LENGTH bytes of data from variable SCALAR&#xA;to the specified FILEHANDLE, using the system call write(2)." ilk="function" name="syswrite" signature="syswrite FILEHANDLE,SCALAR,LENGTH,OFFSET&#xA;syswrite FILEHANDLE,SCALAR,LENGTH&#xA;syswrite FILEHANDLE,SCALAR" />
+      <scope doc="Returns the current position *in bytes* for FILEHANDLE, or&#xA;-1 on error." ilk="function" name="tell" signature="tell FILEHANDLE&#xA;tell" />
+      <scope doc="Returns the current position of the readdir routines on&#xA;DIRHANDLE." ilk="function" name="telldir" signature="telldir DIRHANDLE" />
+      <scope doc="This function binds a variable to a package class that will&#xA;provide the implementation for the variable." ilk="function" name="tie" signature="tie VARIABLE,CLASSNAME,LIST" />
+      <scope doc="Returns a reference to the object underlying VARIABLE (the&#xA;same value that was originally returned by the tie call that&#xA;bound the variable to a package.)  Returns the undefined" ilk="function" name="tied" signature="tied VARIABLE" />
+      <scope doc="Returns the number of non-leap seconds since whatever time&#xA;the system considers to be the epoch, suitable for feeding&#xA;to gmtime and localtime." ilk="function" name="time" signature="time" />
+      <scope doc="Returns a four-element list giving the user and system&#xA;times, in seconds, for this process and the children of this&#xA;process." ilk="function" name="times" signature="times" />
+      <scope doc="Transliterates all occurrences of the characters found in&#xA;the search list with the corresponding character in the&#xA;replacement list. It returns the number of characters" ilk="function" name="tr" signature="tr/SEARCHLIST/REPLACEMENTLIST/cds&#xA;y/SEARCHLIST/REPLACEMENTLIST/cds" />
+      <scope doc="Truncates the file opened on FILEHANDLE, or named by EXPR,&#xA;to the specified length." ilk="function" name="truncate" signature="truncate FILEHANDLE,LENGTH&#xA;truncate EXPR,LENGTH" />
+      <scope doc="Returns an uppercased version of EXPR." ilk="function" name="uc" signature="uc EXPR&#xA;uc" />
+      <scope doc="Returns the value of EXPR with the first character in&#xA;uppercase (titlecase in Unicode)." ilk="function" name="ucfirst" signature="ucfirst EXPR&#xA;ucfirst" />
+      <scope doc="Sets the umask for the process to EXPR and returns the&#xA;previous value." ilk="function" name="umask" signature="umask EXPR&#xA;umask" />
+      <scope doc="Undefines the value of EXPR, which must be an lvalue." ilk="function" name="undef" signature="undef EXPR&#xA;undef" />
+      <scope doc="Deletes a list of files." ilk="function" name="unlink" signature="unlink LIST&#xA;unlink" />
+      <scope doc="unpack does the reverse of pack: it takes a string and&#xA;expands it out into a list of values." ilk="function" name="unpack" signature="unpack TEMPLATE,EXPR" />
+      <scope doc="Breaks the binding between a variable and a package." ilk="function" name="untie" signature="untie VARIABLE" />
+      <scope doc="Does the opposite of a shift." ilk="function" name="unshift" signature="unshift ARRAY,LIST" />
+      <scope doc="Changes the access and modification times on each file of a&#xA;list of files." ilk="function" name="utime" signature="utime LIST" />
+      <scope doc="Returns a list consisting of all the values of the named&#xA;hash." ilk="function" name="values" signature="values HASH" />
+      <scope doc="Treats the string in EXPR as a bit vector made up of&#xA;elements of width BITS, and returns the value of the element&#xA;specified by OFFSET as an unsigned integer." ilk="function" name="vec" signature="vec EXPR,OFFSET,BITS" />
+      <scope doc="Behaves like the wait(2) system call on your system: it&#xA;waits for a child process to terminate and returns the pid&#xA;of the deceased process, or -1 if there are no child" ilk="function" name="wait" signature="wait" />
+      <scope doc="Waits for a particular child process to terminate and&#xA;returns the pid of the deceased process, or -1 if there is&#xA;no such child process." ilk="function" name="waitpid" signature="waitpid PID,FLAGS" />
+      <scope doc="Returns true if the context of the currently executing&#xA;subroutine or eval() block is looking for a list value." ilk="function" name="wantarray" signature="wantarray" />
+      <scope doc="Produces a message on STDERR just like die, but doesn&apos;t exit&#xA;or throw an exception." ilk="function" name="warn" signature="warn LIST" />
+      <scope doc="Writes a formatted record (possibly multi-line) to the&#xA;specified FILEHANDLE, using the format associated with that&#xA;file." ilk="function" name="write" signature="write FILEHANDLE&#xA;write EXPR&#xA;write" />
+      <scope doc="Transliterates all occurrences of the characters found in&#xA;the search list with the corresponding character in the&#xA;replacement list. It returns the number of characters" ilk="function" name="y" signature="tr/SEARCHLIST/REPLACEMENTLIST/cds&#xA;y/SEARCHLIST/REPLACEMENTLIST/cds" />
+    </scope>
+  

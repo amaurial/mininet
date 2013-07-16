@@ -1,0 +1,85 @@
+<scope ilk="blob" lang="Perl" name="IO::Zlib">
+      <scope classrefs="Tie::Handle" ilk="class" line="7" lineend="652" name="IO::Zlib">
+        <import line="291" module="Carp" symbol="*" />
+        <import line="292" module="Fcntl" symbol="SEEK_SET" />
+        <import line="302" module="Compress::Zlib" />
+        <import line="306" module="Symbol" symbol="*" />
+        <import line="307" module="Tie::Handle" symbol="*" />
+        <variable line="9" name="$VERSION" />
+        <variable line="289" name="$AUTOLOAD" />
+        <variable line="289" name="@ISA" />
+        <scope ilk="function" line="297" lineend="299" name="has_Compress_Zlib" signature="has_Compress_Zlib()" />
+        <scope ilk="function" line="316" lineend="318" name="gzip_read_open" signature="gzip_read_open()" />
+        <scope ilk="function" line="320" lineend="322" name="gzip_write_open" signature="gzip_write_open()" />
+        <scope ilk="function" line="324" lineend="326" name="gzip_external" signature="gzip_external()" />
+        <scope ilk="function" line="328" lineend="330" name="gzip_used" signature="gzip_used()" />
+        <scope ilk="function" line="332" lineend="334" name="can_gunzip" signature="can_gunzip()" />
+        <scope ilk="function" line="336" lineend="372" name="_import" signature="_import($import)">
+          <variable ilk="argument" name="$import" />
+        </scope>
+        <scope ilk="function" line="374" lineend="397" name="_alias" signature="_alias($import)">
+          <variable ilk="argument" name="$import" />
+        </scope>
+        <scope ilk="function" line="399" lineend="408" name="import" signature="import()">
+          </scope>
+        <scope attributes="__ctor__" ilk="function" line="412" lineend="420" name="TIEHANDLE" signature="TIEHANDLE($class, @args)">
+          <variable ilk="argument" name="$class" />
+          <variable ilk="argument" name="@args" />
+        </scope>
+        <scope ilk="function" line="422" lineend="424" name="DESTROY" signature="DESTROY()" />
+        <scope ilk="function" line="426" lineend="437" name="OPEN" signature="OPEN($self, $filename, $mode)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$filename" />
+          <variable ilk="argument" name="$mode" />
+        </scope>
+        <scope ilk="function" line="439" lineend="450" name="CLOSE" signature="CLOSE($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="452" lineend="468" name="READ" signature="READ($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="470" lineend="488" name="READLINE" signature="READLINE($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="490" lineend="500" name="WRITE" signature="WRITE($self, $buf, $length, $offset)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$buf" />
+          <variable ilk="argument" name="$length" />
+          <variable ilk="argument" name="$offset" />
+        </scope>
+        <scope ilk="function" line="502" lineend="507" name="EOF" signature="EOF($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="509" lineend="512" name="FILENO" signature="FILENO()" />
+        <scope ilk="function" line="514" lineend="526" name="new" signature="new($class, @args)">
+          <variable ilk="argument" name="$class" />
+          <variable ilk="argument" name="@args" />
+        </scope>
+        <scope ilk="function" line="528" lineend="533" name="getline" signature="getline($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="535" lineend="543" name="getlines" signature="getlines($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="545" lineend="550" name="opened" signature="opened($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="552" lineend="560" name="AUTOLOAD" signature="AUTOLOAD($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="562" lineend="614" name="gzopen_external" signature="gzopen_external($filename, $mode)">
+          <import line="564" module="IO::Handle" />
+          <variable ilk="argument" name="$filename" />
+          <variable ilk="argument" name="$mode" />
+          <import line="564" module="IO::Handle" />
+        </scope>
+        <scope ilk="function" line="616" lineend="623" name="gzread_external" signature="gzread_external()">
+          </scope>
+        <scope ilk="function" line="625" lineend="631" name="gzwrite_external" signature="gzwrite_external()">
+          </scope>
+        <scope ilk="function" line="633" lineend="637" name="gzreadline_external" signature="gzreadline_external()" />
+        <scope ilk="function" line="639" lineend="641" name="gzeof_external" signature="gzeof_external()" />
+        <scope ilk="function" line="643" lineend="650" name="gzclose_external" signature="gzclose_external()" />
+      </scope>
+    </scope>
+    

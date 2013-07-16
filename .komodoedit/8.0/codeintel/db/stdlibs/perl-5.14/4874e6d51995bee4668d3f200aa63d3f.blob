@@ -1,0 +1,33 @@
+<scope ilk="blob" lang="Perl" name="Perl::Critic::ProfilePrototype">
+      <scope ilk="class" line="8" lineend="210" name="Perl::Critic::ProfilePrototype">
+        <import line="14" module="English" symbol="-no_match_vars" />
+        <import line="16" module="Perl::Critic::Config" />
+        <import line="17" module="Perl::Critic::Policy" />
+        <import line="18" module="Perl::Critic::Utils" symbol="**" />
+        <variable line="21" name="$VERSION" />
+        <scope attributes="__ctor__" ilk="function" line="25" lineend="46" name="new" signature="new($class, %args)">
+          <variable ilk="argument" name="$class" />
+          <variable ilk="argument" name="%args" />
+        </scope>
+        <scope ilk="function" line="50" lineend="54" name="_get_policies" signature="_get_policies($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="56" lineend="60" name="_comment_out_parameters" signature="_comment_out_parameters($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="62" lineend="66" name="_configuration" signature="_configuration($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="70" lineend="74" name="_line_prefix" signature="_line_prefix($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="78" lineend="172" name="to_string" signature="to_string($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="188" lineend="204" name="_proto_format" signature="_proto_format($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="208" lineend="208" name="_by_type" signature="_by_type()" />
+      </scope>
+    </scope>
+    

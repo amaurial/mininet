@@ -1,0 +1,31 @@
+<scope ilk="blob" lang="Perl" name="CPANPLUS::Shell::Default::Plugins::CustomSource">
+      <scope ilk="class" line="1" lineend="200" name="CPANPLUS::Shell::Default::Plugins::CustomSource">
+        <import line="4" module="CPANPLUS::Error" symbol="error" />
+        <import line="4" module="CPANPLUS::Error" symbol="msg" />
+        <import line="5" module="CPANPLUS::Internals::Constants" symbol="*" />
+        <import line="7" module="Data::Dumper" symbol="*" />
+        <import line="8" module="Locale::Maketext::Simple" symbol="Class" />
+        <scope ilk="function" line="59" lineend="61" name="plugins" signature="plugins()" />
+        <scope ilk="function" line="67" lineend="92" name="_uri_from_cache" signature="_uri_from_cache($self, $input)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$input" />
+        </scope>
+        <scope ilk="function" line="94" lineend="110" name="_list_custom_sources" signature="_list_custom_sources($class)">
+          <variable ilk="argument" name="$class" />
+        </scope>
+        <scope ilk="function" line="112" lineend="126" name="_list_contents" signature="_list_contents($class, $input)">
+          <variable ilk="argument" name="$class" />
+          <variable ilk="argument" name="$input" />
+        </scope>
+        <scope ilk="function" line="128" lineend="182" name="custom_source" signature="custom_source($class, $shell, $cb, $cmd, $input, $opts)">
+          <variable ilk="argument" name="$class" />
+          <variable ilk="argument" name="$shell" />
+          <variable ilk="argument" name="$cb" />
+          <variable ilk="argument" name="$cmd" />
+          <variable ilk="argument" name="$input" />
+          <variable ilk="argument" name="$opts" />
+        </scope>
+        <scope ilk="function" line="184" lineend="198" name="custom_source_help" signature="custom_source_help()" />
+      </scope>
+    </scope>
+    

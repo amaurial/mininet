@@ -1,0 +1,226 @@
+<scope ilk="blob" lang="Perl" name="Math::Complex">
+      <scope classrefs="Exporter" ilk="class" line="8" lineend="1554" name="Math::Complex">
+        <import line="16" module="Config" symbol="*" />
+        <import line="71" module="Scalar::Util" symbol="set_prototype" />
+        <import line="97" module="Exporter" />
+        <variable line="12" name="$ExpInf" />
+        <variable line="12" name="$Inf" />
+        <variable line="12" name="$VERSION" />
+        <variable line="12" name="%EXPORT_TAGS" />
+        <variable line="12" name="@EXPORT" />
+        <variable line="12" name="@EXPORT_OK" />
+        <variable line="12" name="@ISA" />
+        <scope ilk="function" line="170" lineend="172" name="_cannot_make" signature="_cannot_make()" />
+        <scope ilk="function" line="174" lineend="194" name="_make" signature="_make($arg)">
+          <variable ilk="argument" name="$arg" />
+        </scope>
+        <scope ilk="function" line="196" lineend="218" name="_emake" signature="_emake($arg)">
+          <variable ilk="argument" name="$arg" />
+        </scope>
+        <scope attributes="__ctor__" ilk="function" line="225" lineend="246" name="make" signature="make()">
+          </scope>
+        <scope attributes="__ctor__" ilk="function" line="253" lineend="280" name="emake" signature="emake()">
+          </scope>
+        <scope ilk="function" line="282" lineend="282" name="new" signature="new()" />
+        <scope attributes="__exported__" ilk="function" line="290" lineend="292" name="cplx" signature="cplx()" />
+        <scope attributes="__exported__" ilk="function" line="300" lineend="302" name="cplxe" signature="cplxe()" />
+        <scope ilk="function" line="309" lineend="309" name="pi" signature="pi()" />
+        <scope ilk="function" line="316" lineend="316" name="pi2" signature="pi2()" />
+        <scope ilk="function" line="323" lineend="323" name="pi4" signature="pi4()" />
+        <scope ilk="function" line="330" lineend="330" name="pip2" signature="pip2()" />
+        <scope ilk="function" line="337" lineend="337" name="pip4" signature="pip4()" />
+        <scope ilk="function" line="344" lineend="344" name="_uplog10" signature="_uplog10()" />
+        <scope attributes="__ctor__ __exported__" ilk="function" line="351" lineend="359" name="i" signature="i()" />
+        <scope ilk="function" line="366" lineend="366" name="_ip2" signature="_ip2()" />
+        <scope ilk="function" line="372" lineend="373" name="_cartesian" signature="_cartesian()" />
+        <scope ilk="function" line="374" lineend="375" name="_polar" signature="_polar()" />
+        <scope ilk="function" line="377" lineend="378" name="_set_cartesian" signature="_set_cartesian()" />
+        <scope ilk="function" line="379" lineend="380" name="_set_polar" signature="_set_polar()" />
+        <scope ilk="function" line="387" lineend="392" name="_update_cartesian" signature="_update_cartesian($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="400" lineend="407" name="_update_polar" signature="_update_polar($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="414" lineend="424" name="_plus" signature="_plus($z1, $z2, $regular)">
+          <variable ilk="argument" name="$z1" />
+          <variable ilk="argument" name="$z2" />
+          <variable ilk="argument" name="$regular" />
+        </scope>
+        <scope ilk="function" line="431" lineend="444" name="_minus" signature="_minus($z1, $z2, $inverted)">
+          <variable ilk="argument" name="$z1" />
+          <variable ilk="argument" name="$z2" />
+          <variable ilk="argument" name="$inverted" />
+        </scope>
+        <scope ilk="function" line="451" lineend="474" name="_multiply" signature="_multiply($z1, $z2, $regular)">
+          <variable ilk="argument" name="$z1" />
+          <variable ilk="argument" name="$z2" />
+          <variable ilk="argument" name="$regular" />
+        </scope>
+        <scope ilk="function" line="481" lineend="495" name="_divbyzero" signature="_divbyzero()">
+          </scope>
+        <scope ilk="function" line="502" lineend="544" name="_divide" signature="_divide($z1, $z2, $inverted)">
+          <variable ilk="argument" name="$z1" />
+          <variable ilk="argument" name="$z2" />
+          <variable ilk="argument" name="$inverted" />
+        </scope>
+        <scope ilk="function" line="551" lineend="566" name="_power" signature="_power($z1, $z2, $inverted)">
+          <variable ilk="argument" name="$z1" />
+          <variable ilk="argument" name="$z2" />
+          <variable ilk="argument" name="$inverted" />
+        </scope>
+        <scope ilk="function" line="574" lineend="581" name="_spaceship" signature="_spaceship($z1, $z2, $inverted)">
+          <variable ilk="argument" name="$z1" />
+          <variable ilk="argument" name="$z2" />
+          <variable ilk="argument" name="$inverted" />
+        </scope>
+        <scope ilk="function" line="589" lineend="594" name="_numeq" signature="_numeq($z1, $z2, $inverted)">
+          <variable ilk="argument" name="$z1" />
+          <variable ilk="argument" name="$z2" />
+          <variable ilk="argument" name="$inverted" />
+        </scope>
+        <scope ilk="function" line="601" lineend="610" name="_negate" signature="_negate($z)">
+          <variable ilk="argument" name="$z" />
+        </scope>
+        <scope ilk="function" line="617" lineend="625" name="_conjugate" signature="_conjugate($z)">
+          <variable ilk="argument" name="$z" />
+        </scope>
+        <scope ilk="function" line="632" lineend="649" name="abs" signature="abs()">
+          </scope>
+        <scope ilk="function" line="651" lineend="656" name="_theta" signature="_theta()">
+          </scope>
+        <scope attributes="__exported__" ilk="function" line="663" lineend="676" name="arg" signature="arg($z, $theta)">
+          <variable ilk="argument" name="$z" />
+          <variable ilk="argument" name="$theta" />
+        </scope>
+        <scope attributes="__exported__" ilk="function" line="693" lineend="700" name="sqrt" signature="sqrt()">
+          </scope>
+        <scope attributes="__exported__" ilk="function" line="709" lineend="718" name="cbrt" signature="cbrt($z)">
+          <variable ilk="argument" name="$z" />
+        </scope>
+        <scope ilk="function" line="725" lineend="733" name="_rootbad" signature="_rootbad()">
+          </scope>
+        <scope attributes="__exported__" ilk="function" line="745" lineend="767" name="root" signature="root($z, $n, $k)">
+          <variable ilk="argument" name="$z" />
+          <variable ilk="argument" name="$n" />
+          <variable ilk="argument" name="$k" />
+        </scope>
+        <scope attributes="__exported__" ilk="function" line="774" lineend="784" name="Re" signature="Re($z, $Re)">
+          <variable ilk="argument" name="$z" />
+          <variable ilk="argument" name="$Re" />
+        </scope>
+        <scope attributes="__exported__" ilk="function" line="791" lineend="801" name="Im" signature="Im($z, $Im)">
+          <variable ilk="argument" name="$z" />
+          <variable ilk="argument" name="$Im" />
+        </scope>
+        <scope attributes="__exported__" ilk="function" line="808" lineend="810" name="rho" signature="rho()" />
+        <scope attributes="__exported__" ilk="function" line="817" lineend="819" name="theta" signature="theta()" />
+        <scope ilk="function" line="826" lineend="831" name="exp" signature="exp()">
+          </scope>
+        <scope ilk="function" line="838" lineend="852" name="_logofzero" signature="_logofzero()">
+          </scope>
+        <scope attributes="__exported__" ilk="function" line="859" lineend="870" name="log" signature="log()">
+          </scope>
+        <scope attributes="__exported__" ilk="function" line="877" lineend="877" name="ln" signature="ln()" />
+        <scope attributes="__exported__" ilk="function" line="885" lineend="887" name="log10" signature="log10()" />
+        <scope attributes="__exported__" ilk="function" line="894" lineend="900" name="logn" signature="logn($z, $n)">
+          <variable ilk="argument" name="$z" />
+          <variable ilk="argument" name="$n" />
+        </scope>
+        <scope ilk="function" line="907" lineend="917" name="cos" signature="cos()">
+          </scope>
+        <scope ilk="function" line="924" lineend="934" name="sin" signature="sin()">
+          </scope>
+        <scope ilk="function" line="941" lineend="946" name="tan" signature="tan($z)">
+          <variable ilk="argument" name="$z" />
+        </scope>
+        <scope ilk="function" line="953" lineend="958" name="sec" signature="sec($z)">
+          <variable ilk="argument" name="$z" />
+        </scope>
+        <scope ilk="function" line="965" lineend="970" name="csc" signature="csc($z)">
+          <variable ilk="argument" name="$z" />
+        </scope>
+        <scope ilk="function" line="977" lineend="977" name="cosec" signature="cosec()" />
+        <scope ilk="function" line="984" lineend="989" name="cot" signature="cot($z)">
+          <variable ilk="argument" name="$z" />
+        </scope>
+        <scope ilk="function" line="996" lineend="996" name="cotan" signature="cotan()" />
+        <scope ilk="function" line="1003" lineend="1021" name="acos" signature="acos()">
+          </scope>
+        <scope ilk="function" line="1028" lineend="1046" name="asin" signature="asin()">
+          </scope>
+        <scope ilk="function" line="1053" lineend="1062" name="atan" signature="atan($z)">
+          <variable ilk="argument" name="$z" />
+        </scope>
+        <scope ilk="function" line="1069" lineend="1073" name="asec" signature="asec($z)">
+          <variable ilk="argument" name="$z" />
+        </scope>
+        <scope ilk="function" line="1080" lineend="1084" name="acsc" signature="acsc($z)">
+          <variable ilk="argument" name="$z" />
+        </scope>
+        <scope ilk="function" line="1091" lineend="1091" name="acosec" signature="acosec()" />
+        <scope ilk="function" line="1098" lineend="1106" name="acot" signature="acot($z)">
+          <variable ilk="argument" name="$z" />
+        </scope>
+        <scope ilk="function" line="1113" lineend="1113" name="acotan" signature="acotan()" />
+        <scope ilk="function" line="1120" lineend="1132" name="cosh" signature="cosh($z)">
+          <variable ilk="argument" name="$z" />
+        </scope>
+        <scope ilk="function" line="1139" lineend="1154" name="sinh" signature="sinh($z)">
+          <variable ilk="argument" name="$z" />
+        </scope>
+        <scope ilk="function" line="1161" lineend="1169" name="tanh" signature="tanh($z)">
+          <variable ilk="argument" name="$z" />
+        </scope>
+        <scope ilk="function" line="1176" lineend="1181" name="sech" signature="sech($z)">
+          <variable ilk="argument" name="$z" />
+        </scope>
+        <scope ilk="function" line="1188" lineend="1193" name="csch" signature="csch($z)">
+          <variable ilk="argument" name="$z" />
+        </scope>
+        <scope ilk="function" line="1200" lineend="1200" name="cosech" signature="cosech()" />
+        <scope ilk="function" line="1207" lineend="1215" name="coth" signature="coth($z)">
+          <variable ilk="argument" name="$z" />
+        </scope>
+        <scope ilk="function" line="1222" lineend="1222" name="cotanh" signature="cotanh()" />
+        <scope ilk="function" line="1229" lineend="1250" name="acosh" signature="acosh($z)">
+          <variable ilk="argument" name="$z" />
+        </scope>
+        <scope ilk="function" line="1257" lineend="1270" name="asinh" signature="asinh($z)">
+          <variable ilk="argument" name="$z" />
+        </scope>
+        <scope ilk="function" line="1277" lineend="1286" name="atanh" signature="atanh($z)">
+          <variable ilk="argument" name="$z" />
+        </scope>
+        <scope ilk="function" line="1293" lineend="1297" name="asech" signature="asech($z)">
+          <variable ilk="argument" name="$z" />
+        </scope>
+        <scope ilk="function" line="1304" lineend="1308" name="acsch" signature="acsch($z)">
+          <variable ilk="argument" name="$z" />
+        </scope>
+        <scope ilk="function" line="1315" lineend="1315" name="acosech" signature="acosech()" />
+        <scope ilk="function" line="1322" lineend="1332" name="acoth" signature="acoth($z)">
+          <variable ilk="argument" name="$z" />
+        </scope>
+        <scope ilk="function" line="1339" lineend="1339" name="acotanh" signature="acotanh()" />
+        <scope attributes="__exported__" ilk="function" line="1346" lineend="1368" name="atan2" signature="atan2($z1, $z2, $inverted)">
+          <variable ilk="argument" name="$z1" />
+          <variable ilk="argument" name="$z2" />
+          <variable ilk="argument" name="$inverted" />
+        </scope>
+        <scope ilk="function" line="1383" lineend="1414" name="display_format" signature="display_format($self, %new)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="%new" />
+        </scope>
+        <scope ilk="function" line="1426" lineend="1435" name="_stringify" signature="_stringify()">
+          </scope>
+        <scope ilk="function" line="1442" lineend="1496" name="_stringify_cartesian" signature="_stringify_cartesian($z)">
+          <variable ilk="argument" name="$z" />
+        </scope>
+        <scope ilk="function" line="1504" lineend="1548" name="_stringify_polar" signature="_stringify_polar($z)">
+          <variable ilk="argument" name="$z" />
+        </scope>
+        <scope ilk="function" line="1550" lineend="1552" name="Inf" signature="Inf()" />
+      </scope>
+    </scope>
+    

@@ -1,0 +1,252 @@
+<scope doc="Macintosh binhex compression/decompression.&#xA;easy interface: binhex(inputfilename, outputfilename) hexbin(inputfilename, outputfilename)" ilk="blob" lang="Python" name="binhex">
+      <scope classrefs="object" doc="&#xA;" ilk="class" line="139" lineend="226" name="BinHex">
+        <scope ilk="function" line="163" lineend="180" name="_writeinfo" signature="_writeinfo(self, name, finfo)">
+          <variable citdl="struct.pack()" line="178" name="info" />
+          <variable citdl="len()" line="164" name="nl" />
+          <variable ilk="argument" name="name" />
+          <variable citdl="BinHex" ilk="argument" name="self" />
+          <variable citdl="finfo.Type" line="168" name="tp" />
+          <variable citdl="cr.encode()" line="168" name="cr" />
+          <variable citdl="struct.pack()" line="177" name="d4" />
+          <variable ilk="argument" name="finfo" />
+          <variable citdl="finfo.Type" line="173" name="d2" />
+          <variable citdl="struct.pack()" line="176" name="d3" />
+          <variable citdl="bytes()" line="167" name="d" />
+        </scope>
+        <scope ilk="function" line="186" lineend="194" name="_writecrc" signature="_writecrc(self)">
+          <variable citdl="BinHex" ilk="argument" name="self" />
+          <variable citdl="str" line="190" name="fmt" />
+        </scope>
+        <scope ilk="function" line="196" lineend="200" name="write" signature="write(self, data)">
+          <variable citdl="BinHex" ilk="argument" name="self" />
+          <variable ilk="argument" name="data" />
+        </scope>
+        <scope ilk="function" line="202" lineend="206" name="close_data" signature="close_data(self)">
+          <variable citdl="BinHex" ilk="argument" name="self" />
+        </scope>
+        <scope ilk="function" line="140" lineend="161" name="__init__" signature="__init__(self, name_finfo_dlen_rlen, ofp)">
+          <variable citdl="True" line="142" name="close_on_error" />
+          <variable citdl="io.open()" ilk="argument" name="ofp" />
+          <variable citdl="_Hqxcoderengine" line="149" name="hqxer" />
+          <variable ilk="argument" name="name_finfo_dlen_rlen" />
+          <variable line="144" name="ofname" />
+          <variable citdl="BinHex" ilk="argument" name="self" />
+          <variable citdl="FInfo" line="153" name="finfo" />
+        </scope>
+        <scope ilk="function" line="216" lineend="226" name="close" signature="close(self)">
+          <variable citdl="BinHex" ilk="argument" name="self" />
+        </scope>
+        <scope ilk="function" line="182" lineend="184" name="_write" signature="_write(self, data)">
+          <variable citdl="BinHex" ilk="argument" name="self" />
+          <variable ilk="argument" name="data" />
+        </scope>
+        <scope ilk="function" line="208" lineend="214" name="write_rsrc" signature="write_rsrc(self, data)">
+          <variable citdl="BinHex" ilk="argument" name="self" />
+          <variable ilk="argument" name="data" />
+        </scope>
+        <variable attributes="__instancevar__" citdl="int" line="151" name="crc" />
+        <variable attributes="__instancevar__" citdl="_Rlecoderengine" line="150" name="ofp" />
+        <variable attributes="__instancevar__" citdl="len()" line="155" name="rlen" />
+        <variable attributes="__instancevar__" citdl="len()" line="154" name="dlen" />
+        <variable attributes="__instancevar__" line="157" name="state" />
+      </scope>
+      <scope classrefs="Exception" doc="&#xA;" ilk="class" line="32" lineend="33" name="Error" />
+      <scope classrefs="object" doc="&#xA;" ilk="class" line="47" lineend="51" name="FInfo">
+        <scope ilk="function" line="48" lineend="51" name="__init__" signature="__init__(self)">
+          <variable citdl="FInfo" ilk="argument" name="self" />
+        </scope>
+        <variable attributes="__instancevar__" citdl="int" line="51" name="Flags" />
+        <variable attributes="__instancevar__" citdl="str" line="49" name="Type" />
+        <variable attributes="__instancevar__" citdl="str" line="50" name="Creator" />
+      </scope>
+      <scope classrefs="object" doc="&#xA;" ilk="class" line="346" lineend="444" name="HexBin">
+        <scope ilk="function" line="374" lineend="382" name="_checkcrc" signature="_checkcrc(self)">
+          <variable citdl="HexBin" ilk="argument" name="self" />
+          <variable citdl="int" line="375" name="filecrc" />
+        </scope>
+        <scope ilk="function" line="369" lineend="372" name="_read" returns="self.ifp.read()" signature="_read(self, len)">
+          <variable citdl="HexBin" ilk="argument" name="self" />
+          <variable citdl="self.ifp.read()" line="370" name="data" />
+          <variable ilk="argument" name="len" />
+        </scope>
+        <scope ilk="function" line="418" lineend="424" name="close_data" signature="close_data(self)">
+          <variable citdl="_read()" line="422" name="dummy" />
+          <variable citdl="HexBin" ilk="argument" name="self" />
+        </scope>
+        <scope ilk="function" line="384" lineend="402" name="_readheader" signature="_readheader(self)">
+          <variable line="392" name="flags" />
+          <variable citdl="_read()" line="385" name="len" />
+          <variable citdl="_read()" line="386" name="fname" />
+          <variable citdl="list" line="391" name="creator" />
+          <variable citdl="HexBin" ilk="argument" name="self" />
+          <variable citdl="list" line="390" name="type" />
+          <variable citdl="_read()" line="387" name="rest" />
+        </scope>
+        <scope ilk="function" line="404" lineend="416" name="read" returns="str" signature="read(self, *n)">
+          <variable citdl="HexBin" ilk="argument" name="self" />
+          <variable citdl="str" line="412" name="rv" />
+          <variable attributes="varargs" citdl="min()" ilk="argument" name="n" />
+        </scope>
+        <scope ilk="function" line="347" lineend="367" name="__init__" signature="__init__(self, ifp)">
+          <variable citdl="_Hqxdecoderengine" line="364" name="hqxifp" />
+          <variable citdl="HexBin" ilk="argument" name="self" />
+          <variable citdl="ifp.read()" line="354" name="ch" />
+          <variable citdl="io.open()" ilk="argument" name="ifp" />
+        </scope>
+        <scope ilk="function" line="439" lineend="444" name="close" signature="close(self)">
+          <variable citdl="read_rsrc()" line="441" name="dummy" />
+          <variable citdl="HexBin" ilk="argument" name="self" />
+        </scope>
+        <scope ilk="function" line="426" lineend="437" name="read_rsrc" returns="HexBin._read()" signature="read_rsrc(self, *n)">
+          <variable citdl="HexBin" ilk="argument" name="self" />
+          <variable attributes="varargs" citdl="min()" ilk="argument" name="n" />
+        </scope>
+        <variable attributes="__instancevar__" citdl="_Rledecoderengine" line="365" name="ifp" />
+        <variable attributes="__instancevar__" citdl="min()" line="393" name="dlen" />
+        <variable attributes="__instancevar__" citdl="min()" line="394" name="rlen" />
+        <variable attributes="__instancevar__" citdl="int" line="366" name="crc" />
+        <variable attributes="__instancevar__" line="402" name="state" />
+        <variable attributes="__instancevar__" citdl="_read()" line="396" name="FName" />
+        <variable attributes="__instancevar__" citdl="FInfo()" line="397" name="FInfo" />
+      </scope>
+      <variable citdl="int" line="40" name="LINELEN" />
+      <variable citdl="int" line="39" name="REASONABLY_LARGE" />
+      <variable citdl="bytes" line="41" name="RUNCHAR" />
+      <variable citdl="list" line="30" name="__all__" />
+      <import module="binascii" />
+      <scope doc="create binhex-encoded copy of a file" ilk="function" line="228" lineend="248" name="binhex" signature="binhex(infilename, outfilename)">
+        <variable citdl="BinHex" line="231" name="ofp" />
+        <variable citdl="openrsrc" line="233" name="ifp" />
+        <variable citdl="ifp.read()" line="236" name="d" />
+        <variable citdl="getfileinfo()" line="230" name="finfo" />
+        <variable ilk="argument" name="inp" />
+        <variable ilk="argument" name="out" />
+      </scope>
+      <scope ilk="function" line="53" lineend="64" name="getfileinfo" returns="tuple" signature="getfileinfo(name)">
+        <variable citdl="fp.tell()" line="61" name="dsize" />
+        <variable ilk="argument" name="name" />
+        <variable citdl="file.replace()" line="62" name="file" />
+        <variable citdl="FInfo" line="54" name="finfo" />
+        <variable citdl="fp.read()" line="57" name="data" />
+        <variable line="62" name="dir" />
+        <variable citdl="io.open()" line="55" name="fp" />
+      </scope>
+      <scope doc="Decode binhexed file" ilk="function" line="446" lineend="472" name="hexbin" signature="hexbin(infilename, outfilename)">
+        <variable citdl="openrsrc" line="453" name="ofp" />
+        <variable citdl="HexBin" line="448" name="ifp" />
+        <variable citdl="ifp.read_rsrc()" line="456" name="d" />
+        <variable citdl="ifp.FInfo" line="449" name="finfo" />
+        <variable ilk="argument" name="inp" />
+        <variable citdl="ifp.FName" ilk="argument" name="out" />
+      </scope>
+      <import module="io" />
+      <scope classrefs="object" doc="&#xA;" ilk="class" line="66" lineend="77" name="openrsrc">
+        <scope ilk="function" line="70" lineend="71" name="read" returns="str" signature="read(self, *args)">
+          <variable citdl="openrsrc" ilk="argument" name="self" />
+          <variable attributes="varargs" ilk="argument" name="args" />
+        </scope>
+        <scope ilk="function" line="73" lineend="74" name="write" signature="write(self, *args)">
+          <variable citdl="openrsrc" ilk="argument" name="self" />
+          <variable attributes="varargs" ilk="argument" name="args" />
+        </scope>
+        <scope ilk="function" line="76" lineend="77" name="close" signature="close(self)">
+          <variable citdl="openrsrc" ilk="argument" name="self" />
+        </scope>
+        <scope ilk="function" line="67" lineend="68" name="__init__" signature="__init__(self, *args)">
+          <variable citdl="openrsrc" ilk="argument" name="self" />
+          <variable attributes="varargs" ilk="argument" name="args" />
+        </scope>
+      </scope>
+      <import module="os" />
+      <import module="struct" />
+      <import module="sys" />
+      <variable attributes="protected __hidden__" line="36" name="_DID_RSRC" />
+      <scope attributes="protected __hidden__" doc="Write data to the coder in 3-byte chunks" ilk="class" line="79" lineend="115" name="_Hqxcoderengine">
+        <scope attributes="__ctor__" ilk="function" line="82" lineend="86" name="__init__" signature="_Hqxcoderengine(ofp)">
+          <variable citdl="_Hqxcoderengine" ilk="argument" name="self" />
+          <variable ilk="argument" name="ofp" />
+        </scope>
+        <variable attributes="__instancevar__" line="83" name="ofp" />
+        <variable attributes="__instancevar__" citdl="str" line="84" name="data" />
+        <variable attributes="__instancevar__" citdl="str" line="85" name="hqxdata" />
+        <variable attributes="__instancevar__" citdl="int" line="86" name="linelen" />
+        <scope ilk="function" line="88" lineend="97" name="write" signature="write(data)">
+          <variable citdl="_Hqxcoderengine" ilk="argument" name="self" />
+          <variable citdl="list" ilk="argument" name="data" />
+          <variable citdl="len()" line="90" name="datalen" />
+          <variable citdl="int" line="91" name="todo" />
+        </scope>
+        <scope attributes="protected" ilk="function" line="99" lineend="108" name="_flush" signature="_flush(force)">
+          <variable citdl="_Hqxcoderengine" ilk="argument" name="self" />
+          <variable ilk="argument" name="force" />
+          <variable citdl="int" line="100" name="first" />
+          <variable citdl="int" line="102" name="last" />
+        </scope>
+        <scope ilk="function" line="110" lineend="115" name="close" signature="close()">
+          <variable citdl="_Hqxcoderengine" ilk="argument" name="self" />
+        </scope>
+      </scope>
+      <scope attributes="protected __hidden__" doc="Read data via the decoder in 4-byte chunks" ilk="class" line="250" lineend="290" name="_Hqxdecoderengine">
+        <scope attributes="__ctor__" ilk="function" line="253" lineend="255" name="__init__" signature="_Hqxdecoderengine(ifp)">
+          <variable citdl="_Hqxdecoderengine" ilk="argument" name="self" />
+          <variable ilk="argument" name="ifp" />
+        </scope>
+        <variable attributes="__instancevar__" line="254" name="ifp" />
+        <variable attributes="__instancevar__" citdl="int" line="255" name="eof" />
+        <scope doc="Read at least wtd bytes (or until EOF)" ilk="function" line="257" lineend="287" name="read" returns="str" signature="read(totalwtd)">
+          <variable citdl="_Hqxdecoderengine" ilk="argument" name="self" />
+          <variable ilk="argument" name="totalwtd" />
+          <variable citdl="str" line="259" name="decdata" />
+          <variable citdl="int" line="260" name="wtd" />
+          <variable citdl="self.ifp.read()" line="267" name="data" />
+          <variable line="275" name="decdatacur" />
+          <variable citdl="self.ifp.read()" line="279" name="newdata" />
+        </scope>
+        <scope ilk="function" line="289" lineend="290" name="close" signature="close()">
+          <variable citdl="_Hqxdecoderengine" ilk="argument" name="self" />
+        </scope>
+      </scope>
+      <variable attributes="protected __hidden__" line="36" name="_DID_HEADER" />
+      <variable attributes="protected __hidden__" line="36" name="_DID_DATA" />
+      <scope attributes="protected __hidden__" doc="Read data via the RLE-coder" ilk="class" line="292" lineend="344" name="_Rledecoderengine">
+        <scope attributes="__ctor__" ilk="function" line="295" lineend="299" name="__init__" signature="_Rledecoderengine(ifp)">
+          <variable citdl="_Rledecoderengine" ilk="argument" name="self" />
+          <variable ilk="argument" name="ifp" />
+        </scope>
+        <variable attributes="__instancevar__" line="296" name="ifp" />
+        <variable attributes="__instancevar__" citdl="str" line="297" name="pre_buffer" />
+        <variable attributes="__instancevar__" citdl="list" line="298" name="post_buffer" />
+        <variable attributes="__instancevar__" citdl="int" line="299" name="eof" />
+        <scope ilk="function" line="301" lineend="306" name="read" returns="list" signature="read(wtd)">
+          <variable citdl="_Rledecoderengine" ilk="argument" name="self" />
+          <variable ilk="argument" name="wtd" />
+          <variable citdl="list" line="304" name="rv" />
+        </scope>
+        <scope attributes="protected" ilk="function" line="308" lineend="341" name="_fill" signature="_fill(wtd)">
+          <variable citdl="_Rledecoderengine" ilk="argument" name="self" />
+          <variable ilk="argument" name="wtd" />
+          <variable citdl="len()" line="327" name="mark" />
+        </scope>
+        <scope ilk="function" line="343" lineend="344" name="close" signature="close()">
+          <variable citdl="_Rledecoderengine" ilk="argument" name="self" />
+        </scope>
+      </scope>
+      <scope attributes="protected __hidden__" doc="Write data to the RLE-coder in suitably large chunks" ilk="class" line="117" lineend="137" name="_Rlecoderengine">
+        <scope attributes="__ctor__" ilk="function" line="120" lineend="122" name="__init__" signature="_Rlecoderengine(ofp)">
+          <variable citdl="_Rlecoderengine" ilk="argument" name="self" />
+          <variable ilk="argument" name="ofp" />
+        </scope>
+        <variable attributes="__instancevar__" line="121" name="ofp" />
+        <variable attributes="__instancevar__" citdl="str" line="122" name="data" />
+        <scope ilk="function" line="124" lineend="130" name="write" signature="write(data)">
+          <variable citdl="_Rlecoderengine" ilk="argument" name="self" />
+          <variable ilk="argument" name="data" />
+          <variable citdl="binascii.rlecode_hqx()" line="128" name="rledata" />
+        </scope>
+        <scope ilk="function" line="132" lineend="137" name="close" signature="close()">
+          <variable citdl="_Rlecoderengine" ilk="argument" name="self" />
+          <variable citdl="binascii.rlecode_hqx()" line="134" name="rledata" />
+        </scope>
+      </scope>
+    </scope>
+    

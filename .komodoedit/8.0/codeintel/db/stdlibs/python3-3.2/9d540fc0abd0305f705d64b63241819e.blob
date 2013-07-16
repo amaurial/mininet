@@ -1,0 +1,320 @@
+<scope doc="UUID objects (universally unique identifiers) according to RFC 4122.&#xA;This module provides immutable UUID objects (class UUID) and the functions uuid1(), uuid3(), uuid4(), uuid5() for generating version 1, 3, 4, and 5 UUIDs as specified in RFC 4122.  If all you want is a unique ID, you should probably call uuid1() or uuid4(). Note that uuid1() may compromise privacy since it creates a UUID containing the computer&apos;s network address.  uuid4() creates a random UUID.  Typical usage: " ilk="blob" lang="Python" name="uuid">
+      <variable citdl="UUID" line="578" name="NAMESPACE_DNS" />
+      <variable citdl="UUID" line="580" name="NAMESPACE_OID" />
+      <variable citdl="UUID" line="579" name="NAMESPACE_URL" />
+      <variable citdl="UUID" line="581" name="NAMESPACE_X500" />
+      <variable citdl="str" line="49" name="RESERVED_FUTURE" />
+      <variable citdl="str" line="49" name="RESERVED_MICROSOFT" />
+      <variable citdl="str" line="49" name="RESERVED_NCS" />
+      <variable citdl="str" line="49" name="RFC_4122" />
+      <scope classrefs="object" doc="Instances of the UUID class represent UUIDs as specified in RFC 4122.&#xA;UUID objects are immutable, hashable, and usable as dictionary keys. Converting a UUID to a string with str() yields something in the form &apos;12345678-1234-1234-1234-123456789abc&apos;.  The UUID constructor accepts five possible forms: a similar string of hexadecimal digits, or a tuple of six integer fields (with 32-bit, 16-bit, 16-bit, 8-bit, 8-bit, and 48-bit values respectively) as an argument named &apos;fields&apos;, or a string of 16 bytes (with all the integer fields in big-endian order) as an argument named &apos;bytes&apos;, or a string of 16 bytes (with the first three fields in little-endian order) as an argument named &apos;bytes_le&apos;, or a single 128-bit integer as an argument named &apos;int&apos;." ilk="class" line="56" lineend="312" name="UUID">
+        <scope ilk="function" line="221" lineend="222" name="__int__" returns="self.int" signature="__int__(self)">
+          <variable citdl="UUID" ilk="argument" name="self" />
+        </scope>
+        <scope ilk="function" line="190" lineend="193" name="__ne__" returns="NotImplemented" signature="__ne__(self, other)">
+          <variable citdl="UUID" ilk="argument" name="self" />
+          <variable ilk="argument" name="other" />
+        </scope>
+        <scope ilk="function" line="230" lineend="233" name="__str__" returns="tuple" signature="__str__(self)">
+          <variable citdl="UUID" ilk="argument" name="self" />
+          <variable citdl="self.int" line="231" name="hex" />
+        </scope>
+        <scope ilk="function" line="203" lineend="206" name="__gt__" returns="NotImplemented" signature="__gt__(self, other)">
+          <variable citdl="UUID" ilk="argument" name="self" />
+          <variable ilk="argument" name="other" />
+        </scope>
+        <scope ilk="function" line="185" lineend="188" name="__eq__" returns="NotImplemented" signature="__eq__(self, other)">
+          <variable citdl="UUID" ilk="argument" name="self" />
+          <variable ilk="argument" name="other" />
+        </scope>
+        <scope ilk="function" line="198" lineend="201" name="__lt__" returns="NotImplemented" signature="__lt__(self, other)">
+          <variable citdl="UUID" ilk="argument" name="self" />
+          <variable ilk="argument" name="other" />
+        </scope>
+        <scope doc="Create a UUID from either a string of 32 hexadecimal digits,&#xA;a string of 16 bytes as the &apos;bytes&apos; argument, a string of 16&#xA;bytes in little-endian order as the &apos;bytes_le&apos; argument, a&#xA;tuple of six integers (32-bit time_low, 16-bit time_mid,&#xA;16-bit time_hi_version," ilk="function" line="104" lineend="183" name="__init__" signature="__init__(self, hex=None, bytes=None, bytes_le=None, fields=None, int=None, version=None)">
+          <variable citdl="int_()" ilk="argument" name="int" />
+          <variable citdl="bytes_()" ilk="argument" name="bytes" />
+          <variable citdl="UUID" ilk="argument" name="self" />
+          <variable ilk="argument" name="hex" />
+          <variable ilk="argument" name="bytes_le" />
+          <variable ilk="argument" name="version" />
+          <variable ilk="argument" name="fields" />
+          <variable citdl="int" line="168" name="clock_seq" />
+        </scope>
+        <scope ilk="function" line="227" lineend="228" name="__setattr__" signature="__setattr__(self, name, value)">
+          <variable citdl="UUID" ilk="argument" name="self" />
+          <variable ilk="argument" name="name" />
+          <variable ilk="argument" name="value" />
+        </scope>
+        <scope ilk="function" line="224" lineend="225" name="__repr__" returns="str" signature="__repr__(self)">
+          <variable citdl="UUID" ilk="argument" name="self" />
+        </scope>
+        <scope ilk="function" line="218" lineend="219" name="__hash__" returns="hash()" signature="__hash__(self)">
+          <variable citdl="UUID" ilk="argument" name="self" />
+        </scope>
+        <scope ilk="function" line="208" lineend="211" name="__le__" returns="NotImplemented" signature="__le__(self, other)">
+          <variable citdl="UUID" ilk="argument" name="self" />
+          <variable ilk="argument" name="other" />
+        </scope>
+        <scope ilk="function" line="213" lineend="216" name="__ge__" returns="NotImplemented" signature="__ge__(self, other)">
+          <variable citdl="UUID" ilk="argument" name="self" />
+          <variable ilk="argument" name="other" />
+        </scope>
+        <variable attributes="property" citdl="int" line="272" name="clock_seq_low" />
+        <scope attributes="__hidden__" ilk="function" line="309" lineend="312" name="version (property getter)" returns="int()" signature="version (property getter)()">
+          <variable citdl="UUID" ilk="argument" name="self" />
+        </scope>
+        <scope attributes="__hidden__" ilk="function" line="298" lineend="306" name="variant (property getter)" returns="str" signature="variant (property getter)()">
+          <variable citdl="UUID" ilk="argument" name="self" />
+        </scope>
+        <scope attributes="__hidden__" ilk="function" line="276" lineend="278" name="time (property getter)" returns="int" signature="time (property getter)()">
+          <variable citdl="UUID" ilk="argument" name="self" />
+        </scope>
+        <scope attributes="__hidden__" ilk="function" line="281" lineend="283" name="clock_seq (property getter)" returns="int" signature="clock_seq (property getter)()">
+          <variable citdl="UUID" ilk="argument" name="self" />
+        </scope>
+        <variable attributes="property" citdl="int" line="268" name="clock_seq_hi_variant" />
+        <scope attributes="__hidden__" ilk="function" line="256" lineend="257" name="time_low (property getter)" returns="int" signature="time_low (property getter)()">
+          <variable citdl="UUID" ilk="argument" name="self" />
+        </scope>
+        <variable attributes="property" citdl="int" line="264" name="time_hi_version" />
+        <variable attributes="property" citdl="str" line="290" name="hex" />
+        <scope attributes="__hidden__" ilk="function" line="251" lineend="253" name="fields (property getter)" returns="tuple" signature="fields (property getter)()">
+          <variable citdl="UUID" ilk="argument" name="self" />
+        </scope>
+        <variable attributes="property" citdl="int()" line="309" name="version" />
+        <scope attributes="__hidden__" ilk="function" line="294" lineend="295" name="urn (property getter)" returns="str" signature="urn (property getter)()">
+          <variable citdl="UUID" ilk="argument" name="self" />
+        </scope>
+        <scope attributes="__hidden__" ilk="function" line="236" lineend="240" name="bytes (property getter)" returns="bytes_()" signature="bytes (property getter)()">
+          <variable citdl="UUID" ilk="argument" name="self" />
+          <variable citdl="bytearray()" line="237" name="bytes" />
+        </scope>
+        <scope attributes="__hidden__" ilk="function" line="272" lineend="273" name="clock_seq_low (property getter)" returns="int" signature="clock_seq_low (property getter)()">
+          <variable citdl="UUID" ilk="argument" name="self" />
+        </scope>
+        <variable attributes="property" citdl="int" line="256" name="time_low" />
+        <scope attributes="__hidden__" ilk="function" line="243" lineend="248" name="bytes_le (property getter)" returns="bytes_()" signature="bytes_le (property getter)()">
+          <variable citdl="UUID" ilk="argument" name="self" />
+          <variable citdl="bytes_()" line="244" name="bytes" />
+        </scope>
+        <variable attributes="property" citdl="int" line="286" name="node" />
+        <variable attributes="property" citdl="str" line="298" name="variant" />
+        <variable attributes="property" citdl="int" line="260" name="time_mid" />
+        <scope attributes="__hidden__" ilk="function" line="260" lineend="261" name="time_mid (property getter)" returns="int" signature="time_mid (property getter)()">
+          <variable citdl="UUID" ilk="argument" name="self" />
+        </scope>
+        <scope attributes="__hidden__" ilk="function" line="290" lineend="291" name="hex (property getter)" returns="self.int" signature="hex (property getter)()">
+          <variable citdl="UUID" ilk="argument" name="self" />
+        </scope>
+        <variable attributes="property" citdl="tuple" line="251" name="fields" />
+        <variable attributes="property" citdl="str()" line="294" name="urn" />
+        <variable attributes="property" citdl="bytes_()" line="236" name="bytes" />
+        <variable attributes="property" citdl="list" line="243" name="bytes_le" />
+        <scope attributes="__hidden__" ilk="function" line="264" lineend="265" name="time_hi_version (property getter)" returns="int" signature="time_hi_version (property getter)()">
+          <variable citdl="UUID" ilk="argument" name="self" />
+        </scope>
+        <scope attributes="__hidden__" ilk="function" line="286" lineend="287" name="node (property getter)" returns="int" signature="node (property getter)()">
+          <variable citdl="UUID" ilk="argument" name="self" />
+        </scope>
+        <variable attributes="property" citdl="int" line="276" name="time" />
+        <variable attributes="property" citdl="int" line="281" name="clock_seq" />
+        <scope attributes="__hidden__" ilk="function" line="268" lineend="269" name="clock_seq_hi_variant (property getter)" returns="int" signature="clock_seq_hi_variant (property getter)()">
+          <variable citdl="UUID" ilk="argument" name="self" />
+        </scope>
+      </scope>
+      <scope classrefs="object" doc="bytes(iterable_of_ints) -&gt; bytes&#xA;bytes(string, encoding[, errors]) -&gt; bytes bytes(bytes_or_buffer) -&gt; immutable copy of bytes_or_buffer bytes(memory_view) -&gt; bytes  Construct an immutable array of bytes from: - an iterable yielding integers in range(256) - a text string encoded using the specified encoding - a bytes or a buffer object - any object implementing the buffer API." ilk="class" line="54" name="bytes_">
+        <scope doc="Return a copy of B with all ASCII characters converted to&#xA;uppercase." ilk="function" name="upper" signature="B.upper() -&gt; copy of B" />
+        <scope doc="Return True if B starts with the specified prefix, False&#xA;otherwise." ilk="function" name="startswith" returns="bool" signature="B.startswith(prefix[, start[, end]]) -&gt; bool" />
+        <scope doc="Strip leading bytes contained in the argument." ilk="function" name="lstrip" signature="B.lstrip([bytes]) -&gt; bytes" />
+        <scope doc="x.__str__() &lt;==&gt; str(x)" ilk="function" name="__str__" signature="x.__str__() &lt;==&gt; str(x)" />
+        <scope doc="x.__getattribute__(&apos;name&apos;) &lt;==&gt; x.name" ilk="function" name="__getattribute__" signature="x.__getattribute__(&apos;name&apos;) &lt;==&gt; x.name" />
+        <scope doc="Search for the separator sep in B, starting at the end of B,&#xA;and return the part before it, the separator itself, and the&#xA;part after it." ilk="function" name="rpartition" signature="B.rpartition(sep) -&gt; (head, sep, tail)" />
+        <scope doc="Return a copy of B with all occurrences of subsection old&#xA;replaced by new." ilk="function" name="replace" signature="B.replace(old, new[, count]) -&gt; bytes" />
+        <scope doc="Return True if all characters in B are digits and there is&#xA;at least one character in B, False otherwise." ilk="function" name="isdigit" returns="bool" signature="B.isdigit() -&gt; bool" />
+        <scope doc="Return True if B ends with the specified suffix, False&#xA;otherwise." ilk="function" name="endswith" returns="bool" signature="B.endswith(suffix[, start[, end]]) -&gt; bool" />
+        <scope doc="Return a list of the lines in B, breaking at line&#xA;boundaries." ilk="function" name="splitlines" returns="list" signature="B.splitlines([keepends]) -&gt; list of lines" />
+        <scope doc="Return the highest index in B where substring sub is found,&#xA;such that sub is contained within B[start:end]." ilk="function" name="rfind" returns="int" signature="B.rfind(sub[, start[, end]]) -&gt; int" />
+        <scope doc="Strip leading and trailing bytes contained in the argument." ilk="function" name="strip" signature="B.strip([bytes]) -&gt; bytes" />
+        <scope doc="x.__rmul__(n) &lt;==&gt; n*x" ilk="function" name="__rmul__" signature="x.__rmul__(n) &lt;==&gt; n*x" />
+        <scope doc="x.__lt__(y) &lt;==&gt; x&lt;y" ilk="function" name="__lt__" signature="x.__lt__(y) &lt;==&gt; x&lt;y" />
+        <scope ilk="function" name="__getnewargs__" />
+        <scope doc="Return the lowest index in B where substring sub is found,&#xA;such that sub is contained within B[start:end]." ilk="function" name="find" returns="int" signature="B.find(sub[, start[, end]]) -&gt; int" />
+        <scope doc="Like B.find() but raise ValueError when the substring is not&#xA;found." ilk="function" name="index" returns="int" signature="B.index(sub[, start[, end]]) -&gt; int" />
+        <scope doc="Return B left justified in a string of length width." ilk="function" name="ljust" signature="B.ljust(width[, fillchar]) -&gt; copy of B" />
+        <scope doc="Return True if all characters in B are alphanumeric and&#xA;there is at least one character in B, False otherwise." ilk="function" name="isalnum" returns="bool" signature="B.isalnum() -&gt; bool" />
+        <scope doc="x.__contains__(y) &lt;==&gt; y in x" ilk="function" name="__contains__" signature="x.__contains__(y) &lt;==&gt; y in x" />
+        <scope doc="Like B.rfind() but raise ValueError when the substring is&#xA;not found." ilk="function" name="rindex" returns="int" signature="B.rindex(sub[, start[, end]]) -&gt; int" />
+        <scope doc="x.__eq__(y) &lt;==&gt; x==y" ilk="function" name="__eq__" signature="x.__eq__(y) &lt;==&gt; x==y" />
+        <scope doc="Decode B using the codec registered for encoding." ilk="function" name="decode" returns="str" signature="B.decode(encoding=&apos;utf-8&apos;, errors=&apos;strict&apos;) -&gt; str" />
+        <scope doc="Return True if all characters in B are alphabetic and there&#xA;is at least one character in B, False otherwise." ilk="function" name="isalpha" returns="bool" signature="B.isalpha() -&gt; bool" />
+        <scope doc="Return a list of the sections in B, using sep as the&#xA;delimiter." ilk="function" name="split" returns="list" signature="B.split([sep[, maxsplit]]) -&gt; list of bytes" />
+        <scope doc="Strip trailing bytes contained in the argument." ilk="function" name="rstrip" signature="B.rstrip([bytes]) -&gt; bytes" />
+        <scope doc="Return a copy of B, where all characters occurring in the&#xA;optional argument deletechars are removed, and the remaining&#xA;characters have been mapped through the given translation&#xA;table, which must be a bytes object of length 256." ilk="function" name="translate" signature="B.translate(table[, deletechars]) -&gt; bytes" />
+        <scope doc="Return True if all characters in B are whitespace and there&#xA;is at least one character in B, False otherwise." ilk="function" name="isspace" returns="bool" signature="B.isspace() -&gt; bool" />
+        <scope doc="x.__len__() &lt;==&gt; len(x)" ilk="function" name="__len__" signature="x.__len__() &lt;==&gt; len(x)" />
+        <scope doc="x.__mul__(n) &lt;==&gt; x*n" ilk="function" name="__mul__" signature="x.__mul__(n) &lt;==&gt; x*n" />
+        <scope doc="x.__ne__(y) &lt;==&gt; x!=y" ilk="function" name="__ne__" signature="x.__ne__(y) &lt;==&gt; x!=y" />
+        <scope doc="x.__getitem__(y) &lt;==&gt; x[y]" ilk="function" name="__getitem__" signature="x.__getitem__(y) &lt;==&gt; x[y]" />
+        <scope doc="Return B right justified in a string of length width." ilk="function" name="rjust" signature="B.rjust(width[, fillchar]) -&gt; copy of B" />
+        <scope doc="Return a copy of B with uppercase ASCII characters converted&#xA;to lowercase ASCII and vice versa." ilk="function" name="swapcase" signature="B.swapcase() -&gt; copy of B" />
+        <scope doc="Return True if all cased characters in B are lowercase and&#xA;there is at least one cased character in B, False otherwise." ilk="function" name="islower" returns="bool" signature="B.islower() -&gt; bool" />
+        <scope doc="x.__iter__() &lt;==&gt; iter(x)" ilk="function" name="__iter__" signature="x.__iter__() &lt;==&gt; iter(x)" />
+        <scope doc="Pad a numeric string B with zeros on the left, to fill a&#xA;field of the specified width." ilk="function" name="zfill" signature="B.zfill(width) -&gt; copy of B" />
+        <scope doc="x.__add__(y) &lt;==&gt; x+y" ilk="function" name="__add__" signature="x.__add__(y) &lt;==&gt; x+y" />
+        <scope doc="x.__gt__(y) &lt;==&gt; x&gt;y" ilk="function" name="__gt__" signature="x.__gt__(y) &lt;==&gt; x&gt;y" />
+        <scope doc="Return a copy of B with only its first character capitalized&#xA;(ASCII) and the rest lower-cased." ilk="function" name="capitalize" signature="B.capitalize() -&gt; copy of B" />
+        <scope doc="B.__sizeof__() -&gt; size of B in memory, in bytes" ilk="function" name="__sizeof__" signature="B.__sizeof__() -&gt; size of B in memory, in bytes" />
+        <scope doc="Return the number of non-overlapping occurrences of&#xA;substring sub in string B[start:end]." ilk="function" name="count" returns="int" signature="B.count(sub[, start[, end]]) -&gt; int" />
+        <scope doc="Return a copy of B with all ASCII characters converted to&#xA;lowercase." ilk="function" name="lower" signature="B.lower() -&gt; copy of B" />
+        <scope doc="Concatenate any number of bytes objects, with B in between&#xA;each pair." ilk="function" name="join" signature="B.join(iterable_of_bytes) -&gt; bytes" />
+        <scope doc="Return B centered in a string of length width." ilk="function" name="center" signature="B.center(width[, fillchar]) -&gt; copy of B" />
+        <scope doc="Search for the separator sep in B, and return the part&#xA;before it, the separator itself, and the part after it." ilk="function" name="partition" signature="B.partition(sep) -&gt; (head, sep, tail)" />
+        <scope doc="Return a list of the sections in B, using sep as the&#xA;delimiter, starting at the end of B and working to the&#xA;front." ilk="function" name="rsplit" returns="list" signature="B.rsplit([sep[, maxsplit]]) -&gt; list of bytes" />
+        <scope doc="Return a copy of B where all tab characters are expanded&#xA;using spaces." ilk="function" name="expandtabs" signature="B.expandtabs([tabsize]) -&gt; copy of B" />
+        <scope doc="Return True if B is a titlecased string and there is at&#xA;least one character in B, i.e." ilk="function" name="istitle" returns="bool" signature="B.istitle() -&gt; bool" />
+        <scope doc="x.__le__(y) &lt;==&gt; x&lt;=y" ilk="function" name="__le__" signature="x.__le__(y) &lt;==&gt; x&lt;=y" />
+        <scope doc="x.__repr__() &lt;==&gt; repr(x)" ilk="function" name="__repr__" signature="x.__repr__() &lt;==&gt; repr(x)" />
+        <scope doc="x.__hash__() &lt;==&gt; hash(x)" ilk="function" name="__hash__" signature="x.__hash__() &lt;==&gt; hash(x)" />
+        <scope doc="Return a titlecased version of B, i.e." ilk="function" name="title" signature="B.title() -&gt; copy of B" />
+        <scope doc="Return True if all cased characters in B are uppercase and&#xA;there is at least one cased character in B, False otherwise." ilk="function" name="isupper" returns="bool" signature="B.isupper() -&gt; bool" />
+        <scope doc="x.__ge__(y) &lt;==&gt; x&gt;=y" ilk="function" name="__ge__" signature="x.__ge__(y) &lt;==&gt; x&gt;=y" />
+      </scope>
+      <import module="ctypes" />
+      <scope doc="Get the hardware address as a 48-bit positive integer." ilk="function" line="482" lineend="507" name="getnode" returns="getter()" signature="getnode()">
+        <variable attributes="protected" citdl="getter()" line="503" name="_node" />
+        <variable citdl="list" line="497" name="getters" />
+      </scope>
+      <scope classrefs="object" doc="int(x[, base]) -&gt; integer&#xA;Convert a string or number to an integer, if possible.  A floating point argument will be truncated towards zero (this does not include a string representation of a floating point number!)  When converting a string, use the optional base.  It is an error to supply a base when converting a non-string." ilk="class" line="53" name="int_">
+        <scope doc="x.__int__() &lt;==&gt; int(x)" ilk="function" name="__int__" signature="x.__int__() &lt;==&gt; int(x)" />
+        <scope doc="x.__ror__(y) &lt;==&gt; y|x" ilk="function" name="__ror__" signature="x.__ror__(y) &lt;==&gt; y|x" />
+        <scope doc="x.__rtruediv__(y) &lt;==&gt; y/x" ilk="function" name="__rtruediv__" signature="x.__rtruediv__(y) &lt;==&gt; y/x" />
+        <scope doc="x.__lshift__(y) &lt;==&gt; x&lt;&lt;y" ilk="function" name="__lshift__" signature="x.__lshift__(y) &lt;==&gt; x&lt;&lt;y" />
+        <scope doc="x.__rshift__(y) &lt;==&gt; x&gt;&gt;y" ilk="function" name="__rshift__" signature="x.__rshift__(y) &lt;==&gt; x&gt;&gt;y" />
+        <scope doc="x.__str__() &lt;==&gt; str(x)" ilk="function" name="__str__" signature="x.__str__() &lt;==&gt; str(x)" />
+        <scope doc="x.__getattribute__(&apos;name&apos;) &lt;==&gt; x.name" ilk="function" name="__getattribute__" signature="x.__getattribute__(&apos;name&apos;) &lt;==&gt; x.name" />
+        <scope doc="x.__radd__(y) &lt;==&gt; y+x" ilk="function" name="__radd__" signature="x.__radd__(y) &lt;==&gt; y+x" />
+        <scope doc="x.__and__(y) &lt;==&gt; x&amp;y" ilk="function" name="__and__" signature="x.__and__(y) &lt;==&gt; x&amp;y" />
+        <scope doc="x.__truediv__(y) &lt;==&gt; x/y" ilk="function" name="__truediv__" signature="x.__truediv__(y) &lt;==&gt; x/y" />
+        <scope doc="x.__rrshift__(y) &lt;==&gt; y&gt;&gt;x" ilk="function" name="__rrshift__" signature="x.__rrshift__(y) &lt;==&gt; y&gt;&gt;x" />
+        <scope doc="x.__rsub__(y) &lt;==&gt; y-x" ilk="function" name="__rsub__" signature="x.__rsub__(y) &lt;==&gt; y-x" />
+        <scope doc="Returns self, the complex conjugate of any int." ilk="function" name="conjugate" />
+        <scope doc="x.__rmul__(y) &lt;==&gt; y*x" ilk="function" name="__rmul__" signature="x.__rmul__(y) &lt;==&gt; y*x" />
+        <scope doc="x.__lt__(y) &lt;==&gt; x&lt;y" ilk="function" name="__lt__" signature="x.__lt__(y) &lt;==&gt; x&lt;y" />
+        <scope doc="Ceiling of an Integral returns itself." ilk="function" name="__ceil__" />
+        <scope doc="x.__rmod__(y) &lt;==&gt; y%x" ilk="function" name="__rmod__" signature="x.__rmod__(y) &lt;==&gt; y%x" />
+        <scope doc="x.__float__() &lt;==&gt; float(x)" ilk="function" name="__float__" signature="x.__float__() &lt;==&gt; float(x)" />
+        <scope doc="y.__rpow__(x[, z]) &lt;==&gt; pow(x, y[, z])" ilk="function" name="__rpow__" signature="y.__rpow__(x[, z]) &lt;==&gt; pow(x, y[, z])" />
+        <scope doc="x.__rand__(y) &lt;==&gt; y&amp;x" ilk="function" name="__rand__" signature="x.__rand__(y) &lt;==&gt; y&amp;x" />
+        <scope doc="Return an array of bytes representing an integer." ilk="function" name="to_bytes" signature="int.to_bytes(length, byteorder, *, signed=False) -&gt; bytes" />
+        <scope ilk="function" name="__getnewargs__" />
+        <scope doc="x.__or__(y) &lt;==&gt; x|y" ilk="function" name="__or__" signature="x.__or__(y) &lt;==&gt; x|y" />
+        <scope doc="x.__rlshift__(y) &lt;==&gt; y&lt;&lt;x" ilk="function" name="__rlshift__" signature="x.__rlshift__(y) &lt;==&gt; y&lt;&lt;x" />
+        <scope doc="x.__abs__() &lt;==&gt; abs(x)" ilk="function" name="__abs__" signature="x.__abs__() &lt;==&gt; abs(x)" />
+        <scope doc="x.__pos__() &lt;==&gt; +x" ilk="function" name="__pos__" signature="x.__pos__() &lt;==&gt; +x" />
+        <scope doc="x[y:z] &lt;==&gt; x[y.__index__():z.__index__()]" ilk="function" name="__index__" />
+        <scope doc="x.__rfloordiv__(y) &lt;==&gt; y//x" ilk="function" name="__rfloordiv__" signature="x.__rfloordiv__(y) &lt;==&gt; y//x" />
+        <scope doc="Number of bits necessary to represent self in binary." ilk="function" name="bit_length" returns="int" signature="int.bit_length() -&gt; int" />
+        <scope doc="Flooring an Integral returns itself." ilk="function" name="__floor__" />
+        <scope doc="x.__mul__(y) &lt;==&gt; x*y" ilk="function" name="__mul__" signature="x.__mul__(y) &lt;==&gt; x*y" />
+        <scope doc="x.__ne__(y) &lt;==&gt; x!=y" ilk="function" name="__ne__" signature="x.__ne__(y) &lt;==&gt; x!=y" />
+        <scope doc="x.__rdivmod__(y) &lt;==&gt; divmod(y, x)" ilk="function" name="__rdivmod__" signature="x.__rdivmod__(y) &lt;==&gt; divmod(y, x)" />
+        <scope doc="x.__invert__() &lt;==&gt; ~x" ilk="function" name="__invert__" signature="x.__invert__() &lt;==&gt; ~x" />
+        <scope ilk="function" name="__format__" />
+        <scope doc="x.__divmod__(y) &lt;==&gt; divmod(x, y)" ilk="function" name="__divmod__" signature="x.__divmod__(y) &lt;==&gt; divmod(x, y)" />
+        <scope doc="x.__add__(y) &lt;==&gt; x+y" ilk="function" name="__add__" signature="x.__add__(y) &lt;==&gt; x+y" />
+        <scope doc="x.__gt__(y) &lt;==&gt; x&gt;y" ilk="function" name="__gt__" signature="x.__gt__(y) &lt;==&gt; x&gt;y" />
+        <scope doc="x.__bool__() &lt;==&gt; x != 0" ilk="function" name="__bool__" signature="x.__bool__() &lt;==&gt; x != 0" />
+        <scope doc="x.__eq__(y) &lt;==&gt; x==y" ilk="function" name="__eq__" signature="x.__eq__(y) &lt;==&gt; x==y" />
+        <scope doc="x.__rxor__(y) &lt;==&gt; y^x" ilk="function" name="__rxor__" signature="x.__rxor__(y) &lt;==&gt; y^x" />
+        <scope doc="Returns size in memory, in bytes" ilk="function" name="__sizeof__" />
+        <scope doc="Rounding an Integral returns itself." ilk="function" name="__round__" />
+        <scope doc="x.__mod__(y) &lt;==&gt; x%y" ilk="function" name="__mod__" signature="x.__mod__(y) &lt;==&gt; x%y" />
+        <scope doc="x.__neg__() &lt;==&gt; -x" ilk="function" name="__neg__" signature="x.__neg__() &lt;==&gt; -x" />
+        <scope doc="Truncating an Integral returns itself." ilk="function" name="__trunc__" />
+        <scope doc="x.__xor__(y) &lt;==&gt; x^y" ilk="function" name="__xor__" signature="x.__xor__(y) &lt;==&gt; x^y" />
+        <scope doc="x.__le__(y) &lt;==&gt; x&lt;=y" ilk="function" name="__le__" signature="x.__le__(y) &lt;==&gt; x&lt;=y" />
+        <scope doc="x.__repr__() &lt;==&gt; repr(x)" ilk="function" name="__repr__" signature="x.__repr__() &lt;==&gt; repr(x)" />
+        <scope doc="x.__floordiv__(y) &lt;==&gt; x//y" ilk="function" name="__floordiv__" signature="x.__floordiv__(y) &lt;==&gt; x//y" />
+        <scope doc="x.__hash__() &lt;==&gt; hash(x)" ilk="function" name="__hash__" signature="x.__hash__() &lt;==&gt; hash(x)" />
+        <scope doc="x.__sub__(y) &lt;==&gt; x-y" ilk="function" name="__sub__" signature="x.__sub__(y) &lt;==&gt; x-y" />
+        <scope doc="x.__ge__(y) &lt;==&gt; x&gt;=y" ilk="function" name="__ge__" signature="x.__ge__(y) &lt;==&gt; x&gt;=y" />
+        <scope doc="x.__pow__(y[, z]) &lt;==&gt; pow(x, y[, z])" ilk="function" name="__pow__" signature="x.__pow__(y[, z]) &lt;==&gt; pow(x, y[, z])" />
+      </scope>
+      <variable citdl="WinDLL" line="425" name="lib" />
+      <variable citdl="str" name="libname" />
+      <import module="sys" />
+      <scope doc="Generate a UUID from a host ID, sequence number, and the&#xA;current time." ilk="function" line="511" lineend="544" name="uuid1" returns="UUID" signature="uuid1(node=None, clock_seq=None)">
+        <variable citdl="getnode()" ilk="argument" name="node" />
+        <variable citdl="int" line="536" name="time_low" />
+        <variable attributes="protected" citdl="ctypes.create_string_buffer()" line="520" name="_buffer" />
+        <variable citdl="int()" line="529" name="timestamp" />
+        <variable citdl="int()" line="526" name="nanoseconds" />
+        <variable citdl="int" line="539" name="clock_seq_low" />
+        <variable citdl="int" line="537" name="time_mid" />
+        <variable attributes="protected" citdl="int()" line="532" name="_last_timestamp" />
+        <variable citdl="int" line="540" name="clock_seq_hi_variant" />
+        <variable citdl="int" line="538" name="time_hi_version" />
+        <variable citdl="random.randrange()" ilk="argument" name="clock_seq" />
+      </scope>
+      <scope doc="Generate a UUID from the MD5 hash of a namespace UUID and a&#xA;name." ilk="function" line="546" lineend="550" name="uuid3" returns="UUID" signature="uuid3(namespace, name)">
+        <variable line="549" name="hash" />
+        <variable ilk="argument" name="namespace" />
+        <variable ilk="argument" name="name" />
+      </scope>
+      <scope doc="Generate a random UUID." ilk="function" line="552" lineend="568" name="uuid4" returns="UUID" signature="uuid4()">
+        <variable citdl="bytes_()" line="567" name="bytes" />
+        <variable attributes="protected" citdl="ctypes.create_string_buffer()" line="557" name="_buffer" />
+      </scope>
+      <scope doc="Generate a UUID from the SHA-1 hash of a namespace UUID and&#xA;a name." ilk="function" line="570" lineend="574" name="uuid5" returns="UUID" signature="uuid5(namespace, name)">
+        <variable line="573" name="hash" />
+        <variable ilk="argument" name="namespace" />
+        <variable ilk="argument" name="name" />
+      </scope>
+      <variable attributes="protected __hidden__" citdl="getattr()" line="458" name="_UuidCreate" />
+      <variable attributes="protected __hidden__" citdl="lib.uuid_generate_random" line="417" name="_uuid_generate_random" />
+      <scope attributes="protected __hidden__" doc="Get a random node ID, with eighth bit set as suggested by RFC 4122." ilk="function" line="475" lineend="478" name="_random_getnode" returns="int" signature="_random_getnode()">
+        <import line="477" module="random" />
+      </scope>
+      <scope attributes="protected __hidden__" doc="Get the hardware address on Windows using ctypes." ilk="function" line="469" lineend="473" name="_windll_getnode" signature="_windll_getnode()">
+        <variable attributes="protected" citdl="ctypes.create_string_buffer()" line="471" name="_buffer" />
+      </scope>
+      <scope attributes="protected __hidden__" doc="Get the hardware address on Windows using NetBIOS calls.&#xA;See http://support.microsoft.com/kb/118623 for details." ilk="function" line="384" lineend="411" name="_netbios_getnode" returns="int" signature="_netbios_getnode()">
+        <import line="387" module="win32wnet" />
+        <import line="387" module="netbios" />
+        <variable citdl="netbios.NCB()" line="388" name="ncb" />
+        <variable citdl="map()" line="409" name="bytes" />
+      </scope>
+      <variable attributes="protected __hidden__" line="509" name="_last_timestamp" />
+      <scope attributes="protected __hidden__" ilk="function" line="314" lineend="334" name="_find_mac" returns="int()" signature="_find_mac(command, args, hw_identifiers, get_index)">
+        <import line="315" module="os" />
+        <variable ilk="argument" name="command" />
+        <variable ilk="argument" name="args" />
+        <variable ilk="argument" name="hw_identifiers" />
+        <variable ilk="argument" name="get_index" />
+        <variable citdl="os.path.join()" line="317" name="executable" />
+        <variable citdl="str" line="324" name="cmd" />
+        <variable line="327" name="words" />
+      </scope>
+      <scope attributes="protected __hidden__" doc="Get the hardware address on Windows by running ipconfig.exe." ilk="function" line="360" lineend="382" name="_ipconfig_getnode" returns="int()" signature="_ipconfig_getnode()">
+        <import line="362" module="os" />
+        <import line="362" module="re" />
+        <import line="365" module="ctypes" />
+        <variable citdl="list" line="363" name="dirs" />
+        <variable citdl="ctypes.create_string_buffer()" line="366" name="buffer" />
+        <variable citdl="os.popen()" line="373" name="pipe" />
+        <variable line="378" name="value" />
+      </scope>
+      <variable attributes="__hidden__" citdl="str" line="47" name="__author__" />
+      <variable attributes="protected __hidden__" line="480" name="_node" />
+      <scope attributes="protected __hidden__" doc="Get the hardware address on Unix using ctypes." ilk="function" line="463" lineend="467" name="_unixdll_getnode" signature="_unixdll_getnode()">
+        <variable attributes="protected" citdl="ctypes.create_string_buffer()" line="465" name="_buffer" />
+      </scope>
+      <scope attributes="protected __hidden__" doc="Get the hardware address on Unix by running ifconfig." ilk="function" line="336" lineend="358" name="_ifconfig_getnode" returns="_find_mac()" signature="_ifconfig_getnode()">
+        <import line="345" module="socket" />
+        <variable citdl="_find_mac()" line="341" name="mac" />
+        <variable citdl="socket.gethostbyname()" line="346" name="ip_addr" />
+      </scope>
+      <variable attributes="protected __hidden__" citdl="lib.uuid_generate_time" line="431" name="_uuid_generate_time" />
+    </scope>
+    

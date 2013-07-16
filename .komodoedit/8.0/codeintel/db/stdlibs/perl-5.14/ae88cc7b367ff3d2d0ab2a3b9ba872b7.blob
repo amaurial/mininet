@@ -1,0 +1,113 @@
+<scope ilk="blob" lang="Perl" name="DB_File::HASHINFO">
+      <scope ilk="class" line="12" lineend="113" name="DB_File::HASHINFO">
+        <import line="18" module="Carp" symbol="*" />
+        <import line="19" module="Tie::Hash" />
+        <variable line="20" name="@DB_File::HASHINFO::ISA" />
+        <scope attributes="__ctor__" ilk="function" line="22" lineend="28" name="new" signature="new($pkg)">
+          <variable ilk="argument" name="$pkg" />
+        </scope>
+        <scope attributes="__ctor__" ilk="function" line="31" lineend="45" name="TIEHASH" signature="TIEHASH($pkg)">
+          <variable ilk="argument" name="$pkg" />
+        </scope>
+        <scope ilk="function" line="48" lineend="57" name="FETCH" signature="FETCH($self, $key)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$key" />
+        </scope>
+        <scope ilk="function" line="60" lineend="78" name="STORE" signature="STORE($self, $key, $value)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$key" />
+          <variable ilk="argument" name="$value" />
+        </scope>
+        <scope ilk="function" line="80" lineend="93" name="DELETE" signature="DELETE($self, $key)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$key" />
+        </scope>
+        <scope ilk="function" line="95" lineend="101" name="EXISTS" signature="EXISTS($self, $key)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$key" />
+        </scope>
+        <scope ilk="function" line="103" lineend="109" name="NotHere" signature="NotHere($self, $method)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$method" />
+        </scope>
+        <scope ilk="function" line="111" lineend="111" name="FIRSTKEY" signature="FIRSTKEY($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="112" lineend="112" name="NEXTKEY" signature="NEXTKEY($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="113" lineend="113" name="CLEAR" signature="CLEAR($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+      </scope>
+      <scope ilk="class" line="115" lineend="131" name="DB_File::RECNOINFO">
+        <variable line="120" name="@DB_File::RECNOINFO::ISA" />
+        <scope attributes="__ctor__" ilk="function" line="122" lineend="131" name="TIEHASH" signature="TIEHASH($pkg)">
+          <variable ilk="argument" name="$pkg" />
+        </scope>
+      </scope>
+      <scope ilk="class" line="133" lineend="156" name="DB_File::BTREEINFO">
+        <variable line="138" name="@DB_File::BTREEINFO::ISA" />
+        <scope attributes="__ctor__" ilk="function" line="140" lineend="156" name="TIEHASH" signature="TIEHASH($pkg)">
+          <variable ilk="argument" name="$pkg" />
+        </scope>
+      </scope>
+      <scope classrefs="DynaLoader" ilk="class" line="159" lineend="574" name="DB_File">
+        <import line="165" module="Carp" symbol="*" />
+        <import line="183" module="Tie::Hash" />
+        <import line="184" module="Exporter" />
+        <import line="185" module="AutoLoader" symbol="*" />
+        <import line="188" module="XSLoader" />
+        <import line="192" module="DynaLoader" />
+        <import line="245" module="Fcntl" />
+        <variable line="163" name="$AUTOLOAD" />
+        <variable attributes="__exported__" citdl="DB_File::BTREEINFO" line="163" name="$DB_BTREE" />
+        <variable attributes="__exported__" citdl="DB_File::HASHINFO" line="163" name="$DB_HASH" />
+        <variable attributes="__exported__" citdl="DB_File::RECNOINFO" line="163" name="$DB_RECNO" />
+        <variable line="163" name="$VERSION" />
+        <variable line="163" name="@EXPORT" />
+        <variable line="163" name="@ISA" />
+        <variable line="164" name="$db_version" />
+        <variable line="164" name="$Error" />
+        <variable line="164" name="$splice_end_array" />
+        <variable line="164" name="$use_XSLoader" />
+        <scope ilk="function" line="232" lineend="240" name="AUTOLOAD" signature="AUTOLOAD()">
+          </scope>
+        <scope ilk="function" line="259" lineend="288" name="tie_hash_or_array" signature="tie_hash_or_array(@arg)">
+          <import line="264" module="File::Spec" symbol="*" />
+          <variable ilk="argument" name="@arg" />
+          <import line="264" module="File::Spec" symbol="*" />
+        </scope>
+        <scope ilk="function" line="290" lineend="293" name="TIEHASH" signature="TIEHASH()" />
+        <scope ilk="function" line="295" lineend="298" name="TIEARRAY" signature="TIEARRAY()" />
+        <scope ilk="function" line="300" lineend="315" name="CLEAR" signature="CLEAR($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="317" lineend="317" name="EXTEND" signature="EXTEND()" />
+        <scope ilk="function" line="319" lineend="333" name="STORESIZE" signature="STORESIZE($self, $length)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$length" />
+        </scope>
+        <scope ilk="function" line="336" lineend="499" name="SPLICE" signature="SPLICE($self, $offset, @list)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$offset" />
+          <variable ilk="argument" name="@list" />
+        </scope>
+        <scope ilk="function" line="502" lineend="520" name="find_dup" signature="find_dup($db, $origkey, $value_wanted)">
+          <variable ilk="argument" name="$db" />
+          <variable ilk="argument" name="$origkey" />
+          <variable ilk="argument" name="$value_wanted" />
+        </scope>
+        <scope ilk="function" line="522" lineend="534" name="del_dup" signature="del_dup($db, $key, $value)">
+          <variable ilk="argument" name="$db" />
+          <variable ilk="argument" name="$key" />
+          <variable ilk="argument" name="$value" />
+        </scope>
+        <scope ilk="function" line="536" lineend="571" name="get_dup" signature="get_dup($db, $key, $flag)">
+          <variable ilk="argument" name="$db" />
+          <variable ilk="argument" name="$key" />
+          <variable ilk="argument" name="$flag" />
+        </scope>
+      </scope>
+    </scope>
+    

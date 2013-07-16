@@ -1,0 +1,85 @@
+<scope ilk="blob" lang="Perl" name="ExtUtils::Constant::Base">
+      <scope ilk="class" line="1" lineend="1004" name="ExtUtils::Constant::Base">
+        <import line="5" module="Carp" symbol="*" />
+        <import line="6" module="Text::Wrap" symbol="*" />
+        <import line="7" module="ExtUtils::Constant::Utils" symbol="C_stringify" />
+        <import line="7" module="ExtUtils::Constant::Utils" symbol="perl_stringify" />
+        <variable line="4" name="$VERSION" />
+        <scope ilk="function" line="38" lineend="41" name="valid_type" signature="valid_type()" />
+        <scope ilk="function" line="42" lineend="44" name="default_type" signature="default_type()" />
+        <scope ilk="function" line="53" lineend="55" name="header" signature="header()" />
+        <scope ilk="function" line="62" lineend="62" name="return_statement_for_type" signature="return_statement_for_type()" />
+        <scope ilk="function" line="67" lineend="69" name="macro_from_name" signature="macro_from_name()" />
+        <scope ilk="function" line="71" lineend="73" name="macro_from_item" signature="macro_from_item()" />
+        <scope ilk="function" line="75" lineend="84" name="macro_to_ifdef" signature="macro_to_ifdef($self, $macro)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$macro" />
+        </scope>
+        <scope ilk="function" line="86" lineend="96" name="macro_to_ifndef" signature="macro_to_ifndef($self, $macro)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$macro" />
+        </scope>
+        <scope ilk="function" line="98" lineend="108" name="macro_to_endif" signature="macro_to_endif($self, $macro)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$macro" />
+        </scope>
+        <scope ilk="function" line="110" lineend="112" name="name_param" signature="name_param()" />
+        <scope ilk="function" line="120" lineend="122" name="is_utf8_param" signature="is_utf8_param()" />
+        <scope ilk="function" line="124" lineend="126" name="memEQ" signature="memEQ()" />
+        <scope ilk="function" line="142" lineend="220" name="memEQ_clause" signature="memEQ_clause($self, $args)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$args" />
+        </scope>
+        <scope ilk="function" line="234" lineend="323" name="dump_names" signature="dump_names($self, $args, @items)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$args" />
+          <variable ilk="argument" name="@items" />
+        </scope>
+        <scope ilk="function" line="336" lineend="369" name="assign" signature="assign($self, $args)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$args" />
+        </scope>
+        <scope ilk="function" line="379" lineend="428" name="return_clause" signature="return_clause($self, $args, $item)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$args" />
+          <variable ilk="argument" name="$item" />
+        </scope>
+        <scope ilk="function" line="430" lineend="475" name="match_clause" signature="match_clause($self, $args, $item)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$args" />
+          <variable ilk="argument" name="$item" />
+        </scope>
+        <scope ilk="function" line="491" lineend="607" name="switch_clause" signature="switch_clause($self, $args, $namelen, $items, @items)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$args" />
+          <variable ilk="argument" name="$namelen" />
+          <variable ilk="argument" name="$items" />
+          <variable ilk="argument" name="@items" />
+        </scope>
+        <scope ilk="function" line="609" lineend="611" name="C_constant_return_type" signature="C_constant_return_type()" />
+        <scope ilk="function" line="613" lineend="615" name="C_constant_prefix_param" signature="C_constant_prefix_param()" />
+        <scope ilk="function" line="617" lineend="619" name="C_constant_prefix_param_defintion" signature="C_constant_prefix_param_defintion()" />
+        <scope ilk="function" line="621" lineend="623" name="name_param_definition" signature="name_param_definition()" />
+        <scope ilk="function" line="625" lineend="627" name="namelen_param" signature="namelen_param()" />
+        <scope ilk="function" line="629" lineend="631" name="namelen_param_definition" signature="namelen_param_definition()" />
+        <scope ilk="function" line="633" lineend="635" name="C_constant_other_params" signature="C_constant_other_params()" />
+        <scope ilk="function" line="637" lineend="639" name="C_constant_other_params_defintion" signature="C_constant_other_params_defintion()" />
+        <scope ilk="function" line="654" lineend="656" name="params" signature="params()" />
+        <scope ilk="function" line="668" lineend="670" name="dogfood" signature="dogfood()" />
+        <scope ilk="function" line="679" lineend="762" name="normalise_items" signature="normalise_items($self, $args, $default_type, $what, $items)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$args" />
+          <variable ilk="argument" name="$default_type" />
+          <variable ilk="argument" name="$what" />
+          <variable ilk="argument" name="$items" />
+        </scope>
+        <scope ilk="function" line="884" lineend="1002" name="C_constant" signature="C_constant($self, $args, @items)">
+          <import line="903" module="ExtUtils::Constant::Aaargh56Hash" />
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$args" />
+          <variable ilk="argument" name="@items" />
+          <import line="903" module="ExtUtils::Constant::Aaargh56Hash" />
+        </scope>
+      </scope>
+    </scope>
+    

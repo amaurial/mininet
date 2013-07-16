@@ -1,0 +1,55 @@
+<scope ilk="blob" lang="Perl" name="IPC::SharedMem">
+      <scope ilk="class" line="17" lineend="142" name="IPC::SharedMem">
+        <import line="19" module="IPC::SysV" symbol="IPC_STAT" />
+        <import line="19" module="IPC::SysV" symbol="IPC_RMID" />
+        <import line="19" module="IPC::SysV" symbol="shmat" />
+        <import line="19" module="IPC::SysV" symbol="shmdt" />
+        <import line="19" module="IPC::SysV" symbol="memread" />
+        <import line="19" module="IPC::SysV" symbol="memwrite" />
+        <import line="22" module="Carp" symbol="*" />
+        <variable line="21" name="$VERSION" />
+        <scope attributes="__ctor__" ilk="function" line="51" lineend="61" name="new" signature="new($class, $key, $size, $flags)">
+          <variable ilk="argument" name="$class" />
+          <variable ilk="argument" name="$key" />
+          <variable ilk="argument" name="$size" />
+          <variable ilk="argument" name="$flags" />
+        </scope>
+        <scope ilk="function" line="63" lineend="67" name="id" signature="id($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="69" lineend="73" name="addr" signature="addr($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="75" lineend="81" name="stat" signature="stat($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="83" lineend="90" name="attach" signature="attach($self, $flag)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$flag" />
+        </scope>
+        <scope ilk="function" line="92" lineend="99" name="detach" signature="detach($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="101" lineend="108" name="remove" signature="remove($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="110" lineend="114" name="is_removed" signature="is_removed($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="116" lineend="128" name="read" signature="read($self, $pos, $size)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$pos" />
+          <variable ilk="argument" name="$size" />
+        </scope>
+        <scope ilk="function" line="130" lineend="140" name="write" signature="write($self, $str, $pos, $size)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$str" />
+          <variable ilk="argument" name="$pos" />
+          <variable ilk="argument" name="$size" />
+        </scope>
+      </scope>
+      <scope ilk="class" line="31" lineend="48" name="IPC::SharedMem::stat">
+        <import line="33" module="Class::Struct" symbol="struct" />
+      </scope>
+    </scope>
+    

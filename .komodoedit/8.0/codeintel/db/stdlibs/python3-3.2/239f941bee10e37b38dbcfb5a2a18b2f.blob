@@ -1,0 +1,117 @@
+<scope doc="Create portable serialized representations of Python objects.&#xA;See module copyreg for a mechanism for registering custom picklers. See module pickletools source for extensive comments.  Classes:  Pickler Unpickler  Functions: " ilk="blob" lang="Python" name="pickle">
+      <variable citdl="bytes" name="APPEND" />
+      <variable citdl="bytes" name="APPENDS" />
+      <variable citdl="bytes" name="BINBYTES" />
+      <variable citdl="bytes" name="BINFLOAT" />
+      <variable citdl="bytes" name="BINGET" />
+      <variable citdl="bytes" name="BININT" />
+      <variable citdl="bytes" name="BININT1" />
+      <variable citdl="bytes" name="BININT2" />
+      <variable citdl="bytes" name="BINPERSID" />
+      <variable citdl="bytes" name="BINPUT" />
+      <variable citdl="bytes" name="BINSTRING" />
+      <variable citdl="bytes" name="BINUNICODE" />
+      <variable citdl="bytes" name="BUILD" />
+      <scope classrefs="object" doc="&#xA;" ilk="class" name="BuiltinFunctionType">
+        <scope doc="x.__ne__(y) &lt;==&gt; x!=y" ilk="function" name="__ne__" signature="x.__ne__(y) &lt;==&gt; x!=y" />
+        <scope doc="x.__getattribute__(&apos;name&apos;) &lt;==&gt; x.name" ilk="function" name="__getattribute__" signature="x.__getattribute__(&apos;name&apos;) &lt;==&gt; x.name" />
+        <scope doc="x.__call__(...) &lt;==&gt; x(...)" ilk="function" name="__call__" signature="x.__call__(...) &lt;==&gt; x(...)" />
+        <scope doc="x.__le__(y) &lt;==&gt; x&lt;=y" ilk="function" name="__le__" signature="x.__le__(y) &lt;==&gt; x&lt;=y" />
+        <scope doc="x.__repr__() &lt;==&gt; repr(x)" ilk="function" name="__repr__" signature="x.__repr__() &lt;==&gt; repr(x)" />
+        <scope doc="x.__gt__(y) &lt;==&gt; x&gt;y" ilk="function" name="__gt__" signature="x.__gt__(y) &lt;==&gt; x&gt;y" />
+        <scope doc="x.__hash__() &lt;==&gt; hash(x)" ilk="function" name="__hash__" signature="x.__hash__() &lt;==&gt; hash(x)" />
+        <scope doc="x.__lt__(y) &lt;==&gt; x&lt;y" ilk="function" name="__lt__" signature="x.__lt__(y) &lt;==&gt; x&lt;y" />
+        <scope doc="x.__eq__(y) &lt;==&gt; x==y" ilk="function" name="__eq__" signature="x.__eq__(y) &lt;==&gt; x==y" />
+        <scope doc="x.__ge__(y) &lt;==&gt; x&gt;=y" ilk="function" name="__ge__" signature="x.__ge__(y) &lt;==&gt; x&gt;=y" />
+      </scope>
+      <variable citdl="int" name="DEFAULT_PROTOCOL" />
+      <variable citdl="bytes" name="DICT" />
+      <variable citdl="bytes" name="DUP" />
+      <variable citdl="bytes" name="EMPTY_DICT" />
+      <variable citdl="bytes" name="EMPTY_LIST" />
+      <variable citdl="bytes" name="EMPTY_TUPLE" />
+      <variable citdl="bytes" name="EXT1" />
+      <variable citdl="bytes" name="EXT2" />
+      <variable citdl="bytes" name="EXT4" />
+      <variable citdl="bytes" name="FALSE" />
+      <variable citdl="bytes" name="FLOAT" />
+      <scope classrefs="object" doc="function(code, globals[, name[, argdefs[, closure]]])&#xA;Create a function object from a code object and a dictionary. The optional name string overrides the name from the code object. The optional argdefs tuple specifies the default argument values. The optional closure tuple supplies the bindings for free variables." ilk="class" name="FunctionType">
+        <scope doc="x.__setattr__(&apos;name&apos;, value) &lt;==&gt; x.name = value" ilk="function" name="__setattr__" signature="x.__setattr__(&apos;name&apos;, value) &lt;==&gt; x.name = value" />
+        <scope doc="x.__getattribute__(&apos;name&apos;) &lt;==&gt; x.name" ilk="function" name="__getattribute__" signature="x.__getattribute__(&apos;name&apos;) &lt;==&gt; x.name" />
+        <scope doc="x.__delattr__(&apos;name&apos;) &lt;==&gt; del x.name" ilk="function" name="__delattr__" signature="x.__delattr__(&apos;name&apos;) &lt;==&gt; del x.name" />
+        <scope doc="x.__repr__() &lt;==&gt; repr(x)" ilk="function" name="__repr__" signature="x.__repr__() &lt;==&gt; repr(x)" />
+        <scope doc="x.__call__(...) &lt;==&gt; x(...)" ilk="function" name="__call__" signature="x.__call__(...) &lt;==&gt; x(...)" />
+        <scope doc="descr.__get__(obj[, type]) -&gt; value" ilk="function" name="__get__" signature="descr.__get__(obj[, type]) -&gt; value" />
+      </scope>
+      <variable citdl="bytes" name="GET" />
+      <variable citdl="bytes" name="GLOBAL" />
+      <variable citdl="int" name="HIGHEST_PROTOCOL" />
+      <variable citdl="bytes" name="INST" />
+      <variable citdl="bytes" name="INT" />
+      <variable citdl="bytes" name="LIST" />
+      <variable citdl="bytes" name="LONG" />
+      <variable citdl="bytes" name="LONG1" />
+      <variable citdl="bytes" name="LONG4" />
+      <variable citdl="bytes" name="LONG_BINGET" />
+      <variable citdl="bytes" name="LONG_BINPUT" />
+      <variable citdl="bytes" name="MARK" />
+      <variable citdl="bytes" name="NEWFALSE" />
+      <variable citdl="bytes" name="NEWOBJ" />
+      <variable citdl="bytes" name="NEWTRUE" />
+      <variable citdl="bytes" name="NONE" />
+      <variable citdl="bytes" name="OBJ" />
+      <variable citdl="bytes" name="PERSID" />
+      <variable citdl="bytes" name="POP" />
+      <variable citdl="bytes" name="POP_MARK" />
+      <variable citdl="bytes" name="PROTO" />
+      <variable citdl="bytes" name="PUT" />
+      <scope classrefs="Exception" doc="&#xA;" ilk="class" name="PickleError" />
+      <scope classrefs="object" doc="Pickler(file, protocol=None)&#xA;This takes a binary file for writing a pickle data stream.  The optional protocol argument tells the pickler to use the given protocol; supported protocols are 0, 1, 2, 3.  The default protocol is 3; a backward-incompatible protocol designed for Python 3.0.  Specifying a negative protocol version selects the highest protocol version supported.  The higher the protocol used, the more recent the version of Python needed to read the pickle" ilk="class" name="Pickler">
+        <scope doc="dump(obj) -&gt; None. Write a pickled representation of obj to the open file." ilk="function" name="dump" signature="dump(obj) -&gt; None. Write a pickled representation of obj to the open file." />
+        <scope doc="The memo is the data structure that remembers which objects&#xA;the pickler has already seen, so that shared or recursive&#xA;objects are pickled by reference and not by value." ilk="function" name="clear_memo" signature="clear_memo() -&gt; None. Clears the pickler&apos;s &quot;memo&quot;." />
+        <scope ilk="function" name="__init__" />
+      </scope>
+      <scope classrefs="PickleError" doc="&#xA;" ilk="class" name="PicklingError" />
+      <variable citdl="NoneType" name="PyStringMap" />
+      <variable citdl="bytes" name="REDUCE" />
+      <variable citdl="bytes" name="SETITEM" />
+      <variable citdl="bytes" name="SETITEMS" />
+      <variable citdl="bytes" name="SHORT_BINBYTES" />
+      <variable citdl="bytes" name="SHORT_BINSTRING" />
+      <variable citdl="bytes" name="STOP" />
+      <variable citdl="bytes" name="STRING" />
+      <variable citdl="bytes" name="TRUE" />
+      <variable citdl="bytes" name="TUPLE" />
+      <variable citdl="bytes" name="TUPLE1" />
+      <variable citdl="bytes" name="TUPLE2" />
+      <variable citdl="bytes" name="TUPLE3" />
+      <variable citdl="bytes" name="UNICODE" />
+      <scope classrefs="object" doc="Unpickler(file, *, encoding=&apos;ASCII&apos;, errors=&apos;strict&apos;)&#xA;This takes a binary file for reading a pickle data stream.  The protocol version of the pickle is detected automatically, so no proto argument is needed.  The file-like object must have two methods, a read() method that takes an integer argument, and a readline() method that requires no arguments.  Both methods should return bytes. Thus file-like object can be a binary file object opened for reading, a BytesIO object, or any other custom object that" ilk="class" name="Unpickler">
+        <scope doc="Read a pickled object representation from the open file&#xA;object given in the constructor, and return the&#xA;reconstituted object hierarchy specified therein." ilk="function" name="load" signature="load() -&gt; object. Load a pickle." />
+        <scope doc="Return an object from a specified module, importing the&#xA;module if necessary." ilk="function" name="find_class" signature="find_class(module_name, global_name) -&gt; object." />
+        <scope ilk="function" name="__init__" />
+      </scope>
+      <scope classrefs="PickleError" doc="&#xA;" ilk="class" name="UnpicklingError" />
+      <variable citdl="list" name="__all__" />
+      <import module="_compat_pickle" />
+      <variable citdl="tuple" name="bytes_types" />
+      <variable citdl="dict" name="classmap" />
+      <import module="codecs" />
+      <variable citdl="list" name="compatible_formats" />
+      <scope doc="Decode a long from a two&apos;s complement little-endian binary&#xA;string." ilk="function" name="decode_long" signature="decode_long(data)" />
+      <variable citdl="dict" name="dispatch_table" />
+      <scope doc="Write a pickled representation of obj to the open file&#xA;object file." ilk="function" name="dump" signature="dump(obj, file, protocol=None, *, fix_imports=True) -&gt; None" />
+      <scope doc="Return the pickled representation of the object as a bytes&#xA;object, instead of writing it to a file." ilk="function" name="dumps" signature="dumps(obj, protocol=None, *, fix_imports=True) -&gt; bytes" />
+      <scope doc="Encode a long to a two&apos;s complement little-endian binary&#xA;string." ilk="function" name="encode_long" signature="encode_long(x)" />
+      <variable citdl="str" name="format_version" />
+      <import module="io" />
+      <scope doc="Read a pickled object representation from the open file&#xA;object file and return the reconstituted object hierarchy&#xA;specified therein." ilk="function" name="load" returns="object" signature="load(file, *, fix_imports=True, encoding=&apos;ASCII&apos;, errors=&apos;strict&apos;) -&gt; object" />
+      <scope doc="Read a pickled object hierarchy from a bytes object and&#xA;return the reconstituted object hierarchy specified therein" ilk="function" name="loads" returns="object" signature="loads(input, *, fix_imports=True, encoding=&apos;ASCII&apos;, errors=&apos;strict&apos;) -&gt; object" />
+      <import module="marshal" />
+      <scope doc="Convert the string to a value." ilk="function" name="mloads" signature="loads(string)" />
+      <import module="re" />
+      <import module="struct" />
+      <import module="sys" />
+      <scope doc="Figure out the module in which a function occurs." ilk="function" name="whichmodule" signature="whichmodule(func, funcname)" />
+    </scope>
+    

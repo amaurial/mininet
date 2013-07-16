@@ -1,0 +1,38 @@
+<scope ilk="blob" lang="Perl" name="URI::file">
+      <scope classrefs="URI::_generic" ilk="class" line="1" lineend="106" name="URI::file">
+        <import line="6" module="URI::_generic" />
+        <import line="10" module="URI::Escape" symbol="uri_unescape" />
+        <variable line="4" name="$DEFAULT_AUTHORITY" />
+        <variable line="4" name="$VERSION" />
+        <variable line="4" name="%OS_CLASS" />
+        <variable line="4" name="@ISA" />
+        <scope ilk="function" line="27" lineend="38" name="os_class" signature="os_class()">
+          </scope>
+        <scope ilk="function" line="40" lineend="40" name="host" signature="host()" />
+        <scope ilk="function" line="42" lineend="46" name="new" signature="new($class, $path, $os)">
+          <variable ilk="argument" name="$class" />
+          <variable ilk="argument" name="$path" />
+          <variable ilk="argument" name="$os" />
+        </scope>
+        <scope ilk="function" line="48" lineend="54" name="new_abs" signature="new_abs($class)">
+          <variable ilk="argument" name="$class" />
+        </scope>
+        <scope ilk="function" line="56" lineend="65" name="cwd" signature="cwd($class)">
+          <import line="59" module="Cwd" />
+          <variable ilk="argument" name="$class" />
+          <import line="59" module="Cwd" />
+        </scope>
+        <scope ilk="function" line="67" lineend="92" name="canonical" signature="canonical($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="94" lineend="98" name="file" signature="file($self, $os)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$os" />
+        </scope>
+        <scope ilk="function" line="100" lineend="104" name="dir" signature="dir($self, $os)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$os" />
+        </scope>
+      </scope>
+    </scope>
+    

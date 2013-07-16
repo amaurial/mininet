@@ -1,0 +1,25 @@
+<scope ilk="blob" lang="Perl" name="TAP::Formatter::Console">
+      <scope classrefs="TAP::Formatter::Base" ilk="class" line="1" lineend="91" name="TAP::Formatter::Console">
+        <import line="4" module="TAP::Formatter::Base" />
+        <import line="5" module="POSIX" symbol="strftime" />
+        <variable line="7" name="$VERSION" />
+        <variable line="7" name="@ISA" />
+        <scope ilk="function" line="38" lineend="60" name="open_test" signature="open_test($self, $test, $parser)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$test" />
+          <variable ilk="argument" name="$parser" />
+        </scope>
+        <scope ilk="function" line="63" lineend="71" name="_set_colors" signature="_set_colors($self, @colors)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="@colors" />
+        </scope>
+        <scope ilk="function" line="73" lineend="78" name="_output_success" signature="_output_success($self, $msg)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$msg" />
+        </scope>
+        <scope ilk="function" line="80" lineend="89" name="_failure_output" signature="_failure_output($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+      </scope>
+    </scope>
+    

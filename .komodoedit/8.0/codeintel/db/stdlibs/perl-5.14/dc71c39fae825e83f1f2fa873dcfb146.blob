@@ -1,0 +1,69 @@
+<scope ilk="blob" lang="Perl" name="DBI::ProfileData">
+      <scope ilk="class" line="1" lineend="722" name="DBI::ProfileData">
+        <import line="75" module="Carp" symbol="croak" />
+        <import line="76" module="Symbol" symbol="*" />
+        <import line="77" module="Fcntl" symbol="**" />
+        <import line="79" module="DBI::Profile" symbol="dbi_profile_merge" />
+        <variable line="73" name="$VERSION" />
+        <scope ilk="function" line="82" lineend="82" name="COUNT" signature="COUNT()" />
+        <scope ilk="function" line="83" lineend="83" name="TOTAL" signature="TOTAL()" />
+        <scope ilk="function" line="84" lineend="84" name="FIRST" signature="FIRST()" />
+        <scope ilk="function" line="85" lineend="85" name="SHORTEST" signature="SHORTEST()" />
+        <scope ilk="function" line="86" lineend="86" name="LONGEST" signature="LONGEST()" />
+        <scope ilk="function" line="87" lineend="87" name="FIRST_AT" signature="FIRST_AT()" />
+        <scope ilk="function" line="88" lineend="88" name="LAST_AT" signature="LAST_AT()" />
+        <scope ilk="function" line="89" lineend="89" name="PATH" signature="PATH()" />
+        <scope attributes="__ctor__" ilk="function" line="164" lineend="184" name="new" signature="new($pkg)">
+          <variable ilk="argument" name="$pkg" />
+        </scope>
+        <scope ilk="function" line="187" lineend="238" name="_read_files" signature="_read_files($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="242" lineend="261" name="_read_header" signature="_read_header($self, $fh, $filename, $keep)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$fh" />
+          <variable ilk="argument" name="$filename" />
+          <variable ilk="argument" name="$keep" />
+        </scope>
+        <scope ilk="function" line="264" lineend="270" name="unescape_key" signature="unescape_key()" />
+        <scope ilk="function" line="274" lineend="336" name="_read_body" signature="_read_body($self, $fh, $filename)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$fh" />
+          <variable ilk="argument" name="$filename" />
+        </scope>
+        <scope attributes="__ctor__" ilk="function" line="346" lineend="359" name="clone" signature="clone($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="377" lineend="377" name="header" signature="header()" />
+        <scope ilk="function" line="408" lineend="408" name="nodes" signature="nodes()" />
+        <scope ilk="function" line="417" lineend="417" name="count" signature="count()" />
+        <scope ilk="function" line="449" lineend="476" name="sort" signature="sort($self, %opt)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="%opt" />
+        </scope>
+        <scope ilk="function" line="493" lineend="528" name="exclude" signature="exclude($self, %opt)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="%opt" />
+        </scope>
+        <scope ilk="function" line="544" lineend="579" name="match" signature="match($self, %opt)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="%opt" />
+        </scope>
+        <scope ilk="function" line="590" lineend="607" name="Data" signature="Data($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="616" lineend="658" name="format" signature="format($self, $node)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$node" />
+        </scope>
+        <scope ilk="function" line="667" lineend="684" name="report" signature="report($self, %opt)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="%opt" />
+        </scope>
+        <scope ilk="function" line="687" lineend="719" name="_report_header" signature="_report_header($self, $number)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$number" />
+        </scope>
+      </scope>
+    </scope>
+    

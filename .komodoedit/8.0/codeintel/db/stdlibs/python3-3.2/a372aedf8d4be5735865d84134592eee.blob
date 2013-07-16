@@ -1,0 +1,111 @@
+<scope doc="distutils.command.register&#xA;Implements the Distutils &apos;register&apos; command (register with the repository)." ilk="blob" lang="Python" name="distutils.command.register">
+      <scope classrefs="Exception" doc="Some compile/link operation failed.&#xA;" ilk="class" name="CCompilerError" />
+      <scope classrefs="CCompilerError" doc="Failure to compile one or more C/C++ source files.&#xA;" ilk="class" name="CompileError" />
+      <scope classrefs="DistutilsError" doc="Raised by fancy_getopt in response to getopt.error -- ie. an&#xA;error in the command line usage." ilk="class" name="DistutilsArgError" />
+      <scope classrefs="DistutilsError" doc="Byte compile error.&#xA;" ilk="class" name="DistutilsByteCompileError" />
+      <scope classrefs="DistutilsError" doc="Some command class (or possibly distribution class, if anyone&#xA;feels a need to subclass Distribution) is found not to be holding up its end of the bargain, ie. implementing some part of the &quot;command &quot;interface." ilk="class" name="DistutilsClassError" />
+      <scope classrefs="Exception" doc="The root of all Distutils evil.&#xA;" ilk="class" name="DistutilsError" />
+      <scope classrefs="DistutilsError" doc="Any problems executing an external program (such as the C&#xA;compiler, when compiling C files)." ilk="class" name="DistutilsExecError" />
+      <scope classrefs="DistutilsError" doc="Any problems in the filesystem: expected file not found, etc.&#xA;Typically this is for problems that we detect before IOError or OSError could be raised." ilk="class" name="DistutilsFileError" />
+      <scope classrefs="DistutilsError" doc="The option table provided to &apos;fancy_getopt()&apos; is bogus.&#xA;" ilk="class" name="DistutilsGetoptError" />
+      <scope classrefs="DistutilsError" doc="Internal inconsistencies or impossibilities (obviously, this&#xA;should never be seen if the code is working!)." ilk="class" name="DistutilsInternalError" />
+      <scope classrefs="DistutilsError" doc="Unable to load an expected module, or to find an expected class&#xA;within some module (in particular, command modules and classes)." ilk="class" name="DistutilsModuleError" />
+      <scope classrefs="DistutilsError" doc="Syntactic/semantic errors in command options, such as use of&#xA;mutually conflicting options, or inconsistent options, badly-spelled values, etc.  No distinction is made between option values originating in the setup script, the command line, config files, or what-have-you -- but if we *know* something originated in the setup script, we&apos;ll raise DistutilsSetupError instead." ilk="class" name="DistutilsOptionError" />
+      <scope classrefs="DistutilsError" doc="We don&apos;t know how to do something on the current platform (but&#xA;we do know how to do it on some platform) -- eg. trying to compile C files on a platform not supported by a CCompiler subclass." ilk="class" name="DistutilsPlatformError" />
+      <scope classrefs="DistutilsError" doc="For errors that can be definitely blamed on the setup script,&#xA;such as invalid keyword arguments to &apos;setup()&apos;." ilk="class" name="DistutilsSetupError" />
+      <scope classrefs="DistutilsError" doc="Syntax error in a file list template.&#xA;" ilk="class" name="DistutilsTemplateError" />
+      <scope classrefs="CCompilerError" doc="Failure to create a static library from one or more C/C++ object&#xA;files." ilk="class" name="LibError" />
+      <scope classrefs="CCompilerError" doc="Failure to link one or more C/C++ object files into an executable&#xA;or shared library file." ilk="class" name="LinkError" />
+      <scope classrefs="CCompilerError" doc="Failure to preprocess one or more C/C++ files.&#xA;" ilk="class" name="PreprocessError" />
+      <scope classrefs="Command" doc="Base command that knows how to handle the .pypirc file&#xA;" ilk="class" name="PyPIRCCommand">
+        <scope doc="Initialize options." ilk="function" name="initialize_options" signature="initialize_options(self)" />
+        <scope doc="Creates a default .pypirc file." ilk="function" name="_store_pypirc" signature="_store_pypirc(self, username, password)" />
+        <scope doc="Finalizes options." ilk="function" name="finalize_options" signature="finalize_options(self)" />
+        <scope doc="Reads the .pypirc file." ilk="function" name="_read_pypirc" signature="_read_pypirc(self)" />
+        <scope doc="Returns rc file path." ilk="function" name="_get_rc_file" signature="_get_rc_file(self)" />
+      </scope>
+      <scope classrefs="CCompilerError" doc="Attempt to process an unknown file type.&#xA;" ilk="class" name="UnknownFileError" />
+      <import module="getpass" />
+      <import module="io" />
+      <import module="log" />
+      <import module="os" />
+      <scope classrefs="PyPIRCCommand" doc="&#xA;" ilk="class" line="17" lineend="304" name="register">
+        <scope ilk="function" line="43" lineend="56" name="run" signature="run(self)">
+          <variable citdl="register" ilk="argument" name="self" />
+        </scope>
+        <scope ilk="function" line="31" lineend="34" name="initialize_options" signature="initialize_options(self)">
+          <variable citdl="register" ilk="argument" name="self" />
+        </scope>
+        <scope doc="Deprecated API." ilk="function" line="58" lineend="66" name="check_metadata" signature="check_metadata(self)">
+          <variable citdl="register" ilk="argument" name="self" />
+          <variable citdl="self.distribution.get_command_obj()" line="62" name="check" />
+        </scope>
+        <scope doc="Post a query to the server, and return a string response." ilk="function" line="249" lineend="304" name="post_to_server" returns="tuple" signature="post_to_server(self, data, auth=None)">
+          <variable citdl="str" line="259" name="end_boundary" />
+          <variable citdl="io.StringIO()" line="260" name="body" />
+          <variable citdl="register" ilk="argument" name="self" />
+          <variable citdl="urllib.request.Request()" line="282" name="req" />
+          <variable ilk="argument" name="auth" />
+          <variable citdl="dict" line="278" name="headers" />
+          <variable citdl="urllib.request.build_opener()" line="285" name="opener" />
+          <variable citdl="str" line="258" name="sep_boundary" />
+          <variable citdl="str" line="257" name="boundary" />
+          <variable citdl="list" line="264" name="value" />
+          <variable citdl="result.read()" ilk="argument" name="data" />
+          <variable citdl="str" line="302" name="dashes" />
+          <variable citdl="tuple" line="290" name="result" />
+        </scope>
+        <scope doc="Send the metadata to the package index server." ilk="function" line="99" lineend="219" name="send_metadata" signature="send_metadata(self)">
+          <variable citdl="input()" line="131" name="username" />
+          <variable line="165" name="code" />
+          <variable citdl="register" ilk="argument" name="self" />
+          <variable citdl="urllib.request.HTTPPasswordMgr()" line="161" name="auth" />
+          <variable citdl="str.split()" line="138" name="choices" />
+          <variable line="162" name="host" />
+          <variable line="165" name="result" />
+          <variable citdl="getpass.getpass()" line="132" name="password" />
+          <variable citdl="dict" line="190" name="data" />
+          <variable citdl="str" line="130" name="choice" />
+        </scope>
+        <scope ilk="function" line="221" lineend="247" name="build_post_data" returns="dict" signature="build_post_data(self, action)">
+          <variable ilk="argument" name="action" />
+          <variable citdl="register" ilk="argument" name="self" />
+          <variable citdl="self.distribution.metadata" line="224" name="meta" />
+          <variable citdl="dict" line="225" name="data" />
+        </scope>
+        <scope ilk="function" line="36" lineend="41" name="finalize_options" signature="finalize_options(self)">
+          <variable citdl="register" ilk="argument" name="self" />
+          <variable citdl="dict" line="39" name="check_options" />
+        </scope>
+        <scope doc="Fetch the list of classifiers from the server." ilk="function" line="85" lineend="90" name="classifiers" signature="classifiers(self)">
+          <variable citdl="self.DEFAULT_REPOSITORY" line="88" name="url" />
+          <variable citdl="register" ilk="argument" name="self" />
+          <variable citdl="urllib.request.urlopen()" line="89" name="response" />
+        </scope>
+        <scope doc="Send the metadata to the package index server to be checked." ilk="function" line="92" lineend="97" name="verify_metadata" signature="verify_metadata(self)">
+          <variable citdl="register" ilk="argument" name="self" />
+          <variable line="96" name="code" />
+          <variable line="96" name="result" />
+        </scope>
+        <scope doc="Reads the configuration file and set attributes." ilk="function" line="68" lineend="83" name="_set_config" signature="_set_config(self)">
+          <variable citdl="register" ilk="argument" name="self" />
+          <variable citdl="self._read_pypirc()" line="71" name="config" />
+        </scope>
+        <variable attributes="__instancevar__" line="73" name="username" />
+        <variable citdl="list" line="20" name="user_options" />
+        <variable attributes="__instancevar__" line="76" name="realm" />
+        <variable citdl="str" line="19" name="description" />
+        <variable attributes="__instancevar__" citdl="self.DEFAULT_REPOSITORY" line="75" name="repository" />
+        <variable attributes="__instancevar__" citdl="True" line="77" name="has_config" />
+        <variable citdl="list" line="29" name="sub_commands" />
+        <variable attributes="__instancevar__" citdl="int" line="34" name="strict" />
+        <variable citdl="list" line="26" name="boolean_options" />
+        <variable attributes="__instancevar__" citdl="int" line="33" name="list_classifiers" />
+        <variable attributes="__instancevar__" line="74" name="password" />
+      </scope>
+      <import module="string" />
+      <import module="urllib" />
+      <scope doc="Issue a warning, or maybe ignore it or raise an exception." ilk="function" name="warn" />
+      <variable citdl="str" line="8" name="__revision__" />
+    </scope>
+    

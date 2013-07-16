@@ -1,0 +1,183 @@
+<scope ilk="blob" lang="Perl" name="Pod::Simple::HTMLBatch">
+      <scope ilk="class" line="3" lineend="1039" name="Pod::Simple::HTMLBatch">
+        <import line="13" module="Pod::Simple::HTML" />
+        <import line="15" module="File::Spec" />
+        <import line="17" module="Pod::Simple::Search" symbol="*" />
+        <variable line="5" name="$HTML_EXTENSION" />
+        <variable line="5" name="$HTML_RENDER_CLASS" />
+        <variable line="5" name="$VERSION" />
+        <variable line="6" name="$CSS" />
+        <variable line="6" name="$JAVASCRIPT" />
+        <variable line="6" name="$SEARCH_CLASS" />
+        <variable line="6" name="$SLEEPY" />
+        <variable line="6" name="@ISA" />
+        <variable line="14" name="*esc" />
+        <variable line="22" name="*DEBUG" />
+        <scope ilk="function" line="52" lineend="66" name="go" signature="go()">
+          </scope>
+        <scope attributes="__ctor__" ilk="function" line="70" lineend="105" name="new" signature="new()">
+          </scope>
+        <scope ilk="function" line="109" lineend="115" name="muse" signature="muse($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="119" lineend="141" name="batch_convert" signature="batch_convert($self, $dirs, $outdir)">
+          <import line="132" module="Config" />
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$dirs" />
+          <variable ilk="argument" name="$outdir" />
+          <import line="132" module="Config" />
+        </scope>
+        <scope ilk="function" line="145" lineend="195" name="_batch_convert_main" signature="_batch_convert_main($self, $dirs, $outdir)">
+          <import line="157" module="Pod::Simple::Progress" />
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$dirs" />
+          <variable ilk="argument" name="$outdir" />
+          <import line="157" module="Pod::Simple::Progress" />
+        </scope>
+        <scope ilk="function" line="198" lineend="208" name="_do_all_batch_conversions" signature="_do_all_batch_conversions($self, $mod2path, $outdir)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$mod2path" />
+          <variable ilk="argument" name="$outdir" />
+        </scope>
+        <scope ilk="function" line="210" lineend="217" name="_batch_convert_finish" signature="_batch_convert_finish($self, $outdir)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$outdir" />
+        </scope>
+        <scope ilk="function" line="221" lineend="279" name="_do_one_batch_conversion" signature="_do_one_batch_conversion($self, $module, $mod2path, $outdir, $outfile)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$module" />
+          <variable ilk="argument" name="$mod2path" />
+          <variable ilk="argument" name="$outdir" />
+          <variable ilk="argument" name="$outfile" />
+        </scope>
+        <scope ilk="function" line="282" lineend="282" name="filespecsys" signature="filespecsys()" />
+        <scope ilk="function" line="286" lineend="301" name="note_for_contents_file" signature="note_for_contents_file($self, $namelets, $infile, $outfile)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$namelets" />
+          <variable ilk="argument" name="$infile" />
+          <variable ilk="argument" name="$outfile" />
+        </scope>
+        <scope ilk="function" line="305" lineend="327" name="write_contents_file" signature="write_contents_file($self, $outdir)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$outdir" />
+        </scope>
+        <scope ilk="function" line="331" lineend="353" name="_write_contents_start" signature="_write_contents_start($self, $Contents, $outfile)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$Contents" />
+          <variable ilk="argument" name="$outfile" />
+        </scope>
+        <scope ilk="function" line="357" lineend="378" name="_write_contents_middle" signature="_write_contents_middle($self, $Contents, $outfile, $toplevel2submodules, $toplevel_form_freq)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$Contents" />
+          <variable ilk="argument" name="$outfile" />
+          <variable ilk="argument" name="$toplevel2submodules" />
+          <variable ilk="argument" name="$toplevel_form_freq" />
+        </scope>
+        <scope ilk="function" line="382" lineend="392" name="_write_contents_end" signature="_write_contents_end($self, $Contents, $outfile)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$Contents" />
+          <variable ilk="argument" name="$outfile" />
+        </scope>
+        <scope ilk="function" line="396" lineend="427" name="_prep_contents_breakdown" signature="_prep_contents_breakdown($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="431" lineend="436" name="_contents_filespec" signature="_contents_filespec($self, $outdir)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$outdir" />
+        </scope>
+        <scope ilk="function" line="440" lineend="455" name="makepath" signature="makepath($self, $outdir, $namelets)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$outdir" />
+          <variable ilk="argument" name="$namelets" />
+        </scope>
+        <scope ilk="function" line="459" lineend="476" name="batch_mode_page_object_init" signature="batch_mode_page_object_init($self, $page, $module, $infile, $outfile, $depth)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$page" />
+          <variable ilk="argument" name="$module" />
+          <variable ilk="argument" name="$infile" />
+          <variable ilk="argument" name="$outfile" />
+          <variable ilk="argument" name="$depth" />
+        </scope>
+        <scope ilk="function" line="480" lineend="494" name="add_header_backlink" signature="add_header_backlink($self, $page, $module, $infile, $outfile, $depth)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$page" />
+          <variable ilk="argument" name="$module" />
+          <variable ilk="argument" name="$infile" />
+          <variable ilk="argument" name="$outfile" />
+          <variable ilk="argument" name="$depth" />
+        </scope>
+        <scope ilk="function" line="496" lineend="510" name="add_footer_backlink" signature="add_footer_backlink($self, $page, $module, $infile, $outfile, $depth)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$page" />
+          <variable ilk="argument" name="$module" />
+          <variable ilk="argument" name="$infile" />
+          <variable ilk="argument" name="$outfile" />
+          <variable ilk="argument" name="$depth" />
+        </scope>
+        <scope ilk="function" line="512" lineend="516" name="url_up_to_contents" signature="url_up_to_contents($self, $depth)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$depth" />
+        </scope>
+        <scope ilk="function" line="520" lineend="526" name="find_all_pods" signature="find_all_pods($self, $dirs)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$dirs" />
+        </scope>
+        <scope ilk="function" line="530" lineend="560" name="modnames2paths" signature="modnames2paths($self, $dirs)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$dirs" />
+        </scope>
+        <scope ilk="function" line="564" lineend="573" name="_wopen" signature="_wopen($self, $outpath)">
+          <import line="567" module="Symbol" />
+          <import line="571" module="Carp" />
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$outpath" />
+          <import line="567" module="Symbol" />
+          <import line="571" module="Carp" />
+        </scope>
+        <scope ilk="function" line="577" lineend="595" name="add_css" signature="add_css($self, $url, $is_default, $name, $content_type, $media, $_code)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$url" />
+          <variable ilk="argument" name="$is_default" />
+          <variable ilk="argument" name="$name" />
+          <variable ilk="argument" name="$content_type" />
+          <variable ilk="argument" name="$media" />
+          <variable ilk="argument" name="$_code" />
+        </scope>
+        <scope ilk="function" line="599" lineend="627" name="_spray_css" signature="_spray_css($self, $outdir)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$outdir" />
+        </scope>
+        <scope ilk="function" line="631" lineend="656" name="_css_wad_to_markup" signature="_css_wad_to_markup($self, $depth)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$depth" />
+        </scope>
+        <scope ilk="function" line="659" lineend="667" name="_maybe_uplink" signature="_maybe_uplink($self, $url, $uplink)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$url" />
+          <variable ilk="argument" name="$uplink" />
+        </scope>
+        <scope ilk="function" line="670" lineend="742" name="_gen_css_wad" signature="_gen_css_wad()">
+          </scope>
+        <scope ilk="function" line="744" lineend="749" name="_color_negate" signature="_color_negate()">
+          </scope>
+        <scope ilk="function" line="753" lineend="760" name="add_javascript" signature="add_javascript($self, $url, $content_type, $_code)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$url" />
+          <variable ilk="argument" name="$content_type" />
+          <variable ilk="argument" name="$_code" />
+        </scope>
+        <scope ilk="function" line="762" lineend="790" name="_spray_javascript" signature="_spray_javascript($self, $outdir)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$outdir" />
+        </scope>
+        <scope ilk="function" line="792" lineend="797" name="_gen_javascript_wad" signature="_gen_javascript_wad()">
+          </scope>
+        <scope ilk="function" line="799" lineend="821" name="_javascript_wad_to_markup" signature="_javascript_wad_to_markup($self, $depth)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$depth" />
+        </scope>
+        <scope ilk="function" line="825" lineend="825" name="_css_template" signature="_css_template()" />
+        <scope ilk="function" line="826" lineend="826" name="_javascript" signature="_javascript()" />
+      </scope>
+    </scope>
+    

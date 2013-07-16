@@ -1,0 +1,73 @@
+<scope ilk="blob" lang="Perl" name="File::Find">
+      <scope classrefs="Exporter" ilk="class" line="1" lineend="1119" name="File::Find">
+        <import line="5" module="warnings::register" symbol="*" />
+        <import line="7" module="Exporter" />
+        <import line="8" module="Cwd" />
+        <import line="353" module="File::Basename" />
+        <import line="354" module="File::Spec" />
+        <import line="1106" module="Config" />
+        <import line="1115" module="Scalar::Util" />
+        <variable line="6" name="$VERSION" />
+        <variable line="346" name="@EXPORT" />
+        <variable line="359" name="%SLnkSeen" />
+        <variable line="360" name="$avoid_nlink" />
+        <variable line="360" name="$bydepth" />
+        <variable line="360" name="$follow" />
+        <variable line="360" name="$no_chdir" />
+        <variable line="360" name="$wanted_callback" />
+        <variable line="361" name="$follow_skip" />
+        <variable line="361" name="$full_check" />
+        <variable line="361" name="$untaint" />
+        <variable line="361" name="$untaint_pat" />
+        <variable line="361" name="$untaint_skip" />
+        <variable line="362" name="$dangling_symlinks" />
+        <variable line="362" name="$post_process" />
+        <variable line="362" name="$pre_process" />
+        <variable line="448" name="$dir" />
+        <variable line="448" name="$fullname" />
+        <variable line="448" name="$name" />
+        <variable line="448" name="$prune" />
+        <variable line="562" name="$topdir" />
+        <variable line="1080" name="$File::Find::skip_pattern" />
+        <variable line="1081" name="$File::Find::untaint_pattern" />
+        <variable line="1086" name="$File::Find::dont_use_nlink" />
+        <variable line="1094" name="$File::Find::current_dir" />
+        <variable line="1116" name="*is_tainted" />
+        <scope ilk="function" line="364" lineend="380" name="contract_name" signature="contract_name($cdir, $fn)">
+          <variable ilk="argument" name="$cdir" />
+          <variable ilk="argument" name="$fn" />
+        </scope>
+        <scope ilk="function" line="382" lineend="403" name="PathCombine" signature="PathCombine($Base, $Name)">
+          <variable ilk="argument" name="$Base" />
+          <variable ilk="argument" name="$Name" />
+        </scope>
+        <scope ilk="function" line="405" lineend="446" name="Follow_SymLink" signature="Follow_SymLink($AbsName)">
+          <variable ilk="argument" name="$AbsName" />
+        </scope>
+        <scope ilk="function" line="454" lineend="460" name="is_tainted_pp" signature="is_tainted_pp($arg)">
+          <variable ilk="argument" name="$arg" />
+        </scope>
+        <scope ilk="function" line="462" lineend="620" name="_find_opt" signature="_find_opt($wanted)">
+          <variable ilk="argument" name="$wanted" />
+        </scope>
+        <scope ilk="function" line="629" lineend="852" name="_find_dir" signature="_find_dir($wanted, $p_dir, $nlink)">
+          <variable ilk="argument" name="$wanted" />
+          <variable ilk="argument" name="$p_dir" />
+          <variable ilk="argument" name="$nlink" />
+        </scope>
+        <scope ilk="function" line="862" lineend="1041" name="_find_dir_symlnk" signature="_find_dir_symlnk($wanted, $dir_loc, $p_dir)">
+          <variable ilk="argument" name="$wanted" />
+          <variable ilk="argument" name="$dir_loc" />
+          <variable ilk="argument" name="$p_dir" />
+        </scope>
+        <scope ilk="function" line="1044" lineend="1066" name="wrap_wanted" signature="wrap_wanted($wanted)">
+          <variable ilk="argument" name="$wanted" />
+        </scope>
+        <scope ilk="function" line="1068" lineend="1071" name="find" signature="find($wanted)">
+          <variable ilk="argument" name="$wanted" />
+        </scope>
+        <scope ilk="function" line="1073" lineend="1077" name="finddepth" signature="finddepth()">
+          </scope>
+      </scope>
+    </scope>
+    

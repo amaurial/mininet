@@ -1,0 +1,142 @@
+<scope ilk="blob" lang="Perl" name="B::Concise">
+      <scope classrefs="Exporter" ilk="class" line="1" lineend="1033" name="B::Concise">
+        <import line="15" module="Exporter" />
+        <import line="29" module="B" symbol="class" />
+        <import line="29" module="B" symbol="ppname" />
+        <import line="29" module="B" symbol="main_start" />
+        <import line="29" module="B" symbol="main_root" />
+        <import line="29" module="B" symbol="main_cv" />
+        <import line="29" module="B" symbol="cstring" />
+        <import line="29" module="B" symbol="svref_2object" />
+        <import line="30" module="B" symbol="SVf_IOK" />
+        <import line="30" module="B" symbol="SVf_NOK" />
+        <import line="30" module="B" symbol="SVf_POK" />
+        <import line="30" module="B" symbol="SVf_IVisUV" />
+        <import line="30" module="B" symbol="SVf_FAKE" />
+        <import line="30" module="B" symbol="OPf_KIDS" />
+        <import line="30" module="B" symbol="OPf_SPECIAL" />
+        <import line="31" module="B" symbol="CVf_ANON" />
+        <import line="31" module="B" symbol="PAD_FAKELEX_ANON" />
+        <import line="31" module="B" symbol="PAD_FAKELEX_MULTI" />
+        <import line="31" module="B" symbol="SVf_ROK" />
+        <variable line="17" name="$VERSION" />
+        <variable line="19" name="@EXPORT_OK" />
+        <variable line="22" name="%EXPORT_TAGS" />
+        <variable line="63" name="$stylename" />
+        <variable line="80" name="@callbacks" />
+        <variable line="113" name="$walkHandle" />
+        <variable line="162" name="*concise_cv" />
+        <variable line="492" name="$op" />
+        <variable line="593" name="%priv" />
+        <variable line="660" name="%hints" />
+        <scope ilk="function" line="87" lineend="91" name="set_style" signature="set_style()" />
+        <scope ilk="function" line="93" lineend="100" name="add_style" signature="add_style($newstyle, @args)">
+          <variable ilk="argument" name="$newstyle" />
+          <variable ilk="argument" name="@args" />
+        </scope>
+        <scope ilk="function" line="102" lineend="106" name="set_style_standard" signature="set_style_standard()" />
+        <scope ilk="function" line="108" lineend="110" name="add_callback" signature="add_callback()" />
+        <scope ilk="function" line="116" lineend="133" name="walk_output" signature="walk_output($handle)">
+          <import line="121" module="Config" />
+          <variable ilk="argument" name="$handle" />
+          <import line="121" module="Config" />
+        </scope>
+        <scope ilk="function" line="135" lineend="142" name="concise_subref" signature="concise_subref($order, $coderef, $name)">
+          <variable ilk="argument" name="$order" />
+          <variable ilk="argument" name="$coderef" />
+          <variable ilk="argument" name="$name" />
+        </scope>
+        <scope ilk="function" line="144" lineend="158" name="concise_stashref" signature="concise_stashref($order, $h)">
+          <variable ilk="argument" name="$order" />
+          <variable ilk="argument" name="$h" />
+        </scope>
+        <scope ilk="function" line="164" lineend="206" name="concise_cv_obj" signature="concise_cv_obj($order, $cv, $name)">
+          <variable ilk="argument" name="$order" />
+          <variable ilk="argument" name="$cv" />
+          <variable ilk="argument" name="$name" />
+        </scope>
+        <scope ilk="function" line="208" lineend="223" name="concise_main" signature="concise_main($order)">
+          <variable ilk="argument" name="$order" />
+        </scope>
+        <scope ilk="function" line="225" lineend="238" name="concise_specials" signature="concise_specials($name, $order, @cv_s)">
+          <variable ilk="argument" name="$name" />
+          <variable ilk="argument" name="$order" />
+          <variable ilk="argument" name="@cv_s" />
+        </scope>
+        <scope ilk="function" line="252" lineend="325" name="compileOpts" signature="compileOpts()">
+          <import line="305" module="Config" />
+          <import line="305" module="Config" />
+        </scope>
+        <scope ilk="function" line="327" lineend="388" name="compile" signature="compile()">
+          </scope>
+        <scope ilk="function" line="417" lineend="430" name="op_flags" signature="op_flags($x)">
+          <variable ilk="argument" name="$x" />
+        </scope>
+        <scope ilk="function" line="432" lineend="439" name="base_n" signature="base_n($x)">
+          <variable ilk="argument" name="$x" />
+        </scope>
+        <scope ilk="function" line="444" lineend="449" name="reset_sequence" signature="reset_sequence()" />
+        <scope ilk="function" line="451" lineend="455" name="seq" signature="seq($op)">
+          <variable ilk="argument" name="$op" />
+        </scope>
+        <scope ilk="function" line="457" lineend="473" name="walk_topdown" signature="walk_topdown($op, $sub, $level)">
+          <variable ilk="argument" name="$op" />
+          <variable ilk="argument" name="$sub" />
+          <variable ilk="argument" name="$level" />
+        </scope>
+        <scope ilk="function" line="475" lineend="484" name="walklines" signature="walklines($ar, $level)">
+          <variable ilk="argument" name="$ar" />
+          <variable ilk="argument" name="$level" />
+        </scope>
+        <scope ilk="function" line="486" lineend="518" name="walk_exec" signature="walk_exec($top, $level)">
+          <variable ilk="argument" name="$top" />
+          <variable ilk="argument" name="$level" />
+        </scope>
+        <scope ilk="function" line="521" lineend="554" name="sequence" signature="sequence($op)">
+          <variable ilk="argument" name="$op" />
+        </scope>
+        <scope ilk="function" line="556" lineend="591" name="fmt_line" signature="fmt_line($hr, $op, $text, $level)">
+          <variable ilk="argument" name="$hr" />
+          <variable ilk="argument" name="$op" />
+          <variable ilk="argument" name="$text" />
+          <variable ilk="argument" name="$level" />
+        </scope>
+        <scope ilk="function" line="675" lineend="686" name="_flags" signature="_flags($hash, $x)">
+          <variable ilk="argument" name="$hash" />
+          <variable ilk="argument" name="$x" />
+        </scope>
+        <scope ilk="function" line="688" lineend="691" name="private_flags" signature="private_flags($name, $x)">
+          <variable ilk="argument" name="$name" />
+          <variable ilk="argument" name="$x" />
+        </scope>
+        <scope ilk="function" line="693" lineend="696" name="hints_flags" signature="hints_flags($x)">
+          <variable ilk="argument" name="$x" />
+        </scope>
+        <scope ilk="function" line="698" lineend="744" name="concise_sv" signature="concise_sv($sv, $hr, $preferpv)">
+          <variable ilk="argument" name="$sv" />
+          <variable ilk="argument" name="$hr" />
+          <variable ilk="argument" name="$preferpv" />
+        </scope>
+        <scope ilk="function" line="748" lineend="761" name="fill_srclines" signature="fill_srclines($fullnm)">
+          <variable ilk="argument" name="$fullnm" />
+        </scope>
+        <scope ilk="function" line="763" lineend="916" name="concise_op" signature="concise_op($op, $level, $format)">
+          <variable ilk="argument" name="$op" />
+          <variable ilk="argument" name="$level" />
+          <variable ilk="argument" name="$format" />
+        </scope>
+        <scope ilk="function" line="918" lineend="930" name="B::OP::concise" signature="B::OP::concise($op, $level)">
+          <variable ilk="argument" name="$op" />
+          <variable ilk="argument" name="$level" />
+        </scope>
+        <scope ilk="function" line="933" lineend="957" name="b_terse" signature="b_terse($op, $level)">
+          <variable ilk="argument" name="$op" />
+          <variable ilk="argument" name="$level" />
+        </scope>
+        <scope ilk="function" line="959" lineend="991" name="tree" signature="tree($op, $level)">
+          <variable ilk="argument" name="$op" />
+          <variable ilk="argument" name="$level" />
+        </scope>
+      </scope>
+    </scope>
+    

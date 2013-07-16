@@ -1,0 +1,112 @@
+<scope doc="Miscellaneous utilities.&#xA;" ilk="blob" lang="Python" name="email.utils">
+      <variable citdl="str" line="46" name="COMMASPACE" />
+      <variable citdl="str" line="49" name="CRLF" />
+      <variable citdl="str" line="47" name="EMPTYSTRING" />
+      <scope classrefs="_TextIOBase" doc="Text I/O implementation using an in-memory buffer.&#xA;The initial_value argument sets the value of object.  The newline argument is like the one of TextIOWrapper&apos;s constructor." ilk="class" name="StringIO">
+        <scope ilk="function" name="writable" />
+        <scope doc="Truncate size to pos." ilk="function" name="truncate" />
+        <scope ilk="function" name="__setstate__" />
+        <scope doc="Read at most n characters, returned as a string." ilk="function" name="read" />
+        <scope doc="x.__next__() &lt;==&gt; next(x)" ilk="function" name="__next__" signature="x.__next__() &lt;==&gt; next(x)" />
+        <scope ilk="function" name="readable" />
+        <scope doc="Retrieve the entire contents of the object." ilk="function" name="getvalue" />
+        <scope doc="Write string to file." ilk="function" name="write" />
+        <scope ilk="function" name="seekable" />
+        <scope doc="Close the IO object." ilk="function" name="close" />
+        <scope doc="Read until newline or EOF." ilk="function" name="readline" />
+        <scope ilk="function" name="__getstate__" />
+        <scope doc="Change stream position." ilk="function" name="seek" />
+        <scope doc="Tell the current file position." ilk="function" name="tell" />
+        <scope ilk="function" name="__init__" />
+      </scope>
+      <variable citdl="str" line="50" name="TICK" />
+      <variable citdl="str" line="48" name="UEMPTYSTRING" />
+      <variable citdl="list" line="7" name="__all__" />
+      <import module="base64" />
+      <scope ilk="function" line="293" lineend="306" name="collapse_rfc2231_value" returns="unquote()" signature="collapse_rfc2231_value(value, errors=&apos;replace&apos;, fallback_charset=&apos;us-ascii&apos;)">
+        <variable citdl="str" ilk="argument" name="fallback_charset" />
+        <variable citdl="str" ilk="argument" name="errors" />
+        <variable ilk="argument" name="value" />
+        <variable citdl="bytes()" line="301" name="rawbytes" />
+      </scope>
+      <scope doc="Decode parameters list according to RFC 2231." ilk="function" line="237" lineend="291" name="decode_params" returns="list" signature="decode_params(params)">
+        <variable citdl="False" line="269" name="extended" />
+        <variable line="249" name="name" />
+        <variable line="287" name="language" />
+        <variable citdl="list" line="244" name="new_params" />
+        <variable citdl="rfc2231_continuation.match()" line="258" name="mo" />
+        <variable line="287" name="charset" />
+        <variable citdl="quote()" line="249" name="value" />
+        <variable citdl="urllib.parse.unquote()" line="282" name="s" />
+        <variable citdl="int()" line="260" name="num" />
+        <variable citdl="list" ilk="argument" name="params" />
+        <variable citdl="True" line="254" name="encoded" />
+        <variable citdl="dict" line="248" name="rfc2231_params" />
+      </scope>
+      <scope doc="Decode string according to RFC 2231" ilk="function" line="211" lineend="216" name="decode_rfc2231" returns="tuple" signature="decode_rfc2231(s)">
+        <variable ilk="argument" name="s" />
+        <variable citdl="s.split()" line="213" name="parts" />
+      </scope>
+      <variable citdl="SRE_Pattern" line="86" name="ecre" />
+      <scope doc="Encode string according to RFC 2231." ilk="function" line="219" lineend="231" name="encode_rfc2231" returns="tuple" signature="encode_rfc2231(s, charset=None, language=None)">
+        <variable citdl="urllib.parse.quote()" ilk="argument" name="s" />
+        <variable ilk="argument" name="charset" />
+        <variable citdl="str" ilk="argument" name="language" />
+      </scope>
+      <variable citdl="SRE_Pattern" line="53" name="escapesre" />
+      <scope doc="The inverse of parseaddr(), this takes a 2-tuple of the form&#xA;(realname, email_address) and returns the string value&#xA;suitable for an RFC 2822 From, To or Cc header." ilk="function" line="59" lineend="74" name="formataddr" returns="tuple" signature="formataddr(pair)">
+        <variable ilk="argument" name="pair" />
+        <variable citdl="str" line="69" name="quotes" />
+        <variable citdl="escapesre.sub()" line="72" name="name" />
+      </scope>
+      <scope doc="Returns a date string as specified by RFC 2822, e.g.:" ilk="function" line="98" lineend="147" name="formatdate" returns="tuple" signature="formatdate(timeval=None, localtime=False, usegmt=False)">
+        <variable citdl="str" line="133" name="zone" />
+        <variable citdl="str" line="130" name="sign" />
+        <variable citdl="time.time()" ilk="argument" name="timeval" />
+        <variable line="126" name="hours" />
+        <variable citdl="False" ilk="argument" name="usegmt" />
+        <variable citdl="time.timezone" line="123" name="offset" />
+        <variable citdl="time.localtime()" line="119" name="now" />
+        <variable line="126" name="minutes" />
+        <variable citdl="False" ilk="argument" name="localtime" />
+      </scope>
+      <scope doc="Return a list of (REALNAME, EMAIL) for each fieldvalue." ilk="function" line="78" lineend="82" name="getaddresses" returns="a.addresslist" signature="getaddresses(fieldvalues)">
+        <variable citdl="_AddressList()" line="81" name="a" />
+        <variable citdl="COMMASPACE.join()" line="80" name="all" />
+        <variable ilk="argument" name="fieldvalues" />
+      </scope>
+      <scope doc="Returns a string suitable for RFC 2822 compliant Message-ID,&#xA;e.g:" ilk="function" line="151" lineend="172" name="make_msgid" returns="tuple" signature="make_msgid(idstring=None, domain=None)">
+        <variable citdl="time.strftime()" line="162" name="utcdate" />
+        <variable citdl="socket.getfqdn()" ilk="argument" name="domain" />
+        <variable citdl="random.randrange()" line="164" name="randint" />
+        <variable citdl="str" ilk="argument" name="idstring" />
+        <variable citdl="str" line="171" name="msgid" />
+        <variable citdl="os.getpid()" line="163" name="pid" />
+        <variable citdl="time.time()" line="161" name="timeval" />
+      </scope>
+      <scope doc="Turn a 10-tuple as returned by parsedate_tz() into a UTC&#xA;timestamp." ilk="function" name="mktime_tz" signature="mktime_tz(data)" />
+      <import module="os" />
+      <scope ilk="function" line="191" lineend="195" name="parseaddr" returns="tuple" signature="parseaddr(addr)">
+        <variable ilk="argument" name="addr" />
+        <variable line="192" name="addrs" />
+      </scope>
+      <scope doc="# These functions are in the standalone mimelib version only&#xA;because they&apos;ve # subsequently been fixed in the latest&#xA;Python versions." ilk="function" line="179" lineend="182" name="parsedate" returns="_parsedate()" signature="parsedate(data)">
+        <variable ilk="argument" name="data" />
+      </scope>
+      <scope ilk="function" line="185" lineend="188" name="parsedate_tz" returns="_parsedate_tz()" signature="parsedate_tz(data)">
+        <variable ilk="argument" name="data" />
+      </scope>
+      <scope doc="Prepare string to be used in a quoted string." ilk="function" name="quote" signature="quote(str)" />
+      <import module="random" />
+      <import module="re" />
+      <variable citdl="SRE_Pattern" line="234" name="rfc2231_continuation" />
+      <import module="socket" />
+      <variable citdl="SRE_Pattern" line="52" name="specialsre" />
+      <import module="time" />
+      <scope doc="Remove quotes from a string." ilk="function" line="199" lineend="206" name="unquote" returns="list" signature="unquote(str)">
+        <variable ilk="argument" name="str" />
+      </scope>
+      <import module="urllib" />
+      <import module="warnings" />
+    </scope>
+    

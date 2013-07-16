@@ -1,0 +1,34 @@
+<scope ilk="blob" lang="Perl" name="URI::_punycode">
+      <scope classrefs="Exporter" ilk="class" line="1" lineend="145" name="URI::_punycode">
+        <import line="6" module="Exporter" />
+        <variable line="4" name="$VERSION" />
+        <variable line="8" name="@EXPORT" />
+        <variable line="12" name="$DEBUG" />
+        <variable line="102" name="$b" />
+        <scope ilk="function" line="25" lineend="25" name="_croak" signature="_croak()">
+          <import line="25" module="Carp" />
+          <import line="25" module="Carp" />
+        </scope>
+        <scope ilk="function" line="27" lineend="33" name="digit_value" signature="digit_value($code)">
+          <variable ilk="argument" name="$code" />
+        </scope>
+        <scope ilk="function" line="35" lineend="40" name="code_point" signature="code_point($digit)">
+          <variable ilk="argument" name="$digit" />
+        </scope>
+        <scope ilk="function" line="42" lineend="52" name="adapt" signature="adapt($delta, $numpoints, $firsttime)">
+          <variable ilk="argument" name="$delta" />
+          <variable ilk="argument" name="$numpoints" />
+          <variable ilk="argument" name="$firsttime" />
+        </scope>
+        <scope ilk="function" line="54" lineend="90" name="decode_punycode" signature="decode_punycode($code)">
+          <variable ilk="argument" name="$code" />
+        </scope>
+        <scope ilk="function" line="92" lineend="137" name="encode_punycode" signature="encode_punycode($input)">
+          <variable ilk="argument" name="$input" />
+        </scope>
+        <scope ilk="function" line="139" lineend="143" name="min" signature="min($min)">
+          <variable ilk="argument" name="$min" />
+        </scope>
+      </scope>
+    </scope>
+    

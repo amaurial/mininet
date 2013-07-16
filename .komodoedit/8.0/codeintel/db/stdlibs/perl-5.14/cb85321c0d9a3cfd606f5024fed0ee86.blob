@@ -1,0 +1,139 @@
+<scope ilk="blob" lang="Perl" name="Data::Dumper">
+      <scope classrefs="Exporter" ilk="class" line="10" lineend="722" name="Data::Dumper">
+        <import line="17" module="Exporter" />
+        <import line="18" module="overload" />
+        <import line="20" module="Carp" symbol="*" />
+        <import line="31" module="XSLoader" />
+        <import line="109" module="Scalar::Util" />
+        <import line="114" module="Config" />
+        <import line="121" module="Scalar::Util" />
+        <variable line="12" name="$VERSION" />
+        <variable line="33" name="$Useperl" />
+        <variable line="39" name="$Indent" />
+        <variable line="40" name="$Purity" />
+        <variable line="41" name="$Pad" />
+        <variable line="42" name="$Varname" />
+        <variable line="43" name="$Useqq" />
+        <variable line="44" name="$Terse" />
+        <variable line="45" name="$Freezer" />
+        <variable line="46" name="$Toaster" />
+        <variable line="47" name="$Deepcopy" />
+        <variable line="48" name="$Quotekeys" />
+        <variable line="49" name="$Bless" />
+        <variable line="51" name="$Maxdepth" />
+        <variable line="52" name="$Pair" />
+        <variable line="54" name="$Sortkeys" />
+        <variable line="55" name="$Deparse" />
+        <variable line="106" name="*init_refaddr_format" />
+        <variable line="108" name="*format_refaddr" />
+        <variable line="117" name="$refaddr_format" />
+        <scope attributes="__ctor__" ilk="function" line="63" lineend="102" name="new" signature="new($c, $v, $n)">
+          <variable ilk="argument" name="$c" />
+          <variable ilk="argument" name="$v" />
+          <variable ilk="argument" name="$n" />
+        </scope>
+        <scope ilk="function" line="129" lineend="157" name="Seen" signature="Seen($s, $g)">
+          <variable ilk="argument" name="$s" />
+          <variable ilk="argument" name="$g" />
+        </scope>
+        <scope ilk="function" line="162" lineend="171" name="Values" signature="Values($s, $v)">
+          <variable ilk="argument" name="$s" />
+          <variable ilk="argument" name="$v" />
+        </scope>
+        <scope ilk="function" line="176" lineend="185" name="Names" signature="Names($s, $n)">
+          <variable ilk="argument" name="$s" />
+          <variable ilk="argument" name="$n" />
+        </scope>
+        <scope ilk="function" line="187" lineend="187" name="DESTROY" signature="DESTROY()" />
+        <scope ilk="function" line="189" lineend="195" name="Dump" signature="Dump()" />
+        <scope ilk="function" line="201" lineend="249" name="Dumpperl" signature="Dumpperl()">
+          </scope>
+        <scope ilk="function" line="252" lineend="256" name="_quote" signature="_quote($val)">
+          <variable ilk="argument" name="$val" />
+        </scope>
+        <scope ilk="function" line="264" lineend="547" name="_dump" signature="_dump($s, $val, $name)">
+          <import line="283" module="Scalar::Util" />
+          <import line="453" module="B::Deparse" />
+          <variable ilk="argument" name="$s" />
+          <variable ilk="argument" name="$val" />
+          <variable ilk="argument" name="$name" />
+          <import line="283" module="Scalar::Util" />
+          <import line="453" module="B::Deparse" />
+        </scope>
+        <scope attributes="__exported__" ilk="function" line="552" lineend="554" name="Dumper" signature="Dumper()" />
+        <scope attributes="__exportable__" ilk="function" line="557" lineend="559" name="DumperX" signature="DumperX()" />
+        <scope ilk="function" line="561" lineend="561" name="Dumpf" signature="Dumpf()" />
+        <scope ilk="function" line="563" lineend="563" name="Dumpp" signature="Dumpp()" />
+        <scope ilk="function" line="568" lineend="572" name="Reset" signature="Reset()">
+          </scope>
+        <scope ilk="function" line="574" lineend="591" name="Indent" signature="Indent($s, $v)">
+          <variable ilk="argument" name="$s" />
+          <variable ilk="argument" name="$v" />
+        </scope>
+        <scope ilk="function" line="593" lineend="596" name="Pair" signature="Pair($s, $v)">
+          <variable ilk="argument" name="$s" />
+          <variable ilk="argument" name="$v" />
+        </scope>
+        <scope ilk="function" line="598" lineend="601" name="Pad" signature="Pad($s, $v)">
+          <variable ilk="argument" name="$s" />
+          <variable ilk="argument" name="$v" />
+        </scope>
+        <scope ilk="function" line="603" lineend="606" name="Varname" signature="Varname($s, $v)">
+          <variable ilk="argument" name="$s" />
+          <variable ilk="argument" name="$v" />
+        </scope>
+        <scope ilk="function" line="608" lineend="611" name="Purity" signature="Purity($s, $v)">
+          <variable ilk="argument" name="$s" />
+          <variable ilk="argument" name="$v" />
+        </scope>
+        <scope ilk="function" line="613" lineend="616" name="Useqq" signature="Useqq($s, $v)">
+          <variable ilk="argument" name="$s" />
+          <variable ilk="argument" name="$v" />
+        </scope>
+        <scope ilk="function" line="618" lineend="621" name="Terse" signature="Terse($s, $v)">
+          <variable ilk="argument" name="$s" />
+          <variable ilk="argument" name="$v" />
+        </scope>
+        <scope ilk="function" line="623" lineend="626" name="Freezer" signature="Freezer($s, $v)">
+          <variable ilk="argument" name="$s" />
+          <variable ilk="argument" name="$v" />
+        </scope>
+        <scope ilk="function" line="628" lineend="631" name="Toaster" signature="Toaster($s, $v)">
+          <variable ilk="argument" name="$s" />
+          <variable ilk="argument" name="$v" />
+        </scope>
+        <scope ilk="function" line="633" lineend="636" name="Deepcopy" signature="Deepcopy($s, $v)">
+          <variable ilk="argument" name="$s" />
+          <variable ilk="argument" name="$v" />
+        </scope>
+        <scope ilk="function" line="638" lineend="641" name="Quotekeys" signature="Quotekeys($s, $v)">
+          <variable ilk="argument" name="$s" />
+          <variable ilk="argument" name="$v" />
+        </scope>
+        <scope ilk="function" line="643" lineend="646" name="Bless" signature="Bless($s, $v)">
+          <variable ilk="argument" name="$s" />
+          <variable ilk="argument" name="$v" />
+        </scope>
+        <scope ilk="function" line="648" lineend="651" name="Maxdepth" signature="Maxdepth($s, $v)">
+          <variable ilk="argument" name="$s" />
+          <variable ilk="argument" name="$v" />
+        </scope>
+        <scope ilk="function" line="653" lineend="656" name="Useperl" signature="Useperl($s, $v)">
+          <variable ilk="argument" name="$s" />
+          <variable ilk="argument" name="$v" />
+        </scope>
+        <scope ilk="function" line="658" lineend="661" name="Sortkeys" signature="Sortkeys($s, $v)">
+          <variable ilk="argument" name="$s" />
+          <variable ilk="argument" name="$v" />
+        </scope>
+        <scope ilk="function" line="663" lineend="666" name="Deparse" signature="Deparse($s, $v)">
+          <variable ilk="argument" name="$s" />
+          <variable ilk="argument" name="$v" />
+        </scope>
+        <scope ilk="function" line="680" lineend="716" name="qquote" signature="qquote($high)">
+          <variable ilk="argument" name="$high" />
+        </scope>
+        <scope ilk="function" line="720" lineend="720" name="_sortkeys" signature="_sortkeys()" />
+      </scope>
+    </scope>
+    

@@ -1,0 +1,30 @@
+<scope ilk="blob" lang="Perl" name="IO::Uncompress::Adapter::Identity">
+      <scope ilk="class" line="1" lineend="103" name="IO::Uncompress::Adapter::Identity">
+        <import line="7" module="IO::Compress::Base::Common" symbol="*" />
+        <import line="13" module="Compress::Raw::Zlib" symbol="*" />
+        <variable line="9" name="$VERSION" />
+        <scope attributes="__ctor__" ilk="function" line="15" lineend="29" name="mkUncompObject" signature="mkUncompObject($adler32)">
+          <variable ilk="argument" name="$adler32" />
+        </scope>
+        <scope ilk="function" line="31" lineend="52" name="uncompr" signature="uncompr($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="54" lineend="64" name="reset" signature="reset($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="73" lineend="77" name="compressedBytes" signature="compressedBytes($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="79" lineend="83" name="uncompressedBytes" signature="uncompressedBytes($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="85" lineend="88" name="sync" signature="sync()" />
+        <scope ilk="function" line="90" lineend="94" name="crc32" signature="crc32($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="96" lineend="100" name="adler32" signature="adler32($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+      </scope>
+    </scope>
+    

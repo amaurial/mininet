@@ -1,0 +1,52 @@
+<scope ilk="blob" lang="Perl" name="LWP::Protocol::ftp">
+      <scope classrefs="LWP::Protocol" ilk="class" line="1" lineend="437" name="LWP::Protocol::ftp">
+        <import line="6" module="Carp" />
+        <import line="8" module="HTTP::Status" />
+        <import line="9" module="HTTP::Negotiate" />
+        <import line="10" module="HTTP::Response" />
+        <import line="11" module="LWP::MediaTypes" />
+        <import line="12" module="File::Listing" />
+        <import line="14" module="LWP::Protocol" />
+        <variable line="291" name="$content" />
+        <scope ilk="function" line="76" lineend="121" name="_connect" signature="_connect($self, $host, $port, $user, $account, $password, $timeout)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$host" />
+          <variable ilk="argument" name="$port" />
+          <variable ilk="argument" name="$user" />
+          <variable ilk="argument" name="$account" />
+          <variable ilk="argument" name="$password" />
+          <variable ilk="argument" name="$timeout" />
+        </scope>
+        <scope ilk="function" line="124" lineend="382" name="request" signature="request($self, $request, $proxy, $arg, $size, $timeout)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$request" />
+          <variable ilk="argument" name="$proxy" />
+          <variable ilk="argument" name="$arg" />
+          <variable ilk="argument" name="$size" />
+          <variable ilk="argument" name="$timeout" />
+        </scope>
+      </scope>
+      <scope classrefs="Net::FTP" ilk="class" line="19" lineend="70" name="LWP::Protocol::MyFTP">
+        <import line="21" module="Net::FTP" />
+        <variable line="24" name="@ISA" />
+        <scope ilk="function" line="27" lineend="41" name="new" signature="new($class)">
+          <variable ilk="argument" name="$class" />
+        </scope>
+        <scope ilk="function" line="43" lineend="46" name="http_server" signature="http_server($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="48" lineend="55" name="home" signature="home($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="57" lineend="60" name="go_home" signature="go_home($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="62" lineend="65" name="request_count" signature="request_count($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="67" lineend="70" name="ping" signature="ping($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+      </scope>
+    </scope>
+    

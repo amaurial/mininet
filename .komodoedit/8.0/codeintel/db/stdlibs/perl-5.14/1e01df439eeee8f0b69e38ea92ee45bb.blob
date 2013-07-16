@@ -1,0 +1,110 @@
+<scope ilk="blob" lang="Perl" name="Perl::Critic::Utils::POD">
+      <scope ilk="class" line="8" lineend="474" name="Perl::Critic::Utils::POD">
+        <import line="14" module="English" symbol="-no_match_vars" />
+        <import line="16" module="IO::String" />
+        <import line="17" module="Pod::PlainText" />
+        <import line="18" module="Pod::Select" />
+        <import line="21" module="Perl::Critic::Exception::Fatal::Generic" symbol="throw_generic" />
+        <import line="22" module="Perl::Critic::Exception::IO" symbol="throw_io" />
+        <import line="23" module="Perl::Critic::Utils" symbol="**" />
+        <variable line="27" name="$VERSION" />
+        <variable line="31" name="@EXPORT_OK" />
+        <variable line="53" name="%EXPORT_TAGS" />
+        <scope ilk="function" line="59" lineend="72" name="get_pod_file_for_module" signature="get_pod_file_for_module($module_name)">
+          <variable ilk="argument" name="$module_name" />
+        </scope>
+        <scope ilk="function" line="76" lineend="84" name="get_raw_pod_section_from_file" signature="get_raw_pod_section_from_file($file_name, $section_name)">
+          <variable ilk="argument" name="$file_name" />
+          <variable ilk="argument" name="$section_name" />
+        </scope>
+        <scope ilk="function" line="88" lineend="96" name="get_raw_pod_section_from_filehandle" signature="get_raw_pod_section_from_filehandle($file_handle, $section_name)">
+          <variable ilk="argument" name="$file_handle" />
+          <variable ilk="argument" name="$section_name" />
+        </scope>
+        <scope ilk="function" line="100" lineend="108" name="get_raw_pod_section_from_string" signature="get_raw_pod_section_from_string($source, $section_name)">
+          <variable ilk="argument" name="$source" />
+          <variable ilk="argument" name="$section_name" />
+        </scope>
+        <scope ilk="function" line="112" lineend="119" name="get_raw_pod_section_for_module" signature="get_raw_pod_section_for_module($module_name, $section_name)">
+          <variable ilk="argument" name="$module_name" />
+          <variable ilk="argument" name="$section_name" />
+        </scope>
+        <scope ilk="function" line="123" lineend="131" name="get_pod_section_from_file" signature="get_pod_section_from_file($file_name, $section_name)">
+          <variable ilk="argument" name="$file_name" />
+          <variable ilk="argument" name="$section_name" />
+        </scope>
+        <scope ilk="function" line="135" lineend="143" name="get_pod_section_from_filehandle" signature="get_pod_section_from_filehandle($file_handle, $section_name)">
+          <variable ilk="argument" name="$file_handle" />
+          <variable ilk="argument" name="$section_name" />
+        </scope>
+        <scope ilk="function" line="147" lineend="155" name="get_pod_section_from_string" signature="get_pod_section_from_string($source, $section_name)">
+          <variable ilk="argument" name="$source" />
+          <variable ilk="argument" name="$section_name" />
+        </scope>
+        <scope ilk="function" line="159" lineend="166" name="get_pod_section_for_module" signature="get_pod_section_for_module($module_name, $section_name)">
+          <variable ilk="argument" name="$module_name" />
+          <variable ilk="argument" name="$section_name" />
+        </scope>
+        <scope ilk="function" line="170" lineend="191" name="_get_pod_section_from_file" signature="_get_pod_section_from_file($file_name, $section_name, $parser)">
+          <variable ilk="argument" name="$file_name" />
+          <variable ilk="argument" name="$section_name" />
+          <variable ilk="argument" name="$parser" />
+        </scope>
+        <scope ilk="function" line="195" lineend="207" name="_get_pod_section_from_filehandle" signature="_get_pod_section_from_filehandle($file_handle, $section_name, $parser)">
+          <variable ilk="argument" name="$file_handle" />
+          <variable ilk="argument" name="$section_name" />
+          <variable ilk="argument" name="$parser" />
+        </scope>
+        <scope ilk="function" line="211" lineend="220" name="_get_pod_section_from_string" signature="_get_pod_section_from_string($source, $section_name, $parser)">
+          <variable ilk="argument" name="$source" />
+          <variable ilk="argument" name="$section_name" />
+          <variable ilk="argument" name="$parser" />
+        </scope>
+        <scope ilk="function" line="224" lineend="234" name="trim_raw_pod_section" signature="trim_raw_pod_section($pod)">
+          <variable ilk="argument" name="$pod" />
+        </scope>
+        <scope ilk="function" line="238" lineend="248" name="trim_pod_section" signature="trim_pod_section($pod)">
+          <variable ilk="argument" name="$pod" />
+        </scope>
+        <scope ilk="function" line="252" lineend="261" name="get_raw_module_abstract_from_file" signature="get_raw_module_abstract_from_file($file_name)">
+          <variable ilk="argument" name="$file_name" />
+        </scope>
+        <scope ilk="function" line="265" lineend="274" name="get_raw_module_abstract_from_filehandle" signature="get_raw_module_abstract_from_filehandle($file_handle)">
+          <variable ilk="argument" name="$file_handle" />
+        </scope>
+        <scope ilk="function" line="278" lineend="287" name="get_raw_module_abstract_from_string" signature="get_raw_module_abstract_from_string($source)">
+          <variable ilk="argument" name="$source" />
+        </scope>
+        <scope ilk="function" line="291" lineend="298" name="get_raw_module_abstract_for_module" signature="get_raw_module_abstract_for_module($module_name)">
+          <variable ilk="argument" name="$module_name" />
+        </scope>
+        <scope ilk="function" line="302" lineend="311" name="get_module_abstract_from_file" signature="get_module_abstract_from_file($file_name)">
+          <variable ilk="argument" name="$file_name" />
+        </scope>
+        <scope ilk="function" line="315" lineend="324" name="get_module_abstract_from_filehandle" signature="get_module_abstract_from_filehandle($file_handle)">
+          <variable ilk="argument" name="$file_handle" />
+        </scope>
+        <scope ilk="function" line="328" lineend="337" name="get_module_abstract_from_string" signature="get_module_abstract_from_string($source)">
+          <variable ilk="argument" name="$source" />
+        </scope>
+        <scope ilk="function" line="341" lineend="348" name="get_module_abstract_for_module" signature="get_module_abstract_for_module($module_name)">
+          <variable ilk="argument" name="$module_name" />
+        </scope>
+        <scope ilk="function" line="352" lineend="373" name="_get_module_abstract_from_file" signature="_get_module_abstract_from_file($file_name, $parser, $trimmer)">
+          <variable ilk="argument" name="$file_name" />
+          <variable ilk="argument" name="$parser" />
+          <variable ilk="argument" name="$trimmer" />
+        </scope>
+        <scope ilk="function" line="377" lineend="457" name="_get_module_abstract_from_filehandle" signature="_get_module_abstract_from_filehandle($file_handle, $parser, $trimmer)">
+          <variable ilk="argument" name="$file_handle" />
+          <variable ilk="argument" name="$parser" />
+          <variable ilk="argument" name="$trimmer" />
+        </scope>
+        <scope ilk="function" line="461" lineend="470" name="_get_module_abstract_from_string" signature="_get_module_abstract_from_string($source, $parser, $trimmer)">
+          <variable ilk="argument" name="$source" />
+          <variable ilk="argument" name="$parser" />
+          <variable ilk="argument" name="$trimmer" />
+        </scope>
+      </scope>
+    </scope>
+    

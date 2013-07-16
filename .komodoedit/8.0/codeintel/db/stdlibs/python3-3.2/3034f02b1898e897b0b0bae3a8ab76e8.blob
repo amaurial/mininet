@@ -1,0 +1,42 @@
+<scope doc="# Module which supports allocation of ctypes objects from shared memory&#xA;# # multiprocessing/sharedctypes.py # # Copyright (c) 2006-2008, R Oudkerk # All rights reserved. # # Redistribution and use in source and binary forms, with or without # modification, are permitted provided that the following conditions # are met: #" ilk="blob" lang="Python" name="multiprocessing.sharedctypes">
+      <scope doc="Return a synchronization wrapper for a RawArray" ilk="function" name="Array" signature="Array(typecode_or_type, size_or_initializer, **kwds)" />
+      <scope classrefs="_Pickler" doc="&#xA;" ilk="class" name="ForkingPickler">
+        <scope ilk="function" name="register" />
+      </scope>
+      <scope doc="Returns a recursive lock object" ilk="function" name="RLock" signature="RLock()" />
+      <scope doc="Returns a ctypes array allocated from shared memory" ilk="function" name="RawArray" signature="RawArray(typecode_or_type, size_or_initializer)" />
+      <scope doc="Returns a ctypes object allocated from shared memory" ilk="function" name="RawValue" signature="RawValue(typecode_or_type, *args)" />
+      <scope classrefs="SynchronizedBase" doc="&#xA;" ilk="class" name="Synchronized" />
+      <scope classrefs="SynchronizedBase" doc="&#xA;" ilk="class" name="SynchronizedArray">
+        <scope ilk="function" name="__getslice__" signature="__getslice__(self, start, stop)" />
+        <scope ilk="function" name="__getitem__" signature="__getitem__(self, i)" />
+        <scope ilk="function" name="__setslice__" signature="__setslice__(self, start, stop, values)" />
+        <scope ilk="function" name="__setitem__" signature="__setitem__(self, i, value)" />
+        <scope ilk="function" name="__len__" signature="__len__(self)" />
+      </scope>
+      <scope classrefs="object" doc="&#xA;" ilk="class" name="SynchronizedBase">
+        <scope ilk="function" name="__repr__" signature="__repr__(self)" />
+        <scope ilk="function" name="get_lock" signature="get_lock(self)" />
+        <scope ilk="function" name="__reduce__" signature="__reduce__(self)" />
+        <scope ilk="function" name="get_obj" signature="get_obj(self)" />
+        <scope ilk="function" name="__init__" signature="__init__(self, obj, lock=None)" />
+      </scope>
+      <scope classrefs="SynchronizedArray" doc="&#xA;" ilk="class" name="SynchronizedString" />
+      <scope doc="Return a synchronization wrapper for a Value" ilk="function" name="Value" signature="Value(typecode_or_type, *args, lock=None)" />
+      <variable citdl="list" name="__all__" />
+      <scope ilk="function" name="assert_spawning" signature="assert_spawning(self)" />
+      <variable citdl="WeakKeyDictionary" name="class_cache" />
+      <scope ilk="function" name="copy" signature="copy(obj)" />
+      <import module="ctypes" />
+      <import module="heap" />
+      <scope ilk="function" name="make_property" signature="make_property(name)" />
+      <variable citdl="dict" name="prop_cache" />
+      <scope ilk="function" name="rebuild_ctype" signature="rebuild_ctype(type_, wrapper, length)" />
+      <scope ilk="function" name="reduce_ctype" signature="reduce_ctype(obj)" />
+      <scope ilk="function" name="synchronized" signature="synchronized(obj, lock=None)" />
+      <import module="sys" />
+      <variable citdl="str" name="template" />
+      <variable citdl="dict" name="typecode_to_type" />
+      <import module="weakref" />
+    </scope>
+    

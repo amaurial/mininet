@@ -1,0 +1,75 @@
+<scope doc="&quot;Executable documentation&quot; for the pickle module.&#xA;Extensive comments about the pickle protocols and pickle-machine opcodes can be found here.  Some functions meant for external use:  genops(pickle) Generate all the opcodes in a pickle, as (opcode, arg, position) triples.  dis(pickle, out=None, memo=None, indentlevel=4) Print a symbolic disassembly of a pickle." ilk="blob" lang="Python" name="pickletools">
+      <scope classrefs="object" doc="&#xA;" ilk="class" name="ArgumentDescriptor">
+        <scope ilk="function" name="__init__" signature="__init__(self, name, n, reader, doc)" />
+      </scope>
+      <scope classrefs="object" doc="&#xA;" ilk="class" name="OpcodeInfo">
+        <scope ilk="function" name="__init__" signature="__init__(self, name, code, arg, stack_before, stack_after, proto, doc)" />
+      </scope>
+      <scope classrefs="object" doc="&#xA;" ilk="class" name="StackObject">
+        <scope ilk="function" name="__repr__" signature="__repr__(self)" />
+        <scope ilk="function" name="__init__" signature="__init__(self, name, obtype, doc)" />
+      </scope>
+      <variable citdl="int" name="TAKEN_FROM_ARGUMENT1" />
+      <variable citdl="int" name="TAKEN_FROM_ARGUMENT4" />
+      <variable citdl="int" name="UP_TO_NEWLINE" />
+      <variable citdl="list" name="__all__" />
+      <variable citdl="dict" name="__test__" />
+      <variable citdl="StackObject" name="anyobject" />
+      <variable citdl="tuple" name="bytes_types" />
+      <variable citdl="dict" name="code2op" />
+      <import module="codecs" />
+      <variable citdl="ArgumentDescriptor" name="decimalnl_long" />
+      <variable citdl="ArgumentDescriptor" name="decimalnl_short" />
+      <scope doc="Decode a long from a two&apos;s complement little-endian binary&#xA;string." ilk="function" name="decode_long" signature="decode_long(data)" />
+      <scope doc="Produce a symbolic disassembly of a pickle." ilk="function" name="dis" signature="dis(pickle, out=None, memo=None, indentlevel=4, annotate=0)" />
+      <variable citdl="ArgumentDescriptor" name="float8" />
+      <variable citdl="ArgumentDescriptor" name="floatnl" />
+      <scope doc="Generate all the opcodes in a pickle." ilk="function" name="genops" signature="genops(pickle)" />
+      <variable citdl="ArgumentDescriptor" name="int4" />
+      <variable citdl="ArgumentDescriptor" name="long1" />
+      <variable citdl="ArgumentDescriptor" name="long4" />
+      <variable citdl="StackObject" name="markobject" />
+      <variable citdl="list" name="opcodes" />
+      <scope doc="Optimize a pickle string by removing unused PUT opcodes" ilk="function" name="optimize" signature="optimize(p)" />
+      <import module="pickle" />
+      <variable citdl="StackObject" name="pybool" />
+      <variable citdl="StackObject" name="pybytes" />
+      <variable citdl="StackObject" name="pydict" />
+      <variable citdl="StackObject" name="pyfloat" />
+      <variable citdl="StackObject" name="pyint" />
+      <variable citdl="StackObject" name="pyinteger_or_bool" />
+      <variable citdl="StackObject" name="pylist" />
+      <variable citdl="StackObject" name="pylong" />
+      <variable citdl="StackObject" name="pynone" />
+      <variable citdl="StackObject" name="pystring" />
+      <variable citdl="StackObject" name="pytuple" />
+      <variable citdl="StackObject" name="pyunicode" />
+      <import module="re" />
+      <scope doc="&gt;&gt;&gt; import io" ilk="function" name="read_decimalnl_long" signature="read_decimalnl_long(f)" />
+      <scope doc="&gt;&gt;&gt; import io &gt;&gt;&gt;&#xA;read_decimalnl_short(io.BytesIO(b&quot;1234\n56&quot;)) 1234" ilk="function" name="read_decimalnl_short" signature="read_decimalnl_short(f)" />
+      <scope doc="&gt;&gt;&gt; import io, struct &gt;&gt;&gt; raw = struct.pack(&quot;&gt;d&quot;, -1.25) &gt;&gt;&gt;&#xA;raw b&apos;\xbf\xf4\x00\x00\x00\x00\x00\x00&apos;" ilk="function" name="read_float8" signature="read_float8(f)" />
+      <scope doc="&gt;&gt;&gt; import io &gt;&gt;&gt; read_floatnl(io.BytesIO(b&quot;-1.25\n6&quot;))&#xA;-1.25" ilk="function" name="read_floatnl" signature="read_floatnl(f)" />
+      <scope doc="&gt;&gt;&gt; import io &gt;&gt;&gt; read_int4(io.BytesIO(b&apos;\xff\x00\x00\x00&apos;))&#xA;255 &gt;&gt;&gt; read_int4(io.BytesIO(b&apos;\x00\x00\x00\x80&apos;)) ==&#xA;-(2**31)" ilk="function" name="read_int4" signature="read_int4(f)" />
+      <scope doc="&gt;&gt;&gt; import io &gt;&gt;&gt; read_long1(io.BytesIO(b&quot;\x00&quot;)) 0 &gt;&gt;&gt;&#xA;read_long1(io.BytesIO(b&quot;\x02\xff\x00&quot;))" ilk="function" name="read_long1" signature="read_long1(f)" />
+      <scope doc="&gt;&gt;&gt; import io &gt;&gt;&gt;&#xA;read_long4(io.BytesIO(b&quot;\x02\x00\x00\x00\xff\x00&quot;)) 255 &gt;&gt;&gt;&#xA;read_long4(io.BytesIO(b&quot;\x02\x00\x00\x00\xff\x7f&quot;))" ilk="function" name="read_long4" signature="read_long4(f)" />
+      <scope doc="&gt;&gt;&gt; import io &gt;&gt;&gt; read_string1(io.BytesIO(b&quot;\x00&quot;)) &apos;&apos; &gt;&gt;&gt;&#xA;read_string1(io.BytesIO(b&quot;\x03abcdef&quot;))" ilk="function" name="read_string1" signature="read_string1(f)" />
+      <scope doc="&gt;&gt;&gt; import io &gt;&gt;&gt;&#xA;read_string4(io.BytesIO(b&quot;\x00\x00\x00\x00abc&quot;)) &apos;&apos; &gt;&gt;&gt;&#xA;read_string4(io.BytesIO(b&quot;\x03\x00\x00\x00abcdef&quot;))" ilk="function" name="read_string4" signature="read_string4(f)" />
+      <scope doc="&gt;&gt;&gt; import io &gt;&gt;&gt;&#xA;read_stringnl(io.BytesIO(b&quot;&apos;abcd&apos;\nefg\n&quot;)) &apos;abcd&apos;" ilk="function" name="read_stringnl" signature="read_stringnl(f, decode=True, stripquotes=True)" />
+      <scope ilk="function" name="read_stringnl_noescape" signature="read_stringnl_noescape(f)" />
+      <scope doc="&gt;&gt;&gt; import io &gt;&gt;&gt; read_stringnl_noescape_pair(io.BytesIO(b&quot;Q&#xA;ueue\nEmpty\njunk&quot;)) &apos;Queue Empty&apos;" ilk="function" name="read_stringnl_noescape_pair" signature="read_stringnl_noescape_pair(f)" />
+      <scope doc="&gt;&gt;&gt; import io &gt;&gt;&gt; read_uint1(io.BytesIO(b&apos;\xff&apos;)) 255" ilk="function" name="read_uint1" signature="read_uint1(f)" />
+      <scope doc="&gt;&gt;&gt; import io &gt;&gt;&gt; read_uint2(io.BytesIO(b&apos;\xff\x00&apos;)) 255&#xA;&gt;&gt;&gt; read_uint2(io.BytesIO(b&apos;\xff\xff&apos;))" ilk="function" name="read_uint2" signature="read_uint2(f)" />
+      <scope doc="&gt;&gt;&gt; import io &gt;&gt;&gt; s = &apos;abcd\uabcd&apos; &gt;&gt;&gt; enc =&#xA;s.encode(&apos;utf-8&apos;) &gt;&gt;&gt; enc" ilk="function" name="read_unicodestring4" signature="read_unicodestring4(f)" />
+      <scope doc="&gt;&gt;&gt; import io &gt;&gt;&gt;&#xA;read_unicodestringnl(io.BytesIO(b&quot;abc\\uabcd\njunk&quot;)) ==&#xA;&apos;abc\uabcd&apos; True" ilk="function" name="read_unicodestringnl" signature="read_unicodestringnl(f)" />
+      <variable citdl="StackObject" name="stackslice" />
+      <variable citdl="ArgumentDescriptor" name="string1" />
+      <variable citdl="ArgumentDescriptor" name="string4" />
+      <variable citdl="ArgumentDescriptor" name="stringnl" />
+      <variable citdl="ArgumentDescriptor" name="stringnl_noescape" />
+      <variable citdl="ArgumentDescriptor" name="stringnl_noescape_pair" />
+      <variable citdl="ArgumentDescriptor" name="uint1" />
+      <variable citdl="ArgumentDescriptor" name="uint2" />
+      <variable citdl="ArgumentDescriptor" name="unicodestring4" />
+      <variable citdl="ArgumentDescriptor" name="unicodestringnl" />
+    </scope>
+    

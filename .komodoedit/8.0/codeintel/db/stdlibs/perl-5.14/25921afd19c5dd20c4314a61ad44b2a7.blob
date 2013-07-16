@@ -1,0 +1,80 @@
+<scope ilk="blob" lang="Perl" name="HTTP::Cookies">
+      <scope ilk="class" line="1" lineend="601" name="HTTP::Cookies">
+        <import line="4" module="HTTP::Date" symbol="str2time" />
+        <import line="4" module="HTTP::Date" symbol="parse_date" />
+        <import line="4" module="HTTP::Date" symbol="time2str" />
+        <import line="5" module="HTTP::Headers::Util" symbol="_split_header_words" />
+        <import line="5" module="HTTP::Headers::Util" symbol="join_header_words" />
+        <import line="12" module="HTTP::Cookies::Netscape" />
+        <import line="16" module="Time::Local" />
+        <variable line="7" name="$EPOCH_OFFSET" />
+        <variable line="7" name="$VERSION" />
+        <scope attributes="__ctor__" ilk="function" line="23" lineend="35" name="new" signature="new($class, %cnf)">
+          <variable ilk="argument" name="$class" />
+          <variable ilk="argument" name="%cnf" />
+        </scope>
+        <scope ilk="function" line="38" lineend="171" name="add_cookie_header" signature="add_cookie_header($self, $request)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$request" />
+        </scope>
+        <scope ilk="function" line="174" lineend="364" name="extract_cookies" signature="extract_cookies($self, $response)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$response" />
+        </scope>
+        <scope ilk="function" line="366" lineend="369" name="set_cookie_ok" signature="set_cookie_ok()" />
+        <scope ilk="function" line="372" lineend="407" name="set_cookie" signature="set_cookie($self, $version, $key, $val, $path, $domain, $port, $path_spec, $secure, $maxage, $discard, $rest)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$version" />
+          <variable ilk="argument" name="$key" />
+          <variable ilk="argument" name="$val" />
+          <variable ilk="argument" name="$path" />
+          <variable ilk="argument" name="$domain" />
+          <variable ilk="argument" name="$port" />
+          <variable ilk="argument" name="$path_spec" />
+          <variable ilk="argument" name="$secure" />
+          <variable ilk="argument" name="$maxage" />
+          <variable ilk="argument" name="$discard" />
+          <variable ilk="argument" name="$rest" />
+        </scope>
+        <scope ilk="function" line="410" lineend="420" name="save" signature="save($self, $file)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$file" />
+        </scope>
+        <scope ilk="function" line="423" lineend="465" name="load" signature="load($self, $file)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$file" />
+        </scope>
+        <scope ilk="function" line="468" lineend="473" name="revert" signature="revert($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="476" lineend="496" name="clear" signature="clear($self)">
+          <import line="492" module="Carp" />
+          <variable ilk="argument" name="$self" />
+          <import line="492" module="Carp" />
+        </scope>
+        <scope ilk="function" line="499" lineend="510" name="clear_temporary_cookies" signature="clear_temporary_cookies($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="513" lineend="518" name="DESTROY" signature="DESTROY($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="521" lineend="537" name="scan" signature="scan($self, $cb)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$cb" />
+        </scope>
+        <scope ilk="function" line="540" lineend="564" name="as_string" signature="as_string($self, $skip_discard)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$skip_discard" />
+        </scope>
+        <scope ilk="function" line="566" lineend="574" name="_host" signature="_host($request, $url)">
+          <variable ilk="argument" name="$request" />
+          <variable ilk="argument" name="$url" />
+        </scope>
+        <scope ilk="function" line="576" lineend="588" name="_url_path" signature="_url_path($url)">
+          <variable ilk="argument" name="$url" />
+        </scope>
+        <scope ilk="function" line="590" lineend="599" name="_normalize_path" signature="_normalize_path()">
+          </scope>
+      </scope>
+    </scope>
+    

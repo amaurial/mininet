@@ -1,0 +1,61 @@
+<scope ilk="blob" lang="Perl" name="Perl::Critic::PolicyConfig">
+      <scope ilk="class" line="8" lineend="202" name="Perl::Critic::PolicyConfig">
+        <import line="14" module="Readonly" symbol="*" />
+        <import line="18" module="Perl::Critic::Exception::AggregateConfiguration" symbol="*" />
+        <import line="19" module="Perl::Critic::Exception::Configuration::Option::Policy::ParameterValue" symbol="*" />
+        <import line="20" module="Perl::Critic::Exception::Configuration::Option::Policy::ExtraParameter" symbol="*" />
+        <import line="21" module="Perl::Critic::Utils" symbol="**" />
+        <import line="22" module="Perl::Critic::Utils::Constants" symbol="**" />
+        <variable line="16" name="$VERSION" />
+        <scope attributes="__ctor__" ilk="function" line="31" lineend="54" name="new" signature="new($class, $policy_short_name, $specification)">
+          <variable ilk="argument" name="$class" />
+          <variable ilk="argument" name="$policy_short_name" />
+          <variable ilk="argument" name="$specification" />
+        </scope>
+        <scope ilk="function" line="58" lineend="62" name="_get_non_public_data" signature="_get_non_public_data($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="66" lineend="70" name="get_policy_short_name" signature="get_policy_short_name($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="74" lineend="78" name="get_set_themes" signature="get_set_themes($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="82" lineend="86" name="get_add_themes" signature="get_add_themes($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="90" lineend="94" name="get_severity" signature="get_severity($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="98" lineend="111" name="is_maximum_violations_per_document_unlimited" signature="is_maximum_violations_per_document_unlimited($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="115" lineend="119" name="get_maximum_violations_per_document" signature="get_maximum_violations_per_document($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="123" lineend="129" name="get" signature="get($self, $parameter)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$parameter" />
+        </scope>
+        <scope ilk="function" line="133" lineend="141" name="remove" signature="remove($self, $parameter)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$parameter" />
+        </scope>
+        <scope ilk="function" line="145" lineend="149" name="is_empty" signature="is_empty($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="153" lineend="157" name="get_parameter_names" signature="get_parameter_names($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="161" lineend="188" name="handle_extra_parameters" signature="handle_extra_parameters($self, $policy, $errors)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$policy" />
+          <variable ilk="argument" name="$errors" />
+        </scope>
+        <scope ilk="function" line="192" lineend="198" name="set_profile_strictness" signature="set_profile_strictness($self, $profile_strictness)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$profile_strictness" />
+        </scope>
+      </scope>
+    </scope>
+    

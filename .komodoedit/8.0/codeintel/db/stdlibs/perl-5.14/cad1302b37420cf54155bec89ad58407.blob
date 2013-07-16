@@ -1,0 +1,109 @@
+<scope ilk="blob" lang="Perl" name="ExtUtils::CBuilder::Base">
+      <scope ilk="class" line="1" lineend="383" name="ExtUtils::CBuilder::Base">
+        <import line="4" module="File::Spec" symbol="*" />
+        <import line="5" module="File::Basename" symbol="*" />
+        <import line="6" module="Cwd" />
+        <import line="7" module="Config" symbol="*" />
+        <import line="8" module="Text::ParseWords" symbol="*" />
+        <import line="9" module="IO::File" symbol="*" />
+        <import line="10" module="Data::Dumper" symbol="*" />
+        <import line="11" module="IPC::Cmd" symbol="can_run" />
+        <import line="12" module="File::Temp" symbol="tempfile" />
+        <variable line="10" name="$Data::Dumper::Indent" />
+        <variable line="14" name="$VERSION" />
+        <scope attributes="__ctor__" ilk="function" line="32" lineend="74" name="new" signature="new($class)">
+          <variable ilk="argument" name="$class" />
+        </scope>
+        <scope ilk="function" line="76" lineend="82" name="find_perl_interpreter" signature="find_perl_interpreter()">
+          </scope>
+        <scope ilk="function" line="84" lineend="89" name="add_to_cleanup" signature="add_to_cleanup($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="91" lineend="96" name="cleanup" signature="cleanup($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="98" lineend="100" name="get_config" signature="get_config()" />
+        <scope ilk="function" line="102" lineend="108" name="object_file" signature="object_file($self, $filename)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$filename" />
+        </scope>
+        <scope ilk="function" line="110" lineend="113" name="arg_include_dirs" signature="arg_include_dirs($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="115" lineend="115" name="arg_nolink" signature="arg_nolink()" />
+        <scope ilk="function" line="117" lineend="120" name="arg_object_file" signature="arg_object_file($self, $file)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$file" />
+        </scope>
+        <scope ilk="function" line="122" lineend="125" name="arg_share_object_file" signature="arg_share_object_file($self, $file)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$file" />
+        </scope>
+        <scope ilk="function" line="127" lineend="130" name="arg_exec_file" signature="arg_exec_file($self, $file)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$file" />
+        </scope>
+        <scope ilk="function" line="132" lineend="135" name="arg_defines" signature="arg_defines($self, %args)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="%args" />
+        </scope>
+        <scope ilk="function" line="137" lineend="179" name="compile" signature="compile($self, %args)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="%args" />
+        </scope>
+        <scope ilk="function" line="181" lineend="217" name="have_compiler" signature="have_compiler($self, $is_cplusplus)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$is_cplusplus" />
+        </scope>
+        <scope ilk="function" line="219" lineend="222" name="have_cplusplus" signature="have_cplusplus()" />
+        <scope ilk="function" line="224" lineend="229" name="lib_file" signature="lib_file($self, $dl_file)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$dl_file" />
+        </scope>
+        <scope ilk="function" line="232" lineend="237" name="exe_file" signature="exe_file($self, $dl_file)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$dl_file" />
+        </scope>
+        <scope ilk="function" line="239" lineend="239" name="need_prelink" signature="need_prelink()" />
+        <scope ilk="function" line="241" lineend="241" name="extra_link_args_after_prelink" signature="extra_link_args_after_prelink()" />
+        <scope ilk="function" line="243" lineend="254" name="prelink" signature="prelink($self, %args)">
+          <import line="248" module="ExtUtils::Mksymlists" />
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="%args" />
+          <import line="248" module="ExtUtils::Mksymlists" />
+        </scope>
+        <scope ilk="function" line="256" lineend="271" name="_prepare_mksymlists_args" signature="_prepare_mksymlists_args($args)">
+          <variable ilk="argument" name="$args" />
+        </scope>
+        <scope ilk="function" line="273" lineend="276" name="link" signature="link($self, %args)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="%args" />
+        </scope>
+        <scope ilk="function" line="278" lineend="281" name="link_executable" signature="link_executable($self, %args)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="%args" />
+        </scope>
+        <scope ilk="function" line="283" lineend="314" name="_do_link" signature="_do_link($self, $type, %args)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$type" />
+          <variable ilk="argument" name="%args" />
+        </scope>
+        <scope ilk="function" line="317" lineend="321" name="do_system" signature="do_system($self, @cmd)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="@cmd" />
+        </scope>
+        <scope ilk="function" line="323" lineend="337" name="split_like_shell" signature="split_like_shell($self, $string)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$string" />
+        </scope>
+        <scope ilk="function" line="340" lineend="366" name="perl_src" signature="perl_src()">
+          </scope>
+        <scope ilk="function" line="369" lineend="373" name="perl_inc" signature="perl_inc($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="375" lineend="379" name="DESTROY" signature="DESTROY($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+      </scope>
+    </scope>
+    

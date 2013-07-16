@@ -1,0 +1,122 @@
+<scope doc="Utilities for comparing files and directories.&#xA;Classes: dircmp  Functions: cmp(f1, f2, shallow=True) -&gt; int cmpfiles(a, b, common) -&gt; ([], [], [])" ilk="blob" lang="Python" name="filecmp">
+      <variable citdl="int" line="19" name="BUFSIZE" />
+      <variable citdl="list" line="16" name="__all__" />
+      <scope doc="Compare two files." ilk="function" line="21" lineend="57" name="cmp" returns="bool" signature="cmp(f1, f2, shallow=True)">
+        <variable ilk="argument" name="f1" />
+        <variable ilk="argument" name="f2" />
+        <variable citdl="_do_cmp()" line="51" name="outcome" />
+        <variable citdl="_sig()" line="43" name="s2" />
+        <variable citdl="_sig()" line="42" name="s1" />
+        <variable citdl="True" ilk="argument" name="shallow" />
+      </scope>
+      <scope doc="Compare common files in two directories." ilk="function" line="241" lineend="259" name="cmpfiles" returns="tuple" signature="cmpfiles(a, b, common, shallow=True)">
+        <variable ilk="argument" name="a" />
+        <variable ilk="argument" name="b" />
+        <variable ilk="argument" name="common" />
+        <variable citdl="os.path.join()" line="256" name="ax" />
+        <variable citdl="tuple" line="254" name="res" />
+        <variable citdl="True" ilk="argument" name="shallow" />
+        <variable citdl="os.path.join()" line="257" name="bx" />
+      </scope>
+      <scope doc="# Demonstration and testing." ilk="function" line="283" lineend="293" name="demo" signature="demo()">
+        <variable citdl="dircmp" line="289" name="dd" />
+        <variable line="286" name="args" />
+        <variable line="286" name="options" />
+      </scope>
+      <scope classrefs="object" doc="A class that manages the comparison of 2 directories.&#xA;dircmp(a, b, ignore=None, hide=None) A and B are directories. IGNORE is a list of names to ignore, defaults to [&apos;RCS&apos;, &apos;CVS&apos;, &apos;tags&apos;]. HIDE is a list of names to hide, defaults to [os.curdir, os.pardir].  High level usage: x = dircmp(dir1, dir2) x.report() -&gt; prints a report on the differences between dir1 and dir2" ilk="class" line="77" lineend="239" name="dircmp">
+        <scope ilk="function" line="131" lineend="136" name="phase1" signature="phase1(self)">
+          <variable citdl="dict()" line="132" name="a" />
+          <variable citdl="dircmp" ilk="argument" name="self" />
+          <variable citdl="dict()" line="133" name="b" />
+        </scope>
+        <scope ilk="function" line="123" lineend="129" name="phase0" signature="phase0(self)">
+          <variable citdl="dircmp" ilk="argument" name="self" />
+        </scope>
+        <scope ilk="function" line="138" lineend="171" name="phase2" signature="phase2(self)">
+          <variable citdl="os.path.join()" line="145" name="b_path" />
+          <variable citdl="int" line="147" name="ok" />
+          <variable citdl="dircmp" ilk="argument" name="self" />
+          <variable citdl="os.path.join()" line="144" name="a_path" />
+          <variable citdl="os.stat()" line="154" name="b_stat" />
+          <variable citdl="stat.S_IFMT()" line="160" name="a_type" />
+          <variable citdl="os.stat()" line="149" name="a_stat" />
+          <variable citdl="stat.S_IFMT()" line="161" name="b_type" />
+        </scope>
+        <scope ilk="function" line="177" lineend="185" name="phase4" signature="phase4(self)">
+          <variable citdl="os.path.join()" line="184" name="b_x" />
+          <variable citdl="dircmp" ilk="argument" name="self" />
+          <variable citdl="os.path.join()" line="183" name="a_x" />
+        </scope>
+        <scope ilk="function" line="173" lineend="175" name="phase3" signature="phase3(self)">
+          <variable citdl="dircmp" ilk="argument" name="self" />
+          <variable citdl="cmpfiles()" line="174" name="xx" />
+        </scope>
+        <scope ilk="function" line="235" lineend="239" name="__getattr__" returns="getattr()" signature="__getattr__(self, attr)">
+          <variable citdl="dircmp" ilk="argument" name="self" />
+          <variable ilk="argument" name="attr" />
+        </scope>
+        <scope ilk="function" line="187" lineend="190" name="phase4_closure" signature="phase4_closure(self)">
+          <variable citdl="dircmp" ilk="argument" name="self" />
+        </scope>
+        <scope ilk="function" line="223" lineend="227" name="report_full_closure" signature="report_full_closure(self)">
+          <variable citdl="dircmp" ilk="argument" name="self" />
+        </scope>
+        <scope ilk="function" line="217" lineend="221" name="report_partial_closure" signature="report_partial_closure(self)">
+          <variable citdl="dircmp" ilk="argument" name="self" />
+        </scope>
+        <scope ilk="function" line="192" lineend="215" name="report" signature="report(self)">
+          <variable citdl="dircmp" ilk="argument" name="self" />
+        </scope>
+        <scope ilk="function" line="111" lineend="121" name="__init__" signature="__init__(self, a, b, ignore=None, hide=None)">
+          <variable ilk="argument" name="a" />
+          <variable ilk="argument" name="ignore" />
+          <variable citdl="dircmp" ilk="argument" name="self" />
+          <variable ilk="argument" name="b" />
+          <variable ilk="argument" name="hide" />
+        </scope>
+        <variable attributes="__instancevar__" citdl="list" line="139" name="common_dirs" />
+        <variable attributes="__instancevar__" line="113" name="right" />
+        <variable attributes="__instancevar__" citdl="list" line="115" name="hide" />
+        <variable attributes="__instancevar__" citdl="list" line="141" name="common_funny" />
+        <variable citdl="dict()" line="229" name="methodmap" />
+        <variable attributes="__instancevar__" citdl="list" line="140" name="common_files" />
+        <variable attributes="__instancevar__" citdl="dict" line="181" name="subdirs" />
+        <variable attributes="__instancevar__" citdl="list" line="119" name="ignore" />
+        <variable attributes="__instancevar__" citdl="list()" line="134" name="common" />
+        <variable attributes="__instancevar__" line="112" name="left" />
+        <variable attributes="__instancevar__" citdl="list()" line="136" name="right_only" />
+        <variable attributes="__instancevar__" citdl="_filter()" line="124" name="left_list" />
+        <variable attributes="__instancevar__" citdl="list()" line="135" name="left_only" />
+        <variable attributes="__instancevar__" citdl="_filter()" line="126" name="right_list" />
+      </scope>
+      <scope classrefs="object" doc="filterfalse(function or None, sequence) --&gt; filterfalse object&#xA;Return those items of sequence for which function(item) is false. If function is None, return the items that are false." ilk="class" name="filterfalse">
+        <scope doc="x.__iter__() &lt;==&gt; iter(x)" ilk="function" name="__iter__" signature="x.__iter__() &lt;==&gt; iter(x)" />
+        <scope doc="x.__next__() &lt;==&gt; next(x)" ilk="function" name="__next__" signature="x.__next__() &lt;==&gt; next(x)" />
+        <scope doc="x.__getattribute__(&apos;name&apos;) &lt;==&gt; x.name" ilk="function" name="__getattribute__" signature="x.__getattribute__(&apos;name&apos;) &lt;==&gt; x.name" />
+      </scope>
+      <import module="os" />
+      <import module="stat" />
+      <scope attributes="protected __hidden__" ilk="function" line="268" lineend="272" name="_cmp" returns="bool" signature="_cmp(a, b, sh, abs=abs, cmp=cmp)">
+        <variable ilk="argument" name="a" />
+        <variable ilk="argument" name="b" />
+        <variable ilk="argument" name="sh" />
+        <variable citdl="abs" ilk="argument" name="abs" />
+        <variable citdl="cmp" ilk="argument" name="cmp" />
+      </scope>
+      <scope attributes="protected __hidden__" ilk="function" line="59" lineend="62" name="_sig" returns="tuple" signature="_sig(st)">
+        <variable ilk="argument" name="st" />
+      </scope>
+      <scope attributes="protected __hidden__" ilk="function" line="277" lineend="278" name="_filter" returns="list()" signature="_filter(flist, skip)">
+        <variable ilk="argument" name="flist" />
+        <variable ilk="argument" name="skip" />
+      </scope>
+      <scope attributes="protected __hidden__" ilk="function" line="64" lineend="73" name="_do_cmp" returns="bool" signature="_do_cmp(f1, f2)">
+        <variable ilk="argument" name="f1" />
+        <variable ilk="argument" name="f2" />
+        <variable citdl="int" line="65" name="bufsize" />
+        <variable citdl="fp1.read()" line="68" name="b1" />
+        <variable citdl="fp2.read()" line="69" name="b2" />
+      </scope>
+      <variable attributes="protected __hidden__" citdl="dict" line="18" name="_cache" />
+    </scope>
+    

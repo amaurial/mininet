@@ -1,0 +1,39 @@
+<scope ilk="blob" lang="Perl" name="Bit::Vector::String">
+      <scope classrefs="Exporter Bit::Vector" ilk="class" line="12" lineend="27" name="Bit::Vector::String">
+        <import line="17" module="Bit::Vector" symbol="*" />
+        <import line="19" module="Exporter" />
+        <variable line="15" name="$VERSION" />
+        <variable line="15" name="@EXPORT" />
+        <variable line="15" name="@EXPORT_OK" />
+        <variable line="15" name="@ISA" />
+      </scope>
+      <scope ilk="class" line="29" lineend="269" name="Bit::Vector">
+        <import line="32" module="Carp::Clan" symbol="^Bit::Vector\b" />
+        <scope ilk="function" line="36" lineend="52" name="to_Oct" signature="to_Oct($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="54" lineend="76" name="from_Oct" signature="from_Oct($self, $string)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$string" />
+        </scope>
+        <scope ilk="function" line="78" lineend="102" name="new_Oct" signature="new_Oct($class, $bits, $string)">
+          <variable ilk="argument" name="$class" />
+          <variable ilk="argument" name="$bits" />
+          <variable ilk="argument" name="$string" />
+        </scope>
+        <scope ilk="function" line="104" lineend="151" name="String_Export" signature="String_Export($self, $type)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$type" />
+        </scope>
+        <scope ilk="function" line="153" lineend="202" name="String_Import" signature="String_Import($self, $string)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$string" />
+        </scope>
+        <scope ilk="function" line="204" lineend="267" name="new_String" signature="new_String($class, $bits, $string)">
+          <variable ilk="argument" name="$class" />
+          <variable ilk="argument" name="$bits" />
+          <variable ilk="argument" name="$string" />
+        </scope>
+      </scope>
+    </scope>
+    

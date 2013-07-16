@@ -1,0 +1,211 @@
+<scope doc="An XML-RPC client interface for Python.&#xA;The marshalling and response parser code can also be used to implement XML-RPC servers.  Exported exceptions:  Error          Base class for client errors ProtocolError  Indicates an HTTP protocol error ResponseError  Indicates a broken response package Fault          Indicates an XML-RPC fault package " ilk="blob" lang="Python" name="xmlrpc.client">
+      <variable citdl="int" name="APPLICATION_ERROR" />
+      <scope classrefs="object" doc="Wrapper for binary data.&#xA;" ilk="class" name="Binary">
+        <scope ilk="function" name="__ne__" signature="__ne__(self, other)" />
+        <scope ilk="function" name="__str__" signature="__str__(self)" />
+        <scope ilk="function" name="decode" signature="decode(self, data)" />
+        <scope ilk="function" name="encode" signature="encode(self, out)" />
+        <scope ilk="function" name="__eq__" signature="__eq__(self, other)" />
+        <scope ilk="function" name="__init__" signature="__init__(self, data=None)" />
+      </scope>
+      <scope classrefs="int" doc="bool(x) -&gt; bool&#xA;Returns True when the argument x is true, False otherwise. The builtins True and False are the only two instances of the class bool. The class bool is a subclass of the class int, and cannot be subclassed." ilk="class" name="Boolean">
+        <scope doc="x.__rand__(y) &lt;==&gt; y&amp;x" ilk="function" name="__rand__" signature="x.__rand__(y) &lt;==&gt; y&amp;x" />
+        <scope doc="x.__ror__(y) &lt;==&gt; y|x" ilk="function" name="__ror__" signature="x.__ror__(y) &lt;==&gt; y|x" />
+        <scope doc="x.__str__() &lt;==&gt; str(x)" ilk="function" name="__str__" signature="x.__str__() &lt;==&gt; str(x)" />
+        <scope doc="x.__xor__(y) &lt;==&gt; x^y" ilk="function" name="__xor__" signature="x.__xor__(y) &lt;==&gt; x^y" />
+        <scope doc="x.__repr__() &lt;==&gt; repr(x)" ilk="function" name="__repr__" signature="x.__repr__() &lt;==&gt; repr(x)" />
+        <scope doc="x.__and__(y) &lt;==&gt; x&amp;y" ilk="function" name="__and__" signature="x.__and__(y) &lt;==&gt; x&amp;y" />
+        <scope doc="x.__rxor__(y) &lt;==&gt; y^x" ilk="function" name="__rxor__" signature="x.__rxor__(y) &lt;==&gt; y^x" />
+        <scope doc="x.__or__(y) &lt;==&gt; x|y" ilk="function" name="__or__" signature="x.__or__(y) &lt;==&gt; x|y" />
+      </scope>
+      <scope classrefs="_BufferedIOBase" doc="BytesIO([buffer]) -&gt; object&#xA;Create a buffered I/O implementation using an in-memory bytes buffer, ready for reading and writing." ilk="class" name="BytesIO">
+        <scope doc="Call readline() repeatedly and return a list of the lines so&#xA;read." ilk="function" name="readlines" returns="list" signature="readlines([size]) -&gt; list of strings, each a line from the file." />
+        <scope doc="Retrieve the entire contents of the BytesIO object." ilk="function" name="getvalue" signature="getvalue() -&gt; bytes." />
+        <scope ilk="function" name="writable" />
+        <scope doc="flush() -&gt; None.  Does nothing." ilk="function" name="flush" signature="flush() -&gt; None.  Does nothing." />
+        <scope doc="close() -&gt; None.  Disable all I/O operations." ilk="function" name="close" signature="close() -&gt; None.  Disable all I/O operations." />
+        <scope doc="Seek to byte offset pos relative to position indicated by&#xA;whence: 0  Start of stream (the default)." ilk="function" name="seek" signature="seek(pos, whence=0) -&gt; int.  Change stream position." />
+        <scope ilk="function" name="__init__" />
+        <scope doc="Returns number of bytes read (0 for EOF), or None if the&#xA;object is set not to block as has no data to read." ilk="function" name="readinto" signature="readinto(bytearray) -&gt; int.  Read up to len(b) bytes into b." />
+        <scope ilk="function" name="readable" />
+        <scope doc="Return the number of bytes written." ilk="function" name="write" signature="write(bytes) -&gt; int.  Write bytes to file." />
+        <scope ilk="function" name="__getstate__" />
+        <scope doc="tell() -&gt; current file position, an integer" ilk="function" name="tell" signature="tell() -&gt; current file position, an integer" />
+        <scope doc="Always returns False since BytesIO objects are not connected&#xA;to a tty-like device." ilk="function" name="isatty" signature="isatty() -&gt; False." />
+        <scope doc="Size defaults to the current file position, as returned by&#xA;tell()." ilk="function" name="truncate" signature="truncate([size]) -&gt; int.  Truncate the file to at most size bytes." />
+        <scope ilk="function" name="__setstate__" />
+        <scope doc="If the size argument is negative, read until EOF is reached." ilk="function" name="read" signature="read([size]) -&gt; read at most size bytes, returned as a string." />
+        <scope doc="x.__next__() &lt;==&gt; next(x)" ilk="function" name="__next__" signature="x.__next__() &lt;==&gt; next(x)" />
+        <scope doc="If the size argument is negative or omitted, read until EOF&#xA;is reached." ilk="function" name="read1" signature="read1(size) -&gt; read at most size bytes, returned as a string." />
+        <scope doc="x.__iter__() &lt;==&gt; iter(x)" ilk="function" name="__iter__" signature="x.__iter__() &lt;==&gt; iter(x)" />
+        <scope ilk="function" name="seekable" />
+        <scope doc="Retain newline." ilk="function" name="readline" signature="readline([size]) -&gt; next line from the file, as a string." />
+        <scope doc="Note that newlines are not added." ilk="function" name="writelines" signature="writelines(sequence_of_strings) -&gt; None.  Write strings to the file." />
+        <scope doc="Get a read-write view over the contents of the BytesIO&#xA;object." ilk="function" name="getbuffer" signature="getbuffer() -&gt; bytes." />
+      </scope>
+      <scope classrefs="object" doc="DateTime wrapper for an ISO 8601 string or time tuple or&#xA;localtime integer value to generate &apos;dateTime.iso8601&apos; XML-RPC value." ilk="class" name="DateTime">
+        <scope ilk="function" name="__ne__" signature="__ne__(self, other)" />
+        <scope ilk="function" name="make_comparable" signature="make_comparable(self, other)" />
+        <scope ilk="function" name="__str__" signature="__str__(self)" />
+        <scope ilk="function" name="decode" signature="decode(self, data)" />
+        <scope ilk="function" name="__le__" signature="__le__(self, other)" />
+        <scope ilk="function" name="__init__" signature="__init__(self, value=0)" />
+        <scope ilk="function" name="timetuple" signature="timetuple(self)" />
+        <scope ilk="function" name="__gt__" signature="__gt__(self, other)" />
+        <scope ilk="function" name="encode" signature="encode(self, out)" />
+        <scope ilk="function" name="__lt__" signature="__lt__(self, other)" />
+        <scope ilk="function" name="__eq__" signature="__eq__(self, other)" />
+        <scope ilk="function" name="__ge__" signature="__ge__(self, other)" />
+        <scope ilk="function" name="__repr__" signature="__repr__(self)" />
+      </scope>
+      <scope classrefs="Exception" doc="Base class for client errors.&#xA;" ilk="class" name="Error">
+        <scope ilk="function" name="__str__" signature="__str__(self)" />
+      </scope>
+      <scope classrefs="object" doc="&#xA;" ilk="class" name="ExpatParser">
+        <scope ilk="function" name="feed" signature="feed(self, data)" />
+        <scope ilk="function" name="close" signature="close(self)" />
+        <scope doc="# fast expat parser for Python 2.0 and later." ilk="function" name="__init__" signature="__init__(self, target)" />
+      </scope>
+      <variable citdl="NoneType" name="FastMarshaller" />
+      <variable citdl="NoneType" name="FastParser" />
+      <variable citdl="NoneType" name="FastUnmarshaller" />
+      <scope classrefs="Error" doc="Indicates an XML-RPC fault package.&#xA;" ilk="class" name="Fault">
+        <scope ilk="function" name="__init__" signature="__init__(self, faultCode, faultString, **extra)" />
+        <scope ilk="function" name="__repr__" signature="__repr__(self)" />
+      </scope>
+      <scope classrefs="GzipFile" doc="a file-like object to decode a response encoded with the gzip&#xA;method, as described in RFC 1952." ilk="class" name="GzipDecodedResponse">
+        <scope ilk="function" name="close" signature="close(self)" />
+        <scope ilk="function" name="__init__" signature="__init__(self, response)" />
+      </scope>
+      <variable citdl="int" name="INTERNAL_ERROR" />
+      <variable citdl="int" name="INVALID_ENCODING_CHAR" />
+      <variable citdl="int" name="INVALID_METHOD_PARAMS" />
+      <variable citdl="int" name="INVALID_XMLRPC" />
+      <variable citdl="int" name="MAXINT" />
+      <variable citdl="int" name="METHOD_NOT_FOUND" />
+      <variable citdl="int" name="MININT" />
+      <scope classrefs="object" doc="Generate an XML-RPC params chunk from a Python data structure.&#xA;Create a Marshaller instance for each set of parameters, and use the &quot;dumps&quot; method to convert your data (represented as a tuple) to an XML-RPC params chunk.  To write a fault response, pass a Fault instance instead.  You may prefer to use the &quot;dumps&quot; module function for this purpose." ilk="class" name="Marshaller">
+        <scope ilk="function" name="dump_long" signature="dump_long(self, value, write)" />
+        <scope ilk="function" name="dump_string" signature="dump_string(self, value, write, escape=&lt;function escape at 0x06AAAC48&gt;)" />
+        <scope ilk="function" name="dump_unicode" signature="dump_unicode(self, value, write, escape=&lt;function escape at 0x06AAAC48&gt;)" />
+        <scope ilk="function" name="dump_datetime" signature="dump_datetime(self, value, write)" />
+        <scope ilk="function" name="dump_double" signature="dump_double(self, value, write)" />
+        <scope ilk="function" name="dump_array" signature="dump_array(self, value, write)" />
+        <scope ilk="function" name="dump_bool" signature="dump_bool(self, value, write)" />
+        <scope ilk="function" name="dump_struct" signature="dump_struct(self, value, write, escape=&lt;function escape at 0x06AAAC48&gt;)" />
+        <scope ilk="function" name="__init__" signature="__init__(self, encoding=None, allow_none=False)" />
+        <scope ilk="function" name="dump_int" signature="dump_int(self, value, write)" />
+        <scope ilk="function" name="dumps" signature="dumps(self, values)" />
+        <scope ilk="function" name="dump_instance" signature="dump_instance(self, value, write)" />
+        <scope ilk="function" name="dump_nil" signature="dump_nil(self, value, write)" />
+        <scope ilk="function" name="_Marshaller__dump" signature="_Marshaller__dump(self, value, write)" />
+      </scope>
+      <scope classrefs="object" doc="server -&gt; a object used to boxcar method calls&#xA;server should be a ServerProxy object.  Methods can be added to the MultiCall using normal method call syntax e.g.:  multicall = MultiCall(server_proxy) multicall.add(2,3) multicall.get_address(&quot;Guido&quot;)  To execute the multicall, call the MultiCall object e.g.:" ilk="class" name="MultiCall">
+        <scope ilk="function" name="__repr__" signature="__repr__(self)" />
+        <scope ilk="function" name="__init__" signature="__init__(self, server)" />
+        <scope ilk="function" name="__call__" signature="__call__(self)" />
+        <scope ilk="function" name="__str__" signature="__str__(self)" />
+        <scope ilk="function" name="__getattr__" signature="__getattr__(self, name)" />
+      </scope>
+      <scope classrefs="object" doc="Iterates over the results of a multicall. Exceptions are&#xA;thrown in response to xmlrpc faults." ilk="class" name="MultiCallIterator">
+        <scope ilk="function" name="__getitem__" signature="__getitem__(self, i)" />
+        <scope ilk="function" name="__init__" signature="__init__(self, results)" />
+      </scope>
+      <variable citdl="int" name="NOT_WELLFORMED_ERROR" />
+      <variable citdl="int" name="PARSE_ERROR" />
+      <scope classrefs="Error" doc="Indicates an HTTP protocol error.&#xA;" ilk="class" name="ProtocolError">
+        <scope ilk="function" name="__init__" signature="__init__(self, url, errcode, errmsg, headers)" />
+        <scope ilk="function" name="__repr__" signature="__repr__(self)" />
+      </scope>
+      <scope classrefs="Error" doc="Indicates a broken response package.&#xA;" ilk="class" name="ResponseError" />
+      <variable citdl="int" name="SERVER_ERROR" />
+      <variable citdl="int" name="SYSTEM_ERROR" />
+      <scope classrefs="Transport" doc="Handles an HTTPS transaction to an XML-RPC server.&#xA;" ilk="class" name="SafeTransport">
+        <scope ilk="function" name="make_connection" signature="make_connection(self, host)" />
+      </scope>
+      <scope classrefs="object" doc="uri [,options] -&gt; a logical connection to an XML-RPC server&#xA;uri is the connection point on the server, given as scheme://host/target.  The standard implementation always supports the &quot;http&quot; scheme.  If SSL socket support is available (Python 2.0), it also supports &quot;https&quot;.  If the target part and the slash preceding it are both omitted, &quot;/RPC2&quot; is assumed. " ilk="class" name="Server">
+        <scope ilk="function" name="__str__" signature="__str__(self)" />
+        <scope ilk="function" name="__getattr__" signature="__getattr__(self, name)" />
+        <scope ilk="function" name="_ServerProxy__request" signature="_ServerProxy__request(self, methodname, params)" />
+        <scope ilk="function" name="_ServerProxy__close" signature="_ServerProxy__close(self)" />
+        <scope ilk="function" name="__repr__" signature="__repr__(self)" />
+        <scope doc="A workaround to get special attributes on the ServerProxy&#xA;without interfering with the magic __getattr__" ilk="function" name="__call__" signature="__call__(self, attr)" />
+        <scope ilk="function" name="__init__" signature="__init__(self, uri, transport=None, encoding=None, verbose=False, allow_none=False, use_datetime=False)" />
+      </scope>
+      <scope classrefs="object" doc="uri [,options] -&gt; a logical connection to an XML-RPC server&#xA;uri is the connection point on the server, given as scheme://host/target.  The standard implementation always supports the &quot;http&quot; scheme.  If SSL socket support is available (Python 2.0), it also supports &quot;https&quot;.  If the target part and the slash preceding it are both omitted, &quot;/RPC2&quot; is assumed. " ilk="class" name="ServerProxy">
+        <scope ilk="function" name="__str__" signature="__str__(self)" />
+        <scope ilk="function" name="__getattr__" signature="__getattr__(self, name)" />
+        <scope ilk="function" name="_ServerProxy__request" signature="_ServerProxy__request(self, methodname, params)" />
+        <scope ilk="function" name="_ServerProxy__close" signature="_ServerProxy__close(self)" />
+        <scope ilk="function" name="__repr__" signature="__repr__(self)" />
+        <scope doc="A workaround to get special attributes on the ServerProxy&#xA;without interfering with the magic __getattr__" ilk="function" name="__call__" signature="__call__(self, attr)" />
+        <scope ilk="function" name="__init__" signature="__init__(self, uri, transport=None, encoding=None, verbose=False, allow_none=False, use_datetime=False)" />
+      </scope>
+      <variable citdl="int" name="TRANSPORT_ERROR" />
+      <scope classrefs="object" doc="Handles an HTTP transaction to an XML-RPC server.&#xA;" ilk="class" name="Transport">
+        <scope ilk="function" name="single_request" signature="single_request(self, host, handler, request_body, verbose=False)" />
+        <scope ilk="function" name="send_request" signature="send_request(self, host, handler, request_body, debug)" />
+        <scope ilk="function" name="send_content" signature="send_content(self, connection, request_body)" />
+        <scope doc="## # Clear any cached connection object." ilk="function" name="close" signature="close(self)" />
+        <scope ilk="function" name="__init__" signature="__init__(self, use_datetime=False)" />
+        <scope ilk="function" name="make_connection" signature="make_connection(self, host)" />
+        <scope ilk="function" name="get_host_info" signature="get_host_info(self, host)" />
+        <scope ilk="function" name="request" signature="request(self, host, handler, request_body, verbose=False)" />
+        <scope ilk="function" name="getparser" signature="getparser(self)" />
+        <scope ilk="function" name="parse_response" signature="parse_response(self, response)" />
+        <scope ilk="function" name="send_headers" signature="send_headers(self, connection, headers)" />
+      </scope>
+      <variable citdl="int" name="UNSUPPORTED_ENCODING" />
+      <scope classrefs="object" doc="Unmarshal an XML-RPC response, based on incoming XML event&#xA;messages (start, data, end).  Call close() to get the resulting data structure.  Note that this reader is fairly tolerant, and gladly accepts bogus XML-RPC data without complaining (but not bogus XML)." ilk="class" name="Unmarshaller">
+        <scope ilk="function" name="end_base64" signature="end_base64(self, data)" />
+        <scope ilk="function" name="end_params" signature="end_params(self, data)" />
+        <scope ilk="function" name="end_double" signature="end_double(self, data)" />
+        <scope ilk="function" name="end_value" signature="end_value(self, data)" />
+        <scope ilk="function" name="end_string" signature="end_string(self, data)" />
+        <scope ilk="function" name="end_dateTime" signature="end_dateTime(self, data)" />
+        <scope ilk="function" name="end_methodName" signature="end_methodName(self, data)" />
+        <scope ilk="function" name="close" signature="close(self)" />
+        <scope ilk="function" name="data" signature="data(self, text)" />
+        <scope ilk="function" name="__init__" signature="__init__(self, use_datetime=False)" />
+        <scope ilk="function" name="xml" signature="xml(self, encoding, standalone)" />
+        <scope ilk="function" name="end_nil" signature="end_nil(self, data)" />
+        <scope ilk="function" name="end_struct" signature="end_struct(self, data)" />
+        <scope ilk="function" name="end" signature="end(self, tag)" />
+        <scope ilk="function" name="end_dispatch" signature="end_dispatch(self, tag, data)" />
+        <scope ilk="function" name="end_fault" signature="end_fault(self, data)" />
+        <scope ilk="function" name="start" signature="start(self, tag, attrs)" />
+        <scope ilk="function" name="end_int" signature="end_int(self, data)" />
+        <scope ilk="function" name="end_boolean" signature="end_boolean(self, data)" />
+        <scope ilk="function" name="end_array" signature="end_array(self, data)" />
+        <scope ilk="function" name="getmethodname" signature="getmethodname(self)" />
+      </scope>
+      <variable citdl="tuple" name="WRAPPERS" />
+      <import module="base64" />
+      <scope classrefs="int" doc="bool(x) -&gt; bool&#xA;Returns True when the argument x is true, False otherwise. The builtins True and False are the only two instances of the class bool. The class bool is a subclass of the class int, and cannot be subclassed." ilk="class" name="boolean">
+        <scope doc="x.__rand__(y) &lt;==&gt; y&amp;x" ilk="function" name="__rand__" signature="x.__rand__(y) &lt;==&gt; y&amp;x" />
+        <scope doc="x.__ror__(y) &lt;==&gt; y|x" ilk="function" name="__ror__" signature="x.__ror__(y) &lt;==&gt; y|x" />
+        <scope doc="x.__str__() &lt;==&gt; str(x)" ilk="function" name="__str__" signature="x.__str__() &lt;==&gt; str(x)" />
+        <scope doc="x.__xor__(y) &lt;==&gt; x^y" ilk="function" name="__xor__" signature="x.__xor__(y) &lt;==&gt; x^y" />
+        <scope doc="x.__repr__() &lt;==&gt; repr(x)" ilk="function" name="__repr__" signature="x.__repr__() &lt;==&gt; repr(x)" />
+        <scope doc="x.__and__(y) &lt;==&gt; x&amp;y" ilk="function" name="__and__" signature="x.__and__(y) &lt;==&gt; x&amp;y" />
+        <scope doc="x.__rxor__(y) &lt;==&gt; y^x" ilk="function" name="__rxor__" signature="x.__rxor__(y) &lt;==&gt; y^x" />
+        <scope doc="x.__or__(y) &lt;==&gt; x|y" ilk="function" name="__or__" signature="x.__or__(y) &lt;==&gt; x|y" />
+      </scope>
+      <import module="datetime" />
+      <scope doc="data [,options] -&gt; marshalled data" ilk="function" name="dumps" signature="dumps(params, methodname=None, methodresponse=None, encoding=None, allow_none=False)" />
+      <import module="errno" />
+      <scope ilk="function" name="escape" signature="escape(s)" />
+      <import module="expat" />
+      <scope doc="Create an instance of the fastest available parser, and&#xA;attach it to an unmarshalling object." ilk="function" name="getparser" signature="getparser() -&gt; parser, unmarshaller" />
+      <import module="gzip" />
+      <scope doc="gzip encoded data -&gt; unencoded data" ilk="function" name="gzip_decode" signature="gzip_decode(data)" />
+      <scope doc="data -&gt; gzip encoded data" ilk="function" name="gzip_encode" signature="gzip_encode(data)" />
+      <import module="http" />
+      <import module="io" />
+      <scope doc="data -&gt; unmarshalled data, method name" ilk="function" name="loads" signature="loads(data, use_datetime=False)" />
+      <import module="operator" />
+      <import module="re" />
+      <import module="socket" />
+      <import module="time" />
+    </scope>
+    

@@ -1,0 +1,36 @@
+<scope ilk="blob" lang="Perl" name="App::Prove::State::Result">
+      <scope ilk="class" line="1" lineend="233" name="App::Prove::State::Result">
+        <import line="4" module="Carp" symbol="croak" />
+        <import line="6" module="App::Prove::State::Result::Test" symbol="*" />
+        <variable line="7" name="$VERSION" />
+        <scope attributes="__ctor__" ilk="function" line="51" lineend="60" name="new" signature="new($class, $arg_for)">
+          <variable ilk="argument" name="$class" />
+          <variable ilk="argument" name="$arg_for" />
+        </scope>
+        <scope ilk="function" line="62" lineend="74" name="_initialize" signature="_initialize($self, $tests)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$tests" />
+        </scope>
+        <scope ilk="function" line="82" lineend="82" name="state_version" signature="state_version()" />
+        <scope ilk="function" line="92" lineend="94" name="test_class" signature="test_class()" />
+        <scope ilk="function" line="144" lineend="153" name="tests" signature="tests($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="165" lineend="178" name="test" signature="test($self, $name)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$name" />
+        </scope>
+        <scope ilk="function" line="186" lineend="189" name="test_names" signature="test_names($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="201" lineend="205" name="remove" signature="remove($self, $name)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$name" />
+        </scope>
+        <scope ilk="function" line="213" lineend="213" name="num_tests" signature="num_tests()" />
+        <scope ilk="function" line="221" lineend="231" name="raw" signature="raw($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+      </scope>
+    </scope>
+    

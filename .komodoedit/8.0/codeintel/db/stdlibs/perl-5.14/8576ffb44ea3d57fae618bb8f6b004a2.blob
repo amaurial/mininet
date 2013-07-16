@@ -1,0 +1,140 @@
+<scope ilk="blob" lang="Perl" name="Devel::NYTProf::FileInfo">
+      <scope ilk="class" line="1" lineend="607" name="Devel::NYTProf::FileInfo">
+        <import line="5" module="Carp" symbol="*" />
+        <import line="6" module="Config" symbol="*" />
+        <import line="7" module="List::Util" symbol="sum" />
+        <import line="7" module="List::Util" symbol="max" />
+        <import line="9" module="Devel::NYTProf::Util" symbol="strip_prefix_from_paths" />
+        <import line="9" module="Devel::NYTProf::Util" symbol="trace_level" />
+        <import line="12" module="Devel::NYTProf::Constants" symbol="NYTP_FIDf_HAS_SRC" />
+        <import line="12" module="Devel::NYTProf::Constants" symbol="NYTP_FIDf_SAVE_SRC" />
+        <import line="12" module="Devel::NYTProf::Constants" symbol="NYTP_FIDf_IS_FAKE" />
+        <import line="12" module="Devel::NYTProf::Constants" symbol="NYTP_FIDf_IS_PMC" />
+        <import line="13" module="Devel::NYTProf::Constants" symbol="NYTP_FIDf_IS_EVAL" />
+        <import line="15" module="Devel::NYTProf::Constants" symbol="NYTP_FIDi_FILENAME" />
+        <import line="15" module="Devel::NYTProf::Constants" symbol="NYTP_FIDi_EVAL_FID" />
+        <import line="15" module="Devel::NYTProf::Constants" symbol="NYTP_FIDi_EVAL_LINE" />
+        <import line="15" module="Devel::NYTProf::Constants" symbol="NYTP_FIDi_FID" />
+        <import line="16" module="Devel::NYTProf::Constants" symbol="NYTP_FIDi_FLAGS" />
+        <import line="16" module="Devel::NYTProf::Constants" symbol="NYTP_FIDi_FILESIZE" />
+        <import line="16" module="Devel::NYTProf::Constants" symbol="NYTP_FIDi_FILEMTIME" />
+        <import line="16" module="Devel::NYTProf::Constants" symbol="NYTP_FIDi_PROFILE" />
+        <import line="17" module="Devel::NYTProf::Constants" symbol="NYTP_FIDi_EVAL_FI" />
+        <import line="17" module="Devel::NYTProf::Constants" symbol="NYTP_FIDi_HAS_EVALS" />
+        <import line="17" module="Devel::NYTProf::Constants" symbol="NYTP_FIDi_SUBS_DEFINED" />
+        <import line="17" module="Devel::NYTProf::Constants" symbol="NYTP_FIDi_SUBS_CALLED" />
+        <import line="18" module="Devel::NYTProf::Constants" symbol="NYTP_FIDi_elements" />
+        <import line="20" module="Devel::NYTProf::Constants" symbol="NYTP_SCi_CALL_COUNT" />
+        <import line="20" module="Devel::NYTProf::Constants" symbol="NYTP_SCi_INCL_RTIME" />
+        <import line="20" module="Devel::NYTProf::Constants" symbol="NYTP_SCi_EXCL_RTIME" />
+        <import line="20" module="Devel::NYTProf::Constants" symbol="NYTP_SCi_RECI_RTIME" />
+        <import line="21" module="Devel::NYTProf::Constants" symbol="NYTP_SCi_REC_DEPTH" />
+        <import line="21" module="Devel::NYTProf::Constants" symbol="NYTP_SCi_CALLING_SUB" />
+        <import line="22" module="Devel::NYTProf::Constants" symbol="NYTP_SCi_elements" />
+        <scope ilk="function" line="31" lineend="31" name="filename" signature="filename()" />
+        <scope ilk="function" line="32" lineend="32" name="eval_fid" signature="eval_fid()" />
+        <scope ilk="function" line="33" lineend="33" name="eval_line" signature="eval_line()" />
+        <scope ilk="function" line="34" lineend="34" name="fid" signature="fid()" />
+        <scope ilk="function" line="35" lineend="35" name="size" signature="size()" />
+        <scope ilk="function" line="36" lineend="36" name="mtime" signature="mtime()" />
+        <scope ilk="function" line="37" lineend="37" name="profile" signature="profile()" />
+        <scope ilk="function" line="38" lineend="38" name="flags" signature="flags()" />
+        <scope ilk="function" line="41" lineend="41" name="eval_fi" signature="eval_fi()" />
+        <scope ilk="function" line="43" lineend="43" name="is_eval" signature="is_eval()" />
+        <scope ilk="function" line="45" lineend="45" name="is_fake" signature="is_fake()" />
+        <scope ilk="function" line="46" lineend="49" name="is_file" signature="is_file($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="52" lineend="52" name="meta" signature="meta()" />
+        <scope ilk="function" line="54" lineend="54" name="cache" signature="cache()" />
+        <scope ilk="function" line="57" lineend="71" name="has_evals" signature="has_evals($self, $include_nested)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$include_nested" />
+        </scope>
+        <scope ilk="function" line="74" lineend="80" name="sibling_evals" signature="sibling_evals($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="83" lineend="86" name="_nullify" signature="_nullify($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="91" lineend="98" name="subs_defined" signature="subs_defined($self, $incl_nested_evals)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$incl_nested_evals" />
+        </scope>
+        <scope ilk="function" line="100" lineend="103" name="subs_defined_sorted" signature="subs_defined_sorted($self, $incl_nested_evals)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$incl_nested_evals" />
+        </scope>
+        <scope ilk="function" line="105" lineend="111" name="_remove_sub_defined" signature="_remove_sub_defined($self, $si)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$si" />
+        </scope>
+        <scope ilk="function" line="113" lineend="123" name="_add_new_sub_defined" signature="_add_new_sub_defined($self, $subinfo)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$subinfo" />
+        </scope>
+        <scope ilk="function" line="156" lineend="156" name="sub_call_lines" signature="sub_call_lines()" />
+        <scope ilk="function" line="172" lineend="184" name="evals_by_line" signature="evals_by_line($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="187" lineend="198" name="line_time_data" signature="line_time_data($self, $levels)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$levels" />
+        </scope>
+        <scope ilk="function" line="200" lineend="210" name="excl_time" signature="excl_time($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="213" lineend="224" name="sum_of_stmts_count" signature="sum_of_stmts_count($self, $incl_nested_evals)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$incl_nested_evals" />
+        </scope>
+        <scope ilk="function" line="226" lineend="237" name="sum_of_stmts_time" signature="sum_of_stmts_time($self, $incl_nested_evals)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$incl_nested_evals" />
+        </scope>
+        <scope ilk="function" line="239" lineend="245" name="_sum_of_line_time_data" signature="_sum_of_line_time_data($self, $idx)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$idx" />
+        </scope>
+        <scope ilk="function" line="248" lineend="260" name="outer" signature="outer($self, $recurse)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$recurse" />
+        </scope>
+        <scope ilk="function" line="263" lineend="265" name="is_pmc" signature="is_pmc()" />
+        <scope ilk="function" line="268" lineend="420" name="collapse_sibling_evals" signature="collapse_sibling_evals($self, $survivor_fi, @donors)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$survivor_fi" />
+          <variable ilk="argument" name="@donors" />
+        </scope>
+        <scope ilk="function" line="427" lineend="434" name="filename_without_inc" signature="filename_without_inc($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="437" lineend="462" name="abs_filename" signature="abs_filename($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="465" lineend="468" name="has_savesrc" signature="has_savesrc($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="470" lineend="485" name="srclines_array" signature="srclines_array($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="487" lineend="499" name="src_digest" signature="src_digest($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="502" lineend="533" name="normalize_for_test" signature="normalize_for_test($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="536" lineend="540" name="summary" signature="summary($fi)">
+          <variable ilk="argument" name="$fi" />
+        </scope>
+        <scope ilk="function" line="542" lineend="604" name="dump" signature="dump($self, $separator, $fh, $path, $prefix, $opts)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$separator" />
+          <variable ilk="argument" name="$fh" />
+          <variable ilk="argument" name="$path" />
+          <variable ilk="argument" name="$prefix" />
+          <variable ilk="argument" name="$opts" />
+        </scope>
+      </scope>
+    </scope>
+    

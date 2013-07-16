@@ -1,0 +1,42 @@
+<scope ilk="blob" lang="Perl" name="TAP::Parser::YAMLish::Reader">
+      <scope classrefs="TAP::Object" ilk="class" line="1" lineend="261" name="TAP::Parser::YAMLish::Reader">
+        <import line="6" module="TAP::Object" />
+        <variable line="4" name="$VERSION" />
+        <variable line="4" name="@ISA" />
+        <scope ilk="function" line="29" lineend="58" name="read" signature="read($self, $obj)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$obj" />
+        </scope>
+        <scope ilk="function" line="60" lineend="60" name="get_raw" signature="get_raw()" />
+        <scope ilk="function" line="62" lineend="68" name="_peek" signature="_peek($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="70" lineend="77" name="_next" signature="_next($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="79" lineend="108" name="_read" signature="_read($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="111" lineend="123" name="_read_qq" signature="_read_qq($self, $str)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$str" />
+        </scope>
+        <scope ilk="function" line="126" lineend="170" name="_read_scalar" signature="_read_scalar($self, $string)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$string" />
+        </scope>
+        <scope ilk="function" line="172" lineend="186" name="_read_nested" signature="_read_nested($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="189" lineend="229" name="_read_array" signature="_read_array($self, $limit)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$limit" />
+        </scope>
+        <scope ilk="function" line="231" lineend="259" name="_read_hash" signature="_read_hash($self, $line, $limit)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$line" />
+          <variable ilk="argument" name="$limit" />
+        </scope>
+      </scope>
+    </scope>
+    

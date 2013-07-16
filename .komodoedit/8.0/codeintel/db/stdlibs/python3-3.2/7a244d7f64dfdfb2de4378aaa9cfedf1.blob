@@ -1,0 +1,26 @@
+<scope doc="Python part of the warnings subsystem.&#xA;" ilk="blob" lang="Python" name="warnings">
+      <scope classrefs="object" doc="Holds the result of a single showwarning() call.&#xA;" ilk="class" name="WarningMessage">
+        <scope ilk="function" name="__str__" signature="__str__(self)" />
+        <scope ilk="function" name="__init__" signature="__init__(self, message, category, filename, lineno, file=None, line=None)" />
+      </scope>
+      <variable citdl="list" name="__all__" />
+      <scope classrefs="object" doc="A context manager that copies and restores the warnings filter upon&#xA;exiting the context.  The &apos;record&apos; argument specifies whether warnings should be captured by a custom implementation of warnings.showwarning() and be appended to a list returned by the context manager. Otherwise None is returned by the context manager. The objects appended to the list are arguments whose attributes mirror the arguments to showwarning().  The &apos;module&apos; argument is to specify an alternative module to the module named &apos;warnings&apos; and imported under that name. This argument is only useful" ilk="class" name="catch_warnings">
+        <scope ilk="function" name="__exit__" signature="__exit__(self, *exc_info)" />
+        <scope ilk="function" name="__repr__" signature="__repr__(self)" />
+        <scope ilk="function" name="__enter__" signature="__enter__(self)" />
+        <scope doc="Specify whether to record warnings and if an alternative&#xA;module should be used other than sys.modules[&apos;warnings&apos;]." ilk="function" name="__init__" signature="__init__(self, *, record=False, module=None)" />
+      </scope>
+      <variable citdl="str" name="defaultaction" />
+      <variable citdl="list" name="filters" />
+      <scope doc="Insert an entry into the list of warnings filters (at the&#xA;front)." ilk="function" name="filterwarnings" signature="filterwarnings(action, message=&apos;&apos;, category=&lt;class &apos;Warning&apos;&gt;, module=&apos;&apos;, lineno=0, append=False)" />
+      <scope doc="Function to format a warning the standard way." ilk="function" name="formatwarning" signature="formatwarning(message, category, filename, lineno, line=None)" />
+      <import module="linecache" />
+      <variable citdl="dict" name="onceregistry" />
+      <scope doc="Clear the list of warning filters, so that no filters are&#xA;active." ilk="function" name="resetwarnings" signature="resetwarnings()" />
+      <scope doc="Hook to write a warning to a file; replace if you like." ilk="function" name="showwarning" signature="showwarning(message, category, filename, lineno, file=None, line=None)" />
+      <scope doc="Insert a simple entry into the list of warnings filters (at&#xA;the front)." ilk="function" name="simplefilter" signature="simplefilter(action, category=&lt;class &apos;Warning&apos;&gt;, lineno=0, append=False)" />
+      <import module="sys" />
+      <scope doc="Issue a warning, or maybe ignore it or raise an exception." ilk="function" name="warn" />
+      <scope doc="Low-level inferface to warnings functionality." ilk="function" name="warn_explicit" />
+    </scope>
+    

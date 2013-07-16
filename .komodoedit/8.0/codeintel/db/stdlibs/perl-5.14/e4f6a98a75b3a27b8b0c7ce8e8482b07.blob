@@ -1,0 +1,45 @@
+<scope ilk="blob" lang="Perl" name="overload">
+      <scope ilk="class" line="1" lineend="183" name="overload">
+        <import line="147" module="warnings::register" symbol="*" />
+        <variable line="3" name="$VERSION" />
+        <variable line="8" name="$package" />
+        <variable line="105" name="*StrVal" />
+        <variable line="123" name="%constants" />
+        <variable line="131" name="%ops" />
+        <scope ilk="function" line="5" lineend="5" name="nil" signature="nil()" />
+        <scope ilk="function" line="7" lineend="28" name="OVERLOAD" signature="OVERLOAD(%arg)">
+          <variable ilk="argument" name="%arg" />
+        </scope>
+        <scope ilk="function" line="30" lineend="35" name="import" signature="import()" />
+        <scope ilk="function" line="37" lineend="48" name="unimport" signature="unimport()" />
+        <scope ilk="function" line="50" lineend="54" name="Overloaded" signature="Overloaded($package)">
+          <variable ilk="argument" name="$package" />
+        </scope>
+        <scope ilk="function" line="56" lineend="64" name="ov_method" signature="ov_method($globref)">
+          <import line="60" module="Scalar::Util" />
+          <variable ilk="argument" name="$globref" />
+          <import line="60" module="Scalar::Util" />
+        </scope>
+        <scope ilk="function" line="66" lineend="74" name="OverloadedStringify" signature="OverloadedStringify($package)">
+          <variable ilk="argument" name="$package" />
+        </scope>
+        <scope ilk="function" line="76" lineend="89" name="Method" signature="Method($package)">
+          <import line="81" module="Scalar::Util" />
+          <variable ilk="argument" name="$package" />
+          <import line="81" module="Scalar::Util" />
+        </scope>
+        <scope ilk="function" line="91" lineend="103" name="AddrRef" signature="AddrRef()">
+          <import line="97" module="Scalar::Util" />
+          <import line="97" module="Scalar::Util" />
+        </scope>
+        <scope ilk="function" line="107" lineend="121" name="mycan" signature="mycan($package, $meth)">
+          <import line="112" module="mro" />
+          <variable ilk="argument" name="$package" />
+          <variable ilk="argument" name="$meth" />
+          <import line="112" module="mro" />
+        </scope>
+        <scope ilk="function" line="148" lineend="172" name="constant" signature="constant()" />
+        <scope ilk="function" line="174" lineend="181" name="remove_constant" signature="remove_constant()" />
+      </scope>
+    </scope>
+    

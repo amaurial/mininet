@@ -1,0 +1,32 @@
+<scope ilk="blob" lang="Perl" name="Term::UI">
+      <scope ilk="class" line="1" lineend="620" name="Term::UI">
+        <import line="3" module="Carp" symbol="*" />
+        <import line="4" module="Params::Check" symbol="check" />
+        <import line="4" module="Params::Check" symbol="allow" />
+        <import line="5" module="Term::ReadLine" symbol="*" />
+        <import line="6" module="Locale::Maketext::Simple" symbol="Style" />
+        <import line="7" module="Term::UI::History" symbol="*" />
+        <variable line="12" name="$AUTOREPLY" />
+        <variable line="12" name="$INVALID" />
+        <variable line="12" name="$VERBOSE" />
+        <variable line="12" name="$VERSION" />
+        <scope ilk="function" line="118" lineend="172" name="get_reply" signature="get_reply($term, %hash)">
+          <variable ilk="argument" name="$term" />
+          <variable ilk="argument" name="%hash" />
+        </scope>
+        <scope ilk="function" line="194" lineend="236" name="ask_yn" signature="ask_yn($term, %hash)">
+          <variable ilk="argument" name="$term" />
+          <variable ilk="argument" name="%hash" />
+        </scope>
+        <scope ilk="function" line="240" lineend="360" name="_tt_readline" signature="_tt_readline($term, %hash)">
+          <variable ilk="argument" name="$term" />
+          <variable ilk="argument" name="%hash" />
+        </scope>
+        <scope ilk="function" line="400" lineend="431" name="parse_options" signature="parse_options($term, $input)">
+          <variable ilk="argument" name="$term" />
+          <variable ilk="argument" name="$input" />
+        </scope>
+        <scope ilk="function" line="441" lineend="441" name="history_as_string" signature="history_as_string()" />
+      </scope>
+    </scope>
+    

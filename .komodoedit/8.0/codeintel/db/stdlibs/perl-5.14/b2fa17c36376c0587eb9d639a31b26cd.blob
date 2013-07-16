@@ -1,0 +1,36 @@
+<scope ilk="blob" lang="Perl" name="Eval::Closure">
+      <scope ilk="class" line="1" lineend="164" name="Eval::Closure">
+        <import line="7" module="Sub::Exporter" symbol="*" />
+        <import line="13" module="Carp" symbol="*" />
+        <import line="15" module="Scalar::Util" symbol="reftype" />
+        <import line="16" module="Try::Tiny" symbol="*" />
+        <variable line="3" name="$Eval::Closure::VERSION" />
+        <scope ilk="function" line="20" lineend="42" name="eval_closure" signature="eval_closure(%args)">
+          <variable ilk="argument" name="%args" />
+        </scope>
+        <scope ilk="function" line="44" lineend="68" name="_canonicalize_source" signature="_canonicalize_source($source)">
+          <variable ilk="argument" name="$source" />
+        </scope>
+        <scope ilk="function" line="70" lineend="82" name="_validate_env" signature="_validate_env($env)">
+          <variable ilk="argument" name="$env" />
+        </scope>
+        <scope ilk="function" line="84" lineend="90" name="_line_directive" signature="_line_directive($line, $description)">
+          <variable ilk="argument" name="$line" />
+          <variable ilk="argument" name="$description" />
+        </scope>
+        <scope ilk="function" line="92" lineend="113" name="_clean_eval_closure" signature="_clean_eval_closure($source, $captures)">
+          <variable ilk="argument" name="$source" />
+          <variable ilk="argument" name="$captures" />
+        </scope>
+        <scope ilk="function" line="118" lineend="130" name="_make_compiler" signature="_make_compiler()">
+          </scope>
+        <scope ilk="function" line="133" lineend="144" name="_make_compiler_source" signature="_make_compiler_source($source, @capture_keys)">
+          <variable ilk="argument" name="$source" />
+          <variable ilk="argument" name="@capture_keys" />
+        </scope>
+        <scope ilk="function" line="146" lineend="161" name="_dump_source" signature="_dump_source($source)">
+          <variable ilk="argument" name="$source" />
+        </scope>
+      </scope>
+    </scope>
+    

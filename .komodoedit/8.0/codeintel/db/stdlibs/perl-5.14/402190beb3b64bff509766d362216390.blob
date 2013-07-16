@@ -1,0 +1,68 @@
+<scope ilk="blob" lang="Perl" name="PPI::Token">
+      <scope classrefs="PPI::Element" ilk="class" line="1" lineend="247" name="PPI::Token">
+        <import line="24" module="Params::Util" symbol="_INSTANCE" />
+        <import line="25" module="PPI::Element" />
+        <import line="26" module="PPI::Exception" />
+        <import line="38" module="PPI::Token::BOM" />
+        <import line="39" module="PPI::Token::Whitespace" />
+        <import line="40" module="PPI::Token::Comment" />
+        <import line="41" module="PPI::Token::Pod" />
+        <import line="42" module="PPI::Token::Number" />
+        <import line="43" module="PPI::Token::Number::Binary" />
+        <import line="44" module="PPI::Token::Number::Octal" />
+        <import line="45" module="PPI::Token::Number::Hex" />
+        <import line="46" module="PPI::Token::Number::Float" />
+        <import line="47" module="PPI::Token::Number::Exp" />
+        <import line="48" module="PPI::Token::Number::Version" />
+        <import line="49" module="PPI::Token::Word" />
+        <import line="50" module="PPI::Token::DashedWord" />
+        <import line="51" module="PPI::Token::Symbol" />
+        <import line="52" module="PPI::Token::ArrayIndex" />
+        <import line="53" module="PPI::Token::Magic" />
+        <import line="54" module="PPI::Token::Quote::Single" />
+        <import line="55" module="PPI::Token::Quote::Double" />
+        <import line="56" module="PPI::Token::Quote::Literal" />
+        <import line="57" module="PPI::Token::Quote::Interpolate" />
+        <import line="58" module="PPI::Token::QuoteLike::Backtick" />
+        <import line="59" module="PPI::Token::QuoteLike::Command" />
+        <import line="60" module="PPI::Token::QuoteLike::Regexp" />
+        <import line="61" module="PPI::Token::QuoteLike::Words" />
+        <import line="62" module="PPI::Token::QuoteLike::Readline" />
+        <import line="63" module="PPI::Token::Regexp::Match" />
+        <import line="64" module="PPI::Token::Regexp::Substitute" />
+        <import line="65" module="PPI::Token::Regexp::Transliterate" />
+        <import line="66" module="PPI::Token::Operator" />
+        <import line="67" module="PPI::Token::Cast" />
+        <import line="68" module="PPI::Token::Structure" />
+        <import line="69" module="PPI::Token::Label" />
+        <import line="70" module="PPI::Token::HereDoc" />
+        <import line="71" module="PPI::Token::Separator" />
+        <import line="72" module="PPI::Token::Data" />
+        <import line="73" module="PPI::Token::End" />
+        <import line="74" module="PPI::Token::Prototype" />
+        <import line="75" module="PPI::Token::Attribute" />
+        <import line="76" module="PPI::Token::Unknown" />
+        <variable line="28" name="$VERSION" />
+        <variable line="28" name="@ISA" />
+        <scope attributes="__ctor__" ilk="function" line="85" lineend="87" name="new" signature="new()" />
+        <scope attributes="__ctor__" ilk="function" line="89" lineend="113" name="set_class" signature="set_class($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="133" lineend="135" name="set_content" signature="set_content()" />
+        <scope ilk="function" line="148" lineend="148" name="add_content" signature="add_content()" />
+        <scope ilk="function" line="158" lineend="158" name="length" signature="length()" />
+        <scope ilk="function" line="167" lineend="169" name="content" signature="content()" />
+        <scope ilk="function" line="172" lineend="181" name="insert_before" signature="insert_before($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="184" lineend="193" name="insert_after" signature="insert_after($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="202" lineend="202" name="__TOKENIZER__on_line_start" signature="__TOKENIZER__on_line_start()" />
+        <scope ilk="function" line="203" lineend="203" name="__TOKENIZER__on_line_end" signature="__TOKENIZER__on_line_end()" />
+        <scope ilk="function" line="204" lineend="204" name="__TOKENIZER__on_char" signature="__TOKENIZER__on_char()" />
+        <scope ilk="function" line="213" lineend="217" name="__LEXER__opens" signature="__LEXER__opens()" />
+        <scope ilk="function" line="219" lineend="223" name="__LEXER__closes" signature="__LEXER__closes()" />
+      </scope>
+    </scope>
+    

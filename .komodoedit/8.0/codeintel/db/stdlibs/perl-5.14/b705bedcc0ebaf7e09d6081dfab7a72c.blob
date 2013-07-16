@@ -1,0 +1,60 @@
+<scope ilk="blob" lang="Perl" name="Moose">
+      <scope ilk="class" line="1" lineend="1242" name="Moose">
+        <import line="13" module="Scalar::Util" symbol="blessed" />
+        <import line="14" module="Carp" symbol="confess" />
+        <import line="16" module="Moose::Deprecated" symbol="*" />
+        <import line="17" module="Moose::Exporter" symbol="*" />
+        <import line="19" module="Class::MOP" symbol="*" />
+        <import line="21" module="Moose::Meta::Class" symbol="*" />
+        <import line="22" module="Moose::Meta::TypeConstraint" symbol="*" />
+        <import line="23" module="Moose::Meta::TypeCoercion" symbol="*" />
+        <import line="24" module="Moose::Meta::Attribute" symbol="*" />
+        <import line="25" module="Moose::Meta::Instance" symbol="*" />
+        <import line="27" module="Moose::Object" symbol="*" />
+        <import line="29" module="Moose::Meta::Role" symbol="*" />
+        <import line="30" module="Moose::Meta::Role::Composite" symbol="*" />
+        <import line="31" module="Moose::Meta::Role::Application" symbol="*" />
+        <import line="32" module="Moose::Meta::Role::Application::RoleSummation" symbol="*" />
+        <import line="33" module="Moose::Meta::Role::Application::ToClass" symbol="*" />
+        <import line="34" module="Moose::Meta::Role::Application::ToRole" symbol="*" />
+        <import line="35" module="Moose::Meta::Role::Application::ToInstance" symbol="*" />
+        <import line="37" module="Moose::Util::TypeConstraints" symbol="*" />
+        <import line="38" module="Moose::Util" />
+        <import line="40" module="Moose::Meta::Attribute::Native" symbol="*" />
+        <variable line="3" name="$Moose::AUTHORITY" />
+        <variable line="6" name="$Moose::VERSION" />
+        <variable line="87" name="$SUPER_PACKAGE" />
+        <variable line="88" name="$SUPER_BODY" />
+        <variable line="89" name="@SUPER_ARGS" />
+        <scope ilk="function" line="42" lineend="46" name="throw_error" signature="throw_error()" />
+        <scope ilk="function" line="48" lineend="57" name="extends" signature="extends($meta)">
+          <variable ilk="argument" name="$meta" />
+        </scope>
+        <scope ilk="function" line="59" lineend="61" name="with" signature="with()" />
+        <scope ilk="function" line="63" lineend="73" name="has" signature="has($meta, $name)">
+          <variable ilk="argument" name="$meta" />
+          <variable ilk="argument" name="$name" />
+        </scope>
+        <scope ilk="function" line="75" lineend="77" name="before" signature="before()" />
+        <scope ilk="function" line="79" lineend="81" name="after" signature="after()" />
+        <scope ilk="function" line="83" lineend="85" name="around" signature="around()" />
+        <scope ilk="function" line="91" lineend="96" name="super" signature="super()" />
+        <scope ilk="function" line="98" lineend="102" name="override" signature="override($meta, $name, $method)">
+          <variable ilk="argument" name="$meta" />
+          <variable ilk="argument" name="$name" />
+          <variable ilk="argument" name="$method" />
+        </scope>
+        <scope ilk="function" line="104" lineend="116" name="inner" signature="inner()">
+          </scope>
+        <scope ilk="function" line="118" lineend="122" name="augment" signature="augment($meta, $name, $method)">
+          <variable ilk="argument" name="$meta" />
+          <variable ilk="argument" name="$name" />
+          <variable ilk="argument" name="$method" />
+        </scope>
+        <scope ilk="function" line="135" lineend="225" name="init_meta" signature="init_meta(%args)">
+          <variable ilk="argument" name="%args" />
+        </scope>
+        <scope ilk="function" line="228" lineend="230" name="_get_caller" signature="_get_caller()" />
+      </scope>
+    </scope>
+    

@@ -1,0 +1,104 @@
+<scope ilk="blob" lang="Perl" name="ActiveState::Config::INI">
+      <scope ilk="class" line="1" lineend="299" name="ActiveState::Config::INI">
+        <import line="6" module="Carp" symbol="croak" />
+        <variable line="3" name="$VERSION" />
+        <scope attributes="__ctor__" ilk="function" line="8" lineend="18" name="new" signature="new($class)">
+          <variable ilk="argument" name="$class" />
+        </scope>
+        <scope ilk="function" line="20" lineend="24" name="_init" signature="_init($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="26" lineend="32" name="read" signature="read($self, $filename)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$filename" />
+        </scope>
+        <scope ilk="function" line="34" lineend="68" name="_read" signature="_read($self, $fh)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$fh" />
+        </scope>
+        <scope ilk="function" line="70" lineend="78" name="write" signature="write($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="80" lineend="90" name="content" signature="content($self, $new)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$new" />
+        </scope>
+        <scope ilk="function" line="92" lineend="97" name="newline" signature="newline($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="99" lineend="103" name="sections" signature="sections($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="105" lineend="112" name="insert_line" signature="insert_line($self, $idx, $line)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$idx" />
+          <variable ilk="argument" name="$line" />
+        </scope>
+        <scope ilk="function" line="114" lineend="122" name="_adjust_line_numbers" signature="_adjust_line_numbers($self, $start, $offset)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$start" />
+          <variable ilk="argument" name="$offset" />
+        </scope>
+        <scope ilk="function" line="124" lineend="131" name="append_lines" signature="append_lines($self, @lines)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="@lines" />
+        </scope>
+        <scope ilk="function" line="133" lineend="138" name="delete_lines" signature="delete_lines($self, $offset, $length)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$offset" />
+          <variable ilk="argument" name="$length" />
+        </scope>
+        <scope ilk="function" line="140" lineend="153" name="_add_section" signature="_add_section($self, $sect)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$sect" />
+        </scope>
+        <scope ilk="function" line="155" lineend="169" name="_add_property" signature="_add_property($self, $sect, $prop)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$sect" />
+          <variable ilk="argument" name="$prop" />
+        </scope>
+        <scope ilk="function" line="171" lineend="186" name="section_enabled" signature="section_enabled($self, $sect)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$sect" />
+        </scope>
+        <scope ilk="function" line="188" lineend="191" name="have_section" signature="have_section($self, $sect)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$sect" />
+        </scope>
+        <scope ilk="function" line="193" lineend="204" name="add_section" signature="add_section($self, $sect, $comment)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$sect" />
+          <variable ilk="argument" name="$comment" />
+        </scope>
+        <scope ilk="function" line="206" lineend="236" name="delete_section" signature="delete_section($self, $sect)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$sect" />
+        </scope>
+        <scope ilk="function" line="238" lineend="243" name="properties" signature="properties($self, $sect)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$sect" />
+        </scope>
+        <scope ilk="function" line="245" lineend="265" name="_property" signature="_property($self, $sect, $prop, $val)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$sect" />
+          <variable ilk="argument" name="$prop" />
+          <variable ilk="argument" name="$val" />
+        </scope>
+        <scope ilk="function" line="267" lineend="274" name="property" signature="property($self, $sect, $prop)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$sect" />
+          <variable ilk="argument" name="$prop" />
+        </scope>
+        <scope ilk="function" line="276" lineend="279" name="have_property" signature="have_property($self, $sect, $prop)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$sect" />
+          <variable ilk="argument" name="$prop" />
+        </scope>
+        <scope ilk="function" line="281" lineend="297" name="property_enabled" signature="property_enabled($self, $sect, $prop)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$sect" />
+          <variable ilk="argument" name="$prop" />
+        </scope>
+      </scope>
+    </scope>
+    

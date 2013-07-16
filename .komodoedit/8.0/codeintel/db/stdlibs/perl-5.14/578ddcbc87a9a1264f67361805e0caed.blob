@@ -1,0 +1,60 @@
+<scope ilk="blob" lang="Perl" name="CPAN::Index">
+      <scope ilk="class" line="1" lineend="625" name="CPAN::Index">
+        <variable line="3" name="$DATE_OF_02" />
+        <variable line="3" name="$DATE_OF_03" />
+        <variable line="3" name="$HAVE_REANIMATED" />
+        <variable line="3" name="$LAST_TIME" />
+        <variable line="3" name="$VERSION" />
+        <variable line="5" name="@CPAN::Index::ISA" />
+        <variable line="14" name="$CPAN::Index::LAST_TIME" />
+        <variable citdl="CPAN" line="71" name="$CPAN::META" />
+        <scope ilk="function" line="9" lineend="9" name="PROTOCOL" signature="PROTOCOL()" />
+        <scope ilk="function" line="12" lineend="16" name="force_reload" signature="force_reload($class)">
+          <variable ilk="argument" name="$class" />
+        </scope>
+        <scope ilk="function" line="41" lineend="110" name="reload" signature="reload($self, $force)">
+          <import line="52" module="Carp" />
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$force" />
+          <import line="52" module="Carp" />
+        </scope>
+        <scope ilk="function" line="113" lineend="201" name="reanimate_build_dir" signature="reanimate_build_dir($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="205" lineend="226" name="reload_x" signature="reload_x($cl, $wanted, $localname, $force)">
+          <variable ilk="argument" name="$cl" />
+          <variable ilk="argument" name="$wanted" />
+          <variable ilk="argument" name="$localname" />
+          <variable ilk="argument" name="$force" />
+        </scope>
+        <scope ilk="function" line="229" lineend="260" name="rd_authindex" signature="rd_authindex($cl, $index_target)">
+          <variable ilk="argument" name="$cl" />
+          <variable ilk="argument" name="$index_target" />
+        </scope>
+        <scope ilk="function" line="262" lineend="267" name="userid" signature="userid($self, $dist)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$dist" />
+        </scope>
+        <scope ilk="function" line="270" lineend="490" name="rd_modpacks" signature="rd_modpacks($self, $index_target)">
+          <import line="332" module="HTTP::Date" />
+          <import line="336" module="Time::Local" />
+          <import line="381" module="Dumpvalue" />
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$index_target" />
+          <import line="332" module="HTTP::Date" />
+          <import line="336" module="Time::Local" />
+          <import line="381" module="Dumpvalue" />
+        </scope>
+        <scope ilk="function" line="493" lineend="542" name="rd_modlist" signature="rd_modlist($cl, $index_target)">
+          <variable ilk="argument" name="$cl" />
+          <variable ilk="argument" name="$index_target" />
+        </scope>
+        <scope ilk="function" line="545" lineend="562" name="write_metadata_cache" signature="write_metadata_cache($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="565" lineend="623" name="read_metadata_cache" signature="read_metadata_cache($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+      </scope>
+    </scope>
+    

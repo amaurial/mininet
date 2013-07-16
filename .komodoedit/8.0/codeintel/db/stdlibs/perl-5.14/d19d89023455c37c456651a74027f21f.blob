@@ -1,0 +1,122 @@
+<scope ilk="blob" lang="Perl" name="Test::More">
+      <scope classrefs="Test::Builder::Module" ilk="class" line="1" lineend="1819" name="Test::More">
+        <import line="23" module="Test::Builder::Module" symbol="*" />
+        <variable line="20" name="$VERSION" />
+        <variable line="25" name="@EXPORT" />
+        <variable line="386" name="*isn&apos;t" />
+        <variable line="981" name="%Refs_Seen" />
+        <variable line="981" name="@Data_Stack" />
+        <scope ilk="function" line="15" lineend="18" name="_carp" signature="_carp()">
+          </scope>
+        <scope ilk="function" line="166" lineend="170" name="plan" signature="plan()">
+          </scope>
+        <scope ilk="function" line="174" lineend="196" name="import_extra" signature="import_extra($class, $list)">
+          <variable ilk="argument" name="$class" />
+          <variable ilk="argument" name="$list" />
+        </scope>
+        <scope ilk="function" line="219" lineend="222" name="done_testing" signature="done_testing()">
+          </scope>
+        <scope ilk="function" line="291" lineend="296" name="ok" signature="ok($test, $name)">
+          <variable ilk="argument" name="$test" />
+          <variable ilk="argument" name="$name" />
+        </scope>
+        <scope ilk="function" line="374" lineend="378" name="is" signature="is()">
+          </scope>
+        <scope ilk="function" line="380" lineend="384" name="isnt" signature="isnt()">
+          </scope>
+        <scope ilk="function" line="418" lineend="422" name="like" signature="like()">
+          </scope>
+        <scope ilk="function" line="433" lineend="437" name="unlike" signature="unlike()">
+          </scope>
+        <scope ilk="function" line="478" lineend="482" name="cmp_ok" signature="cmp_ok()">
+          </scope>
+        <scope ilk="function" line="513" lineend="543" name="can_ok" signature="can_ok($proto, @methods)">
+          <variable ilk="argument" name="$proto" />
+          <variable ilk="argument" name="@methods" />
+        </scope>
+        <scope ilk="function" line="579" lineend="635" name="isa_ok" signature="isa_ok($object, $class, $obj_name)">
+          <variable ilk="argument" name="$object" />
+          <variable ilk="argument" name="$class" />
+          <variable ilk="argument" name="$obj_name" />
+        </scope>
+        <scope ilk="function" line="658" lineend="679" name="new_ok" signature="new_ok($class, $args, $object_name)">
+          <variable ilk="argument" name="$class" />
+          <variable ilk="argument" name="$args" />
+          <variable ilk="argument" name="$object_name" />
+        </scope>
+        <scope ilk="function" line="743" lineend="748" name="subtest" signature="subtest($name, $subtests)">
+          <variable ilk="argument" name="$name" />
+          <variable ilk="argument" name="$subtests" />
+        </scope>
+        <scope ilk="function" line="767" lineend="771" name="pass" signature="pass()">
+          </scope>
+        <scope ilk="function" line="773" lineend="777" name="fail" signature="fail()">
+          </scope>
+        <scope ilk="function" line="835" lineend="875" name="use_ok" signature="use_ok($module, @imports)">
+          <variable ilk="argument" name="$module" />
+          <variable ilk="argument" name="@imports" />
+        </scope>
+        <scope ilk="function" line="877" lineend="893" name="_eval" signature="_eval($code, @args)">
+          <variable ilk="argument" name="$code" />
+          <variable ilk="argument" name="@args" />
+        </scope>
+        <scope ilk="function" line="904" lineend="933" name="require_ok" signature="require_ok()">
+          </scope>
+        <scope ilk="function" line="935" lineend="944" name="_is_module_name" signature="_is_module_name($module)">
+          <variable ilk="argument" name="$module" />
+        </scope>
+        <scope ilk="function" line="984" lineend="986" name="_dne" signature="_dne()" />
+        <scope ilk="function" line="989" lineend="1029" name="is_deeply" signature="is_deeply($got, $expected, $name)">
+          <variable ilk="argument" name="$got" />
+          <variable ilk="argument" name="$expected" />
+          <variable ilk="argument" name="$name" />
+        </scope>
+        <scope ilk="function" line="1031" lineend="1072" name="_format_stack" signature="_format_stack(@Stack)">
+          <variable ilk="argument" name="@Stack" />
+        </scope>
+        <scope ilk="function" line="1074" lineend="1084" name="_type" signature="_type($thing)">
+          <variable ilk="argument" name="$thing" />
+        </scope>
+        <scope ilk="function" line="1141" lineend="1143" name="diag" signature="diag()" />
+        <scope ilk="function" line="1145" lineend="1147" name="note" signature="note()" />
+        <scope ilk="function" line="1167" lineend="1169" name="explain" signature="explain()" />
+        <scope ilk="function" line="1234" lineend="1257" name="skip" signature="skip($why, $how_many)">
+          <variable ilk="argument" name="$why" />
+          <variable ilk="argument" name="$how_many" />
+        </scope>
+        <scope ilk="function" line="1317" lineend="1334" name="todo_skip" signature="todo_skip($why, $how_many)">
+          <variable ilk="argument" name="$why" />
+          <variable ilk="argument" name="$how_many" />
+        </scope>
+        <scope ilk="function" line="1372" lineend="1377" name="BAIL_OUT" signature="BAIL_OUT($reason)">
+          <variable ilk="argument" name="$reason" />
+        </scope>
+        <scope ilk="function" line="1412" lineend="1415" name="eq_array" signature="eq_array()" />
+        <scope ilk="function" line="1417" lineend="1443" name="_eq_array" signature="_eq_array($a1, $a2)">
+          <variable ilk="argument" name="$a1" />
+          <variable ilk="argument" name="$a2" />
+        </scope>
+        <scope ilk="function" line="1445" lineend="1458" name="_equal_nonrefs" signature="_equal_nonrefs($e1, $e2)">
+          <variable ilk="argument" name="$e1" />
+          <variable ilk="argument" name="$e2" />
+        </scope>
+        <scope ilk="function" line="1460" lineend="1537" name="_deep_check" signature="_deep_check($e1, $e2)">
+          <variable ilk="argument" name="$e1" />
+          <variable ilk="argument" name="$e2" />
+        </scope>
+        <scope ilk="function" line="1539" lineend="1547" name="_whoa" signature="_whoa($check, $desc)">
+          <variable ilk="argument" name="$check" />
+          <variable ilk="argument" name="$desc" />
+        </scope>
+        <scope ilk="function" line="1558" lineend="1561" name="eq_hash" signature="eq_hash()" />
+        <scope ilk="function" line="1563" lineend="1589" name="_eq_hash" signature="_eq_hash($a1, $a2)">
+          <variable ilk="argument" name="$a1" />
+          <variable ilk="argument" name="$a2" />
+        </scope>
+        <scope ilk="function" line="1617" lineend="1638" name="eq_set" signature="eq_set($a1, $a2)">
+          <variable ilk="argument" name="$a1" />
+          <variable ilk="argument" name="$a2" />
+        </scope>
+      </scope>
+    </scope>
+    

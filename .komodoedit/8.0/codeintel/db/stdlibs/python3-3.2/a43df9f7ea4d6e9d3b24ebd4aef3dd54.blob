@@ -1,0 +1,79 @@
+<scope doc="SMTP/ESMTP client class.&#xA;This should follow RFC 821 (SMTP), RFC 1869 (ESMTP), RFC 2554 (SMTP Authentication) and RFC 2487 (Secure SMTP over TLS).  Notes:  Please remember, when doing ESMTP, that the names of the SMTP service extensions are NOT the same thing as the option keywords for the RCPT and MAIL commands!  Example:" ilk="blob" lang="Python" name="smtplib">
+      <variable citdl="str" name="CRLF" />
+      <scope classrefs="SMTP" doc="LMTP - Local Mail Transfer Protocol&#xA;The LMTP protocol, which is very similar to ESMTP, is heavily based on the standard SMTP client. It&apos;s common to use Unix sockets for LMTP, so our connect() method must support that as well as a regular host:port server. To specify a Unix socket, you must use an absolute path as the host, starting with a &apos;/&apos;.  Authentication is supported, using the regular SMTP mechanism. When using a Unix socket, LMTP generally don&apos;t support or require any authentication, but your mileage might vary." ilk="class" name="LMTP">
+        <scope doc="Initialize a new instance." ilk="function" name="__init__" signature="__init__(self, host=&apos;&apos;, port=2003, local_hostname=None)" />
+        <scope doc="Connect to the LMTP daemon, on either a Unix or a TCP&#xA;socket." ilk="function" name="connect" signature="connect(self, host=&apos;localhost&apos;, port=0)" />
+      </scope>
+      <variable citdl="int" name="LMTP_PORT" />
+      <variable citdl="SRE_Pattern" name="OLDSTYLE_AUTH" />
+      <scope classrefs="object" doc="This class manages a connection to an SMTP or ESMTP server.&#xA;SMTP Objects: SMTP objects have the following attributes: helo_resp This is the message given by the server in response to the most recent HELO command.  ehlo_resp This is the message given by the server in response to the most recent EHLO command. This is usually multiline. " ilk="class" name="SMTP">
+        <scope doc="SMTP &apos;ehlo&apos; command." ilk="function" name="ehlo" signature="ehlo(self, name=&apos;&apos;)" />
+        <scope doc="SMTP &apos;help&apos; command." ilk="function" name="help" signature="help(self, args=&apos;&apos;)" />
+        <scope doc="Puts the connection to the SMTP server into TLS mode." ilk="function" name="starttls" signature="starttls(self, keyfile=None, certfile=None)" />
+        <scope doc="Set the debug output level." ilk="function" name="set_debuglevel" signature="set_debuglevel(self, debuglevel)" />
+        <scope doc="Converts message to a bytestring and passes it to sendmail." ilk="function" name="send_message" signature="send_message(self, msg, from_addr=None, to_addrs=None, mail_options=[], rcpt_options={})" />
+        <scope doc="Connect to a host on a given port." ilk="function" name="connect" signature="connect(self, host=&apos;localhost&apos;, port=0)" />
+        <scope doc="Close the connection to the SMTP server." ilk="function" name="close" signature="close(self)" />
+        <scope doc="SMTP &apos;helo&apos; command." ilk="function" name="helo" signature="helo(self, name=&apos;&apos;)" />
+        <scope doc="Initialize a new instance." ilk="function" name="__init__" signature="__init__(self, host=&apos;&apos;, port=0, local_hostname=None, timeout=&lt;object object at 0x02AC9038&gt;)" />
+        <scope doc="Terminate the SMTP session." ilk="function" name="quit" signature="quit(self)" />
+        <scope doc="SMTP &apos;verify&apos; command -- checks for address validity." ilk="function" name="verify" signature="verify(self, address)" />
+        <scope doc="Send `s&apos; to the server." ilk="function" name="send" signature="send(self, s)" />
+        <scope doc="SMTP &apos;rset&apos; command -- resets session." ilk="function" name="rset" signature="rset(self)" />
+        <scope doc="Get a reply from the server." ilk="function" name="getreply" signature="getreply(self)" />
+        <scope doc="SMTP &apos;noop&apos; command -- doesn&apos;t do anything :&gt;" ilk="function" name="noop" signature="noop(self)" />
+        <scope doc="SMTP &apos;mail&apos; command -- begins mail xfer session." ilk="function" name="mail" signature="mail(self, sender, options=[])" />
+        <scope doc="This command performs an entire mail transaction." ilk="function" name="sendmail" signature="sendmail(self, from_addr, to_addrs, msg, mail_options=[], rcpt_options=[])" />
+        <scope ilk="function" name="_get_socket" signature="_get_socket(self, host, port, timeout)" />
+        <scope doc="Send a command to the server." ilk="function" name="putcmd" signature="putcmd(self, cmd, args=&apos;&apos;)" />
+        <scope doc="Send a command, and return its response code." ilk="function" name="docmd" signature="docmd(self, cmd, args=&apos;&apos;)" />
+        <scope doc="SMTP &apos;DATA&apos; command -- sends message data to server." ilk="function" name="data" signature="data(self, msg)" />
+        <scope doc="Call self.ehlo() and/or self.helo() if needed." ilk="function" name="ehlo_or_helo_if_needed" signature="ehlo_or_helo_if_needed(self)" />
+        <scope doc="SMTP &apos;rcpt&apos; command -- indicates 1 recipient for this mail." ilk="function" name="rcpt" signature="rcpt(self, recip, options=[])" />
+        <scope doc="Does the server support a given SMTP service extension?" ilk="function" name="has_extn" signature="has_extn(self, opt)" />
+        <scope doc="SMTP &apos;expn&apos; command -- expands a mailing list." ilk="function" name="expn" signature="expn(self, address)" />
+        <scope doc="Log in on an SMTP server that requires authentication." ilk="function" name="login" signature="login(self, user, password)" />
+        <scope doc="SMTP &apos;verify&apos; command -- checks for address validity." ilk="function" name="vrfy" signature="vrfy(self, address)" />
+      </scope>
+      <scope classrefs="SMTPResponseException" doc="Authentication error.&#xA;Most probably the server didn&apos;t accept the username/password combination provided." ilk="class" name="SMTPAuthenticationError" />
+      <scope classrefs="SMTPResponseException" doc="Error during connection establishment.&#xA;" ilk="class" name="SMTPConnectError" />
+      <scope classrefs="SMTPResponseException" doc="The SMTP server didn&apos;t accept the data.&#xA;" ilk="class" name="SMTPDataError" />
+      <scope classrefs="Exception" doc="Base class for all exceptions raised by this module.&#xA;" ilk="class" name="SMTPException" />
+      <scope classrefs="SMTPResponseException" doc="The server refused our HELO reply.&#xA;" ilk="class" name="SMTPHeloError" />
+      <scope classrefs="SMTPException" doc="All recipient addresses refused.&#xA;The errors for each recipient are accessible through the attribute &apos;recipients&apos;, which is a dictionary of exactly the same sort as SMTP.sendmail() returns." ilk="class" name="SMTPRecipientsRefused">
+        <scope ilk="function" name="__init__" signature="__init__(self, recipients)" />
+      </scope>
+      <scope classrefs="SMTPException" doc="Base class for all exceptions that include an SMTP error code.&#xA;These exceptions are generated in some instances when the SMTP server returns an error code.  The error code is stored in the `smtp_code&apos; attribute of the error, and the `smtp_error&apos; attribute is set to the error message." ilk="class" name="SMTPResponseException">
+        <scope ilk="function" name="__init__" signature="__init__(self, code, msg)" />
+      </scope>
+      <scope classrefs="SMTPResponseException" doc="Sender address refused.&#xA;In addition to the attributes set by on all SMTPResponseException exceptions, this sets `sender&apos; to the string that the SMTP refused." ilk="class" name="SMTPSenderRefused">
+        <scope ilk="function" name="__init__" signature="__init__(self, code, msg, sender)" />
+      </scope>
+      <scope classrefs="SMTPException" doc="Not connected to any SMTP server.&#xA;This exception is raised when the server unexpectedly disconnects, or when an attempt is made to use the SMTP instance before connecting it to a server." ilk="class" name="SMTPServerDisconnected" />
+      <variable citdl="int" name="SMTP_PORT" />
+      <scope classrefs="SMTP" doc="This is a subclass derived from SMTP that connects over an SSL encrypted&#xA;socket (to use this class you need a socket module that was compiled with SSL support). If host is not specified, &apos;&apos; (the local host) is used. If port is omitted, the standard SMTP-over-SSL port (465) is used. keyfile and certfile are also optional - they can contain a PEM formatted private key and certificate chain file for the SSL connection." ilk="class" name="SMTP_SSL">
+        <scope ilk="function" name="_get_socket" signature="_get_socket(self, host, port, timeout)" />
+        <scope ilk="function" name="__init__" signature="__init__(self, host=&apos;&apos;, port=0, local_hostname=None, keyfile=None, certfile=None, timeout=&lt;object object at 0x02AC9038&gt;)" />
+      </scope>
+      <variable citdl="int" name="SMTP_SSL_PORT" />
+      <scope classrefs="object" doc="A fake file like object that really wraps a SSLObject.&#xA;It only supports what is needed in smtplib." ilk="class" name="SSLFakeFile">
+        <scope ilk="function" name="close" signature="close(self)" />
+        <scope ilk="function" name="readline" signature="readline(self)" />
+        <scope ilk="function" name="__init__" signature="__init__(self, sslobj)" />
+      </scope>
+      <variable citdl="list" name="__all__" />
+      <variable citdl="bytes" name="bCRLF" />
+      <import module="base64" />
+      <import module="copy" />
+      <import module="email" />
+      <scope doc="Encode a string with base64." ilk="function" name="encode_base64" signature="encode_base64(s, maxlinelen=76, eol=&apos;\n&apos;)" />
+      <import module="hmac" />
+      <import module="io" />
+      <scope doc="Quote a subset of the email addresses defined by RFC 821." ilk="function" name="quoteaddr" signature="quoteaddr(addr)" />
+      <scope doc="Quote data for email." ilk="function" name="quotedata" signature="quotedata(data)" />
+      <import module="re" />
+      <import module="socket" />
+      <import module="ssl" />
+      <variable citdl="TextIOWrapper" name="stderr" />
+    </scope>
+    

@@ -1,0 +1,39 @@
+<scope ilk="blob" lang="Perl" name="PPIx::Regexp::Structure">
+      <scope ilk="class" line="43" lineend="332" name="PPIx::Regexp::Structure">
+        <import line="50" module="Carp" symbol="confess" />
+        <import line="51" module="PPIx::Regexp::Util" symbol="__instance" />
+        <import line="52" module="Scalar::Util" symbol="refaddr" />
+        <variable line="54" name="$VERSION" />
+        <scope attributes="__ctor__" ilk="function" line="56" lineend="106" name="_new" signature="_new($class, @args)">
+          <variable ilk="argument" name="$class" />
+          <variable ilk="argument" name="@args" />
+        </scope>
+        <scope ilk="function" line="108" lineend="127" name="elements" signature="elements($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="145" lineend="149" name="finish" signature="finish($self, $inx)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$inx" />
+        </scope>
+        <scope ilk="function" line="151" lineend="165" name="first_element" signature="first_element($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="167" lineend="181" name="last_element" signature="last_element($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="203" lineend="207" name="start" signature="start($self, $inx)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$inx" />
+        </scope>
+        <scope ilk="function" line="230" lineend="234" name="type" signature="type($self, $inx)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$inx" />
+        </scope>
+        <scope attributes="__ctor__" ilk="function" line="237" lineend="330" name="_check_for_interpolated_match" signature="_check_for_interpolated_match($class, $brkt, $args)">
+          <variable ilk="argument" name="$class" />
+          <variable ilk="argument" name="$brkt" />
+          <variable ilk="argument" name="$args" />
+        </scope>
+      </scope>
+    </scope>
+    

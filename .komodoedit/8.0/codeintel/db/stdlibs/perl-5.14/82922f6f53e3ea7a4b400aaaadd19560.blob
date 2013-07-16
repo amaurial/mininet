@@ -1,0 +1,41 @@
+<scope ilk="blob" lang="Perl" name="Class::MOP">
+      <scope ilk="class" line="2" lineend="1220" name="Class::MOP">
+        <import line="15" module="MRO::Compat" symbol="*" />
+        <import line="17" module="Carp" symbol="confess" />
+        <import line="18" module="Scalar::Util" symbol="weaken" />
+        <import line="19" module="Data::OptList" symbol="*" />
+        <import line="20" module="Try::Tiny" symbol="*" />
+        <import line="22" module="Class::MOP::Mixin::AttributeCore" symbol="*" />
+        <import line="23" module="Class::MOP::Mixin::HasAttributes" symbol="*" />
+        <import line="24" module="Class::MOP::Mixin::HasMethods" symbol="*" />
+        <import line="25" module="Class::MOP::Class" symbol="*" />
+        <import line="26" module="Class::MOP::Attribute" symbol="*" />
+        <import line="27" module="Class::MOP::Method" symbol="*" />
+        <import line="683" module="Class::MOP::Deprecated" />
+        <variable line="4" name="$Class::MOP::AUTHORITY" />
+        <variable line="7" name="$Class::MOP::VERSION" />
+        <variable line="30" name="*IS_RUNNING_ON_5_10" />
+        <variable line="35" name="*check_package_cache_flag" />
+        <scope ilk="function" line="51" lineend="51" name="get_all_metaclasses" signature="get_all_metaclasses()" />
+        <scope ilk="function" line="52" lineend="52" name="get_all_metaclass_instances" signature="get_all_metaclass_instances()" />
+        <scope ilk="function" line="53" lineend="53" name="get_all_metaclass_names" signature="get_all_metaclass_names()" />
+        <scope ilk="function" line="54" lineend="54" name="get_metaclass_by_name" signature="get_metaclass_by_name()" />
+        <scope ilk="function" line="55" lineend="55" name="store_metaclass_by_name" signature="store_metaclass_by_name()" />
+        <scope ilk="function" line="56" lineend="56" name="weaken_metaclass" signature="weaken_metaclass()" />
+        <scope ilk="function" line="57" lineend="57" name="metaclass_is_weak" signature="metaclass_is_weak()" />
+        <scope ilk="function" line="58" lineend="58" name="does_metaclass_exist" signature="does_metaclass_exist()" />
+        <scope ilk="function" line="59" lineend="59" name="remove_metaclass_by_name" signature="remove_metaclass_by_name()" />
+        <scope ilk="function" line="62" lineend="66" name="class_of" signature="class_of()">
+          </scope>
+        <scope ilk="function" line="75" lineend="82" name="_class_to_pmfile" signature="_class_to_pmfile($class)">
+          <variable ilk="argument" name="$class" />
+        </scope>
+        <scope ilk="function" line="84" lineend="137" name="load_first_existing_class" signature="load_first_existing_class()">
+          </scope>
+        <scope ilk="function" line="139" lineend="146" name="load_class" signature="load_class()" />
+        <scope ilk="function" line="148" lineend="158" name="_is_valid_class_name" signature="_is_valid_class_name($class)">
+          <variable ilk="argument" name="$class" />
+        </scope>
+      </scope>
+    </scope>
+    

@@ -1,0 +1,30 @@
+<scope ilk="blob" lang="Perl" name="Perl::Critic::Policy::InputOutput::RequireBriefOpen">
+      <scope ilk="class" line="8" lineend="240" name="Perl::Critic::Policy::InputOutput::RequireBriefOpen">
+        <import line="14" module="Readonly" symbol="*" />
+        <import line="16" module="List::MoreUtils" symbol="any" />
+        <import line="18" module="Perl::Critic::Utils" symbol="**" />
+        <variable line="23" name="$VERSION" />
+        <scope ilk="function" line="56" lineend="66" name="supported_parameters" signature="supported_parameters()" />
+        <scope ilk="function" line="68" lineend="68" name="default_severity" signature="default_severity()" />
+        <scope ilk="function" line="69" lineend="69" name="default_themes" signature="default_themes()" />
+        <scope ilk="function" line="70" lineend="70" name="applies_to" signature="applies_to()" />
+        <scope ilk="function" line="74" lineend="118" name="violates" signature="violates()">
+          </scope>
+        <scope ilk="function" line="120" lineend="141" name="_find_close_invocations_or_return" signature="_find_close_invocations_or_return($self, $elem, $is_lexical)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$elem" />
+          <variable ilk="argument" name="$is_lexical" />
+        </scope>
+        <scope ilk="function" line="145" lineend="181" name="_get_scope" signature="_get_scope($self, $elem, $is_lexical)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$elem" />
+          <variable ilk="argument" name="$is_lexical" />
+        </scope>
+        <scope ilk="function" line="183" lineend="221" name="_get_opened_fh" signature="_get_opened_fh()">
+          </scope>
+        <scope ilk="function" line="223" lineend="238" name="_unwrap_block" signature="_unwrap_block($element)">
+          <variable ilk="argument" name="$element" />
+        </scope>
+      </scope>
+    </scope>
+    

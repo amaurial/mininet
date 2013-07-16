@@ -1,0 +1,57 @@
+<scope doc="Helper to provide extensibility for pickle.&#xA;This is only useful to add pickle support for extension types defined in C, not for instances of user-defined classes." ilk="blob" lang="Python" name="copyreg">
+      <variable citdl="list" line="7" name="__all__" />
+      <scope ilk="function" line="87" lineend="88" name="__newobj__" returns="cls.__new__()" signature="__newobj__(cls, *args)">
+        <variable attributes="varargs" ilk="argument" name="args" />
+        <variable ilk="argument" name="cls" />
+      </scope>
+      <scope doc="Register an extension code." ilk="function" line="152" lineend="168" name="add_extension" signature="add_extension(module, name, code)">
+        <variable citdl="tuple" line="157" name="key" />
+        <variable citdl="int()" ilk="argument" name="code" />
+        <variable ilk="argument" name="name" />
+        <variable ilk="argument" name="module" />
+      </scope>
+      <scope ilk="function" line="182" lineend="183" name="clear_extension_cache" signature="clear_extension_cache()" />
+      <scope ilk="function" line="22" lineend="24" name="constructor" signature="constructor(object)">
+        <variable ilk="argument" name="object" />
+      </scope>
+      <variable citdl="dict" line="10" name="dispatch_table" />
+      <scope ilk="function" line="12" lineend="20" name="pickle" signature="pickle(ob_type, pickle_function, constructor_ob=None)">
+        <variable ilk="argument" name="ob_type" />
+        <variable ilk="argument" name="constructor_ob" />
+        <variable ilk="argument" name="pickle_function" />
+      </scope>
+      <scope ilk="function" line="34" lineend="35" name="pickle_complex" returns="tuple" signature="pickle_complex(c)">
+        <variable ilk="argument" name="c" />
+      </scope>
+      <scope doc="Unregister an extension code. For testing only." ilk="function" line="170" lineend="180" name="remove_extension" signature="remove_extension(module, name, code)">
+        <variable citdl="tuple" line="172" name="key" />
+        <variable ilk="argument" name="code" />
+        <variable ilk="argument" name="name" />
+        <variable ilk="argument" name="module" />
+      </scope>
+      <variable attributes="protected __hidden__" citdl="dict" line="147" name="_inverted_registry" />
+      <variable attributes="protected __hidden__" citdl="dict" line="148" name="_extension_cache" />
+      <scope attributes="protected __hidden__" ilk="function" line="41" lineend="48" name="_reconstructor" returns="object.__new__()" signature="_reconstructor(cls, base, state)">
+        <variable ilk="argument" name="cls" />
+        <variable ilk="argument" name="base" />
+        <variable ilk="argument" name="state" />
+        <variable citdl="base.__new__()" line="43" name="obj" />
+      </scope>
+      <variable attributes="protected __hidden__" citdl="int" line="50" name="_HEAPTYPE" />
+      <scope attributes="protected __hidden__" ilk="function" line="54" lineend="83" name="_reduce_ex" returns="tuple" signature="_reduce_ex(self, proto)">
+        <variable ilk="argument" name="self" />
+        <variable ilk="argument" name="proto" />
+        <variable citdl="object" line="60" name="base" />
+        <variable citdl="base()" line="62" name="state" />
+        <variable citdl="tuple" line="67" name="args" />
+        <variable citdl="self.__getstate__" line="69" name="getstate" />
+        <variable citdl="getstate()" line="75" name="dict" />
+      </scope>
+      <variable attributes="protected __hidden__" citdl="dict" line="146" name="_extension_registry" />
+      <scope attributes="protected __hidden__" doc="Return a list of slot names for a given class.&#xA;&#xA;This needs to find slots defined by the class and its bases, so we&#xA;can&apos;t simply return the __slots__ attribute.  We must walk down&#xA;the Method Resolution Order and concatenate the __slots__ of each&#xA;class found there.  (This assumes classes don&apos;t modify their&#xA;__slots__ attribute to misrepresent their slots after the class is&#xA;defined.)" ilk="function" line="90" lineend="135" name="_slotnames" returns="list" signature="_slotnames(cls)">
+        <variable ilk="argument" name="cls" />
+        <variable citdl="cls.__dict__.get()" line="102" name="names" />
+        <variable citdl="tuple" line="115" name="slots" />
+      </scope>
+    </scope>
+    

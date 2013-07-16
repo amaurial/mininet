@@ -1,0 +1,55 @@
+<scope ilk="blob" lang="Perl" name="Perl::Critic::Policy::Subroutines::RequireFinalReturn">
+      <scope ilk="class" line="8" lineend="269" name="Perl::Critic::Policy::Subroutines::RequireFinalReturn">
+        <import line="13" module="Readonly" symbol="*" />
+        <import line="15" module="Perl::Critic::Exception::Fatal::Internal" symbol="throw_internal" />
+        <import line="16" module="Perl::Critic::Utils" symbol="**" />
+        <variable line="19" name="$VERSION" />
+        <scope ilk="function" line="29" lineend="40" name="supported_parameters" signature="supported_parameters()" />
+        <scope ilk="function" line="42" lineend="42" name="default_severity" signature="default_severity()" />
+        <scope ilk="function" line="43" lineend="43" name="default_themes" signature="default_themes()" />
+        <scope ilk="function" line="44" lineend="44" name="applies_to" signature="applies_to()" />
+        <scope ilk="function" line="48" lineend="81" name="violates" signature="violates()">
+          </scope>
+        <scope ilk="function" line="85" lineend="88" name="_block_is_empty" signature="_block_is_empty($self, $block)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$block" />
+        </scope>
+        <scope ilk="function" line="92" lineend="100" name="_block_has_return" signature="_block_has_return($self, $block)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$block" />
+        </scope>
+        <scope ilk="function" line="104" lineend="110" name="_is_explicit_return" signature="_is_explicit_return($self, $final)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$final" />
+        </scope>
+        <scope ilk="function" line="114" lineend="143" name="_is_compound_return" signature="_is_compound_return($self, $final)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$final" />
+        </scope>
+        <scope ilk="function" line="147" lineend="199" name="_is_given_when_return" signature="_is_given_when_return($self, $final)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$final" />
+        </scope>
+        <scope ilk="function" line="203" lineend="208" name="_is_return_or_goto_stmnt" signature="_is_return_or_goto_stmnt($self, $stmnt)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$stmnt" />
+        </scope>
+        <scope ilk="function" line="212" lineend="217" name="_is_terminal_stmnt" signature="_is_terminal_stmnt($self, $stmnt)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$stmnt" />
+        </scope>
+        <scope ilk="function" line="221" lineend="229" name="_is_conditional_stmnt" signature="_is_conditional_stmnt($self, $stmnt)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$stmnt" />
+        </scope>
+        <scope ilk="function" line="233" lineend="253" name="_is_when_stmnt_with_return" signature="_is_when_stmnt_with_return($self, $stmnt)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$stmnt" />
+        </scope>
+        <scope ilk="function" line="257" lineend="267" name="_is_suffix_when_with_return" signature="_is_suffix_when_with_return($self, $stmnt)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$stmnt" />
+        </scope>
+      </scope>
+    </scope>
+    

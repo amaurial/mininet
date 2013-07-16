@@ -1,0 +1,91 @@
+<scope ilk="blob" lang="Perl" name="DBD::CSV">
+      <import line="25" module="DynaLoader" />
+      <import line="26" module="DBD::File" />
+      <import line="27" module="IO::File" />
+      <scope classrefs="DBD::File" ilk="class" line="29" lineend="46" name="DBD::CSV">
+        <variable line="33" name="$drh" />
+        <variable line="33" name="$err" />
+        <variable line="33" name="$errstr" />
+        <variable line="33" name="$sqlstate" />
+        <variable line="33" name="$VERSION" />
+        <variable line="33" name="@ISA" />
+        <scope ilk="function" line="44" lineend="46" name="CLONE" signature="CLONE()" />
+      </scope>
+      <scope ilk="class" line="50" lineend="89" name="DBD::CSV::dr">
+        <import line="54" module="Text::CSV_XS" />
+        <variable line="55" name="@CSV_TYPES" />
+        <variable line="55" name="@ISA" />
+        <variable line="75" name="@DBD::CSV::dr::ISA" />
+        <variable line="77" name="$DBD::CSV::dr::imp_data_size" />
+        <variable line="78" name="$DBD::CSV::dr::data_sources_attr" />
+        <variable line="80" name="$DBD::CSV::ATTRIBUTION" />
+        <scope ilk="function" line="82" lineend="89" name="connect" signature="connect($drh, $dbname, $user, $auth, $attr)">
+          <variable ilk="argument" name="$drh" />
+          <variable ilk="argument" name="$dbname" />
+          <variable ilk="argument" name="$user" />
+          <variable ilk="argument" name="$auth" />
+          <variable ilk="argument" name="$attr" />
+        </scope>
+      </scope>
+      <scope ilk="class" line="93" lineend="178" name="DBD::CSV::db">
+        <variable line="97" name="$DBD::CSV::db::imp_data_size" />
+        <variable line="99" name="@DBD::CSV::db::ISA" />
+        <variable line="111" name="*STORE" />
+        <variable line="117" name="*FETCH" />
+        <variable line="123" name="*csv_versions" />
+        <variable line="123" name="*DBI::db::csv_versions" />
+        <scope ilk="function" line="101" lineend="106" name="set_versions" signature="set_versions($this)">
+          <variable ilk="argument" name="$this" />
+        </scope>
+        <scope ilk="function" line="135" lineend="160" name="init_valid_attributes" signature="init_valid_attributes($dbh)">
+          <variable ilk="argument" name="$dbh" />
+        </scope>
+        <scope ilk="function" line="162" lineend="178" name="get_csv_versions" signature="get_csv_versions($dbh, $table)">
+          <variable ilk="argument" name="$dbh" />
+          <variable ilk="argument" name="$table" />
+        </scope>
+      </scope>
+      <scope ilk="class" line="182" lineend="217" name="DBD::CSV::st">
+        <variable line="186" name="$DBD::CSV::st::imp_data_size" />
+        <variable line="188" name="@DBD::CSV::st::ISA" />
+      </scope>
+      <scope ilk="class" line="219" lineend="319" name="DBD::CSV::Statement">
+        <import line="222" module="DBD::File" symbol="*" />
+        <import line="223" module="Carp" symbol="*" />
+        <variable line="225" name="@DBD::CSV::Statement::ISA" />
+      </scope>
+      <scope ilk="class" line="321" lineend="497" name="DBD::CSV::Table">
+        <import line="324" module="DBD::File" symbol="*" />
+        <import line="325" module="Carp" symbol="*" />
+        <variable line="327" name="@DBD::CSV::Table::ISA" />
+        <variable line="495" name="*push_names" />
+        <scope ilk="function" line="329" lineend="337" name="bootstrap_table_meta" signature="bootstrap_table_meta($self, $dbh, $meta, $table)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$dbh" />
+          <variable ilk="argument" name="$meta" />
+          <variable ilk="argument" name="$table" />
+        </scope>
+        <scope ilk="function" line="339" lineend="375" name="init_table_meta" signature="init_table_meta($self, $dbh, $meta, $table)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$dbh" />
+          <variable ilk="argument" name="$meta" />
+          <variable ilk="argument" name="$table" />
+        </scope>
+        <scope ilk="function" line="382" lineend="395" name="table_meta_attr_changed" signature="table_meta_attr_changed($class, $meta, $attr, $value)">
+          <variable ilk="argument" name="$class" />
+          <variable ilk="argument" name="$meta" />
+          <variable ilk="argument" name="$attr" />
+          <variable ilk="argument" name="$value" />
+        </scope>
+        <scope ilk="function" line="455" lineend="479" name="fetch_row" signature="fetch_row($self, $data)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$data" />
+        </scope>
+        <scope ilk="function" line="481" lineend="494" name="push_row" signature="push_row($self, $data, $fields)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$data" />
+          <variable ilk="argument" name="$fields" />
+        </scope>
+      </scope>
+    </scope>
+    

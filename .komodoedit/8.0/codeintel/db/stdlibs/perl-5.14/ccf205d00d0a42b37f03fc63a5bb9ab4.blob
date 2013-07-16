@@ -1,0 +1,78 @@
+<scope ilk="blob" lang="Perl" name="PPI::Node">
+      <scope classrefs="PPI::Element" ilk="class" line="1" lineend="821" name="PPI::Node">
+        <import line="52" module="Carp" />
+        <import line="53" module="Scalar::Util" symbol="refaddr" />
+        <import line="54" module="List::MoreUtils" />
+        <import line="55" module="Params::Util" symbol="_INSTANCE" />
+        <import line="55" module="Params::Util" symbol="_CLASS" />
+        <import line="55" module="Params::Util" symbol="_CODELIKE" />
+        <import line="56" module="PPI::Element" />
+        <variable line="58" name="$VERSION" />
+        <variable line="58" name="*_PARENT" />
+        <variable line="58" name="@ISA" />
+        <scope attributes="__ctor__" ilk="function" line="72" lineend="75" name="new" signature="new()">
+          </scope>
+        <scope ilk="function" line="94" lineend="94" name="scope" signature="scope()" />
+        <scope ilk="function" line="110" lineend="124" name="add_element" signature="add_element($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="128" lineend="133" name="__add_element" signature="__add_element()" />
+        <scope ilk="function" line="151" lineend="157" name="elements" signature="elements()" />
+        <scope ilk="function" line="173" lineend="175" name="first_element" signature="first_element()" />
+        <scope ilk="function" line="191" lineend="193" name="last_element" signature="last_element()" />
+        <scope ilk="function" line="212" lineend="214" name="children" signature="children()" />
+        <scope ilk="function" line="228" lineend="235" name="schildren" signature="schildren()">
+          </scope>
+        <scope ilk="function" line="249" lineend="251" name="child" signature="child()" />
+        <scope ilk="function" line="270" lineend="286" name="schild" signature="schild($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="303" lineend="314" name="contains" signature="contains($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="371" lineend="407" name="find" signature="find($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="428" lineend="464" name="find_first" signature="find_first($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="481" lineend="485" name="find_any" signature="find_any($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="500" lineend="508" name="remove_child" signature="remove_child($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="563" lineend="595" name="prune" signature="prune($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="601" lineend="656" name="_wanted" signature="_wanted($either, $content)">
+          <variable ilk="argument" name="$either" />
+          <variable ilk="argument" name="$content" />
+        </scope>
+        <scope ilk="function" line="665" lineend="667" name="tokens" signature="tokens()" />
+        <scope ilk="function" line="670" lineend="672" name="content" signature="content()" />
+        <scope ilk="function" line="675" lineend="680" name="clone" signature="clone($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="682" lineend="686" name="location" signature="location($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="695" lineend="710" name="DESTROY" signature="DESTROY()">
+          </scope>
+        <scope ilk="function" line="713" lineend="716" name="__position" signature="__position()">
+          </scope>
+        <scope ilk="function" line="719" lineend="724" name="__insert_before_child" signature="__insert_before_child($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="735" lineend="740" name="__insert_after_child" signature="__insert_after_child($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="751" lineend="756" name="__replace_child" signature="__replace_child($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="768" lineend="793" name="__link_children" signature="__link_children($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+      </scope>
+    </scope>
+    

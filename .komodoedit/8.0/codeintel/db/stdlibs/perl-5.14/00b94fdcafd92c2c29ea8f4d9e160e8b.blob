@@ -1,0 +1,38 @@
+<scope ilk="blob" lang="Perl" name="HTTP::Request::Common">
+      <scope ilk="class" line="1" lineend="297" name="HTTP::Request::Common">
+        <import line="8" module="Exporter" />
+        <import line="13" module="HTTP::Request" />
+        <import line="14" module="Carp" />
+        <variable attributes="__exportable__" line="4" name="$DYNAMIC_FILE_UPLOAD" />
+        <variable line="4" name="$VERSION" />
+        <variable line="4" name="@EXPORT" />
+        <variable line="4" name="@EXPORT_OK" />
+        <variable line="9" name="*import" />
+        <scope attributes="__exported__" ilk="function" line="20" lineend="20" name="GET" signature="GET()" />
+        <scope attributes="__exported__" ilk="function" line="21" lineend="21" name="HEAD" signature="HEAD()" />
+        <scope attributes="__exported__" ilk="function" line="22" lineend="22" name="PUT" signature="PUT()" />
+        <scope attributes="__exportable__" ilk="function" line="23" lineend="23" name="DELETE" signature="DELETE()" />
+        <scope attributes="__exported__" ilk="function" line="25" lineend="97" name="POST" signature="POST($url)">
+          <import line="50" module="HTTP::Headers::Util" />
+          <import line="80" module="URI" />
+          <variable citdl="URI" ilk="argument" name="$url" />
+          <import line="50" module="HTTP::Headers::Util" />
+          <import line="80" module="URI" />
+        </scope>
+        <scope ilk="function" line="100" lineend="119" name="_simple_req" signature="_simple_req()">
+          </scope>
+        <scope ilk="function" line="122" lineend="285" name="form_data" signature="form_data($data, $boundary, $req)">
+          <import line="164" module="LWP::MediaTypes" />
+          <variable ilk="argument" name="$data" />
+          <variable ilk="argument" name="$boundary" />
+          <variable ilk="argument" name="$req" />
+          <import line="164" module="LWP::MediaTypes" />
+        </scope>
+        <scope ilk="function" line="288" lineend="295" name="boundary" signature="boundary($size)">
+          <import line="291" module="MIME::Base64" />
+          <variable ilk="argument" name="$size" />
+          <import line="291" module="MIME::Base64" />
+        </scope>
+      </scope>
+    </scope>
+    

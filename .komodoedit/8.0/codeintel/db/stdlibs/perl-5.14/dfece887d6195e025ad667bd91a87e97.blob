@@ -1,0 +1,103 @@
+<scope ilk="blob" lang="Perl" name="GD::Graph::Data">
+      <scope ilk="class" line="12" lineend="725" name="GD::Graph::Data">
+        <import line="17" module="GD::Graph::Error" symbol="*" />
+        <variable line="19" name="@GD::Graph::Data::ISA" />
+        <scope attributes="__ctor__" ilk="function" line="94" lineend="102" name="new" signature="new($proto)">
+          <variable ilk="argument" name="$proto" />
+        </scope>
+        <scope ilk="function" line="104" lineend="108" name="DESTROY" signature="DESTROY($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="110" lineend="127" name="_set_value" signature="_set_value($self, $nd, $np, $val)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$nd" />
+          <variable ilk="argument" name="$np" />
+          <variable ilk="argument" name="$val" />
+        </scope>
+        <scope ilk="function" line="137" lineend="141" name="set_x" signature="set_x($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="149" lineend="157" name="get_x" signature="get_x($self, $np)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$np" />
+        </scope>
+        <scope ilk="function" line="167" lineend="173" name="set_y" signature="set_y($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="184" lineend="194" name="get_y" signature="get_y($self, $nd, $np)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$nd" />
+          <variable ilk="argument" name="$np" />
+        </scope>
+        <scope ilk="function" line="204" lineend="221" name="get_y_cumulative" signature="get_y_cumulative($self, $nd, $np, $incl_vec)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$nd" />
+          <variable ilk="argument" name="$np" />
+          <variable ilk="argument" name="$incl_vec" />
+        </scope>
+        <scope ilk="function" line="223" lineend="241" name="_get_min_max" signature="_get_min_max($self, $nd)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$nd" />
+        </scope>
+        <scope ilk="function" line="250" lineend="254" name="get_min_max_x" signature="get_min_max_x($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="263" lineend="272" name="get_min_max_y" signature="get_min_max_y($self, $nd)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$nd" />
+        </scope>
+        <scope ilk="function" line="281" lineend="298" name="get_min_max_y_all" signature="get_min_max_y_all($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="303" lineend="315" name="set_point" signature="set_point($self, $np)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$np" />
+        </scope>
+        <scope ilk="function" line="341" lineend="345" name="add_point" signature="add_point($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="353" lineend="357" name="num_sets" signature="num_sets($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="369" lineend="377" name="num_points" signature="num_points($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="385" lineend="391" name="x_values" signature="x_values($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="401" lineend="411" name="y_values" signature="y_values($self, $nd)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$nd" />
+        </scope>
+        <scope ilk="function" line="421" lineend="427" name="reset" signature="reset($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="437" lineend="459" name="make_strict" signature="make_strict($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="479" lineend="509" name="cumulate" signature="cumulate($self, %args)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="%args" />
+        </scope>
+        <scope ilk="function" line="523" lineend="535" name="wanted" signature="wanted($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="543" lineend="548" name="reverse" signature="reverse($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="558" lineend="579" name="copy_from" signature="copy_from($self, $data)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$data" />
+        </scope>
+        <scope ilk="function" line="587" lineend="594" name="copy" signature="copy($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="637" lineend="679" name="read" signature="read($self, %args)">
+          <import line="653" module="Text::ParseWords" />
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="%args" />
+          <import line="653" module="Text::ParseWords" />
+        </scope>
+      </scope>
+    </scope>
+    

@@ -1,0 +1,61 @@
+<scope ilk="blob" lang="Perl" name="MRO::Compat">
+      <scope ilk="class" line="1" lineend="409" name="MRO::Compat">
+        <import line="27" module="Class::C3" />
+        <import line="38" module="mro" />
+        <variable line="8" name="$VERSION" />
+        <variable line="15" name="$mro::VERSION" />
+        <variable line="18" name="*mro::import" />
+        <variable line="19" name="*mro::get_linear_isa" />
+        <variable line="20" name="*mro::set_mro" />
+        <variable line="21" name="*mro::get_mro" />
+        <variable line="22" name="*mro::get_isarev" />
+        <variable line="23" name="*mro::is_universal" />
+        <variable line="24" name="*mro::method_changed_in" />
+        <variable line="25" name="*mro::invalidate_all_method_caches" />
+        <variable line="29" name="*mro::get_pkg_gen" />
+        <variable line="40" name="*Class::C3::initialize" />
+        <variable line="41" name="*Class::C3::reinitialize" />
+        <variable line="42" name="*Class::C3::uninitialize" />
+        <scope ilk="function" line="115" lineend="131" name="__get_linear_isa_dfs" signature="__get_linear_isa_dfs($classname)">
+          <variable ilk="argument" name="$classname" />
+        </scope>
+        <scope ilk="function" line="133" lineend="145" name="__get_linear_isa" signature="__get_linear_isa($classname, $type)">
+          <variable ilk="argument" name="$classname" />
+          <variable ilk="argument" name="$type" />
+        </scope>
+        <scope ilk="function" line="156" lineend="161" name="__import" signature="__import()" />
+        <scope ilk="function" line="171" lineend="194" name="__set_mro" signature="__set_mro($classname, $type)">
+          <variable ilk="argument" name="$classname" />
+          <variable ilk="argument" name="$type" />
+        </scope>
+        <scope ilk="function" line="205" lineend="210" name="__get_mro" signature="__get_mro($classname)">
+          <variable ilk="argument" name="$classname" />
+        </scope>
+        <scope ilk="function" line="224" lineend="253" name="__get_all_pkgs_with_isas" signature="__get_all_pkgs_with_isas($search)">
+          <variable ilk="argument" name="$search" />
+        </scope>
+        <scope ilk="function" line="255" lineend="279" name="__get_isarev_recurse" signature="__get_isarev_recurse($class, $all_isas, $level)">
+          <variable ilk="argument" name="$class" />
+          <variable ilk="argument" name="$all_isas" />
+          <variable ilk="argument" name="$level" />
+        </scope>
+        <scope ilk="function" line="281" lineend="286" name="__get_isarev" signature="__get_isarev($classname)">
+          <variable ilk="argument" name="$classname" />
+        </scope>
+        <scope ilk="function" line="300" lineend="310" name="__is_universal" signature="__is_universal($classname)">
+          <variable ilk="argument" name="$classname" />
+        </scope>
+        <scope ilk="function" line="323" lineend="327" name="__invalidate_all_method_caches" signature="__invalidate_all_method_caches()">
+          </scope>
+        <scope ilk="function" line="344" lineend="349" name="__method_changed_in" signature="__method_changed_in($classname)">
+          <variable ilk="argument" name="$classname" />
+        </scope>
+        <scope ilk="function" line="362" lineend="366" name="__get_pkg_gen_pp" signature="__get_pkg_gen_pp($classname)">
+          <variable ilk="argument" name="$classname" />
+        </scope>
+        <scope ilk="function" line="369" lineend="374" name="__get_pkg_gen_c3xs" signature="__get_pkg_gen_c3xs($classname)">
+          <variable ilk="argument" name="$classname" />
+        </scope>
+      </scope>
+    </scope>
+    

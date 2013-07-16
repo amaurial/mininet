@@ -1,0 +1,67 @@
+<scope doc="Random variable generators.&#xA;integers -------- uniform within range  sequences --------- pick random element pick random sample generate random permutation " ilk="blob" lang="Python" name="random">
+      <variable citdl="int" name="BPF" />
+      <variable citdl="float" name="LOG4" />
+      <variable citdl="float" name="NV_MAGICCONST" />
+      <variable citdl="float" name="RECIP_BPF" />
+      <scope classrefs="Random" doc="Random number generator base class used by bound module functions.&#xA;Used to instantiate instances of Random to get generators that don&apos;t share state.  Class Random can also be subclassed if you want to use a different basic generator of your own devising: in that case, override the following methods:  random(), seed(), getstate(), and setstate(). Optionally, implement a getrandbits() method so that randrange() can cover arbitrarily large ranges." ilk="class" name="Random">
+        <scope doc="x, random=random.random -&gt; shuffle list x in place; return&#xA;None." ilk="function" name="shuffle" signature="shuffle(self, x, random=None, int=&lt;class &apos;int&apos;&gt;)" />
+        <scope doc="Choose a random item from range(start, stop[, step])." ilk="function" name="randrange" signature="randrange(self, start, stop=None, step=1, int=&lt;class &apos;int&apos;&gt;)" />
+        <scope ilk="function" name="__setstate__" signature="__setstate__(self, state)" />
+        <scope doc="Beta distribution." ilk="function" name="betavariate" signature="betavariate(self, alpha, beta)" />
+        <scope ilk="function" name="__reduce__" signature="__reduce__(self)" />
+        <scope doc="Pareto distribution. alpha is the shape parameter." ilk="function" name="paretovariate" signature="paretovariate(self, alpha)" />
+        <scope doc="Normal distribution." ilk="function" name="normalvariate" signature="normalvariate(self, mu, sigma)" />
+        <scope doc="Triangular distribution." ilk="function" name="triangular" signature="triangular(self, low=0.0, high=1.0, mode=None)" />
+        <scope doc="Chooses k unique random elements from a population sequence&#xA;or set." ilk="function" name="sample" signature="sample(self, population, k)" />
+        <scope doc="Initialize internal state from hashable object." ilk="function" name="seed" signature="seed(self, a=None, version=2)" />
+        <scope doc="Weibull distribution." ilk="function" name="weibullvariate" signature="weibullvariate(self, alpha, beta)" />
+        <scope doc="Gaussian distribution." ilk="function" name="gauss" signature="gauss(self, mu, sigma)" />
+        <scope doc="Choose a random element from a non-empty sequence." ilk="function" name="choice" signature="choice(self, seq)" />
+        <scope doc="Initialize an instance." ilk="function" name="__init__" signature="__init__(self, x=None)" />
+        <scope doc="Return a random int in the range [0,n)." ilk="function" name="_randbelow" signature="_randbelow(self, n, int=&lt;class &apos;int&apos;&gt;, maxsize=9007199254740992, type=&lt;class &apos;type&apos;&gt;, Method=&lt;class &apos;method&apos;&gt;, BuiltinMethod=&lt;class &apos;builtin_function_or_method&apos;&gt;)" />
+        <scope doc="Return random integer in range [a, b], including both end&#xA;points." ilk="function" name="randint" signature="randint(self, a, b)" />
+        <scope doc="Circular data distribution." ilk="function" name="vonmisesvariate" signature="vonmisesvariate(self, mu, kappa)" />
+        <scope doc="Gamma distribution." ilk="function" name="gammavariate" signature="gammavariate(self, alpha, beta)" />
+        <scope doc="Return internal state; can be passed to setstate() later." ilk="function" name="getstate" signature="getstate(self)" />
+        <scope doc="Get a random number in the range [a, b) or [a, b] depending&#xA;on rounding." ilk="function" name="uniform" signature="uniform(self, a, b)" />
+        <scope doc="Exponential distribution." ilk="function" name="expovariate" signature="expovariate(self, lambd)" />
+        <scope doc="Log normal distribution." ilk="function" name="lognormvariate" signature="lognormvariate(self, mu, sigma)" />
+        <scope ilk="function" name="__getstate__" signature="__getstate__(self)" />
+        <scope doc="Restore internal state from object returned by getstate()." ilk="function" name="setstate" signature="setstate(self, state)" />
+      </scope>
+      <variable citdl="float" name="SG_MAGICCONST" />
+      <scope classrefs="Random" doc="Alternate random number generator using sources provided&#xA;by the operating system (such as /dev/urandom on Unix or CryptGenRandom on Windows).  Not available on all systems (see os.urandom() for details)." ilk="class" name="SystemRandom">
+        <scope doc="Method should not be called for a system random number&#xA;generator." ilk="function" name="getstate" signature="getstate(self, *args, **kwds)" />
+        <scope doc="Method should not be called for a system random number&#xA;generator." ilk="function" name="_notimplemented" signature="_notimplemented(self, *args, **kwds)" />
+        <scope doc="Get the next random number in the range [0.0, 1.0)." ilk="function" name="random" signature="random(self)" />
+        <scope doc="Stub method. Not used for a system random number generator." ilk="function" name="seed" signature="seed(self, *args, **kwds)" />
+        <scope doc="getrandbits(k) -&gt; x.  Generates a long int with k random bits." ilk="function" name="getrandbits" signature="getrandbits(k) -&gt; x.  Generates a long int with k random bits." />
+        <scope doc="Method should not be called for a system random number&#xA;generator." ilk="function" name="setstate" signature="setstate(self, *args, **kwds)" />
+      </scope>
+      <variable citdl="float" name="TWOPI" />
+      <variable citdl="list" name="__all__" />
+      <import module="_random" />
+      <scope doc="Beta distribution." ilk="function" name="betavariate" />
+      <scope doc="Choose a random element from a non-empty sequence." ilk="function" name="choice" />
+      <variable citdl="_Feature" name="division" />
+      <scope doc="Exponential distribution." ilk="function" name="expovariate" />
+      <scope doc="Gamma distribution." ilk="function" name="gammavariate" />
+      <scope doc="Gaussian distribution." ilk="function" name="gauss" />
+      <scope doc="getrandbits(k) -&gt; x.  Generates a long int with k random bits." ilk="function" name="getrandbits" signature="getrandbits(k) -&gt; x.  Generates a long int with k random bits." />
+      <scope doc="Return internal state; can be passed to setstate() later." ilk="function" name="getstate" />
+      <scope doc="Log normal distribution." ilk="function" name="lognormvariate" />
+      <scope doc="Normal distribution." ilk="function" name="normalvariate" />
+      <scope doc="Pareto distribution. alpha is the shape parameter." ilk="function" name="paretovariate" />
+      <scope doc="Return random integer in range [a, b], including both end&#xA;points." ilk="function" name="randint" />
+      <scope doc="random() -&gt; x in the interval [0, 1)." ilk="function" name="random" signature="random() -&gt; x in the interval [0, 1)." />
+      <scope doc="Choose a random item from range(start, stop[, step])." ilk="function" name="randrange" />
+      <scope doc="Chooses k unique random elements from a population sequence&#xA;or set." ilk="function" name="sample" />
+      <scope doc="Initialize internal state from hashable object." ilk="function" name="seed" />
+      <scope doc="Restore internal state from object returned by getstate()." ilk="function" name="setstate" />
+      <scope doc="x, random=random.random -&gt; shuffle list x in place; return&#xA;None." ilk="function" name="shuffle" />
+      <scope doc="Triangular distribution." ilk="function" name="triangular" />
+      <scope doc="Get a random number in the range [a, b) or [a, b] depending&#xA;on rounding." ilk="function" name="uniform" />
+      <scope doc="Circular data distribution." ilk="function" name="vonmisesvariate" />
+      <scope doc="Weibull distribution." ilk="function" name="weibullvariate" />
+    </scope>
+    

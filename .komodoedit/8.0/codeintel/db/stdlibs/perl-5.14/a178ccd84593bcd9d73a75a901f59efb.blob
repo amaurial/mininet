@@ -1,0 +1,102 @@
+<scope ilk="blob" lang="Perl" name="Compress::Zlib">
+      <scope classrefs="Exporter" ilk="class" line="2" lineend="591" name="Compress::Zlib">
+        <import line="5" module="Exporter" />
+        <import line="6" module="Carp" symbol="*" />
+        <import line="7" module="IO::Handle" symbol="*" />
+        <import line="8" module="Scalar::Util" symbol="dualvar" />
+        <import line="10" module="IO::Compress::Base::Common" symbol="*" />
+        <import line="11" module="Compress::Raw::Zlib" symbol="*" />
+        <import line="12" module="IO::Compress::Gzip" symbol="*" />
+        <import line="13" module="IO::Uncompress::Gunzip" symbol="*" />
+        <import line="454" module="IO::Compress::Gzip::Constants" symbol="*" />
+        <variable line="18" name="$VERSION" />
+        <variable line="18" name="$XS_VERSION" />
+        <variable line="18" name="%EXPORT_TAGS" />
+        <variable line="18" name="@EXPORT" />
+        <variable line="18" name="@EXPORT_OK" />
+        <variable line="18" name="@ISA" />
+        <variable line="45" name="*zlib_version" />
+        <variable line="53" name="@my_z_errmsg" />
+        <variable line="73" name="$Compress::Zlib::gzerrno" />
+        <scope ilk="function" line="68" lineend="83" name="_set_gzerr" signature="_set_gzerr($value)">
+          <variable ilk="argument" name="$value" />
+        </scope>
+        <scope ilk="function" line="85" lineend="89" name="_set_gzerr_undef" signature="_set_gzerr_undef()" />
+        <scope ilk="function" line="90" lineend="104" name="_save_gzerr" signature="_save_gzerr($gz, $test_eof)">
+          <variable ilk="argument" name="$gz" />
+          <variable ilk="argument" name="$test_eof" />
+        </scope>
+        <scope attributes="__ctor__ __exported__" ilk="function" line="106" lineend="154" name="gzopen" signature="gzopen($file, $mode)">
+          <variable ilk="argument" name="$file" />
+          <variable ilk="argument" name="$mode" />
+        </scope>
+        <scope ilk="function" line="156" lineend="175" name="Compress::Zlib::gzFile::gzread" signature="Compress::Zlib::gzFile::gzread($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="177" lineend="190" name="Compress::Zlib::gzFile::gzreadline" signature="Compress::Zlib::gzFile::gzreadline($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="192" lineend="206" name="Compress::Zlib::gzFile::gzwrite" signature="Compress::Zlib::gzFile::gzwrite($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="208" lineend="215" name="Compress::Zlib::gzFile::gztell" signature="Compress::Zlib::gzFile::gztell($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="217" lineend="235" name="Compress::Zlib::gzFile::gzseek" signature="Compress::Zlib::gzFile::gzseek($self, $offset, $whence)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$offset" />
+          <variable ilk="argument" name="$whence" />
+        </scope>
+        <scope ilk="function" line="237" lineend="246" name="Compress::Zlib::gzFile::gzflush" signature="Compress::Zlib::gzFile::gzflush($self, $f)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$f" />
+        </scope>
+        <scope ilk="function" line="248" lineend="256" name="Compress::Zlib::gzFile::gzclose" signature="Compress::Zlib::gzFile::gzclose($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="258" lineend="269" name="Compress::Zlib::gzFile::gzeof" signature="Compress::Zlib::gzFile::gzeof($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="271" lineend="288" name="Compress::Zlib::gzFile::gzsetparams" signature="Compress::Zlib::gzFile::gzsetparams($self, $level, $strategy)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$level" />
+          <variable ilk="argument" name="$strategy" />
+        </scope>
+        <scope ilk="function" line="290" lineend="296" name="Compress::Zlib::gzFile::gzerror" signature="Compress::Zlib::gzFile::gzerror($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope attributes="__exported__" ilk="function" line="299" lineend="327" name="compress" signature="compress()">
+          </scope>
+        <scope attributes="__exported__" ilk="function" line="329" lineend="350" name="uncompress" signature="uncompress()">
+          </scope>
+        <scope attributes="__exported__" ilk="function" line="354" lineend="386" name="deflateInit" signature="deflateInit()">
+          </scope>
+        <scope attributes="__exported__" ilk="function" line="388" lineend="412" name="inflateInit" signature="inflateInit()">
+          </scope>
+        <scope attributes="__exportable__" ilk="function" line="456" lineend="474" name="memGzip" signature="memGzip()">
+          </scope>
+        <scope ilk="function" line="476" lineend="532" name="_removeGzipHeader" signature="_removeGzipHeader($string)">
+          <variable ilk="argument" name="$string" />
+        </scope>
+        <scope ilk="function" line="534" lineend="538" name="_ret_gun_error" signature="_ret_gun_error()" />
+        <scope attributes="__exportable__" ilk="function" line="541" lineend="587" name="memGunzip" signature="memGunzip()">
+          </scope>
+      </scope>
+      <scope classrefs="Compress::Raw::Zlib::deflateStream" ilk="class" line="414" lineend="437" name="Zlib::OldDeflate">
+        <variable line="416" name="@ISA" />
+        <scope ilk="function" line="420" lineend="427" name="deflate" signature="deflate($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="429" lineend="437" name="flush" signature="flush($self, $flag)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$flag" />
+        </scope>
+      </scope>
+      <scope classrefs="Compress::Raw::Zlib::inflateStream" ilk="class" line="439" lineend="450" name="Zlib::OldInflate">
+        <variable line="441" name="@ISA" />
+        <scope ilk="function" line="444" lineend="450" name="inflate" signature="inflate($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+      </scope>
+    </scope>
+    

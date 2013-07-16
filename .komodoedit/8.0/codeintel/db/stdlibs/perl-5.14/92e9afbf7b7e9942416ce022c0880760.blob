@@ -1,0 +1,20 @@
+<scope ilk="blob" lang="Perl" name="Perl::Critic::Policy::TestingAndDebugging::ProhibitNoStrict">
+      <scope ilk="class" line="8" lineend="88" name="Perl::Critic::Policy::TestingAndDebugging::ProhibitNoStrict">
+        <import line="13" module="Readonly" symbol="*" />
+        <import line="15" module="List::MoreUtils" symbol="all" />
+        <import line="17" module="Perl::Critic::Utils" symbol="**" />
+        <variable line="20" name="$VERSION" />
+        <scope ilk="function" line="29" lineend="38" name="supported_parameters" signature="supported_parameters()" />
+        <scope ilk="function" line="40" lineend="40" name="default_severity" signature="default_severity()" />
+        <scope ilk="function" line="41" lineend="41" name="default_themes" signature="default_themes()" />
+        <scope ilk="function" line="42" lineend="42" name="applies_to" signature="applies_to()" />
+        <scope ilk="function" line="46" lineend="58" name="_parse_allow" signature="_parse_allow($self, $parameter, $config_string)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$parameter" />
+          <variable ilk="argument" name="$config_string" />
+        </scope>
+        <scope ilk="function" line="62" lineend="86" name="violates" signature="violates()">
+          </scope>
+      </scope>
+    </scope>
+    

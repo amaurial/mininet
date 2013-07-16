@@ -1,0 +1,55 @@
+<scope ilk="blob" lang="Perl" name="File::HomeDir::Darwin">
+      <scope classrefs="File::HomeDir::Unix" ilk="class" line="1" lineend="152" name="File::HomeDir::Darwin">
+        <import line="5" module="Cwd" />
+        <import line="6" module="Carp" />
+        <import line="7" module="File::HomeDir::Unix" />
+        <variable line="9" name="$VERSION" />
+        <variable line="9" name="@ISA" />
+        <scope ilk="function" line="22" lineend="33" name="my_home" signature="my_home($class)">
+          <variable ilk="argument" name="$class" />
+        </scope>
+        <scope ilk="function" line="35" lineend="49" name="_my_home" signature="_my_home($class, $path)">
+          <variable ilk="argument" name="$class" />
+          <variable ilk="argument" name="$path" />
+        </scope>
+        <scope ilk="function" line="51" lineend="54" name="my_desktop" signature="my_desktop($class)">
+          <variable ilk="argument" name="$class" />
+        </scope>
+        <scope ilk="function" line="56" lineend="59" name="my_documents" signature="my_documents($class)">
+          <variable ilk="argument" name="$class" />
+        </scope>
+        <scope ilk="function" line="61" lineend="64" name="my_data" signature="my_data($class)">
+          <variable ilk="argument" name="$class" />
+        </scope>
+        <scope ilk="function" line="66" lineend="69" name="my_music" signature="my_music($class)">
+          <variable ilk="argument" name="$class" />
+        </scope>
+        <scope ilk="function" line="71" lineend="74" name="my_pictures" signature="my_pictures($class)">
+          <variable ilk="argument" name="$class" />
+        </scope>
+        <scope ilk="function" line="76" lineend="79" name="my_videos" signature="my_videos($class)">
+          <variable ilk="argument" name="$class" />
+        </scope>
+        <scope ilk="function" line="88" lineend="92" name="users_home" signature="users_home($class)">
+          <variable ilk="argument" name="$class" />
+        </scope>
+        <scope ilk="function" line="94" lineend="98" name="users_desktop" signature="users_desktop($class, $name)">
+          <variable ilk="argument" name="$class" />
+          <variable ilk="argument" name="$name" />
+        </scope>
+        <scope ilk="function" line="100" lineend="104" name="users_documents" signature="users_documents($class, $name)">
+          <variable ilk="argument" name="$class" />
+          <variable ilk="argument" name="$name" />
+        </scope>
+        <scope ilk="function" line="106" lineend="111" name="users_data" signature="users_data($class, $name)">
+          <variable ilk="argument" name="$class" />
+          <variable ilk="argument" name="$name" />
+        </scope>
+        <scope ilk="function" line="115" lineend="122" name="_to_user" signature="_to_user($class, $path, $name)">
+          <variable ilk="argument" name="$class" />
+          <variable ilk="argument" name="$path" />
+          <variable ilk="argument" name="$name" />
+        </scope>
+      </scope>
+    </scope>
+    

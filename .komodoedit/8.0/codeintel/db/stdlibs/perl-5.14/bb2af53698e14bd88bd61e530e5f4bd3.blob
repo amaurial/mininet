@@ -1,0 +1,127 @@
+<scope ilk="blob" lang="Perl" name="CPANPLUS::Module">
+      <scope classrefs="CPANPLUS::Module::Signature CPANPLUS::Module::Checksums" ilk="class" line="1" lineend="1816" name="CPANPLUS::Module">
+        <import line="7" module="CPANPLUS::Dist" symbol="*" />
+        <import line="8" module="CPANPLUS::Error" symbol="*" />
+        <import line="9" module="CPANPLUS::Module::Signature" symbol="*" />
+        <import line="10" module="CPANPLUS::Module::Checksums" symbol="*" />
+        <import line="11" module="CPANPLUS::Internals::Constants" symbol="*" />
+        <import line="13" module="FileHandle" symbol="*" />
+        <import line="15" module="Locale::Maketext::Simple" symbol="Class" />
+        <import line="16" module="IPC::Cmd" symbol="can_run" />
+        <import line="16" module="IPC::Cmd" symbol="run" />
+        <import line="17" module="File::Find" symbol="find" />
+        <import line="18" module="Params::Check" symbol="check" />
+        <import line="19" module="File::Basename" symbol="dirname" />
+        <import line="20" module="Module::Load::Conditional" symbol="can_load" />
+        <import line="20" module="Module::Load::Conditional" symbol="check_install" />
+        <variable line="4" name="@ISA" />
+        <variable line="22" name="$Params::Check::VERBOSE" />
+        <variable line="192" name="*name" />
+        <variable line="1268" name="$method" />
+        <scope ilk="function" line="112" lineend="112" name="accessors" signature="accessors()" />
+        <scope ilk="function" line="155" lineend="169" name="dslip" signature="dslip($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="194" lineend="199" name="parent" signature="parent($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope attributes="__ctor__" ilk="function" line="319" lineend="331" name="new" signature="new($class, %hash)">
+          <variable ilk="argument" name="$class" />
+          <variable ilk="argument" name="%hash" />
+        </scope>
+        <scope ilk="function" line="334" lineend="353" name="status" signature="status($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="357" lineend="361" name="_flush" signature="_flush($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="437" lineend="464" name="package_is_perl_core" signature="package_is_perl_core($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="466" lineend="491" name="module_is_supplied_with_perl_core" signature="module_is_supplied_with_perl_core($self, $ver)">
+          <import line="477" module="Module::CoreList" />
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$ver" />
+          <import line="477" module="Module::CoreList" />
+        </scope>
+        <scope ilk="function" line="494" lineend="505" name="is_bundle" signature="is_bundle($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="508" lineend="515" name="is_autobundle" signature="is_autobundle($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="517" lineend="523" name="is_third_party" signature="is_third_party($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="525" lineend="531" name="third_party_information" signature="third_party_information($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="547" lineend="556" name="clone" signature="clone($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="569" lineend="595" name="fetch" signature="fetch($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="607" lineend="627" name="extract" signature="extract($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="641" lineend="717" name="get_installer_type" signature="get_installer_type($self, %hash)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="%hash" />
+        </scope>
+        <scope ilk="function" line="735" lineend="831" name="dist" signature="dist($self, %hash)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="%hash" />
+        </scope>
+        <scope ilk="function" line="845" lineend="848" name="prepare" signature="prepare($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="860" lineend="863" name="create" signature="create($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="876" lineend="879" name="test" signature="test($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="899" lineend="1085" name="install" signature="install($self, %hash)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="%hash" />
+        </scope>
+        <scope ilk="function" line="1098" lineend="1177" name="bundle_modules" signature="bundle_modules($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="1189" lineend="1232" name="readme" signature="readme($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="1320" lineend="1348" name="details" signature="details($self, %hash)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="%hash" />
+        </scope>
+        <scope ilk="function" line="1363" lineend="1371" name="contains" signature="contains($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="1386" lineend="1391" name="fetch_report" signature="fetch_report($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="1411" lineend="1512" name="uninstall" signature="uninstall($self, %hash)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="%hash" />
+        </scope>
+        <scope ilk="function" line="1523" lineend="1531" name="distributions" signature="distributions($self, %hash)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="%hash" />
+        </scope>
+        <scope ilk="function" line="1562" lineend="1686" name="_extutils_installed" signature="_extutils_installed($self, %hash)">
+          <import line="1621" module="Config" />
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="%hash" />
+          <import line="1621" module="Config" />
+        </scope>
+        <scope ilk="function" line="1700" lineend="1722" name="add_to_includepath" signature="add_to_includepath($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="1743" lineend="1787" name="best_path_to_module_build" signature="best_path_to_module_build($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+      </scope>
+    </scope>
+    

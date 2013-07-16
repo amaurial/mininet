@@ -1,0 +1,38 @@
+<scope ilk="blob" lang="Perl" name="Moose::Object">
+      <scope ilk="class" line="2" lineend="240" name="Moose::Object">
+        <import line="13" module="Carp" />
+        <import line="14" module="Devel::GlobalDestruction" />
+        <import line="15" module="MRO::Compat" />
+        <import line="16" module="Scalar::Util" />
+        <import line="17" module="Try::Tiny" />
+        <variable line="4" name="$Moose::Object::AUTHORITY" />
+        <variable line="7" name="$Moose::Object::VERSION" />
+        <scope ilk="function" line="22" lineend="29" name="new" signature="new($class)">
+          <variable ilk="argument" name="$class" />
+        </scope>
+        <scope ilk="function" line="31" lineend="50" name="BUILDARGS" signature="BUILDARGS($class)">
+          <variable ilk="argument" name="$class" />
+        </scope>
+        <scope ilk="function" line="52" lineend="61" name="BUILDALL" signature="BUILDALL($self, $params)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$params" />
+        </scope>
+        <scope ilk="function" line="63" lineend="90" name="DEMOLISHALL" signature="DEMOLISHALL($self, $in_global_destruction)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$in_global_destruction" />
+        </scope>
+        <scope ilk="function" line="92" lineend="108" name="DESTROY" signature="DESTROY($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="122" lineend="129" name="does" signature="does($self, $role_name)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$role_name" />
+        </scope>
+        <scope ilk="function" line="131" lineend="136" name="dump" signature="dump($self)">
+          <import line="133" module="Data::Dumper" />
+          <variable ilk="argument" name="$self" />
+          <import line="133" module="Data::Dumper" />
+        </scope>
+      </scope>
+    </scope>
+    

@@ -1,0 +1,92 @@
+<scope ilk="blob" lang="Perl" name="Module::Build::Platform::VMS">
+      <scope classrefs="Module::Build::Base" ilk="class" line="1" lineend="557" name="Module::Build::Platform::VMS">
+        <import line="7" module="Module::Build::Base" symbol="*" />
+        <import line="8" module="Config" symbol="*" />
+        <variable line="4" name="$VERSION" />
+        <variable line="10" name="@ISA" />
+        <scope ilk="function" line="35" lineend="40" name="_set_defaults" signature="_set_defaults($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="50" lineend="59" name="cull_args" signature="cull_args($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="68" lineend="70" name="manpage_separator" signature="manpage_separator()" />
+        <scope ilk="function" line="81" lineend="94" name="_catprefix" signature="_catprefix($self, $rprefix, $default)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$rprefix" />
+          <variable ilk="argument" name="$default" />
+        </scope>
+        <scope ilk="function" line="97" lineend="139" name="_prefixify" signature="_prefixify($self, $path, $sprefix, $type)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$path" />
+          <variable ilk="argument" name="$sprefix" />
+          <variable ilk="argument" name="$type" />
+        </scope>
+        <scope ilk="function" line="148" lineend="171" name="_quote_args" signature="_quote_args($self, @args)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="@args" />
+        </scope>
+        <scope ilk="function" line="180" lineend="180" name="have_forkpipe" signature="have_forkpipe()" />
+        <scope ilk="function" line="188" lineend="194" name="_backticks" signature="_backticks($self, @cmd)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="@cmd" />
+        </scope>
+        <scope ilk="function" line="202" lineend="214" name="find_command" signature="find_command($self, $command)">
+          <import line="208" module="VMS::DCLsym" />
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$command" />
+          <import line="208" module="VMS::DCLsym" />
+        </scope>
+        <scope ilk="function" line="229" lineend="250" name="_maybe_command" signature="_maybe_command($self, $file)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$file" />
+        </scope>
+        <scope ilk="function" line="258" lineend="265" name="do_system" signature="do_system($self, @cmd)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="@cmd" />
+        </scope>
+        <scope ilk="function" line="273" lineend="280" name="oneliner" signature="oneliner($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="289" lineend="304" name="_infer_xs_spec" signature="_infer_xs_spec($self, $file)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$file" />
+        </scope>
+        <scope ilk="function" line="314" lineend="325" name="rscan_dir" signature="rscan_dir($self, $dir, $pattern)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$dir" />
+          <variable ilk="argument" name="$pattern" />
+        </scope>
+        <scope ilk="function" line="334" lineend="340" name="dist_dir" signature="dist_dir($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="349" lineend="356" name="man3page_name" signature="man3page_name($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="365" lineend="376" name="expand_test_dir" signature="expand_test_dir($self, $dir)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$dir" />
+        </scope>
+        <scope ilk="function" line="385" lineend="453" name="_detildefy" signature="_detildefy($self, $arg)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$arg" />
+        </scope>
+        <scope ilk="function" line="464" lineend="466" name="find_perl_interpreter" signature="find_perl_interpreter()" />
+        <scope ilk="function" line="474" lineend="479" name="localize_file_path" signature="localize_file_path($self, $path)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$path" />
+        </scope>
+        <scope ilk="function" line="487" lineend="490" name="localize_dir_path" signature="localize_dir_path($self, $path)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$path" />
+        </scope>
+        <scope ilk="function" line="499" lineend="504" name="ACTION_clean" signature="ACTION_clean($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="519" lineend="528" name="_unix_rpt" signature="_unix_rpt()">
+          </scope>
+        <scope ilk="function" line="532" lineend="541" name="_efs" signature="_efs()">
+          </scope>
+      </scope>
+    </scope>
+    

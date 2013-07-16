@@ -1,0 +1,22 @@
+<scope ilk="blob" lang="Perl" name="Perl::Critic::Policy::Documentation::RequirePackageMatchesPodName">
+      <scope ilk="class" line="8" lineend="84" name="Perl::Critic::Policy::Documentation::RequirePackageMatchesPodName">
+        <import line="15" module="Readonly" symbol="*" />
+        <import line="16" module="English" symbol="-no_match_vars" />
+        <import line="17" module="Perl::Critic::Utils" symbol="**" />
+        <variable line="20" name="$VERSION" />
+        <scope ilk="function" line="31" lineend="31" name="supported_parameters" signature="supported_parameters()" />
+        <scope ilk="function" line="32" lineend="32" name="default_severity" signature="default_severity()" />
+        <scope ilk="function" line="33" lineend="33" name="default_themes" signature="default_themes()" />
+        <scope ilk="function" line="34" lineend="34" name="applies_to" signature="applies_to()" />
+        <scope ilk="function" line="38" lineend="43" name="prepare_to_scan_document" signature="prepare_to_scan_document($self, $document)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$document" />
+        </scope>
+        <scope ilk="function" line="45" lineend="82" name="violates" signature="violates($self, $elem, $doc)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$elem" />
+          <variable ilk="argument" name="$doc" />
+        </scope>
+      </scope>
+    </scope>
+    

@@ -1,0 +1,61 @@
+<scope doc="distutils.spawn&#xA;Provides the &apos;spawn()&apos; function, a front-end to various platform- specific functions for launching another program in a sub-process. Also provides the &apos;find_executable()&apos; to search the path for a given executable name." ilk="blob" lang="Python" name="distutils.spawn">
+      <scope classrefs="DistutilsError" doc="Any problems executing an external program (such as the C&#xA;compiler, when compiling C files)." ilk="class" name="DistutilsExecError" />
+      <scope classrefs="DistutilsError" doc="We don&apos;t know how to do something on the current platform (but&#xA;we do know how to do it on some platform) -- eg. trying to compile C files on a platform not supported by a CCompiler subclass." ilk="class" name="DistutilsPlatformError" />
+      <scope doc="Tries to find &apos;executable&apos; in the directories listed in&#xA;&apos;path&apos;." ilk="function" line="171" lineend="194" name="find_executable" returns="str" signature="find_executable(executable, path=None)">
+        <variable citdl="path.split()" line="180" name="paths" />
+        <variable citdl="str" ilk="argument" name="executable" />
+        <variable line="181" name="base" />
+        <variable citdl="os.path.join()" line="188" name="f" />
+        <variable ilk="argument" name="path" />
+        <variable line="181" name="ext" />
+      </scope>
+      <import module="log" />
+      <import module="os" />
+      <scope doc="Run another program, specified as a command list &apos;cmd&apos;, in a&#xA;new process." ilk="function" line="15" lineend="39" name="spawn" signature="spawn(cmd, search_path=1, verbose=0, dry_run=0)">
+        <variable ilk="argument" name="cmd" />
+        <variable citdl="int" ilk="argument" name="search_path" />
+        <variable citdl="int" ilk="argument" name="dry_run" />
+        <variable citdl="int" ilk="argument" name="verbose" />
+      </scope>
+      <import module="sys" />
+      <scope attributes="protected __hidden__" ilk="function" line="57" lineend="75" name="_spawn_nt" signature="_spawn_nt(cmd, search_path=1, verbose=0, dry_run=0)">
+        <variable citdl="_nt_quote_args()" ilk="argument" name="cmd" />
+        <variable citdl="int" ilk="argument" name="search_path" />
+        <variable citdl="int" ilk="argument" name="verbose" />
+        <variable citdl="int" ilk="argument" name="dry_run" />
+        <variable citdl="find_executable()" line="58" name="executable" />
+        <variable citdl="os.spawnv()" line="67" name="rc" />
+      </scope>
+      <scope attributes="protected __hidden__" doc="Quote command-line arguments for DOS/Windows conventions.&#xA;&#xA;Just wraps every argument which contains blanks in double quotes, and&#xA;returns a new argument list." ilk="function" line="41" lineend="55" name="_nt_quote_args" signature="_nt_quote_args(args)">
+        <variable ilk="argument" name="args" />
+      </scope>
+      <scope attributes="protected __hidden__" ilk="function" line="102" lineend="169" name="_spawn_posix" signature="_spawn_posix(cmd, search_path=1, verbose=0, dry_run=0)">
+        <import line="147" module="errno" />
+        <variable ilk="argument" name="cmd" />
+        <variable citdl="int" ilk="argument" name="search_path" />
+        <variable citdl="int" ilk="argument" name="verbose" />
+        <variable citdl="int" ilk="argument" name="dry_run" />
+        <variable citdl="int" line="106" name="exec_fn" />
+        <variable citdl="list" line="107" name="exec_args" />
+        <variable attributes="protected" citdl="str" line="111" name="_cfg_target" />
+        <variable attributes="protected" citdl="list" line="114" name="_cfg_target_split" />
+        <variable citdl="os.environ.get()" line="119" name="cur_target" />
+        <variable citdl="str" line="121" name="my_msg" />
+        <variable citdl="dict()" line="125" name="env" />
+        <variable citdl="os.fork()" line="129" name="pid" />
+        <variable line="145" name="status" />
+        <variable citdl="os.WEXITSTATUS()" line="157" name="exit_status" />
+      </scope>
+      <variable attributes="protected __hidden__" line="100" name="_cfg_target_split" />
+      <scope attributes="protected __hidden__" ilk="function" line="77" lineend="95" name="_spawn_os2" signature="_spawn_os2(cmd, search_path=1, verbose=0, dry_run=0)">
+        <variable ilk="argument" name="cmd" />
+        <variable citdl="int" ilk="argument" name="search_path" />
+        <variable citdl="int" ilk="argument" name="verbose" />
+        <variable citdl="int" ilk="argument" name="dry_run" />
+        <variable citdl="find_executable()" line="78" name="executable" />
+        <variable citdl="os.spawnv()" line="86" name="rc" />
+      </scope>
+      <variable attributes="protected __hidden__" line="99" name="_cfg_target" />
+      <variable citdl="str" line="9" name="__revision__" />
+    </scope>
+    

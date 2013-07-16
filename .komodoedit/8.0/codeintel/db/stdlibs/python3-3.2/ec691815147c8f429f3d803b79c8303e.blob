@@ -1,0 +1,995 @@
+<scope doc="Command-line parsing library&#xA;This module is an optparse-inspired command-line parsing library that:  - handles both optional and positional arguments - produces highly informative usage messages - supports parsers that dispatch to sub-parsers  The following is a simple usage example that sums integers from the command-line and writes the result to a file::  parser = argparse.ArgumentParser(" ilk="blob" lang="Python" name="argparse">
+      <scope classrefs="_AttributeHolder" doc="Information about how to convert command line strings to Python objects.&#xA;Action objects are used by an ArgumentParser to represent the information needed to parse a single argument from one or more strings from the command line. The keyword arguments to the Action constructor are also all attributes of Action instances.  Keyword Arguments:  - option_strings -- A list of command-line option strings which should be associated with this action. " ilk="class" line="712" lineend="800" name="Action">
+        <scope ilk="function" line="799" lineend="800" name="__call__" signature="__call__(self, parser, namespace, values, option_string=None)">
+          <variable ilk="argument" name="values" />
+          <variable citdl="Action" ilk="argument" name="self" />
+          <variable ilk="argument" name="parser" />
+          <variable ilk="argument" name="namespace" />
+          <variable ilk="argument" name="option_string" />
+        </scope>
+        <scope ilk="function" line="785" lineend="797" name="_get_kwargs" returns="list" signature="_get_kwargs(self)">
+          <variable citdl="Action" ilk="argument" name="self" />
+          <variable citdl="list" line="786" name="names" />
+        </scope>
+        <scope ilk="function" line="763" lineend="783" name="__init__" signature="__init__(self, option_strings, dest, nargs=None, const=None, default=None, type=None, choices=None, required=False, help=None, metavar=None)">
+          <variable ilk="argument" name="const" />
+          <variable ilk="argument" name="help" />
+          <variable ilk="argument" name="option_strings" />
+          <variable ilk="argument" name="dest" />
+          <variable citdl="Action" ilk="argument" name="self" />
+          <variable citdl="False" ilk="argument" name="required" />
+          <variable ilk="argument" name="nargs" />
+          <variable ilk="argument" name="choices" />
+          <variable ilk="argument" name="default" />
+          <variable ilk="argument" name="type" />
+          <variable ilk="argument" name="metavar" />
+        </scope>
+        <variable attributes="__instancevar__" line="777" name="const" />
+        <variable attributes="__instancevar__" line="782" name="help" />
+        <variable attributes="__instancevar__" line="774" name="option_strings" />
+        <variable attributes="__instancevar__" line="775" name="dest" />
+        <variable attributes="__instancevar__" citdl="False" line="781" name="required" />
+        <variable attributes="__instancevar__" line="776" name="nargs" />
+        <variable attributes="__instancevar__" line="780" name="choices" />
+        <variable attributes="__instancevar__" line="778" name="default" />
+        <variable attributes="__instancevar__" line="779" name="type" />
+        <variable attributes="__instancevar__" line="783" name="metavar" />
+      </scope>
+      <scope classrefs="HelpFormatter" doc="Help message formatter which adds default values to argument help.&#xA;Only the name of this class is considered a public API. All the methods provided by the class are considered an implementation detail." ilk="class" line="649" lineend="663" name="ArgumentDefaultsHelpFormatter">
+        <scope ilk="function" line="656" lineend="663" name="_get_help_string" returns="action.help" signature="_get_help_string(self, action)">
+          <variable ilk="argument" name="action" />
+          <variable citdl="ArgumentDefaultsHelpFormatter" ilk="argument" name="self" />
+          <variable citdl="action.help" line="657" name="help" />
+          <variable citdl="list" line="660" name="defaulting_nargs" />
+        </scope>
+      </scope>
+      <scope classrefs="Exception" doc="An error from creating or using an argument (optional or positional).&#xA;The string value of this exception is the message, augmented with information about the argument that caused it." ilk="class" line="683" lineend="700" name="ArgumentError">
+        <scope ilk="function" line="694" lineend="700" name="__str__" returns="dict()" signature="__str__(self)">
+          <variable citdl="ArgumentError" ilk="argument" name="self" />
+          <variable citdl="str" line="696" name="format" />
+        </scope>
+        <scope ilk="function" line="690" lineend="692" name="__init__" signature="__init__(self, argument, message)">
+          <variable citdl="ArgumentError" ilk="argument" name="self" />
+          <variable ilk="argument" name="message" />
+          <variable ilk="argument" name="argument" />
+        </scope>
+        <variable attributes="__instancevar__" line="692" name="message" />
+        <variable attributes="__instancevar__" citdl="_get_action_name()" line="691" name="argument_name" />
+      </scope>
+      <scope classrefs="_AttributeHolder _ActionsContainer" doc="Object for parsing command line strings into Python objects.&#xA;Keyword Arguments: - prog -- The name of the program (default: sys.argv[0]) - usage -- A usage message (default: auto-generated from arguments) - description -- A description of what the program does - epilog -- Text following the argument descriptions - parents -- Parsers whose arguments should be copied into this one - formatter_class -- HelpFormatter class for printing help messages - prefix_chars -- Characters that prefix optional arguments - fromfile_prefix_chars -- Characters that prefix files containing additional arguments" ilk="class" line="1538" lineend="2366" name="ArgumentParser">
+        <scope ilk="function" line="2241" lineend="2265" name="_get_value" returns="type_func()" signature="_get_value(self, action, arg_string)">
+          <variable citdl="self._registry_get()" line="2242" name="type_func" />
+          <variable citdl="getattr()" line="2253" name="name" />
+          <variable ilk="argument" name="arg_string" />
+          <variable citdl="ArgumentParser" ilk="argument" name="self" />
+          <variable citdl="dict" line="2260" name="args" />
+          <variable citdl="_()" line="2244" name="msg" />
+          <variable citdl="type_func()" line="2249" name="result" />
+          <variable ilk="argument" name="action" />
+        </scope>
+        <scope ilk="function" line="2328" lineend="2331" name="print_help" signature="print_help(self, file=None)">
+          <variable citdl="ArgumentParser" ilk="argument" name="self" />
+          <variable citdl="_sys.stdout" ilk="argument" name="file" />
+        </scope>
+        <scope ilk="function" line="1692" lineend="1695" name="_get_positional_actions" returns="list" signature="_get_positional_actions(self)">
+          <variable citdl="ArgumentParser" ilk="argument" name="self" />
+        </scope>
+        <scope ilk="function" line="2307" lineend="2315" name="format_version" returns="formatter.format_help()" signature="format_version(self)">
+          <variable citdl="ArgumentParser" ilk="argument" name="self" />
+          <variable citdl="self._get_formatter()" line="2313" name="formatter" />
+        </scope>
+        <scope ilk="function" line="1707" lineend="1740" name="parse_known_args" returns="tuple" signature="parse_known_args(self, args=None, namespace=None)">
+          <variable citdl="action.default" line="1721" name="default" />
+          <variable citdl="ArgumentParser" ilk="argument" name="self" />
+          <variable citdl="list" ilk="argument" name="args" />
+          <variable citdl="Namespace" ilk="argument" name="namespace" />
+          <variable line="1739" name="err" />
+        </scope>
+        <scope ilk="function" line="2267" lineend="2273" name="_check_value" signature="_check_value(self, action, value)">
+          <variable ilk="argument" name="action" />
+          <variable citdl="_()" line="2272" name="msg" />
+          <variable citdl="ArgumentParser" ilk="argument" name="self" />
+          <variable citdl="dict" line="2270" name="args" />
+          <variable ilk="argument" name="value" />
+        </scope>
+        <scope ilk="function" line="2006" lineend="2007" name="convert_arg_line_to_args" returns="list" signature="convert_arg_line_to_args(self, arg_line)">
+          <variable ilk="argument" name="arg_line" />
+          <variable citdl="ArgumentParser" ilk="argument" name="self" />
+        </scope>
+        <scope doc="# ======================= # Help-formatting methods #&#xA;=======================" ilk="function" line="2278" lineend="2282" name="format_usage" returns="formatter.format_help()" signature="format_usage(self)">
+          <variable citdl="ArgumentParser" ilk="argument" name="self" />
+          <variable citdl="self._get_formatter()" line="2279" name="formatter" />
+        </scope>
+        <scope doc="# ======================== # Value conversion methods #&#xA;========================" ilk="function" line="2192" lineend="2239" name="_get_values" returns="self._get_value()" signature="_get_values(self, action, arg_strings)">
+          <variable ilk="argument" name="action" />
+          <variable citdl="ArgumentParser" ilk="argument" name="self" />
+          <variable citdl="list" ilk="argument" name="arg_strings" />
+          <variable citdl="list" line="2200" name="value" />
+        </scope>
+        <scope doc="# ======================= # Pretty __repr__ methods #&#xA;=======================" ilk="function" line="1634" lineend="1644" name="_get_kwargs" returns="list" signature="_get_kwargs(self)">
+          <variable citdl="ArgumentParser" ilk="argument" name="self" />
+          <variable citdl="list" line="1635" name="names" />
+        </scope>
+        <scope ilk="function" line="2009" lineend="2028" name="_match_argument" returns="len()" signature="_match_argument(self, action, arg_strings_pattern)">
+          <variable citdl="ngettext()" line="2021" name="default" />
+          <variable citdl="ArgumentParser" ilk="argument" name="self" />
+          <variable citdl="self._get_nargs_pattern()" line="2011" name="nargs_pattern" />
+          <variable citdl="nargs_errors.get()" line="2024" name="msg" />
+          <variable citdl="dict" line="2016" name="nargs_errors" />
+          <variable ilk="argument" name="arg_strings_pattern" />
+          <variable ilk="argument" name="action" />
+          <variable citdl="_re.match()" line="2012" name="match" />
+        </scope>
+        <scope ilk="function" line="2317" lineend="2318" name="_get_formatter" returns="ArgumentParser.formatter_class()" signature="_get_formatter(self)">
+          <variable citdl="ArgumentParser" ilk="argument" name="self" />
+        </scope>
+        <scope ilk="function" line="1977" lineend="2004" name="_read_args_from_files" returns="list" signature="_read_args_from_files(self, arg_strings)">
+          <variable citdl="open()" line="1989" name="args_file" />
+          <variable citdl="ArgumentParser" ilk="argument" name="self" />
+          <variable citdl="()" ilk="argument" name="arg_strings" />
+          <variable line="2000" name="err" />
+          <variable citdl="list" line="1979" name="new_arg_strings" />
+        </scope>
+        <scope ilk="function" line="1556" lineend="1629" name="__init__" signature="__init__(self, prog=None, usage=None, description=None, epilog=None, version=None, parents=[], formatter_class=&lt;class &apos;argparse.HelpFormatter&apos;&gt;, prefix_chars=&apos;-&apos;, fromfile_prefix_chars=None, argument_default=None, conflict_handler=&apos;error&apos;, add_help=True)">
+          <variable line="1608" name="default_prefix" />
+          <variable ilk="argument" name="description" />
+          <variable ilk="argument" name="fromfile_prefix_chars" />
+          <variable citdl="str" ilk="argument" name="prefix_chars" />
+          <variable ilk="argument" name="argument_default" />
+          <variable ilk="argument" name="usage" />
+          <variable citdl="str" ilk="argument" name="conflict_handler" />
+          <variable ilk="argument" name="epilog" />
+          <scope ilk="function" line="1602" lineend="1603" name="identity" signature="identity(string)">
+            <variable ilk="argument" name="string" />
+          </scope>
+          <variable citdl="HelpFormatter" ilk="argument" name="formatter_class" />
+          <variable citdl="ArgumentParser" ilk="argument" name="self" />
+          <variable line="1578" name="superinit" />
+          <variable ilk="argument" name="version" />
+          <variable citdl="list" ilk="argument" name="parents" />
+          <variable citdl="True" ilk="argument" name="add_help" />
+          <variable citdl="parent._defaults" line="1625" name="defaults" />
+          <variable citdl="_os.path.basename()" ilk="argument" name="prog" />
+          <variable citdl="self.add_argument_group" line="1596" name="add_group" />
+        </scope>
+        <scope ilk="function" line="2030" lineend="2044" name="_match_arguments_partial" returns="list" signature="_match_arguments_partial(self, actions, arg_strings_pattern)">
+          <variable citdl="list" line="2033" name="result" />
+          <variable ilk="argument" name="arg_strings_pattern" />
+          <variable citdl="str.join()" line="2036" name="pattern" />
+          <variable citdl="ArgumentParser" ilk="argument" name="self" />
+          <variable citdl="_re.match()" line="2038" name="match" />
+          <variable ilk="argument" name="actions" />
+          <variable citdl="list" line="2035" name="actions_slice" />
+        </scope>
+        <scope ilk="function" line="2046" lineend="2102" name="_parse_optional" returns="tuple" signature="_parse_optional(self, arg_string)">
+          <variable line="2066" name="option_string" />
+          <variable line="2066" name="explicit_arg" />
+          <variable ilk="argument" name="arg_string" />
+          <variable citdl="self._get_option_tuples()" line="2073" name="option_tuples" />
+          <variable citdl="dict" line="2079" name="args" />
+          <variable citdl="str.join()" line="2077" name="options" />
+          <variable citdl="_()" line="2080" name="msg" />
+          <variable line="2057" name="action" />
+          <variable citdl="ArgumentParser" ilk="argument" name="self" />
+        </scope>
+        <scope doc="# ===================================== # Command line&#xA;argument parsing methods #&#xA;=====================================" ilk="function" line="1700" lineend="1705" name="parse_args" signature="parse_args(self, args=None, namespace=None)">
+          <variable citdl="_()" line="1703" name="msg" />
+          <variable citdl="ArgumentParser" ilk="argument" name="self" />
+          <variable ilk="argument" name="args" />
+          <variable ilk="argument" name="namespace" />
+          <variable line="1701" name="argv" />
+        </scope>
+        <scope ilk="function" line="2284" lineend="2305" name="format_help" returns="formatter.format_help()" signature="format_help(self)">
+          <variable citdl="ArgumentParser" ilk="argument" name="self" />
+          <variable citdl="self._get_formatter()" line="2285" name="formatter" />
+        </scope>
+        <scope ilk="function" line="1687" lineend="1690" name="_get_optional_actions" returns="list" signature="_get_optional_actions(self)">
+          <variable citdl="ArgumentParser" ilk="argument" name="self" />
+        </scope>
+        <scope ilk="function" line="2148" lineend="2187" name="_get_nargs_pattern" returns="nargs_pattern.replace()" signature="_get_nargs_pattern(self, action)">
+          <variable ilk="argument" name="action" />
+          <variable citdl="ArgumentParser" ilk="argument" name="self" />
+          <variable citdl="action.nargs" line="2151" name="nargs" />
+          <variable citdl="str" line="2155" name="nargs_pattern" />
+        </scope>
+        <scope doc="# ================================== # Optional/Positional&#xA;adding methods # ==================================" ilk="function" line="1649" lineend="1678" name="add_subparsers" returns="parsers_class()" signature="add_subparsers(self, **kwargs)">
+          <variable citdl="_()" line="1658" name="description" />
+          <variable citdl="_()" line="1657" name="title" />
+          <variable citdl="ArgumentParser" ilk="argument" name="self" />
+          <variable citdl="parsers_class()" line="1674" name="action" />
+          <variable citdl="self._mutually_exclusive_groups" line="1668" name="groups" />
+          <variable attributes="kwargs" ilk="argument" name="kwargs" />
+          <variable citdl="self._get_positional_actions()" line="1667" name="positionals" />
+          <variable citdl="self._get_formatter()" line="1666" name="formatter" />
+          <variable citdl="self._pop_action_class()" line="1673" name="parsers_class" />
+        </scope>
+        <scope ilk="function" line="1742" lineend="1975" name="_parse_known_args" returns="tuple" signature="_parse_known_args(self, arg_strings, namespace)">
+          <variable citdl="set()" line="1787" name="seen_non_default_actions" />
+          <variable citdl="dict" line="1760" name="option_string_indices" />
+          <variable citdl="int" line="1910" name="max_option_string_index" />
+          <variable citdl="list" line="1968" name="names" />
+          <variable citdl="_get_positional_actions()" line="1884" name="positionals" />
+          <variable citdl="str.join()" line="1783" name="arg_strings_pattern" />
+          <variable citdl="action_conflicts.setdefault()" line="1753" name="conflicts" />
+          <scope ilk="function" line="1810" lineend="1880" name="consume_optional" returns="match_argument()" signature="consume_optional(start_index)">
+            <variable ilk="argument" name="start_index" />
+            <variable line="1813" name="option_tuple" />
+            <variable citdl="self._match_argument" line="1818" name="match_argument" />
+            <variable citdl="list" line="1819" name="action_tuples" />
+            <variable citdl="match_argument()" line="1830" name="arg_count" />
+            <variable citdl="self.prefix_chars" line="1835" name="chars" />
+            <variable line="1838" name="char" />
+            <variable line="1839" name="option_string" />
+            <variable citdl="list" line="1840" name="new_explicit_arg" />
+            <variable citdl="self._option_string_actions" line="1841" name="optionals_map" />
+            <variable line="1843" name="action" />
+            <variable citdl="list" line="1844" name="explicit_arg" />
+            <variable citdl="_()" line="1846" name="msg" />
+            <variable citdl="int" line="1852" name="stop" />
+            <variable citdl="list" line="1853" name="args" />
+            <variable citdl="int" line="1867" name="start" />
+            <variable citdl="list" line="1868" name="selected_patterns" />
+          </scope>
+          <variable citdl="min()" line="1916" name="next_option_string_index" />
+          <variable citdl="consume_positionals()" line="1921" name="positionals_end_index" />
+          <variable citdl="consume_positionals()" line="1908" name="start_index" />
+          <variable citdl="self._parse_optional()" line="1774" name="option_tuple" />
+          <variable citdl="consume_positionals()" line="1942" name="stop_index" />
+          <variable citdl="list" line="1761" name="arg_string_pattern_parts" />
+          <variable citdl="_get_action_name()" line="1956" name="name" />
+          <variable citdl="mutex_group._group_actions" line="1751" name="group_actions" />
+          <variable citdl="str" line="1776" name="pattern" />
+          <variable citdl="ArgumentParser" ilk="argument" name="self" />
+          <variable ilk="argument" name="namespace" />
+          <variable citdl="dict" line="1749" name="action_conflicts" />
+          <variable citdl="list" line="1934" name="strings" />
+          <variable citdl="iter()" line="1762" name="arg_strings_iter" />
+          <variable citdl="list" line="1907" name="extras" />
+          <scope ilk="function" line="1887" lineend="1903" name="consume_positionals" signature="consume_positionals(start_index)">
+            <variable ilk="argument" name="start_index" />
+            <variable citdl="self._match_arguments_partial" line="1889" name="match_partial" />
+            <variable citdl="list" line="1890" name="selected_pattern" />
+            <variable citdl="match_partial()" line="1891" name="arg_counts" />
+            <variable citdl="list" line="1896" name="args" />
+          </scope>
+          <scope ilk="function" line="1789" lineend="1807" name="take_action" signature="take_action(action, argument_strings, option_string=None)">
+            <variable ilk="argument" name="action" />
+            <variable ilk="argument" name="argument_strings" />
+            <variable ilk="argument" name="option_string" />
+            <variable citdl="self._get_values()" line="1791" name="argument_values" />
+            <variable citdl="_()" line="1800" name="msg" />
+            <variable citdl="_get_action_name()" line="1801" name="action_name" />
+          </scope>
+          <variable citdl="_()" line="1971" name="msg" />
+          <variable citdl="self._read_args_from_files()" ilk="argument" name="arg_strings" />
+          <variable citdl="set()" line="1786" name="seen_actions" />
+        </scope>
+        <scope ilk="function" line="2341" lineend="2345" name="_print_message" signature="_print_message(self, message, file=None)">
+          <variable citdl="ArgumentParser" ilk="argument" name="self" />
+          <variable ilk="argument" name="message" />
+          <variable citdl="_sys.stderr" ilk="argument" name="file" />
+        </scope>
+        <scope ilk="function" line="2333" lineend="2339" name="print_version" signature="print_version(self, file=None)">
+          <variable citdl="ArgumentParser" ilk="argument" name="self" />
+          <variable ilk="argument" name="file" />
+        </scope>
+        <scope ilk="function" line="1680" lineend="1685" name="_add_action" signature="_add_action(self, action)">
+          <variable ilk="argument" name="action" />
+          <variable citdl="ArgumentParser" ilk="argument" name="self" />
+        </scope>
+        <scope doc="# =============== # Exiting methods # ===============" ilk="function" line="2350" lineend="2353" name="exit" signature="exit(self, status=0, message=None)">
+          <variable citdl="int" ilk="argument" name="status" />
+          <variable citdl="ArgumentParser" ilk="argument" name="self" />
+          <variable ilk="argument" name="message" />
+        </scope>
+        <scope ilk="function" line="2104" lineend="2146" name="_get_option_tuples" returns="list" signature="_get_option_tuples(self, option_string)">
+          <variable ilk="argument" name="option_string" />
+          <variable line="2112" name="explicit_arg" />
+          <variable citdl="tuple" line="2119" name="tup" />
+          <variable citdl="self.prefix_chars" line="2109" name="chars" />
+          <variable citdl="list" line="2129" name="short_explicit_arg" />
+          <variable line="2112" name="option_prefix" />
+          <variable citdl="list" line="2128" name="short_option_prefix" />
+          <variable citdl="list" line="2105" name="result" />
+          <variable line="2118" name="action" />
+          <variable citdl="ArgumentParser" ilk="argument" name="self" />
+        </scope>
+        <scope doc="Prints a usage message incorporating the message to stderr&#xA;and exits." ilk="function" line="2355" lineend="2366" name="error" signature="error(message: string)">
+          <variable citdl="ArgumentParser" ilk="argument" name="self" />
+          <variable citdl="dict" line="2365" name="args" />
+          <variable ilk="argument" name="message" />
+        </scope>
+        <scope doc="# ===================== # Help-printing methods #&#xA;=====================" ilk="function" line="2323" lineend="2326" name="print_usage" signature="print_usage(self, file=None)">
+          <variable citdl="ArgumentParser" ilk="argument" name="self" />
+          <variable citdl="_sys.stdout" ilk="argument" name="file" />
+        </scope>
+        <variable attributes="__instancevar__" citdl="HelpFormatter" line="1592" name="formatter_class" />
+        <variable attributes="protected __instancevar__" citdl="__init__.add_group()" line="1598" name="_optionals" />
+        <variable attributes="__instancevar__" line="1593" name="fromfile_prefix_chars" />
+        <variable attributes="protected __instancevar__" citdl="__init__.add_group()" line="1597" name="_positionals" />
+        <variable attributes="__instancevar__" citdl="_os.path.basename()" line="1588" name="prog" />
+        <variable attributes="__instancevar__" line="1591" name="version" />
+        <variable attributes="__instancevar__" citdl="True" line="1594" name="add_help" />
+        <variable attributes="__instancevar__" line="1589" name="usage" />
+        <variable attributes="__instancevar__" line="1590" name="epilog" />
+        <variable attributes="protected __instancevar__" citdl="self.add_argument_group()" line="1599" name="_subparsers" />
+      </scope>
+      <scope classrefs="Exception" doc="An error from trying to convert a command line string to a type.&#xA;" ilk="class" line="703" lineend="705" name="ArgumentTypeError" />
+      <scope classrefs="object" doc="Factory for creating file object types&#xA;Instances of FileType are typically passed as type= arguments to the ArgumentParser add_argument() method.  Keyword Arguments: - mode -- A string indicating how the file is to be opened. Accepts the same values as the builtin open() function. - bufsize -- The file&apos;s desired buffer size. Accepts the same values as the builtin open() function." ilk="class" line="1112" lineend="1150" name="FileType">
+        <scope ilk="function" line="1147" lineend="1150" name="__repr__" returns="tuple" signature="__repr__(self)">
+          <variable citdl="FileType" ilk="argument" name="self" />
+          <variable citdl="tuple" line="1148" name="args" />
+          <variable citdl="str.join()" line="1149" name="args_str" />
+        </scope>
+        <scope ilk="function" line="1129" lineend="1145" name="__call__" returns="open()" signature="__call__(self, string)">
+          <variable citdl="str" line="1137" name="msg" />
+          <variable citdl="FileType" ilk="argument" name="self" />
+          <variable citdl="_()" line="1144" name="message" />
+          <variable ilk="argument" name="string" />
+        </scope>
+        <scope ilk="function" line="1125" lineend="1127" name="__init__" signature="__init__(self, mode=&apos;r&apos;, bufsize=-1)">
+          <variable citdl="FileType" ilk="argument" name="self" />
+          <variable citdl="int" ilk="argument" name="bufsize" />
+          <variable citdl="str" ilk="argument" name="mode" />
+        </scope>
+        <variable attributes="protected __instancevar__" citdl="int" line="1127" name="_bufsize" />
+        <variable attributes="protected __instancevar__" citdl="str" line="1126" name="_mode" />
+      </scope>
+      <scope classrefs="object" doc="Formatter for generating usage messages and argument help strings.&#xA;Only the name of this class is considered a public API. All the methods provided by the class are considered an implementation detail." ilk="class" line="147" lineend="624" name="HelpFormatter">
+        <scope ilk="function" line="614" lineend="616" name="_split_lines" returns="_textwrap.wrap()" signature="_split_lines(self, text, width)">
+          <variable ilk="argument" name="text" />
+          <variable citdl="HelpFormatter" ilk="argument" name="self" />
+          <variable ilk="argument" name="width" />
+        </scope>
+        <scope ilk="function" line="590" lineend="601" name="_expand_help" returns="dict()" signature="_expand_help(self, action)">
+          <variable ilk="argument" name="action" />
+          <variable citdl="HelpFormatter" ilk="argument" name="self" />
+          <variable citdl="str.join()" line="599" name="choices_str" />
+          <variable citdl="dict()" line="591" name="params" />
+        </scope>
+        <scope ilk="function" line="382" lineend="476" name="_format_actions_usage" returns="str.join()" signature="_format_actions_usage(self, actions, groups)">
+          <variable citdl="dict" line="385" name="inserts" />
+          <variable citdl="actions.index()" line="392" name="end" />
+          <variable citdl="self._format_args()" line="449" name="args_string" />
+          <variable citdl="set()" line="384" name="group_actions" />
+          <variable citdl="_re.sub()" line="464" name="text" />
+          <variable citdl="HelpFormatter" ilk="argument" name="self" />
+          <variable ilk="argument" name="actions" />
+          <variable citdl="actions.index()" line="388" name="start" />
+          <variable citdl="action.dest.upper()" line="448" name="default" />
+          <variable citdl="list" line="412" name="parts" />
+          <variable ilk="argument" name="groups" />
+          <variable citdl="str" line="468" name="close" />
+          <variable line="438" name="option_string" />
+          <variable citdl="str" line="426" name="part" />
+          <variable citdl="str" line="467" name="open" />
+        </scope>
+        <scope ilk="function" line="290" lineend="380" name="_format_usage" returns="tuple" signature="_format_usage(self, usage, actions, groups, prefix)">
+          <variable citdl="list" line="308" name="positionals" />
+          <variable citdl="list" line="307" name="optionals" />
+          <variable citdl="self._format_actions_usage" line="316" name="format" />
+          <variable ilk="argument" name="actions" />
+          <variable citdl="_re.findall()" line="329" name="pos_parts" />
+          <variable citdl="dict()" line="304" name="prog" />
+          <variable citdl="_()" ilk="argument" name="prefix" />
+          <variable ilk="argument" name="groups" />
+          <scope ilk="function" line="334" lineend="352" name="get_lines" returns="list" signature="get_lines(parts, indent, prefix=None)">
+            <variable ilk="argument" name="parts" />
+            <variable ilk="argument" name="indent" />
+            <variable ilk="argument" name="prefix" />
+            <variable citdl="list" line="335" name="lines" />
+            <variable citdl="list" line="336" name="line" />
+            <variable citdl="len()" line="338" name="line_len" />
+          </scope>
+          <variable citdl="format()" line="317" name="action_usage" />
+          <variable citdl="str" line="325" name="part_regexp" />
+          <variable citdl="len()" line="356" name="indent" />
+          <variable citdl="format()" line="326" name="opt_usage" />
+          <variable citdl="_re.findall()" line="328" name="opt_parts" />
+          <variable citdl="HelpFormatter" ilk="argument" name="self" />
+          <variable citdl="get_lines()" line="358" name="lines" />
+          <variable citdl="format()" line="327" name="pos_usage" />
+          <variable citdl="_re.findall()" line="368" name="parts" />
+          <variable citdl="int()" line="321" name="text_width" />
+          <variable citdl="dict()" ilk="argument" name="usage" />
+        </scope>
+        <scope ilk="function" line="532" lineend="553" name="_format_action_invocation" returns="str.join()" signature="_format_action_invocation(self, action)">
+          <variable ilk="argument" name="action" />
+          <variable citdl="list" line="538" name="parts" />
+          <variable citdl="self._format_args()" line="549" name="args_string" />
+          <variable citdl="action.dest.upper()" line="548" name="default" />
+          <variable citdl="HelpFormatter" ilk="argument" name="self" />
+          <variable line="534" name="metavar" />
+        </scope>
+        <scope ilk="function" line="228" lineend="229" name="_add_item" signature="_add_item(self, func, args)">
+          <variable citdl="HelpFormatter" ilk="argument" name="self" />
+          <variable ilk="argument" name="args" />
+          <variable ilk="argument" name="func" />
+        </scope>
+        <scope doc="# ======================== # Message building methods #&#xA;========================" ilk="function" line="234" lineend="238" name="start_section" signature="start_section(self, heading)">
+          <variable citdl="HelpFormatter" ilk="argument" name="self" />
+          <variable ilk="argument" name="heading" />
+          <variable citdl="_Section" line="236" name="section" />
+        </scope>
+        <scope doc="# =============================== # Section and indentation&#xA;methods # ===============================" ilk="function" line="186" lineend="188" name="_indent" signature="_indent(self)">
+          <variable citdl="HelpFormatter" ilk="argument" name="self" />
+        </scope>
+        <scope ilk="function" line="623" lineend="624" name="_get_help_string" returns="action.help" signature="_get_help_string(self, action)">
+          <variable ilk="argument" name="action" />
+          <variable citdl="HelpFormatter" ilk="argument" name="self" />
+        </scope>
+        <scope ilk="function" line="618" lineend="621" name="_fill_text" returns="_textwrap.fill()" signature="_fill_text(self, text, width, indent)">
+          <variable ilk="argument" name="text" />
+          <variable citdl="HelpFormatter" ilk="argument" name="self" />
+          <variable ilk="argument" name="indent" />
+          <variable ilk="argument" name="width" />
+        </scope>
+        <scope ilk="function" line="253" lineend="269" name="add_argument" signature="add_argument(self, action)">
+          <variable citdl="max()" line="263" name="invocation_length" />
+          <variable citdl="max()" line="264" name="action_length" />
+          <variable citdl="self._format_action_invocation" line="257" name="get_invocation" />
+          <variable ilk="argument" name="action" />
+          <variable citdl="HelpFormatter" ilk="argument" name="self" />
+          <variable citdl="list" line="258" name="invocations" />
+        </scope>
+        <scope ilk="function" line="154" lineend="181" name="__init__" signature="__init__(self, prog, indent_increment=2, max_help_position=24, width=None)">
+          <variable ilk="argument" name="prog" />
+          <variable citdl="int" ilk="argument" name="indent_increment" />
+          <variable citdl="HelpFormatter" ilk="argument" name="self" />
+          <variable citdl="int" ilk="argument" name="width" />
+          <variable citdl="int" ilk="argument" name="max_help_position" />
+        </scope>
+        <scope ilk="function" line="248" lineend="251" name="add_usage" signature="add_usage(self, usage, actions, groups, prefix=None)">
+          <variable ilk="argument" name="prefix" />
+          <variable ilk="argument" name="groups" />
+          <variable ilk="argument" name="usage" />
+          <variable citdl="HelpFormatter" ilk="argument" name="self" />
+          <variable citdl="tuple" line="250" name="args" />
+          <variable ilk="argument" name="actions" />
+        </scope>
+        <scope ilk="function" line="571" lineend="588" name="_format_args" returns="HelpFormatter._format_args.get_metavar()" signature="_format_args(self, action, default_metavar)">
+          <variable citdl="str" line="574" name="result" />
+          <variable citdl="list" line="586" name="formats" />
+          <variable ilk="argument" name="action" />
+          <variable citdl="HelpFormatter" ilk="argument" name="self" />
+          <variable citdl="_metavar_formatter()" line="572" name="get_metavar" />
+          <variable ilk="argument" name="default_metavar" />
+        </scope>
+        <scope ilk="function" line="478" lineend="483" name="_format_text" returns="self._fill_text()" signature="_format_text(self, text)">
+          <variable citdl="dict()" ilk="argument" name="text" />
+          <variable citdl="HelpFormatter" ilk="argument" name="self" />
+          <variable citdl="str" line="482" name="indent" />
+          <variable citdl="int()" line="481" name="text_width" />
+        </scope>
+        <scope doc="# ======================= # Help-formatting methods #&#xA;=======================" ilk="function" line="278" lineend="283" name="format_help" returns="str" signature="format_help(self)">
+          <variable citdl="HelpFormatter" ilk="argument" name="self" />
+          <variable citdl="help.strip()" line="279" name="help" />
+        </scope>
+        <scope ilk="function" line="244" lineend="246" name="add_text" signature="add_text(self, text)">
+          <variable ilk="argument" name="text" />
+          <variable citdl="HelpFormatter" ilk="argument" name="self" />
+        </scope>
+        <scope ilk="function" line="271" lineend="273" name="add_arguments" signature="add_arguments(self, actions)">
+          <variable citdl="HelpFormatter" ilk="argument" name="self" />
+          <variable ilk="argument" name="actions" />
+        </scope>
+        <scope ilk="function" line="240" lineend="242" name="end_section" signature="end_section(self)">
+          <variable citdl="HelpFormatter" ilk="argument" name="self" />
+        </scope>
+        <scope ilk="function" line="603" lineend="612" name="_iter_indented_subactions" signature="_iter_indented_subactions(self, action)">
+          <variable ilk="argument" name="action" />
+          <variable citdl="HelpFormatter" ilk="argument" name="self" />
+          <variable citdl="action._get_subactions" line="605" name="get_subactions" />
+        </scope>
+        <scope ilk="function" line="285" lineend="288" name="_join_parts" returns="str.join()" signature="_join_parts(self, part_strings)">
+          <variable ilk="argument" name="part_strings" />
+          <variable citdl="HelpFormatter" ilk="argument" name="self" />
+        </scope>
+        <scope ilk="function" line="555" lineend="569" name="_metavar_formatter" returns="HelpFormatter._metavar_formatter.format" signature="_metavar_formatter(self, action, default_metavar)">
+          <variable citdl="list" line="559" name="choice_strs" />
+          <variable citdl="action.metavar" line="557" name="result" />
+          <scope ilk="function" line="564" lineend="568" name="format" returns="tuple" signature="format(tuple_size)">
+            <variable ilk="argument" name="tuple_size" />
+          </scope>
+          <variable ilk="argument" name="action" />
+          <variable citdl="HelpFormatter" ilk="argument" name="self" />
+          <variable ilk="argument" name="default_metavar" />
+        </scope>
+        <scope ilk="function" line="485" lineend="530" name="_format_action" returns="HelpFormatter._join_parts()" signature="_format_action(self, action)">
+          <variable citdl="min()" line="490" name="action_width" />
+          <variable citdl="tuple" line="495" name="tup" />
+          <variable citdl="int" line="502" name="indent_first" />
+          <variable citdl="HelpFormatter" ilk="argument" name="self" />
+          <variable citdl="min()" line="487" name="help_position" />
+          <variable citdl="self._expand_help()" line="515" name="help_text" />
+          <variable citdl="list" line="511" name="parts" />
+          <variable ilk="argument" name="action" />
+          <variable citdl="self._split_lines()" line="516" name="help_lines" />
+          <variable citdl="min()" line="489" name="help_width" />
+          <variable citdl="str" line="491" name="action_header" />
+        </scope>
+        <scope ilk="function" line="190" lineend="193" name="_dedent" signature="_dedent(self)">
+          <variable citdl="HelpFormatter" ilk="argument" name="self" />
+        </scope>
+        <variable attributes="protected __instancevar__" citdl="int" line="173" name="_current_indent" />
+        <variable attributes="protected __instancevar__" citdl="int" line="174" name="_level" />
+        <variable attributes="protected __instancevar__" citdl="int" line="169" name="_indent_increment" />
+        <variable attributes="protected __instancevar__" citdl="int" line="175" name="_action_max_length" />
+        <scope attributes="protected" classrefs="object" ilk="class" line="195" lineend="226" name="_Section">
+          <scope attributes="__ctor__" ilk="function" line="197" lineend="201" name="__init__" signature="_Section(formatter, parent, heading=None)">
+            <variable citdl="_Section" ilk="argument" name="self" />
+            <variable ilk="argument" name="formatter" />
+            <variable ilk="argument" name="parent" />
+            <variable ilk="argument" name="heading" />
+          </scope>
+          <variable attributes="__instancevar__" line="198" name="formatter" />
+          <variable attributes="__instancevar__" line="199" name="parent" />
+          <variable attributes="__instancevar__" line="200" name="heading" />
+          <variable attributes="__instancevar__" citdl="list" line="201" name="items" />
+          <scope ilk="function" line="203" lineend="226" name="format_help" returns="str" signature="format_help()">
+            <variable citdl="_Section" ilk="argument" name="self" />
+            <variable citdl="self.formatter._join_parts" line="207" name="join" />
+            <variable citdl="join()" line="210" name="item_help" />
+            <variable citdl="self.formatter._current_indent" line="220" name="current_indent" />
+            <variable citdl="str" line="221" name="heading" />
+          </scope>
+        </scope>
+        <variable attributes="protected __instancevar__" citdl="int" line="170" name="_max_help_position" />
+        <variable attributes="protected __instancevar__" citdl="int" line="171" name="_width" />
+        <variable attributes="protected __instancevar__" citdl="self._Section()" line="177" name="_root_section" />
+        <variable attributes="protected __instancevar__" citdl="_re.compile()" line="181" name="_long_break_matcher" />
+        <variable attributes="protected __instancevar__" line="168" name="_prog" />
+        <variable attributes="protected __instancevar__" citdl="self._current_section.parent" line="178" name="_current_section" />
+        <variable attributes="protected __instancevar__" citdl="_re.compile()" line="180" name="_whitespace_matcher" />
+      </scope>
+      <scope classrefs="_AttributeHolder" doc="Simple object for storing attributes.&#xA;Implements equality by attribute names and values, and provides a simple string representation." ilk="class" line="1156" lineend="1174" name="Namespace">
+        <scope ilk="function" line="1170" lineend="1171" name="__ne__" returns="bool" signature="__ne__(self, other)">
+          <variable citdl="Namespace" ilk="argument" name="self" />
+          <variable ilk="argument" name="other" />
+        </scope>
+        <scope ilk="function" line="1173" lineend="1174" name="__contains__" returns="bool" signature="__contains__(self, key)">
+          <variable citdl="Namespace" ilk="argument" name="self" />
+          <variable ilk="argument" name="key" />
+        </scope>
+        <scope ilk="function" line="1167" lineend="1168" name="__eq__" returns="bool" signature="__eq__(self, other)">
+          <variable citdl="Namespace" ilk="argument" name="self" />
+          <variable ilk="argument" name="other" />
+        </scope>
+        <scope ilk="function" line="1163" lineend="1165" name="__init__" signature="__init__(self, **kwargs)">
+          <variable citdl="Namespace" ilk="argument" name="self" />
+          <variable attributes="kwargs" ilk="argument" name="kwargs" />
+        </scope>
+      </scope>
+      <variable citdl="str" line="103" name="ONE_OR_MORE" />
+      <variable citdl="str" line="101" name="OPTIONAL" />
+      <variable citdl="str" line="104" name="PARSER" />
+      <variable citdl="str" line="105" name="REMAINDER" />
+      <scope classrefs="HelpFormatter" doc="Help message formatter which retains any formatting in descriptions.&#xA;Only the name of this class is considered a public API. All the methods provided by the class are considered an implementation detail." ilk="class" line="627" lineend="635" name="RawDescriptionHelpFormatter">
+        <scope ilk="function" line="634" lineend="635" name="_fill_text" returns="str.join()" signature="_fill_text(self, text, width, indent)">
+          <variable ilk="argument" name="text" />
+          <variable citdl="RawDescriptionHelpFormatter" ilk="argument" name="self" />
+          <variable ilk="argument" name="indent" />
+          <variable ilk="argument" name="width" />
+        </scope>
+      </scope>
+      <scope classrefs="RawDescriptionHelpFormatter" doc="Help message formatter which retains formatting of all help text.&#xA;Only the name of this class is considered a public API. All the methods provided by the class are considered an implementation detail." ilk="class" line="638" lineend="646" name="RawTextHelpFormatter">
+        <scope ilk="function" line="645" lineend="646" name="_split_lines" returns="text.splitlines()" signature="_split_lines(self, text, width)">
+          <variable ilk="argument" name="text" />
+          <variable citdl="RawTextHelpFormatter" ilk="argument" name="self" />
+          <variable ilk="argument" name="width" />
+        </scope>
+      </scope>
+      <variable citdl="str" line="99" name="SUPPRESS" />
+      <variable citdl="str" line="102" name="ZERO_OR_MORE" />
+      <variable citdl="list" line="65" name="__all__" />
+      <import module="_collections" />
+      <import module="_copy" />
+      <import module="_os" />
+      <import module="_re" />
+      <import module="_sys" />
+      <import module="_textwrap" />
+      <scope ilk="function" name="ngettext" signature="ngettext(msgid1, msgid2, n)" />
+      <scope attributes="protected __hidden__" classrefs="object" ilk="class" line="1177" lineend="1481" name="_ActionsContainer">
+        <scope attributes="__ctor__" ilk="function" line="1179" lineend="1226" name="__init__" signature="_ActionsContainer(description, prefix_chars, argument_default, conflict_handler)">
+          <variable citdl="_ActionsContainer" ilk="argument" name="self" />
+          <variable ilk="argument" name="description" />
+          <variable ilk="argument" name="prefix_chars" />
+          <variable ilk="argument" name="argument_default" />
+          <variable ilk="argument" name="conflict_handler" />
+        </scope>
+        <variable attributes="__instancevar__" line="1186" name="description" />
+        <variable attributes="__instancevar__" line="1187" name="argument_default" />
+        <variable attributes="__instancevar__" line="1188" name="prefix_chars" />
+        <variable attributes="__instancevar__" line="1189" name="conflict_handler" />
+        <variable attributes="protected __instancevar__" citdl="dict" line="1192" name="_registries" />
+        <variable attributes="protected __instancevar__" citdl="list" line="1211" name="_actions" />
+        <variable attributes="protected __instancevar__" citdl="dict" line="1212" name="_option_string_actions" />
+        <variable attributes="protected __instancevar__" citdl="list" line="1215" name="_action_groups" />
+        <variable attributes="protected __instancevar__" citdl="list" line="1216" name="_mutually_exclusive_groups" />
+        <variable attributes="protected __instancevar__" citdl="dict" line="1219" name="_defaults" />
+        <variable attributes="protected __instancevar__" citdl="_re.compile()" line="1222" name="_negative_number_matcher" />
+        <variable attributes="protected __instancevar__" citdl="list" line="1226" name="_has_negative_number_optionals" />
+        <scope ilk="function" line="1231" lineend="1233" name="register" signature="register(registry_name, value, object)">
+          <variable citdl="_ActionsContainer" ilk="argument" name="self" />
+          <variable ilk="argument" name="registry_name" />
+          <variable ilk="argument" name="value" />
+          <variable ilk="argument" name="object" />
+          <variable citdl="self._registries.setdefault()" line="1232" name="registry" />
+        </scope>
+        <scope attributes="protected" ilk="function" line="1235" lineend="1236" name="_registry_get" signature="_registry_get(registry_name, value, default=None)">
+          <variable citdl="_ActionsContainer" ilk="argument" name="self" />
+          <variable ilk="argument" name="registry_name" />
+          <variable ilk="argument" name="value" />
+          <variable ilk="argument" name="default" />
+        </scope>
+        <scope ilk="function" line="1241" lineend="1248" name="set_defaults" signature="set_defaults(**kwargs)">
+          <variable citdl="_ActionsContainer" ilk="argument" name="self" />
+          <variable attributes="kwargs" ilk="argument" name="kwargs" />
+        </scope>
+        <scope ilk="function" line="1250" lineend="1254" name="get_default" returns="self._defaults.get()" signature="get_default(dest)">
+          <variable citdl="_ActionsContainer" ilk="argument" name="self" />
+          <variable ilk="argument" name="dest" />
+        </scope>
+        <scope doc="add_argument(option_string, option_string, ..., name=value, ...)" ilk="function" line="1260" lineend="1305" name="add_argument" returns="self._add_action()" signature="add_argument(dest, ..., name=value, ...)&#xA;add_argument(option_string, option_string, ..., name=value, ...)">
+          <variable citdl="_ActionsContainer" ilk="argument" name="self" />
+          <variable attributes="varargs" ilk="argument" name="args" />
+          <variable attributes="kwargs" citdl="self._get_optional_kwargs()" ilk="argument" name="kwargs" />
+          <variable line="1269" name="chars" />
+          <variable line="1281" name="dest" />
+          <variable citdl="self._pop_action_class()" line="1288" name="action_class" />
+          <variable citdl="action_class()" line="1291" name="action" />
+          <variable citdl="_registry_get()" line="1294" name="type_func" />
+        </scope>
+        <scope ilk="function" line="1307" lineend="1310" name="add_argument_group" returns="_ArgumentGroup()" signature="add_argument_group(*args, **kwargs)">
+          <variable citdl="_ActionsContainer" ilk="argument" name="self" />
+          <variable attributes="varargs" ilk="argument" name="args" />
+          <variable attributes="kwargs" ilk="argument" name="kwargs" />
+          <variable citdl="_ArgumentGroup()" line="1308" name="group" />
+        </scope>
+        <scope ilk="function" line="1312" lineend="1315" name="add_mutually_exclusive_group" returns="_MutuallyExclusiveGroup()" signature="add_mutually_exclusive_group(**kwargs)">
+          <variable citdl="_ActionsContainer" ilk="argument" name="self" />
+          <variable attributes="kwargs" ilk="argument" name="kwargs" />
+          <variable citdl="_MutuallyExclusiveGroup()" line="1313" name="group" />
+        </scope>
+        <scope attributes="protected" ilk="function" line="1317" lineend="1336" name="_add_action" signature="_add_action(action)">
+          <variable citdl="_ActionsContainer" ilk="argument" name="self" />
+          <variable ilk="argument" name="action" />
+        </scope>
+        <scope attributes="protected" ilk="function" line="1338" lineend="1339" name="_remove_action" signature="_remove_action(action)">
+          <variable citdl="_ActionsContainer" ilk="argument" name="self" />
+          <variable ilk="argument" name="action" />
+        </scope>
+        <scope attributes="protected" ilk="function" line="1341" lineend="1379" name="_add_container_actions" signature="_add_container_actions(container)">
+          <variable citdl="_ActionsContainer" ilk="argument" name="self" />
+          <variable ilk="argument" name="container" />
+          <variable citdl="dict" line="1343" name="title_group_map" />
+          <variable citdl="_()" line="1346" name="msg" />
+          <variable citdl="dict" line="1351" name="group_map" />
+          <variable citdl="add_mutually_exclusive_group()" line="1370" name="mutex_group" />
+        </scope>
+        <scope attributes="protected" ilk="function" line="1381" lineend="1395" name="_get_positional_kwargs" returns="dict()" signature="_get_positional_kwargs(dest, **kwargs)">
+          <variable citdl="_ActionsContainer" ilk="argument" name="self" />
+          <variable ilk="argument" name="dest" />
+          <variable attributes="kwargs" ilk="argument" name="kwargs" />
+          <variable citdl="_()" line="1384" name="msg" />
+        </scope>
+        <scope attributes="protected" ilk="function" line="1397" lineend="1431" name="_get_optional_kwargs" returns="dict()" signature="_get_optional_kwargs(*args, **kwargs)">
+          <variable citdl="_ActionsContainer" ilk="argument" name="self" />
+          <variable attributes="varargs" citdl="dict" ilk="argument" name="args" />
+          <variable attributes="kwargs" ilk="argument" name="kwargs" />
+          <variable citdl="list" line="1399" name="option_strings" />
+          <variable citdl="list" line="1400" name="long_option_strings" />
+          <variable citdl="_()" line="1406" name="msg" />
+          <variable citdl="kwargs.pop()" line="1418" name="dest" />
+          <variable line="1421" name="dest_option_string" />
+        </scope>
+        <scope attributes="protected" ilk="function" line="1433" lineend="1435" name="_pop_action_class" returns="_ActionsContainer._registry_get()" signature="_pop_action_class(kwargs, default=None)">
+          <variable citdl="_ActionsContainer" ilk="argument" name="self" />
+          <variable ilk="argument" name="kwargs" />
+          <variable ilk="argument" name="default" />
+          <variable citdl="kwargs.pop()" line="1434" name="action" />
+        </scope>
+        <scope attributes="protected" ilk="function" line="1437" lineend="1444" name="_get_handler" returns="getattr()" signature="_get_handler()">
+          <variable citdl="_ActionsContainer" ilk="argument" name="self" />
+          <variable citdl="str" line="1439" name="handler_func_name" />
+          <variable citdl="_()" line="1443" name="msg" />
+        </scope>
+        <scope attributes="protected" ilk="function" line="1446" lineend="1458" name="_check_conflict" signature="_check_conflict(action)">
+          <variable citdl="_ActionsContainer" ilk="argument" name="self" />
+          <variable ilk="argument" name="action" />
+          <variable citdl="list" line="1449" name="confl_optionals" />
+          <variable line="1452" name="confl_optional" />
+          <variable citdl="_get_handler()" line="1457" name="conflict_handler" />
+        </scope>
+        <scope attributes="protected" ilk="function" line="1460" lineend="1467" name="_handle_conflict_error" signature="_handle_conflict_error(action, conflicting_actions)">
+          <variable citdl="_ActionsContainer" ilk="argument" name="self" />
+          <variable ilk="argument" name="action" />
+          <variable ilk="argument" name="conflicting_actions" />
+          <variable citdl="ngettext()" line="1461" name="message" />
+          <variable citdl="str.join()" line="1464" name="conflict_string" />
+        </scope>
+        <scope attributes="protected" ilk="function" line="1469" lineend="1481" name="_handle_conflict_resolve" signature="_handle_conflict_resolve(action, conflicting_actions)">
+          <variable citdl="_ActionsContainer" ilk="argument" name="self" />
+          <variable ilk="argument" name="action" />
+          <variable ilk="argument" name="conflicting_actions" />
+        </scope>
+      </scope>
+      <scope attributes="protected __hidden__" classrefs="Action" ilk="class" line="979" lineend="995" name="_HelpAction">
+        <scope attributes="__ctor__" ilk="function" line="981" lineend="991" name="__init__" signature="_HelpAction(option_strings, dest=SUPPRESS, default=SUPPRESS, help=None)">
+          <variable citdl="_HelpAction" ilk="argument" name="self" />
+          <variable ilk="argument" name="option_strings" />
+          <variable citdl="str" ilk="argument" name="dest" />
+          <variable citdl="str" ilk="argument" name="default" />
+          <variable ilk="argument" name="help" />
+        </scope>
+        <scope ilk="function" line="993" lineend="995" name="__call__" signature="__call__(parser, namespace, values, option_string=None)">
+          <variable citdl="_HelpAction" ilk="argument" name="self" />
+          <variable ilk="argument" name="parser" />
+          <variable ilk="argument" name="namespace" />
+          <variable ilk="argument" name="values" />
+          <variable ilk="argument" name="option_string" />
+        </scope>
+      </scope>
+      <scope attributes="protected __hidden__" ilk="function" line="95" lineend="96" name="_callable" returns="hasattr()" signature="_callable(obj)">
+        <variable ilk="argument" name="obj" />
+      </scope>
+      <variable attributes="protected __hidden__" citdl="str" line="106" name="_UNRECOGNIZED_ARGS_ATTR" />
+      <scope attributes="protected __hidden__" classrefs="Action" ilk="class" line="932" lineend="955" name="_AppendConstAction">
+        <scope attributes="__ctor__" ilk="function" line="934" lineend="950" name="__init__" signature="_AppendConstAction(option_strings, dest, const, default=None, required=False, help=None, metavar=None)">
+          <variable citdl="_AppendConstAction" ilk="argument" name="self" />
+          <variable ilk="argument" name="option_strings" />
+          <variable ilk="argument" name="dest" />
+          <variable ilk="argument" name="const" />
+          <variable ilk="argument" name="default" />
+          <variable citdl="False" ilk="argument" name="required" />
+          <variable ilk="argument" name="help" />
+          <variable ilk="argument" name="metavar" />
+        </scope>
+        <scope ilk="function" line="952" lineend="955" name="__call__" signature="__call__(parser, namespace, values, option_string=None)">
+          <variable citdl="_AppendConstAction" ilk="argument" name="self" />
+          <variable ilk="argument" name="parser" />
+          <variable ilk="argument" name="namespace" />
+          <variable ilk="argument" name="values" />
+          <variable ilk="argument" name="option_string" />
+          <variable citdl="_copy.copy()" line="953" name="items" />
+        </scope>
+      </scope>
+      <scope attributes="protected __hidden__" classrefs="_ActionsContainer" ilk="class" line="1484" lineend="1515" name="_ArgumentGroup">
+        <scope attributes="__ctor__" ilk="function" line="1486" lineend="1506" name="__init__" signature="_ArgumentGroup(container, title=None, description=None, **kwargs)">
+          <variable citdl="_ArgumentGroup" ilk="argument" name="self" />
+          <variable ilk="argument" name="container" />
+          <variable ilk="argument" name="title" />
+          <variable ilk="argument" name="description" />
+          <variable attributes="kwargs" ilk="argument" name="kwargs" />
+          <variable citdl="kwargs.setdefault" line="1488" name="update" />
+          <variable line="1492" name="super_init" />
+        </scope>
+        <variable attributes="__instancevar__" line="1496" name="title" />
+        <variable attributes="protected __instancevar__" citdl="list" line="1497" name="_group_actions" />
+        <variable attributes="protected __instancevar__" citdl="container._registries" line="1500" name="_registries" />
+        <variable attributes="protected __instancevar__" citdl="container._actions" line="1501" name="_actions" />
+        <variable attributes="protected __instancevar__" citdl="container._option_string_actions" line="1502" name="_option_string_actions" />
+        <variable attributes="protected __instancevar__" citdl="container._defaults" line="1503" name="_defaults" />
+        <variable attributes="protected __instancevar__" citdl="container._has_negative_number_optionals" line="1504" name="_has_negative_number_optionals" />
+        <variable attributes="protected __instancevar__" citdl="container._mutually_exclusive_groups" line="1506" name="_mutually_exclusive_groups" />
+        <scope attributes="protected" ilk="function" line="1508" lineend="1511" name="_add_action" signature="_add_action(action)">
+          <variable citdl="_ArgumentGroup" ilk="argument" name="self" />
+          <variable ilk="argument" name="action" />
+        </scope>
+        <scope attributes="protected" ilk="function" line="1513" lineend="1515" name="_remove_action" signature="_remove_action(action)">
+          <variable citdl="_ArgumentGroup" ilk="argument" name="self" />
+          <variable ilk="argument" name="action" />
+        </scope>
+      </scope>
+      <scope attributes="protected __hidden__" classrefs="Action" ilk="class" line="958" lineend="976" name="_CountAction">
+        <scope attributes="__ctor__" ilk="function" line="960" lineend="972" name="__init__" signature="_CountAction(option_strings, dest, default=None, required=False, help=None)">
+          <variable citdl="_CountAction" ilk="argument" name="self" />
+          <variable ilk="argument" name="option_strings" />
+          <variable ilk="argument" name="dest" />
+          <variable ilk="argument" name="default" />
+          <variable citdl="False" ilk="argument" name="required" />
+          <variable ilk="argument" name="help" />
+        </scope>
+        <scope ilk="function" line="974" lineend="976" name="__call__" signature="__call__(parser, namespace, values, option_string=None)">
+          <variable citdl="_CountAction" ilk="argument" name="self" />
+          <variable ilk="argument" name="parser" />
+          <variable ilk="argument" name="namespace" />
+          <variable ilk="argument" name="values" />
+          <variable ilk="argument" name="option_string" />
+          <variable citdl="_ensure_value()" line="975" name="new_count" />
+        </scope>
+      </scope>
+      <scope attributes="protected __hidden__" classrefs="Action" ilk="class" line="803" lineend="835" name="_StoreAction">
+        <scope attributes="__ctor__" ilk="function" line="805" lineend="832" name="__init__" signature="_StoreAction(option_strings, dest, nargs=None, const=None, default=None, type=None, choices=None, required=False, help=None, metavar=None)">
+          <variable citdl="_StoreAction" ilk="argument" name="self" />
+          <variable ilk="argument" name="option_strings" />
+          <variable ilk="argument" name="dest" />
+          <variable ilk="argument" name="nargs" />
+          <variable ilk="argument" name="const" />
+          <variable ilk="argument" name="default" />
+          <variable ilk="argument" name="type" />
+          <variable ilk="argument" name="choices" />
+          <variable citdl="False" ilk="argument" name="required" />
+          <variable ilk="argument" name="help" />
+          <variable ilk="argument" name="metavar" />
+        </scope>
+        <scope ilk="function" line="834" lineend="835" name="__call__" signature="__call__(parser, namespace, values, option_string=None)">
+          <variable citdl="_StoreAction" ilk="argument" name="self" />
+          <variable ilk="argument" name="parser" />
+          <variable ilk="argument" name="namespace" />
+          <variable ilk="argument" name="values" />
+          <variable ilk="argument" name="option_string" />
+        </scope>
+      </scope>
+      <scope attributes="protected __hidden__" classrefs="Action" ilk="class" line="998" lineend="1020" name="_VersionAction">
+        <scope attributes="__ctor__" ilk="function" line="1000" lineend="1012" name="__init__" signature="_VersionAction(option_strings, version=None, dest=SUPPRESS, default=SUPPRESS, help=&quot;show program&apos;s version number and exit&quot;)">
+          <variable citdl="_VersionAction" ilk="argument" name="self" />
+          <variable ilk="argument" name="option_strings" />
+          <variable ilk="argument" name="version" />
+          <variable citdl="str" ilk="argument" name="dest" />
+          <variable citdl="str" ilk="argument" name="default" />
+          <variable citdl="str" ilk="argument" name="help" />
+        </scope>
+        <variable attributes="__instancevar__" line="1012" name="version" />
+        <scope ilk="function" line="1014" lineend="1020" name="__call__" signature="__call__(parser, namespace, values, option_string=None)">
+          <variable citdl="_VersionAction" ilk="argument" name="self" />
+          <variable ilk="argument" name="parser" />
+          <variable ilk="argument" name="namespace" />
+          <variable ilk="argument" name="values" />
+          <variable ilk="argument" name="option_string" />
+          <variable citdl="parser.version" line="1015" name="version" />
+          <variable citdl="parser._get_formatter()" line="1018" name="formatter" />
+        </scope>
+      </scope>
+      <scope attributes="protected __hidden__" classrefs="Action" ilk="class" line="1023" lineend="1105" name="_SubParsersAction">
+        <scope attributes="protected" classrefs="Action" ilk="class" line="1025" lineend="1033" name="_ChoicesPseudoAction">
+          <scope attributes="__ctor__" ilk="function" line="1027" lineend="1033" name="__init__" signature="_ChoicesPseudoAction(name, aliases, help)">
+            <variable citdl="_ChoicesPseudoAction" ilk="argument" name="self" />
+            <variable ilk="argument" name="name" />
+            <variable ilk="argument" name="aliases" />
+            <variable ilk="argument" name="help" />
+            <variable line="1028" name="metavar" />
+            <variable citdl="super()" line="1031" name="sup" />
+          </scope>
+        </scope>
+        <scope attributes="__ctor__" ilk="function" line="1035" lineend="1054" name="__init__" signature="_SubParsersAction(option_strings, prog, parser_class, dest=SUPPRESS, help=None, metavar=None)">
+          <variable citdl="_SubParsersAction" ilk="argument" name="self" />
+          <variable ilk="argument" name="option_strings" />
+          <variable ilk="argument" name="prog" />
+          <variable ilk="argument" name="parser_class" />
+          <variable citdl="str" ilk="argument" name="dest" />
+          <variable ilk="argument" name="help" />
+          <variable ilk="argument" name="metavar" />
+        </scope>
+        <variable attributes="protected __instancevar__" line="1043" name="_prog_prefix" />
+        <variable attributes="protected __instancevar__" line="1044" name="_parser_class" />
+        <variable attributes="protected __instancevar__" citdl="_collections.OrderedDict()" line="1045" name="_name_parser_map" />
+        <variable attributes="protected __instancevar__" citdl="list" line="1046" name="_choices_actions" />
+        <scope ilk="function" line="1056" lineend="1077" name="add_parser" returns="_parser_class()" signature="add_parser(name, **kwargs)">
+          <variable citdl="_SubParsersAction" ilk="argument" name="self" />
+          <variable ilk="argument" name="name" />
+          <variable attributes="kwargs" ilk="argument" name="kwargs" />
+          <variable citdl="kwargs.pop()" line="1061" name="aliases" />
+          <variable citdl="kwargs.pop()" line="1065" name="help" />
+          <variable citdl="_ChoicesPseudoAction" line="1066" name="choice_action" />
+          <variable citdl="_parser_class()" line="1070" name="parser" />
+        </scope>
+        <scope attributes="protected" ilk="function" line="1079" lineend="1080" name="_get_subactions" returns="list" signature="_get_subactions()">
+          <variable citdl="_SubParsersAction" ilk="argument" name="self" />
+        </scope>
+        <scope ilk="function" line="1082" lineend="1105" name="__call__" signature="__call__(parser, namespace, values, option_string=None)">
+          <variable citdl="_SubParsersAction" ilk="argument" name="self" />
+          <variable ilk="argument" name="parser" />
+          <variable ilk="argument" name="namespace" />
+          <variable ilk="argument" name="values" />
+          <variable ilk="argument" name="option_string" />
+          <variable line="1083" name="parser_name" />
+          <variable citdl="list" line="1084" name="arg_strings" />
+          <variable citdl="dict" line="1094" name="args" />
+          <variable citdl="_()" line="1096" name="msg" />
+        </scope>
+      </scope>
+      <scope attributes="protected __hidden__" classrefs="_StoreConstAction" ilk="class" line="861" lineend="875" name="_StoreTrueAction">
+        <scope attributes="__ctor__" ilk="function" line="863" lineend="875" name="__init__" signature="_StoreTrueAction(option_strings, dest, default=False, required=False, help=None)">
+          <variable citdl="_StoreTrueAction" ilk="argument" name="self" />
+          <variable ilk="argument" name="option_strings" />
+          <variable ilk="argument" name="dest" />
+          <variable citdl="False" ilk="argument" name="default" />
+          <variable citdl="False" ilk="argument" name="required" />
+          <variable ilk="argument" name="help" />
+        </scope>
+      </scope>
+      <scope attributes="protected __hidden__" classrefs="object" doc="Abstract base class that provides __repr__.&#xA;&#xA;The __repr__ method returns a string in the format::&#xA;    ClassName(attr=name, attr=name, ...)&#xA;The attributes are determined either by a class-level attribute,&#xA;&apos;_kwarg_names&apos;, or by inspecting the instance __dict__." ilk="class" line="112" lineend="134" name="_AttributeHolder">
+        <scope ilk="function" line="121" lineend="128" name="__repr__" returns="tuple" signature="__repr__()">
+          <variable citdl="_AttributeHolder" ilk="argument" name="self" />
+          <variable line="122" name="type_name" />
+          <variable citdl="list" line="123" name="arg_strings" />
+        </scope>
+        <scope attributes="protected" ilk="function" line="130" lineend="131" name="_get_kwargs" returns="sorted()" signature="_get_kwargs()">
+          <variable citdl="_AttributeHolder" ilk="argument" name="self" />
+        </scope>
+        <scope attributes="protected" ilk="function" line="133" lineend="134" name="_get_args" returns="list" signature="_get_args()">
+          <variable citdl="_AttributeHolder" ilk="argument" name="self" />
+        </scope>
+      </scope>
+      <scope attributes="protected __hidden__" ilk="function" line="670" lineend="680" name="_get_action_name" returns="str.join()" signature="_get_action_name(argument)">
+        <variable ilk="argument" name="argument" />
+      </scope>
+      <scope attributes="protected __hidden__" classrefs="_ArgumentGroup" ilk="class" line="1518" lineend="1535" name="_MutuallyExclusiveGroup">
+        <scope attributes="__ctor__" ilk="function" line="1520" lineend="1523" name="__init__" signature="_MutuallyExclusiveGroup(container, required=False)">
+          <variable citdl="_MutuallyExclusiveGroup" ilk="argument" name="self" />
+          <variable ilk="argument" name="container" />
+          <variable citdl="False" ilk="argument" name="required" />
+        </scope>
+        <variable attributes="__instancevar__" citdl="False" line="1522" name="required" />
+        <variable attributes="protected __instancevar__" line="1523" name="_container" />
+        <scope attributes="protected" ilk="function" line="1525" lineend="1531" name="_add_action" returns="self._container._add_action()" signature="_add_action(action)">
+          <variable citdl="_MutuallyExclusiveGroup" ilk="argument" name="self" />
+          <variable citdl="self._container._add_action()" ilk="argument" name="action" />
+          <variable citdl="_()" line="1527" name="msg" />
+        </scope>
+        <scope attributes="protected" ilk="function" line="1533" lineend="1535" name="_remove_action" signature="_remove_action(action)">
+          <variable citdl="_MutuallyExclusiveGroup" ilk="argument" name="self" />
+          <variable ilk="argument" name="action" />
+        </scope>
+      </scope>
+      <scope attributes="protected __hidden__" classrefs="Action" ilk="class" line="895" lineend="929" name="_AppendAction">
+        <scope attributes="__ctor__" ilk="function" line="897" lineend="924" name="__init__" signature="_AppendAction(option_strings, dest, nargs=None, const=None, default=None, type=None, choices=None, required=False, help=None, metavar=None)">
+          <variable citdl="_AppendAction" ilk="argument" name="self" />
+          <variable ilk="argument" name="option_strings" />
+          <variable ilk="argument" name="dest" />
+          <variable ilk="argument" name="nargs" />
+          <variable ilk="argument" name="const" />
+          <variable ilk="argument" name="default" />
+          <variable ilk="argument" name="type" />
+          <variable ilk="argument" name="choices" />
+          <variable citdl="False" ilk="argument" name="required" />
+          <variable ilk="argument" name="help" />
+          <variable ilk="argument" name="metavar" />
+        </scope>
+        <scope ilk="function" line="926" lineend="929" name="__call__" signature="__call__(parser, namespace, values, option_string=None)">
+          <variable citdl="_AppendAction" ilk="argument" name="self" />
+          <variable ilk="argument" name="parser" />
+          <variable ilk="argument" name="namespace" />
+          <variable ilk="argument" name="values" />
+          <variable ilk="argument" name="option_string" />
+          <variable citdl="_copy.copy()" line="927" name="items" />
+        </scope>
+      </scope>
+      <scope attributes="protected __hidden__" classrefs="_StoreConstAction" ilk="class" line="878" lineend="892" name="_StoreFalseAction">
+        <scope attributes="__ctor__" ilk="function" line="880" lineend="892" name="__init__" signature="_StoreFalseAction(option_strings, dest, default=True, required=False, help=None)">
+          <variable citdl="_StoreFalseAction" ilk="argument" name="self" />
+          <variable ilk="argument" name="option_strings" />
+          <variable ilk="argument" name="dest" />
+          <variable citdl="True" ilk="argument" name="default" />
+          <variable citdl="False" ilk="argument" name="required" />
+          <variable ilk="argument" name="help" />
+        </scope>
+      </scope>
+      <variable attributes="__hidden__" citdl="str" line="64" name="__version__" />
+      <scope attributes="protected __hidden__" classrefs="Action" ilk="class" line="838" lineend="858" name="_StoreConstAction">
+        <scope attributes="__ctor__" ilk="function" line="840" lineend="855" name="__init__" signature="_StoreConstAction(option_strings, dest, const, default=None, required=False, help=None, metavar=None)">
+          <variable citdl="_StoreConstAction" ilk="argument" name="self" />
+          <variable ilk="argument" name="option_strings" />
+          <variable ilk="argument" name="dest" />
+          <variable ilk="argument" name="const" />
+          <variable ilk="argument" name="default" />
+          <variable citdl="False" ilk="argument" name="required" />
+          <variable ilk="argument" name="help" />
+          <variable ilk="argument" name="metavar" />
+        </scope>
+        <scope ilk="function" line="857" lineend="858" name="__call__" signature="__call__(parser, namespace, values, option_string=None)">
+          <variable citdl="_StoreConstAction" ilk="argument" name="self" />
+          <variable ilk="argument" name="parser" />
+          <variable ilk="argument" name="namespace" />
+          <variable ilk="argument" name="values" />
+          <variable ilk="argument" name="option_string" />
+        </scope>
+      </scope>
+      <scope attributes="protected __hidden__" ilk="function" line="137" lineend="140" name="_ensure_value" returns="getattr()" signature="_ensure_value(namespace, name, value)">
+        <variable ilk="argument" name="namespace" />
+        <variable ilk="argument" name="name" />
+        <variable ilk="argument" name="value" />
+      </scope>
+    </scope>
+    

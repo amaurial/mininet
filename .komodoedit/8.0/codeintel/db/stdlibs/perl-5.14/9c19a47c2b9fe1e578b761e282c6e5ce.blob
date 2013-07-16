@@ -1,0 +1,165 @@
+<scope ilk="blob" lang="Perl" name="Class::MOP::Instance">
+      <scope ilk="class" line="2" lineend="467" name="Class::MOP::Instance">
+        <import line="13" module="Scalar::Util" symbol="weaken" />
+        <variable line="4" name="$Class::MOP::Instance::AUTHORITY" />
+        <variable line="7" name="$Class::MOP::Instance::VERSION" />
+        <scope ilk="function" line="20" lineend="37" name="BUILDARGS" signature="BUILDARGS($class, @args)">
+          <variable ilk="argument" name="$class" />
+          <variable ilk="argument" name="@args" />
+        </scope>
+        <scope ilk="function" line="39" lineend="50" name="new" signature="new($class)">
+          <variable ilk="argument" name="$class" />
+        </scope>
+        <scope attributes="__ctor__" ilk="function" line="52" lineend="74" name="_new" signature="_new($class)">
+          <variable ilk="argument" name="$class" />
+        </scope>
+        <scope ilk="function" line="76" lineend="76" name="_class_name" signature="_class_name()" />
+        <scope attributes="__ctor__" ilk="function" line="78" lineend="81" name="create_instance" signature="create_instance($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope attributes="__ctor__" ilk="function" line="83" lineend="86" name="clone_instance" signature="clone_instance($self, $instance)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$instance" />
+        </scope>
+        <scope ilk="function" line="90" lineend="93" name="get_all_slots" signature="get_all_slots($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="95" lineend="98" name="get_all_attributes" signature="get_all_attributes($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="100" lineend="103" name="is_valid_slot" signature="is_valid_slot($self, $slot_name)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$slot_name" />
+        </scope>
+        <scope ilk="function" line="107" lineend="110" name="get_slot_value" signature="get_slot_value($self, $instance, $slot_name)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$instance" />
+          <variable ilk="argument" name="$slot_name" />
+        </scope>
+        <scope ilk="function" line="112" lineend="115" name="set_slot_value" signature="set_slot_value($self, $instance, $slot_name, $value)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$instance" />
+          <variable ilk="argument" name="$slot_name" />
+          <variable ilk="argument" name="$value" />
+        </scope>
+        <scope ilk="function" line="117" lineend="120" name="initialize_slot" signature="initialize_slot($self, $instance, $slot_name)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$instance" />
+          <variable ilk="argument" name="$slot_name" />
+        </scope>
+        <scope ilk="function" line="122" lineend="125" name="deinitialize_slot" signature="deinitialize_slot($self, $instance, $slot_name)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$instance" />
+          <variable ilk="argument" name="$slot_name" />
+        </scope>
+        <scope ilk="function" line="127" lineend="132" name="initialize_all_slots" signature="initialize_all_slots($self, $instance)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$instance" />
+        </scope>
+        <scope ilk="function" line="134" lineend="139" name="deinitialize_all_slots" signature="deinitialize_all_slots($self, $instance)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$instance" />
+        </scope>
+        <scope ilk="function" line="141" lineend="144" name="is_slot_initialized" signature="is_slot_initialized($self, $instance, $slot_name, $value)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$instance" />
+          <variable ilk="argument" name="$slot_name" />
+          <variable ilk="argument" name="$value" />
+        </scope>
+        <scope ilk="function" line="146" lineend="149" name="weaken_slot_value" signature="weaken_slot_value($self, $instance, $slot_name)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$instance" />
+          <variable ilk="argument" name="$slot_name" />
+        </scope>
+        <scope ilk="function" line="151" lineend="154" name="strengthen_slot_value" signature="strengthen_slot_value($self, $instance, $slot_name)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$instance" />
+          <variable ilk="argument" name="$slot_name" />
+        </scope>
+        <scope attributes="__ctor__" ilk="function" line="156" lineend="161" name="rebless_instance_structure" signature="rebless_instance_structure($self, $instance, $metaclass)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$instance" />
+          <variable ilk="argument" name="$metaclass" />
+        </scope>
+        <scope ilk="function" line="163" lineend="165" name="is_dependent_on_superclasses" signature="is_dependent_on_superclasses()" />
+        <scope ilk="function" line="167" lineend="170" name="_get_mop_slot" signature="_get_mop_slot($self, $instance)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$instance" />
+        </scope>
+        <scope ilk="function" line="172" lineend="175" name="_set_mop_slot" signature="_set_mop_slot($self, $instance, $value)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$instance" />
+          <variable ilk="argument" name="$value" />
+        </scope>
+        <scope ilk="function" line="177" lineend="180" name="_clear_mop_slot" signature="_clear_mop_slot($self, $instance)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$instance" />
+        </scope>
+        <scope ilk="function" line="184" lineend="184" name="is_inlinable" signature="is_inlinable()" />
+        <scope ilk="function" line="186" lineend="189" name="inline_create_instance" signature="inline_create_instance($self, $class_variable)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$class_variable" />
+        </scope>
+        <scope ilk="function" line="191" lineend="194" name="inline_slot_access" signature="inline_slot_access($self, $instance, $slot_name)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$instance" />
+          <variable ilk="argument" name="$slot_name" />
+        </scope>
+        <scope ilk="function" line="196" lineend="196" name="inline_get_is_lvalue" signature="inline_get_is_lvalue()" />
+        <scope ilk="function" line="198" lineend="201" name="inline_get_slot_value" signature="inline_get_slot_value($self, $instance, $slot_name)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$instance" />
+          <variable ilk="argument" name="$slot_name" />
+        </scope>
+        <scope ilk="function" line="203" lineend="206" name="inline_set_slot_value" signature="inline_set_slot_value($self, $instance, $slot_name, $value)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$instance" />
+          <variable ilk="argument" name="$slot_name" />
+          <variable ilk="argument" name="$value" />
+        </scope>
+        <scope ilk="function" line="208" lineend="211" name="inline_initialize_slot" signature="inline_initialize_slot($self, $instance, $slot_name)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$instance" />
+          <variable ilk="argument" name="$slot_name" />
+        </scope>
+        <scope ilk="function" line="213" lineend="216" name="inline_deinitialize_slot" signature="inline_deinitialize_slot($self, $instance, $slot_name)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$instance" />
+          <variable ilk="argument" name="$slot_name" />
+        </scope>
+        <scope ilk="function" line="217" lineend="220" name="inline_is_slot_initialized" signature="inline_is_slot_initialized($self, $instance, $slot_name)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$instance" />
+          <variable ilk="argument" name="$slot_name" />
+        </scope>
+        <scope ilk="function" line="222" lineend="225" name="inline_weaken_slot_value" signature="inline_weaken_slot_value($self, $instance, $slot_name)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$instance" />
+          <variable ilk="argument" name="$slot_name" />
+        </scope>
+        <scope ilk="function" line="227" lineend="230" name="inline_strengthen_slot_value" signature="inline_strengthen_slot_value($self, $instance, $slot_name)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$instance" />
+          <variable ilk="argument" name="$slot_name" />
+        </scope>
+        <scope ilk="function" line="232" lineend="235" name="inline_rebless_instance_structure" signature="inline_rebless_instance_structure($self, $instance, $class_variable)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$instance" />
+          <variable ilk="argument" name="$class_variable" />
+        </scope>
+        <scope ilk="function" line="237" lineend="240" name="_inline_get_mop_slot" signature="_inline_get_mop_slot($self, $instance)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$instance" />
+        </scope>
+        <scope ilk="function" line="242" lineend="245" name="_inline_set_mop_slot" signature="_inline_set_mop_slot($self, $instance, $value)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$instance" />
+          <variable ilk="argument" name="$value" />
+        </scope>
+        <scope ilk="function" line="247" lineend="250" name="_inline_clear_mop_slot" signature="_inline_clear_mop_slot($self, $instance)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$instance" />
+        </scope>
+      </scope>
+    </scope>
+    

@@ -1,0 +1,67 @@
+<scope ilk="blob" lang="Perl" name="Test::Builder::Tester">
+      <scope classrefs="Exporter" ilk="class" line="1" lineend="457" name="Test::Builder::Tester">
+        <import line="6" module="Test::Builder" symbol="*" />
+        <import line="7" module="Symbol" symbol="*" />
+        <import line="8" module="Carp" symbol="*" />
+        <import line="57" module="Exporter" symbol="*" />
+        <variable line="4" name="$VERSION" />
+        <variable line="60" name="@EXPORT" />
+        <scope ilk="function" line="62" lineend="80" name="import" signature="import($class, @plan)">
+          <variable ilk="argument" name="$class" />
+          <variable ilk="argument" name="@plan" />
+        </scope>
+        <scope ilk="function" line="113" lineend="140" name="_start_testing" signature="_start_testing()" />
+        <scope ilk="function" line="176" lineend="181" name="test_out" signature="test_out()" />
+        <scope ilk="function" line="183" lineend="188" name="test_err" signature="test_err()" />
+        <scope ilk="function" line="216" lineend="226" name="test_fail" signature="test_fail()">
+          </scope>
+        <scope ilk="function" line="258" lineend="265" name="test_diag" signature="test_diag()" />
+        <scope ilk="function" line="306" lineend="352" name="test_test" signature="test_test()">
+          </scope>
+        <scope ilk="function" line="366" lineend="369" name="line_num" signature="line_num()">
+          </scope>
+        <scope ilk="function" line="413" lineend="416" name="color" signature="color()" />
+      </scope>
+      <scope ilk="class" line="462" lineend="603" name="Test::Builder::Tester::Tie">
+        <scope ilk="function" line="467" lineend="475" name="expect" signature="expect($self, @checks)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="@checks" />
+        </scope>
+        <scope ilk="function" line="477" lineend="485" name="_translate_Failed_check" signature="_translate_Failed_check($self, $check)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$check" />
+        </scope>
+        <scope ilk="function" line="490" lineend="504" name="check" signature="check($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="510" lineend="550" name="complaint" signature="complaint($self)">
+          <import line="519" module="Term::ANSIColor" />
+          <variable ilk="argument" name="$self" />
+          <import line="519" module="Term::ANSIColor" />
+        </scope>
+        <scope ilk="function" line="555" lineend="562" name="reset" signature="reset($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="564" lineend="567" name="got" signature="got($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="569" lineend="572" name="wanted" signature="wanted($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="574" lineend="577" name="type" signature="type($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="583" lineend="586" name="PRINT" signature="PRINT($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope attributes="__ctor__" ilk="function" line="588" lineend="596" name="TIEHANDLE" signature="TIEHANDLE($class, $type)">
+          <variable ilk="argument" name="$class" />
+          <variable ilk="argument" name="$type" />
+        </scope>
+        <scope ilk="function" line="598" lineend="598" name="READ" signature="READ()" />
+        <scope ilk="function" line="599" lineend="599" name="READLINE" signature="READLINE()" />
+        <scope ilk="function" line="600" lineend="600" name="GETC" signature="GETC()" />
+        <scope ilk="function" line="601" lineend="601" name="FILENO" signature="FILENO()" />
+      </scope>
+    </scope>
+    

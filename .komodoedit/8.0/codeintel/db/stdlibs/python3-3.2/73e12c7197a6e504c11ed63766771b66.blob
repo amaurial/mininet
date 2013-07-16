@@ -1,0 +1,50 @@
+<scope doc="Execute computations asynchronously using threads or processes.&#xA;" ilk="blob" lang="Python" name="concurrent.futures">
+      <variable citdl="str" name="ALL_COMPLETED" />
+      <scope classrefs="Error" doc="The Future was cancelled.&#xA;" ilk="class" name="CancelledError" />
+      <scope classrefs="object" doc="This is an abstract base class for concrete asynchronous executors.&#xA;" ilk="class" name="Executor">
+        <scope doc="Returns a iterator equivalent to map(fn, iter)." ilk="function" name="map" signature="map(self, fn, *iterables, timeout=None)" />
+        <scope ilk="function" name="__exit__" signature="__exit__(self, exc_type, exc_val, exc_tb)" />
+        <scope doc="Clean-up the resources associated with the Executor." ilk="function" name="shutdown" signature="shutdown(self, wait=True)" />
+        <scope ilk="function" name="__enter__" signature="__enter__(self)" />
+        <scope doc="Submits a callable to be executed with the given arguments." ilk="function" name="submit" signature="submit(self, fn, *args, **kwargs)" />
+      </scope>
+      <variable citdl="str" name="FIRST_COMPLETED" />
+      <variable citdl="str" name="FIRST_EXCEPTION" />
+      <scope classrefs="object" doc="Represents the result of an asynchronous computation.&#xA;" ilk="class" name="Future">
+        <scope ilk="function" name="_invoke_callbacks" signature="_invoke_callbacks(self)" />
+        <scope doc="Sets the result of the future as being the given exception." ilk="function" name="set_exception" signature="set_exception(self, exception)" />
+        <scope doc="Sets the return value of work associated with the future." ilk="function" name="set_result" signature="set_result(self, result)" />
+        <scope doc="Mark the future as running or process any cancel&#xA;notifications." ilk="function" name="set_running_or_notify_cancel" signature="set_running_or_notify_cancel(self)" />
+        <scope doc="Return True if the future is currently executing." ilk="function" name="running" signature="running(self)" />
+        <scope doc="Return True of the future was cancelled or finished&#xA;executing." ilk="function" name="done" signature="done(self)" />
+        <scope doc="Return the result of the call that the future represents." ilk="function" name="result" signature="result(self, timeout=None)" />
+        <scope doc="Cancel the future if possible." ilk="function" name="cancel" signature="cancel(self)" />
+        <scope doc="Initializes the future. Should not be called by clients." ilk="function" name="__init__" signature="__init__(self)" />
+        <scope doc="Return the exception raised by the call that the future&#xA;represents." ilk="function" name="exception" signature="exception(self, timeout=None)" />
+        <scope doc="Attaches a callable that will be called when the future&#xA;finishes." ilk="function" name="add_done_callback" signature="add_done_callback(self, fn)" />
+        <scope ilk="function" name="__repr__" signature="__repr__(self)" />
+        <scope ilk="function" name="_Future__get_result" signature="_Future__get_result(self)" />
+        <scope doc="Return True if the future has cancelled." ilk="function" name="cancelled" signature="cancelled(self)" />
+      </scope>
+      <scope classrefs="Executor" doc="&#xA;" ilk="class" name="ProcessPoolExecutor">
+        <scope ilk="function" name="_adjust_process_count" signature="_adjust_process_count(self)" />
+        <scope doc="Initializes a new ProcessPoolExecutor instance." ilk="function" name="__init__" signature="__init__(self, max_workers=None)" />
+        <scope doc="Clean-up the resources associated with the Executor." ilk="function" name="shutdown" signature="shutdown(self, wait=True)" />
+        <scope ilk="function" name="_start_queue_management_thread" signature="_start_queue_management_thread(self)" />
+        <scope doc="Submits a callable to be executed with the given arguments." ilk="function" name="submit" signature="submit(self, fn, *args, **kwargs)" />
+      </scope>
+      <scope classrefs="Executor" doc="&#xA;" ilk="class" name="ThreadPoolExecutor">
+        <scope ilk="function" name="_adjust_thread_count" signature="_adjust_thread_count(self)" />
+        <scope doc="Submits a callable to be executed with the given arguments." ilk="function" name="submit" signature="submit(self, fn, *args, **kwargs)" />
+        <scope doc="Clean-up the resources associated with the Executor." ilk="function" name="shutdown" signature="shutdown(self, wait=True)" />
+        <scope doc="Initializes a new ThreadPoolExecutor instance." ilk="function" name="__init__" signature="__init__(self, max_workers)" />
+      </scope>
+      <scope classrefs="Error" doc="The operation exceeded the given deadline.&#xA;" ilk="class" name="TimeoutError" />
+      <import module="_base" />
+      <scope doc="An iterator over the given futures that yields each as it&#xA;completes." ilk="function" name="as_completed" signature="as_completed(fs, timeout=None)" />
+      <import module="process" />
+      <import module="thread" />
+      <scope doc="Wait for the futures in the given sequence to complete." ilk="function" name="wait" signature="wait(fs, timeout=None, return_when=&apos;ALL_COMPLETED&apos;)" />
+      <variable attributes="__hidden__" citdl="str" line="6" name="__author__" />
+    </scope>
+    

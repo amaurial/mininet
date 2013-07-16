@@ -1,0 +1,57 @@
+<scope ilk="blob" lang="Perl" name="Email::Address">
+      <scope ilk="class" line="1" lineend="513" name="Email::Address">
+        <variable line="6" name="$COMMENT_NEST_LEVEL" />
+        <variable line="6" name="$STRINGIFY" />
+        <variable line="6" name="$VERSION" />
+        <variable line="7" name="$COLLAPSE_SPACES" />
+        <variable line="8" name="%FORMAT_CACHE" />
+        <variable line="8" name="%NAME_CACHE" />
+        <variable line="8" name="%PARSE_CACHE" />
+        <variable line="9" name="$addr_spec" />
+        <variable line="9" name="$angle_addr" />
+        <variable line="9" name="$mailbox" />
+        <variable line="9" name="$name_addr" />
+        <scope ilk="function" line="140" lineend="140" name="_PHRASE" signature="_PHRASE()" />
+        <scope ilk="function" line="141" lineend="141" name="_ADDRESS" signature="_ADDRESS()" />
+        <scope ilk="function" line="142" lineend="142" name="_COMMENT" signature="_COMMENT()" />
+        <scope ilk="function" line="143" lineend="143" name="_ORIGINAL" signature="_ORIGINAL()" />
+        <scope ilk="function" line="144" lineend="144" name="_IN_CACHE" signature="_IN_CACHE()" />
+        <scope ilk="function" line="178" lineend="185" name="__get_cached_parse" signature="__get_cached_parse($class, $line)">
+          <variable ilk="argument" name="$class" />
+          <variable ilk="argument" name="$line" />
+        </scope>
+        <scope ilk="function" line="187" lineend="193" name="__cache_parse" signature="__cache_parse($class, $line, $addrs)">
+          <variable ilk="argument" name="$class" />
+          <variable ilk="argument" name="$line" />
+          <variable ilk="argument" name="$addrs" />
+        </scope>
+        <scope ilk="function" line="195" lineend="237" name="parse" signature="parse($class, $line)">
+          <variable ilk="argument" name="$class" />
+          <variable ilk="argument" name="$line" />
+        </scope>
+        <scope attributes="__ctor__" ilk="function" line="254" lineend="259" name="new" signature="new($class, $phrase, $email, $comment, $orig)">
+          <variable ilk="argument" name="$class" />
+          <variable ilk="argument" name="$phrase" />
+          <variable ilk="argument" name="$email" />
+          <variable ilk="argument" name="$comment" />
+          <variable ilk="argument" name="$orig" />
+        </scope>
+        <scope ilk="function" line="276" lineend="280" name="purge_cache" signature="purge_cache()" />
+        <scope ilk="function" line="292" lineend="296" name="disable_cache" signature="disable_cache($class)">
+          <variable ilk="argument" name="$class" />
+        </scope>
+        <scope ilk="function" line="298" lineend="300" name="enable_cache" signature="enable_cache()" />
+        <scope ilk="function" line="379" lineend="379" name="host" signature="host()" />
+        <scope ilk="function" line="380" lineend="380" name="user" signature="user()" />
+        <scope ilk="function" line="393" lineend="397" name="format" signature="format()" />
+        <scope ilk="function" line="399" lineend="417" name="_format" signature="_format($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="498" lineend="503" name="as_string" signature="as_string()" />
+        <scope ilk="function" line="419" lineend="513" name="_enquoted_phrase" signature="_enquoted_phrase($self, $self)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$self" />
+        </scope>
+      </scope>
+    </scope>
+    

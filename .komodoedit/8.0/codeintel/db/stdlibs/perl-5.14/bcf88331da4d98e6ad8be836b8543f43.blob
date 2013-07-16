@@ -1,0 +1,55 @@
+<scope ilk="blob" lang="Perl" name="TAP::Parser::Scheduler">
+      <scope ilk="class" line="1" lineend="312" name="TAP::Parser::Scheduler">
+        <import line="5" module="Carp" symbol="*" />
+        <import line="6" module="TAP::Parser::Scheduler::Job" symbol="*" />
+        <import line="7" module="TAP::Parser::Scheduler::Spinner" symbol="*" />
+        <variable line="4" name="$VERSION" />
+        <scope attributes="__ctor__" ilk="function" line="39" lineend="58" name="new" signature="new($class, %args)">
+          <variable ilk="argument" name="$class" />
+          <variable ilk="argument" name="%args" />
+        </scope>
+        <scope ilk="function" line="71" lineend="82" name="_set_rules" signature="_set_rules($self, $rules, $tests)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$rules" />
+          <variable ilk="argument" name="$tests" />
+        </scope>
+        <scope ilk="function" line="84" lineend="111" name="_rule_clause" signature="_rule_clause($self, $rule, $tests)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$rule" />
+          <variable ilk="argument" name="$tests" />
+        </scope>
+        <scope ilk="function" line="113" lineend="169" name="_glob_to_regexp" signature="_glob_to_regexp($self, $glob)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$glob" />
+        </scope>
+        <scope ilk="function" line="171" lineend="186" name="_expand" signature="_expand($self, $name, $tests)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$name" />
+          <variable ilk="argument" name="$tests" />
+        </scope>
+        <scope ilk="function" line="194" lineend="199" name="get_all" signature="get_all($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="201" lineend="206" name="_gather" signature="_gather($self, $rule)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$rule" />
+        </scope>
+        <scope ilk="function" line="216" lineend="229" name="get_job" signature="get_job($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="231" lineend="238" name="_not_empty" signature="_not_empty($ar)">
+          <variable ilk="argument" name="$ar" />
+        </scope>
+        <scope ilk="function" line="240" lineend="240" name="_is_empty" signature="_is_empty()" />
+        <scope ilk="function" line="242" lineend="279" name="_find_next_job" signature="_find_next_job($self, $rule)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$rule" />
+        </scope>
+        <scope ilk="function" line="287" lineend="290" name="as_string" signature="as_string($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="292" lineend="310" name="_as_string" signature="_as_string()">
+          </scope>
+      </scope>
+    </scope>
+    

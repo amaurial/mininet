@@ -1,0 +1,104 @@
+<scope doc="Calendar printing functions&#xA;Note when comparing these calendars to the ones printed by cal(1): By default, these calendars have Monday as the first day of the week, and Sunday as the last (the European convention). Use setfirstweekday() to set the first day of the week (0=Monday, 6=Sunday)." ilk="blob" lang="Python" name="calendar">
+      <scope classrefs="object" doc="Base calendar class. This class doesn&apos;t do any formatting. It simply&#xA;provides data to subclasses." ilk="class" name="Calendar">
+        <scope doc="Return an iterator for one month." ilk="function" name="itermonthdates" signature="itermonthdates(self, year, month)" />
+        <scope doc="Return the data for the specified year ready for formatting&#xA;(similar to yeardatescalendar())." ilk="function" name="yeardayscalendar" signature="yeardayscalendar(self, year, width=3)" />
+        <scope doc="Return the data for the specified year ready for formatting." ilk="function" name="yeardatescalendar" signature="yeardatescalendar(self, year, width=3)" />
+        <scope doc="Return a matrix representing a month&apos;s calendar." ilk="function" name="monthdays2calendar" signature="monthdays2calendar(self, year, month)" />
+        <scope doc="Return a matrix (list of lists) representing a month&apos;s&#xA;calendar." ilk="function" name="monthdatescalendar" signature="monthdatescalendar(self, year, month)" />
+        <scope doc="Return the data for the specified year ready for formatting&#xA;(similar to yeardatescalendar())." ilk="function" name="yeardays2calendar" signature="yeardays2calendar(self, year, width=3)" />
+        <scope doc="Like itermonthdates(), but will yield (day number, weekday&#xA;number) tuples." ilk="function" name="itermonthdays2" signature="itermonthdays2(self, year, month)" />
+        <scope doc="Like itermonthdates(), but will yield day numbers." ilk="function" name="itermonthdays" signature="itermonthdays(self, year, month)" />
+        <scope ilk="function" name="__init__" signature="__init__(self, firstweekday=0)" />
+        <scope doc="Return a iterator for one week of weekday numbers starting&#xA;with the configured first one." ilk="function" name="iterweekdays" signature="iterweekdays(self)" />
+        <scope ilk="function" name="setfirstweekday" signature="setfirstweekday(self, firstweekday)" />
+        <scope ilk="function" name="getfirstweekday" signature="getfirstweekday(self)" />
+        <scope doc="Return a matrix representing a month&apos;s calendar." ilk="function" name="monthdayscalendar" signature="monthdayscalendar(self, year, month)" />
+      </scope>
+      <variable citdl="int" name="EPOCH" />
+      <variable citdl="int" name="FRIDAY" />
+      <variable citdl="int" name="February" />
+      <scope classrefs="Calendar" doc="This calendar returns complete HTML pages.&#xA;" ilk="class" name="HTMLCalendar">
+        <scope doc="Return a month name as a table row." ilk="function" name="formatmonthname" signature="formatmonthname(self, theyear, themonth, withyear=True)" />
+        <scope doc="Return a header for a week as a table row." ilk="function" name="formatweekheader" signature="formatweekheader(self)" />
+        <scope doc="Return a formatted month as a table." ilk="function" name="formatmonth" signature="formatmonth(self, theyear, themonth, withyear=True)" />
+        <scope doc="Return a weekday name as a table header." ilk="function" name="formatweekday" signature="formatweekday(self, day)" />
+        <scope doc="Return a complete week as a table row." ilk="function" name="formatweek" signature="formatweek(self, theweek)" />
+        <scope doc="Return a day as a table cell." ilk="function" name="formatday" signature="formatday(self, day, weekday)" />
+        <scope doc="Return a formatted year as a complete HTML page." ilk="function" name="formatyearpage" signature="formatyearpage(self, theyear, width=3, css=&apos;calendar.css&apos;, encoding=None)" />
+        <scope doc="Return a formatted year as a table of tables." ilk="function" name="formatyear" signature="formatyear(self, theyear, width=3)" />
+      </scope>
+      <scope classrefs="ValueError" doc="# Exceptions raised for bad input&#xA;" ilk="class" name="IllegalMonthError">
+        <scope ilk="function" name="__str__" signature="__str__(self)" />
+        <scope ilk="function" name="__init__" signature="__init__(self, month)" />
+      </scope>
+      <scope classrefs="ValueError" doc="&#xA;" ilk="class" name="IllegalWeekdayError">
+        <scope ilk="function" name="__str__" signature="__str__(self)" />
+        <scope ilk="function" name="__init__" signature="__init__(self, weekday)" />
+      </scope>
+      <variable citdl="int" name="January" />
+      <scope classrefs="HTMLCalendar" doc="This class can be passed a locale name in the constructor and will return&#xA;month and weekday names in the specified locale. If this locale includes an encoding all strings containing month and weekday names will be returned as unicode." ilk="class" name="LocaleHTMLCalendar">
+        <scope ilk="function" name="formatweekday" signature="formatweekday(self, day)" />
+        <scope ilk="function" name="formatmonthname" signature="formatmonthname(self, theyear, themonth, withyear=True)" />
+        <scope ilk="function" name="__init__" signature="__init__(self, firstweekday=0, locale=None)" />
+      </scope>
+      <scope classrefs="TextCalendar" doc="This class can be passed a locale name in the constructor and will return&#xA;month and weekday names in the specified locale. If this locale includes an encoding all strings containing month and weekday names will be returned as unicode." ilk="class" name="LocaleTextCalendar">
+        <scope ilk="function" name="formatweekday" signature="formatweekday(self, day, width)" />
+        <scope ilk="function" name="formatmonthname" signature="formatmonthname(self, theyear, themonth, width, withyear=True)" />
+        <scope ilk="function" name="__init__" signature="__init__(self, firstweekday=0, locale=None)" />
+      </scope>
+      <variable citdl="int" name="MONDAY" />
+      <variable citdl="int" name="SATURDAY" />
+      <variable citdl="int" name="SUNDAY" />
+      <variable citdl="int" name="THURSDAY" />
+      <variable citdl="int" name="TUESDAY" />
+      <scope classrefs="Calendar" doc="Subclass of Calendar that outputs a calendar as a simple plain text&#xA;similar to the UNIX program cal." ilk="class" name="TextCalendar">
+        <scope doc="Return a formatted month name." ilk="function" name="formatmonthname" signature="formatmonthname(self, theyear, themonth, width, withyear=True)" />
+        <scope doc="Return a header for a week." ilk="function" name="formatweekheader" signature="formatweekheader(self, width)" />
+        <scope doc="Return a month&apos;s calendar string (multi-line)." ilk="function" name="formatmonth" signature="formatmonth(self, theyear, themonth, w=0, l=0)" />
+        <scope doc="Print a month&apos;s calendar." ilk="function" name="prmonth" signature="prmonth(self, theyear, themonth, w=0, l=0)" />
+        <scope doc="Returns a formatted week day name." ilk="function" name="formatweekday" signature="formatweekday(self, day, width)" />
+        <scope doc="Returns a single week in a string (no newline)." ilk="function" name="formatweek" signature="formatweek(self, theweek, width)" />
+        <scope doc="Returns a formatted day." ilk="function" name="formatday" signature="formatday(self, day, weekday, width)" />
+        <scope doc="Print a year&apos;s calendar." ilk="function" name="pryear" signature="pryear(self, theyear, w=0, l=0, c=6, m=3)" />
+        <scope doc="Print a single week (no newline)." ilk="function" name="prweek" signature="prweek(self, theweek, width)" />
+        <scope doc="Returns a year&apos;s calendar as a multi-line string." ilk="function" name="formatyear" signature="formatyear(self, theyear, w=2, l=1, c=6, m=3)" />
+      </scope>
+      <variable citdl="int" name="WEDNESDAY" />
+      <variable citdl="list" name="__all__" />
+      <import module="_locale" />
+      <variable citdl="TextCalendar" name="c" />
+      <scope doc="Returns a year&apos;s calendar as a multi-line string." ilk="function" name="calendar" />
+      <import module="datetime" />
+      <variable citdl="_localized_day" name="day_abbr" />
+      <variable citdl="_localized_day" name="day_name" />
+      <scope classrefs="object" doc="&#xA;" ilk="class" name="different_locale">
+        <scope ilk="function" name="__exit__" signature="__exit__(self, *args)" />
+        <scope ilk="function" name="__enter__" signature="__enter__(self)" />
+        <scope ilk="function" name="__init__" signature="__init__(self, locale)" />
+      </scope>
+      <scope classrefs="Exception" doc="Inappropriate argument value (of correct type).&#xA;" ilk="class" name="error">
+        <scope ilk="function" name="__init__" />
+      </scope>
+      <scope ilk="function" name="firstweekday" />
+      <scope doc="Prints multi-column formatting for year calendars" ilk="function" name="format" signature="format(cols, colwidth=20, spacing=6)" />
+      <scope doc="Returns a string formatted from n strings, centered within n&#xA;columns." ilk="function" name="formatstring" signature="formatstring(cols, colwidth=20, spacing=6)" />
+      <scope doc="Return True for leap years, False for non-leap years." ilk="function" name="isleap" signature="isleap(year)" />
+      <scope doc="Return number of leap years in range [y1, y2)." ilk="function" name="leapdays" signature="leapdays(y1, y2)" />
+      <scope ilk="function" name="main" signature="main(args)" />
+      <variable citdl="list" name="mdays" />
+      <scope doc="Return a month&apos;s calendar string (multi-line)." ilk="function" name="month" />
+      <variable citdl="_localized_month" name="month_abbr" />
+      <variable citdl="_localized_month" name="month_name" />
+      <scope doc="Return a matrix representing a month&apos;s calendar." ilk="function" name="monthcalendar" />
+      <scope doc="Return weekday (0-6 ~ Mon-Sun) and number of days (28-31)&#xA;for year, month." ilk="function" name="monthrange" signature="monthrange(year, month)" />
+      <scope doc="Print a year&apos;s calendar." ilk="function" name="prcal" />
+      <scope doc="Print a month&apos;s calendar." ilk="function" name="prmonth" />
+      <scope doc="Print a single week (no newline)." ilk="function" name="prweek" />
+      <scope ilk="function" name="setfirstweekday" signature="setfirstweekday(firstweekday)" />
+      <import module="sys" />
+      <scope doc="Unrelated but handy function to calculate Unix timestamp&#xA;from GMT." ilk="function" name="timegm" signature="timegm(tuple)" />
+      <scope doc="Returns a single week in a string (no newline)." ilk="function" name="week" />
+      <scope doc="Return weekday (0-6 ~ Mon-Sun) for year (1970-...), month&#xA;(1-12), day (1-31)." ilk="function" name="weekday" signature="weekday(year, month, day)" />
+      <scope doc="Return a header for a week." ilk="function" name="weekheader" />
+    </scope>
+    

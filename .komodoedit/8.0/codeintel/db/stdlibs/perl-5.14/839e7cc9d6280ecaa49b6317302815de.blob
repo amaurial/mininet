@@ -1,0 +1,125 @@
+<scope ilk="blob" lang="Perl" name="ActivePerl::PPM::GUI">
+      <scope ilk="class" line="1" lineend="2092" name="ActivePerl::PPM::GUI">
+        <import line="2" module="utf8" symbol="*" />
+        <import line="13" module="Tkx" />
+        <import line="14" module="ActiveState::Browser" />
+        <import line="15" module="ActivePerl::PPM::Logger" symbol="ppm_log" />
+        <import line="15" module="ActivePerl::PPM::Logger" symbol="ppm_status" />
+        <import line="16" module="ActivePerl::PPM::Util" symbol="is_cpan_package" />
+        <import line="16" module="ActivePerl::PPM::Util" symbol="clean_err" />
+        <import line="16" module="ActivePerl::PPM::Util" symbol="join_with" />
+        <import line="16" module="ActivePerl::PPM::Util" symbol="update_html_toc" />
+        <import line="19" module="File::Basename" symbol="dirname" />
+        <import line="20" module="File::Spec::Functions" symbol="devnull" />
+        <import line="21" module="Cwd" symbol="cwd" />
+        <import line="21" module="Cwd" symbol="abs_path" />
+        <variable line="25" name="$ActiveState::Browser::HTML_DIR" />
+        <scope ilk="function" line="560" lineend="574" name="refresh" signature="refresh()">
+          </scope>
+        <scope ilk="function" line="576" lineend="595" name="repo_sync" signature="repo_sync($sync)">
+          <variable ilk="argument" name="$sync" />
+        </scope>
+        <scope ilk="function" line="597" lineend="618" name="area_sync" signature="area_sync()">
+          </scope>
+        <scope ilk="function" line="622" lineend="630" name="set_focus_grab" signature="set_focus_grab($grab, $focus)">
+          <variable ilk="argument" name="$grab" />
+          <variable ilk="argument" name="$focus" />
+        </scope>
+        <scope ilk="function" line="632" lineend="652" name="restore_focus_grab" signature="restore_focus_grab($grab, $focus)">
+          <variable ilk="argument" name="$grab" />
+          <variable ilk="argument" name="$focus" />
+        </scope>
+        <scope ilk="function" line="654" lineend="686" name="full_refresh" signature="full_refresh($first_time)">
+          <variable ilk="argument" name="$first_time" />
+        </scope>
+        <scope ilk="function" line="688" lineend="706" name="merge_area_items" signature="merge_area_items()">
+          </scope>
+        <scope ilk="function" line="708" lineend="725" name="merge_repo_items" signature="merge_repo_items()">
+          </scope>
+        <scope ilk="function" line="727" lineend="753" name="filter" signature="filter($force)">
+          <variable ilk="argument" name="$force" />
+        </scope>
+        <scope ilk="function" line="755" lineend="758" name="filter_onkey" signature="filter_onkey()" />
+        <scope ilk="function" line="760" lineend="763" name="ppm" signature="ppm($func)">
+          <variable ilk="argument" name="$func" />
+        </scope>
+        <scope ilk="function" line="765" lineend="782" name="view" signature="view($view)">
+          <variable ilk="argument" name="$view" />
+        </scope>
+        <scope ilk="function" line="784" lineend="816" name="verify" signature="verify($package)">
+          <variable ilk="argument" name="$package" />
+        </scope>
+        <scope ilk="function" line="824" lineend="1197" name="menus" signature="menus()">
+          </scope>
+        <scope ilk="function" line="1199" lineend="1360" name="select_item" signature="select_item($item)">
+          <variable ilk="argument" name="$item" />
+        </scope>
+        <scope ilk="function" line="1362" lineend="1407" name="queue_action" signature="queue_action($item, $name, $action)">
+          <variable ilk="argument" name="$item" />
+          <variable ilk="argument" name="$name" />
+          <variable ilk="argument" name="$action" />
+        </scope>
+        <scope ilk="function" line="1423" lineend="1440" name="update_actions" signature="update_actions()" />
+        <scope ilk="function" line="1442" lineend="1484" name="run_actions" signature="run_actions()">
+          </scope>
+        <scope ilk="function" line="1486" lineend="1551" name="commit_actions" signature="commit_actions()">
+          </scope>
+        <scope ilk="function" line="1553" lineend="1568" name="run_cmd" signature="run_cmd(@cmds)">
+          <variable ilk="argument" name="@cmds" />
+        </scope>
+        <scope ilk="function" line="1570" lineend="1588" name="run_watch" signature="run_watch($fh)">
+          <variable ilk="argument" name="$fh" />
+        </scope>
+        <scope ilk="function" line="1590" lineend="1636" name="select_repo_item" signature="select_repo_item($item, $what, $newname, $newurl)">
+          <variable ilk="argument" name="$item" />
+          <variable ilk="argument" name="$what" />
+          <variable ilk="argument" name="$newname" />
+          <variable ilk="argument" name="$newurl" />
+        </scope>
+        <scope ilk="function" line="1638" lineend="1669" name="select_area_item" signature="select_area_item($item, $what)">
+          <variable ilk="argument" name="$item" />
+          <variable ilk="argument" name="$what" />
+        </scope>
+        <scope ilk="function" line="1671" lineend="1927" name="show_prefs_dialog" signature="show_prefs_dialog($peek, $w, $next)">
+          <import line="1795" module="URI::file" />
+          <import line="1845" module="PPM::Repositories" />
+          <import line="1846" module="ActivePerl" />
+          <variable ilk="argument" name="$peek" />
+          <variable ilk="argument" name="$w" />
+          <variable ilk="argument" name="$next" />
+          <import line="1795" module="URI::file" />
+          <import line="1845" module="PPM::Repositories" />
+          <import line="1846" module="ActivePerl" />
+        </scope>
+        <scope ilk="function" line="1929" lineend="1946" name="on_load" signature="on_load()">
+          </scope>
+        <scope ilk="function" line="1948" lineend="1977" name="on_exit" signature="on_exit()">
+          </scope>
+        <scope ilk="function" line="1979" lineend="2001" name="about" signature="about()">
+          <import line="1980" module="ActivePerl::PPM" />
+          <import line="1981" module="ActivePerl" />
+          <import line="1980" module="ActivePerl::PPM" />
+          <import line="1981" module="ActivePerl" />
+        </scope>
+        <scope ilk="function" line="2003" lineend="2021" name="status_error" signature="status_error($context)">
+          <variable ilk="argument" name="$context" />
+        </scope>
+        <scope ilk="function" line="2023" lineend="2038" name="status_message" signature="status_message()" />
+      </scope>
+      <scope classrefs="ActivePerl::PPM::Status" ilk="class" line="2041" lineend="2091" name="ActivePerl::PPM::GUI::Status">
+        <import line="2043" module="ActivePerl::PPM::Status" />
+        <variable line="2063" name="$progress" />
+        <scope ilk="function" line="2048" lineend="2057" name="begin" signature="begin($self, $what)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$what" />
+        </scope>
+        <scope ilk="function" line="2059" lineend="2074" name="tick" signature="tick($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="2076" lineend="2091" name="end" signature="end($self, $outcome)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$outcome" />
+        </scope>
+      </scope>
+    </scope>
+    

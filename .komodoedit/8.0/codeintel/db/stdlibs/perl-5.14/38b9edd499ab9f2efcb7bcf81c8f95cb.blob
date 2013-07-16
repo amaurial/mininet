@@ -1,0 +1,32 @@
+<scope ilk="blob" lang="Perl" name="Perl::Critic::Policy::ValuesAndExpressions::ProhibitMismatchedOperators">
+      <scope ilk="class" line="8" lineend="160" name="Perl::Critic::Policy::ValuesAndExpressions::ProhibitMismatchedOperators">
+        <import line="12" module="Readonly" symbol="*" />
+        <import line="14" module="Perl::Critic::Utils" symbol="**" />
+        <variable line="17" name="$VERSION" />
+        <scope ilk="function" line="51" lineend="51" name="supported_parameters" signature="supported_parameters()" />
+        <scope ilk="function" line="52" lineend="52" name="default_severity" signature="default_severity()" />
+        <scope ilk="function" line="53" lineend="53" name="default_themes" signature="default_themes()" />
+        <scope ilk="function" line="54" lineend="54" name="applies_to" signature="applies_to()" />
+        <scope ilk="function" line="58" lineend="99" name="violates" signature="violates($self, $elem)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$elem" />
+        </scope>
+        <scope ilk="function" line="103" lineend="114" name="_get_token_compatibility" signature="_get_token_compatibility($self, $elem)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$elem" />
+        </scope>
+        <scope ilk="function" line="118" lineend="129" name="_have_stringy_x" signature="_have_stringy_x($self, $elem)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$elem" />
+        </scope>
+        <scope ilk="function" line="133" lineend="148" name="_get_potential_leading_operator" signature="_get_potential_leading_operator($self, $elem)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$elem" />
+        </scope>
+        <scope ilk="function" line="152" lineend="158" name="_is_file_operator" signature="_is_file_operator($self, $elem)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$elem" />
+        </scope>
+      </scope>
+    </scope>
+    

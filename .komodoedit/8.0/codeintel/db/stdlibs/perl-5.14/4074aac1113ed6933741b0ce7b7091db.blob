@@ -1,0 +1,35 @@
+<scope ilk="blob" lang="Perl" name="List::Util::PP">
+      <scope classrefs="Exporter" ilk="class" line="7" lineend="83" name="List::Util::PP">
+        <import line="12" module="Exporter" />
+        <variable line="11" name="$a" />
+        <variable line="11" name="$b" />
+        <variable line="11" name="$VERSION" />
+        <variable line="11" name="@EXPORT" />
+        <variable line="11" name="@ISA" />
+        <scope attributes="__exported__" ilk="function" line="19" lineend="44" name="reduce" signature="reduce($code)">
+          <import line="21" module="Scalar::Util" />
+          <import line="24" module="Carp" />
+          <variable ilk="argument" name="$code" />
+          <import line="21" module="Scalar::Util" />
+          <import line="24" module="Carp" />
+          <variable line="31" name="$a" />
+          <variable line="31" name="$b" />
+        </scope>
+        <scope attributes="__exported__" ilk="function" line="46" lineend="60" name="first" signature="first($code)">
+          <import line="48" module="Scalar::Util" />
+          <import line="51" module="Carp" />
+          <variable ilk="argument" name="$code" />
+          <import line="48" module="Scalar::Util" />
+          <import line="51" module="Carp" />
+        </scope>
+        <scope attributes="__exported__" ilk="function" line="63" lineend="63" name="sum" signature="sum()" />
+        <scope attributes="__exported__" ilk="function" line="65" lineend="65" name="min" signature="min()" />
+        <scope attributes="__exported__" ilk="function" line="67" lineend="67" name="max" signature="max()" />
+        <scope attributes="__exported__" ilk="function" line="69" lineend="69" name="minstr" signature="minstr()" />
+        <scope attributes="__exported__" ilk="function" line="71" lineend="71" name="maxstr" signature="maxstr()" />
+        <scope attributes="__exported__" ilk="function" line="73" lineend="81" name="shuffle" signature="shuffle($i)">
+          <variable ilk="argument" name="$i" />
+        </scope>
+      </scope>
+    </scope>
+    

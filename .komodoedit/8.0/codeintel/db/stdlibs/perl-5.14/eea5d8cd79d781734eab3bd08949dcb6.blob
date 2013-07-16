@@ -1,0 +1,59 @@
+<scope ilk="blob" lang="Perl" name="B::Lint">
+      <scope ilk="class" line="1" lineend="792" name="B::Lint">
+        <import line="195" module="B" symbol="walkoptree_slow" />
+        <import line="196" module="B" symbol="main_root" />
+        <import line="196" module="B" symbol="main_cv" />
+        <import line="196" module="B" symbol="walksymtable" />
+        <import line="196" module="B" symbol="parents" />
+        <import line="197" module="B" symbol="OPpOUR_INTRO" />
+        <import line="198" module="B" symbol="OPf_WANT_VOID" />
+        <import line="198" module="B" symbol="OPf_WANT_LIST" />
+        <import line="198" module="B" symbol="OPf_WANT" />
+        <import line="198" module="B" symbol="OPf_STACKED" />
+        <import line="198" module="B" symbol="SVf_POK" />
+        <import line="199" module="Carp" symbol="carp" />
+        <import line="202" module="Module::Pluggable" symbol="require" />
+        <import line="204" module="List::Util" symbol="first" />
+        <import line="223" module="constant" />
+        <variable line="3" name="$VERSION" />
+        <variable line="518" name="*B::PADOP::lint" />
+        <variable line="764" name="$plugin" />
+        <scope ilk="function" line="206" lineend="206" name="any" signature="any()">
+          </scope>
+        <scope ilk="function" line="234" lineend="234" name="file" signature="file()" />
+        <scope ilk="function" line="235" lineend="235" name="line" signature="line()" />
+        <scope ilk="function" line="236" lineend="236" name="curstash" signature="curstash()" />
+        <scope ilk="function" line="237" lineend="237" name="curcv" signature="curcv()" />
+        <scope ilk="function" line="270" lineend="274" name="warning" signature="warning()">
+          </scope>
+        <scope ilk="function" line="278" lineend="285" name="gimme" signature="gimme()">
+          </scope>
+        <scope ilk="function" line="289" lineend="295" name="inside_grepmap" signature="inside_grepmap()" />
+        <scope ilk="function" line="297" lineend="315" name="inside_foreach_modifier" signature="inside_foreach_modifier()">
+          </scope>
+        <scope ilk="function" line="392" lineend="455" name="B::UNOP::lint" signature="B::UNOP::lint($op)">
+          <variable ilk="argument" name="$op" />
+        </scope>
+        <scope ilk="function" line="457" lineend="486" name="B::PMOP::lint" signature="B::PMOP::lint($op)">
+          <variable ilk="argument" name="$op" />
+        </scope>
+        <scope ilk="function" line="488" lineend="511" name="B::LOOP::lint" signature="B::LOOP::lint($op)">
+          <variable ilk="argument" name="$op" />
+        </scope>
+        <scope ilk="function" line="520" lineend="641" name="B::SVOP::lint" signature="B::SVOP::lint($op)">
+          <variable ilk="argument" name="$op" />
+        </scope>
+        <scope ilk="function" line="643" lineend="652" name="B::GV::lintcv" signature="B::GV::lintcv()">
+          </scope>
+        <scope ilk="function" line="654" lineend="669" name="B::CV::lintcv" signature="B::CV::lintcv()">
+          </scope>
+        <scope ilk="function" line="671" lineend="695" name="do_lint" signature="do_lint()">
+          </scope>
+        <scope ilk="function" line="697" lineend="758" name="compile" signature="compile(@options)">
+          <variable ilk="argument" name="@options" />
+        </scope>
+        <scope ilk="function" line="760" lineend="790" name="register_plugin" signature="register_plugin()">
+          </scope>
+      </scope>
+    </scope>
+    

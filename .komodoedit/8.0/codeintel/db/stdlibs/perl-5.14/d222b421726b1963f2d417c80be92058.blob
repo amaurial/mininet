@@ -1,0 +1,95 @@
+<scope ilk="blob" lang="Perl" name="Getopt::Long">
+      <scope classrefs="Exporter" ilk="class" line="3" lineend="1473" name="Getopt::Long">
+        <import line="25" module="Exporter" symbol="*" />
+        <variable line="19" name="$VERSION" />
+        <variable line="26" name="@EXPORT" />
+        <variable line="26" name="@EXPORT_OK" />
+        <variable line="26" name="@ISA" />
+        <variable line="46" name="$debug" />
+        <variable line="46" name="$error" />
+        <variable line="46" name="$major_version" />
+        <variable line="46" name="$minor_version" />
+        <variable line="48" name="$autoabbrev" />
+        <variable line="48" name="$bundling" />
+        <variable line="48" name="$getopt_compat" />
+        <variable line="48" name="$ignorecase" />
+        <variable line="48" name="$order" />
+        <variable line="49" name="$passthrough" />
+        <variable line="51" name="$auto_help" />
+        <variable line="51" name="$auto_version" />
+        <variable line="51" name="$caller" />
+        <variable line="51" name="$genprefix" />
+        <variable line="51" name="$gnu_compat" />
+        <variable line="51" name="$longprefix" />
+        <variable line="1047" name="$arg" />
+        <scope ilk="function" line="72" lineend="95" name="ConfigDefaults" signature="ConfigDefaults()" />
+        <scope ilk="function" line="98" lineend="116" name="import" signature="import($pkg)">
+          <variable ilk="argument" name="$pkg" />
+        </scope>
+        <scope attributes="__exported__" ilk="function" line="249" lineend="254" name="GetOptions" signature="GetOptions()" />
+        <scope attributes="__exportable__" ilk="function" line="256" lineend="268" name="GetOptionsFromString" signature="GetOptionsFromString()">
+          <import line="258" module="Text::ParseWords" />
+          <import line="258" module="Text::ParseWords" />
+        </scope>
+        <scope attributes="__exportable__" ilk="function" line="270" lineend="750" name="GetOptionsFromArray" signature="GetOptionsFromArray($argv, @optionlist)">
+          <variable ilk="argument" name="$argv" />
+          <variable ilk="argument" name="@optionlist" />
+        </scope>
+        <scope ilk="function" line="753" lineend="767" name="OptCtl" signature="OptCtl($v)">
+          <variable ilk="argument" name="$v" />
+        </scope>
+        <scope ilk="function" line="770" lineend="889" name="ParseOptionSpec" signature="ParseOptionSpec($opt, $opctl)">
+          <variable ilk="argument" name="$opt" />
+          <variable ilk="argument" name="$opctl" />
+        </scope>
+        <scope ilk="function" line="892" lineend="1055" name="FindOption" signature="FindOption($argv, $prefix, $argend, $opt, $opctl)">
+          <variable ilk="argument" name="$argv" />
+          <variable ilk="argument" name="$prefix" />
+          <variable ilk="argument" name="$argend" />
+          <variable ilk="argument" name="$opt" />
+          <variable ilk="argument" name="$opctl" />
+        </scope>
+        <scope ilk="function" line="1226" lineend="1263" name="ValidValue" signature="ValidValue($ctl, $arg, $mand, $argend, $prefix)">
+          <variable ilk="argument" name="$ctl" />
+          <variable ilk="argument" name="$arg" />
+          <variable ilk="argument" name="$mand" />
+          <variable ilk="argument" name="$argend" />
+          <variable ilk="argument" name="$prefix" />
+        </scope>
+        <scope attributes="__exportable__" ilk="function" line="1266" lineend="1375" name="Configure" signature="Configure(@options)">
+          <variable ilk="argument" name="@options" />
+        </scope>
+        <scope ilk="function" line="1378" lineend="1380" name="config" signature="config()" />
+        <scope attributes="__exportable__" ilk="function" line="1390" lineend="1395" name="VersionMessage" signature="VersionMessage()">
+          </scope>
+        <scope attributes="__exportable__" ilk="function" line="1419" lineend="1429" name="HelpMessage" signature="HelpMessage()">
+          <import line="1421" module="Pod::Usage" />
+          <import line="1421" module="Pod::Usage" />
+        </scope>
+        <scope ilk="function" line="1433" lineend="1467" name="setup_pa_args" signature="setup_pa_args($tag)">
+          <variable ilk="argument" name="$tag" />
+        </scope>
+        <scope ilk="function" line="1470" lineend="1473" name="VERSION" signature="VERSION()" />
+      </scope>
+      <scope ilk="class" line="129" lineend="200" name="Getopt::Long::Parser">
+        <variable line="184" name="$Getopt::Long::caller" />
+        <scope attributes="__ctor__" ilk="function" line="137" lineend="164" name="new" signature="new($that, %atts)">
+          <variable ilk="argument" name="$that" />
+          <variable ilk="argument" name="%atts" />
+        </scope>
+        <scope ilk="function" line="166" lineend="174" name="configure" signature="configure()">
+          </scope>
+        <scope ilk="function" line="176" lineend="200" name="getoptions" signature="getoptions()">
+          </scope>
+      </scope>
+      <scope ilk="class" line="1475" lineend="2648" name="Getopt::Long::CallBack">
+        <scope attributes="__ctor__" ilk="function" line="1477" lineend="1480" name="new" signature="new($pkg, %atts)">
+          <variable ilk="argument" name="$pkg" />
+          <variable ilk="argument" name="%atts" />
+        </scope>
+        <scope ilk="function" line="1482" lineend="1485" name="name" signature="name($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+      </scope>
+    </scope>
+    

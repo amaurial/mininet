@@ -1,0 +1,57 @@
+<scope doc="Abstract Base Classes (ABCs) according to PEP 3119.&#xA;" ilk="blob" lang="Python" name="abc">
+      <scope classrefs="type" doc="Metaclass for defining Abstract Base Classes (ABCs).&#xA;Use this metaclass to create an ABC.  An ABC can be subclassed directly, and then acts as a mix-in class.  You can also register unrelated concrete classes (even built-in classes) and unrelated ABCs as &apos;virtual subclasses&apos; -- these and their descendants will be considered subclasses of the registering ABC by the built-in issubclass() function, but the registering ABC won&apos;t show up in their MRO (Method Resolution Order) nor will method implementations defined by the registering ABC be callable (not even via super())." ilk="class" name="ABCMeta">
+        <scope ilk="function" name="__new__" signature="__new__(mcls, name, bases, namespace)" />
+        <scope doc="Override for isinstance(instance, cls)." ilk="function" name="__instancecheck__" signature="__instancecheck__(cls, instance)" />
+        <scope doc="Register a virtual subclass of an ABC." ilk="function" name="register" signature="register(cls, subclass)" />
+        <scope doc="Override for issubclass(subclass, cls)." ilk="function" name="__subclasscheck__" signature="__subclasscheck__(cls, subclass)" />
+        <scope doc="Debug helper to print the ABC registry." ilk="function" name="_dump_registry" signature="_dump_registry(cls, file=None)" />
+      </scope>
+      <scope classrefs="object" doc="&#xA;" ilk="class" name="WeakSet">
+        <scope ilk="function" name="difference_update" signature="difference_update(self, other)" />
+        <scope ilk="function" name="symmetric_difference" signature="symmetric_difference(self, other)" />
+        <scope ilk="function" name="__reduce__" signature="__reduce__(self)" />
+        <scope ilk="function" name="pop" signature="pop(self)" />
+        <scope ilk="function" name="issuperset" signature="issuperset(self, other)" />
+        <scope ilk="function" name="remove" signature="remove(self, item)" />
+        <scope ilk="function" name="__and__" signature="__and__(self, other)" />
+        <scope ilk="function" name="__lt__" signature="__lt__(self, other)" />
+        <scope ilk="function" name="__init__" signature="__init__(self, data=None)" />
+        <scope ilk="function" name="_commit_removals" signature="_commit_removals(self)" />
+        <scope ilk="function" name="intersection" signature="intersection(self, other)" />
+        <scope ilk="function" name="__iand__" signature="__iand__(self, other)" />
+        <scope ilk="function" name="issubset" signature="issubset(self, other)" />
+        <scope ilk="function" name="__contains__" signature="__contains__(self, item)" />
+        <scope ilk="function" name="union" signature="union(self, other)" />
+        <scope ilk="function" name="discard" signature="discard(self, item)" />
+        <scope ilk="function" name="add" signature="add(self, item)" />
+        <scope ilk="function" name="__ixor__" signature="__ixor__(self, other)" />
+        <scope ilk="function" name="__len__" signature="__len__(self)" />
+        <scope ilk="function" name="__isub__" signature="__isub__(self, other)" />
+        <scope ilk="function" name="symmetric_difference_update" signature="symmetric_difference_update(self, other)" />
+        <scope ilk="function" name="update" signature="update(self, other)" />
+        <scope ilk="function" name="difference" signature="difference(self, other)" />
+        <scope ilk="function" name="__iter__" signature="__iter__(self)" />
+        <scope ilk="function" name="__or__" signature="__or__(self, other)" />
+        <scope ilk="function" name="__gt__" signature="__gt__(self, other)" />
+        <scope ilk="function" name="copy" signature="copy(self)" />
+        <scope ilk="function" name="__eq__" signature="__eq__(self, other)" />
+        <scope ilk="function" name="isdisjoint" signature="isdisjoint(self, other)" />
+        <scope ilk="function" name="clear" signature="clear(self)" />
+        <scope ilk="function" name="intersection_update" signature="intersection_update(self, other)" />
+        <scope ilk="function" name="__xor__" signature="__xor__(self, other)" />
+        <scope ilk="function" name="__ior__" signature="__ior__(self, other)" />
+        <scope ilk="function" name="__le__" signature="__le__(self, other)" />
+        <scope doc="# Helper functions for simple delegating methods." ilk="function" name="_apply" signature="_apply(self, other, method)" />
+        <scope ilk="function" name="__sub__" signature="__sub__(self, other)" />
+        <scope ilk="function" name="__ge__" signature="__ge__(self, other)" />
+      </scope>
+      <scope classrefs="classmethod" doc="A decorator indicating abstract classmethods.&#xA;Similar to abstractmethod.  Usage:  class C(metaclass=ABCMeta): @abstractclassmethod def my_abstract_classmethod(cls, ...): ..." ilk="class" name="abstractclassmethod">
+        <scope ilk="function" name="__init__" signature="__init__(self, callable)" />
+      </scope>
+      <scope doc="A decorator indicating abstract methods." ilk="function" name="abstractmethod" signature="abstractmethod(funcobj)" />
+      <scope classrefs="property" doc="A decorator indicating abstract properties.&#xA;Requires that the metaclass is ABCMeta or derived from it.  A class that has a metaclass derived from ABCMeta cannot be instantiated unless all of its abstract properties are overridden. The abstract properties can be called using any of the normal &apos;super&apos; call mechanisms.  Usage:  class C(metaclass=ABCMeta): @abstractproperty" ilk="class" name="abstractproperty" />
+      <scope classrefs="staticmethod" doc="A decorator indicating abstract staticmethods.&#xA;Similar to abstractmethod.  Usage:  class C(metaclass=ABCMeta): @abstractstaticmethod def my_abstract_staticmethod(...): ..." ilk="class" name="abstractstaticmethod">
+        <scope ilk="function" name="__init__" signature="__init__(self, callable)" />
+      </scope>
+    </scope>
+    

@@ -1,0 +1,64 @@
+<scope ilk="blob" lang="Perl" name="ActiveState::RelocateTree">
+      <scope classrefs="Exporter" ilk="class" line="1" lineend="481" name="ActiveState::RelocateTree">
+        <import line="2" module="Exporter" />
+        <import line="5" module="Config" symbol="*" />
+        <import line="6" module="Cwd" symbol="abs_path" />
+        <import line="6" module="Cwd" symbol="getcwd" />
+        <import line="7" module="File::Basename" symbol="dirname" />
+        <import line="7" module="File::Basename" symbol="basename" />
+        <import line="8" module="File::Copy" />
+        <import line="9" module="File::Find" symbol="*" />
+        <import line="10" module="File::Path" symbol="*" />
+        <import line="11" module="File::Spec" symbol="*" />
+        <variable line="13" name="$VERSION" />
+        <variable line="13" name="@EXPORT_OK" />
+        <variable line="13" name="@ISA" />
+        <scope attributes="__exportable__" ilk="function" line="24" lineend="30" name="spongedir" signature="spongedir()">
+          </scope>
+        <scope attributes="__exportable__" ilk="function" line="32" lineend="134" name="relocate" signature="relocate()">
+          </scope>
+        <scope ilk="function" line="136" lineend="141" name="binary_pad" signature="binary_pad($suffix, $pad_length)">
+          <variable ilk="argument" name="$suffix" />
+          <variable ilk="argument" name="$pad_length" />
+        </scope>
+        <scope ilk="function" line="143" lineend="218" name="relocate2" signature="relocate2($from, $to, $sponge, $reloc_txt)">
+          <import line="159" module="Carp::Heavy" />
+          <variable ilk="argument" name="$from" />
+          <variable ilk="argument" name="$to" />
+          <variable ilk="argument" name="$sponge" />
+          <variable ilk="argument" name="$reloc_txt" />
+          <import line="159" module="Carp::Heavy" />
+        </scope>
+        <scope attributes="__exportable__" ilk="function" line="221" lineend="243" name="check" signature="check($file, $re, $bin)">
+          <variable ilk="argument" name="$file" />
+          <variable ilk="argument" name="$re" />
+          <variable ilk="argument" name="$bin" />
+        </scope>
+        <scope attributes="__exportable__" ilk="function" line="245" lineend="339" name="edit" signature="edit($re, $from, $dest, $bak, $bin)">
+          <variable ilk="argument" name="$re" />
+          <variable ilk="argument" name="$from" />
+          <variable ilk="argument" name="$dest" />
+          <variable ilk="argument" name="$bak" />
+          <variable ilk="argument" name="$bin" />
+        </scope>
+        <scope attributes="__exportable__" ilk="function" line="341" lineend="427" name="move_tree" signature="move_tree($from, $to, $kill, $verbose, $usenlink)">
+          <variable ilk="argument" name="$from" />
+          <variable ilk="argument" name="$to" />
+          <variable ilk="argument" name="$kill" />
+          <variable ilk="argument" name="$verbose" />
+          <variable ilk="argument" name="$usenlink" />
+        </scope>
+        <scope ilk="function" line="436" lineend="443" name="resolve" signature="resolve($l)">
+          <variable ilk="argument" name="$l" />
+        </scope>
+        <scope attributes="__exportable__" ilk="function" line="445" lineend="468" name="rel2abs" signature="rel2abs($rel, $relto)">
+          <variable ilk="argument" name="$rel" />
+          <variable ilk="argument" name="$relto" />
+        </scope>
+        <scope attributes="__exportable__" ilk="function" line="470" lineend="478" name="abs2rel" signature="abs2rel($abs, $from)">
+          <variable ilk="argument" name="$abs" />
+          <variable ilk="argument" name="$from" />
+        </scope>
+      </scope>
+    </scope>
+    

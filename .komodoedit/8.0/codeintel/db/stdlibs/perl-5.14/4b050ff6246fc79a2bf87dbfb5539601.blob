@@ -1,0 +1,43 @@
+<scope ilk="blob" lang="Perl" name="Test::Exception">
+      <scope ilk="class" line="4" lineend="504" name="Test::Exception">
+        <import line="5" module="Test::Builder" symbol="*" />
+        <import line="6" module="Sub::Uplevel" symbol="uplevel" />
+        <variable line="9" name="$VERSION" />
+        <variable line="10" name="@EXPORT" />
+        <scope ilk="function" line="14" lineend="22" name="import" signature="import($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="85" lineend="127" name="_quiet_caller" signature="_quiet_caller()">
+          </scope>
+        <scope ilk="function" line="129" lineend="138" name="_try_as_caller" signature="_try_as_caller($coderef)">
+          <variable ilk="argument" name="$coderef" />
+        </scope>
+        <scope ilk="function" line="141" lineend="144" name="_is_exception" signature="_is_exception($exception)">
+          <variable ilk="argument" name="$exception" />
+        </scope>
+        <scope ilk="function" line="147" lineend="155" name="_exception_as_string" signature="_exception_as_string($prefix, $exception)">
+          <variable ilk="argument" name="$prefix" />
+          <variable ilk="argument" name="$exception" />
+        </scope>
+        <scope ilk="function" line="209" lineend="231" name="throws_ok" signature="throws_ok($coderef, $expecting, $description)">
+          <import line="212" module="Carp" />
+          <variable ilk="argument" name="$coderef" />
+          <variable ilk="argument" name="$expecting" />
+          <variable ilk="argument" name="$description" />
+          <import line="212" module="Carp" />
+        </scope>
+        <scope ilk="function" line="256" lineend="262" name="dies_ok" signature="dies_ok($coderef, $description)">
+          <variable ilk="argument" name="$coderef" />
+          <variable ilk="argument" name="$description" />
+        </scope>
+        <scope ilk="function" line="295" lineend="302" name="lives_ok" signature="lives_ok($coderef, $description)">
+          <variable ilk="argument" name="$coderef" />
+          <variable ilk="argument" name="$description" />
+        </scope>
+        <scope ilk="function" line="335" lineend="355" name="lives_and" signature="lives_and($test, $description)">
+          <variable ilk="argument" name="$test" />
+          <variable ilk="argument" name="$description" />
+        </scope>
+      </scope>
+    </scope>
+    

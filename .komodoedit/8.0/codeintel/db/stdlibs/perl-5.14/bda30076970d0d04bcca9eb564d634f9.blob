@@ -1,0 +1,28 @@
+<scope ilk="blob" lang="Perl" name="Time::Local">
+      <scope classrefs="Exporter" ilk="class" line="1" lineend="194" name="Time::Local">
+        <import line="3" module="Exporter" />
+        <import line="4" module="Carp" symbol="*" />
+        <import line="5" module="Config" symbol="*" />
+        <variable line="8" name="$VERSION" />
+        <variable line="8" name="@EXPORT" />
+        <variable line="8" name="@EXPORT_OK" />
+        <variable line="8" name="@ISA" />
+        <scope ilk="function" line="70" lineend="88" name="_daygm" signature="_daygm()" />
+        <scope ilk="function" line="90" lineend="95" name="_timegm" signature="_timegm()">
+          </scope>
+        <scope attributes="__exported__" ilk="function" line="97" lineend="139" name="timegm" signature="timegm($sec, $min, $hour, $mday, $month, $year)">
+          <variable ilk="argument" name="$sec" />
+          <variable ilk="argument" name="$min" />
+          <variable ilk="argument" name="$hour" />
+          <variable ilk="argument" name="$mday" />
+          <variable ilk="argument" name="$month" />
+          <variable ilk="argument" name="$year" />
+        </scope>
+        <scope ilk="function" line="141" lineend="147" name="_is_leap_year" signature="_is_leap_year()" />
+        <scope attributes="__exportable__" ilk="function" line="149" lineend="152" name="timegm_nocheck" signature="timegm_nocheck()" />
+        <scope attributes="__exported__" ilk="function" line="154" lineend="187" name="timelocal" signature="timelocal()">
+          </scope>
+        <scope attributes="__exportable__" ilk="function" line="189" lineend="192" name="timelocal_nocheck" signature="timelocal_nocheck()" />
+      </scope>
+    </scope>
+    

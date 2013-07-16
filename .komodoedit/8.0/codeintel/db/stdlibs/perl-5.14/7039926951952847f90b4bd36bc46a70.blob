@@ -1,0 +1,41 @@
+<scope ilk="blob" lang="Perl" name="ActivePerl::Config">
+      <scope ilk="class" line="1" lineend="457" name="ActivePerl::Config">
+        <import line="40" module="Config" />
+        <variable line="222" name="$arch" />
+        <variable line="368" name="$progpath" />
+        <scope ilk="function" line="43" lineend="305" name="override" signature="override($key)">
+          <import line="48" module="ActiveState::Path" />
+          <import line="98" module="Win32" />
+          <variable ilk="argument" name="$key" />
+          <import line="48" module="ActiveState::Path" />
+          <import line="98" module="Win32" />
+        </scope>
+        <scope ilk="function" line="307" lineend="309" name="_orig_conf" signature="_orig_conf()" />
+        <scope ilk="function" line="311" lineend="314" name="_override" signature="_override($key, $val)">
+          <variable ilk="argument" name="$key" />
+          <variable ilk="argument" name="$val" />
+        </scope>
+        <scope ilk="function" line="316" lineend="321" name="_is_bundled_hpux_compiler" signature="_is_bundled_hpux_compiler($cc)">
+          <import line="317" module="ActiveState::Path" />
+          <variable ilk="argument" name="$cc" />
+          <import line="317" module="ActiveState::Path" />
+        </scope>
+        <scope ilk="function" line="323" lineend="325" name="_gcc_requested" signature="_gcc_requested()" />
+        <scope ilk="function" line="329" lineend="349" name="_warn" signature="_warn($msg)">
+          <import line="335" module="Win32::Console" />
+          <variable ilk="argument" name="$msg" />
+          <import line="335" module="Win32::Console" />
+        </scope>
+        <scope ilk="function" line="351" lineend="354" name="_inside_cpan_shell" signature="_inside_cpan_shell()" />
+        <scope ilk="function" line="356" lineend="360" name="_get_short_path_name" signature="_get_short_path_name($path)">
+          <variable ilk="argument" name="$path" />
+        </scope>
+        <scope ilk="function" line="363" lineend="392" name="_find_prog" signature="_find_prog($prog)">
+          <variable ilk="argument" name="$prog" />
+        </scope>
+        <scope ilk="function" line="402" lineend="455" name="_install_mingw" signature="_install_mingw($key)">
+          <variable ilk="argument" name="$key" />
+        </scope>
+      </scope>
+    </scope>
+    

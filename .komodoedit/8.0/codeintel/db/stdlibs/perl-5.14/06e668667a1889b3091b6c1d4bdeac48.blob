@@ -1,0 +1,42 @@
+<scope ilk="blob" lang="Perl" name="PPIx::Regexp::Token::Interpolation">
+      <scope ilk="class" line="30" lineend="339" name="PPIx::Regexp::Token::Interpolation">
+        <import line="37" module="PPI::Document" symbol="*" />
+        <import line="38" module="PPIx::Regexp::Constant" symbol="COOKIE_CLASS" />
+        <import line="38" module="PPIx::Regexp::Constant" symbol="TOKEN_LITERAL" />
+        <import line="38" module="PPIx::Regexp::Constant" symbol="MINIMUM_PERL" />
+        <variable line="40" name="$VERSION" />
+        <scope ilk="function" line="50" lineend="53" name="perl_version_introduced" signature="perl_version_introduced()" />
+        <scope ilk="function" line="71" lineend="83" name="ppi" signature="ppi($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="111" lineend="234" name="_interpolation" signature="_interpolation($class, $tokenizer, $character, $in_regexp)">
+          <variable ilk="argument" name="$class" />
+          <variable ilk="argument" name="$tokenizer" />
+          <variable ilk="argument" name="$character" />
+          <variable ilk="argument" name="$in_regexp" />
+        </scope>
+        <scope ilk="function" line="243" lineend="261" name="_subscript" signature="_subscript($class, $struct)">
+          <variable ilk="argument" name="$class" />
+          <variable ilk="argument" name="$struct" />
+        </scope>
+        <scope ilk="function" line="267" lineend="288" name="_curly" signature="_curly($class, @kids)">
+          <variable ilk="argument" name="$class" />
+          <variable ilk="argument" name="@kids" />
+        </scope>
+        <scope ilk="function" line="292" lineend="302" name="_square" signature="_square($class, @kids)">
+          <variable ilk="argument" name="$class" />
+          <variable ilk="argument" name="@kids" />
+        </scope>
+        <scope ilk="function" line="311" lineend="324" name="__PPIX_TOKENIZER__regexp" signature="__PPIX_TOKENIZER__regexp($class, $tokenizer, $character)">
+          <variable ilk="argument" name="$class" />
+          <variable ilk="argument" name="$tokenizer" />
+          <variable ilk="argument" name="$character" />
+        </scope>
+        <scope ilk="function" line="326" lineend="337" name="__PPIX_TOKENIZER__repl" signature="__PPIX_TOKENIZER__repl($class, $tokenizer, $character)">
+          <variable ilk="argument" name="$class" />
+          <variable ilk="argument" name="$tokenizer" />
+          <variable ilk="argument" name="$character" />
+        </scope>
+      </scope>
+    </scope>
+    

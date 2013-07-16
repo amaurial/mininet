@@ -1,0 +1,71 @@
+<scope ilk="blob" lang="Perl" name="File::HomeDir::Darwin::Carbon">
+      <scope classrefs="File::HomeDir::Darwin" ilk="class" line="1" lineend="170" name="File::HomeDir::Darwin::Carbon">
+        <import line="8" module="Cwd" />
+        <import line="9" module="Carp" />
+        <import line="10" module="File::HomeDir::Darwin" />
+        <variable line="12" name="$VERSION" />
+        <variable line="12" name="@ISA" />
+        <scope ilk="function" line="34" lineend="48" name="my_home" signature="my_home($class)">
+          <import line="44" module="Mac::Files" />
+          <variable ilk="argument" name="$class" />
+          <import line="44" module="Mac::Files" />
+        </scope>
+        <scope ilk="function" line="50" lineend="57" name="my_desktop" signature="my_desktop($class)">
+          <import line="53" module="Mac::Files" />
+          <variable ilk="argument" name="$class" />
+          <import line="53" module="Mac::Files" />
+        </scope>
+        <scope ilk="function" line="59" lineend="66" name="my_documents" signature="my_documents($class)">
+          <import line="62" module="Mac::Files" />
+          <variable ilk="argument" name="$class" />
+          <import line="62" module="Mac::Files" />
+        </scope>
+        <scope ilk="function" line="68" lineend="75" name="my_data" signature="my_data($class)">
+          <import line="71" module="Mac::Files" />
+          <variable ilk="argument" name="$class" />
+          <import line="71" module="Mac::Files" />
+        </scope>
+        <scope ilk="function" line="77" lineend="84" name="my_music" signature="my_music($class)">
+          <import line="80" module="Mac::Files" />
+          <variable ilk="argument" name="$class" />
+          <import line="80" module="Mac::Files" />
+        </scope>
+        <scope ilk="function" line="86" lineend="93" name="my_pictures" signature="my_pictures($class)">
+          <import line="89" module="Mac::Files" />
+          <variable ilk="argument" name="$class" />
+          <import line="89" module="Mac::Files" />
+        </scope>
+        <scope ilk="function" line="95" lineend="102" name="my_videos" signature="my_videos($class)">
+          <import line="98" module="Mac::Files" />
+          <variable ilk="argument" name="$class" />
+          <import line="98" module="Mac::Files" />
+        </scope>
+        <scope ilk="function" line="104" lineend="123" name="_find_folder" signature="_find_folder($class, $name)">
+          <import line="108" module="Mac::Files" />
+          <variable ilk="argument" name="$class" />
+          <variable ilk="argument" name="$name" />
+          <import line="108" module="Mac::Files" />
+        </scope>
+        <scope ilk="function" line="132" lineend="136" name="users_home" signature="users_home($class)">
+          <variable ilk="argument" name="$class" />
+        </scope>
+        <scope ilk="function" line="140" lineend="144" name="users_desktop" signature="users_desktop($class, $name)">
+          <variable ilk="argument" name="$class" />
+          <variable ilk="argument" name="$name" />
+        </scope>
+        <scope ilk="function" line="146" lineend="150" name="users_documents" signature="users_documents($class, $name)">
+          <variable ilk="argument" name="$class" />
+          <variable ilk="argument" name="$name" />
+        </scope>
+        <scope ilk="function" line="152" lineend="157" name="users_data" signature="users_data($class, $name)">
+          <variable ilk="argument" name="$class" />
+          <variable ilk="argument" name="$name" />
+        </scope>
+        <scope ilk="function" line="161" lineend="168" name="_to_user" signature="_to_user($class, $path, $name)">
+          <variable ilk="argument" name="$class" />
+          <variable ilk="argument" name="$path" />
+          <variable ilk="argument" name="$name" />
+        </scope>
+      </scope>
+    </scope>
+    

@@ -1,0 +1,32 @@
+<scope ilk="blob" lang="Perl" name="IO::Pipe">
+      <scope ilk="class" line="7" lineend="139" name="IO::Pipe">
+        <import line="11" module="IO::Handle" symbol="*" />
+        <import line="14" module="Carp" symbol="*" />
+        <import line="15" module="Symbol" symbol="*" />
+        <variable line="13" name="$VERSION" />
+        <scope attributes="__ctor__" ilk="function" line="19" lineend="34" name="new" signature="new($type)">
+          <variable ilk="argument" name="$type" />
+        </scope>
+        <scope ilk="function" line="36" lineend="39" name="handles" signature="handles()" />
+        <scope attributes="__ctor__" ilk="function" line="43" lineend="91" name="_doit" signature="_doit($me, $rw, $handle)">
+          <import line="57" module="Fcntl" />
+          <variable ilk="argument" name="$me" />
+          <variable ilk="argument" name="$rw" />
+          <variable ilk="argument" name="$handle" />
+          <import line="57" module="Fcntl" />
+        </scope>
+        <scope attributes="__ctor__" ilk="function" line="93" lineend="115" name="reader" signature="reader($me)">
+          <variable ilk="argument" name="$me" />
+        </scope>
+        <scope attributes="__ctor__" ilk="function" line="117" lineend="139" name="writer" signature="writer($me)">
+          <variable ilk="argument" name="$me" />
+        </scope>
+      </scope>
+      <scope classrefs="IO::Handle" ilk="class" line="141" lineend="157" name="IO::Pipe::End">
+        <variable line="143" name="@ISA" />
+        <scope ilk="function" line="147" lineend="155" name="close" signature="close($fh)">
+          <variable ilk="argument" name="$fh" />
+        </scope>
+      </scope>
+    </scope>
+    

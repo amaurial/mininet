@@ -1,0 +1,64 @@
+<scope ilk="blob" lang="Perl" name="Perl::Critic::TestUtils">
+      <scope ilk="class" line="8" lineend="374" name="Perl::Critic::TestUtils">
+        <import line="14" module="English" symbol="-no_match_vars" />
+        <import line="15" module="Readonly" symbol="*" />
+        <import line="19" module="File::Path" />
+        <import line="20" module="File::Spec" />
+        <import line="21" module="File::Spec::Unix" />
+        <import line="22" module="File::Temp" />
+        <import line="23" module="File::Find" symbol="find" />
+        <import line="25" module="Perl::Critic" symbol="*" />
+        <import line="26" module="Perl::Critic::Config" symbol="*" />
+        <import line="27" module="Perl::Critic::Exception::Fatal::Generic" symbol="&amp;throw_generic" />
+        <import line="28" module="Perl::Critic::Exception::Fatal::Internal" symbol="&amp;throw_internal" />
+        <import line="29" module="Perl::Critic::Utils" symbol="**" />
+        <import line="30" module="Perl::Critic::PolicyFactory" symbol="-test" />
+        <variable line="32" name="$VERSION" />
+        <variable line="34" name="@EXPORT_OK" />
+        <variable line="230" name="$value" />
+        <scope ilk="function" line="51" lineend="55" name="block_perlcriticrc" signature="block_perlcriticrc()">
+          </scope>
+        <scope ilk="function" line="60" lineend="65" name="pcritique_with_violations" signature="pcritique_with_violations($policy, $code_ref, $config_ref)">
+          <variable ilk="argument" name="$policy" />
+          <variable ilk="argument" name="$code_ref" />
+          <variable ilk="argument" name="$config_ref" />
+        </scope>
+        <scope ilk="function" line="71" lineend="73" name="pcritique" signature="pcritique()" />
+        <scope ilk="function" line="78" lineend="82" name="critique_with_violations" signature="critique_with_violations($code_ref, $config_ref)">
+          <variable ilk="argument" name="$code_ref" />
+          <variable ilk="argument" name="$config_ref" />
+        </scope>
+        <scope ilk="function" line="88" lineend="90" name="critique" signature="critique()" />
+        <scope ilk="function" line="98" lineend="125" name="fcritique_with_violations" signature="fcritique_with_violations($policy, $code_ref, $filename, $config_ref)">
+          <variable ilk="argument" name="$policy" />
+          <variable ilk="argument" name="$code_ref" />
+          <variable ilk="argument" name="$filename" />
+          <variable ilk="argument" name="$config_ref" />
+        </scope>
+        <scope ilk="function" line="131" lineend="133" name="fcritique" signature="fcritique()" />
+        <scope ilk="function" line="137" lineend="183" name="subtests_in_tree" signature="subtests_in_tree($start, $include_extras)">
+          <variable ilk="argument" name="$start" />
+          <variable ilk="argument" name="$include_extras" />
+        </scope>
+        <scope ilk="function" line="191" lineend="193" name="should_skip_author_tests" signature="should_skip_author_tests()" />
+        <scope ilk="function" line="195" lineend="198" name="get_author_test_skip_message" signature="get_author_test_skip_message()" />
+        <scope ilk="function" line="201" lineend="203" name="starting_points_including_examples" signature="starting_points_including_examples()" />
+        <scope ilk="function" line="205" lineend="238" name="_globals_from_file" signature="_globals_from_file($test_file)">
+          <variable ilk="argument" name="$test_file" />
+        </scope>
+        <scope ilk="function" line="243" lineend="312" name="_subtests_from_file" signature="_subtests_from_file($test_file)">
+          <variable ilk="argument" name="$test_file" />
+        </scope>
+        <scope ilk="function" line="314" lineend="352" name="_finalize_subtest" signature="_finalize_subtest($subtest)">
+          <variable ilk="argument" name="$subtest" />
+        </scope>
+        <scope ilk="function" line="354" lineend="361" name="bundled_policy_names" signature="bundled_policy_names()">
+          <import line="355" module="ExtUtils::Manifest" />
+          <import line="355" module="ExtUtils::Manifest" />
+        </scope>
+        <scope ilk="function" line="363" lineend="372" name="names_of_policies_willing_to_work" signature="names_of_policies_willing_to_work(%configuration)">
+          <variable ilk="argument" name="%configuration" />
+        </scope>
+      </scope>
+    </scope>
+    

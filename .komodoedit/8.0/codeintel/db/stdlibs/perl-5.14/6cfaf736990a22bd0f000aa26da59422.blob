@@ -1,0 +1,88 @@
+<scope ilk="blob" lang="Perl" name="CPANPLUS::Internals::Source">
+      <scope ilk="class" line="1" lineend="1417" name="CPANPLUS::Internals::Source">
+        <import line="5" module="CPANPLUS::Error" symbol="*" />
+        <import line="6" module="CPANPLUS::Module" symbol="*" />
+        <import line="7" module="CPANPLUS::Module::Fake" symbol="*" />
+        <import line="8" module="CPANPLUS::Module::Author" symbol="*" />
+        <import line="9" module="CPANPLUS::Internals::Constants" symbol="*" />
+        <import line="11" module="File::Fetch" symbol="*" />
+        <import line="12" module="Archive::Extract" symbol="*" />
+        <import line="14" module="IPC::Cmd" symbol="can_run" />
+        <import line="15" module="File::Temp" symbol="tempdir" />
+        <import line="16" module="File::Basename" symbol="dirname" />
+        <import line="17" module="Params::Check" symbol="check" />
+        <import line="18" module="Module::Load::Conditional" symbol="can_load" />
+        <import line="19" module="Locale::Maketext::Simple" symbol="Class" />
+        <import line="34" module="Carp" />
+        <variable line="21" name="$Params::Check::VERBOSE" />
+        <scope ilk="function" line="45" lineend="55" name="_module_tree" signature="_module_tree()">
+          </scope>
+        <scope ilk="function" line="58" lineend="68" name="_author_tree" signature="_author_tree()">
+          </scope>
+        <scope ilk="function" line="158" lineend="245" name="_build_trees" signature="_build_trees($self, %hash)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="%hash" />
+        </scope>
+        <scope ilk="function" line="278" lineend="327" name="_check_trees" signature="_check_trees($self, %hash)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="%hash" />
+        </scope>
+        <scope ilk="function" line="366" lineend="402" name="__check_uptodate" signature="__check_uptodate($self, %hash)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="%hash" />
+        </scope>
+        <scope ilk="function" line="434" lineend="482" name="_update_source" signature="_update_source($self, %hash)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="%hash" />
+        </scope>
+        <scope ilk="function" line="516" lineend="568" name="__create_author_tree" signature="__create_author_tree($self, %hash)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="%hash" />
+        </scope>
+        <scope ilk="function" line="603" lineend="737" name="_create_mod_tree" signature="_create_mod_tree($self, %hash)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="%hash" />
+        </scope>
+        <scope ilk="function" line="771" lineend="855" name="__create_dslip_tree" signature="__create_dslip_tree($self, %hash)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="%hash" />
+        </scope>
+        <scope ilk="function" line="871" lineend="926" name="_dslip_defs" signature="_dslip_defs($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="936" lineend="992" name="_add_custom_module_source" signature="_add_custom_module_source($self, %hash)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="%hash" />
+        </scope>
+        <scope ilk="function" line="1001" lineend="1020" name="__custom_module_source_index_file" signature="__custom_module_source_index_file($self, %hash)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="%hash" />
+        </scope>
+        <scope ilk="function" line="1030" lineend="1068" name="_remove_custom_module_source" signature="_remove_custom_module_source($self, %hash)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="%hash" />
+        </scope>
+        <scope ilk="function" line="1081" lineend="1110" name="__list_custom_module_sources" signature="__list_custom_module_sources($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="1123" lineend="1153" name="__update_custom_module_sources" signature="__update_custom_module_sources($self, %hash)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="%hash" />
+        </scope>
+        <scope ilk="function" line="1166" lineend="1260" name="__update_custom_module_source" signature="__update_custom_module_source($self, %hash)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="%hash" />
+        </scope>
+        <scope ilk="function" line="1272" lineend="1331" name="__write_custom_module_index" signature="__write_custom_module_index($self, %hash)">
+          <import line="1291" module="File::Find" />
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="%hash" />
+          <import line="1291" module="File::Find" />
+        </scope>
+        <scope ilk="function" line="1347" lineend="1414" name="__create_custom_module_entries" signature="__create_custom_module_entries($self, %hash)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="%hash" />
+        </scope>
+      </scope>
+    </scope>
+    

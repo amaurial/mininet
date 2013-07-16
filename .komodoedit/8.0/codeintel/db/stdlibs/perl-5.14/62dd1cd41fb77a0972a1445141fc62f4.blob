@@ -1,0 +1,93 @@
+<scope ilk="blob" lang="Perl" name="Tcl">
+      <scope ilk="class" line="1" lineend="950" name="Tcl">
+        <import line="384" module="Config" />
+        <import line="399" module="Config" />
+        <import line="405" module="XSLoader" />
+        <import line="418" module="&quot;Tclaux.pm&quot;" />
+        <variable line="3" name="$Tcl::VERSION" />
+        <variable line="4" name="$Tcl::STACK_TRACE" />
+        <variable line="378" name="$DL_PATH" />
+        <scope ilk="function" line="412" lineend="415" name="new" signature="new()">
+          </scope>
+        <scope ilk="function" line="441" lineend="441" name="_current_refs_widget" signature="_current_refs_widget()" />
+        <scope ilk="function" line="446" lineend="587" name="call" signature="call($interp, @args)">
+          <import line="572" module="Carp" />
+          <import line="581" module="Carp" />
+          <variable ilk="argument" name="$interp" />
+          <variable ilk="argument" name="@args" />
+          <import line="572" module="Carp" />
+          <import line="581" module="Carp" />
+        </scope>
+        <scope ilk="function" line="591" lineend="601" name="wcall" signature="wcall()">
+          </scope>
+        <scope ilk="function" line="603" lineend="607" name="return_ref" signature="return_ref($interp, $rname)">
+          <variable ilk="argument" name="$interp" />
+          <variable ilk="argument" name="$rname" />
+        </scope>
+        <scope ilk="function" line="608" lineend="620" name="delete_ref" signature="delete_ref($interp, $rname)">
+          <variable ilk="argument" name="$interp" />
+          <variable ilk="argument" name="$rname" />
+        </scope>
+        <scope ilk="function" line="621" lineend="625" name="return_widget_refs" signature="return_widget_refs($interp, $wpath)">
+          <variable ilk="argument" name="$interp" />
+          <variable ilk="argument" name="$wpath" />
+        </scope>
+        <scope ilk="function" line="626" lineend="634" name="delete_widget_refs" signature="delete_widget_refs($interp, $wpath)">
+          <variable ilk="argument" name="$interp" />
+          <variable ilk="argument" name="$wpath" />
+        </scope>
+        <scope ilk="function" line="642" lineend="657" name="create_tcl_sub" signature="create_tcl_sub($interp, $sub, $events, $tclname)">
+          <variable ilk="argument" name="$interp" />
+          <variable ilk="argument" name="$sub" />
+          <variable ilk="argument" name="$events" />
+          <variable ilk="argument" name="$tclname" />
+        </scope>
+        <scope attributes="__ctor__" ilk="function" line="658" lineend="661" name="Ev" signature="Ev(@events)">
+          <variable ilk="argument" name="@events" />
+        </scope>
+        <scope ilk="function" line="847" lineend="919" name="export_to_tcl" signature="export_to_tcl($int, %args)">
+          <variable ilk="argument" name="$int" />
+          <variable ilk="argument" name="%args" />
+        </scope>
+        <scope ilk="function" line="929" lineend="932" name="export_tcl_namespace" signature="export_tcl_namespace($int)">
+          <variable ilk="argument" name="$int" />
+        </scope>
+      </scope>
+      <scope ilk="class" line="664" lineend="667" name="Tcl::List" />
+      <scope ilk="class" line="669" lineend="743" name="Tcl::Var">
+        <scope attributes="__ctor__" ilk="function" line="671" lineend="679" name="TIESCALAR" signature="TIESCALAR($class, @objdata)">
+          <import line="675" module="Carp" />
+          <variable ilk="argument" name="$class" />
+          <variable ilk="argument" name="@objdata" />
+          <import line="675" module="Carp" />
+        </scope>
+        <scope attributes="__ctor__" ilk="function" line="681" lineend="689" name="TIEHASH" signature="TIEHASH($class, @objdata)">
+          <import line="685" module="Carp" />
+          <variable ilk="argument" name="$class" />
+          <variable ilk="argument" name="@objdata" />
+          <import line="685" module="Carp" />
+        </scope>
+        <scope ilk="function" line="692" lineend="704" name="FIRSTKEY" signature="FIRSTKEY($obj)">
+          <variable ilk="argument" name="$obj" />
+        </scope>
+        <scope ilk="function" line="705" lineend="716" name="NEXTKEY" signature="NEXTKEY($obj)">
+          <variable ilk="argument" name="$obj" />
+        </scope>
+        <scope ilk="function" line="717" lineend="724" name="CLEAR" signature="CLEAR($obj)">
+          <variable ilk="argument" name="$obj" />
+        </scope>
+        <scope ilk="function" line="725" lineend="734" name="DELETE" signature="DELETE($obj, $str1)">
+          <import line="728" module="Carp" />
+          <variable ilk="argument" name="$obj" />
+          <variable ilk="argument" name="$str1" />
+          <import line="728" module="Carp" />
+        </scope>
+        <scope ilk="function" line="736" lineend="739" name="UNTIE" signature="UNTIE($ref)">
+          <variable ilk="argument" name="$ref" />
+        </scope>
+        <scope ilk="function" line="740" lineend="743" name="DESTROY" signature="DESTROY($ref)">
+          <variable ilk="argument" name="$ref" />
+        </scope>
+      </scope>
+    </scope>
+    

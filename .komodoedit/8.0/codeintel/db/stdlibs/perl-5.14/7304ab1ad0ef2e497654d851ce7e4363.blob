@@ -1,0 +1,34 @@
+<scope ilk="blob" lang="Perl" name="ActiveState::Unix::Crontab">
+      <scope ilk="class" line="1" lineend="218" name="ActiveState::Unix::Crontab">
+        <import line="7" module="ActiveState::Run" symbol="run" />
+        <variable line="10" name="@EXPORT_OK" />
+        <variable line="100" name="$com" />
+        <scope ilk="function" line="43" lineend="45" name="cron_edit" signature="cron_edit()" />
+        <scope ilk="function" line="47" lineend="65" name="cron_add" signature="cron_add(%opt)">
+          <variable ilk="argument" name="%opt" />
+        </scope>
+        <scope ilk="function" line="67" lineend="115" name="cron_format" signature="cron_format(%opt)">
+          <variable ilk="argument" name="%opt" />
+        </scope>
+        <scope ilk="function" line="117" lineend="148" name="cron_parse" signature="cron_parse($line)">
+          <variable ilk="argument" name="$line" />
+        </scope>
+        <scope ilk="function" line="150" lineend="157" name="cron_install" signature="cron_install()">
+          </scope>
+        <scope ilk="function" line="159" lineend="169" name="cron_list" signature="cron_list()">
+          </scope>
+        <scope ilk="function" line="171" lineend="173" name="cron_cmds" signature="cron_cmds()" />
+        <scope ilk="function" line="175" lineend="191" name="cron_allow_user" signature="cron_allow_user($user)">
+          <variable ilk="argument" name="$user" />
+        </scope>
+        <scope ilk="function" line="193" lineend="195" name="cron_deny_user" signature="cron_deny_user()" />
+        <scope ilk="function" line="197" lineend="203" name="cron_remove_user" signature="cron_remove_user($user)">
+          <variable ilk="argument" name="$user" />
+        </scope>
+        <scope ilk="function" line="205" lineend="216" name="_remove_line" signature="_remove_line($line, $file)">
+          <variable ilk="argument" name="$line" />
+          <variable ilk="argument" name="$file" />
+        </scope>
+      </scope>
+    </scope>
+    

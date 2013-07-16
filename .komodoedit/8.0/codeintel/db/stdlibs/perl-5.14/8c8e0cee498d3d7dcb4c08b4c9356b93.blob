@@ -1,0 +1,48 @@
+<scope ilk="blob" lang="Perl" name="Perl::Critic">
+      <scope ilk="class" line="8" lineend="217" name="Perl::Critic">
+        <import line="14" module="English" symbol="-no_match_vars" />
+        <import line="15" module="Readonly" symbol="*" />
+        <import line="19" module="File::Spec" symbol="*" />
+        <import line="20" module="List::MoreUtils" symbol="firstidx" />
+        <import line="21" module="Scalar::Util" symbol="blessed" />
+        <import line="23" module="Perl::Critic::Exception::Configuration::Generic" symbol="*" />
+        <import line="24" module="Perl::Critic::Config" symbol="*" />
+        <import line="25" module="Perl::Critic::Violation" symbol="*" />
+        <import line="26" module="Perl::Critic::Document" symbol="*" />
+        <import line="27" module="Perl::Critic::Statistics" symbol="*" />
+        <import line="28" module="Perl::Critic::Utils" symbol="**" />
+        <variable line="32" name="$VERSION" />
+        <variable line="34" name="@EXPORT_OK" />
+        <scope attributes="__ctor__" ilk="function" line="39" lineend="45" name="new" signature="new($class, %args)">
+          <variable ilk="argument" name="$class" />
+          <variable ilk="argument" name="%args" />
+        </scope>
+        <scope ilk="function" line="49" lineend="52" name="config" signature="config($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="56" lineend="60" name="add_policy" signature="add_policy($self, @args)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="@args" />
+        </scope>
+        <scope ilk="function" line="64" lineend="69" name="policies" signature="policies($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="73" lineend="76" name="statistics" signature="statistics($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="80" lineend="119" name="critique" signature="critique()">
+          </scope>
+        <scope ilk="function" line="124" lineend="149" name="_gather_violations" signature="_gather_violations($self, $doc)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$doc" />
+        </scope>
+        <scope ilk="function" line="154" lineend="198" name="_critique" signature="_critique($policy, $doc)">
+          <variable ilk="argument" name="$policy" />
+          <variable ilk="argument" name="$doc" />
+        </scope>
+        <scope ilk="function" line="202" lineend="210" name="_futz_with_policy_order" signature="_futz_with_policy_order(@policy_objects)">
+          <variable ilk="argument" name="@policy_objects" />
+        </scope>
+      </scope>
+    </scope>
+    

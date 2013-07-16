@@ -1,0 +1,42 @@
+<scope ilk="blob" lang="Perl" name="bigrat">
+      <scope classrefs="bigint" ilk="class" line="1" lineend="240" name="bigrat">
+        <import line="5" module="Exporter" />
+        <import line="12" module="bigint" />
+        <variable line="4" name="$VERSION" />
+        <variable line="18" name="*inf" />
+        <variable line="19" name="*NaN" />
+        <variable line="25" name="$_lite" />
+        <variable line="25" name="$AUTOLOAD" />
+        <scope ilk="function" line="27" lineend="56" name="AUTOLOAD" signature="AUTOLOAD($self)">
+          <import line="54" module="Carp" />
+          <variable ilk="argument" name="$self" />
+          <import line="54" module="Carp" />
+        </scope>
+        <scope ilk="function" line="58" lineend="62" name="unimport" signature="unimport()" />
+        <scope ilk="function" line="64" lineend="69" name="in_effect" signature="in_effect($level)">
+          <variable ilk="argument" name="$level" />
+        </scope>
+        <scope ilk="function" line="74" lineend="80" name="_hex" signature="_hex()">
+          </scope>
+        <scope ilk="function" line="82" lineend="88" name="_oct" signature="_oct()">
+          </scope>
+        <scope ilk="function" line="90" lineend="227" name="import" signature="import($self, @a)">
+          <import line="170" module="Math::BigInt::Trace" />
+          <import line="186" module="Math::BigInt" />
+          <import line="193" module="Math::BigFloat" />
+          <import line="195" module="Math::BigRat" />
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="@a" />
+          <import line="170" module="Math::BigInt::Trace" />
+          <import line="186" module="Math::BigInt" />
+          <import line="193" module="Math::BigFloat" />
+          <import line="195" module="Math::BigRat" />
+        </scope>
+        <scope attributes="__exportable__" ilk="function" line="229" lineend="229" name="PI" signature="PI()" />
+        <scope attributes="__exportable__" ilk="function" line="230" lineend="230" name="e" signature="e()" />
+        <scope attributes="__exportable__" ilk="function" line="232" lineend="232" name="bpi" signature="bpi()" />
+        <scope attributes="__exportable__" ilk="function" line="234" lineend="238" name="bexp" signature="bexp()">
+          </scope>
+      </scope>
+    </scope>
+    

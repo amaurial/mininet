@@ -1,0 +1,926 @@
+<scope doc="Fast implementation of the datetime type.&#xA;" ilk="blob" lang="Python" name="datetime">
+      <variable citdl="int" line="26" name="MAXYEAR" />
+      <variable citdl="int" line="25" name="MINYEAR" />
+      <scope classrefs="object" doc="date(year, month, day) --&gt; date object&#xA;" ilk="class" line="631" lineend="916" name="date">
+        <scope doc="x.__str__() &lt;==&gt; str(x)" ilk="function" line="756" name="__str__" signature="x.__str__() &lt;==&gt; str(x)" />
+        <scope doc="x.__getattribute__(&apos;name&apos;) &lt;==&gt; x.name" ilk="function" name="__getattribute__" signature="x.__getattribute__(&apos;name&apos;) &lt;==&gt; x.name" />
+        <scope doc="x.__radd__(y) &lt;==&gt; y+x" ilk="function" line="853" name="__radd__" signature="x.__radd__(y) &lt;==&gt; y+x" />
+        <scope doc="Return proleptic Gregorian ordinal." ilk="function" line="781" lineend="787" name="toordinal" returns="_ymd2ord()" signature="toordinal()">
+          <variable citdl="date" ilk="argument" name="self" />
+        </scope>
+        <scope doc="x.__rsub__(y) &lt;==&gt; y-x" ilk="function" name="__rsub__" signature="x.__rsub__(y) &lt;==&gt; y-x" />
+        <scope doc="x.__lt__(y) &lt;==&gt; x&lt;y" ilk="function" line="817" lineend="820" name="__lt__" returns="NotImplemented" signature="x.__lt__(y) &lt;==&gt; x&lt;y">
+          <variable citdl="date" ilk="argument" name="self" />
+          <variable ilk="argument" name="other" />
+        </scope>
+        <scope doc="Return a 3-tuple containing ISO year, week number, and&#xA;weekday." ilk="function" line="876" lineend="901" name="isocalendar" returns="tuple" signature="isocalendar()">
+          <variable citdl="int" line="892" name="week" />
+          <variable citdl="_isoweek1monday()" line="889" name="week1monday" />
+          <variable citdl="self._year" line="888" name="year" />
+          <variable citdl="date" ilk="argument" name="self" />
+          <variable line="892" name="day" />
+          <variable citdl="_ymd2ord()" line="890" name="today" />
+        </scope>
+        <scope doc="Formats self with strftime." ilk="function" line="740" lineend="743" name="__format__" returns="date.strftime()" signature="__format__(fmt)">
+          <variable citdl="date" ilk="argument" name="self" />
+          <variable ilk="argument" name="fmt" />
+        </scope>
+        <scope doc="Return time tuple, compatible with time.localtime()." ilk="function" line="776" lineend="779" name="timetuple" returns="_build_struct_time()" signature="timetuple()">
+          <variable citdl="date" ilk="argument" name="self" />
+        </scope>
+        <scope doc="Return the day of the week represented by the date." ilk="function" line="865" lineend="867" name="weekday" returns="date.toordinal()" signature="weekday()">
+          <variable citdl="date" ilk="argument" name="self" />
+        </scope>
+        <scope doc="x.__ne__(y) &lt;==&gt; x!=y" ilk="function" line="807" lineend="810" name="__ne__" returns="NotImplemented" signature="x.__ne__(y) &lt;==&gt; x!=y">
+          <variable citdl="date" ilk="argument" name="self" />
+          <variable ilk="argument" name="other" />
+        </scope>
+        <scope doc="x.__ge__(y) &lt;==&gt; x&gt;=y" ilk="function" line="822" lineend="825" name="__ge__" returns="NotImplemented" signature="x.__ge__(y) &lt;==&gt; x&gt;=y">
+          <variable citdl="date" ilk="argument" name="self" />
+          <variable ilk="argument" name="other" />
+        </scope>
+        <scope doc="__reduce__() -&gt; (cls, state)" ilk="function" line="915" lineend="916" name="__reduce__" returns="tuple" signature="__reduce__() -&gt; (cls, state)">
+          <variable citdl="date" ilk="argument" name="self" />
+        </scope>
+        <scope doc="Return the day of the week represented by the date." ilk="function" line="871" lineend="874" name="isoweekday" returns="date.toordinal()" signature="isoweekday()">
+          <variable citdl="date" ilk="argument" name="self" />
+        </scope>
+        <scope doc="Return date with new specified fields." ilk="function" line="789" lineend="798" name="replace" returns="date" signature="replace(year=None, month=None, day=None)">
+          <variable citdl="date" ilk="argument" name="self" />
+          <variable citdl="self._month" ilk="argument" name="month" />
+          <variable citdl="self._day" ilk="argument" name="day" />
+          <variable citdl="self._year" ilk="argument" name="year" />
+        </scope>
+        <scope doc="x.__add__(y) &lt;==&gt; x+y" ilk="function" line="844" lineend="851" name="__add__" returns="NotImplemented" signature="x.__add__(y) &lt;==&gt; x+y">
+          <variable citdl="date" ilk="argument" name="self" />
+          <variable ilk="argument" name="other" />
+          <variable citdl="date.toordinal()" line="847" name="o" />
+        </scope>
+        <scope doc="x.__gt__(y) &lt;==&gt; x&gt;y" ilk="function" line="827" lineend="830" name="__gt__" returns="NotImplemented" signature="x.__gt__(y) &lt;==&gt; x&gt;y">
+          <variable citdl="date" ilk="argument" name="self" />
+          <variable ilk="argument" name="other" />
+        </scope>
+        <scope doc="Return string in ISO 8601 format, YYYY-MM-DD." ilk="function" line="745" lineend="754" name="isoformat" returns="tuple" signature="isoformat()">
+          <variable citdl="date" ilk="argument" name="self" />
+        </scope>
+        <scope doc="x.__eq__(y) &lt;==&gt; x==y" ilk="function" line="802" lineend="805" name="__eq__" returns="NotImplemented" signature="x.__eq__(y) &lt;==&gt; x==y">
+          <variable citdl="date" ilk="argument" name="self" />
+          <variable ilk="argument" name="other" />
+        </scope>
+        <scope doc="Return ctime() style string." ilk="function" line="728" lineend="734" name="ctime" returns="tuple" signature="ctime()">
+          <variable citdl="date" ilk="argument" name="self" />
+          <variable citdl="int" line="730" name="weekday" />
+        </scope>
+        <scope doc="x.__le__(y) &lt;==&gt; x&lt;=y" ilk="function" line="812" lineend="815" name="__le__" returns="NotImplemented" signature="x.__le__(y) &lt;==&gt; x&lt;=y">
+          <variable citdl="date" ilk="argument" name="self" />
+          <variable ilk="argument" name="other" />
+        </scope>
+        <scope doc="x.__repr__() &lt;==&gt; repr(x)" ilk="function" line="707" lineend="721" name="__repr__" returns="tuple" signature="x.__repr__() &lt;==&gt; repr(x)">
+          <variable citdl="date" ilk="argument" name="self" />
+        </scope>
+        <scope doc="x.__hash__() &lt;==&gt; hash(x)" ilk="function" line="838" lineend="840" name="__hash__" returns="hash()" signature="x.__hash__() &lt;==&gt; hash(x)">
+          <variable citdl="date" ilk="argument" name="self" />
+        </scope>
+        <scope doc="x.__sub__(y) &lt;==&gt; x-y" ilk="function" line="855" lineend="863" name="__sub__" returns="NotImplemented" signature="x.__sub__(y) &lt;==&gt; x-y">
+          <variable citdl="date" ilk="argument" name="self" />
+          <variable ilk="argument" name="other" />
+          <variable citdl="other.toordinal()" line="861" name="days2" />
+          <variable citdl="toordinal()" line="860" name="days1" />
+        </scope>
+        <scope doc="format -&gt; strftime() style string." ilk="function" line="736" lineend="738" name="strftime" returns="_wrap_strftime()" signature="strftime(fmt)">
+          <variable citdl="date" ilk="argument" name="self" />
+          <variable ilk="argument" name="fmt" />
+        </scope>
+        <scope attributes="__hidden__" ilk="function" line="765" lineend="767" name="month (property getter)" returns="self._month" signature="month (1-12)">
+          <variable citdl="date" ilk="argument" name="self" />
+        </scope>
+        <scope attributes="protected" ilk="function" line="905" lineend="907" name="_getstate" returns="tuple" signature="_getstate()">
+          <variable citdl="date" ilk="argument" name="self" />
+          <variable line="906" name="ylo" />
+          <variable line="906" name="yhi" />
+        </scope>
+        <scope doc="Contruct a date from a proleptic Gregorian ordinal.&#xA;&#xA;January 1 of year 1 is day 1.  Only the year, month and day are&#xA;non-zero in the result." ilk="function" line="696" lineend="703" name="fromordinal" returns="date.fromordinal.cls()" signature="fromordinal(n)">
+          <variable citdl="date" ilk="argument" name="cls" />
+          <variable ilk="argument" name="n" />
+          <variable line="702" name="y" />
+          <variable line="702" name="m" />
+          <variable line="702" name="d" />
+        </scope>
+        <scope doc="Constructor.&#xA;&#xA;Arguments:&#xA;&#xA;year, month, day (required, base 1)" ilk="function" line="661" lineend="679" name="__new__" returns="object.__new__()" signature="__new__(year, month=None, day=None)">
+          <variable citdl="date" ilk="argument" name="cls" />
+          <variable ilk="argument" name="year" />
+          <variable ilk="argument" name="month" />
+          <variable ilk="argument" name="day" />
+          <variable citdl="object.__new__()" line="671" name="self" />
+        </scope>
+        <variable attributes="__instancevar__" citdl="" line="920" name="min" />
+        <variable attributes="__instancevar__" citdl="" line="921" name="max" />
+        <scope attributes="private" ilk="function" line="909" lineend="913" name="__setstate" signature="__setstate(string)">
+          <variable citdl="date" ilk="argument" name="self" />
+          <variable ilk="argument" name="string" />
+        </scope>
+        <scope attributes="__hidden__" ilk="function" line="760" lineend="762" name="year (property getter)" returns="self._year" signature="year (1-9999)">
+          <variable citdl="date" ilk="argument" name="self" />
+        </scope>
+        <scope doc="Construct a date from a POSIX timestamp (like time.time())." ilk="function" line="684" lineend="687" name="fromtimestamp" returns="date.fromtimestamp.cls()" signature="fromtimestamp(t)">
+          <variable citdl="date" ilk="argument" name="cls" />
+          <variable ilk="argument" name="t" />
+          <variable line="686" name="d" />
+          <variable line="686" name="mm" />
+          <variable line="686" name="dst" />
+          <variable line="686" name="m" />
+          <variable line="686" name="jday" />
+          <variable line="686" name="ss" />
+          <variable line="686" name="hh" />
+          <variable line="686" name="weekday" />
+          <variable line="686" name="y" />
+        </scope>
+        <variable attributes="property" citdl="self._month" line="765" name="month" />
+        <scope attributes="protected" ilk="function" line="832" lineend="836" name="_cmp" returns="date._cmp()" signature="_cmp(other)">
+          <variable citdl="date" ilk="argument" name="self" />
+          <variable ilk="argument" name="other" />
+          <variable citdl="self._day" line="834" name="d" />
+          <variable citdl="self._month" line="834" name="m" />
+          <variable citdl="self._year" line="834" name="y" />
+          <variable citdl="other._month" line="835" name="m2" />
+          <variable citdl="other._year" line="835" name="y2" />
+          <variable citdl="other._day" line="835" name="d2" />
+        </scope>
+        <variable citdl="tuple" line="659" name="__slots__" />
+        <scope doc="Construct a date from time.time()." ilk="function" line="690" lineend="693" name="today" returns="date.fromtimestamp()" signature="today()">
+          <variable citdl="date" ilk="argument" name="cls" />
+          <variable citdl="_time.time()" line="692" name="t" />
+        </scope>
+        <variable attributes="property" citdl="self._year" line="760" name="year" />
+        <variable attributes="protected __instancevar__" citdl="yhi" line="913" name="_year" />
+        <variable attributes="__instancevar__" citdl="timedelta" line="922" name="resolution" />
+        <variable attributes="property" citdl="self._day" line="770" name="day" />
+        <scope attributes="__hidden__" ilk="function" line="770" lineend="772" name="day (property getter)" returns="self._day" signature="day (1-31)">
+          <variable citdl="date" ilk="argument" name="self" />
+        </scope>
+      </scope>
+      <scope classrefs="date" doc="datetime(year, month, day[, hour[, minute[, second[, microsecond[,tzinfo]]]]])&#xA;The year, month and day arguments are required. tzinfo may be None, or an instance of a tzinfo subclass. The remaining arguments may be ints or longs." ilk="class" line="1302" lineend="1767" name="datetime" signature="datetime(year, month, day[, hour[, minute[, second[, microsecond[,tzinfo]]]]])">
+        <scope doc="x.__str__() &lt;==&gt; str(x)" ilk="function" line="1564" lineend="1566" name="__str__" returns="datetime.isoformat()" signature="x.__str__() &lt;==&gt; str(x)">
+          <variable citdl="datetime" ilk="argument" name="self" />
+        </scope>
+        <scope doc="x.__getattribute__(&apos;name&apos;) &lt;==&gt; x.name" ilk="function" name="__getattribute__" signature="x.__getattribute__(&apos;name&apos;) &lt;==&gt; x.name" />
+        <scope doc="x.__radd__(y) &lt;==&gt; y+x" ilk="function" line="1708" name="__radd__" signature="x.__radd__(y) &lt;==&gt; y+x" />
+        <scope doc="Return UTC time tuple, compatible with time.localtime()." ilk="function" line="1441" lineend="1448" name="utctimetuple" returns="_build_struct_time()" signature="utctimetuple()">
+          <variable citdl="self.day" line="1446" name="d" />
+          <variable citdl="self._minute" line="1447" name="mm" />
+          <variable citdl="datetime" ilk="argument" name="self" />
+          <variable citdl="self.month" line="1446" name="m" />
+          <variable citdl="self._second" line="1447" name="ss" />
+          <variable citdl="self._hour" line="1447" name="hh" />
+          <variable citdl="self.utcoffset()" line="1443" name="offset" />
+          <variable citdl="self.year" line="1446" name="y" />
+        </scope>
+        <scope doc="x.__lt__(y) &lt;==&gt; x&lt;y" ilk="function" line="1635" lineend="1641" name="__lt__" returns="NotImplemented" signature="x.__lt__(y) &lt;==&gt; x&lt;y">
+          <variable citdl="datetime" ilk="argument" name="self" />
+          <variable ilk="argument" name="other" />
+        </scope>
+        <scope doc="x.__sub__(y) &lt;==&gt; x-y" ilk="function" line="1710" lineend="1732" name="__sub__" returns="datetime" signature="x.__sub__(y) &lt;==&gt; x-y">
+          <variable citdl="utcoffset()" line="1726" name="myoff" />
+          <variable citdl="datetime" ilk="argument" name="self" />
+          <variable citdl="other.toordinal()" line="1718" name="days2" />
+          <variable citdl="self.toordinal()" line="1717" name="days1" />
+          <variable ilk="argument" name="other" />
+          <variable citdl="other._second" line="1720" name="secs2" />
+          <variable citdl="self._second" line="1719" name="secs1" />
+          <variable citdl="timedelta" line="1721" name="base" />
+          <variable citdl="other.utcoffset()" line="1727" name="otoff" />
+        </scope>
+        <scope doc="Return self.tzinfo.dst(self)." ilk="function" line="1594" lineend="1607" name="dst" returns="self._tzinfo.dst()" signature="dst()">
+          <variable citdl="datetime" ilk="argument" name="self" />
+          <variable citdl="self._tzinfo.dst()" line="1605" name="offset" />
+        </scope>
+        <scope doc="tz -&gt; convert to local time in new timezone tz" ilk="function" line="1488" lineend="1506" name="astimezone" returns="datetime" signature="astimezone(tz)">
+          <variable citdl="self._tzinfo" line="1492" name="mytz" />
+          <variable citdl="datetime" ilk="argument" name="self" />
+          <variable ilk="argument" name="tz" />
+          <variable line="1503" name="utc" />
+          <variable citdl="self.utcoffset()" line="1500" name="myoffset" />
+        </scope>
+        <scope doc="Return time tuple, compatible with time.localtime()." ilk="function" line="1428" lineend="1439" name="timetuple" returns="_build_struct_time()" signature="timetuple()">
+          <variable citdl="datetime" ilk="argument" name="self" />
+          <variable citdl="int" line="1430" name="dst" />
+        </scope>
+        <scope doc="Return self.tzinfo.tzname(self)." ilk="function" line="1583" lineend="1592" name="tzname" returns="_call_tzinfo_method()" signature="tzname()">
+          <variable citdl="datetime" ilk="argument" name="self" />
+          <variable citdl="_call_tzinfo_method()" line="1590" name="name" />
+        </scope>
+        <scope doc="[sep] -&gt; string in ISO 8601 format, YYYY-MM-&#xA;DDTHH:MM:SS[.mmmmmm][+HH:MM]." ilk="function" line="1520" lineend="1547" name="isoformat" returns="tuple" signature="isoformat(sep=&apos;T&apos;)">
+          <variable citdl="_format_time()" line="1532" name="s" />
+          <variable citdl="self.utcoffset()" line="1536" name="off" />
+          <variable citdl="str" ilk="argument" name="sep" />
+          <variable line="1543" name="mm" />
+          <variable citdl="datetime" ilk="argument" name="self" />
+          <variable line="1543" name="hh" />
+          <variable citdl="str" line="1539" name="sign" />
+        </scope>
+        <scope doc="x.__ne__(y) &lt;==&gt; x!=y" ilk="function" line="1619" lineend="1625" name="__ne__" returns="NotImplemented" signature="x.__ne__(y) &lt;==&gt; x!=y">
+          <variable citdl="datetime" ilk="argument" name="self" />
+          <variable ilk="argument" name="other" />
+        </scope>
+        <scope doc="__reduce__() -&gt; (cls, state)" ilk="function" line="1766" lineend="1767" name="__reduce__" returns="tuple" signature="__reduce__() -&gt; (cls, state)">
+          <variable citdl="datetime" ilk="argument" name="self" />
+        </scope>
+        <scope doc="Return datetime with new specified fields." ilk="function" line="1463" lineend="1486" name="replace" returns="datetime" signature="replace(year=None, month=None, day=None, hour=None, minute=None, second=None, microsecond=None, tzinfo=True)">
+          <variable citdl="self._hour" ilk="argument" name="hour" />
+          <variable citdl="datetime" ilk="argument" name="self" />
+          <variable citdl="self.month" ilk="argument" name="month" />
+          <variable citdl="self._second" ilk="argument" name="second" />
+          <variable citdl="self._microsecond" ilk="argument" name="microsecond" />
+          <variable citdl="self.year" ilk="argument" name="year" />
+          <variable citdl="True" ilk="argument" name="tzinfo" />
+          <variable citdl="self.day" ilk="argument" name="day" />
+          <variable citdl="self._minute" ilk="argument" name="minute" />
+        </scope>
+        <scope doc="Return self.tzinfo.utcoffset(self)." ilk="function" line="1574" lineend="1581" name="utcoffset" returns="self._tzinfo.utcoffset()" signature="utcoffset()">
+          <variable citdl="datetime" ilk="argument" name="self" />
+          <variable citdl="self._tzinfo.utcoffset()" line="1579" name="offset" />
+        </scope>
+        <scope doc="x.__add__(y) &lt;==&gt; x+y" ilk="function" line="1689" lineend="1706" name="__add__" returns="NotImplemented" signature="x.__add__(y) &lt;==&gt; x+y">
+          <variable line="1700" name="second" />
+          <variable ilk="argument" name="other" />
+          <variable line="1699" name="hour" />
+          <variable citdl="timedelta" line="1693" name="delta" />
+          <variable citdl="datetime" ilk="argument" name="self" />
+          <variable line="1699" name="rem" />
+          <variable line="1700" name="minute" />
+        </scope>
+        <scope doc="x.__gt__(y) &lt;==&gt; x&gt;y" ilk="function" line="1651" lineend="1657" name="__gt__" returns="NotImplemented" signature="x.__gt__(y) &lt;==&gt; x&gt;y">
+          <variable citdl="datetime" ilk="argument" name="self" />
+          <variable ilk="argument" name="other" />
+        </scope>
+        <scope doc="Return date object with same year, month and day." ilk="function" line="1450" lineend="1452" name="date" returns="datetime.date()" signature="date()">
+          <variable citdl="datetime" ilk="argument" name="self" />
+        </scope>
+        <scope doc="x.__eq__(y) &lt;==&gt; x==y" ilk="function" line="1611" lineend="1617" name="__eq__" returns="NotImplemented" signature="x.__eq__(y) &lt;==&gt; x==y">
+          <variable citdl="datetime" ilk="argument" name="self" />
+          <variable ilk="argument" name="other" />
+        </scope>
+        <scope doc="Return ctime() style string." ilk="function" line="1510" lineend="1518" name="ctime" returns="tuple" signature="ctime()">
+          <variable citdl="datetime" ilk="argument" name="self" />
+          <variable citdl="int" line="1512" name="weekday" />
+        </scope>
+        <scope doc="x.__le__(y) &lt;==&gt; x&lt;=y" ilk="function" line="1627" lineend="1633" name="__le__" returns="NotImplemented" signature="x.__le__(y) &lt;==&gt; x&lt;=y">
+          <variable citdl="datetime" ilk="argument" name="self" />
+          <variable ilk="argument" name="other" />
+        </scope>
+        <scope doc="x.__repr__() &lt;==&gt; repr(x)" ilk="function" line="1549" lineend="1562" name="__repr__" returns="str.join()" signature="x.__repr__() &lt;==&gt; repr(x)">
+          <variable citdl="str" line="1557" name="s" />
+          <variable citdl="datetime" ilk="argument" name="self" />
+          <variable citdl="list" line="1551" name="L" />
+        </scope>
+        <scope doc="Return time object with same time but with tzinfo=None." ilk="function" line="1454" lineend="1456" name="time" returns="datetime.time()" signature="time()">
+          <variable citdl="datetime" ilk="argument" name="self" />
+        </scope>
+        <scope doc="x.__hash__() &lt;==&gt; hash(x)" ilk="function" line="1734" lineend="1740" name="__hash__" returns="hash()" signature="x.__hash__() &lt;==&gt; hash(x)">
+          <variable citdl="utcoffset()" line="1735" name="tzoff" />
+          <variable citdl="self._hour" line="1739" name="seconds" />
+          <variable citdl="datetime" ilk="argument" name="self" />
+          <variable citdl="_ymd2ord()" line="1738" name="days" />
+        </scope>
+        <scope doc="x.__rsub__(y) &lt;==&gt; y-x" ilk="function" name="__rsub__" signature="x.__rsub__(y) &lt;==&gt; y-x" />
+        <scope doc="Return time object with same time and tzinfo." ilk="function" line="1458" lineend="1461" name="timetz" returns="datetime.time()" signature="timetz()">
+          <variable citdl="datetime" ilk="argument" name="self" />
+        </scope>
+        <scope doc="x.__ge__(y) &lt;==&gt; x&gt;=y" ilk="function" line="1643" lineend="1649" name="__ge__" returns="NotImplemented" signature="x.__ge__(y) &lt;==&gt; x&gt;=y">
+          <variable citdl="datetime" ilk="argument" name="self" />
+          <variable ilk="argument" name="other" />
+        </scope>
+        <scope attributes="__hidden__" ilk="function" line="1341" lineend="1343" name="second (property getter)" returns="self._second" signature="second (0-59)">
+          <variable citdl="datetime" ilk="argument" name="self" />
+        </scope>
+        <variable attributes="property" citdl="self._second" line="1341" name="second" />
+        <scope doc="Construct a UTC datetime from time.time()." ilk="function" line="1412" lineend="1415" name="utcnow" returns="datetime.utcfromtimestamp()" signature="utcnow()">
+          <variable citdl="datetime" ilk="argument" name="cls" />
+          <variable citdl="_time.time()" line="1414" name="t" />
+        </scope>
+        <scope ilk="function" line="1312" lineend="1327" name="__new__" returns="date.__new__()" signature="__new__(year, month=None, day=None, hour=0, minute=0, second=0, microsecond=0, tzinfo=None)">
+          <variable citdl="datetime" ilk="argument" name="cls" />
+          <variable ilk="argument" name="year" />
+          <variable ilk="argument" name="month" />
+          <variable ilk="argument" name="day" />
+          <variable citdl="int" ilk="argument" name="hour" />
+          <variable citdl="int" ilk="argument" name="minute" />
+          <variable citdl="int" ilk="argument" name="second" />
+          <variable citdl="int" ilk="argument" name="microsecond" />
+          <variable ilk="argument" name="tzinfo" />
+          <variable citdl="date.__new__()" line="1316" name="self" />
+        </scope>
+        <variable attributes="__instancevar__" citdl="" line="1770" name="min" />
+        <variable attributes="protected __instancevar__" line="1762" name="_tzinfo" />
+        <scope doc="string, format -&gt; new datetime parsed from a string (like time.strptime())." ilk="function" line="1569" lineend="1572" name="strptime" returns="_strptime._strptime_datetime()" signature="strptime(date_string, format)">
+          <import line="1571" module="_strptime" />
+          <variable citdl="datetime" ilk="argument" name="cls" />
+          <variable ilk="argument" name="date_string" />
+          <variable ilk="argument" name="format" />
+        </scope>
+        <scope doc="Construct a UTC datetime from a POSIX timestamp (like time.time())." ilk="function" line="1384" lineend="1398" name="utcfromtimestamp" returns="datetime.utcfromtimestamp.cls()" signature="utcfromtimestamp(t)">
+          <variable citdl="datetime" ilk="argument" name="cls" />
+          <variable ilk="argument" name="t" />
+          <variable line="1386" name="frac" />
+          <variable citdl="int" line="1387" name="us" />
+          <variable line="1396" name="d" />
+          <variable line="1396" name="mm" />
+          <variable line="1396" name="dst" />
+          <variable line="1396" name="m" />
+          <variable line="1396" name="jday" />
+          <variable citdl="min()" line="1396" name="ss" />
+          <variable line="1396" name="hh" />
+          <variable line="1396" name="weekday" />
+          <variable line="1396" name="y" />
+        </scope>
+        <scope attributes="protected" ilk="function" line="1659" lineend="1687" name="_cmp" returns="datetime" signature="_cmp(other)">
+          <variable citdl="datetime" ilk="argument" name="self" />
+          <variable ilk="argument" name="other" />
+          <variable citdl="self._tzinfo" line="1661" name="mytz" />
+          <variable citdl="other._tzinfo" line="1662" name="ottz" />
+          <variable citdl="utcoffset()" line="1663" name="myoff" />
+          <variable citdl="True" line="1666" name="base_compare" />
+          <variable citdl="other.utcoffset()" line="1671" name="otoff" />
+          <variable citdl="datetime" line="1684" name="diff" />
+        </scope>
+        <scope doc="Construct a datetime from a given date and a given time." ilk="function" line="1418" lineend="1426" name="combine" returns="datetime.combine.cls()" signature="combine(date, time)">
+          <variable citdl="datetime" ilk="argument" name="cls" />
+          <variable ilk="argument" name="date" />
+          <variable ilk="argument" name="time" />
+        </scope>
+        <variable attributes="property" citdl="self._tzinfo" line="1351" name="tzinfo" />
+        <scope attributes="__hidden__" ilk="function" line="1331" lineend="1333" name="hour (property getter)" returns="self._hour" signature="hour (0-23)">
+          <variable citdl="datetime" ilk="argument" name="self" />
+        </scope>
+        <variable attributes="protected __instancevar__" citdl="int" line="1760" name="_microsecond" />
+        <variable attributes="__instancevar__" citdl="" line="1771" name="max" />
+        <scope attributes="private" ilk="function" line="1756" lineend="1764" name="__setstate" signature="__setstate(string, tzinfo)">
+          <variable citdl="datetime" ilk="argument" name="self" />
+          <variable ilk="argument" name="string" />
+          <variable ilk="argument" name="tzinfo" />
+        </scope>
+        <variable attributes="property" citdl="self._microsecond" line="1346" name="microsecond" />
+        <variable attributes="protected __instancevar__" citdl="yhi" line="1759" name="_year" />
+        <scope doc="Construct a datetime from time.time() and optional time zone info." ilk="function" line="1406" lineend="1409" name="now" returns="datetime.fromtimestamp()" signature="now(tz=None)">
+          <variable citdl="datetime" ilk="argument" name="cls" />
+          <variable ilk="argument" name="tz" />
+          <variable citdl="_time.time()" line="1408" name="t" />
+        </scope>
+        <variable attributes="property" citdl="self._minute" line="1336" name="minute" />
+        <variable attributes="property" citdl="self._hour" line="1331" name="hour" />
+        <scope doc="Construct a datetime from a POSIX timestamp (like time.time()).&#xA;&#xA;A timezone info object may be passed in as well." ilk="function" line="1356" lineend="1381" name="fromtimestamp" returns="tz.fromutc()" signature="fromtimestamp(t, tz=None)">
+          <variable citdl="datetime" ilk="argument" name="cls" />
+          <variable ilk="argument" name="t" />
+          <variable ilk="argument" name="tz" />
+          <variable line="1364" name="converter" />
+          <variable line="1366" name="frac" />
+          <variable citdl="round()" line="1367" name="us" />
+          <variable line="1376" name="mm" />
+          <variable line="1376" name="dst" />
+          <variable line="1376" name="m" />
+          <variable line="1376" name="d" />
+          <variable line="1376" name="jday" />
+          <variable citdl="min()" line="1376" name="ss" />
+          <variable line="1376" name="hh" />
+          <variable line="1376" name="y" />
+          <variable line="1376" name="weekday" />
+          <variable citdl="cls()" line="1378" name="result" />
+        </scope>
+        <scope attributes="__hidden__" ilk="function" line="1336" lineend="1338" name="minute (property getter)" returns="self._minute" signature="minute (0-59)">
+          <variable citdl="datetime" ilk="argument" name="self" />
+        </scope>
+        <variable citdl="tuple" line="1309" name="__slots__" />
+        <scope attributes="__hidden__" doc="timezone info object" ilk="function" line="1351" lineend="1353" name="tzinfo (property getter)" returns="self._tzinfo" signature="tzinfo (property getter)()">
+          <variable citdl="datetime" ilk="argument" name="self" />
+        </scope>
+        <scope attributes="__hidden__" ilk="function" line="1346" lineend="1348" name="microsecond (property getter)" returns="self._microsecond" signature="microsecond (0-999999)">
+          <variable citdl="datetime" ilk="argument" name="self" />
+        </scope>
+        <scope attributes="protected" ilk="function" line="1744" lineend="1754" name="_getstate" returns="tuple" signature="_getstate()">
+          <variable citdl="datetime" ilk="argument" name="self" />
+          <variable line="1745" name="yhi" />
+          <variable line="1745" name="ylo" />
+          <variable line="1746" name="us3" />
+          <variable line="1746" name="us2" />
+          <variable line="1747" name="us1" />
+          <variable citdl="bytes()" line="1748" name="basestate" />
+        </scope>
+        <variable attributes="__instancevar__" citdl="timedelta" line="1772" name="resolution" />
+      </scope>
+      <variable citdl="PyCapsule" name="datetime_CAPI" />
+      <scope classrefs="object" doc="time([hour[, minute[, second[, microsecond[, tzinfo]]]]]) --&gt; a time object&#xA;All arguments are optional. tzinfo may be None, or an instance of a tzinfo subclass. The remaining arguments may be ints or longs." ilk="class" line="993" lineend="1294" name="time">
+        <scope doc="x.__str__() &lt;==&gt; str(x)" ilk="function" line="1190" name="__str__" signature="x.__str__() &lt;==&gt; str(x)" />
+        <scope doc="__reduce__() -&gt; (cls, state)" ilk="function" line="1293" lineend="1294" name="__reduce__" returns="tuple" signature="__reduce__() -&gt; (cls, state)">
+          <variable citdl="time" ilk="argument" name="self" />
+        </scope>
+        <scope doc="Return string in ISO 8601 format, HH:MM:SS[.mmmmmm][+HH:MM]." ilk="function" line="1177" lineend="1188" name="isoformat" returns="_format_time()" signature="isoformat()">
+          <variable citdl="time" ilk="argument" name="self" />
+          <variable citdl="_tzstr()" line="1185" name="tz" />
+          <variable citdl="_format_time()" line="1183" name="s" />
+        </scope>
+        <scope doc="x.__lt__(y) &lt;==&gt; x&lt;y" ilk="function" line="1088" lineend="1092" name="__lt__" returns="bool" signature="x.__lt__(y) &lt;==&gt; x&lt;y">
+          <variable citdl="time" ilk="argument" name="self" />
+          <variable ilk="argument" name="other" />
+        </scope>
+        <scope doc="Return self.tzinfo.dst(self)." ilk="function" line="1232" lineend="1245" name="dst" returns="self._tzinfo.dst()" signature="dst()">
+          <variable citdl="time" ilk="argument" name="self" />
+          <variable citdl="self._tzinfo.dst()" line="1243" name="offset" />
+        </scope>
+        <scope doc="Formats self with strftime." ilk="function" line="1203" lineend="1206" name="__format__" returns="time.strftime()" signature="__format__(fmt)">
+          <variable citdl="time" ilk="argument" name="self" />
+          <variable ilk="argument" name="fmt" />
+        </scope>
+        <scope doc="Return self.tzinfo.tzname(self)." ilk="function" line="1219" lineend="1230" name="tzname" returns="self._tzinfo.tzname()" signature="tzname()">
+          <variable citdl="time" ilk="argument" name="self" />
+          <variable citdl="self._tzinfo.tzname()" line="1228" name="name" />
+        </scope>
+        <scope doc="x.__ne__(y) &lt;==&gt; x!=y" ilk="function" line="1076" lineend="1080" name="__ne__" returns="bool" signature="x.__ne__(y) &lt;==&gt; x!=y">
+          <variable citdl="time" ilk="argument" name="self" />
+          <variable ilk="argument" name="other" />
+        </scope>
+        <scope doc="x.__ge__(y) &lt;==&gt; x&gt;=y" ilk="function" line="1094" lineend="1098" name="__ge__" returns="bool" signature="x.__ge__(y) &lt;==&gt; x&gt;=y">
+          <variable citdl="time" ilk="argument" name="self" />
+          <variable ilk="argument" name="other" />
+        </scope>
+        <scope doc="x.__getattribute__(&apos;name&apos;) &lt;==&gt; x.name" ilk="function" name="__getattribute__" signature="x.__getattribute__(&apos;name&apos;) &lt;==&gt; x.name" />
+        <scope doc="Return self.tzinfo.utcoffset(self)." ilk="function" line="1210" lineend="1217" name="utcoffset" returns="self._tzinfo.utcoffset()" signature="utcoffset()">
+          <variable citdl="time" ilk="argument" name="self" />
+          <variable citdl="self._tzinfo.utcoffset()" line="1215" name="offset" />
+        </scope>
+        <scope doc="x.__gt__(y) &lt;==&gt; x&gt;y" ilk="function" line="1100" lineend="1104" name="__gt__" returns="bool" signature="x.__gt__(y) &lt;==&gt; x&gt;y">
+          <variable citdl="time" ilk="argument" name="self" />
+          <variable ilk="argument" name="other" />
+        </scope>
+        <scope doc="x.__bool__() &lt;==&gt; x != 0" ilk="function" line="1264" lineend="1268" name="__bool__" returns="bool" signature="x.__bool__() &lt;==&gt; x != 0">
+          <variable citdl="time" ilk="argument" name="self" />
+          <variable citdl="timedelta" line="1267" name="offset" />
+        </scope>
+        <scope doc="Return time with new specified fields." ilk="function" line="1247" lineend="1262" name="replace" returns="time" signature="replace(hour=None, minute=None, second=None, microsecond=None, tzinfo=True)">
+          <variable citdl="self._second" ilk="argument" name="second" />
+          <variable citdl="self._microsecond" ilk="argument" name="microsecond" />
+          <variable citdl="self._hour" ilk="argument" name="hour" />
+          <variable citdl="True" ilk="argument" name="tzinfo" />
+          <variable citdl="time" ilk="argument" name="self" />
+          <variable citdl="self._minute" ilk="argument" name="minute" />
+        </scope>
+        <scope doc="x.__eq__(y) &lt;==&gt; x==y" ilk="function" line="1070" lineend="1074" name="__eq__" returns="bool" signature="x.__eq__(y) &lt;==&gt; x==y">
+          <variable citdl="time" ilk="argument" name="self" />
+          <variable ilk="argument" name="other" />
+        </scope>
+        <scope doc="x.__le__(y) &lt;==&gt; x&lt;=y" ilk="function" line="1082" lineend="1086" name="__le__" returns="bool" signature="x.__le__(y) &lt;==&gt; x&lt;=y">
+          <variable citdl="time" ilk="argument" name="self" />
+          <variable ilk="argument" name="other" />
+        </scope>
+        <scope doc="x.__repr__() &lt;==&gt; repr(x)" ilk="function" line="1162" lineend="1175" name="__repr__" returns="self._second" signature="x.__repr__() &lt;==&gt; repr(x)">
+          <variable citdl="time" ilk="argument" name="self" />
+          <variable citdl="str" line="1165" name="s" />
+        </scope>
+        <scope doc="x.__hash__() &lt;==&gt; hash(x)" ilk="function" line="1131" lineend="1142" name="__hash__" returns="hash()" signature="x.__hash__() &lt;==&gt; hash(x)">
+          <variable citdl="self.utcoffset()" line="1133" name="tzoff" />
+          <variable line="1136" name="h" />
+          <variable citdl="time" ilk="argument" name="self" />
+          <variable line="1136" name="m" />
+        </scope>
+        <scope doc="format -&gt; strftime() style string." ilk="function" line="1192" lineend="1201" name="strftime" returns="_wrap_strftime()" signature="strftime(fmt)">
+          <variable citdl="time" ilk="argument" name="self" />
+          <variable ilk="argument" name="fmt" />
+          <variable citdl="tuple" line="1198" name="timetuple" />
+        </scope>
+        <scope attributes="protected" ilk="function" line="1272" lineend="1280" name="_getstate" returns="tuple" signature="_getstate()">
+          <variable citdl="time" ilk="argument" name="self" />
+          <variable line="1273" name="us3" />
+          <variable line="1273" name="us2" />
+          <variable line="1274" name="us1" />
+          <variable citdl="bytes()" line="1275" name="basestate" />
+        </scope>
+        <scope doc="Constructor.&#xA;&#xA;Arguments:&#xA;&#xA;hour, minute (required)&#xA;second, microsecond (default to zero)&#xA;tzinfo (default to None)" ilk="function" line="1017" lineend="1038" name="__new__" returns="object.__new__()" signature="__new__(hour=0, minute=0, second=0, microsecond=0, tzinfo=None)">
+          <variable citdl="time" ilk="argument" name="cls" />
+          <variable citdl="int" ilk="argument" name="hour" />
+          <variable citdl="int" ilk="argument" name="minute" />
+          <variable citdl="int" ilk="argument" name="second" />
+          <variable citdl="int" ilk="argument" name="microsecond" />
+          <variable ilk="argument" name="tzinfo" />
+          <variable citdl="object.__new__()" line="1026" name="self" />
+        </scope>
+        <variable attributes="property" citdl="self._hour" line="1042" name="hour" />
+        <variable attributes="__instancevar__" citdl="" line="1298" name="min" />
+        <variable attributes="__instancevar__" citdl="" line="1299" name="max" />
+        <variable attributes="protected __instancevar__" line="1289" name="_tzinfo" />
+        <scope attributes="private" ilk="function" line="1282" lineend="1291" name="__setstate" signature="__setstate(string, tzinfo)">
+          <variable citdl="time" ilk="argument" name="self" />
+          <variable ilk="argument" name="string" />
+          <variable ilk="argument" name="tzinfo" />
+        </scope>
+        <scope attributes="__hidden__" ilk="function" line="1052" lineend="1054" name="second (property getter)" returns="self._second" signature="second (0-59)">
+          <variable citdl="time" ilk="argument" name="self" />
+        </scope>
+        <scope attributes="__hidden__" ilk="function" line="1047" lineend="1049" name="minute (property getter)" returns="self._minute" signature="minute (0-59)">
+          <variable citdl="time" ilk="argument" name="self" />
+        </scope>
+        <scope attributes="protected" ilk="function" line="1106" lineend="1129" name="_cmp" returns="time._cmp()" signature="_cmp(other)">
+          <variable citdl="time" ilk="argument" name="self" />
+          <variable ilk="argument" name="other" />
+          <variable citdl="self._tzinfo" line="1108" name="mytz" />
+          <variable citdl="other._tzinfo" line="1109" name="ottz" />
+          <variable citdl="self.utcoffset()" line="1110" name="myoff" />
+          <variable citdl="True" line="1113" name="base_compare" />
+          <variable citdl="other.utcoffset()" line="1116" name="otoff" />
+          <variable citdl="self._minute" line="1126" name="myhhmm" />
+          <variable citdl="other._minute" line="1127" name="othhmm" />
+        </scope>
+        <variable attributes="property" citdl="self._second" line="1052" name="second" />
+        <scope attributes="__hidden__" doc="timezone info object" ilk="function" line="1062" lineend="1064" name="tzinfo (property getter)" returns="self._tzinfo" signature="tzinfo (property getter)()">
+          <variable citdl="time" ilk="argument" name="self" />
+        </scope>
+        <scope attributes="__hidden__" ilk="function" line="1057" lineend="1059" name="microsecond (property getter)" returns="self._microsecond" signature="microsecond (0-999999)">
+          <variable citdl="time" ilk="argument" name="self" />
+        </scope>
+        <variable attributes="property" citdl="self._minute" line="1047" name="minute" />
+        <variable attributes="property" citdl="self._tzinfo" line="1062" name="tzinfo" />
+        <scope attributes="protected" doc="Return formatted timezone offset (+xx:xx) or None." ilk="function" line="1146" lineend="1160" name="_tzstr" returns="tuple" signature="_tzstr(sep=&apos;:&apos;)">
+          <variable citdl="time" ilk="argument" name="self" />
+          <variable citdl="str" ilk="argument" name="sep" />
+          <variable citdl="self.utcoffset()" line="1148" name="off" />
+          <variable citdl="str" line="1151" name="sign" />
+          <variable line="1155" name="mm" />
+          <variable line="1155" name="hh" />
+        </scope>
+        <scope attributes="__hidden__" ilk="function" line="1042" lineend="1044" name="hour (property getter)" returns="self._hour" signature="hour (0-23)">
+          <variable citdl="time" ilk="argument" name="self" />
+        </scope>
+        <variable attributes="__instancevar__" citdl="timedelta" line="1300" name="resolution" />
+        <variable attributes="property" citdl="self._microsecond" line="1057" name="microsecond" />
+        <variable attributes="protected __instancevar__" citdl="int" line="1287" name="_microsecond" />
+      </scope>
+      <scope classrefs="object" doc="Difference between two datetime values.&#xA;" ilk="class" line="298" lineend="624" name="timedelta">
+        <scope doc="x.__rtruediv__(y) &lt;==&gt; y/x" ilk="function" name="__rtruediv__" signature="x.__rtruediv__(y) &lt;==&gt; y/x" />
+        <scope doc="x.__str__() &lt;==&gt; str(x)" ilk="function" line="442" lineend="452" name="__str__" returns="tuple" signature="x.__str__() &lt;==&gt; str(x)">
+          <variable line="443" name="ss" />
+          <variable line="444" name="hh" />
+          <variable line="443" name="mm" />
+          <variable citdl="timedelta" ilk="argument" name="self" />
+          <scope ilk="function" line="447" lineend="448" name="plural" returns="tuple" signature="plural(n)">
+            <variable ilk="argument" name="n" />
+          </scope>
+          <variable citdl="str" line="445" name="s" />
+        </scope>
+        <scope doc="x.__getattribute__(&apos;name&apos;) &lt;==&gt; x.name" ilk="function" name="__getattribute__" signature="x.__getattribute__(&apos;name&apos;) &lt;==&gt; x.name" />
+        <scope doc="x.__radd__(y) &lt;==&gt; y+x" ilk="function" line="484" name="__radd__" signature="x.__radd__(y) &lt;==&gt; y+x" />
+        <scope doc="x.__truediv__(y) &lt;==&gt; x/y" ilk="function" line="543" lineend="553" name="__truediv__" returns="NotImplemented" signature="x.__truediv__(y) &lt;==&gt; x/y">
+          <variable line="552" name="a" />
+          <variable citdl="timedelta" ilk="argument" name="self" />
+          <variable ilk="argument" name="other" />
+          <variable citdl="_to_microseconds()" line="546" name="usec" />
+          <variable line="552" name="b" />
+        </scope>
+        <scope doc="x.__rsub__(y) &lt;==&gt; y-x" ilk="function" line="495" lineend="498" name="__rsub__" returns="NotImplemented" signature="x.__rsub__(y) &lt;==&gt; y-x">
+          <variable citdl="timedelta" ilk="argument" name="self" />
+          <variable ilk="argument" name="other" />
+        </scope>
+        <scope doc="x.__rmul__(y) &lt;==&gt; y*x" ilk="function" line="528" name="__rmul__" signature="x.__rmul__(y) &lt;==&gt; y*x" />
+        <scope doc="x.__lt__(y) &lt;==&gt; x&lt;y" ilk="function" line="588" lineend="592" name="__lt__" returns="bool" signature="x.__lt__(y) &lt;==&gt; x&lt;y">
+          <variable citdl="timedelta" ilk="argument" name="self" />
+          <variable ilk="argument" name="other" />
+        </scope>
+        <scope doc="x.__rmod__(y) &lt;==&gt; y%x" ilk="function" name="__rmod__" signature="x.__rmod__(y) &lt;==&gt; y%x" />
+        <scope doc="x.__mul__(y) &lt;==&gt; x*y" ilk="function" line="516" lineend="526" name="__mul__" returns="NotImplemented" signature="x.__mul__(y) &lt;==&gt; x*y">
+          <variable line="524" name="a" />
+          <variable citdl="timedelta" ilk="argument" name="self" />
+          <variable ilk="argument" name="other" />
+          <variable line="524" name="b" />
+        </scope>
+        <scope doc="x.__abs__() &lt;==&gt; abs(x)" ilk="function" line="510" lineend="514" name="__abs__" returns="timedelta" signature="x.__abs__() &lt;==&gt; abs(x)">
+          <variable citdl="timedelta" ilk="argument" name="self" />
+        </scope>
+        <scope doc="x.__pos__() &lt;==&gt; +x" ilk="function" line="507" lineend="508" name="__pos__" returns="timedelta" signature="x.__pos__() &lt;==&gt; +x">
+          <variable citdl="timedelta" ilk="argument" name="self" />
+        </scope>
+        <scope doc="x.__rfloordiv__(y) &lt;==&gt; y//x" ilk="function" name="__rfloordiv__" signature="x.__rfloordiv__(y) &lt;==&gt; y//x" />
+        <scope doc="x.__repr__() &lt;==&gt; repr(x)" ilk="function" line="430" lineend="440" name="__repr__" returns="tuple" signature="x.__repr__() &lt;==&gt; repr(x)">
+          <variable citdl="timedelta" ilk="argument" name="self" />
+        </scope>
+        <scope doc="x.__ne__(y) &lt;==&gt; x!=y" ilk="function" line="576" lineend="580" name="__ne__" returns="bool" signature="x.__ne__(y) &lt;==&gt; x!=y">
+          <variable citdl="timedelta" ilk="argument" name="self" />
+          <variable ilk="argument" name="other" />
+        </scope>
+        <scope doc="x.__rdivmod__(y) &lt;==&gt; divmod(y, x)" ilk="function" name="__rdivmod__" signature="x.__rdivmod__(y) &lt;==&gt; divmod(y, x)" />
+        <scope doc="Total seconds in the duration." ilk="function" line="454" lineend="457" name="total_seconds" returns="self.seconds" signature="total_seconds()">
+          <variable citdl="timedelta" ilk="argument" name="self" />
+        </scope>
+        <scope doc="x.__divmod__(y) &lt;==&gt; divmod(x, y)" ilk="function" line="561" lineend="566" name="__divmod__" returns="tuple" signature="x.__divmod__(y) &lt;==&gt; divmod(x, y)">
+          <variable line="563" name="q" />
+          <variable citdl="timedelta" ilk="argument" name="self" />
+          <variable ilk="argument" name="other" />
+          <variable line="563" name="r" />
+        </scope>
+        <scope doc="x.__add__(y) &lt;==&gt; x+y" ilk="function" line="475" lineend="482" name="__add__" returns="NotImplemented" signature="x.__add__(y) &lt;==&gt; x+y">
+          <variable citdl="timedelta" ilk="argument" name="self" />
+          <variable ilk="argument" name="other" />
+        </scope>
+        <scope doc="x.__gt__(y) &lt;==&gt; x&gt;y" ilk="function" line="600" lineend="604" name="__gt__" returns="bool" signature="x.__gt__(y) &lt;==&gt; x&gt;y">
+          <variable citdl="timedelta" ilk="argument" name="self" />
+          <variable ilk="argument" name="other" />
+        </scope>
+        <scope doc="x.__bool__() &lt;==&gt; x != 0" ilk="function" line="613" lineend="616" name="__bool__" returns="bool" signature="x.__bool__() &lt;==&gt; x != 0">
+          <variable citdl="timedelta" ilk="argument" name="self" />
+        </scope>
+        <scope doc="__reduce__() -&gt; (cls, state)" ilk="function" line="623" lineend="624" name="__reduce__" returns="tuple" signature="__reduce__() -&gt; (cls, state)">
+          <variable citdl="timedelta" ilk="argument" name="self" />
+        </scope>
+        <scope doc="x.__eq__(y) &lt;==&gt; x==y" ilk="function" line="570" lineend="574" name="__eq__" returns="bool" signature="x.__eq__(y) &lt;==&gt; x==y">
+          <variable citdl="timedelta" ilk="argument" name="self" />
+          <variable ilk="argument" name="other" />
+        </scope>
+        <scope doc="x.__mod__(y) &lt;==&gt; x%y" ilk="function" line="555" lineend="559" name="__mod__" returns="NotImplemented" signature="x.__mod__(y) &lt;==&gt; x%y">
+          <variable citdl="timedelta" ilk="argument" name="self" />
+          <variable ilk="argument" name="other" />
+          <variable citdl="other._to_microseconds()" line="557" name="r" />
+        </scope>
+        <scope doc="x.__le__(y) &lt;==&gt; x&lt;=y" ilk="function" line="582" lineend="586" name="__le__" returns="bool" signature="x.__le__(y) &lt;==&gt; x&lt;=y">
+          <variable citdl="timedelta" ilk="argument" name="self" />
+          <variable ilk="argument" name="other" />
+        </scope>
+        <scope doc="x.__neg__() &lt;==&gt; -x" ilk="function" line="500" lineend="505" name="__neg__" returns="timedelta" signature="x.__neg__() &lt;==&gt; -x">
+          <variable citdl="timedelta" ilk="argument" name="self" />
+        </scope>
+        <scope doc="x.__floordiv__(y) &lt;==&gt; x//y" ilk="function" line="534" lineend="541" name="__floordiv__" returns="NotImplemented" signature="x.__floordiv__(y) &lt;==&gt; x//y">
+          <variable citdl="timedelta" ilk="argument" name="self" />
+          <variable ilk="argument" name="other" />
+          <variable citdl="_to_microseconds()" line="537" name="usec" />
+        </scope>
+        <scope doc="x.__hash__() &lt;==&gt; hash(x)" ilk="function" line="610" lineend="611" name="__hash__" returns="hash()" signature="x.__hash__() &lt;==&gt; hash(x)">
+          <variable citdl="timedelta" ilk="argument" name="self" />
+        </scope>
+        <scope doc="x.__sub__(y) &lt;==&gt; x-y" ilk="function" line="486" lineend="493" name="__sub__" returns="NotImplemented" signature="x.__sub__(y) &lt;==&gt; x-y">
+          <variable citdl="timedelta" ilk="argument" name="self" />
+          <variable ilk="argument" name="other" />
+        </scope>
+        <scope doc="x.__ge__(y) &lt;==&gt; x&gt;=y" ilk="function" line="594" lineend="598" name="__ge__" returns="bool" signature="x.__ge__(y) &lt;==&gt; x&gt;=y">
+          <variable citdl="timedelta" ilk="argument" name="self" />
+          <variable ilk="argument" name="other" />
+        </scope>
+        <scope ilk="function" line="317" lineend="428" name="__new__" returns="object.__new__()" signature="__new__(days=0, seconds=0, microseconds=0, milliseconds=0, minutes=0, hours=0, weeks=0)">
+          <variable citdl="timedelta" ilk="argument" name="cls" />
+          <variable citdl="int" ilk="argument" name="days" />
+          <variable citdl="int" ilk="argument" name="seconds" />
+          <variable citdl="round()" ilk="argument" name="microseconds" />
+          <variable citdl="int" ilk="argument" name="milliseconds" />
+          <variable citdl="int" ilk="argument" name="minutes" />
+          <variable citdl="int" ilk="argument" name="hours" />
+          <variable citdl="int" ilk="argument" name="weeks" />
+          <variable citdl="int" line="331" name="d" />
+          <variable line="341" name="dayfrac" />
+          <variable citdl="float" line="342" name="daysecondsfrac" />
+          <variable line="342" name="daysecondswhole" />
+          <variable citdl="int()" line="344" name="s" />
+          <variable citdl="float" line="357" name="secondsfrac" />
+          <variable citdl="float" line="376" name="usdouble" />
+          <variable citdl="int()" line="409" name="us" />
+          <variable citdl="object.__new__()" line="420" name="self" />
+        </scope>
+        <variable attributes="__instancevar__" citdl="" line="626" name="min" />
+        <variable attributes="property" citdl="self._seconds" line="466" name="seconds" />
+        <variable attributes="__instancevar__" citdl="" line="627" name="max" />
+        <scope attributes="protected" ilk="function" line="530" lineend="532" name="_to_microseconds" returns="self._seconds" signature="_to_microseconds()">
+          <variable citdl="timedelta" ilk="argument" name="self" />
+        </scope>
+        <variable attributes="property" citdl="self._days" line="461" name="days" />
+        <scope attributes="__hidden__" doc="seconds" ilk="function" line="466" lineend="468" name="seconds (property getter)" returns="self._seconds" signature="seconds (property getter)()">
+          <variable citdl="timedelta" ilk="argument" name="self" />
+        </scope>
+        <scope attributes="protected" ilk="function" line="606" lineend="608" name="_cmp" returns="timedelta._cmp()" signature="_cmp(other)">
+          <variable citdl="timedelta" ilk="argument" name="self" />
+          <variable ilk="argument" name="other" />
+        </scope>
+        <variable citdl="tuple" line="315" name="__slots__" />
+        <variable attributes="__instancevar__" citdl="" line="629" name="resolution" />
+        <variable attributes="property" citdl="self._microseconds" line="471" name="microseconds" />
+        <scope attributes="protected" ilk="function" line="620" lineend="621" name="_getstate" returns="tuple" signature="_getstate()">
+          <variable citdl="timedelta" ilk="argument" name="self" />
+        </scope>
+        <scope attributes="__hidden__" doc="days" ilk="function" line="461" lineend="463" name="days (property getter)" returns="self._days" signature="days (property getter)()">
+          <variable citdl="timedelta" ilk="argument" name="self" />
+        </scope>
+        <scope attributes="__hidden__" doc="microseconds" ilk="function" line="471" lineend="473" name="microseconds (property getter)" returns="self._microseconds" signature="microseconds (property getter)()">
+          <variable citdl="timedelta" ilk="argument" name="self" />
+        </scope>
+      </scope>
+      <scope classrefs="tzinfo" doc="Fixed offset from UTC implementation of tzinfo.&#xA;" ilk="class" line="1786" lineend="1891" name="timezone">
+        <scope doc="datetime in UTC -&gt; datetime in local time." ilk="function" line="1870" lineend="1876" name="fromutc" returns="self._offset" signature="fromutc(dt)">
+          <variable citdl="timezone" ilk="argument" name="self" />
+          <variable ilk="argument" name="dt" />
+        </scope>
+        <scope doc="x.__ne__(y) &lt;==&gt; x!=y" ilk="function" name="__ne__" signature="x.__ne__(y) &lt;==&gt; x!=y" />
+        <scope doc="x.__str__() &lt;==&gt; str(x)" ilk="function" line="1847" lineend="1848" name="__str__" returns="self.tzname()" signature="x.__str__() &lt;==&gt; str(x)">
+          <variable citdl="timezone" ilk="argument" name="self" />
+        </scope>
+        <scope doc="Return fixed offset." ilk="function" line="1850" lineend="1853" name="utcoffset" returns="self._offset" signature="utcoffset(dt)">
+          <variable citdl="timezone" ilk="argument" name="self" />
+          <variable ilk="argument" name="dt" />
+        </scope>
+        <scope doc="x.__le__(y) &lt;==&gt; x&lt;=y" ilk="function" name="__le__" signature="x.__le__(y) &lt;==&gt; x&lt;=y" />
+        <scope doc="x.__repr__() &lt;==&gt; repr(x)" ilk="function" line="1829" lineend="1845" name="__repr__" returns="tuple" signature="x.__repr__() &lt;==&gt; repr(x)">
+          <variable citdl="timezone" ilk="argument" name="self" />
+        </scope>
+        <scope doc="x.__gt__(y) &lt;==&gt; x&gt;y" ilk="function" name="__gt__" signature="x.__gt__(y) &lt;==&gt; x&gt;y" />
+        <scope doc="x.__hash__() &lt;==&gt; hash(x)" ilk="function" line="1826" lineend="1827" name="__hash__" returns="hash()" signature="x.__hash__() &lt;==&gt; hash(x)">
+          <variable citdl="timezone" ilk="argument" name="self" />
+        </scope>
+        <scope doc="pickle support" ilk="function" line="1817" lineend="1821" name="__getinitargs__" returns="tuple" signature="__getinitargs__()">
+          <variable citdl="timezone" ilk="argument" name="self" />
+        </scope>
+        <scope doc="x.__lt__(y) &lt;==&gt; x&lt;y" ilk="function" name="__lt__" signature="x.__lt__(y) &lt;==&gt; x&lt;y" />
+        <scope doc="x.__eq__(y) &lt;==&gt; x==y" ilk="function" line="1823" lineend="1824" name="__eq__" returns="bool" signature="x.__eq__(y) &lt;==&gt; x==y">
+          <variable citdl="timezone" ilk="argument" name="self" />
+          <variable ilk="argument" name="other" />
+        </scope>
+        <scope doc="Return None." ilk="function" line="1864" lineend="1867" name="dst" signature="dst(dt)">
+          <variable citdl="timezone" ilk="argument" name="self" />
+          <variable ilk="argument" name="dt" />
+        </scope>
+        <scope doc="x.__ge__(y) &lt;==&gt; x&gt;=y" ilk="function" name="__ge__" signature="x.__ge__(y) &lt;==&gt; x&gt;=y" />
+        <scope doc="If name is specified when timezone is created, returns the&#xA;name." ilk="function" line="1856" lineend="1861" name="tzname" returns="self._name_from_offset()" signature="tzname(dt)">
+          <variable citdl="timezone" ilk="argument" name="self" />
+          <variable ilk="argument" name="dt" />
+        </scope>
+        <scope attributes="protected" ilk="function" line="1811" lineend="1815" name="_create" returns="tzinfo.__new__()" signature="_create(offset, name=None)">
+          <variable citdl="timezone" ilk="argument" name="cls" />
+          <variable ilk="argument" name="offset" />
+          <variable ilk="argument" name="name" />
+          <variable citdl="tzinfo.__new__()" line="1812" name="self" />
+        </scope>
+        <variable attributes="__instancevar__" citdl="_create()" line="1893" name="utc" />
+        <variable attributes="protected" citdl="object()" line="1790" name="_Omitted" />
+        <scope ilk="function" line="1791" lineend="1808" name="__new__" returns="cls._create()" signature="__new__(offset, name=_Omitted)">
+          <variable citdl="timezone" ilk="argument" name="cls" />
+          <variable ilk="argument" name="offset" />
+          <variable citdl="object()" ilk="argument" name="name" />
+        </scope>
+        <variable attributes="protected" citdl="timedelta" line="1880" name="_minoffset" />
+        <variable attributes="__instancevar__" citdl="_create()" line="1894" name="min" />
+        <variable attributes="__instancevar__" citdl="_create()" line="1895" name="max" />
+        <scope attributes="protected" ilk="function" line="1883" lineend="1891" name="_name_from_offset" returns="str.format()" signature="_name_from_offset()">
+          <variable citdl="timezone" ilk="argument" name="delta" />
+          <variable citdl="str" line="1885" name="sign" />
+          <variable line="1889" name="hours" />
+          <variable line="1889" name="rest" />
+          <variable citdl="int" line="1890" name="minutes" />
+        </scope>
+        <variable attributes="protected" citdl="timedelta" line="1879" name="_maxoffset" />
+        <variable citdl="tuple" line="1787" name="__slots__" />
+      </scope>
+      <scope classrefs="object" doc="Abstract base class for time zone info objects.&#xA;" ilk="class" line="924" lineend="989" name="tzinfo">
+        <scope doc="datetime in UTC -&gt; datetime in local time." ilk="function" line="946" lineend="971" name="fromutc" returns="dt.dst()" signature="fromutc(dt)">
+          <variable citdl="tzinfo" ilk="argument" name="self" />
+          <variable citdl="dt.dst()" line="961" name="dtdst" />
+          <variable ilk="argument" name="dt" />
+          <variable citdl="dt.utcoffset()" line="954" name="dtoff" />
+          <variable citdl="dt.dst()" line="964" name="delta" />
+        </scope>
+        <scope doc="-&gt; (cls, state)" ilk="function" line="975" lineend="989" name="__reduce__" returns="tuple" signature="__reduce__()">
+          <variable citdl="tzinfo" ilk="argument" name="self" />
+          <variable citdl="getinitargs()" line="978" name="args" />
+          <variable citdl="getattr()" line="981" name="getstate" />
+          <variable citdl="getstate()" line="983" name="state" />
+          <variable citdl="getattr()" line="976" name="getinitargs" />
+        </scope>
+        <scope doc="datetime -&gt; DST offset in minutes east of UTC." ilk="function" line="938" lineend="944" name="dst" signature="dst(dt)">
+          <variable citdl="tzinfo" ilk="argument" name="self" />
+          <variable ilk="argument" name="dt" />
+        </scope>
+        <scope doc="x.__getattribute__(&apos;name&apos;) &lt;==&gt; x.name" ilk="function" name="__getattribute__" signature="x.__getattribute__(&apos;name&apos;) &lt;==&gt; x.name" />
+        <scope doc="datetime -&gt; timedelta showing offset from UTC, negative&#xA;values indicating West of UTC" ilk="function" line="934" lineend="936" name="utcoffset" signature="utcoffset(dt)">
+          <variable citdl="tzinfo" ilk="argument" name="self" />
+          <variable ilk="argument" name="dt" />
+        </scope>
+        <scope doc="datetime -&gt; string name of time zone." ilk="function" line="930" lineend="932" name="tzname" signature="tzname(dt)">
+          <variable citdl="tzinfo" ilk="argument" name="self" />
+          <variable ilk="argument" name="dt" />
+        </scope>
+        <variable citdl="tuple" line="929" name="__slots__" />
+      </scope>
+      <variable attributes="__hidden__" citdl="int" line="41" name="dbm" />
+      <variable attributes="protected __hidden__" citdl="date" line="918" name="_date_class" />
+      <scope attributes="protected __hidden__" ilk="function" line="161" lineend="164" name="_build_struct_time" returns="_time.struct_time()" signature="_build_struct_time(y, m, d, hh, mm, ss, dstflag)">
+        <variable ilk="argument" name="y" />
+        <variable ilk="argument" name="m" />
+        <variable ilk="argument" name="d" />
+        <variable ilk="argument" name="hh" />
+        <variable ilk="argument" name="mm" />
+        <variable ilk="argument" name="ss" />
+        <variable ilk="argument" name="dstflag" />
+        <variable citdl="_ymd2ord()" line="162" name="wday" />
+        <variable citdl="_days_before_month()" line="163" name="dnum" />
+      </scope>
+      <scope attributes="protected __hidden__" ilk="function" line="252" lineend="265" name="_check_utc_offset" signature="_check_utc_offset(name, offset)">
+        <variable ilk="argument" name="name" />
+        <variable ilk="argument" name="offset" />
+      </scope>
+      <variable attributes="protected __hidden__" citdl="_days_before_year()" line="79" name="_DI4Y" />
+      <variable attributes="protected __hidden__" citdl="list" line="38" name="_DAYS_IN_MONTH" />
+      <scope attributes="protected __hidden__" ilk="function" line="278" lineend="288" name="_check_time_fields" signature="_check_time_fields(hour, minute, second, microsecond)">
+        <variable ilk="argument" name="hour" />
+        <variable ilk="argument" name="minute" />
+        <variable ilk="argument" name="second" />
+        <variable ilk="argument" name="microsecond" />
+      </scope>
+      <scope attributes="protected __hidden__" doc="year -&gt; 1 if leap year, else 0." ilk="function" line="47" lineend="49" name="_is_leap" returns="bool" signature="_is_leap(year)">
+        <variable ilk="argument" name="year" />
+      </scope>
+      <scope attributes="protected __hidden__" doc="ordinal -&gt; (year, month, day), considering 01-Jan-0001 as day 1." ilk="function" line="93" lineend="153" name="_ord2ymd" returns="tuple" signature="_ord2ymd(n)">
+        <variable ilk="argument" name="n" />
+        <variable line="117" name="n400" />
+        <variable citdl="int" line="118" name="year" />
+        <variable line="125" name="n100" />
+        <variable line="128" name="n4" />
+        <variable line="132" name="n1" />
+        <variable citdl="bool" line="141" name="leapyear" />
+        <variable citdl="int" line="143" name="month" />
+        <variable citdl="bool" line="144" name="preceding" />
+      </scope>
+      <scope attributes="protected __hidden__" ilk="function" line="267" lineend="276" name="_check_date_fields" signature="_check_date_fields(year, month, day)">
+        <variable ilk="argument" name="year" />
+        <variable ilk="argument" name="month" />
+        <variable ilk="argument" name="day" />
+        <variable citdl="_days_in_month()" line="274" name="dim" />
+      </scope>
+      <scope attributes="protected __hidden__" ilk="function" line="235" lineend="238" name="_call_tzinfo_method" returns="getattr()()" signature="_call_tzinfo_method(tzinfo, methname, tzinfoarg)">
+        <variable ilk="argument" name="tzinfo" />
+        <variable ilk="argument" name="methname" />
+        <variable ilk="argument" name="tzinfoarg" />
+      </scope>
+      <scope attributes="protected __hidden__" ilk="function" line="294" lineend="296" name="_cmperror" signature="_cmperror(x, y)">
+        <variable ilk="argument" name="x" />
+        <variable ilk="argument" name="y" />
+      </scope>
+      <scope attributes="protected __hidden__" doc="year, month -&gt; number of days in year preceeding first day of month." ilk="function" line="63" lineend="66" name="_days_before_month" returns="_is_leap()" signature="_days_before_month(year, month)">
+        <variable ilk="argument" name="year" />
+        <variable ilk="argument" name="month" />
+      </scope>
+      <scope attributes="protected __hidden__" ilk="function" line="22" lineend="23" name="_cmp" signature="_cmp(x, y)">
+        <variable ilk="argument" name="x" />
+        <variable ilk="argument" name="y" />
+      </scope>
+      <scope attributes="protected __hidden__" ilk="function" line="166" lineend="171" name="_format_time" returns="tuple" signature="_format_time(hh, mm, ss, us)">
+        <variable ilk="argument" name="hh" />
+        <variable ilk="argument" name="mm" />
+        <variable ilk="argument" name="ss" />
+        <variable ilk="argument" name="us" />
+        <variable citdl="str" line="168" name="result" />
+      </scope>
+      <variable attributes="protected __hidden__" citdl="tzinfo" line="991" name="_tzinfo_class" />
+      <variable attributes="protected __hidden__" citdl="int" line="27" name="_MAXORDINAL" />
+      <variable attributes="protected __hidden__" citdl="list" line="158" name="_DAYNAMES" />
+      <variable attributes="protected __hidden__" citdl="list" line="40" name="_DAYS_BEFORE_MONTH" />
+      <scope attributes="protected __hidden__" ilk="function" line="290" lineend="292" name="_check_tzinfo_arg" signature="_check_tzinfo_arg(tz)">
+        <variable ilk="argument" name="tz" />
+      </scope>
+      <scope attributes="protected __hidden__" ilk="function" line="1775" lineend="1784" name="_isoweek1monday" returns="_ymd2ord()" signature="_isoweek1monday(year)">
+        <variable ilk="argument" name="year" />
+        <variable citdl="int" line="1778" name="THURSDAY" />
+        <variable citdl="_ymd2ord()" line="1779" name="firstday" />
+        <variable citdl="_ymd2ord()" line="1780" name="firstweekday" />
+        <variable citdl="_ymd2ord()" line="1781" name="week1monday" />
+      </scope>
+      <variable attributes="protected __hidden__" citdl="_days_before_year()" line="77" name="_DI400Y" />
+      <variable attributes="protected __hidden__" citdl="time" line="1296" name="_time_class" />
+      <scope attributes="protected __hidden__" doc="year -&gt; number of days before January 1st of year." ilk="function" line="51" lineend="54" name="_days_before_year" returns="int" signature="_days_before_year(year)">
+        <variable ilk="argument" name="year" />
+        <variable citdl="int" line="53" name="y" />
+      </scope>
+      <scope attributes="protected __hidden__" ilk="function" line="241" lineend="244" name="_check_tzname" signature="_check_tzname(name)">
+        <variable ilk="argument" name="name" />
+      </scope>
+      <variable attributes="protected __hidden__" citdl="_days_before_year()" line="78" name="_DI100Y" />
+      <scope attributes="protected __hidden__" doc="year, month -&gt; number of days in that month in that year." ilk="function" line="56" lineend="61" name="_days_in_month" returns="int" signature="_days_in_month(year, month)">
+        <variable ilk="argument" name="year" />
+        <variable ilk="argument" name="month" />
+      </scope>
+      <variable attributes="protected __hidden__" citdl="list" line="156" name="_MONTHNAMES" />
+      <scope attributes="protected __hidden__" doc="year, month, day -&gt; ordinal, considering 01-Jan-0001 as day 1." ilk="function" line="68" lineend="75" name="_ymd2ord" returns="_days_before_year()" signature="_ymd2ord(year, month, day)">
+        <variable ilk="argument" name="year" />
+        <variable ilk="argument" name="month" />
+        <variable ilk="argument" name="day" />
+        <variable citdl="_days_in_month()" line="71" name="dim" />
+      </scope>
+      <scope attributes="protected __hidden__" ilk="function" line="174" lineend="233" name="_wrap_strftime" returns="_time.strftime()" signature="_wrap_strftime(object, format, timetuple)">
+        <variable ilk="argument" name="object" />
+        <variable ilk="argument" name="format" />
+        <variable ilk="argument" name="timetuple" />
+        <variable line="175" name="year" />
+        <variable citdl="getattr()" line="180" name="freplace" />
+        <variable citdl="str" line="181" name="zreplace" />
+        <variable citdl="s.replace()" line="182" name="Zreplace" />
+        <variable citdl="list" line="185" name="newformat" />
+        <variable citdl="newformat.append" line="186" name="push" />
+        <variable citdl="int" line="187" name="i" />
+        <variable citdl="len()" line="187" name="n" />
+        <variable line="189" name="ch" />
+        <variable citdl="object.utcoffset()" line="204" name="offset" />
+        <variable citdl="str" line="206" name="sign" />
+        <variable line="210" name="h" />
+        <variable line="210" name="m" />
+        <variable citdl="object.tzname()" line="220" name="s" />
+      </scope>
+    </scope>
+    

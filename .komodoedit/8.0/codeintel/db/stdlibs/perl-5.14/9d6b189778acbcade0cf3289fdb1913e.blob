@@ -1,0 +1,141 @@
+<scope ilk="blob" lang="Perl" name="Algorithm::Diff">
+      <scope ilk="class" line="1" lineend="541" name="Algorithm::Diff">
+        <import line="12" module="Exporter" />
+        <variable line="7" name="$VERSION" />
+        <variable line="7" name="@EXPORT_OK" />
+        <variable line="13" name="*import" />
+        <scope ilk="function" line="34" lineend="56" name="_withPositionsOfInInterval" signature="_withPositionsOfInInterval($aCollection, $start, $end, $keyGen)">
+          <variable ilk="argument" name="$aCollection" />
+          <variable ilk="argument" name="$start" />
+          <variable ilk="argument" name="$end" />
+          <variable ilk="argument" name="$keyGen" />
+        </scope>
+        <scope ilk="function" line="66" lineend="106" name="_replaceNextLargerWith" signature="_replaceNextLargerWith($array, $aValue, $high)">
+          <variable ilk="argument" name="$array" />
+          <variable ilk="argument" name="$aValue" />
+          <variable ilk="argument" name="$high" />
+        </scope>
+        <scope ilk="function" line="126" lineend="244" name="_longestCommonSubsequence" signature="_longestCommonSubsequence($a, $b, $counting, $keyGen, $a, $b, $a, $b)">
+          <variable ilk="argument" name="$a" />
+          <variable ilk="argument" name="$b" />
+          <variable ilk="argument" name="$counting" />
+          <variable ilk="argument" name="$keyGen" />
+          <variable ilk="argument" name="$a" />
+          <variable ilk="argument" name="$b" />
+          <variable ilk="argument" name="$a" />
+          <variable ilk="argument" name="$b" />
+        </scope>
+        <scope attributes="__exportable__" ilk="function" line="246" lineend="318" name="traverse_sequences" signature="traverse_sequences($a, $b, $callbacks, $keyGen)">
+          <variable ilk="argument" name="$a" />
+          <variable ilk="argument" name="$b" />
+          <variable ilk="argument" name="$callbacks" />
+          <variable ilk="argument" name="$keyGen" />
+        </scope>
+        <scope attributes="__exportable__" ilk="function" line="320" lineend="383" name="traverse_balanced" signature="traverse_balanced($a, $b, $callbacks, $keyGen)">
+          <variable ilk="argument" name="$a" />
+          <variable ilk="argument" name="$b" />
+          <variable ilk="argument" name="$callbacks" />
+          <variable ilk="argument" name="$keyGen" />
+        </scope>
+        <scope attributes="__exportable__" ilk="function" line="420" lineend="429" name="prepare" signature="prepare($a, $keyGen)">
+          <variable ilk="argument" name="$a" />
+          <variable ilk="argument" name="$keyGen" />
+        </scope>
+        <scope attributes="__exportable__" ilk="function" line="431" lineend="446" name="LCS" signature="LCS($a, $b)">
+          <variable ilk="argument" name="$a" />
+          <variable ilk="argument" name="$b" />
+        </scope>
+        <scope attributes="__exportable__" ilk="function" line="448" lineend="453" name="LCS_length" signature="LCS_length($a, $b)">
+          <variable ilk="argument" name="$a" />
+          <variable ilk="argument" name="$b" />
+        </scope>
+        <scope attributes="__exportable__" ilk="function" line="455" lineend="463" name="LCSidx" signature="LCSidx()">
+          </scope>
+        <scope attributes="__exportable__" ilk="function" line="465" lineend="488" name="compact_diff" signature="compact_diff()">
+          </scope>
+        <scope attributes="__exportable__" ilk="function" line="490" lineend="511" name="diff" signature="diff($a, $b)">
+          <variable ilk="argument" name="$a" />
+          <variable ilk="argument" name="$b" />
+        </scope>
+        <scope attributes="__exportable__" ilk="function" line="513" lineend="538" name="sdiff" signature="sdiff($a, $b)">
+          <variable ilk="argument" name="$a" />
+          <variable ilk="argument" name="$b" />
+        </scope>
+      </scope>
+      <scope ilk="class" line="542" lineend="786" name="Algorithm::Diff::_impl">
+        <scope ilk="function" line="545" lineend="545" name="_Idx" signature="_Idx()" />
+        <scope ilk="function" line="548" lineend="548" name="_End" signature="_End()" />
+        <scope ilk="function" line="549" lineend="549" name="_Same" signature="_Same()" />
+        <scope ilk="function" line="550" lineend="550" name="_Base" signature="_Base()" />
+        <scope ilk="function" line="551" lineend="551" name="_Pos" signature="_Pos()" />
+        <scope ilk="function" line="552" lineend="552" name="_Off" signature="_Off()" />
+        <scope ilk="function" line="553" lineend="553" name="_Min" signature="_Min()" />
+        <scope ilk="function" line="555" lineend="559" name="Die" signature="Die()">
+          <import line="557" module="Carp" />
+          <import line="557" module="Carp" />
+        </scope>
+        <scope ilk="function" line="561" lineend="567" name="_ChkPos" signature="_ChkPos($me)">
+          <variable ilk="argument" name="$me" />
+        </scope>
+        <scope ilk="function" line="569" lineend="576" name="_ChkSeq" signature="_ChkSeq($me, $seq)">
+          <variable ilk="argument" name="$me" />
+          <variable ilk="argument" name="$seq" />
+        </scope>
+        <scope ilk="function" line="578" lineend="583" name="getObjPkg" signature="getObjPkg($us)">
+          <variable ilk="argument" name="$us" />
+        </scope>
+        <scope attributes="__ctor__" ilk="function" line="585" lineend="608" name="new" signature="new($us, $seq1, $seq2, $opts)">
+          <variable ilk="argument" name="$us" />
+          <variable ilk="argument" name="$seq1" />
+          <variable ilk="argument" name="$seq2" />
+          <variable ilk="argument" name="$opts" />
+        </scope>
+        <scope ilk="function" line="610" lineend="621" name="Reset" signature="Reset($me, $pos)">
+          <variable ilk="argument" name="$me" />
+          <variable ilk="argument" name="$pos" />
+        </scope>
+        <scope ilk="function" line="623" lineend="629" name="Base" signature="Base($me, $base)">
+          <variable ilk="argument" name="$me" />
+          <variable ilk="argument" name="$base" />
+        </scope>
+        <scope attributes="__ctor__" ilk="function" line="631" lineend="639" name="Copy" signature="Copy($me, $pos, $base)">
+          <variable ilk="argument" name="$me" />
+          <variable ilk="argument" name="$pos" />
+          <variable ilk="argument" name="$base" />
+        </scope>
+        <scope ilk="function" line="653" lineend="659" name="Prev" signature="Prev($me, $steps)">
+          <variable ilk="argument" name="$me" />
+          <variable ilk="argument" name="$steps" />
+        </scope>
+        <scope ilk="function" line="661" lineend="671" name="Diff" signature="Diff($me)">
+          <variable ilk="argument" name="$me" />
+        </scope>
+        <scope ilk="function" line="641" lineend="673" name="Next" signature="Next($me, $steps)">
+          <variable ilk="argument" name="$me" />
+          <variable ilk="argument" name="$steps" />
+        </scope>
+        <scope ilk="function" line="675" lineend="681" name="Min" signature="Min($me, $seq, $base)">
+          <variable ilk="argument" name="$me" />
+          <variable ilk="argument" name="$seq" />
+          <variable ilk="argument" name="$base" />
+        </scope>
+        <scope ilk="function" line="704" lineend="717" name="Items" signature="Items($me, $seq)">
+          <variable ilk="argument" name="$me" />
+          <variable ilk="argument" name="$seq" />
+        </scope>
+        <scope ilk="function" line="719" lineend="725" name="Same" signature="Same($me)">
+          <variable ilk="argument" name="$me" />
+        </scope>
+        <scope ilk="function" line="740" lineend="768" name="Get" signature="Get()">
+          </scope>
+        <scope ilk="function" line="683" lineend="786" name="Max" signature="Max($me, $seq, $base, $me, $seq, $base)">
+          <variable ilk="argument" name="$me" />
+          <variable ilk="argument" name="$seq" />
+          <variable ilk="argument" name="$base" />
+          <variable ilk="argument" name="$me" />
+          <variable ilk="argument" name="$seq" />
+          <variable ilk="argument" name="$base" />
+        </scope>
+      </scope>
+    </scope>
+    

@@ -1,0 +1,100 @@
+<scope ilk="blob" lang="Perl" name="Readonly">
+      <scope ilk="class" line="25" lineend="379" name="Readonly">
+        <import line="177" module="Exporter" symbol="*" />
+        <variable line="26" name="$Readonly::VERSION" />
+        <variable line="39" name="$XSokay" />
+        <variable line="42" name="$MODIFY" />
+        <variable line="42" name="$ODDHASH" />
+        <variable line="42" name="$REASSIGN" />
+        <variable line="48" name="$Readonly::XS::MAGIC_COOKIE" />
+        <variable line="178" name="%EXPORT_TAGS" />
+        <variable line="178" name="@EXPORT" />
+        <variable line="178" name="@EXPORT_OK" />
+        <variable line="178" name="@ISA" />
+        <scope ilk="function" line="30" lineend="34" name="croak" signature="croak()">
+          <import line="32" module="Carp" />
+          <import line="32" module="Carp" />
+        </scope>
+        <scope ilk="function" line="37" lineend="37" name="is_sv_readonly" signature="is_sv_readonly()" />
+        <scope ilk="function" line="38" lineend="38" name="make_sv_readonly" signature="make_sv_readonly()" />
+        <scope ilk="function" line="190" lineend="195" name="_is_badtype" signature="_is_badtype()">
+          </scope>
+        <scope ilk="function" line="198" lineend="220" name="Scalar1" signature="Scalar1()">
+          </scope>
+        <scope ilk="function" line="223" lineend="230" name="Array1" signature="Array1($aref)">
+          <variable ilk="argument" name="$aref" />
+        </scope>
+        <scope ilk="function" line="233" lineend="250" name="Hash1" signature="Hash1($href)">
+          <variable ilk="argument" name="$href" />
+        </scope>
+        <scope ilk="function" line="253" lineend="285" name="Scalar" signature="Scalar()">
+          </scope>
+        <scope ilk="function" line="288" lineend="305" name="Array" signature="Array($aref, @values)">
+          <variable ilk="argument" name="$aref" />
+          <variable ilk="argument" name="@values" />
+        </scope>
+        <scope ilk="function" line="308" lineend="334" name="Hash" signature="Hash($href, @values)">
+          <variable ilk="argument" name="$href" />
+          <variable ilk="argument" name="@values" />
+        </scope>
+      </scope>
+      <scope ilk="class" line="55" lineend="76" name="Readonly::Scalar">
+        <variable line="75" name="*STORE" />
+        <variable line="75" name="*UNTIE" />
+        <scope attributes="__ctor__" ilk="function" line="57" lineend="67" name="TIESCALAR" signature="TIESCALAR($class, $value)">
+          <variable ilk="argument" name="$class" />
+          <variable ilk="argument" name="$value" />
+        </scope>
+        <scope ilk="function" line="69" lineend="73" name="FETCH" signature="FETCH($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+      </scope>
+      <scope ilk="class" line="82" lineend="119" name="Readonly::Array">
+        <variable line="118" name="*CLEAR" />
+        <variable line="118" name="*EXTEND" />
+        <variable line="118" name="*POP" />
+        <variable line="118" name="*PUSH" />
+        <variable line="118" name="*SHIFT" />
+        <variable line="118" name="*SPLICE" />
+        <variable line="118" name="*STORE" />
+        <variable line="118" name="*STORESIZE" />
+        <variable line="118" name="*UNSHIFT" />
+        <variable line="118" name="*UNTIE" />
+        <scope attributes="__ctor__" ilk="function" line="84" lineend="92" name="TIEARRAY" signature="TIEARRAY($class, @self)">
+          <variable ilk="argument" name="$class" />
+          <variable ilk="argument" name="@self" />
+        </scope>
+        <scope ilk="function" line="94" lineend="99" name="FETCH" signature="FETCH($self, $index)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$index" />
+        </scope>
+        <scope ilk="function" line="101" lineend="105" name="FETCHSIZE" signature="FETCHSIZE($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+      </scope>
+      <scope ilk="class" line="125" lineend="169" name="Readonly::Hash">
+        <variable line="168" name="*CLEAR" />
+        <variable line="168" name="*DELETE" />
+        <variable line="168" name="*STORE" />
+        <variable line="168" name="*UNTIE" />
+        <scope attributes="__ctor__" ilk="function" line="127" lineend="138" name="TIEHASH" signature="TIEHASH($class, %self)">
+          <variable ilk="argument" name="$class" />
+          <variable ilk="argument" name="%self" />
+        </scope>
+        <scope ilk="function" line="140" lineend="146" name="FETCH" signature="FETCH($self, $key)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$key" />
+        </scope>
+        <scope ilk="function" line="148" lineend="153" name="EXISTS" signature="EXISTS($self, $key)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$key" />
+        </scope>
+        <scope ilk="function" line="155" lineend="160" name="FIRSTKEY" signature="FIRSTKEY($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="162" lineend="166" name="NEXTKEY" signature="NEXTKEY($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+      </scope>
+    </scope>
+    

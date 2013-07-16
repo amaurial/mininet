@@ -1,0 +1,154 @@
+<scope doc="distutils.util&#xA;Miscellaneous utility functions -- anything that doesn&apos;t fit into one of the other *util.py modules." ilk="blob" lang="Python" name="distutils.util">
+      <scope classrefs="DistutilsError" doc="Byte compile error.&#xA;" ilk="class" name="DistutilsByteCompileError" />
+      <scope classrefs="DistutilsError" doc="We don&apos;t know how to do something on the current platform (but&#xA;we do know how to do it on some platform) -- eg. trying to compile C files on a platform not supported by a CCompiler subclass." ilk="class" name="DistutilsPlatformError" />
+      <scope classrefs="object" doc="Mixin class for commands that run 2to3.&#xA;To configure 2to3, setup scripts may either change the class variables, or inherit from individual commands to override how 2to3 is invoked." ilk="class" line="624" lineend="641" name="Mixin2to3">
+        <scope ilk="function" line="640" lineend="641" name="run_2to3" returns="Mixin2to3.run_2to3()" signature="run_2to3(self, files)">
+          <variable ilk="argument" name="files" />
+          <variable citdl="Mixin2to3" ilk="argument" name="self" />
+        </scope>
+        <variable line="638" name="explicit" />
+        <variable line="635" name="options" />
+        <variable line="632" name="fixer_names" />
+      </scope>
+      <scope doc="Byte-compile a collection of Python source files to either&#xA;.pyc or .pyo files in the same directory." ilk="function" line="412" lineend="550" name="byte_compile" signature="byte_compile(py_files, optimize=0, force=0, prefix=None, base_dir=None, verbose=1, dry_run=0, direct=None)">
+        <variable citdl="__debug__" line="532" name="cfile" />
+        <variable ilk="argument" name="py_files" />
+        <variable citdl="file" line="533" name="dfile" />
+        <variable citdl="int" ilk="argument" name="force" />
+        <variable citdl="int" ilk="argument" name="verbose" />
+        <variable citdl="int" ilk="argument" name="dry_run" />
+        <variable citdl="open()" line="474" name="script" />
+        <variable citdl="list" line="507" name="cmd" />
+        <variable citdl="__debug__" ilk="argument" name="direct" />
+        <variable citdl="mktemp()" line="467" name="script_name" />
+        <variable citdl="os.path.basename()" line="542" name="cfile_base" />
+        <variable ilk="argument" name="prefix" />
+        <variable line="467" name="script_fd" />
+        <variable citdl="int" ilk="argument" name="optimize" />
+        <variable ilk="argument" name="base_dir" />
+      </scope>
+      <scope doc="Return &apos;pathname&apos; with &apos;new_root&apos; prepended." ilk="function" line="210" lineend="235" name="change_root" returns="os.path.join()" signature="change_root(new_root, pathname)">
+        <variable citdl="list" line="223" name="path" />
+        <variable ilk="argument" name="pathname" />
+        <variable ilk="argument" name="new_root" />
+        <variable line="223" name="drive" />
+      </scope>
+      <scope doc="Ensure that &apos;os.environ&apos; has all the environment variables&#xA;we guarantee that users can use in config files, command-&#xA;line options, etc." ilk="function" line="239" lineend="258" name="check_environ" signature="check_environ()">
+        <variable attributes="protected" citdl="int" line="258" name="_environ_checked" />
+      </scope>
+      <scope doc="Return &apos;pathname&apos; as a name that will work on the native&#xA;filesystem, i.e." ilk="function" line="182" lineend="205" name="convert_path" returns="os.curdir" signature="convert_path(pathname)">
+        <variable citdl="pathname.split()" line="200" name="paths" />
+        <variable ilk="argument" name="pathname" />
+      </scope>
+      <scope doc="Recursively copy a directory, only copying new and changed&#xA;files, running run_2to3 over all newly copied Python modules&#xA;afterward." ilk="function" line="591" lineend="622" name="copydir_run_2to3" returns="list" signature="copydir_run_2to3(src, dest, template=None, fixer_names=None, options=None, explicit=None)">
+        <variable ilk="argument" name="src" />
+        <variable citdl="os.path.join()" line="616" name="outname" />
+        <variable ilk="argument" name="dest" />
+        <variable citdl="copy_file()" line="618" name="res" />
+        <variable ilk="argument" name="explicit" />
+        <variable ilk="argument" name="fixer_names" />
+        <variable citdl="FileList()" line="601" name="filelist" />
+        <variable ilk="argument" name="template" />
+        <variable citdl="line.strip()" line="611" name="line" />
+        <variable citdl="list" line="614" name="copied" />
+        <variable ilk="argument" name="options" />
+        <variable citdl="os.getcwd()" line="602" name="curdir" />
+      </scope>
+      <scope doc="Perform some action that affects the outside world (eg." ilk="function" line="377" lineend="393" name="execute" signature="execute(func, args, msg=None, verbose=0, dry_run=0)">
+        <variable citdl="str" ilk="argument" name="msg" />
+        <variable ilk="argument" name="args" />
+        <variable citdl="int" ilk="argument" name="verbose" />
+        <variable ilk="argument" name="func" />
+        <variable citdl="int" ilk="argument" name="dry_run" />
+      </scope>
+      <scope doc="Return a string that identifies the current platform." ilk="function" line="14" lineend="177" name="get_platform" returns="tuple" signature="get_platform()">
+        <variable citdl="cfgvars.get()" line="97" name="macver" />
+        <variable citdl="str" line="59" name="osname" />
+        <variable citdl="str" line="40" name="prefix" />
+        <variable citdl="cfgvars.get()" line="103" name="macrelease" />
+        <variable citdl="get_config_vars()" line="95" name="cfgvars" />
+        <variable line="45" name="look" />
+        <variable citdl="open()" line="108" name="f" />
+        <variable citdl="sys.version.find()" line="41" name="i" />
+        <variable citdl="sys.version.find()" line="44" name="j" />
+        <variable citdl="re.search()" line="84" name="m" />
+        <variable line="59" name="host" />
+        <variable citdl="str" line="59" name="machine" />
+        <variable line="59" name="version" />
+        <variable citdl="re.compile()" line="83" name="rel_re" />
+        <variable line="141" name="cflags" />
+        <variable citdl="str.join()" line="59" name="release" />
+        <variable citdl="tuple()" line="143" name="archs" />
+      </scope>
+      <scope doc="Generate a useful error message from an EnvironmentError&#xA;(IOError or OSError) exception object." ilk="function" line="286" lineend="305" name="grok_environment_error" returns="tuple" signature="grok_environment_error(exc, prefix=&apos;error: &apos;)">
+        <variable citdl="str" ilk="argument" name="prefix" />
+        <variable ilk="argument" name="exc" />
+        <variable citdl="str" line="297" name="error" />
+      </scope>
+      <import module="log" />
+      <scope doc="Return true if &apos;source&apos; exists and is more recently modified&#xA;than &apos;target&apos;, or if &apos;source&apos; exists and &apos;target&apos; doesn&apos;t." ilk="function" name="newer" signature="newer(source, target)" />
+      <import module="os" />
+      <import module="re" />
+      <scope doc="Return a version of the string escaped for inclusion in an&#xA;RFC-822 header, by ensuring there are 8 spaces space after&#xA;each newline." ilk="function" line="554" lineend="560" name="rfc822_escape" returns="sep.join()" signature="rfc822_escape(header)">
+        <variable ilk="argument" name="header" />
+        <variable citdl="header.split()" line="558" name="lines" />
+        <variable citdl="str" line="559" name="sep" />
+      </scope>
+      <scope doc="Invoke 2to3 on a list of Python files." ilk="function" line="564" lineend="589" name="run_2to3" signature="run_2to3(files, fixer_names=None, options=None, explicit=None)">
+        <variable ilk="argument" name="files" />
+        <variable citdl="DistutilsRefactoringTool" line="588" name="r" />
+        <variable ilk="argument" name="explicit" />
+        <scope classrefs="RefactoringTool" ilk="class" line="576" lineend="584" name="DistutilsRefactoringTool">
+          <scope ilk="function" line="577" lineend="578" name="log_error" signature="log_error(msg, *args, **kw)">
+            <variable citdl="DistutilsRefactoringTool" ilk="argument" name="self" />
+            <variable ilk="argument" name="msg" />
+            <variable attributes="varargs" ilk="argument" name="args" />
+            <variable attributes="kwargs" ilk="argument" name="kw" />
+          </scope>
+          <scope ilk="function" line="580" lineend="581" name="log_message" signature="log_message(msg, *args)">
+            <variable citdl="DistutilsRefactoringTool" ilk="argument" name="self" />
+            <variable ilk="argument" name="msg" />
+            <variable attributes="varargs" ilk="argument" name="args" />
+          </scope>
+          <scope ilk="function" line="583" lineend="584" name="log_debug" signature="log_debug(msg, *args)">
+            <variable citdl="DistutilsRefactoringTool" ilk="argument" name="self" />
+            <variable ilk="argument" name="msg" />
+            <variable attributes="varargs" ilk="argument" name="args" />
+          </scope>
+        </scope>
+        <variable citdl="get_fixers_from_package()" ilk="argument" name="fixer_names" />
+        <variable ilk="argument" name="options" />
+      </scope>
+      <scope doc="Run another program, specified as a command list &apos;cmd&apos;, in a&#xA;new process." ilk="function" name="spawn" signature="spawn(cmd, search_path=1, verbose=0, dry_run=0)" />
+      <scope doc="Split a string up according to Unix shell-like rules for&#xA;quotes and backslashes." ilk="function" line="316" lineend="372" name="split_quoted" returns="list" signature="split_quoted(s)">
+        <variable citdl="list" ilk="argument" name="s" />
+        <variable citdl="m.end()" line="338" name="end" />
+        <variable citdl="list" line="333" name="words" />
+        <variable citdl="_dquote_re.match()" line="337" name="m" />
+        <variable citdl="int" line="334" name="pos" />
+        <variable line="364" name="beg" />
+      </scope>
+      <import module="string" />
+      <scope doc="Convert a string representation of truth to true (1) or&#xA;false (0)." ilk="function" line="396" lineend="409" name="strtobool" returns="int" signature="strtobool(val)">
+        <variable citdl="val.lower()" ilk="argument" name="val" />
+      </scope>
+      <scope doc="Perform shell/Perl-style variable substitution on &apos;string&apos;." ilk="function" line="261" lineend="281" name="subst_vars" returns="re.sub()" signature="subst_vars(s, local_vars)">
+        <scope attributes="protected" ilk="function" line="271" lineend="276" name="_subst" returns="str()" signature="_subst(match, local_vars=local_vars)">
+          <variable ilk="argument" name="match" />
+          <variable ilk="argument" name="local_vars" />
+          <variable citdl="match.group()" line="272" name="var_name" />
+        </scope>
+        <variable ilk="argument" name="s" />
+        <variable ilk="argument" name="local_vars" />
+      </scope>
+      <import module="sys" />
+      <variable attributes="protected __hidden__" citdl="int" line="238" name="_environ_checked" />
+      <scope attributes="protected __hidden__" ilk="function" line="310" lineend="314" name="_init_regex" signature="_init_regex()">
+        <variable attributes="protected" citdl="re.compile()" line="312" name="_wordchars_re" />
+        <variable attributes="protected" citdl="re.compile()" line="313" name="_squote_re" />
+        <variable attributes="protected" citdl="re.compile()" line="314" name="_dquote_re" />
+      </scope>
+      <variable attributes="protected __hidden__" line="309" name="_wordchars_re" />
+      <variable citdl="str" line="7" name="__revision__" />
+    </scope>
+    

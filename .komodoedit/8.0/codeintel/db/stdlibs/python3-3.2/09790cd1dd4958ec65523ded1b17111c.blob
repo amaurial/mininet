@@ -1,0 +1,20 @@
+<scope doc="Optimized C implementation for the Python pickle module.&#xA;" ilk="blob" lang="Python" name="_pickle">
+      <scope classrefs="Exception" doc="&#xA;" ilk="class" name="PickleError" />
+      <scope classrefs="object" doc="Pickler(file, protocol=None)&#xA;This takes a binary file for writing a pickle data stream.  The optional protocol argument tells the pickler to use the given protocol; supported protocols are 0, 1, 2, 3.  The default protocol is 3; a backward-incompatible protocol designed for Python 3.0.  Specifying a negative protocol version selects the highest protocol version supported.  The higher the protocol used, the more recent the version of Python needed to read the pickle" ilk="class" name="Pickler">
+        <scope doc="dump(obj) -&gt; None. Write a pickled representation of obj to the open file." ilk="function" name="dump" signature="dump(obj) -&gt; None. Write a pickled representation of obj to the open file." />
+        <scope doc="The memo is the data structure that remembers which objects&#xA;the pickler has already seen, so that shared or recursive&#xA;objects are pickled by reference and not by value." ilk="function" name="clear_memo" signature="clear_memo() -&gt; None. Clears the pickler&apos;s &quot;memo&quot;." />
+        <scope ilk="function" name="__init__" />
+      </scope>
+      <scope classrefs="PickleError" doc="&#xA;" ilk="class" name="PicklingError" />
+      <scope classrefs="object" doc="Unpickler(file, *, encoding=&apos;ASCII&apos;, errors=&apos;strict&apos;)&#xA;This takes a binary file for reading a pickle data stream.  The protocol version of the pickle is detected automatically, so no proto argument is needed.  The file-like object must have two methods, a read() method that takes an integer argument, and a readline() method that requires no arguments.  Both methods should return bytes. Thus file-like object can be a binary file object opened for reading, a BytesIO object, or any other custom object that" ilk="class" name="Unpickler">
+        <scope doc="Read a pickled object representation from the open file&#xA;object given in the constructor, and return the&#xA;reconstituted object hierarchy specified therein." ilk="function" name="load" signature="load() -&gt; object. Load a pickle." />
+        <scope doc="Return an object from a specified module, importing the&#xA;module if necessary." ilk="function" name="find_class" signature="find_class(module_name, global_name) -&gt; object." />
+        <scope ilk="function" name="__init__" />
+      </scope>
+      <scope classrefs="PickleError" doc="&#xA;" ilk="class" name="UnpicklingError" />
+      <scope doc="Write a pickled representation of obj to the open file&#xA;object file." ilk="function" name="dump" signature="dump(obj, file, protocol=None, *, fix_imports=True) -&gt; None" />
+      <scope doc="Return the pickled representation of the object as a bytes&#xA;object, instead of writing it to a file." ilk="function" name="dumps" signature="dumps(obj, protocol=None, *, fix_imports=True) -&gt; bytes" />
+      <scope doc="Read a pickled object representation from the open file&#xA;object file and return the reconstituted object hierarchy&#xA;specified therein." ilk="function" name="load" returns="object" signature="load(file, *, fix_imports=True, encoding=&apos;ASCII&apos;, errors=&apos;strict&apos;) -&gt; object" />
+      <scope doc="Read a pickled object hierarchy from a bytes object and&#xA;return the reconstituted object hierarchy specified therein" ilk="function" name="loads" returns="object" signature="loads(input, *, fix_imports=True, encoding=&apos;ASCII&apos;, errors=&apos;strict&apos;) -&gt; object" />
+    </scope>
+    

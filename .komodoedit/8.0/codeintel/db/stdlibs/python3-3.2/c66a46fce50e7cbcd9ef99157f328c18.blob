@@ -1,0 +1,45 @@
+<scope doc="Exception classes raised by urllib.&#xA;The base exception class is URLError, which inherits from IOError.  It doesn&apos;t define any behavior of its own, but is the base class for all exceptions defined in this package.  HTTPError is an exception class that is also a valid HTTP response instance.  It behaves this way because HTTP protocol errors are valid responses, with a status code, headers, and a body.  In some contexts, an application may want to handle an exception like a regular response." ilk="blob" lang="Python" name="urllib.error">
+      <scope classrefs="URLError" doc="# exception raised when downloaded size does not match content-length&#xA;" ilk="class" line="56" lineend="59" name="ContentTooShortError">
+        <scope ilk="function" line="57" lineend="59" name="__init__" signature="__init__(self, message, content)">
+          <variable ilk="argument" name="content" />
+          <variable citdl="ContentTooShortError" ilk="argument" name="self" />
+          <variable ilk="argument" name="message" />
+        </scope>
+        <variable attributes="__instancevar__" line="59" name="content" />
+      </scope>
+      <scope classrefs="URLError addinfourl" doc="Raised when HTTP error occurs, but also acts like non-error return&#xA;" ilk="class" line="35" lineend="53" name="HTTPError">
+        <scope ilk="function" name="_HTTPError__super_init" signature="_HTTPError__super_init(self, fp, headers, url, code=None)" />
+        <scope ilk="function" line="52" lineend="53" name="__str__" returns="tuple" signature="__str__(self)">
+          <variable citdl="HTTPError" ilk="argument" name="self" />
+        </scope>
+        <scope ilk="function" line="39" lineend="50" name="__init__" signature="__init__(self, url, code, msg, hdrs, fp)">
+          <variable ilk="argument" name="fp" />
+          <variable ilk="argument" name="msg" />
+          <variable ilk="argument" name="code" />
+          <variable ilk="argument" name="hdrs" />
+          <variable ilk="argument" name="url" />
+          <variable citdl="HTTPError" ilk="argument" name="self" />
+        </scope>
+        <variable attributes="__instancevar__" line="43" name="fp" />
+        <variable attributes="__instancevar__" line="40" name="code" />
+        <variable attributes="__instancevar__" line="42" name="hdrs" />
+        <variable attributes="__instancevar__" line="44" name="filename" />
+        <variable attributes="__instancevar__" line="41" name="msg" />
+        <variable attributes="private" citdl="urllib.response.addinfourl.__init__" line="37" name="__super_init" />
+      </scope>
+      <scope classrefs="IOError" doc="&#xA;" ilk="class" line="20" lineend="33" name="URLError">
+        <scope ilk="function" line="32" lineend="33" name="__str__" returns="str" signature="__str__(self)">
+          <variable citdl="URLError" ilk="argument" name="self" />
+        </scope>
+        <scope doc="# URLError is a sub-type of IOError, but it doesn&apos;t share&#xA;any of # the implementation." ilk="function" line="26" lineend="30" name="__init__" signature="__init__(self, reason, filename=None)">
+          <variable citdl="URLError" ilk="argument" name="self" />
+          <variable ilk="argument" name="reason" />
+          <variable ilk="argument" name="filename" />
+        </scope>
+        <variable attributes="__instancevar__" line="28" name="reason" />
+        <variable attributes="__instancevar__" citdl="tuple" line="27" name="args" />
+        <variable attributes="__instancevar__" line="30" name="filename" />
+      </scope>
+      <import module="urllib" />
+    </scope>
+    

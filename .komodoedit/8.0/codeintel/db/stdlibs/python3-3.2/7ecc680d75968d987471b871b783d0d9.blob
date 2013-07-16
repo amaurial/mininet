@@ -1,0 +1,25 @@
+<scope doc="distutils.dep_util&#xA;Utility functions for simple, timestamp-based dependency of files and groups of files; also, function based entirely on such timestamp dependency analysis." ilk="blob" lang="Python" name="distutils.dep_util">
+      <scope classrefs="DistutilsError" doc="Any problems in the filesystem: expected file not found, etc.&#xA;Typically this is for problems that we detect before IOError or OSError could be raised." ilk="class" name="DistutilsFileError" />
+      <scope doc="Return true if &apos;source&apos; exists and is more recently modified&#xA;than &apos;target&apos;, or if &apos;source&apos; exists and &apos;target&apos; doesn&apos;t." ilk="function" line="11" lineend="27" name="newer" returns="bool" signature="newer(source, target)">
+        <variable ilk="argument" name="source" />
+        <variable line="25" name="mtime2" />
+        <variable ilk="argument" name="target" />
+        <variable line="24" name="mtime1" />
+      </scope>
+      <scope doc="Return true if &apos;target&apos; is out-of-date with respect to any&#xA;file listed in &apos;sources&apos;." ilk="function" line="54" lineend="90" name="newer_group" returns="int" signature="newer_group(sources, target, missing=&apos;error&apos;)">
+        <variable line="76" name="target_mtime" />
+        <variable ilk="argument" name="sources" />
+        <variable line="86" name="source_mtime" />
+        <variable ilk="argument" name="target" />
+        <variable citdl="str" ilk="argument" name="missing" />
+      </scope>
+      <scope doc="Walk two filename lists in parallel, testing if each source&#xA;is newer than its corresponding target." ilk="function" line="32" lineend="49" name="newer_pairwise" returns="tuple" signature="newer_pairwise(sources, targets)">
+        <variable citdl="list" line="42" name="n_sources" />
+        <variable ilk="argument" name="sources" />
+        <variable citdl="list" line="43" name="n_targets" />
+        <variable ilk="argument" name="targets" />
+      </scope>
+      <import module="os" />
+      <variable citdl="str" line="7" name="__revision__" />
+    </scope>
+    

@@ -1,0 +1,67 @@
+<scope doc="Parse (absolute and relative) URLs.&#xA;urlparse module is based upon the following RFC specifications.  RFC 3986 (STD66): &quot;Uniform Resource Identifiers&quot; by T. Berners-Lee, R. Fielding and L.  Masinter, January 2005.  RFC 2732 : &quot;Format for Literal IPv6 Addresses in URL&apos;s by R.Hinden, B.Carpenter and L.Masinter, December 1999.  RFC 2396:  &quot;Uniform Resource Identifiers (URI)&quot;: Generic Syntax by T. Berners-Lee, R. Fielding, and L. Masinter, August 1998." ilk="blob" lang="Python" name="urllib.parse">
+      <scope classrefs="DefragResult _ResultMixinStr" doc="# Structured result objects for string data&#xA;" ilk="class" name="DefragResult">
+        <scope ilk="function" name="geturl" signature="geturl(self)" />
+      </scope>
+      <scope classrefs="DefragResult _ResultMixinBytes" doc="# Structured result objects for bytes data&#xA;" ilk="class" name="DefragResultBytes">
+        <scope ilk="function" name="geturl" signature="geturl(self)" />
+      </scope>
+      <variable citdl="int" name="MAX_CACHE_SIZE" />
+      <scope classrefs="ParseResult _NetlocResultMixinStr" doc="&#xA;" ilk="class" name="ParseResult">
+        <scope ilk="function" name="geturl" signature="geturl(self)" />
+      </scope>
+      <scope classrefs="ParseResult _NetlocResultMixinBytes" doc="&#xA;" ilk="class" name="ParseResultBytes">
+        <scope ilk="function" name="geturl" signature="geturl(self)" />
+      </scope>
+      <scope classrefs="defaultdict" doc="A mapping from bytes (in range(0,256)) to strings.&#xA;String values are percent-encoded byte values, unless the key &lt; 128, and in the &quot;safe&quot; set (either the specified safe set, or default set)." ilk="class" name="Quoter">
+        <scope ilk="function" name="__repr__" signature="__repr__(self)" />
+        <scope ilk="function" name="__missing__" signature="__missing__(self, b)" />
+        <scope doc="safe: bytes object." ilk="function" name="__init__" signature="__init__(self, safe)" />
+      </scope>
+      <scope classrefs="_NetlocResultMixinBase _ResultMixinStr" doc="&#xA;" ilk="class" name="ResultBase" />
+      <scope classrefs="SplitResult _NetlocResultMixinStr" doc="&#xA;" ilk="class" name="SplitResult">
+        <scope ilk="function" name="geturl" signature="geturl(self)" />
+      </scope>
+      <scope classrefs="SplitResult _NetlocResultMixinBytes" doc="&#xA;" ilk="class" name="SplitResultBytes">
+        <scope ilk="function" name="geturl" signature="geturl(self)" />
+      </scope>
+      <variable citdl="list" name="__all__" />
+      <scope doc="Clear the parse cache and the quoters cache." ilk="function" name="clear_cache" signature="clear_cache()" />
+      <import module="collections" />
+      <scope doc="Returns a new subclass of tuple with named fields." ilk="function" name="namedtuple" signature="namedtuple(typename, field_names, verbose=False, rename=False)" />
+      <variable citdl="list" name="non_hierarchical" />
+      <scope doc="Parse a query given as a string argument." ilk="function" name="parse_qs" signature="parse_qs(qs, keep_blank_values=False, strict_parsing=False, encoding=&apos;utf-8&apos;, errors=&apos;replace&apos;)" />
+      <scope doc="Parse a query given as a string argument." ilk="function" name="parse_qsl" signature="parse_qsl(qs, keep_blank_values=False, strict_parsing=False, encoding=&apos;utf-8&apos;, errors=&apos;replace&apos;)" />
+      <scope doc="Each part of a URL, e.g." ilk="function" name="quote" signature="quote(&apos;abc def&apos;) -&gt; &apos;abc%20def&apos;" />
+      <scope doc="Like quote(), but accepts a bytes object rather than a str,&#xA;and does not perform string-to-bytes encoding." ilk="function" name="quote_from_bytes" signature="quote_from_bytes(bs, safe=&apos;/&apos;)" />
+      <scope doc="Like quote(), but also replace &apos; &apos; with &apos;+&apos;, as required for&#xA;quoting HTML form values." ilk="function" name="quote_plus" signature="quote_plus(string, safe=&apos;&apos;, encoding=None, errors=None)" />
+      <variable citdl="str" name="scheme_chars" />
+      <scope doc="&apos;/path&apos;, [&apos;attr1=value1&apos;, &apos;attr2=value2&apos;, ...]." ilk="function" name="splitattr" signature="splitattr(&apos;/path;attr1=value1;attr2=value2;...&apos;) -&gt;" />
+      <scope doc="splithost(&apos;//host[:port]/path&apos;) --&gt; &apos;host[:port]&apos;, &apos;/path&apos;." ilk="function" name="splithost" signature="splithost(&apos;//host[:port]/path&apos;) --&gt; &apos;host[:port]&apos;, &apos;/path&apos;." />
+      <scope doc="Split host and port, returning numeric port." ilk="function" name="splitnport" signature="splitnport(host, defport=-1)" />
+      <scope doc="splitpasswd(&apos;user:passwd&apos;) -&gt; &apos;user&apos;, &apos;passwd&apos;." ilk="function" name="splitpasswd" signature="splitpasswd(&apos;user:passwd&apos;) -&gt; &apos;user&apos;, &apos;passwd&apos;." />
+      <scope doc="splitport(&apos;host:port&apos;) --&gt; &apos;host&apos;, &apos;port&apos;." ilk="function" name="splitport" signature="splitport(&apos;host:port&apos;) --&gt; &apos;host&apos;, &apos;port&apos;." />
+      <scope doc="splitquery(&apos;/path?query&apos;) --&gt; &apos;/path&apos;, &apos;query&apos;." ilk="function" name="splitquery" signature="splitquery(&apos;/path?query&apos;) --&gt; &apos;/path&apos;, &apos;query&apos;." />
+      <scope doc="splittag(&apos;/path#tag&apos;) --&gt; &apos;/path&apos;, &apos;tag&apos;." ilk="function" name="splittag" signature="splittag(&apos;/path#tag&apos;) --&gt; &apos;/path&apos;, &apos;tag&apos;." />
+      <scope doc="splittype(&apos;type:opaquestring&apos;) --&gt; &apos;type&apos;, &apos;opaquestring&apos;." ilk="function" name="splittype" signature="splittype(&apos;type:opaquestring&apos;) --&gt; &apos;type&apos;, &apos;opaquestring&apos;." />
+      <scope doc="splituser(&apos;user[:passwd]@host[:port]&apos;) --&gt; &apos;user[:passwd]&apos;, &apos;host[:port]&apos;." ilk="function" name="splituser" signature="splituser(&apos;user[:passwd]@host[:port]&apos;) --&gt; &apos;user[:passwd]&apos;, &apos;host[:port]&apos;." />
+      <scope doc="splitvalue(&apos;attr=value&apos;) --&gt; &apos;attr&apos;, &apos;value&apos;." ilk="function" name="splitvalue" signature="splitvalue(&apos;attr=value&apos;) --&gt; &apos;attr&apos;, &apos;value&apos;." />
+      <import module="sys" />
+      <scope doc="to_bytes(u&quot;URL&quot;) --&gt; &apos;URL&apos;." ilk="function" name="to_bytes" signature="to_bytes(u&quot;URL&quot;) --&gt; &apos;URL&apos;." />
+      <scope doc="Replace %xx escapes by their single-character equivalent." ilk="function" name="unquote" signature="unquote(string, encoding=&apos;utf-8&apos;, errors=&apos;replace&apos;)" />
+      <scope doc="Like unquote(), but also replace plus signs by spaces, as&#xA;required for unquoting HTML form values." ilk="function" name="unquote_plus" signature="unquote_plus(string, encoding=&apos;utf-8&apos;, errors=&apos;replace&apos;)" />
+      <scope doc="unquote_to_bytes(&apos;abc%20def&apos;) -&gt; b&apos;abc def&apos;." ilk="function" name="unquote_to_bytes" signature="unquote_to_bytes(&apos;abc%20def&apos;) -&gt; b&apos;abc def&apos;." />
+      <scope doc="unwrap(&apos;&lt;URL:type://host/path&gt;&apos;) --&gt; &apos;type://host/path&apos;." ilk="function" name="unwrap" signature="unwrap(&apos;&lt;URL:type://host/path&gt;&apos;) --&gt; &apos;type://host/path&apos;." />
+      <scope doc="Removes any existing fragment from URL." ilk="function" name="urldefrag" signature="urldefrag(url)" />
+      <scope doc="Encode a sequence of two-element tuples or dictionary into a&#xA;URL query string." ilk="function" name="urlencode" signature="urlencode(query, doseq=False, safe=&apos;&apos;, encoding=None, errors=None)" />
+      <scope doc="Join a base URL and a possibly relative URL to form an&#xA;absolute interpretation of the latter." ilk="function" name="urljoin" signature="urljoin(base, url, allow_fragments=True)" />
+      <scope doc="Parse a URL into 6 components:&#xA;&lt;scheme&gt;://&lt;netloc&gt;/&lt;path&gt;;&lt;params&gt;?&lt;query&gt;#&lt;fragment&gt;&#xA;Return a 6-tuple: (scheme, netloc, path, params, query,&#xA;fragment)." ilk="function" name="urlparse" signature="urlparse(url, scheme=&apos;&apos;, allow_fragments=True)" />
+      <scope doc="Parse a URL into 5 components:&#xA;&lt;scheme&gt;://&lt;netloc&gt;/&lt;path&gt;?&lt;query&gt;#&lt;fragment&gt; Return a&#xA;5-tuple: (scheme, netloc, path, query, fragment)." ilk="function" name="urlsplit" signature="urlsplit(url, scheme=&apos;&apos;, allow_fragments=True)" />
+      <scope doc="Put a parsed URL back together again." ilk="function" name="urlunparse" signature="urlunparse(components)" />
+      <scope doc="Combine the elements of a tuple as returned by urlsplit()&#xA;into a complete URL as a string." ilk="function" name="urlunsplit" signature="urlunsplit(components)" />
+      <variable citdl="list" name="uses_fragment" />
+      <variable citdl="list" name="uses_netloc" />
+      <variable citdl="list" name="uses_params" />
+      <variable citdl="list" name="uses_query" />
+      <variable citdl="list" name="uses_relative" />
+    </scope>
+    

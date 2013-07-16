@@ -1,0 +1,17 @@
+<scope ilk="blob" lang="Perl" name="ActiveState::CPAN::Makefile_PL">
+      <scope ilk="class" line="1" lineend="64" name="ActiveState::CPAN::Makefile_PL">
+        <import line="8" module="ActiveState::Handy" symbol="file_content" />
+        <import line="9" module="Text::Balanced" symbol="extract_bracketed" />
+        <import line="9" module="Text::Balanced" symbol="extract_quotelike" />
+        <variable line="6" name="@EXPORT_OK" />
+        <scope ilk="function" line="11" lineend="22" name="parse_makefile_pl" signature="parse_makefile_pl($f)">
+          <variable ilk="argument" name="$f" />
+        </scope>
+        <scope ilk="function" line="24" lineend="56" name="parse_hash" signature="parse_hash()">
+          </scope>
+        <scope ilk="function" line="58" lineend="62" name="unquote" signature="unquote($v)">
+          <variable ilk="argument" name="$v" />
+        </scope>
+      </scope>
+    </scope>
+    

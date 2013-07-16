@@ -1,0 +1,233 @@
+<scope ilk="blob" lang="Perl" name="Bit::Vector::Overload">
+      <scope classrefs="Exporter Bit::Vector" ilk="class" line="12" lineend="27" name="Bit::Vector::Overload">
+        <import line="17" module="Bit::Vector" symbol="*" />
+        <import line="19" module="Exporter" />
+        <variable line="15" name="$VERSION" />
+        <variable line="15" name="@EXPORT" />
+        <variable line="15" name="@EXPORT_OK" />
+        <variable line="15" name="@ISA" />
+      </scope>
+      <scope ilk="class" line="29" lineend="1157" name="Bit::Vector">
+        <import line="31" module="Carp::Clan" symbol="^Bit::Vector\b" />
+        <scope ilk="function" line="103" lineend="203" name="Configuration" signature="Configuration()">
+          </scope>
+        <scope ilk="function" line="205" lineend="225" name="_error" signature="_error($name, $code)">
+          <variable ilk="argument" name="$name" />
+          <variable ilk="argument" name="$code" />
+        </scope>
+        <scope ilk="function" line="227" lineend="236" name="_vectorize_" signature="_vectorize_($vector, $scalar)">
+          <variable ilk="argument" name="$vector" />
+          <variable ilk="argument" name="$scalar" />
+        </scope>
+        <scope ilk="function" line="238" lineend="246" name="_scalarize_" signature="_scalarize_($vector)">
+          <variable ilk="argument" name="$vector" />
+        </scope>
+        <scope ilk="function" line="248" lineend="276" name="_fetch_operand" signature="_fetch_operand($object, $argument, $flag, $name, $build)">
+          <variable ilk="argument" name="$object" />
+          <variable ilk="argument" name="$argument" />
+          <variable ilk="argument" name="$flag" />
+          <variable ilk="argument" name="$name" />
+          <variable ilk="argument" name="$build" />
+        </scope>
+        <scope ilk="function" line="278" lineend="287" name="_check_operand" signature="_check_operand($argument, $flag, $name)">
+          <variable ilk="argument" name="$argument" />
+          <variable ilk="argument" name="$flag" />
+          <variable ilk="argument" name="$name" />
+        </scope>
+        <scope ilk="function" line="289" lineend="301" name="_stringify" signature="_stringify($vector)">
+          <variable ilk="argument" name="$vector" />
+        </scope>
+        <scope ilk="function" line="303" lineend="315" name="_boolean" signature="_boolean($object)">
+          <variable ilk="argument" name="$object" />
+        </scope>
+        <scope ilk="function" line="317" lineend="329" name="_not_boolean" signature="_not_boolean($object)">
+          <variable ilk="argument" name="$object" />
+        </scope>
+        <scope ilk="function" line="331" lineend="344" name="_complement" signature="_complement($object)">
+          <variable ilk="argument" name="$object" />
+        </scope>
+        <scope ilk="function" line="346" lineend="359" name="_negate" signature="_negate($object)">
+          <variable ilk="argument" name="$object" />
+        </scope>
+        <scope ilk="function" line="361" lineend="381" name="_absolute" signature="_absolute($object)">
+          <variable ilk="argument" name="$object" />
+        </scope>
+        <scope ilk="function" line="383" lineend="431" name="_concat" signature="_concat($object, $argument, $flag)">
+          <variable ilk="argument" name="$object" />
+          <variable ilk="argument" name="$argument" />
+          <variable ilk="argument" name="$flag" />
+        </scope>
+        <scope ilk="function" line="433" lineend="467" name="_xerox" signature="_xerox($object, $argument, $flag)">
+          <variable ilk="argument" name="$object" />
+          <variable ilk="argument" name="$argument" />
+          <variable ilk="argument" name="$flag" />
+        </scope>
+        <scope ilk="function" line="469" lineend="494" name="_shift_left" signature="_shift_left($object, $argument, $flag)">
+          <variable ilk="argument" name="$object" />
+          <variable ilk="argument" name="$argument" />
+          <variable ilk="argument" name="$flag" />
+        </scope>
+        <scope ilk="function" line="496" lineend="521" name="_shift_right" signature="_shift_right($object, $argument, $flag)">
+          <variable ilk="argument" name="$object" />
+          <variable ilk="argument" name="$argument" />
+          <variable ilk="argument" name="$flag" />
+        </scope>
+        <scope ilk="function" line="523" lineend="537" name="_union_" signature="_union_($object, $operand, $flag)">
+          <variable ilk="argument" name="$object" />
+          <variable ilk="argument" name="$operand" />
+          <variable ilk="argument" name="$flag" />
+        </scope>
+        <scope ilk="function" line="539" lineend="553" name="_union" signature="_union($object, $argument, $flag)">
+          <variable ilk="argument" name="$object" />
+          <variable ilk="argument" name="$argument" />
+          <variable ilk="argument" name="$flag" />
+        </scope>
+        <scope ilk="function" line="555" lineend="569" name="_intersection_" signature="_intersection_($object, $operand, $flag)">
+          <variable ilk="argument" name="$object" />
+          <variable ilk="argument" name="$operand" />
+          <variable ilk="argument" name="$flag" />
+        </scope>
+        <scope ilk="function" line="571" lineend="585" name="_intersection" signature="_intersection($object, $argument, $flag)">
+          <variable ilk="argument" name="$object" />
+          <variable ilk="argument" name="$argument" />
+          <variable ilk="argument" name="$flag" />
+        </scope>
+        <scope ilk="function" line="587" lineend="609" name="_exclusive_or" signature="_exclusive_or($object, $argument, $flag)">
+          <variable ilk="argument" name="$object" />
+          <variable ilk="argument" name="$argument" />
+          <variable ilk="argument" name="$flag" />
+        </scope>
+        <scope ilk="function" line="611" lineend="640" name="_add" signature="_add($object, $argument, $flag)">
+          <variable ilk="argument" name="$object" />
+          <variable ilk="argument" name="$argument" />
+          <variable ilk="argument" name="$flag" />
+        </scope>
+        <scope ilk="function" line="642" lineend="681" name="_sub" signature="_sub($object, $argument, $flag)">
+          <variable ilk="argument" name="$object" />
+          <variable ilk="argument" name="$argument" />
+          <variable ilk="argument" name="$flag" />
+        </scope>
+        <scope ilk="function" line="683" lineend="712" name="_mul" signature="_mul($object, $argument, $flag)">
+          <variable ilk="argument" name="$object" />
+          <variable ilk="argument" name="$argument" />
+          <variable ilk="argument" name="$flag" />
+        </scope>
+        <scope ilk="function" line="714" lineend="739" name="_div" signature="_div($object, $argument, $flag)">
+          <variable ilk="argument" name="$object" />
+          <variable ilk="argument" name="$argument" />
+          <variable ilk="argument" name="$flag" />
+        </scope>
+        <scope ilk="function" line="741" lineend="766" name="_mod" signature="_mod($object, $argument, $flag)">
+          <variable ilk="argument" name="$object" />
+          <variable ilk="argument" name="$argument" />
+          <variable ilk="argument" name="$flag" />
+        </scope>
+        <scope ilk="function" line="768" lineend="792" name="_pow" signature="_pow($object, $argument, $flag)">
+          <variable ilk="argument" name="$object" />
+          <variable ilk="argument" name="$argument" />
+          <variable ilk="argument" name="$flag" />
+        </scope>
+        <scope ilk="function" line="794" lineend="799" name="_assign_concat" signature="_assign_concat($object, $argument)">
+          <variable ilk="argument" name="$object" />
+          <variable ilk="argument" name="$argument" />
+        </scope>
+        <scope ilk="function" line="801" lineend="806" name="_assign_xerox" signature="_assign_xerox($object, $argument)">
+          <variable ilk="argument" name="$object" />
+          <variable ilk="argument" name="$argument" />
+        </scope>
+        <scope ilk="function" line="808" lineend="813" name="_assign_shift_left" signature="_assign_shift_left($object, $argument)">
+          <variable ilk="argument" name="$object" />
+          <variable ilk="argument" name="$argument" />
+        </scope>
+        <scope ilk="function" line="815" lineend="820" name="_assign_shift_right" signature="_assign_shift_right($object, $argument)">
+          <variable ilk="argument" name="$object" />
+          <variable ilk="argument" name="$argument" />
+        </scope>
+        <scope ilk="function" line="822" lineend="827" name="_assign_union" signature="_assign_union($object, $argument)">
+          <variable ilk="argument" name="$object" />
+          <variable ilk="argument" name="$argument" />
+        </scope>
+        <scope ilk="function" line="829" lineend="834" name="_assign_intersection" signature="_assign_intersection($object, $argument)">
+          <variable ilk="argument" name="$object" />
+          <variable ilk="argument" name="$argument" />
+        </scope>
+        <scope ilk="function" line="836" lineend="841" name="_assign_exclusive_or" signature="_assign_exclusive_or($object, $argument)">
+          <variable ilk="argument" name="$object" />
+          <variable ilk="argument" name="$argument" />
+        </scope>
+        <scope ilk="function" line="843" lineend="848" name="_assign_add" signature="_assign_add($object, $argument)">
+          <variable ilk="argument" name="$object" />
+          <variable ilk="argument" name="$argument" />
+        </scope>
+        <scope ilk="function" line="850" lineend="855" name="_assign_sub" signature="_assign_sub($object, $argument)">
+          <variable ilk="argument" name="$object" />
+          <variable ilk="argument" name="$argument" />
+        </scope>
+        <scope ilk="function" line="857" lineend="862" name="_assign_mul" signature="_assign_mul($object, $argument)">
+          <variable ilk="argument" name="$object" />
+          <variable ilk="argument" name="$argument" />
+        </scope>
+        <scope ilk="function" line="864" lineend="869" name="_assign_div" signature="_assign_div($object, $argument)">
+          <variable ilk="argument" name="$object" />
+          <variable ilk="argument" name="$argument" />
+        </scope>
+        <scope ilk="function" line="871" lineend="876" name="_assign_mod" signature="_assign_mod($object, $argument)">
+          <variable ilk="argument" name="$object" />
+          <variable ilk="argument" name="$argument" />
+        </scope>
+        <scope ilk="function" line="878" lineend="883" name="_assign_pow" signature="_assign_pow($object, $argument)">
+          <variable ilk="argument" name="$object" />
+          <variable ilk="argument" name="$argument" />
+        </scope>
+        <scope ilk="function" line="885" lineend="897" name="_increment" signature="_increment($object)">
+          <variable ilk="argument" name="$object" />
+        </scope>
+        <scope ilk="function" line="899" lineend="911" name="_decrement" signature="_decrement($object)">
+          <variable ilk="argument" name="$object" />
+        </scope>
+        <scope ilk="function" line="913" lineend="934" name="_lexicompare" signature="_lexicompare($object, $argument, $flag)">
+          <variable ilk="argument" name="$object" />
+          <variable ilk="argument" name="$argument" />
+          <variable ilk="argument" name="$flag" />
+        </scope>
+        <scope ilk="function" line="936" lineend="957" name="_compare" signature="_compare($object, $argument, $flag)">
+          <variable ilk="argument" name="$object" />
+          <variable ilk="argument" name="$argument" />
+          <variable ilk="argument" name="$flag" />
+        </scope>
+        <scope ilk="function" line="959" lineend="973" name="_equal" signature="_equal($object, $argument, $flag)">
+          <variable ilk="argument" name="$object" />
+          <variable ilk="argument" name="$argument" />
+          <variable ilk="argument" name="$flag" />
+        </scope>
+        <scope ilk="function" line="975" lineend="989" name="_not_equal" signature="_not_equal($object, $argument, $flag)">
+          <variable ilk="argument" name="$object" />
+          <variable ilk="argument" name="$argument" />
+          <variable ilk="argument" name="$flag" />
+        </scope>
+        <scope ilk="function" line="991" lineend="1028" name="_less_than" signature="_less_than($object, $argument, $flag)">
+          <variable ilk="argument" name="$object" />
+          <variable ilk="argument" name="$argument" />
+          <variable ilk="argument" name="$flag" />
+        </scope>
+        <scope ilk="function" line="1030" lineend="1065" name="_less_equal" signature="_less_equal($object, $argument, $flag)">
+          <variable ilk="argument" name="$object" />
+          <variable ilk="argument" name="$argument" />
+          <variable ilk="argument" name="$flag" />
+        </scope>
+        <scope ilk="function" line="1067" lineend="1104" name="_greater_than" signature="_greater_than($object, $argument, $flag)">
+          <variable ilk="argument" name="$object" />
+          <variable ilk="argument" name="$argument" />
+          <variable ilk="argument" name="$flag" />
+        </scope>
+        <scope ilk="function" line="1106" lineend="1141" name="_greater_equal" signature="_greater_equal($object, $argument, $flag)">
+          <variable ilk="argument" name="$object" />
+          <variable ilk="argument" name="$argument" />
+          <variable ilk="argument" name="$flag" />
+        </scope>
+        <scope ilk="function" line="1143" lineend="1155" name="_clone" signature="_clone($object)">
+          <variable ilk="argument" name="$object" />
+        </scope>
+      </scope>
+    </scope>
+    

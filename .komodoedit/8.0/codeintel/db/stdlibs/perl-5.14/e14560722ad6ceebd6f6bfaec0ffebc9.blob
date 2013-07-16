@@ -1,0 +1,46 @@
+<scope ilk="blob" lang="Perl" name="URI::WithBase">
+      <scope ilk="class" line="1" lineend="110" name="URI::WithBase">
+        <import line="5" module="URI" symbol="*" />
+        <variable line="4" name="$AUTOLOAD" />
+        <variable line="4" name="$VERSION" />
+        <scope attributes="__ctor__" ilk="function" line="13" lineend="22" name="new" signature="new($class, $uri, $base)">
+          <variable ilk="argument" name="$class" />
+          <variable ilk="argument" name="$uri" />
+          <variable ilk="argument" name="$base" />
+        </scope>
+        <scope ilk="function" line="24" lineend="29" name="new_abs" signature="new_abs($class)">
+          <variable ilk="argument" name="$class" />
+        </scope>
+        <scope attributes="__ctor__" ilk="function" line="31" lineend="36" name="_init" signature="_init($class, $str, $scheme)">
+          <variable ilk="argument" name="$class" />
+          <variable ilk="argument" name="$str" />
+          <variable ilk="argument" name="$scheme" />
+        </scope>
+        <scope ilk="function" line="38" lineend="43" name="eq" signature="eq($self, $other)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$other" />
+        </scope>
+        <scope ilk="function" line="45" lineend="51" name="AUTOLOAD" signature="AUTOLOAD($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="53" lineend="60" name="can" signature="can($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="62" lineend="84" name="base" signature="base($self, $new_base)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$new_base" />
+        </scope>
+        <scope attributes="__ctor__" ilk="function" line="86" lineend="92" name="clone" signature="clone($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope attributes="__ctor__" ilk="function" line="94" lineend="100" name="abs" signature="abs($self, $base)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$base" />
+        </scope>
+        <scope attributes="__ctor__" ilk="function" line="102" lineend="108" name="rel" signature="rel($self, $base)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$base" />
+        </scope>
+      </scope>
+    </scope>
+    

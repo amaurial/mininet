@@ -1,0 +1,47 @@
+<scope ilk="blob" lang="Perl" name="Exporter::Heavy">
+      <scope ilk="class" line="1" lineend="248" name="Exporter::Heavy">
+        <import line="7" module="Exporter" />
+        <variable line="7" name="$VERSION" />
+        <scope ilk="function" line="28" lineend="37" name="_rebuild_cache" signature="_rebuild_cache($pkg, $exports, $cache)">
+          <variable ilk="argument" name="$pkg" />
+          <variable ilk="argument" name="$exports" />
+          <variable ilk="argument" name="$cache" />
+        </scope>
+        <scope ilk="function" line="39" lineend="206" name="heavy_export" signature="heavy_export($text, $pkg, $callpkg, @imports)">
+          <import line="45" module="Carp" />
+          <import line="54" module="Carp" />
+          <import line="153" module="Carp" />
+          <import line="178" module="Carp" />
+          <import line="183" module="Carp" />
+          <import line="204" module="Carp" />
+          <variable ilk="argument" name="$text" />
+          <variable ilk="argument" name="$pkg" />
+          <variable ilk="argument" name="$callpkg" />
+          <variable ilk="argument" name="@imports" />
+          <import line="45" module="Carp" />
+          <import line="54" module="Carp" />
+          <import line="153" module="Carp" />
+          <import line="178" module="Carp" />
+          <import line="183" module="Carp" />
+          <import line="204" module="Carp" />
+        </scope>
+        <scope ilk="function" line="208" lineend="215" name="heavy_export_to_level" signature="heavy_export_to_level($pkg, $level)">
+          <variable ilk="argument" name="$pkg" />
+          <variable ilk="argument" name="$level" />
+        </scope>
+        <scope ilk="function" line="219" lineend="232" name="_push_tags" signature="_push_tags($pkg, $var, $syms)">
+          <import line="229" module="Carp" />
+          <variable ilk="argument" name="$pkg" />
+          <variable ilk="argument" name="$var" />
+          <variable ilk="argument" name="$syms" />
+          <import line="229" module="Carp" />
+        </scope>
+        <scope ilk="function" line="234" lineend="238" name="heavy_require_version" signature="heavy_require_version($self, $wanted)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$wanted" />
+        </scope>
+        <scope ilk="function" line="240" lineend="242" name="heavy_export_tags" signature="heavy_export_tags()" />
+        <scope ilk="function" line="244" lineend="246" name="heavy_export_ok_tags" signature="heavy_export_ok_tags()" />
+      </scope>
+    </scope>
+    

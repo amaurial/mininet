@@ -1,0 +1,94 @@
+<scope doc="Classes to generate plain text from a message object tree.&#xA;" ilk="blob" lang="Python" name="email.generator">
+      <scope classrefs="Generator" doc="Generates a bytes version of a Message object tree.&#xA;Functionally identical to the base Generator except that the output is bytes and not string.  When surrogates were used in the input to encode bytes, these are decoded back to bytes for output.  The outfp object must accept bytes in its write method." ilk="class" name="BytesGenerator">
+        <scope ilk="function" name="_handle_text" signature="_handle_text(self, msg)" />
+        <scope ilk="function" name="_write_headers" signature="_write_headers(self, msg)" />
+        <scope ilk="function" name="write" signature="write(self, s)" />
+        <scope ilk="function" name="_encode" signature="_encode(self, s)" />
+        <scope ilk="function" name="_compile_re" />
+        <scope ilk="function" name="_new_buffer" signature="_new_buffer(self)" />
+      </scope>
+      <scope classrefs="_BufferedIOBase" doc="BytesIO([buffer]) -&gt; object&#xA;Create a buffered I/O implementation using an in-memory bytes buffer, ready for reading and writing." ilk="class" name="BytesIO">
+        <scope doc="Call readline() repeatedly and return a list of the lines so&#xA;read." ilk="function" name="readlines" returns="list" signature="readlines([size]) -&gt; list of strings, each a line from the file." />
+        <scope doc="Retrieve the entire contents of the BytesIO object." ilk="function" name="getvalue" signature="getvalue() -&gt; bytes." />
+        <scope ilk="function" name="writable" />
+        <scope doc="flush() -&gt; None.  Does nothing." ilk="function" name="flush" signature="flush() -&gt; None.  Does nothing." />
+        <scope doc="close() -&gt; None.  Disable all I/O operations." ilk="function" name="close" signature="close() -&gt; None.  Disable all I/O operations." />
+        <scope doc="Seek to byte offset pos relative to position indicated by&#xA;whence: 0  Start of stream (the default)." ilk="function" name="seek" signature="seek(pos, whence=0) -&gt; int.  Change stream position." />
+        <scope ilk="function" name="__init__" />
+        <scope doc="Returns number of bytes read (0 for EOF), or None if the&#xA;object is set not to block as has no data to read." ilk="function" name="readinto" signature="readinto(bytearray) -&gt; int.  Read up to len(b) bytes into b." />
+        <scope ilk="function" name="readable" />
+        <scope doc="Return the number of bytes written." ilk="function" name="write" signature="write(bytes) -&gt; int.  Write bytes to file." />
+        <scope ilk="function" name="__getstate__" />
+        <scope doc="tell() -&gt; current file position, an integer" ilk="function" name="tell" signature="tell() -&gt; current file position, an integer" />
+        <scope doc="Always returns False since BytesIO objects are not connected&#xA;to a tty-like device." ilk="function" name="isatty" signature="isatty() -&gt; False." />
+        <scope doc="Size defaults to the current file position, as returned by&#xA;tell()." ilk="function" name="truncate" signature="truncate([size]) -&gt; int.  Truncate the file to at most size bytes." />
+        <scope ilk="function" name="__setstate__" />
+        <scope doc="If the size argument is negative, read until EOF is reached." ilk="function" name="read" signature="read([size]) -&gt; read at most size bytes, returned as a string." />
+        <scope doc="x.__next__() &lt;==&gt; next(x)" ilk="function" name="__next__" signature="x.__next__() &lt;==&gt; next(x)" />
+        <scope doc="If the size argument is negative or omitted, read until EOF&#xA;is reached." ilk="function" name="read1" signature="read1(size) -&gt; read at most size bytes, returned as a string." />
+        <scope doc="x.__iter__() &lt;==&gt; iter(x)" ilk="function" name="__iter__" signature="x.__iter__() &lt;==&gt; iter(x)" />
+        <scope ilk="function" name="seekable" />
+        <scope doc="Retain newline." ilk="function" name="readline" signature="readline([size]) -&gt; next line from the file, as a string." />
+        <scope doc="Note that newlines are not added." ilk="function" name="writelines" signature="writelines(sequence_of_strings) -&gt; None.  Write strings to the file." />
+        <scope doc="Get a read-write view over the contents of the BytesIO&#xA;object." ilk="function" name="getbuffer" signature="getbuffer() -&gt; bytes." />
+      </scope>
+      <scope classrefs="Generator" doc="Generates a text representation of a message.&#xA;Like the Generator base class, except that non-text parts are substituted with a format string representing the part." ilk="class" name="DecodedGenerator">
+        <scope ilk="function" name="_dispatch" signature="_dispatch(self, msg)" />
+        <scope doc="Like Generator.__init__() except that an additional optional&#xA;argument is allowed." ilk="function" name="__init__" signature="__init__(self, outfp, mangle_from_=True, maxheaderlen=78, fmt=None)" />
+      </scope>
+      <scope classrefs="object" doc="Generates output from a Message object tree.&#xA;This basic generator writes the message to the given file object as plain text." ilk="class" name="Generator">
+        <scope doc="Clone this generator with the exact same options." ilk="function" name="clone" signature="clone(self, fp)" />
+        <scope ilk="function" name="_encode" signature="_encode(self, s)" />
+        <scope doc="# This used to be a module level function; we use a&#xA;classmethod for this # and _compile_re so we can continue to&#xA;provide the module level function # for backward&#xA;compatibility by doing #   _make_boudary =&#xA;Generator._make_boundary" ilk="function" name="_make_boundary" />
+        <scope ilk="function" name="_compile_re" />
+        <scope ilk="function" name="_handle_message" signature="_handle_message(self, msg)" />
+        <scope ilk="function" name="_writeBody" signature="_writeBody(self, msg)" />
+        <scope ilk="function" name="_write" signature="_write(self, msg)" />
+        <scope doc="Create the generator for message flattening." ilk="function" name="__init__" signature="__init__(self, outfp, mangle_from_=True, maxheaderlen=78)" />
+        <scope ilk="function" name="_new_buffer" signature="_new_buffer(self)" />
+        <scope ilk="function" name="_handle_text" signature="_handle_text(self, msg)" />
+        <scope ilk="function" name="_handle_message_delivery_status" signature="_handle_message_delivery_status(self, msg)" />
+        <scope ilk="function" name="_handle_multipart_signed" signature="_handle_multipart_signed(self, msg)" />
+        <scope ilk="function" name="_write_headers" signature="_write_headers(self, msg)" />
+        <scope ilk="function" name="write" signature="write(self, s)" />
+        <scope ilk="function" name="_handle_multipart" signature="_handle_multipart(self, msg)" />
+        <scope ilk="function" name="_dispatch" signature="_dispatch(self, msg)" />
+        <scope doc="Print the message object tree rooted at msg to the output&#xA;file specified when the Generator instance was created." ilk="function" name="flatten" signature="flatten(self, msg, unixfrom=False, linesep=&apos;\n&apos;)" />
+      </scope>
+      <scope classrefs="object" doc="&#xA;" ilk="class" name="Header">
+        <scope ilk="function" name="__ne__" signature="__ne__(self, other)" />
+        <scope doc="Return the string value of the header." ilk="function" name="__str__" signature="__str__(self)" />
+        <scope doc="Append a string to the MIME header." ilk="function" name="append" signature="append(self, s, charset=None, errors=&apos;strict&apos;)" />
+        <scope ilk="function" name="_normalize" signature="_normalize(self)" />
+        <scope doc="Encode a message header into an RFC-compliant format." ilk="function" name="encode" signature="encode(self, splitchars=&apos;;, \t&apos;, maxlinelen=None, linesep=&apos;\n&apos;)" />
+        <scope doc="# Rich comparison operators for equality only." ilk="function" name="__eq__" signature="__eq__(self, other)" />
+        <scope doc="Create a MIME-compliant header that can contain many&#xA;character sets." ilk="function" name="__init__" signature="__init__(self, s=None, charset=None, maxlinelen=None, header_name=None, continuation_ws=&apos; &apos;, errors=&apos;strict&apos;)" />
+      </scope>
+      <variable citdl="str" name="NL" />
+      <scope classrefs="_TextIOBase" doc="Text I/O implementation using an in-memory buffer.&#xA;The initial_value argument sets the value of object.  The newline argument is like the one of TextIOWrapper&apos;s constructor." ilk="class" name="StringIO">
+        <scope ilk="function" name="writable" />
+        <scope doc="Truncate size to pos." ilk="function" name="truncate" />
+        <scope ilk="function" name="__setstate__" />
+        <scope doc="Read at most n characters, returned as a string." ilk="function" name="read" />
+        <scope doc="x.__next__() &lt;==&gt; next(x)" ilk="function" name="__next__" signature="x.__next__() &lt;==&gt; next(x)" />
+        <scope ilk="function" name="readable" />
+        <scope doc="Retrieve the entire contents of the object." ilk="function" name="getvalue" />
+        <scope doc="Write string to file." ilk="function" name="write" />
+        <scope ilk="function" name="seekable" />
+        <scope doc="Close the IO object." ilk="function" name="close" />
+        <scope doc="Read until newline or EOF." ilk="function" name="readline" />
+        <scope ilk="function" name="__getstate__" />
+        <scope doc="Change stream position." ilk="function" name="seek" />
+        <scope doc="Tell the current file position." ilk="function" name="tell" />
+        <scope ilk="function" name="__init__" />
+      </scope>
+      <variable citdl="str" name="UNDERSCORE" />
+      <variable citdl="list" name="__all__" />
+      <variable citdl="SRE_Pattern" name="fcre" />
+      <import module="random" />
+      <import module="re" />
+      <import module="sys" />
+      <import module="time" />
+      <import module="warnings" />
+    </scope>
+    

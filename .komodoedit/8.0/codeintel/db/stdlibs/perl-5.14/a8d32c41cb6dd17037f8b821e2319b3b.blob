@@ -1,0 +1,26 @@
+<scope ilk="blob" lang="Perl" name="Moose::Meta::Method::Delegation">
+      <scope ilk="class" line="2" lineend="214" name="Moose::Meta::Method::Delegation">
+        <import line="13" module="Carp" symbol="confess" />
+        <import line="14" module="Scalar::Util" symbol="blessed" />
+        <variable line="4" name="$Moose::Meta::Method::Delegation::AUTHORITY" />
+        <variable line="7" name="$Moose::Meta::Method::Delegation::VERSION" />
+        <scope ilk="function" line="20" lineend="55" name="new" signature="new($class, %options)">
+          <variable ilk="argument" name="$class" />
+          <variable ilk="argument" name="%options" />
+        </scope>
+        <scope attributes="__ctor__" ilk="function" line="57" lineend="62" name="_new" signature="_new($class)">
+          <variable ilk="argument" name="$class" />
+        </scope>
+        <scope ilk="function" line="64" lineend="64" name="curried_arguments" signature="curried_arguments()" />
+        <scope ilk="function" line="66" lineend="66" name="associated_attribute" signature="associated_attribute()" />
+        <scope ilk="function" line="68" lineend="68" name="delegate_to_method" signature="delegate_to_method()" />
+        <scope ilk="function" line="70" lineend="112" name="_initialize_body" signature="_initialize_body($self, $instance)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$instance" />
+        </scope>
+        <scope ilk="function" line="114" lineend="134" name="_get_delegate_accessor" signature="_get_delegate_accessor($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+      </scope>
+    </scope>
+    

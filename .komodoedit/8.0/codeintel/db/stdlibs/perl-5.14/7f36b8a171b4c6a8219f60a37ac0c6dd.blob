@@ -1,0 +1,47 @@
+<scope ilk="blob" lang="Perl" name="CPANPLUS::Dist::Build">
+      <scope classrefs="CPANPLUS::Dist" ilk="class" line="1" lineend="838" name="CPANPLUS::Dist::Build">
+        <import line="8" module="CPANPLUS::Internals::Constants" symbol="*" />
+        <import line="14" module="CPANPLUS::Dist::Build::Constants" />
+        <import line="19" module="CPANPLUS::Error" symbol="*" />
+        <import line="21" module="Config" symbol="*" />
+        <import line="22" module="FileHandle" symbol="*" />
+        <import line="23" module="Cwd" symbol="*" />
+        <import line="24" module="version" symbol="*" />
+        <import line="26" module="IPC::Cmd" symbol="run" />
+        <import line="27" module="Params::Check" symbol="check" />
+        <import line="28" module="Module::Load::Conditional" symbol="can_load" />
+        <import line="28" module="Module::Load::Conditional" symbol="check_install" />
+        <import line="29" module="Locale::Maketext::Simple" symbol="Class" />
+        <variable line="5" name="$STATUS" />
+        <variable line="5" name="$VERSION" />
+        <variable line="5" name="@ISA" />
+        <scope ilk="function" line="147" lineend="156" name="format_available" signature="format_available()">
+          </scope>
+        <scope ilk="function" line="168" lineend="181" name="init" signature="init($dist)">
+          <import line="178" module="Module::Build" />
+          <variable ilk="argument" name="$dist" />
+          <import line="178" module="Module::Build" />
+        </scope>
+        <scope ilk="function" line="202" lineend="356" name="prepare" signature="prepare($dist, %hash)">
+          <variable ilk="argument" name="$dist" />
+          <variable ilk="argument" name="%hash" />
+        </scope>
+        <scope ilk="function" line="358" lineend="451" name="_find_prereqs" signature="_find_prereqs($dist, %hash)">
+          <variable ilk="argument" name="$dist" />
+          <variable ilk="argument" name="%hash" />
+        </scope>
+        <scope ilk="function" line="474" lineend="680" name="create" signature="create($dist, %hash)">
+          <variable ilk="argument" name="$dist" />
+          <variable ilk="argument" name="%hash" />
+        </scope>
+        <scope ilk="function" line="690" lineend="800" name="install" signature="install($dist, %hash)">
+          <variable ilk="argument" name="$dist" />
+          <variable ilk="argument" name="%hash" />
+        </scope>
+        <scope ilk="function" line="804" lineend="809" name="_buildflags_as_list" signature="_buildflags_as_list($self, $flags)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$flags" />
+        </scope>
+      </scope>
+    </scope>
+    

@@ -1,0 +1,106 @@
+<scope ilk="blob" lang="Perl" name="IO::Socket">
+      <scope classrefs="IO::Handle" ilk="class" line="7" lineend="355" name="IO::Socket">
+        <import line="11" module="IO::Handle" symbol="*" />
+        <import line="12" module="Socket" symbol="*" />
+        <import line="13" module="Carp" symbol="*" />
+        <import line="16" module="Exporter" symbol="*" />
+        <import line="17" module="Errno" symbol="*" />
+        <import line="21" module="IO::Socket::INET" />
+        <import line="22" module="IO::Socket::UNIX" />
+        <variable line="15" name="$VERSION" />
+        <variable line="15" name="@EXPORT_OK" />
+        <variable line="15" name="@ISA" />
+        <scope ilk="function" line="30" lineend="38" name="import" signature="import($pkg)">
+          <variable ilk="argument" name="$pkg" />
+        </scope>
+        <scope ilk="function" line="40" lineend="50" name="new" signature="new($class, %arg)">
+          <variable ilk="argument" name="$class" />
+          <variable ilk="argument" name="%arg" />
+        </scope>
+        <scope ilk="function" line="54" lineend="57" name="register_domain" signature="register_domain($p, $d)">
+          <variable ilk="argument" name="$p" />
+          <variable ilk="argument" name="$d" />
+        </scope>
+        <scope attributes="__ctor__" ilk="function" line="59" lineend="74" name="configure" signature="configure($sock, $arg)">
+          <variable ilk="argument" name="$sock" />
+          <variable ilk="argument" name="$arg" />
+        </scope>
+        <scope ilk="function" line="76" lineend="88" name="socket" signature="socket($sock, $domain, $type, $protocol)">
+          <variable ilk="argument" name="$sock" />
+          <variable ilk="argument" name="$domain" />
+          <variable ilk="argument" name="$type" />
+          <variable ilk="argument" name="$protocol" />
+        </scope>
+        <scope ilk="function" line="90" lineend="103" name="socketpair" signature="socketpair($class, $domain, $type, $protocol)">
+          <variable ilk="argument" name="$class" />
+          <variable ilk="argument" name="$domain" />
+          <variable ilk="argument" name="$type" />
+          <variable ilk="argument" name="$protocol" />
+        </scope>
+        <scope ilk="function" line="105" lineend="146" name="connect" signature="connect($sock, $addr)">
+          <import line="116" module="IO::Select" />
+          <variable ilk="argument" name="$sock" />
+          <variable ilk="argument" name="$addr" />
+          <import line="116" module="IO::Select" />
+        </scope>
+        <scope ilk="function" line="154" lineend="188" name="blocking" signature="blocking($sock, $block)">
+          <variable ilk="argument" name="$sock" />
+          <variable ilk="argument" name="$block" />
+        </scope>
+        <scope ilk="function" line="191" lineend="196" name="close" signature="close($sock)">
+          <variable ilk="argument" name="$sock" />
+        </scope>
+        <scope ilk="function" line="198" lineend="205" name="bind" signature="bind($sock, $addr)">
+          <variable ilk="argument" name="$sock" />
+          <variable ilk="argument" name="$addr" />
+        </scope>
+        <scope ilk="function" line="207" lineend="215" name="listen" signature="listen($sock, $queue)">
+          <variable ilk="argument" name="$sock" />
+          <variable ilk="argument" name="$queue" />
+        </scope>
+        <scope ilk="function" line="217" lineend="242" name="accept" signature="accept($sock, $pkg)">
+          <import line="226" module="IO::Select" />
+          <variable ilk="argument" name="$sock" />
+          <variable ilk="argument" name="$pkg" />
+          <import line="226" module="IO::Select" />
+        </scope>
+        <scope ilk="function" line="244" lineend="247" name="sockname" signature="sockname()" />
+        <scope ilk="function" line="249" lineend="253" name="peername" signature="peername($sock)">
+          <variable ilk="argument" name="$sock" />
+        </scope>
+        <scope ilk="function" line="255" lineend="259" name="connected" signature="connected($sock)">
+          <variable ilk="argument" name="$sock" />
+        </scope>
+        <scope ilk="function" line="261" lineend="279" name="send" signature="send()">
+          </scope>
+        <scope ilk="function" line="281" lineend="289" name="recv" signature="recv()">
+          </scope>
+        <scope ilk="function" line="291" lineend="296" name="shutdown" signature="shutdown($sock, $how)">
+          <variable ilk="argument" name="$sock" />
+          <variable ilk="argument" name="$how" />
+        </scope>
+        <scope ilk="function" line="298" lineend="301" name="setsockopt" signature="setsockopt()" />
+        <scope ilk="function" line="305" lineend="312" name="getsockopt" signature="getsockopt()">
+          </scope>
+        <scope ilk="function" line="314" lineend="318" name="sockopt" signature="sockopt($sock)">
+          <variable ilk="argument" name="$sock" />
+        </scope>
+        <scope ilk="function" line="320" lineend="324" name="atmark" signature="atmark($sock)">
+          <variable ilk="argument" name="$sock" />
+        </scope>
+        <scope ilk="function" line="326" lineend="335" name="timeout" signature="timeout($sock, $val)">
+          <variable ilk="argument" name="$sock" />
+          <variable ilk="argument" name="$val" />
+        </scope>
+        <scope ilk="function" line="337" lineend="341" name="sockdomain" signature="sockdomain($sock)">
+          <variable ilk="argument" name="$sock" />
+        </scope>
+        <scope ilk="function" line="343" lineend="347" name="socktype" signature="socktype($sock)">
+          <variable ilk="argument" name="$sock" />
+        </scope>
+        <scope ilk="function" line="349" lineend="353" name="protocol" signature="protocol($sock)">
+          <variable ilk="argument" name="$sock" />
+        </scope>
+      </scope>
+    </scope>
+    

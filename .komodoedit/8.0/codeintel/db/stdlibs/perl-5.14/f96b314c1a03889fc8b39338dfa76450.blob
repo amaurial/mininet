@@ -1,0 +1,29 @@
+<scope ilk="blob" lang="Perl" name="Moose::Meta::TypeCoercion">
+      <scope ilk="class" line="2" lineend="198" name="Moose::Meta::TypeCoercion">
+        <import line="12" module="metaclass" symbol="*" />
+        <import line="14" module="Moose::Meta::Attribute" symbol="*" />
+        <import line="15" module="Moose::Util::TypeConstraints" />
+        <variable line="4" name="$Moose::Meta::TypeCoercion::AUTHORITY" />
+        <variable line="7" name="$Moose::Meta::TypeCoercion::VERSION" />
+        <scope ilk="function" line="34" lineend="39" name="new" signature="new($class)">
+          <variable ilk="argument" name="$class" />
+        </scope>
+        <scope ilk="function" line="41" lineend="70" name="compile_type_coercion" signature="compile_type_coercion($self)">
+          <import line="50" module="Moose" />
+          <variable ilk="argument" name="$self" />
+          <import line="50" module="Moose" />
+        </scope>
+        <scope ilk="function" line="72" lineend="76" name="has_coercion_for_type" signature="has_coercion_for_type($self, $type_name)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$type_name" />
+        </scope>
+        <scope ilk="function" line="78" lineend="97" name="add_type_coercions" signature="add_type_coercions($self, @new_coercion_map)">
+          <import line="88" module="Moose" />
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="@new_coercion_map" />
+          <import line="88" module="Moose" />
+        </scope>
+        <scope ilk="function" line="99" lineend="99" name="coerce" signature="coerce()" />
+      </scope>
+    </scope>
+    

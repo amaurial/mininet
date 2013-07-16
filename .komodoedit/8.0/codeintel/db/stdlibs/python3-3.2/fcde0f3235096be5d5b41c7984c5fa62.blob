@@ -1,0 +1,173 @@
+<scope doc="distutils.unixccompiler&#xA;Contains the UnixCCompiler class, a subclass of CCompiler that handles the &quot;typical&quot; Unix-style command-line C compiler: * macros defined with -Dname[=value] * macros undefined with -Uname * include search directories specified with -Idir * libraries specified with -lllib * library search directories specified with -Ldir * compile handled by &apos;cc&apos; (or similar) executable with -c option: compiles .c to .o * link static library handled by &apos;ar&apos; command (possibly with &apos;ranlib&apos;)" ilk="blob" lang="Python" name="distutils.unixccompiler">
+      <scope classrefs="object" doc="Abstract base class to define the interface that must be implemented&#xA;by real compiler classes.  Also has some utility methods used by several compiler classes.  The basic idea behind a compiler abstraction class is that each instance can be used for all the compile/link steps in building a single project.  Thus, attributes common to all of those compile and link steps -- include directories, macros to define, libraries to link against, etc. -- are attributes of the compiler instance.  To allow for variability in how individual files are treated, most of those attributes may be varied on a per-compilation or per-link basis." ilk="class" name="CCompiler">
+        <scope doc="Set the list of directories to search for shared libraries&#xA;at runtime to &apos;dirs&apos; (a list of strings)." ilk="function" name="set_runtime_library_dirs" signature="set_runtime_library_dirs(self, dirs)" />
+        <scope ilk="function" name="_get_cc_args" signature="_get_cc_args(self, pp_opts, debug, before)" />
+        <scope doc="Add &apos;object&apos; to the list of object files (or analogues, such&#xA;as explicitly named library files or the output of &quot;resource&#xA;compilers&quot;) to be included in every link driven by this&#xA;compiler object." ilk="function" name="add_link_object" signature="add_link_object(self, object)" />
+        <scope doc="Return the compiler option to add &apos;dir&apos; to the list of&#xA;directories searched for runtime libraries." ilk="function" name="runtime_library_dir_option" signature="runtime_library_dir_option(self, dir)" />
+        <scope doc="Link a bunch of stuff together to create a static library&#xA;file." ilk="function" name="create_static_lib" signature="create_static_lib(self, objects, output_libname, output_dir=None, debug=0, target_lang=None)" />
+        <scope doc="Process arguments and decide which source files to compile." ilk="function" name="_setup_compile" signature="_setup_compile(self, outdir, macros, incdirs, sources, depends, extra)" />
+        <scope doc="Add &apos;dir&apos; to the list of directories that will be searched&#xA;for libraries specified to &apos;add_library()&apos; and&#xA;&apos;set_libraries()&apos;." ilk="function" name="add_library_dir" signature="add_library_dir(self, dir)" />
+        <scope doc="Define a preprocessor macro for all compilations driven by&#xA;this compiler object." ilk="function" name="define_macro" signature="define_macro(self, name, value=None)" />
+        <scope doc="Return true if we need to relink the files listed in&#xA;&apos;objects&apos; to recreate &apos;output_file&apos;." ilk="function" name="_need_link" signature="_need_link(self, objects, output_file)" />
+        <scope doc="Preprocess a single C/C++ source file, named in &apos;source&apos;." ilk="function" name="preprocess" signature="preprocess(self, source, output_file=None, macros=None, include_dirs=None, extra_preargs=None, extra_postargs=None)" />
+        <scope doc="Search the specified list of directories for a static or&#xA;shared library file &apos;lib&apos; and return the full path to that&#xA;file." ilk="function" name="find_library_file" signature="find_library_file(self, dirs, lib, debug=0)" />
+        <scope ilk="function" name="object_filenames" signature="object_filenames(self, source_filenames, strip_dir=0, output_dir=&apos;&apos;)" />
+        <scope ilk="function" name="shared_object_filename" signature="shared_object_filename(self, basename, strip_dir=0, output_dir=&apos;&apos;)" />
+        <scope doc="Typecheck and fix-up some of the arguments to the&#xA;&apos;compile()&apos; method, and return fixed-up values." ilk="function" name="_fix_compile_args" signature="_fix_compile_args(self, output_dir, macros, include_dirs)" />
+        <scope ilk="function" name="warn" signature="warn(self, msg)" />
+        <scope doc="Add &apos;dir&apos; to the list of directories that will be searched&#xA;for header files." ilk="function" name="add_include_dir" signature="add_include_dir(self, dir)" />
+        <scope doc="Link a bunch of stuff together to create an executable or&#xA;shared library file." ilk="function" name="link" signature="link(self, target_desc, objects, output_filename, output_dir=None, libraries=None, library_dirs=None, runtime_library_dirs=None, export_symbols=None, debug=0, extra_preargs=None, extra_postargs=None, build_temp=None, target_lang=None)" />
+        <scope ilk="function" name="announce" signature="announce(self, msg, level=1)" />
+        <scope ilk="function" name="execute" signature="execute(self, func, args, msg=None, level=1)" />
+        <scope ilk="function" name="executable_filename" signature="executable_filename(self, basename, strip_dir=0, output_dir=&apos;&apos;)" />
+        <scope ilk="function" name="_find_macro" signature="_find_macro(self, name)" />
+        <scope doc="Typecheck and fix up some of the arguments supplied to the&#xA;&apos;link_*&apos; methods." ilk="function" name="_fix_lib_args" signature="_fix_lib_args(self, libraries, library_dirs, runtime_library_dirs)" />
+        <scope doc="Add &apos;libname&apos; to the list of libraries that will be included&#xA;in all links driven by this compiler object." ilk="function" name="add_library" signature="add_library(self, libname)" />
+        <scope doc="Compile one or more source files." ilk="function" name="compile" signature="compile(self, sources, output_dir=None, macros=None, include_dirs=None, debug=0, extra_preargs=None, extra_postargs=None, depends=None)" />
+        <scope doc="Detect the language of a given file, or list of files." ilk="function" name="detect_language" signature="detect_language(self, sources)" />
+        <scope ilk="function" name="spawn" signature="spawn(self, cmd)" />
+        <scope doc="Add &apos;dir&apos; to the list of directories that will be searched&#xA;for shared libraries at runtime." ilk="function" name="add_runtime_library_dir" signature="add_runtime_library_dir(self, dir)" />
+        <scope doc="Typecheck and fix up some arguments supplied to various&#xA;methods." ilk="function" name="_fix_object_args" signature="_fix_object_args(self, objects, output_dir)" />
+        <scope doc="Set the list of library search directories to &apos;dirs&apos; (a list&#xA;of strings)." ilk="function" name="set_library_dirs" signature="set_library_dirs(self, dirs)" />
+        <scope doc="Define the executables (and options for them) that will be&#xA;run to perform the various stages of compilation." ilk="function" name="set_executables" signature="set_executables(self, **kwargs)" />
+        <scope doc="Return the compiler option to add &apos;dir&apos; to the list of&#xA;directories searched for libraries." ilk="function" name="library_dir_option" signature="library_dir_option(self, dir)" />
+        <scope ilk="function" name="__init__" signature="__init__(self, verbose=0, dry_run=0, force=0)" />
+        <scope doc="Return the compiler option to add &apos;dir&apos; to the list of&#xA;libraries linked into the shared library or executable." ilk="function" name="library_option" signature="library_option(self, lib)" />
+        <scope ilk="function" name="link_shared_object" signature="link_shared_object(self, objects, output_filename, output_dir=None, libraries=None, library_dirs=None, runtime_library_dirs=None, export_symbols=None, debug=0, extra_preargs=None, extra_postargs=None, build_temp=None, target_lang=None)" />
+        <scope doc="Decide which souce files must be recompiled." ilk="function" name="_prep_compile" signature="_prep_compile(self, sources, output_dir, depends=None)" />
+        <scope ilk="function" name="set_executable" signature="set_executable(self, key, value)" />
+        <scope doc="Compile &apos;src&apos; to product &apos;obj&apos;." ilk="function" name="_compile" signature="_compile(self, obj, src, ext, cc_args, extra_postargs, pp_opts)" />
+        <scope ilk="function" name="library_filename" signature="library_filename(self, libname, lib_type=&apos;static&apos;, strip_dir=0, output_dir=&apos;&apos;)" />
+        <scope doc="Undefine a preprocessor macro for all compilations driven by&#xA;this compiler object." ilk="function" name="undefine_macro" signature="undefine_macro(self, name)" />
+        <scope doc="Set the list of directories that will be searched to &apos;dirs&apos;&#xA;(a list of strings)." ilk="function" name="set_include_dirs" signature="set_include_dirs(self, dirs)" />
+        <scope doc="Set the list of object files (or analogues) to be included&#xA;in every link to &apos;objects&apos;." ilk="function" name="set_link_objects" signature="set_link_objects(self, objects)" />
+        <scope ilk="function" name="link_shared_lib" signature="link_shared_lib(self, objects, output_libname, output_dir=None, libraries=None, library_dirs=None, runtime_library_dirs=None, export_symbols=None, debug=0, extra_preargs=None, extra_postargs=None, build_temp=None, target_lang=None)" />
+        <scope doc="Set the list of libraries to be included in all links driven&#xA;by this compiler object to &apos;libnames&apos; (a list of strings)." ilk="function" name="set_libraries" signature="set_libraries(self, libnames)" />
+        <scope doc="Ensures that every element of &apos;definitions&apos; is a valid macro&#xA;definition, ie." ilk="function" name="_check_macro_definitions" signature="_check_macro_definitions(self, definitions)" />
+        <scope doc="Return a boolean indicating whether funcname is supported on&#xA;the current platform." ilk="function" name="has_function" signature="has_function(self, funcname, includes=None, include_dirs=None, libraries=None, library_dirs=None)" />
+        <scope ilk="function" name="mkpath" signature="mkpath(self, name, mode=511)" />
+        <scope ilk="function" name="link_executable" signature="link_executable(self, objects, output_progname, output_dir=None, libraries=None, library_dirs=None, runtime_library_dirs=None, debug=0, extra_preargs=None, extra_postargs=None, target_lang=None)" />
+        <scope ilk="function" name="move_file" signature="move_file(self, src, dst)" />
+        <scope ilk="function" name="debug_print" signature="debug_print(self, msg)" />
+      </scope>
+      <scope classrefs="CCompilerError" doc="Failure to compile one or more C/C++ source files.&#xA;" ilk="class" name="CompileError" />
+      <scope classrefs="DistutilsError" doc="Any problems executing an external program (such as the C&#xA;compiler, when compiling C files)." ilk="class" name="DistutilsExecError" />
+      <scope classrefs="CCompilerError" doc="Failure to create a static library from one or more C/C++ object&#xA;files." ilk="class" name="LibError" />
+      <scope classrefs="CCompilerError" doc="Failure to link one or more C/C++ object files into an executable&#xA;or shared library file." ilk="class" name="LinkError" />
+      <scope classrefs="CCompiler" doc="&#xA;" ilk="class" line="104" lineend="356" name="UnixCCompiler">
+        <scope ilk="function" line="204" lineend="256" name="link" signature="link(self, target_desc, objects, output_filename, output_dir=None, libraries=None, library_dirs=None, runtime_library_dirs=None, export_symbols=None, debug=0, extra_preargs=None, extra_postargs=None, build_temp=None, target_lang=None)">
+          <variable ilk="argument" name="target_lang" />
+          <variable citdl="gen_lib_options()" line="214" name="lib_opts" />
+          <variable citdl="gen_lib_options()" line="222" name="ld_args" />
+          <variable citdl="list" line="233" name="linker" />
+          <variable citdl="os.path.join()" ilk="argument" name="output_filename" />
+          <variable ilk="argument" name="build_temp" />
+          <variable ilk="argument" name="extra_postargs" />
+          <variable ilk="argument" name="objects" />
+          <variable ilk="argument" name="export_symbols" />
+          <variable citdl="int" line="242" name="i" />
+          <variable citdl="UnixCCompiler" ilk="argument" name="self" />
+          <variable ilk="argument" name="extra_preargs" />
+          <variable ilk="argument" name="runtime_library_dirs" />
+          <variable ilk="argument" name="libraries" />
+          <variable citdl="self._fix_lib_args()" line="210" name="fixed_args" />
+          <variable ilk="argument" name="output_dir" />
+          <variable citdl="int" ilk="argument" name="debug" />
+          <variable ilk="argument" name="library_dirs" />
+          <variable ilk="argument" name="target_desc" />
+        </scope>
+        <scope ilk="function" line="268" lineend="308" name="runtime_library_dir_option" returns="str" signature="runtime_library_dir_option(self, dir)">
+          <variable citdl="UnixCCompiler" ilk="argument" name="self" />
+          <variable ilk="argument" name="dir" />
+          <variable citdl="os.path.basename()" line="282" name="compiler" />
+        </scope>
+        <scope ilk="function" line="310" lineend="311" name="library_option" returns="str" signature="library_option(self, lib)">
+          <variable citdl="UnixCCompiler" ilk="argument" name="self" />
+          <variable ilk="argument" name="lib" />
+        </scope>
+        <scope ilk="function" line="178" lineend="202" name="create_static_lib" signature="create_static_lib(self, objects, output_libname, output_dir=None, debug=0, target_lang=None)">
+          <variable ilk="argument" name="target_lang" />
+          <variable ilk="argument" name="objects" />
+          <variable ilk="argument" name="output_dir" />
+          <variable citdl="int" ilk="argument" name="debug" />
+          <variable citdl="UnixCCompiler" ilk="argument" name="self" />
+          <variable ilk="argument" name="output_libname" />
+          <variable citdl="self.library_filename()" line="182" name="output_filename" />
+        </scope>
+        <scope ilk="function" line="262" lineend="263" name="library_dir_option" returns="str" signature="library_dir_option(self, dir)">
+          <variable citdl="UnixCCompiler" ilk="argument" name="self" />
+          <variable ilk="argument" name="dir" />
+        </scope>
+        <scope ilk="function" line="142" lineend="166" name="preprocess" signature="preprocess(self, source, output_file=None, macros=None, include_dirs=None, extra_preargs=None, extra_postargs=None)">
+          <variable citdl="gen_preprocess_options()" line="147" name="pp_args" />
+          <variable citdl="gen_preprocess_options()" line="146" name="pp_opts" />
+          <variable ilk="argument" name="macros" />
+          <variable citdl="UnixCCompiler" ilk="argument" name="self" />
+          <variable ilk="argument" name="output_file" />
+          <variable ilk="argument" name="extra_preargs" />
+          <variable ilk="argument" name="source" />
+          <variable ilk="argument" name="extra_postargs" />
+          <variable citdl="self._fix_compile_args()" line="144" name="fixed_args" />
+          <variable ilk="argument" name="include_dirs" />
+        </scope>
+        <scope ilk="function" line="265" lineend="266" name="_is_gcc" returns="bool" signature="_is_gcc(self, compiler_name)">
+          <variable citdl="UnixCCompiler" ilk="argument" name="self" />
+          <variable ilk="argument" name="compiler_name" />
+        </scope>
+        <scope ilk="function" line="168" lineend="176" name="_compile" signature="_compile(self, obj, src, ext, cc_args, extra_postargs, pp_opts)">
+          <variable ilk="argument" name="src" />
+          <variable ilk="argument" name="obj" />
+          <variable ilk="argument" name="cc_args" />
+          <variable ilk="argument" name="pp_opts" />
+          <variable citdl="UnixCCompiler" ilk="argument" name="self" />
+          <variable ilk="argument" name="ext" />
+          <variable ilk="argument" name="extra_postargs" />
+          <variable citdl="self.compiler_so" line="169" name="compiler_so" />
+        </scope>
+        <scope ilk="function" line="313" lineend="356" name="find_library_file" returns="os.path.join()" signature="find_library_file(self, dirs, lib, debug=0)">
+          <variable ilk="argument" name="dirs" />
+          <variable ilk="argument" name="lib" />
+          <variable citdl="self.library_filename()" line="314" name="shared_f" />
+          <variable citdl="UnixCCompiler" ilk="argument" name="self" />
+          <variable citdl="re.search()" line="323" name="m" />
+          <variable citdl="os.path.join()" line="334" name="static" />
+          <variable citdl="self.library_filename()" line="316" name="static_f" />
+          <variable citdl="sysconfig.get_config_var()" line="322" name="cflags" />
+          <variable citdl="os.path.join()" line="333" name="dylib" />
+          <variable citdl="int" ilk="argument" name="debug" />
+          <variable citdl="os.path.join()" line="332" name="shared" />
+          <variable citdl="self.library_filename()" line="315" name="dylib_f" />
+          <variable citdl="m.group()" line="325" name="sysroot" />
+        </scope>
+        <variable citdl="dict" line="114" name="executables" />
+        <variable citdl="list" line="133" name="src_extensions" />
+        <variable citdl="str" line="138" name="static_lib_format" />
+        <variable citdl="str" line="134" name="obj_extension" />
+        <variable citdl="str" line="137" name="dylib_lib_extension" />
+        <variable citdl="str" line="135" name="static_lib_extension" />
+        <variable citdl="str" line="106" name="compiler_type" />
+        <variable citdl="str" line="136" name="shared_lib_extension" />
+        <variable citdl="str" line="140" name="exe_extension" />
+      </scope>
+      <scope doc="Generate linker options for searching library directories&#xA;and linking with specific libraries." ilk="function" name="gen_lib_options" signature="gen_lib_options(compiler, library_dirs, runtime_library_dirs, libraries)" />
+      <scope doc="Generate C pre-processor options (-D, -U, -I) as used by at&#xA;least two types of compilers: the typical Unix compiler and&#xA;Visual C++." ilk="function" name="gen_preprocess_options" signature="gen_preprocess_options(macros, include_dirs)" />
+      <import module="log" />
+      <scope doc="Return true if &apos;source&apos; exists and is more recently modified&#xA;than &apos;target&apos;, or if &apos;source&apos; exists and &apos;target&apos; doesn&apos;t." ilk="function" name="newer" signature="newer(source, target)" />
+      <import module="os" />
+      <import module="re" />
+      <import module="sys" />
+      <import module="sysconfig" />
+      <scope attributes="protected __hidden__" doc="This function will strip &apos;-isysroot PATH&apos; and &apos;-arch ARCH&apos; from the&#xA;compile flags if the user has specified one them in extra_compile_flags.&#xA;&#xA;This is needed because &apos;-arch ARCH&apos; adds another architecture to the&#xA;build, without a way to remove an architecture. Furthermore GCC will&#xA;barf if multiple &apos;-isysroot&apos; arguments are present." ilk="function" line="41" lineend="102" name="_darwin_compiler_fixup" returns="list()" signature="_darwin_compiler_fixup(compiler_so, cc_args)">
+        <variable citdl="list()" ilk="argument" name="compiler_so" />
+        <variable ilk="argument" name="cc_args" />
+        <variable citdl="bool" line="50" name="stripArch" />
+        <variable line="53" name="kernel_version" />
+        <variable citdl="int()" line="54" name="major_version" />
+        <variable citdl="bool" line="62" name="stripSysroot" />
+        <variable citdl="compiler_so.index()" line="67" name="index" />
+        <variable line="89" name="sysroot" />
+        <variable citdl="cc_args.index()" line="91" name="idx" />
+      </scope>
+      <variable citdl="str" line="16" name="__revision__" />
+    </scope>
+    

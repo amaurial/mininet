@@ -1,0 +1,46 @@
+<scope ilk="blob" lang="Perl" name="IPC::Open3">
+      <scope classrefs="Exporter" ilk="class" line="1" lineend="421" name="IPC::Open3">
+        <import line="7" module="Exporter" />
+        <import line="9" module="Carp" symbol="*" />
+        <import line="10" module="Symbol" symbol="gensym" />
+        <import line="10" module="Symbol" symbol="qualify" />
+        <variable line="5" name="$VERSION" />
+        <variable line="5" name="@EXPORT" />
+        <variable line="5" name="@ISA" />
+        <variable line="148" name="$Me" />
+        <scope ilk="function" line="152" lineend="156" name="xfork" signature="xfork()">
+          </scope>
+        <scope ilk="function" line="158" lineend="160" name="xpipe" signature="xpipe()" />
+        <scope ilk="function" line="162" lineend="164" name="xpipe_anon" signature="xpipe_anon()" />
+        <scope ilk="function" line="166" lineend="172" name="xclose_on_exec" signature="xclose_on_exec()">
+          <import line="167" module="Fcntl" />
+          <import line="167" module="Fcntl" />
+        </scope>
+        <scope ilk="function" line="177" lineend="179" name="xopen" signature="xopen()" />
+        <scope ilk="function" line="181" lineend="183" name="xclose" signature="xclose()">
+          <import line="182" module="POSIX" />
+          <import line="182" module="POSIX" />
+        </scope>
+        <scope ilk="function" line="185" lineend="187" name="fh_is_fd" signature="fh_is_fd()" />
+        <scope ilk="function" line="189" lineend="192" name="xfileno" signature="xfileno()" />
+        <scope ilk="function" line="196" lineend="372" name="_open3" signature="_open3($package, $dad_wtr, $dad_rdr, $dad_err, @cmd)">
+          <import line="300" module="POSIX" />
+          <import line="347" module="IO::Pipe" />
+          <variable ilk="argument" name="$package" />
+          <variable ilk="argument" name="$dad_wtr" />
+          <variable ilk="argument" name="$dad_rdr" />
+          <variable ilk="argument" name="$dad_err" />
+          <variable ilk="argument" name="@cmd" />
+          <import line="300" module="POSIX" />
+          <import line="347" module="IO::Pipe" />
+        </scope>
+        <scope attributes="__exported__" ilk="function" line="374" lineend="380" name="open3" signature="open3()" />
+        <scope attributes="__ctor__" ilk="function" line="382" lineend="419" name="spawn_with_handles" signature="spawn_with_handles($fds, $close_in_child)">
+          <import line="386" module="Fcntl" />
+          <variable ilk="argument" name="$fds" />
+          <variable ilk="argument" name="$close_in_child" />
+          <import line="386" module="Fcntl" />
+        </scope>
+      </scope>
+    </scope>
+    

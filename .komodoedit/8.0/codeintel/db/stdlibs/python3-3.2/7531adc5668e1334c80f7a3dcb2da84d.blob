@@ -1,0 +1,19 @@
+<scope doc="Generic framework path manipulation&#xA;" ilk="blob" lang="Python" name="ctypes.macholib.framework">
+      <variable citdl="SRE_Pattern" line="9" name="STRICT_FRAMEWORK_RE" />
+      <variable citdl="list" line="7" name="__all__" />
+      <scope doc="A framework name can take one of the following four forms:&#xA;Location/Name.framework/Versions/SomeVersion/Name_Suffix&#xA;Location/Name.framework/Versions/SomeVersion/Name&#xA;Location/Name.framework/Name_Suffix" ilk="function" line="19" lineend="42" name="framework_info" returns="is_framework.groupdict()" signature="framework_info(filename)">
+        <variable citdl="STRICT_FRAMEWORK_RE.match()" line="39" name="is_framework" />
+        <variable ilk="argument" name="filename" />
+      </scope>
+      <import module="re" />
+      <scope ilk="function" line="44" lineend="62" name="test_framework_info" signature="test_framework_info()">
+        <scope ilk="function" line="45" lineend="51" name="d" returns="dict()" signature="d(location=None, name=None, shortname=None, version=None, suffix=None)">
+          <variable ilk="argument" name="location" />
+          <variable ilk="argument" name="name" />
+          <variable ilk="argument" name="shortname" />
+          <variable ilk="argument" name="version" />
+          <variable ilk="argument" name="suffix" />
+        </scope>
+      </scope>
+    </scope>
+    

@@ -1,0 +1,46 @@
+<scope ilk="blob" lang="Perl" name="Pod::Find">
+      <scope classrefs="Exporter" ilk="class" line="13" lineend="535" name="Pod::Find">
+        <import line="19" module="Carp" symbol="*" />
+        <import line="23" module="Symbol" />
+        <import line="60" module="Exporter" symbol="*" />
+        <import line="61" module="File::Spec" symbol="*" />
+        <import line="62" module="File::Find" symbol="*" />
+        <import line="63" module="Cwd" symbol="*" />
+        <variable line="16" name="$VERSION" />
+        <variable line="65" name="@EXPORT_OK" />
+        <variable line="65" name="@ISA" />
+        <scope attributes="__exportable__" ilk="function" line="127" lineend="241" name="pod_find" signature="pod_find(@search)">
+          <import line="140" module="Config" />
+          <import line="168" module="Config" />
+          <variable ilk="argument" name="@search" />
+          <import line="140" module="Config" />
+          <import line="168" module="Config" />
+        </scope>
+        <scope ilk="function" line="243" lineend="255" name="_check_for_duplicates" signature="_check_for_duplicates($file, $name, $names_ref, $pods_ref, $verbose)">
+          <variable ilk="argument" name="$file" />
+          <variable ilk="argument" name="$name" />
+          <variable ilk="argument" name="$names_ref" />
+          <variable ilk="argument" name="$pods_ref" />
+          <variable ilk="argument" name="$verbose" />
+        </scope>
+        <scope ilk="function" line="257" lineend="290" name="_check_and_extract_name" signature="_check_and_extract_name($file, $verbose, $root_rx)">
+          <variable ilk="argument" name="$file" />
+          <variable ilk="argument" name="$verbose" />
+          <variable ilk="argument" name="$root_rx" />
+        </scope>
+        <scope attributes="__exportable__" ilk="function" line="302" lineend="312" name="simplify_name" signature="simplify_name($str)">
+          <variable ilk="argument" name="$str" />
+        </scope>
+        <scope ilk="function" line="315" lineend="322" name="_simplify" signature="_simplify()" />
+        <scope attributes="__exportable__" ilk="function" line="371" lineend="482" name="pod_where" signature="pod_where($opt, $pod)">
+          <import line="402" module="Config" />
+          <variable ilk="argument" name="$opt" />
+          <variable ilk="argument" name="$pod" />
+          <import line="402" module="Config" />
+        </scope>
+        <scope attributes="__exportable__" ilk="function" line="491" lineend="517" name="contains_pod" signature="contains_pod($file)">
+          <variable ilk="argument" name="$file" />
+        </scope>
+      </scope>
+    </scope>
+    

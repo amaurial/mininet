@@ -1,0 +1,129 @@
+<scope ilk="blob" lang="Perl" name="Perl::Critic::Document">
+      <scope ilk="class" line="8" lineend="562" name="Perl::Critic::Document">
+        <import line="14" module="Carp" symbol="confess" />
+        <import line="16" module="List::Util" symbol="reduce" />
+        <import line="17" module="Scalar::Util" symbol="blessed" />
+        <import line="17" module="Scalar::Util" symbol="refaddr" />
+        <import line="17" module="Scalar::Util" symbol="weaken" />
+        <import line="18" module="version" symbol="*" />
+        <import line="20" module="PPI::Document" symbol="*" />
+        <import line="21" module="PPI::Document::File" symbol="*" />
+        <import line="22" module="PPIx::Utilities::Node" symbol="split_ppi_node_by_namespace" />
+        <import line="24" module="Perl::Critic::Annotation" symbol="*" />
+        <import line="25" module="Perl::Critic::Exception::Parse" symbol="throw_parse" />
+        <import line="26" module="Perl::Critic::Utils" symbol="**" />
+        <import line="28" module="PPIx::Regexp" symbol="*" />
+        <variable line="32" name="$VERSION" />
+        <variable line="36" name="$AUTOLOAD" />
+        <scope ilk="function" line="37" lineend="42" name="AUTOLOAD" signature="AUTOLOAD($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope attributes="__ctor__" ilk="function" line="46" lineend="55" name="new" signature="new($class, @args)">
+          <variable ilk="argument" name="$class" />
+          <variable ilk="argument" name="@args" />
+        </scope>
+        <scope attributes="__ctor__" ilk="function" line="59" lineend="70" name="_new_for_parent_document" signature="_new_for_parent_document($class, $ppi_document, $parent_document)">
+          <variable ilk="argument" name="$class" />
+          <variable ilk="argument" name="$ppi_document" />
+          <variable ilk="argument" name="$parent_document" />
+        </scope>
+        <scope ilk="function" line="74" lineend="82" name="_init_common" signature="_init_common($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="86" lineend="129" name="_init_from_external_source" signature="_init_from_external_source($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="133" lineend="136" name="_is_ppi_doc" signature="_is_ppi_doc($ref)">
+          <variable ilk="argument" name="$ref" />
+        </scope>
+        <scope ilk="function" line="140" lineend="143" name="ppi_document" signature="ppi_document($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="147" lineend="151" name="isa" signature="isa($self, @args)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="@args" />
+        </scope>
+        <scope ilk="function" line="155" lineend="185" name="find" signature="find($self, $wanted, @more_args)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$wanted" />
+          <variable ilk="argument" name="@more_args" />
+        </scope>
+        <scope ilk="function" line="189" lineend="200" name="find_first" signature="find_first($self, $wanted, @more_args)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$wanted" />
+          <variable ilk="argument" name="@more_args" />
+        </scope>
+        <scope ilk="function" line="204" lineend="215" name="find_any" signature="find_any($self, $wanted, @more_args)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$wanted" />
+          <variable ilk="argument" name="@more_args" />
+        </scope>
+        <scope ilk="function" line="219" lineend="223" name="namespaces" signature="namespaces($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="227" lineend="233" name="subdocuments_for_namespace" signature="subdocuments_for_namespace($self, $namespace)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$namespace" />
+        </scope>
+        <scope ilk="function" line="237" lineend="249" name="ppix_regexp_from_element" signature="ppix_regexp_from_element($self, $element)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$element" />
+        </scope>
+        <scope ilk="function" line="253" lineend="263" name="filename" signature="filename($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="267" lineend="303" name="highest_explicit_perl_version" signature="highest_explicit_perl_version($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="311" lineend="315" name="uses_module" signature="uses_module($self, $module_name)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$module_name" />
+        </scope>
+        <scope ilk="function" line="319" lineend="325" name="process_annotations" signature="process_annotations($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="329" lineend="344" name="line_is_disabled_for_policy" signature="line_is_disabled_for_policy($self, $line, $policy)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$line" />
+          <variable ilk="argument" name="$policy" />
+        </scope>
+        <scope ilk="function" line="348" lineend="368" name="add_annotation" signature="add_annotation($self, @annotations)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="@annotations" />
+        </scope>
+        <scope ilk="function" line="372" lineend="375" name="annotations" signature="annotations($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="379" lineend="383" name="add_suppressed_violation" signature="add_suppressed_violation($self, $violation)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$violation" />
+        </scope>
+        <scope ilk="function" line="387" lineend="390" name="suppressed_violations" signature="suppressed_violations($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="394" lineend="398" name="is_program" signature="is_program($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="402" lineend="406" name="is_module" signature="is_module($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="411" lineend="417" name="_is_a_version_statement" signature="_is_a_version_statement()" />
+        <scope ilk="function" line="421" lineend="451" name="_caching_finder" signature="_caching_finder($cache_ref)">
+          <variable ilk="argument" name="$cache_ref" />
+        </scope>
+        <scope ilk="function" line="455" lineend="478" name="_disable_shebang_fix" signature="_disable_shebang_fix($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="482" lineend="504" name="_determine_is_module" signature="_determine_is_module($self, $args)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$args" />
+        </scope>
+        <scope ilk="function" line="508" lineend="531" name="_nodes_by_namespace" signature="_nodes_by_namespace($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="537" lineend="558" name="_modules_used" signature="_modules_used($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+      </scope>
+    </scope>
+    

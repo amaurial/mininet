@@ -1,0 +1,89 @@
+<scope doc="robotparser.py&#xA;Copyright (C) 2000  Bastian Kleineidam  You can choose between two licenses when using this package: 1) GNU GPLv2 2) PSF license for Python 2.2  The robots.txt Exclusion Protocol is implemented as specified in http://info.webcrawler.com/mak/projects/robots/norobots-rfc.html" ilk="blob" lang="Python" name="urllib.robotparser">
+      <scope classrefs="object" doc="An entry has one or more user-agents and zero or more rulelines&#xA;" ilk="class" line="170" lineend="204" name="Entry">
+        <scope ilk="function" line="172" lineend="174" name="__init__" signature="__init__(self)">
+          <variable citdl="Entry" ilk="argument" name="self" />
+        </scope>
+        <scope ilk="function" line="176" lineend="182" name="__str__" returns="str.join()" signature="__str__(self)">
+          <variable citdl="Entry" ilk="argument" name="self" />
+          <variable citdl="list" line="177" name="ret" />
+        </scope>
+        <scope doc="check if this entry applies to the specified agent" ilk="function" line="184" lineend="195" name="applies_to" returns="bool" signature="applies_to(self, useragent)">
+          <variable ilk="argument" name="useragent" />
+          <variable citdl="Entry" ilk="argument" name="self" />
+          <variable citdl="agent.lower()" line="192" name="agent" />
+        </scope>
+        <scope doc="Preconditions: - our agent applies to this entry - filename&#xA;is URL decoded" ilk="function" line="197" lineend="204" name="allowance" returns="line.allowance" signature="allowance(self, filename)">
+          <variable citdl="Entry" ilk="argument" name="self" />
+          <variable ilk="argument" name="filename" />
+        </scope>
+        <variable attributes="__instancevar__" citdl="list" line="173" name="useragents" />
+        <variable attributes="__instancevar__" citdl="list" line="174" name="rulelines" />
+      </scope>
+      <scope classrefs="object" doc="This class provides a set of methods to read, parse and answer&#xA;questions about a single robots.txt file." ilk="class" line="17" lineend="150" name="RobotFileParser">
+        <scope doc="Reads the robots.txt URL and feeds it to the parser." ilk="function" line="53" lineend="64" name="read" signature="read(self)">
+          <variable citdl="f.read()" line="63" name="raw" />
+          <variable citdl="RobotFileParser" ilk="argument" name="self" />
+          <variable citdl="urllib.request.urlopen()" line="56" name="f" />
+        </scope>
+        <scope ilk="function" line="149" lineend="150" name="__str__" returns="str.join()" signature="__str__(self)">
+          <variable citdl="RobotFileParser" ilk="argument" name="self" />
+        </scope>
+        <scope doc="Returns the time the robots.txt file was last fetched." ilk="function" line="31" lineend="38" name="mtime" returns="int" signature="mtime(self)">
+          <variable citdl="RobotFileParser" ilk="argument" name="self" />
+        </scope>
+        <scope doc="Sets the time the robots.txt file was last fetched to the&#xA;current time." ilk="function" line="40" lineend="46" name="modified" signature="modified(self)">
+          <variable citdl="RobotFileParser" ilk="argument" name="self" />
+        </scope>
+        <scope doc="Parse the input lines from a robots.txt file." ilk="function" line="75" lineend="123" name="parse" signature="parse(self, lines)">
+          <variable citdl="int" line="85" name="state" />
+          <variable citdl="line.find()" line="98" name="i" />
+          <variable citdl="Entry()" line="86" name="entry" />
+          <variable citdl="RobotFileParser" ilk="argument" name="self" />
+          <variable ilk="argument" name="lines" />
+          <variable citdl="line.strip()" line="100" name="line" />
+        </scope>
+        <scope doc="Sets the URL referring to a robots.txt file." ilk="function" line="48" lineend="51" name="set_url" signature="set_url(self, url)">
+          <variable ilk="argument" name="url" />
+          <variable citdl="RobotFileParser" ilk="argument" name="self" />
+        </scope>
+        <scope ilk="function" line="66" lineend="73" name="_add_entry" signature="_add_entry(self, entry)">
+          <variable ilk="argument" name="entry" />
+          <variable citdl="RobotFileParser" ilk="argument" name="self" />
+        </scope>
+        <scope doc="using the parsed robots.txt decide if useragent can fetch&#xA;url" ilk="function" line="126" lineend="147" name="can_fetch" returns="self.default_entry.allowance()" signature="can_fetch(self, useragent, url)">
+          <variable citdl="urllib.parse.quote()" ilk="argument" name="url" />
+          <variable ilk="argument" name="useragent" />
+          <variable citdl="RobotFileParser" ilk="argument" name="self" />
+          <variable citdl="urllib.parse.urlparse()" line="134" name="parsed_url" />
+        </scope>
+        <scope ilk="function" line="23" lineend="29" name="__init__" signature="__init__(self, url=&apos;&apos;)">
+          <variable citdl="str" ilk="argument" name="url" />
+          <variable citdl="RobotFileParser" ilk="argument" name="self" />
+        </scope>
+        <variable attributes="__instancevar__" line="50" name="url" />
+        <variable attributes="__instancevar__" citdl="list" line="24" name="entries" />
+        <variable attributes="__instancevar__" citdl="False" line="26" name="disallow_all" />
+        <variable attributes="__instancevar__" citdl="int" line="29" name="last_checked" />
+        <variable attributes="__instancevar__" line="25" name="default_entry" />
+        <variable attributes="__instancevar__" citdl="False" line="27" name="allow_all" />
+      </scope>
+      <scope classrefs="object" doc="A rule line is a single &quot;Allow:&quot; (allowance==True) or &quot;Disallow:&quot;&#xA;(allowance==False) followed by a path." ilk="class" line="153" lineend="167" name="RuleLine">
+        <scope ilk="function" line="166" lineend="167" name="__str__" returns="str" signature="__str__(self)">
+          <variable citdl="RuleLine" ilk="argument" name="self" />
+        </scope>
+        <scope ilk="function" line="163" lineend="164" name="applies_to" returns="bool" signature="applies_to(self, filename)">
+          <variable citdl="RuleLine" ilk="argument" name="self" />
+          <variable ilk="argument" name="filename" />
+        </scope>
+        <scope ilk="function" line="156" lineend="161" name="__init__" signature="__init__(self, path, allowance)">
+          <variable ilk="argument" name="path" />
+          <variable citdl="RuleLine" ilk="argument" name="self" />
+          <variable citdl="True" ilk="argument" name="allowance" />
+        </scope>
+        <variable attributes="__instancevar__" citdl="urllib.parse.quote()" line="160" name="path" />
+        <variable attributes="__instancevar__" citdl="True" line="161" name="allowance" />
+      </scope>
+      <variable citdl="list" line="15" name="__all__" />
+      <import module="urllib" />
+    </scope>
+    

@@ -1,0 +1,131 @@
+<scope ilk="blob" lang="Perl" name="DB">
+      <scope ilk="class" line="5" lineend="544" name="DB">
+        <variable line="26" name="$DB::sub" />
+        <variable line="27" name="%DB::sub" />
+        <variable line="28" name="$DB::single" />
+        <variable line="29" name="$DB::signal" />
+        <variable line="30" name="$DB::trace" />
+        <variable line="31" name="@DB::args" />
+        <variable line="32" name="@DB::dbline" />
+        <variable line="33" name="%DB::dbline" />
+        <variable line="34" name="@DB::ret" />
+        <variable line="35" name="$DB::ret" />
+        <variable line="39" name="$DB::package" />
+        <variable line="40" name="$DB::filename" />
+        <variable line="41" name="$DB::subname" />
+        <variable line="42" name="$DB::lineno" />
+        <variable line="44" name="$DB::VERSION" />
+        <scope ilk="function" line="62" lineend="81" name="sub" signature="sub()" />
+        <scope ilk="function" line="86" lineend="140" name="DB" signature="DB()">
+          </scope>
+        <scope ilk="function" line="145" lineend="149" name="eval" signature="eval()" />
+        <scope ilk="function" line="157" lineend="160" name="save" signature="save()" />
+        <scope ilk="function" line="162" lineend="166" name="catch" signature="catch()" />
+        <scope ilk="function" line="174" lineend="178" name="register" signature="register($s)">
+          <variable ilk="argument" name="$s" />
+        </scope>
+        <scope ilk="function" line="180" lineend="187" name="done" signature="done($s)">
+          <variable ilk="argument" name="$s" />
+        </scope>
+        <scope ilk="function" line="189" lineend="193" name="_clientname" signature="_clientname($name)">
+          <variable ilk="argument" name="$name" />
+        </scope>
+        <scope ilk="function" line="195" lineend="199" name="next" signature="next($s)">
+          <variable ilk="argument" name="$s" />
+        </scope>
+        <scope ilk="function" line="201" lineend="205" name="step" signature="step($s)">
+          <variable ilk="argument" name="$s" />
+        </scope>
+        <scope ilk="function" line="207" lineend="216" name="cont" signature="cont($s, $i)">
+          <variable ilk="argument" name="$s" />
+          <variable ilk="argument" name="$i" />
+        </scope>
+        <scope ilk="function" line="223" lineend="230" name="ret" signature="ret($s, $i)">
+          <variable ilk="argument" name="$s" />
+          <variable ilk="argument" name="$i" />
+        </scope>
+        <scope ilk="function" line="237" lineend="266" name="backtrace" signature="backtrace($self, $start)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$start" />
+        </scope>
+        <scope ilk="function" line="268" lineend="273" name="_outputall" signature="_outputall()">
+          </scope>
+        <scope ilk="function" line="275" lineend="278" name="trace_toggle" signature="trace_toggle($s)">
+          <variable ilk="argument" name="$s" />
+        </scope>
+        <scope ilk="function" line="285" lineend="297" name="subs" signature="subs($s, $name)">
+          <variable ilk="argument" name="$s" />
+          <variable ilk="argument" name="$name" />
+        </scope>
+        <scope ilk="function" line="304" lineend="309" name="filesubs" signature="filesubs($s, $fname)">
+          <variable ilk="argument" name="$s" />
+          <variable ilk="argument" name="$fname" />
+        </scope>
+        <scope ilk="function" line="314" lineend="318" name="files" signature="files($s)">
+          <variable ilk="argument" name="$s" />
+        </scope>
+        <scope ilk="function" line="324" lineend="327" name="lines" signature="lines($s)">
+          <variable ilk="argument" name="$s" />
+        </scope>
+        <scope ilk="function" line="332" lineend="353" name="loadfile" signature="loadfile($s, $file, $line)">
+          <variable ilk="argument" name="$s" />
+          <variable ilk="argument" name="$file" />
+          <variable ilk="argument" name="$line" />
+        </scope>
+        <scope ilk="function" line="355" lineend="367" name="lineevents" signature="lineevents($s, $fname)">
+          <variable ilk="argument" name="$s" />
+          <variable ilk="argument" name="$fname" />
+        </scope>
+        <scope ilk="function" line="369" lineend="385" name="set_break" signature="set_break($s, $i, $cond)">
+          <variable ilk="argument" name="$s" />
+          <variable ilk="argument" name="$i" />
+          <variable ilk="argument" name="$cond" />
+        </scope>
+        <scope ilk="function" line="387" lineend="400" name="set_tbreak" signature="set_tbreak($s, $i)">
+          <variable ilk="argument" name="$s" />
+          <variable ilk="argument" name="$i" />
+        </scope>
+        <scope ilk="function" line="402" lineend="414" name="_find_subline" signature="_find_subline($name)">
+          <variable ilk="argument" name="$name" />
+        </scope>
+        <scope ilk="function" line="416" lineend="442" name="clr_breaks" signature="clr_breaks($s)">
+          <variable ilk="argument" name="$s" />
+        </scope>
+        <scope ilk="function" line="444" lineend="459" name="set_action" signature="set_action($s, $i, $act)">
+          <variable ilk="argument" name="$s" />
+          <variable ilk="argument" name="$i" />
+          <variable ilk="argument" name="$act" />
+        </scope>
+        <scope ilk="function" line="461" lineend="483" name="clr_actions" signature="clr_actions($s, $i)">
+          <variable ilk="argument" name="$s" />
+          <variable ilk="argument" name="$i" />
+        </scope>
+        <scope ilk="function" line="485" lineend="488" name="prestop" signature="prestop($client, $val)">
+          <variable ilk="argument" name="$client" />
+          <variable ilk="argument" name="$val" />
+        </scope>
+        <scope ilk="function" line="490" lineend="493" name="poststop" signature="poststop($client, $val)">
+          <variable ilk="argument" name="$client" />
+          <variable ilk="argument" name="$val" />
+        </scope>
+        <scope ilk="function" line="500" lineend="500" name="cprestop" signature="cprestop()" />
+        <scope ilk="function" line="501" lineend="501" name="cpoststop" signature="cpoststop()" />
+        <scope ilk="function" line="504" lineend="504" name="awaken" signature="awaken()" />
+        <scope ilk="function" line="506" lineend="509" name="skippkg" signature="skippkg($s)">
+          <variable ilk="argument" name="$s" />
+        </scope>
+        <scope ilk="function" line="511" lineend="518" name="evalcode" signature="evalcode($client, $val)">
+          <variable ilk="argument" name="$client" />
+          <variable ilk="argument" name="$val" />
+        </scope>
+        <scope ilk="function" line="520" lineend="523" name="ready" signature="ready($s)">
+          <variable ilk="argument" name="$s" />
+        </scope>
+        <scope ilk="function" line="527" lineend="527" name="init" signature="init()" />
+        <scope ilk="function" line="528" lineend="528" name="stop" signature="stop()" />
+        <scope ilk="function" line="529" lineend="529" name="idle" signature="idle()" />
+        <scope ilk="function" line="530" lineend="530" name="cleanup" signature="cleanup()" />
+        <scope ilk="function" line="531" lineend="531" name="output" signature="output()" />
+      </scope>
+    </scope>
+    

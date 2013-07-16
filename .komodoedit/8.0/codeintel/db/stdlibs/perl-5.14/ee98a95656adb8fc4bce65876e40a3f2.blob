@@ -1,0 +1,33 @@
+<scope ilk="blob" lang="Perl" name="Perl::Critic::Policy::Modules::ProhibitConditionalUseStatements">
+      <scope ilk="class" line="8" lineend="105" name="Perl::Critic::Policy::Modules::ProhibitConditionalUseStatements">
+        <import line="13" module="Readonly" symbol="*" />
+        <import line="15" module="Perl::Critic::Utils" symbol="**" />
+        <variable line="18" name="$VERSION" />
+        <scope ilk="function" line="31" lineend="31" name="supported_parameters" signature="supported_parameters()" />
+        <scope ilk="function" line="32" lineend="32" name="default_severity" signature="default_severity()" />
+        <scope ilk="function" line="33" lineend="33" name="default_themes" signature="default_themes()" />
+        <scope ilk="function" line="34" lineend="34" name="applies_to" signature="applies_to()" />
+        <scope ilk="function" line="38" lineend="45" name="violates" signature="violates($self, $elem, $doc)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$elem" />
+          <variable ilk="argument" name="$doc" />
+        </scope>
+        <scope ilk="function" line="51" lineend="58" name="_is_eval" signature="_is_eval($self, $elem)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$elem" />
+        </scope>
+        <scope ilk="function" line="64" lineend="77" name="_is_in_do_conditional_block" signature="_is_in_do_conditional_block($self, $elem)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$elem" />
+        </scope>
+        <scope ilk="function" line="83" lineend="88" name="_is_compound_statement" signature="_is_compound_statement($self, $elem)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$elem" />
+        </scope>
+        <scope ilk="function" line="94" lineend="103" name="_is_in_conditional_logic" signature="_is_in_conditional_logic($self, $elem)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$elem" />
+        </scope>
+      </scope>
+    </scope>
+    

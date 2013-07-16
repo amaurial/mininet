@@ -1,0 +1,135 @@
+<scope doc="Internal support module for sre&#xA;" ilk="blob" lang="Python" name="sre_parse">
+      <variable citdl="str" name="ANY" />
+      <variable citdl="str" name="ANY_ALL" />
+      <variable citdl="str" name="ASSERT" />
+      <variable citdl="str" name="ASSERT_NOT" />
+      <variable citdl="str" name="AT" />
+      <variable citdl="dict" name="ATCODES" />
+      <variable citdl="str" name="AT_BEGINNING" />
+      <variable citdl="str" name="AT_BEGINNING_LINE" />
+      <variable citdl="str" name="AT_BEGINNING_STRING" />
+      <variable citdl="str" name="AT_BOUNDARY" />
+      <variable citdl="str" name="AT_END" />
+      <variable citdl="str" name="AT_END_LINE" />
+      <variable citdl="str" name="AT_END_STRING" />
+      <variable citdl="dict" name="AT_LOCALE" />
+      <variable citdl="str" name="AT_LOC_BOUNDARY" />
+      <variable citdl="str" name="AT_LOC_NON_BOUNDARY" />
+      <variable citdl="dict" name="AT_MULTILINE" />
+      <variable citdl="str" name="AT_NON_BOUNDARY" />
+      <variable citdl="dict" name="AT_UNICODE" />
+      <variable citdl="str" name="AT_UNI_BOUNDARY" />
+      <variable citdl="str" name="AT_UNI_NON_BOUNDARY" />
+      <variable citdl="str" name="BIGCHARSET" />
+      <variable citdl="str" name="BRANCH" />
+      <variable citdl="str" name="CALL" />
+      <variable citdl="dict" name="CATEGORIES" />
+      <variable citdl="str" name="CATEGORY" />
+      <variable citdl="str" name="CATEGORY_DIGIT" />
+      <variable citdl="str" name="CATEGORY_LINEBREAK" />
+      <variable citdl="str" name="CATEGORY_LOC_NOT_WORD" />
+      <variable citdl="str" name="CATEGORY_LOC_WORD" />
+      <variable citdl="str" name="CATEGORY_NOT_DIGIT" />
+      <variable citdl="str" name="CATEGORY_NOT_LINEBREAK" />
+      <variable citdl="str" name="CATEGORY_NOT_SPACE" />
+      <variable citdl="str" name="CATEGORY_NOT_WORD" />
+      <variable citdl="str" name="CATEGORY_SPACE" />
+      <variable citdl="str" name="CATEGORY_UNI_DIGIT" />
+      <variable citdl="str" name="CATEGORY_UNI_LINEBREAK" />
+      <variable citdl="str" name="CATEGORY_UNI_NOT_DIGIT" />
+      <variable citdl="str" name="CATEGORY_UNI_NOT_LINEBREAK" />
+      <variable citdl="str" name="CATEGORY_UNI_NOT_SPACE" />
+      <variable citdl="str" name="CATEGORY_UNI_NOT_WORD" />
+      <variable citdl="str" name="CATEGORY_UNI_SPACE" />
+      <variable citdl="str" name="CATEGORY_UNI_WORD" />
+      <variable citdl="str" name="CATEGORY_WORD" />
+      <variable citdl="str" name="CHARSET" />
+      <variable citdl="dict" name="CHCODES" />
+      <variable citdl="dict" name="CH_LOCALE" />
+      <variable citdl="dict" name="CH_UNICODE" />
+      <variable citdl="set" name="DIGITS" />
+      <variable citdl="dict" name="ESCAPES" />
+      <variable citdl="str" name="FAILURE" />
+      <variable citdl="dict" name="FLAGS" />
+      <variable citdl="str" name="GROUPREF" />
+      <variable citdl="str" name="GROUPREF_EXISTS" />
+      <variable citdl="str" name="GROUPREF_IGNORE" />
+      <variable citdl="set" name="HEXDIGITS" />
+      <variable citdl="str" name="IN" />
+      <variable citdl="str" name="INFO" />
+      <variable citdl="str" name="IN_IGNORE" />
+      <variable citdl="str" name="JUMP" />
+      <variable citdl="str" name="LITERAL" />
+      <variable citdl="str" name="LITERAL_IGNORE" />
+      <variable citdl="int" name="MAGIC" />
+      <variable citdl="str" name="MARK" />
+      <variable citdl="int" name="MAXREPEAT" />
+      <variable citdl="str" name="MAX_REPEAT" />
+      <variable citdl="str" name="MAX_UNTIL" />
+      <variable citdl="str" name="MIN_REPEAT" />
+      <variable citdl="str" name="MIN_REPEAT_ONE" />
+      <variable citdl="str" name="MIN_UNTIL" />
+      <variable citdl="str" name="NEGATE" />
+      <variable citdl="str" name="NOT_LITERAL" />
+      <variable citdl="str" name="NOT_LITERAL_IGNORE" />
+      <variable citdl="set" name="OCTDIGITS" />
+      <variable citdl="dict" name="OPCODES" />
+      <variable citdl="dict" name="OP_IGNORE" />
+      <scope classrefs="object" doc="&#xA;" ilk="class" name="Pattern">
+        <scope ilk="function" name="closegroup" signature="closegroup(self, gid)" />
+        <scope ilk="function" name="opengroup" signature="opengroup(self, name=None)" />
+        <scope ilk="function" name="checkgroup" signature="checkgroup(self, gid)" />
+        <scope doc="# master pattern object." ilk="function" name="__init__" signature="__init__(self)" />
+      </scope>
+      <variable citdl="str" name="RANGE" />
+      <variable citdl="str" name="REPEAT" />
+      <variable citdl="str" name="REPEAT_CHARS" />
+      <variable citdl="str" name="REPEAT_ONE" />
+      <variable citdl="str" name="SPECIAL_CHARS" />
+      <variable citdl="int" name="SRE_FLAG_ASCII" />
+      <variable citdl="int" name="SRE_FLAG_DEBUG" />
+      <variable citdl="int" name="SRE_FLAG_DOTALL" />
+      <variable citdl="int" name="SRE_FLAG_IGNORECASE" />
+      <variable citdl="int" name="SRE_FLAG_LOCALE" />
+      <variable citdl="int" name="SRE_FLAG_MULTILINE" />
+      <variable citdl="int" name="SRE_FLAG_TEMPLATE" />
+      <variable citdl="int" name="SRE_FLAG_UNICODE" />
+      <variable citdl="int" name="SRE_FLAG_VERBOSE" />
+      <variable citdl="int" name="SRE_INFO_CHARSET" />
+      <variable citdl="int" name="SRE_INFO_LITERAL" />
+      <variable citdl="int" name="SRE_INFO_PREFIX" />
+      <variable citdl="str" name="SUBPATTERN" />
+      <variable citdl="str" name="SUCCESS" />
+      <scope classrefs="object" doc="&#xA;" ilk="class" name="SubPattern">
+        <scope ilk="function" name="__delitem__" signature="__delitem__(self, index)" />
+        <scope ilk="function" name="dump" signature="dump(self, level=0)" />
+        <scope ilk="function" name="__getitem__" signature="__getitem__(self, index)" />
+        <scope ilk="function" name="insert" signature="insert(self, index, code)" />
+        <scope ilk="function" name="getwidth" signature="getwidth(self)" />
+        <scope ilk="function" name="__setitem__" signature="__setitem__(self, index, code)" />
+        <scope ilk="function" name="__len__" signature="__len__(self)" />
+        <scope doc="# a subpattern, in intermediate form" ilk="function" name="__init__" signature="__init__(self, pattern, data=None)" />
+        <scope ilk="function" name="append" signature="append(self, code)" />
+        <scope ilk="function" name="__repr__" signature="__repr__(self)" />
+      </scope>
+      <scope classrefs="object" doc="&#xA;" ilk="class" name="Tokenizer">
+        <scope ilk="function" name="_Tokenizer__next" signature="_Tokenizer__next(self)" />
+        <scope ilk="function" name="match" signature="match(self, char, skip=1)" />
+        <scope ilk="function" name="get" signature="get(self)" />
+        <scope ilk="function" name="seek" signature="seek(self, index)" />
+        <scope ilk="function" name="tell" signature="tell(self)" />
+        <scope ilk="function" name="__init__" signature="__init__(self, string)" />
+      </scope>
+      <variable citdl="set" name="WHITESPACE" />
+      <scope classrefs="Exception" doc="&#xA;" ilk="class" name="error" />
+      <scope ilk="function" name="expand_template" signature="expand_template(template, match)" />
+      <scope ilk="function" name="fix_flags" signature="fix_flags(src, flags)" />
+      <scope ilk="function" name="isdigit" signature="isdigit(char)" />
+      <scope ilk="function" name="isident" signature="isident(char)" />
+      <scope ilk="function" name="isname" signature="isname(name)" />
+      <scope ilk="function" name="makedict" signature="makedict(list)" />
+      <scope ilk="function" name="parse" signature="parse(str, flags=0, pattern=None)" />
+      <scope ilk="function" name="parse_template" signature="parse_template(source, pattern)" />
+      <import module="sys" />
+    </scope>
+    

@@ -1,0 +1,25 @@
+<scope ilk="blob" lang="Perl" name="CPANPLUS">
+      <scope classrefs="Exporter" ilk="class" line="1" lineend="97" name="CPANPLUS">
+        <import line="4" module="Carp" symbol="*" />
+        <import line="6" module="CPANPLUS::Error" symbol="*" />
+        <import line="7" module="CPANPLUS::Backend" symbol="*" />
+        <import line="9" module="Locale::Maketext::Simple" symbol="Class" />
+        <import line="12" module="Exporter" />
+        <variable line="13" name="$VERSION" />
+        <variable line="13" name="@EXPORT" />
+        <variable line="13" name="@ISA" />
+        <scope attributes="__exported__" ilk="function" line="21" lineend="46" name="install" signature="install($mod)">
+          <variable ilk="argument" name="$mod" />
+        </scope>
+        <scope attributes="__exported__" ilk="function" line="49" lineend="75" name="fetch" signature="fetch($mod)">
+          <variable ilk="argument" name="$mod" />
+        </scope>
+        <scope attributes="__exported__" ilk="function" line="78" lineend="78" name="get" signature="get()" />
+        <scope attributes="__exported__" ilk="function" line="83" lineend="95" name="shell" signature="shell($option)">
+          <import line="89" module="CPANPLUS::Shell" />
+          <variable ilk="argument" name="$option" />
+          <import line="89" module="CPANPLUS::Shell" />
+        </scope>
+      </scope>
+    </scope>
+    

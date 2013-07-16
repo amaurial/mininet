@@ -1,0 +1,44 @@
+<scope ilk="blob" lang="Perl" name="Class::MOP::Method">
+      <scope ilk="class" line="2" lineend="293" name="Class::MOP::Method">
+        <import line="13" module="Carp" symbol="confess" />
+        <import line="14" module="Scalar::Util" symbol="weaken" />
+        <variable line="4" name="$Class::MOP::Method::AUTHORITY" />
+        <variable line="7" name="$Class::MOP::Method::VERSION" />
+        <scope ilk="function" line="25" lineend="51" name="wrap" signature="wrap($class, @args)">
+          <variable ilk="argument" name="$class" />
+          <variable ilk="argument" name="@args" />
+        </scope>
+        <scope attributes="__ctor__" ilk="function" line="53" lineend="68" name="_new" signature="_new($class)">
+          <variable ilk="argument" name="$class" />
+        </scope>
+        <scope ilk="function" line="72" lineend="72" name="associated_metaclass" signature="associated_metaclass()" />
+        <scope ilk="function" line="74" lineend="78" name="attach_to_class" signature="attach_to_class($self, $class)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$class" />
+        </scope>
+        <scope ilk="function" line="80" lineend="83" name="detach_from_class" signature="detach_from_class($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="85" lineend="88" name="fully_qualified_name" signature="fully_qualified_name($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="90" lineend="90" name="original_method" signature="original_method()" />
+        <scope ilk="function" line="92" lineend="92" name="_set_original_method" signature="_set_original_method()" />
+        <scope ilk="function" line="99" lineend="105" name="original_package_name" signature="original_package_name($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="107" lineend="113" name="original_name" signature="original_name($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="115" lineend="121" name="original_fully_qualified_name" signature="original_fully_qualified_name($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="123" lineend="126" name="execute" signature="execute($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope attributes="__ctor__" ilk="function" line="132" lineend="140" name="clone" signature="clone($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+      </scope>
+    </scope>
+    

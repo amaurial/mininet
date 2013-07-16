@@ -1,0 +1,102 @@
+<scope ilk="blob" lang="Perl" name="Safe">
+      <scope ilk="class" line="1" lineend="452" name="Safe">
+        <import line="5" module="Scalar::Util" symbol="reftype" />
+        <import line="5" module="Scalar::Util" symbol="refaddr" />
+        <import line="29" module="Carp" symbol="*" />
+        <import line="34" module="B" />
+        <import line="46" module="Opcode" symbol="*" />
+        <import line="62" module="utf8" />
+        <variable line="7" name="$Safe::VERSION" />
+        <variable line="38" name="*sub_generation" />
+        <variable line="52" name="*ops_to_opset" />
+        <scope ilk="function" line="14" lineend="27" name="lexless_anon_sub" signature="lexless_anon_sub()">
+          </scope>
+        <scope attributes="__ctor__" ilk="function" line="142" lineend="174" name="new" signature="new($class, $root, $mask)">
+          <variable ilk="argument" name="$class" />
+          <variable ilk="argument" name="$root" />
+          <variable ilk="argument" name="$mask" />
+        </scope>
+        <scope ilk="function" line="176" lineend="179" name="DESTROY" signature="DESTROY($obj)">
+          <variable ilk="argument" name="$obj" />
+        </scope>
+        <scope ilk="function" line="181" lineend="215" name="erase" signature="erase($obj, $action)">
+          <variable ilk="argument" name="$obj" />
+          <variable ilk="argument" name="$action" />
+        </scope>
+        <scope ilk="function" line="218" lineend="222" name="reinit" signature="reinit($obj)">
+          <variable ilk="argument" name="$obj" />
+        </scope>
+        <scope ilk="function" line="224" lineend="228" name="root" signature="root($obj)">
+          <variable ilk="argument" name="$obj" />
+        </scope>
+        <scope ilk="function" line="231" lineend="235" name="mask" signature="mask($obj)">
+          <variable ilk="argument" name="$obj" />
+        </scope>
+        <scope ilk="function" line="238" lineend="238" name="trap" signature="trap()" />
+        <scope ilk="function" line="239" lineend="239" name="untrap" signature="untrap()" />
+        <scope ilk="function" line="241" lineend="244" name="deny" signature="deny($obj)">
+          <variable ilk="argument" name="$obj" />
+        </scope>
+        <scope ilk="function" line="245" lineend="248" name="deny_only" signature="deny_only($obj)">
+          <variable ilk="argument" name="$obj" />
+        </scope>
+        <scope ilk="function" line="250" lineend="254" name="permit" signature="permit($obj)">
+          <variable ilk="argument" name="$obj" />
+        </scope>
+        <scope ilk="function" line="255" lineend="258" name="permit_only" signature="permit_only($obj)">
+          <variable ilk="argument" name="$obj" />
+        </scope>
+        <scope ilk="function" line="261" lineend="264" name="dump_mask" signature="dump_mask($obj)">
+          <variable ilk="argument" name="$obj" />
+        </scope>
+        <scope ilk="function" line="267" lineend="270" name="share" signature="share($obj, @vars)">
+          <variable ilk="argument" name="$obj" />
+          <variable ilk="argument" name="@vars" />
+        </scope>
+        <scope ilk="function" line="273" lineend="301" name="share_from" signature="share_from($obj, $pkg, $vars, $no_record)">
+          <variable ilk="argument" name="$obj" />
+          <variable ilk="argument" name="$pkg" />
+          <variable ilk="argument" name="$vars" />
+          <variable ilk="argument" name="$no_record" />
+        </scope>
+        <scope ilk="function" line="304" lineend="311" name="share_record" signature="share_record($obj, $pkg, $vars)">
+          <variable ilk="argument" name="$obj" />
+          <variable ilk="argument" name="$pkg" />
+          <variable ilk="argument" name="$vars" />
+        </scope>
+        <scope ilk="function" line="314" lineend="322" name="share_redo" signature="share_redo($obj)">
+          <variable ilk="argument" name="$obj" />
+        </scope>
+        <scope ilk="function" line="325" lineend="327" name="share_forget" signature="share_forget()" />
+        <scope ilk="function" line="330" lineend="334" name="varglob" signature="varglob($obj, $var)">
+          <variable ilk="argument" name="$obj" />
+          <variable ilk="argument" name="$var" />
+        </scope>
+        <scope ilk="function" line="336" lineend="349" name="_clean_stash" signature="_clean_stash($root, $saved_refs)">
+          <variable ilk="argument" name="$root" />
+          <variable ilk="argument" name="$saved_refs" />
+        </scope>
+        <scope ilk="function" line="351" lineend="364" name="reval" signature="reval($obj, $expr, $strict)">
+          <variable ilk="argument" name="$obj" />
+          <variable ilk="argument" name="$expr" />
+          <variable ilk="argument" name="$strict" />
+        </scope>
+        <scope ilk="function" line="368" lineend="373" name="wrap_code_refs_within" signature="wrap_code_refs_within($obj)">
+          <variable ilk="argument" name="$obj" />
+        </scope>
+        <scope ilk="function" line="376" lineend="398" name="_find_code_refs" signature="_find_code_refs($obj, $visitor)">
+          <variable ilk="argument" name="$obj" />
+          <variable ilk="argument" name="$visitor" />
+        </scope>
+        <scope ilk="function" line="401" lineend="433" name="wrap_code_ref" signature="wrap_code_ref($obj, $sub, @args)">
+          <variable ilk="argument" name="$obj" />
+          <variable ilk="argument" name="$sub" />
+          <variable ilk="argument" name="@args" />
+        </scope>
+        <scope ilk="function" line="436" lineend="449" name="rdo" signature="rdo($obj, $file)">
+          <variable ilk="argument" name="$obj" />
+          <variable ilk="argument" name="$file" />
+        </scope>
+      </scope>
+    </scope>
+    

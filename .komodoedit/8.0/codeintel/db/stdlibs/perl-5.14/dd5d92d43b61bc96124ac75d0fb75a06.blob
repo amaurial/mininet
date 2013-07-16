@@ -1,0 +1,21 @@
+<scope ilk="blob" lang="Perl" name="HTML::PullParser">
+      <scope classrefs="HTML::Parser" ilk="class" line="1" lineend="108" name="HTML::PullParser">
+        <import line="3" module="HTML::Parser" />
+        <import line="8" module="Carp" />
+        <variable line="5" name="$VERSION" />
+        <scope ilk="function" line="10" lineend="53" name="new" signature="new($class, %cnf)">
+          <import line="46" module="IO::File" />
+          <variable ilk="argument" name="$class" />
+          <variable ilk="argument" name="%cnf" />
+          <import line="46" module="IO::File" />
+        </scope>
+        <scope ilk="function" line="56" lineend="59" name="handler" signature="handler()" />
+        <scope ilk="function" line="62" lineend="98" name="get_token" signature="get_token($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="101" lineend="106" name="unget_token" signature="unget_token($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+      </scope>
+    </scope>
+    

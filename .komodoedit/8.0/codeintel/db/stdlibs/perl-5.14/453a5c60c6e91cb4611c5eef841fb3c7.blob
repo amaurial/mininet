@@ -1,0 +1,48 @@
+<scope ilk="blob" lang="Perl" name="HTTP::Config">
+      <scope ilk="class" line="1" lineend="234" name="HTTP::Config">
+        <import line="4" module="URI" symbol="*" />
+        <variable line="5" name="$VERSION" />
+        <scope attributes="__ctor__" ilk="function" line="9" lineend="12" name="new" signature="new($class)">
+          <variable ilk="argument" name="$class" />
+        </scope>
+        <scope ilk="function" line="14" lineend="17" name="entries" signature="entries($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="19" lineend="22" name="empty" signature="empty($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="24" lineend="33" name="add" signature="add($self, $self, %spec)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="%spec" />
+        </scope>
+        <scope ilk="function" line="35" lineend="51" name="find2" signature="find2($self, %spec)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="%spec" />
+        </scope>
+        <scope ilk="function" line="53" lineend="58" name="find" signature="find($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="60" lineend="65" name="remove" signature="remove($self, %spec)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="%spec" />
+        </scope>
+        <scope ilk="function" line="170" lineend="216" name="matching" signature="matching($self, $uri, $request, $response)">
+          <variable ilk="argument" name="$self" />
+          <variable citdl="URI" ilk="argument" name="$uri" />
+          <variable ilk="argument" name="$request" />
+          <variable ilk="argument" name="$response" />
+        </scope>
+        <scope ilk="function" line="218" lineend="222" name="add_item" signature="add_item($self, $item)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$item" />
+        </scope>
+        <scope ilk="function" line="224" lineend="227" name="remove_items" signature="remove_items($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="229" lineend="232" name="matching_items" signature="matching_items($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+      </scope>
+    </scope>
+    

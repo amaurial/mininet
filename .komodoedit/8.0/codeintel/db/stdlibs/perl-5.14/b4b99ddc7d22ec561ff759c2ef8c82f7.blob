@@ -1,0 +1,30 @@
+<scope ilk="blob" lang="Perl" name="Test::Differences">
+      <scope classrefs="Exporter" ilk="class" line="1" lineend="618" name="Test::Differences">
+        <import line="267" module="Exporter" symbol="*" />
+        <import line="282" module="Carp" symbol="*" />
+        <import line="283" module="Text::Diff" symbol="*" />
+        <variable line="264" name="$VERSION" />
+        <scope ilk="function" line="285" lineend="288" name="_isnt_ARRAY_of_scalars" signature="_isnt_ARRAY_of_scalars()" />
+        <scope ilk="function" line="290" lineend="293" name="_isnt_HASH_of_scalars" signature="_isnt_HASH_of_scalars()" />
+        <scope ilk="function" line="303" lineend="310" name="_diff_style" signature="_diff_style($requested_style)">
+          <variable ilk="argument" name="$requested_style" />
+        </scope>
+        <scope attributes="__exported__" ilk="function" line="313" lineend="313" name="unified_diff" signature="unified_diff()" />
+        <scope attributes="__exported__" ilk="function" line="314" lineend="314" name="context_diff" signature="context_diff()" />
+        <scope attributes="__exported__" ilk="function" line="315" lineend="315" name="oldstyle_diff" signature="oldstyle_diff()" />
+        <scope attributes="__exported__" ilk="function" line="316" lineend="316" name="table_diff" signature="table_diff()" />
+        <scope ilk="function" line="318" lineend="336" name="_grok_type" signature="_grok_type()" />
+        <scope ilk="function" line="339" lineend="395" name="_flatten" signature="_flatten($type)">
+          <variable ilk="argument" name="$type" />
+        </scope>
+        <scope ilk="function" line="397" lineend="413" name="_identify_callers_test_package_of_choice" signature="_identify_callers_test_package_of_choice()">
+          </scope>
+        <scope attributes="__exported__" ilk="function" line="417" lineend="417" name="eq_or_diff_text" signature="eq_or_diff_text()" />
+        <scope attributes="__exported__" ilk="function" line="418" lineend="418" name="eq_or_diff_data" signature="eq_or_diff_data()" />
+        <scope attributes="__exported__" ilk="function" line="426" lineend="524" name="eq_or_diff" signature="eq_or_diff()">
+          <import line="444" module="Data::Dumper" />
+          <import line="444" module="Data::Dumper" />
+        </scope>
+      </scope>
+    </scope>
+    

@@ -1,0 +1,24 @@
+<scope ilk="blob" lang="Perl" name="I18N::Collate">
+      <scope classrefs="Exporter" ilk="class" line="1" lineend="196" name="I18N::Collate">
+        <import line="113" module="POSIX" symbol="strxfrm" />
+        <import line="113" module="POSIX" symbol="LC_COLLATE" />
+        <import line="114" module="warnings::register" symbol="*" />
+        <import line="116" module="Exporter" />
+        <variable line="4" name="$VERSION" />
+        <variable line="119" name="@EXPORT" />
+        <variable line="120" name="@EXPORT_OK" />
+        <variable line="127" name="$C" />
+        <variable line="127" name="$LOCALE" />
+        <variable line="129" name="$please_use_I18N_Collate_even_if_deprecated" />
+        <scope attributes="__ctor__" ilk="function" line="130" lineend="158" name="new" signature="new()">
+          </scope>
+        <scope ilk="function" line="160" lineend="166" name="setlocale" signature="setlocale()">
+          </scope>
+        <scope ilk="function" line="168" lineend="175" name="C" signature="C()">
+          </scope>
+        <scope ilk="function" line="177" lineend="186" name="collate_xfrm" signature="collate_xfrm()">
+          </scope>
+        <scope ilk="function" line="188" lineend="190" name="collate_cmp" signature="collate_cmp()" />
+      </scope>
+    </scope>
+    

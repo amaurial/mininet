@@ -1,0 +1,42 @@
+<scope ilk="blob" lang="Perl" name="LWP::RobotUA">
+      <scope classrefs="LWP::UserAgent" ilk="class" line="1" lineend="193" name="LWP::RobotUA">
+        <import line="3" module="LWP::UserAgent" />
+        <import line="7" module="WWW::RobotRules" />
+        <import line="8" module="HTTP::Request" />
+        <import line="9" module="HTTP::Response" />
+        <import line="11" module="Carp" />
+        <import line="12" module="HTTP::Status" />
+        <import line="13" module="HTTP::Date" symbol="time2str" />
+        <variable line="5" name="$VERSION" />
+        <variable line="95" name="*host_count" />
+        <scope attributes="__ctor__" ilk="function" line="26" lineend="62" name="new" signature="new($class)">
+          <variable ilk="argument" name="$class" />
+        </scope>
+        <scope ilk="function" line="65" lineend="65" name="delay" signature="delay()" />
+        <scope ilk="function" line="66" lineend="66" name="use_sleep" signature="use_sleep()" />
+        <scope ilk="function" line="69" lineend="78" name="agent" signature="agent($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="81" lineend="86" name="rules" signature="rules($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="89" lineend="93" name="no_visits" signature="no_visits($self, $netloc)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$netloc" />
+        </scope>
+        <scope ilk="function" line="98" lineend="109" name="host_wait" signature="host_wait($self, $netloc)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$netloc" />
+        </scope>
+        <scope ilk="function" line="112" lineend="179" name="simple_request" signature="simple_request($self, $request, $arg, $size)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$request" />
+          <variable ilk="argument" name="$arg" />
+          <variable ilk="argument" name="$size" />
+        </scope>
+        <scope ilk="function" line="182" lineend="191" name="as_string" signature="as_string($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+      </scope>
+    </scope>
+    

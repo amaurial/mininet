@@ -1,0 +1,30 @@
+<scope doc="Append module search paths for third-party packages to sys.path.&#xA;**************************************************************** * This module is automatically imported during initialization. * ****************************************************************  This will append site-specific paths to the module search path.  On Unix (including Mac OSX), it starts with sys.prefix and sys.exec_prefix (if different) and appends lib/python&lt;version&gt;/site-packages as well as lib/site-python. On other platforms (such as Windows), it tries each of the prefixes directly, as well as with lib/site-packages appended.  The" ilk="blob" lang="Python" name="site">
+      <variable citdl="bool" name="ENABLE_USER_SITE" />
+      <variable citdl="list" name="PREFIXES" />
+      <variable citdl="str" name="USER_BASE" />
+      <variable citdl="str" name="USER_SITE" />
+      <scope doc="Set all module __file__ and __cached__ attributes to an&#xA;absolute path" ilk="function" name="abs_paths" signature="abs_paths()" />
+      <scope doc="Process a .pth file within the site-packages directory: For&#xA;each line in the file, either combine it with sitedir to a&#xA;path and add that to known_paths, or execute it if it starts&#xA;with &apos;import &apos;." ilk="function" name="addpackage" signature="addpackage(sitedir, name, known_paths)" />
+      <scope doc="Add &apos;sitedir&apos; argument to sys.path if missing and handle&#xA;.pth files in &apos;sitedir&apos;" ilk="function" name="addsitedir" signature="addsitedir(sitedir, known_paths=None)" />
+      <scope doc="Add site-packages (and possibly site-python) to sys.path" ilk="function" name="addsitepackages" signature="addsitepackages(known_paths)" />
+      <scope doc="Add a per user site-package to sys.path" ilk="function" name="addusersitepackages" signature="addusersitepackages(known_paths)" />
+      <scope doc="On Windows, some default encodings are not provided by&#xA;Python, while they are always available as &quot;mbcs&quot; in each&#xA;locale." ilk="function" name="aliasmbcs" signature="aliasmbcs()" />
+      <import module="builtins" />
+      <scope doc="Check if user site directory is safe for inclusion" ilk="function" name="check_enableusersite" signature="check_enableusersite()" />
+      <scope doc="Run custom site specific code, if available." ilk="function" name="execsitecustomize" signature="execsitecustomize()" />
+      <scope doc="Run custom user specific code, if available." ilk="function" name="execusercustomize" signature="execusercustomize()" />
+      <scope doc="Returns a list containing all global site-packages&#xA;directories (and possibly site-python)." ilk="function" name="getsitepackages" signature="getsitepackages()" />
+      <scope doc="Returns the `user base` directory path." ilk="function" name="getuserbase" signature="getuserbase()" />
+      <scope doc="Returns the user-specific site-packages directory path." ilk="function" name="getusersitepackages" signature="getusersitepackages()" />
+      <scope ilk="function" name="main" signature="main()" />
+      <scope ilk="function" name="makepath" signature="makepath(*paths)" />
+      <import module="os" />
+      <scope doc="Remove duplicate entries from sys.path along with making&#xA;them absolute" ilk="function" name="removeduppaths" signature="removeduppaths()" />
+      <scope doc="The OS/2 EMX port has optional extension modules that do&#xA;double duty as DLLs (and must use the .DLL file extension)&#xA;for other extensions." ilk="function" name="setBEGINLIBPATH" signature="setBEGINLIBPATH()" />
+      <scope doc="Set &apos;copyright&apos; and &apos;credits&apos; in builtins" ilk="function" name="setcopyright" signature="setcopyright()" />
+      <scope ilk="function" name="sethelper" signature="sethelper()" />
+      <scope doc="Define new builtins &apos;quit&apos; and &apos;exit&apos;." ilk="function" name="setquit" signature="setquit()" />
+      <import module="sys" />
+      <import module="traceback" />
+    </scope>
+    

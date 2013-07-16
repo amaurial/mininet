@@ -1,0 +1,288 @@
+<scope doc="HTTP server classes.&#xA;Note: BaseHTTPRequestHandler doesn&apos;t implement any HTTP request; see SimpleHTTPRequestHandler for simple implementations of GET, HEAD and POST, and CGIHTTPRequestHandler for CGI scripts.  It does, however, optionally implement HTTP/1.1 persistent connections, as of version 0.3.  Notes on CGIHTTPRequestHandler ------------------------------ " ilk="blob" lang="Python" name="http.server">
+      <scope classrefs="StreamRequestHandler" doc="HTTP request handler base class.&#xA;The following explanation of HTTP serves to guide you through the code as well as to expose any misunderstandings I may have about HTTP (so you don&apos;t need to read the code to figure out I&apos;m wrong :-).  HTTP (HyperText Transfer Protocol) is an extensible protocol on top of a reliable stream transport (e.g. TCP/IP).  The protocol recognizes three parts to a request:  1. One line identifying the request type and path" ilk="class" line="138" lineend="639" name="BaseHTTPRequestHandler">
+        <scope doc="Handle multiple requests if necessary." ilk="function" line="395" lineend="401" name="handle" signature="handle(self)">
+          <variable citdl="BaseHTTPRequestHandler" ilk="argument" name="self" />
+        </scope>
+        <scope doc="Parse a request (internal)." ilk="function" line="259" lineend="341" name="parse_request" returns="bool" signature="parse_request(self)">
+          <variable line="286" name="base_version_number" />
+          <variable citdl="base_version_number.split()" line="287" name="version_number" />
+          <variable citdl="self.headers.get()" line="335" name="expect" />
+          <variable citdl="requestline.split()" line="279" name="words" />
+          <variable citdl="BaseHTTPRequestHandler" ilk="argument" name="self" />
+          <variable citdl="self.headers.get()" line="328" name="conntype" />
+          <variable citdl="list" line="273" name="requestline" />
+        </scope>
+        <scope doc="Return the current date and time formatted for a message&#xA;header." ilk="function" line="528" lineend="537" name="date_time_string" returns="tuple" signature="date_time_string(self, timestamp=None)">
+          <variable line="532" name="wd" />
+          <variable line="532" name="mm" />
+          <variable citdl="time.time()" ilk="argument" name="timestamp" />
+          <variable citdl="BaseHTTPRequestHandler" ilk="argument" name="self" />
+          <variable citdl="str" line="533" name="s" />
+          <variable line="532" name="month" />
+          <variable line="532" name="ss" />
+          <variable line="532" name="hh" />
+          <variable line="532" name="year" />
+          <variable line="532" name="y" />
+          <variable line="532" name="z" />
+          <variable line="532" name="day" />
+        </scope>
+        <scope doc="Handle a single HTTP request." ilk="function" line="360" name="handle_one_request" signature="handle_one_request(self)">
+          <variable citdl="str" line="382" name="mname" />
+          <variable citdl="BaseHTTPRequestHandler" ilk="argument" name="self" />
+          <variable citdl="getattr()" line="386" name="method" />
+        </scope>
+        <scope doc="Return the server software version string." ilk="function" line="524" lineend="526" name="version_string" returns="str" signature="version_string(self)">
+          <variable citdl="BaseHTTPRequestHandler" ilk="argument" name="self" />
+        </scope>
+        <scope doc="Return the client address formatted for logging." ilk="function" line="553" lineend="562" name="address_string" returns="socket.getfqdn()" signature="address_string(self)">
+          <variable citdl="BaseHTTPRequestHandler" ilk="argument" name="self" />
+        </scope>
+        <scope doc="Return the current time formatted for logging." ilk="function" line="539" lineend="545" name="log_date_time_string" returns="tuple" signature="log_date_time_string(self)">
+          <variable line="542" name="z" />
+          <variable line="542" name="mm" />
+          <variable citdl="BaseHTTPRequestHandler" ilk="argument" name="self" />
+          <variable citdl="str" line="543" name="s" />
+          <variable line="542" name="month" />
+          <variable line="542" name="ss" />
+          <variable line="542" name="hh" />
+          <variable line="542" name="year" />
+          <variable line="542" name="y" />
+          <variable line="542" name="x" />
+          <variable citdl="time.time()" line="541" name="now" />
+          <variable line="542" name="day" />
+        </scope>
+        <scope doc="Log an accepted request." ilk="function" line="478" lineend="486" name="log_request" signature="log_request(self, code=&apos;-&apos;, size=&apos;-&apos;)">
+          <variable citdl="BaseHTTPRequestHandler" ilk="argument" name="self" />
+          <variable citdl="str" ilk="argument" name="code" />
+          <variable citdl="str" ilk="argument" name="size" />
+        </scope>
+        <scope doc="Send the response header only." ilk="function" line="446" lineend="455" name="send_response_only" signature="send_response_only(self, code, message=None)">
+          <variable citdl="BaseHTTPRequestHandler" ilk="argument" name="self" />
+          <variable ilk="argument" name="code" />
+          <variable citdl="str" ilk="argument" name="message" />
+        </scope>
+        <scope doc="Log an arbitrary message." ilk="function" line="502" lineend="522" name="log_message" signature="log_message(self, format, *args)">
+          <variable citdl="BaseHTTPRequestHandler" ilk="argument" name="self" />
+          <variable attributes="varargs" ilk="argument" name="args" />
+          <variable ilk="argument" name="format" />
+        </scope>
+        <scope doc="Send a MIME header." ilk="function" line="457" lineend="469" name="send_header" signature="send_header(self, keyword, value)">
+          <variable citdl="BaseHTTPRequestHandler" ilk="argument" name="self" />
+          <variable ilk="argument" name="value" />
+          <variable ilk="argument" name="keyword" />
+        </scope>
+        <scope doc="Send the blank line ending the MIME headers." ilk="function" line="471" lineend="476" name="end_headers" signature="end_headers(self)">
+          <variable citdl="BaseHTTPRequestHandler" ilk="argument" name="self" />
+        </scope>
+        <scope doc="Send and log an error reply." ilk="function" line="403" lineend="432" name="send_error" signature="send_error(self, code, message=None)">
+          <variable citdl="dict" line="425" name="content" />
+          <variable ilk="argument" name="code" />
+          <variable citdl="str" line="419" name="shortmsg" />
+          <variable citdl="str" line="422" name="explain" />
+          <variable citdl="str" ilk="argument" name="message" />
+          <variable citdl="str" line="419" name="longmsg" />
+          <variable citdl="BaseHTTPRequestHandler" ilk="argument" name="self" />
+        </scope>
+        <scope doc="Log an error." ilk="function" line="488" lineend="500" name="log_error" signature="log_error(self, format, *args)">
+          <variable citdl="BaseHTTPRequestHandler" ilk="argument" name="self" />
+          <variable attributes="varargs" ilk="argument" name="args" />
+          <variable ilk="argument" name="format" />
+        </scope>
+        <scope doc="Decide what to do with an &quot;Expect: 100-continue&quot; header." ilk="function" line="343" lineend="358" name="handle_expect_100" returns="bool" signature="handle_expect_100(self)">
+          <variable citdl="BaseHTTPRequestHandler" ilk="argument" name="self" />
+        </scope>
+        <scope doc="Send the response header and log the response code." ilk="function" line="434" lineend="444" name="send_response" signature="send_response(self, code, message=None)">
+          <variable citdl="BaseHTTPRequestHandler" ilk="argument" name="self" />
+          <variable ilk="argument" name="code" />
+          <variable ilk="argument" name="message" />
+        </scope>
+        <variable attributes="__instancevar__" citdl="str()" line="278" name="requestline" />
+        <variable citdl="str" line="250" name="error_message_format" />
+        <variable citdl="dict" line="576" name="responses" />
+        <variable citdl="str" line="257" name="default_request_version" />
+        <variable citdl="str" line="251" name="error_content_type" />
+        <variable citdl="list" line="547" name="weekdayname" />
+        <variable attributes="__instancevar__" citdl="self.rfile.readline()" line="369" name="raw_requestline" />
+        <variable attributes="__instancevar__" citdl="int" line="272" name="close_connection" />
+        <variable attributes="__instancevar__" citdl="http.client.parse_headers()" line="322" name="headers" />
+        <variable attributes="protected __instancevar__" citdl="list" line="461" name="_headers_buffer" />
+        <variable attributes="__instancevar__" citdl="str" line="270" name="command" />
+        <variable citdl="list" line="549" name="monthname" />
+        <variable citdl="str" line="568" name="protocol_version" />
+        <variable attributes="__instancevar__" line="318" name="path" />
+        <variable citdl="str" line="243" name="sys_version" />
+        <variable attributes="__instancevar__" citdl="str" line="271" name="request_version" />
+        <variable citdl="str" line="248" name="server_version" />
+        <variable citdl="http.client.HTTPMessage" line="571" name="MessageClass" />
+      </scope>
+      <scope classrefs="SimpleHTTPRequestHandler" doc="Complete HTTP server with GET, HEAD and POST commands.&#xA;GET and HEAD also support running CGI scripts.  The POST command is *only* implemented for CGI scripts." ilk="class" line="898" lineend="1159" name="CGIHTTPRequestHandler">
+        <scope doc="Test whether self.path corresponds to a CGI script." ilk="function" line="934" lineend="954" name="is_cgi" returns="bool" signature="is_cgi(self)">
+          <variable citdl="CGIHTTPRequestHandler" ilk="argument" name="self" />
+          <variable citdl="_url_collapse_path_split()" line="950" name="splitpath" />
+        </scope>
+        <scope doc="Version of send_head that support CGI scripts" ilk="function" line="927" lineend="932" name="send_head" returns="SimpleHTTPRequestHandler.send_head()" signature="send_head(self)">
+          <variable citdl="CGIHTTPRequestHandler" ilk="argument" name="self" />
+        </scope>
+        <scope doc="Test whether argument path is an executable file." ilk="function" line="958" lineend="960" name="is_executable" returns="executable()" signature="is_executable(self, path)">
+          <variable ilk="argument" name="path" />
+          <variable citdl="CGIHTTPRequestHandler" ilk="argument" name="self" />
+        </scope>
+        <scope doc="Test whether argument path is a Python script." ilk="function" line="962" lineend="965" name="is_python" returns="bool" signature="is_python(self, path)">
+          <variable ilk="argument" name="path" />
+          <variable citdl="CGIHTTPRequestHandler" ilk="argument" name="self" />
+          <variable line="964" name="head" />
+          <variable line="964" name="tail" />
+        </scope>
+        <scope doc="Serve a POST request." ilk="function" line="915" lineend="925" name="do_POST" signature="do_POST(self)">
+          <variable citdl="CGIHTTPRequestHandler" ilk="argument" name="self" />
+        </scope>
+        <scope doc="Execute a CGI script." ilk="function" line="967" lineend="1159" name="run_cgi" signature="run_cgi(self)">
+          <variable citdl="filter()" line="1072" name="co" />
+          <variable line="1149" name="stdout" />
+          <variable citdl="list" line="1123" name="interp" />
+          <variable citdl="list" line="979" name="rest" />
+          <variable citdl="self.translate_path()" line="977" name="scriptdir" />
+          <variable citdl="list" line="1121" name="cmdline" />
+          <variable citdl="list" line="999" name="scriptname" />
+          <variable citdl="list" line="987" name="query" />
+          <variable citdl="query.replace()" line="1085" name="decoded_query" />
+          <variable citdl="list" line="974" name="nextdir" />
+          <variable citdl="CGIHTTPRequestHandler" ilk="argument" name="self" />
+          <variable citdl="copy.deepcopy()" line="1017" name="env" />
+          <variable citdl="authorization.split()" line="1034" name="authorization" />
+          <variable citdl="int()" line="1132" name="nbytes" />
+          <variable citdl="p.returncode" line="1155" name="status" />
+          <variable citdl="str.join()" line="1073" name="cookie_str" />
+          <variable citdl="nobody_uid()" line="1092" name="nobody" />
+          <variable citdl="is_python()" line="1008" name="ispy" />
+          <variable citdl="os.fork()" line="1094" name="pid" />
+          <variable citdl="list" line="1089" name="args" />
+          <variable citdl="self.address_string()" line="1030" name="host" />
+          <variable citdl="self.headers.get()" line="1059" name="referer" />
+          <variable citdl="list" line="1062" name="accept" />
+          <variable citdl="self.path" line="969" name="path" />
+          <variable citdl="self.rfile.read()" line="1142" name="data" />
+          <variable citdl="urllib.parse.unquote()" line="1024" name="uqrest" />
+          <variable citdl="path.find()" line="972" name="i" />
+          <variable citdl="list" line="975" name="nextrest" />
+          <variable citdl="list" line="995" name="script" />
+          <variable citdl="subprocess.Popen()" line="1135" name="p" />
+          <variable citdl="self.headers.get()" line="1056" name="length" />
+          <variable citdl="self.translate_path()" line="1000" name="scriptfile" />
+          <variable line="1149" name="stderr" />
+          <variable line="1097" name="sts" />
+          <variable citdl="self.headers.get()" line="1069" name="ua" />
+          <variable citdl="list" line="979" name="dir" />
+        </scope>
+        <variable citdl="list" line="956" name="cgi_directories" />
+        <variable citdl="int" line="913" name="rbufsize" />
+        <variable citdl="hasattr()" line="909" name="have_fork" />
+        <variable attributes="__instancevar__" citdl="_url_collapse_path_split()" line="952" name="cgi_info" />
+      </scope>
+      <variable citdl="str" line="121" name="DEFAULT_ERROR_CONTENT_TYPE" />
+      <variable citdl="str" line="105" name="DEFAULT_ERROR_MESSAGE" />
+      <scope classrefs="TCPServer" doc="&#xA;" ilk="class" line="126" lineend="135" name="HTTPServer">
+        <scope doc="Override server_bind to store the server name." ilk="function" line="130" lineend="135" name="server_bind" signature="server_bind(self)">
+          <variable citdl="HTTPServer" ilk="argument" name="self" />
+        </scope>
+        <variable citdl="int" line="128" name="allow_reuse_address" />
+        <variable attributes="__instancevar__" citdl="port" line="135" name="server_port" />
+        <variable attributes="__instancevar__" citdl="socket.getfqdn()" line="134" name="server_name" />
+      </scope>
+      <scope classrefs="BaseHTTPRequestHandler" doc="Simple HTTP request handler with GET and HEAD commands.&#xA;This serves files from the current directory and any of its subdirectories.  The MIME type for files is determined by calling the .guess_type() method.  The GET and HEAD requests are identical except that the HEAD request omits the actual contents of the file." ilk="class" line="643" lineend="825" name="SimpleHTTPRequestHandler">
+        <scope doc="Guess the type of a file." ilk="function" line="794" lineend="816" name="guess_type" signature="guess_type(self, path)">
+          <variable ilk="argument" name="path" />
+          <variable citdl="SimpleHTTPRequestHandler" ilk="argument" name="self" />
+          <variable line="809" name="base" />
+          <variable citdl="ext.lower()" line="809" name="ext" />
+        </scope>
+        <scope doc="Copy all data between two file objects." ilk="function" line="778" lineend="792" name="copyfile" signature="copyfile(self, source, outputfile)">
+          <variable ilk="argument" name="source" />
+          <variable citdl="SimpleHTTPRequestHandler" ilk="argument" name="self" />
+          <variable ilk="argument" name="outputfile" />
+        </scope>
+        <scope doc="Helper to produce a directory listing (absent index.html)." ilk="function" line="712" lineend="754" name="list_directory" returns="io.BytesIO()" signature="list_directory(self, path)">
+          <variable citdl="sys.getfilesystemencoding()" line="745" name="enc" />
+          <variable citdl="name" line="734" name="displayname" />
+          <variable citdl="io.BytesIO()" line="747" name="f" />
+          <variable citdl="html.escape()" line="727" name="displaypath" />
+          <variable citdl="SimpleHTTPRequestHandler" ilk="argument" name="self" />
+          <variable citdl="os.listdir()" line="721" name="list" />
+          <variable citdl="list" line="726" name="r" />
+          <variable line="746" name="encoded" />
+          <variable citdl="name" line="738" name="linkname" />
+          <variable ilk="argument" name="path" />
+          <variable citdl="os.path.join()" line="733" name="fullname" />
+        </scope>
+        <scope doc="Common code for GET and HEAD commands." ilk="function" line="671" lineend="710" name="send_head" returns="open()" signature="send_head(self)">
+          <variable citdl="os.path.join()" line="692" name="index" />
+          <variable citdl="os.fstat()" line="706" name="fs" />
+          <variable citdl="open()" line="683" name="f" />
+          <variable citdl="self.translate_path()" line="682" name="path" />
+          <variable citdl="SimpleHTTPRequestHandler" ilk="argument" name="self" />
+          <variable citdl="self.guess_type()" line="698" name="ctype" />
+        </scope>
+        <scope doc="Serve a GET request." ilk="function" line="658" lineend="663" name="do_GET" signature="do_GET(self)">
+          <variable citdl="SimpleHTTPRequestHandler" ilk="argument" name="self" />
+          <variable citdl="self.send_head()" line="660" name="f" />
+        </scope>
+        <scope doc="Serve a HEAD request." ilk="function" line="665" lineend="669" name="do_HEAD" signature="do_HEAD(self)">
+          <variable citdl="SimpleHTTPRequestHandler" ilk="argument" name="self" />
+          <variable citdl="self.send_head()" line="667" name="f" />
+        </scope>
+        <scope doc="Translate a /-separated PATH to the local filename syntax." ilk="function" line="756" lineend="776" name="translate_path" returns="os.getcwd()" signature="translate_path(self, path)">
+          <variable line="773" name="head" />
+          <variable line="772" name="word" />
+          <variable citdl="filter()" line="768" name="words" />
+          <variable citdl="os.getcwd()" ilk="argument" name="path" />
+          <variable citdl="SimpleHTTPRequestHandler" ilk="argument" name="self" />
+          <variable line="772" name="drive" />
+        </scope>
+        <variable citdl="mimetypes.types_map.copy()" line="820" name="extensions_map" />
+        <variable citdl="str" line="656" name="server_version" />
+      </scope>
+      <variable citdl="list" line="85" name="__all__" />
+      <import module="copy" />
+      <import module="email" />
+      <scope doc="Test for executable file." ilk="function" line="889" lineend="895" name="executable" returns="bool" signature="executable(path)">
+        <variable ilk="argument" name="path" />
+        <variable citdl="os.stat()" line="892" name="st" />
+      </scope>
+      <import module="html" />
+      <import module="http" />
+      <import module="io" />
+      <import module="mimetypes" />
+      <variable citdl="NoneType" line="871" name="nobody" />
+      <scope doc="Internal routine to get nobody&apos;s uid" ilk="function" line="873" lineend="886" name="nobody_uid" returns="max()" signature="nobody_uid()">
+        <variable citdl="max()" line="883" name="nobody" />
+      </scope>
+      <import module="os" />
+      <import module="posixpath" />
+      <import module="select" />
+      <import module="shutil" />
+      <import module="socket" />
+      <import module="socketserver" />
+      <import module="sys" />
+      <scope doc="Test the HTTP request handler class." ilk="function" line="1162" lineend="1187" name="test" signature="test(HandlerClass=&lt;class &apos;http.server.BaseHTTPRequestHandler&apos;&gt;, ServerClass=&lt;class &apos;http.server.HTTPServer&apos;&gt;, protocol=&apos;HTTP/1.0&apos;)">
+        <variable citdl="BaseHTTPRequestHandler" ilk="argument" name="HandlerClass" />
+        <variable citdl="ServerClass()" line="1178" name="httpd" />
+        <variable citdl="str" ilk="argument" name="protocol" />
+        <variable citdl="HTTPServer" ilk="argument" name="ServerClass" />
+        <variable citdl="tuple" line="1175" name="server_address" />
+        <variable citdl="httpd.socket.getsockname()" line="1180" name="sa" />
+        <variable citdl="int" line="1172" name="port" />
+      </scope>
+      <import module="time" />
+      <import module="urllib" />
+      <variable attributes="__hidden__" citdl="str" line="83" name="__version__" />
+      <scope attributes="protected __hidden__" ilk="function" line="123" lineend="124" name="_quote_html" signature="_quote_html(html)">
+        <variable ilk="argument" name="html" />
+      </scope>
+      <scope attributes="protected __hidden__" doc="Given a URL path, remove extra &apos;/&apos;s and &apos;.&apos; path elements and collapse&#xA;any &apos;..&apos; references.&#xA;&#xA;Implements something akin to RFC-2396 5.2 step 6 to parse relative paths.&#xA;&#xA;Returns: A tuple of (head, tail) where tail is everything after the final /&#xA;and head is everything before it.  Head will always start with a &apos;/&apos; and,&#xA;if it contains anything else, never have a trailing &apos;/&apos;.&#xA;&#xA;Raises: IndexError if too many &apos;..&apos; occur within the path." ilk="function" line="832" lineend="868" name="_url_collapse_path_split" returns="tuple" signature="_url_collapse_path_split(path)">
+        <variable ilk="argument" name="path" />
+        <variable citdl="list" line="847" name="path_parts" />
+        <variable citdl="str" line="856" name="tail_part" />
+        <variable citdl="list" line="859" name="head_parts" />
+      </scope>
+    </scope>
+    

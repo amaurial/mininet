@@ -1,0 +1,145 @@
+<scope doc="Email address parsing code.&#xA;Lifted directly from rfc822.py.  This should eventually be rewritten." ilk="blob" lang="Python" name="email._parseaddr">
+      <scope classrefs="AddrlistClass" doc="An AddressList encapsulates a list of parsed RFC 2822 addresses.&#xA;" ilk="class" line="466" lineend="511" name="AddressList">
+        <scope ilk="function" line="502" lineend="507" name="__isub__" returns="AddressList" signature="__isub__(self, other)">
+          <variable citdl="AddressList" ilk="argument" name="self" />
+          <variable ilk="argument" name="other" />
+        </scope>
+        <scope ilk="function" line="509" lineend="511" name="__getitem__" signature="__getitem__(self, index)">
+          <variable ilk="argument" name="index" />
+          <variable citdl="AddressList" ilk="argument" name="self" />
+        </scope>
+        <scope ilk="function" line="487" lineend="492" name="__iadd__" returns="AddressList" signature="__iadd__(self, other)">
+          <variable citdl="AddressList" ilk="argument" name="self" />
+          <variable ilk="argument" name="other" />
+        </scope>
+        <scope ilk="function" line="475" lineend="476" name="__len__" returns="len()" signature="__len__(self)">
+          <variable citdl="AddressList" ilk="argument" name="self" />
+        </scope>
+        <scope ilk="function" line="478" lineend="485" name="__add__" signature="__add__(self, other)">
+          <variable citdl="" line="480" name="newaddr" />
+          <variable citdl="AddressList" ilk="argument" name="self" />
+          <variable ilk="argument" name="other" />
+        </scope>
+        <scope ilk="function" line="494" lineend="500" name="__sub__" signature="__sub__(self, other)">
+          <variable citdl="" line="496" name="newaddr" />
+          <variable citdl="AddressList" ilk="argument" name="self" />
+          <variable ilk="argument" name="other" />
+        </scope>
+        <scope ilk="function" line="468" lineend="473" name="__init__" signature="__init__(self, field)">
+          <variable ilk="argument" name="field" />
+          <variable citdl="AddressList" ilk="argument" name="self" />
+        </scope>
+        <variable attributes="__instancevar__" citdl="list" line="471" name="addresslist" />
+      </scope>
+      <scope classrefs="object" doc="Address parser class by Ben Escoto.&#xA;To understand what this class does, it helps to have a copy of RFC 2822 in front of you.  Note: this class interface is deprecated and may be removed in the future. Use rfc822.AddressList instead." ilk="class" line="174" lineend="464" name="AddrlistClass">
+        <scope doc="Get a quote-delimited fragment from self&apos;s field." ilk="function" line="411" lineend="413" name="getquote" returns="AddrlistClass.getdelimited()" signature="getquote(self)">
+          <variable citdl="AddrlistClass" ilk="argument" name="self" />
+        </scope>
+        <scope doc="Get the complete domain name from an address." ilk="function" line="355" lineend="372" name="getdomain" returns="EMPTYSTRING.join()" signature="getdomain(self)">
+          <variable citdl="AddrlistClass" ilk="argument" name="self" />
+          <variable citdl="list" line="357" name="sdlist" />
+        </scope>
+        <scope doc="Parse an RFC 2822 addr-spec." ilk="function" line="322" lineend="353" name="getaddrspec" returns="self.getdomain()" signature="getaddrspec(self)">
+          <variable citdl="AddrlistClass" ilk="argument" name="self" />
+          <variable citdl="gotonext()" line="343" name="ws" />
+          <variable citdl="True" line="328" name="preserve_ws" />
+          <variable citdl="list" line="324" name="aslist" />
+        </scope>
+        <scope doc="Parse all addresses." ilk="function" line="217" lineend="229" name="getaddrlist" returns="list" signature="getaddrlist(self)">
+          <variable citdl="AddrlistClass" ilk="argument" name="self" />
+          <variable citdl="list" line="222" name="result" />
+          <variable citdl="self.getaddress()" line="224" name="ad" />
+        </scope>
+        <scope doc="Skip white space and extract comments." ilk="function" line="203" lineend="215" name="gotonext" returns="EMPTYSTRING.join()" signature="gotonext(self)">
+          <variable citdl="AddrlistClass" ilk="argument" name="self" />
+          <variable citdl="list" line="205" name="wslist" />
+        </scope>
+        <scope doc="Parse an RFC 2822 atom." ilk="function" line="423" lineend="441" name="getatom" returns="EMPTYSTRING.join()" signature="getatom(self, atomends=None)">
+          <variable citdl="AddrlistClass" ilk="argument" name="self" />
+          <variable citdl="str" ilk="argument" name="atomends" />
+          <variable citdl="list" line="430" name="atomlist" />
+        </scope>
+        <scope doc="Parse a header fragment delimited by special characters." ilk="function" line="374" lineend="409" name="getdelimited" returns="str" signature="getdelimited(self, beginchar, endchars, allowcomments=True)">
+          <variable citdl="list" line="390" name="slist" />
+          <variable citdl="True" ilk="argument" name="allowcomments" />
+          <variable ilk="argument" name="endchars" />
+          <variable ilk="argument" name="beginchar" />
+          <variable citdl="False" line="391" name="quote" />
+          <variable citdl="AddrlistClass" ilk="argument" name="self" />
+        </scope>
+        <scope doc="Parse the next address." ilk="function" line="231" lineend="288" name="getaddress" returns="list" signature="getaddress(self)">
+          <variable citdl="self.getaddrspec()" line="253" name="addrspec" />
+          <variable citdl="AddrlistClass" ilk="argument" name="self" />
+          <variable citdl="list" line="237" name="oldcl" />
+          <variable citdl="int" line="236" name="oldpos" />
+          <variable citdl="self.getrouteaddr()" line="271" name="routeaddr" />
+          <variable citdl="len()" line="260" name="fieldlen" />
+          <variable citdl="list" line="241" name="returnlist" />
+          <variable citdl="self.getphraselist()" line="238" name="plist" />
+        </scope>
+        <scope doc="Parse an RFC 2822 domain-literal." ilk="function" line="419" lineend="421" name="getdomainliteral" returns="str" signature="getdomainliteral(self)">
+          <variable citdl="AddrlistClass" ilk="argument" name="self" />
+        </scope>
+        <scope doc="Parse a sequence of RFC 2822 phrases." ilk="function" line="443" lineend="464" name="getphraselist" returns="list" signature="getphraselist(self)">
+          <variable citdl="AddrlistClass" ilk="argument" name="self" />
+          <variable citdl="list" line="450" name="plist" />
+        </scope>
+        <scope doc="Parse a route address (Return-path value)." ilk="function" line="290" lineend="320" name="getrouteaddr" returns="self.getaddrspec()" signature="getrouteaddr(self)">
+          <variable citdl="AddrlistClass" ilk="argument" name="self" />
+          <variable citdl="False" line="298" name="expectroute" />
+          <variable citdl="str" line="301" name="adlist" />
+        </scope>
+        <scope doc="Get a parenthesis-delimited fragment from self&apos;s field." ilk="function" line="415" lineend="417" name="getcomment" returns="AddrlistClass.getdelimited()" signature="getcomment(self)">
+          <variable citdl="AddrlistClass" ilk="argument" name="self" />
+        </scope>
+        <scope doc="Initialize a new instance." ilk="function" line="184" lineend="201" name="__init__" signature="__init__(self, field)">
+          <variable ilk="argument" name="field" />
+          <variable citdl="AddrlistClass" ilk="argument" name="self" />
+        </scope>
+        <variable attributes="__instancevar__" citdl="list" line="201" name="commentlist" />
+        <variable attributes="__instancevar__" citdl="str" line="195" name="atomends" />
+        <variable attributes="__instancevar__" citdl="str" line="192" name="LWS" />
+        <variable attributes="__instancevar__" citdl="int" line="191" name="pos" />
+        <variable attributes="__instancevar__" citdl="str" line="190" name="specials" />
+        <variable attributes="__instancevar__" line="200" name="field" />
+        <variable attributes="__instancevar__" citdl="str" line="193" name="CR" />
+        <variable attributes="__instancevar__" citdl="self.atomends.replace()" line="199" name="phraseends" />
+        <variable attributes="__instancevar__" citdl="str" line="194" name="FWS" />
+      </scope>
+      <variable citdl="str" line="20" name="COMMASPACE" />
+      <variable citdl="str" line="19" name="EMPTYSTRING" />
+      <variable citdl="str" line="18" name="SPACE" />
+      <variable citdl="list" line="9" name="__all__" />
+      <scope doc="Turn a 10-tuple as returned by parsedate_tz() into a UTC&#xA;timestamp." ilk="function" line="154" lineend="161" name="mktime_tz" returns="time.mktime()" signature="mktime_tz(data)">
+        <variable ilk="argument" name="data" />
+        <variable citdl="time.mktime()" line="160" name="t" />
+      </scope>
+      <scope doc="Convert a time string to a time tuple." ilk="function" line="145" lineend="151" name="parsedate" returns="parsedate_tz()" signature="parsedate(data)">
+        <variable ilk="argument" name="data" />
+        <variable citdl="parsedate_tz()" line="147" name="t" />
+      </scope>
+      <scope doc="Convert a date string to a time tuple." ilk="function" line="45" lineend="142" name="parsedate_tz" returns="tuple" signature="parsedate_tz(data)">
+        <variable citdl="int" line="136" name="tzsign" />
+        <variable citdl="tm" line="93" name="tz" />
+        <variable citdl="s.find()" line="57" name="i" />
+        <variable citdl="int()" line="79" name="dd" />
+        <variable line="61" name="stuff" />
+        <variable citdl="int()" line="108" name="tmm" />
+        <variable citdl="tm" line="89" name="yy" />
+        <variable citdl="_monthnames.index()" line="77" name="mm" />
+        <variable line="65" name="s" />
+        <variable citdl="tm" line="89" name="tm" />
+        <variable citdl="int()" line="107" name="thh" />
+        <variable citdl="list" ilk="argument" name="data" />
+        <variable citdl="int()" line="99" name="tss" />
+        <variable citdl="int()" line="124" name="tzoffset" />
+      </scope>
+      <scope doc="Prepare string to be used in a quoted string." ilk="function" line="164" lineend="171" name="quote" signature="quote(str)">
+        <variable ilk="argument" name="str" />
+      </scope>
+      <import module="time" />
+      <variable attributes="protected __hidden__" citdl="dict" line="36" name="_timezones" />
+      <variable attributes="protected __hidden__" citdl="list" line="28" name="_daynames" />
+      <variable attributes="protected __hidden__" citdl="list" line="23" name="_monthnames" />
+    </scope>
+    

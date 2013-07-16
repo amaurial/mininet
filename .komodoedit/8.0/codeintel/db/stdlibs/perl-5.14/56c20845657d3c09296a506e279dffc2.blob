@@ -1,0 +1,91 @@
+<scope ilk="blob" lang="Perl" name="ExtUtils::Installed">
+      <scope ilk="class" line="1" lineend="319" name="ExtUtils::Installed">
+        <import line="6" module="Carp" />
+        <import line="7" module="ExtUtils::Packlist" symbol="*" />
+        <import line="8" module="ExtUtils::MakeMaker" symbol="*" />
+        <import line="9" module="Config" symbol="*" />
+        <import line="10" module="File::Find" symbol="*" />
+        <import line="11" module="File::Basename" symbol="*" />
+        <import line="12" module="File::Spec" symbol="*" />
+        <import line="17" module="VMS::Filespec" />
+        <variable line="19" name="$VERSION" />
+        <variable line="123" name="$INSTALLED" />
+        <scope ilk="function" line="23" lineend="43" name="_is_prefix" signature="_is_prefix($self, $path, $prefix)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$path" />
+          <variable ilk="argument" name="$prefix" />
+        </scope>
+        <scope ilk="function" line="45" lineend="54" name="_is_doc" signature="_is_doc($self, $path)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$path" />
+        </scope>
+        <scope ilk="function" line="56" lineend="67" name="_is_type" signature="_is_type($self, $path, $type)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$path" />
+          <variable ilk="argument" name="$type" />
+        </scope>
+        <scope ilk="function" line="69" lineend="77" name="_is_under" signature="_is_under($self, $path, @under)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$path" />
+          <variable ilk="argument" name="@under" />
+        </scope>
+        <scope ilk="function" line="79" lineend="91" name="_fix_dirs" signature="_fix_dirs($self, @dirs)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="@dirs" />
+        </scope>
+        <scope ilk="function" line="93" lineend="121" name="_make_entry" signature="_make_entry($self, $module, $packlist_file, $modfile)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$module" />
+          <variable ilk="argument" name="$packlist_file" />
+          <variable ilk="argument" name="$modfile" />
+        </scope>
+        <scope attributes="__ctor__" ilk="function" line="124" lineend="203" name="new" signature="new(%args)">
+          <variable ilk="argument" name="%args" />
+        </scope>
+        <scope ilk="function" line="207" lineend="231" name="_module_name" signature="_module_name($file, $orig_module)">
+          <variable ilk="argument" name="$file" />
+          <variable ilk="argument" name="$orig_module" />
+        </scope>
+        <scope ilk="function" line="233" lineend="241" name="modules" signature="modules($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="243" lineend="260" name="files" signature="files($self, $module, $type, @under)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$module" />
+          <variable ilk="argument" name="$type" />
+          <variable ilk="argument" name="@under" />
+        </scope>
+        <scope ilk="function" line="262" lineend="270" name="directories" signature="directories($self, $module, $type, @under)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$module" />
+          <variable ilk="argument" name="$type" />
+          <variable ilk="argument" name="@under" />
+        </scope>
+        <scope ilk="function" line="272" lineend="287" name="directory_tree" signature="directory_tree($self, $module, $type, @under)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$module" />
+          <variable ilk="argument" name="$type" />
+          <variable ilk="argument" name="@under" />
+        </scope>
+        <scope ilk="function" line="289" lineend="294" name="validate" signature="validate($self, $module, $remove)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$module" />
+          <variable ilk="argument" name="$remove" />
+        </scope>
+        <scope ilk="function" line="296" lineend="301" name="packlist" signature="packlist($self, $module)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$module" />
+        </scope>
+        <scope ilk="function" line="303" lineend="308" name="version" signature="version($self, $module)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$module" />
+        </scope>
+        <scope ilk="function" line="310" lineend="316" name="debug_dump" signature="debug_dump($self, $module)">
+          <import line="314" module="Data::Dumper" />
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$module" />
+          <import line="314" module="Data::Dumper" />
+        </scope>
+      </scope>
+    </scope>
+    

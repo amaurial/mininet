@@ -1,0 +1,52 @@
+<scope ilk="blob" lang="Perl" name="SQL::Eval">
+      <scope ilk="class" line="3" lineend="49" name="SQL::Eval">
+        <import line="12" module="Carp" symbol="croak" />
+        <variable line="8" name="$VERSION" />
+        <scope attributes="__ctor__" ilk="function" line="14" lineend="20" name="new" signature="new($proto, $attr)">
+          <variable ilk="argument" name="$proto" />
+          <variable ilk="argument" name="$attr" />
+        </scope>
+        <scope ilk="function" line="22" lineend="29" name="param" signature="param($self, $paramNum, $param)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$paramNum" />
+          <variable ilk="argument" name="$param" />
+        </scope>
+        <scope ilk="function" line="31" lineend="37" name="params" signature="params($self, $array)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$array" />
+        </scope>
+        <scope ilk="function" line="39" lineend="42" name="table" signature="table()" />
+        <scope ilk="function" line="44" lineend="49" name="column" signature="column($self, $table, $column)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$table" />
+          <variable ilk="argument" name="$column" />
+        </scope>
+      </scope>
+      <scope ilk="class" line="51" lineend="129" name="SQL::Eval::Table">
+        <import line="53" module="Carp" symbol="croak" />
+        <import line="54" module="Params::Util" symbol="_ARRAY0" />
+        <import line="54" module="Params::Util" symbol="_HASH0" />
+        <scope attributes="__ctor__" ilk="function" line="56" lineend="71" name="new" signature="new($proto, $attr)">
+          <variable ilk="argument" name="$proto" />
+          <variable ilk="argument" name="$attr" />
+        </scope>
+        <scope ilk="function" line="73" lineend="79" name="_map_colnums" signature="_map_colnums()">
+          </scope>
+        <scope ilk="function" line="81" lineend="81" name="row" signature="row()" />
+        <scope ilk="function" line="82" lineend="82" name="column" signature="column()" />
+        <scope ilk="function" line="83" lineend="83" name="column_num" signature="column_num()" />
+        <scope ilk="function" line="84" lineend="84" name="col_nums" signature="col_nums()" />
+        <scope ilk="function" line="85" lineend="85" name="col_names" signature="col_names()" />
+        <scope ilk="function" line="87" lineend="120" name="capability" signature="capability($self, $capname)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$capname" />
+        </scope>
+        <scope ilk="function" line="122" lineend="122" name="drop" signature="drop()" />
+        <scope ilk="function" line="123" lineend="123" name="fetch_row" signature="fetch_row()" />
+        <scope ilk="function" line="124" lineend="124" name="push_row" signature="push_row()" />
+        <scope ilk="function" line="125" lineend="125" name="push_names" signature="push_names()" />
+        <scope ilk="function" line="126" lineend="126" name="truncate" signature="truncate()" />
+        <scope ilk="function" line="127" lineend="127" name="seek" signature="seek()" />
+      </scope>
+    </scope>
+    

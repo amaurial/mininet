@@ -1,0 +1,58 @@
+<scope ilk="blob" lang="Perl" name="Oraperl">
+      <scope classrefs="Exporter" ilk="class" line="18" lineend="227" name="Oraperl">
+        <import line="22" module="DBI" symbol="*" />
+        <import line="23" module="Exporter" symbol="*" />
+        <variable line="25" name="$VERSION" />
+        <variable line="38" name="$debug" />
+        <variable line="39" name="$debugdbi" />
+        <variable line="41" name="$safe" />
+        <variable line="55" name="$drh" />
+        <variable line="116" name="$Oraperl::ora_cache_o" />
+        <variable line="126" name="*ora_bind" />
+        <variable line="127" name="*ora_fetch" />
+        <variable line="128" name="*ora_close" />
+        <variable line="177" name="*ora_commit" />
+        <variable line="178" name="*ora_rollback" />
+        <variable line="198" name="*Oraperl::ora_errno" />
+        <variable line="199" name="*Oraperl::ora_errstr" />
+        <variable line="210" name="$Oraperl::ora_verno" />
+        <variable line="216" name="$Oraperl::ora_trunc" />
+        <variable line="224" name="*ora_readblob" />
+        <scope ilk="function" line="66" lineend="70" name="_func_ref" signature="_func_ref($name)">
+          <variable ilk="argument" name="$name" />
+        </scope>
+        <scope ilk="function" line="72" lineend="80" name="_warn" signature="_warn($prev_warn)">
+          <variable ilk="argument" name="$prev_warn" />
+        </scope>
+        <scope attributes="__exported__" ilk="function" line="88" lineend="95" name="ora_login" signature="ora_login($system_id, $name, $password)">
+          <variable ilk="argument" name="$system_id" />
+          <variable ilk="argument" name="$name" />
+          <variable ilk="argument" name="$password" />
+        </scope>
+        <scope attributes="__exported__" ilk="function" line="96" lineend="102" name="ora_logoff" signature="ora_logoff($dbh)">
+          <variable ilk="argument" name="$dbh" />
+        </scope>
+        <scope attributes="__exported__" ilk="function" line="114" lineend="124" name="ora_open" signature="ora_open($lda, $stmt)">
+          <variable ilk="argument" name="$lda" />
+          <variable ilk="argument" name="$stmt" />
+        </scope>
+        <scope attributes="__exported__" ilk="function" line="130" lineend="148" name="ora_do" signature="ora_do($lda, $stmt, @params)">
+          <variable ilk="argument" name="$lda" />
+          <variable ilk="argument" name="$stmt" />
+          <variable ilk="argument" name="@params" />
+        </scope>
+        <scope attributes="__exported__" ilk="function" line="157" lineend="161" name="ora_titles" signature="ora_titles($csr, $trunc)">
+          <variable ilk="argument" name="$csr" />
+          <variable ilk="argument" name="$trunc" />
+        </scope>
+        <scope attributes="__exported__" ilk="function" line="162" lineend="164" name="ora_lengths" signature="ora_lengths()" />
+        <scope attributes="__exported__" ilk="function" line="165" lineend="167" name="ora_types" signature="ora_types()" />
+        <scope attributes="__exported__" ilk="function" line="180" lineend="184" name="ora_autocommit" signature="ora_autocommit($lda, $mode)">
+          <variable ilk="argument" name="$lda" />
+          <variable ilk="argument" name="$mode" />
+        </scope>
+        <scope attributes="__exported__" ilk="function" line="185" lineend="191" name="ora_version" signature="ora_version()">
+          </scope>
+      </scope>
+    </scope>
+    

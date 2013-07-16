@@ -1,0 +1,77 @@
+<scope ilk="blob" lang="Perl" name="PPIx::Regexp::Node">
+      <scope ilk="class" line="32" lineend="422" name="PPIx::Regexp::Node">
+        <import line="39" module="List::Util" symbol="max" />
+        <import line="40" module="PPIx::Regexp::Constant" symbol="MINIMUM_PERL" />
+        <import line="41" module="PPIx::Regexp::Util" symbol="__instance" />
+        <import line="42" module="Scalar::Util" symbol="refaddr" />
+        <variable line="44" name="$VERSION" />
+        <variable line="126" name="*elements" />
+        <scope attributes="__ctor__" ilk="function" line="46" lineend="60" name="_new" signature="_new($class, @children)">
+          <variable ilk="argument" name="$class" />
+          <variable ilk="argument" name="@children" />
+        </scope>
+        <scope ilk="function" line="72" lineend="76" name="child" signature="child($self, $inx)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$inx" />
+        </scope>
+        <scope ilk="function" line="85" lineend="88" name="children" signature="children($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="99" lineend="110" name="contains" signature="contains($self, $elem)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$elem" />
+        </scope>
+        <scope ilk="function" line="112" lineend="115" name="content" signature="content($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="156" lineend="165" name="_find_routine" signature="_find_routine($want)">
+          <variable ilk="argument" name="$want" />
+        </scope>
+        <scope ilk="function" line="167" lineend="189" name="find" signature="find($self, $want)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$want" />
+        </scope>
+        <scope ilk="function" line="208" lineend="223" name="find_parents" signature="find_parents($self, $want)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$want" />
+        </scope>
+        <scope ilk="function" line="233" lineend="255" name="find_first" signature="find_first($self, $want)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$want" />
+        </scope>
+        <scope ilk="function" line="263" lineend="266" name="first_element" signature="first_element($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="274" lineend="277" name="last_element" signature="last_element($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="289" lineend="293" name="perl_version_introduced" signature="perl_version_introduced($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="305" lineend="318" name="perl_version_removed" signature="perl_version_removed($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="329" lineend="362" name="schild" signature="schild($self, $inx)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$inx" />
+        </scope>
+        <scope ilk="function" line="370" lineend="383" name="schildren" signature="schildren($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="385" lineend="388" name="tokens" signature="tokens($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="391" lineend="399" name="_nav" signature="_nav($self, $child)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$child" />
+        </scope>
+        <scope ilk="function" line="404" lineend="411" name="__PPIX_LEXER__finalize" signature="__PPIX_LEXER__finalize($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="414" lineend="420" name="__PPIX_LEXER__record_capture_number" signature="__PPIX_LEXER__record_capture_number($self, $number)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$number" />
+        </scope>
+      </scope>
+    </scope>
+    

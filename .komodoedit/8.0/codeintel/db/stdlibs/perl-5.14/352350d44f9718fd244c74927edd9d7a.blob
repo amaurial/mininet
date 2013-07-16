@@ -1,0 +1,34 @@
+<scope ilk="blob" lang="Perl" name="Unicode::Normalize">
+      <scope classrefs="Exporter DynaLoader" ilk="class" line="1" lineend="126" name="Unicode::Normalize">
+        <import line="12" module="Carp" symbol="*" />
+        <import line="48" module="Exporter" />
+        <import line="53" module="DynaLoader" />
+        <variable line="16" name="$VERSION" />
+        <variable line="17" name="$PACKAGE" />
+        <variable line="19" name="@EXPORT" />
+        <variable line="20" name="@EXPORT_OK" />
+        <variable line="29" name="%EXPORT_TAGS" />
+        <variable line="67" name="%formNorm" />
+        <variable line="108" name="%formCheck" />
+        <scope ilk="function" line="40" lineend="42" name="pack_U" signature="pack_U()" />
+        <scope ilk="function" line="44" lineend="46" name="unpack_U" signature="unpack_U()" />
+        <scope ilk="function" line="62" lineend="65" name="FCD" signature="FCD($str)">
+          <variable ilk="argument" name="$str" />
+        </scope>
+        <scope ilk="function" line="75" lineend="83" name="normalize" signature="normalize($form, $str)">
+          <variable ilk="argument" name="$form" />
+          <variable ilk="argument" name="$str" />
+        </scope>
+        <scope ilk="function" line="89" lineend="97" name="normalize_partial" signature="normalize_partial()">
+          </scope>
+        <scope ilk="function" line="99" lineend="99" name="NFD_partial" signature="NFD_partial()" />
+        <scope ilk="function" line="100" lineend="100" name="NFC_partial" signature="NFC_partial()" />
+        <scope ilk="function" line="101" lineend="101" name="NFKD_partial" signature="NFKD_partial()" />
+        <scope ilk="function" line="102" lineend="102" name="NFKC_partial" signature="NFKC_partial()" />
+        <scope ilk="function" line="116" lineend="124" name="check" signature="check($form, $str)">
+          <variable ilk="argument" name="$form" />
+          <variable ilk="argument" name="$str" />
+        </scope>
+      </scope>
+    </scope>
+    

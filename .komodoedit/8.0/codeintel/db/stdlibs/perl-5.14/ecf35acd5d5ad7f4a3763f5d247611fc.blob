@@ -1,0 +1,103 @@
+<scope ilk="blob" lang="Perl" name="Object::Accessor">
+      <scope ilk="class" line="1" lineend="742" name="Object::Accessor">
+        <import line="4" module="Carp" symbol="carp" />
+        <import line="4" module="Carp" symbol="croak" />
+        <import line="6" module="Params::Check" symbol="allow" />
+        <import line="7" module="Data::Dumper" symbol="*" />
+        <import line="11" module="overload" />
+        <variable line="5" name="$AUTOLOAD" />
+        <variable line="5" name="$DEBUG" />
+        <variable line="5" name="$FATAL" />
+        <variable line="5" name="$VERSION" />
+        <scope attributes="__ctor__" ilk="function" line="126" lineend="133" name="new" signature="new($class)">
+          <variable ilk="argument" name="$class" />
+        </scope>
+        <scope ilk="function" line="191" lineend="215" name="mk_accessors" signature="mk_accessors()">
+          </scope>
+        <scope ilk="function" line="225" lineend="229" name="ls_accessors" signature="ls_accessors()" />
+        <scope ilk="function" line="239" lineend="245" name="ls_allow" signature="ls_allow($self, $key)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$key" />
+        </scope>
+        <scope ilk="function" line="265" lineend="281" name="mk_aliases" signature="mk_aliases($self, %aliases)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="%aliases" />
+        </scope>
+        <scope ilk="function" line="292" lineend="321" name="mk_clone" signature="mk_clone()">
+          </scope>
+        <scope ilk="function" line="332" lineend="339" name="mk_flush" signature="mk_flush()">
+          </scope>
+        <scope ilk="function" line="349" lineend="364" name="mk_verify" signature="mk_verify()">
+          </scope>
+        <scope ilk="function" line="397" lineend="406" name="register_callback" signature="register_callback($self, $sub)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$sub" />
+        </scope>
+        <scope ilk="function" line="429" lineend="447" name="can" signature="can($self, $method)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$method" />
+        </scope>
+        <scope ilk="function" line="450" lineend="450" name="DESTROY" signature="DESTROY()" />
+        <scope ilk="function" line="454" lineend="461" name="AUTOLOAD" signature="AUTOLOAD($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="463" lineend="544" name="___autoload" signature="___autoload($self, $method)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$method" />
+        </scope>
+        <scope ilk="function" line="558" lineend="562" name="___get" signature="___get($self, $method)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$method" />
+        </scope>
+        <scope ilk="function" line="574" lineend="588" name="___set" signature="___set($self, $method, $val)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$method" />
+          <variable ilk="argument" name="$val" />
+        </scope>
+        <scope ilk="function" line="599" lineend="607" name="___alias" signature="___alias($self, $alias, $method)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$alias" />
+          <variable ilk="argument" name="$method" />
+        </scope>
+        <scope ilk="function" line="609" lineend="619" name="___debug" signature="___debug($self, $msg, $lvl)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$msg" />
+          <variable ilk="argument" name="$lvl" />
+        </scope>
+        <scope ilk="function" line="621" lineend="627" name="___error" signature="___error($self, $msg, $lvl)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$msg" />
+          <variable ilk="argument" name="$lvl" />
+        </scope>
+        <scope ilk="function" line="632" lineend="643" name="___callback" signature="___callback($self, $sub)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$sub" />
+        </scope>
+      </scope>
+      <scope ilk="class" line="696" lineend="737" name="Object::Accessor::Lvalue">
+        <variable line="699" name="$AUTOLOAD" />
+        <variable line="702" name="*VALUE" />
+        <variable line="703" name="*ALLOW" />
+        <scope ilk="function" line="706" lineend="718" name="AUTOLOAD : lvalue" signature="AUTOLOAD : lvalue($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="720" lineend="729" name="mk_accessors" signature="mk_accessors($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="731" lineend="737" name="register_callback" signature="register_callback($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+      </scope>
+      <scope ilk="class" line="742" lineend="819" name="Object::Accessor::TIE">
+        <import line="743" module="Tie::Scalar" symbol="*" />
+        <import line="744" module="Data::Dumper" symbol="*" />
+        <scope attributes="__ctor__" ilk="function" line="749" lineend="758" name="TIESCALAR" signature="TIESCALAR($class, $sub)">
+          <variable ilk="argument" name="$class" />
+          <variable ilk="argument" name="$sub" />
+        </scope>
+        <scope ilk="function" line="760" lineend="766" name="DESTROY" signature="DESTROY($tied)">
+          <variable ilk="argument" name="$tied" />
+        </scope>
+      </scope>
+    </scope>
+    

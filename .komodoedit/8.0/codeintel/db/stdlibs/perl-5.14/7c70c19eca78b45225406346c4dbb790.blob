@@ -1,0 +1,38 @@
+<scope ilk="blob" lang="Perl" name="B::Showlex">
+      <scope ilk="class" line="1" lineend="122" name="B::Showlex">
+        <import line="6" module="B" symbol="svref_2object" />
+        <import line="6" module="B" symbol="comppadlist" />
+        <import line="6" module="B" symbol="class" />
+        <import line="7" module="B::Terse" />
+        <import line="8" module="B::Concise" />
+        <variable line="3" name="$VERSION" />
+        <variable line="21" name="$walkHandle" />
+        <scope ilk="function" line="23" lineend="28" name="walk_output" signature="walk_output()" />
+        <scope ilk="function" line="30" lineend="45" name="shownamearray" signature="shownamearray($name, $av)">
+          <variable ilk="argument" name="$name" />
+          <variable ilk="argument" name="$av" />
+        </scope>
+        <scope ilk="function" line="47" lineend="57" name="showvaluearray" signature="showvaluearray($name, $av)">
+          <variable ilk="argument" name="$name" />
+          <variable ilk="argument" name="$av" />
+        </scope>
+        <scope ilk="function" line="59" lineend="63" name="showlex" signature="showlex($objname, $namesav, $valsav)">
+          <variable ilk="argument" name="$objname" />
+          <variable ilk="argument" name="$namesav" />
+          <variable ilk="argument" name="$valsav" />
+        </scope>
+        <scope ilk="function" line="67" lineend="78" name="newlex" signature="newlex($objname, $names, $vals)">
+          <variable ilk="argument" name="$objname" />
+          <variable ilk="argument" name="$names" />
+          <variable ilk="argument" name="$vals" />
+        </scope>
+        <scope ilk="function" line="80" lineend="85" name="showlex_obj" signature="showlex_obj($objname, $obj)">
+          <variable ilk="argument" name="$objname" />
+          <variable ilk="argument" name="$obj" />
+        </scope>
+        <scope ilk="function" line="87" lineend="90" name="showlex_main" signature="showlex_main()" />
+        <scope ilk="function" line="92" lineend="120" name="compile" signature="compile()">
+          </scope>
+      </scope>
+    </scope>
+    

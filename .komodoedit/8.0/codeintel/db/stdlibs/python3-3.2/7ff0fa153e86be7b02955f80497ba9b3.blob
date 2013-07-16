@@ -1,0 +1,193 @@
+<scope doc="# A higher level module for using sockets (or Windows named pipes)&#xA;# # multiprocessing/connection.py # # Copyright (c) 2006-2008, R Oudkerk # All rights reserved. # # Redistribution and use in source and binary forms, with or without # modification, are permitted provided that the following conditions # are met: #" ilk="blob" lang="Python" name="multiprocessing.connection">
+      <scope classrefs="ProcessError" doc="&#xA;" ilk="class" name="AuthenticationError" />
+      <variable citdl="int" line="55" name="BUFSIZE" />
+      <variable citdl="bytes" line="388" name="CHALLENGE" />
+      <variable citdl="float" line="57" name="CONNECTION_TIMEOUT" />
+      <scope doc="Returns a connection to the address of a `Listener`" ilk="function" line="161" lineend="178" name="Client" returns="PipeClient()" signature="Client(address, family=None, authkey=None)">
+        <variable ilk="argument" name="authkey" />
+        <variable citdl="SocketClient()" line="167" name="c" />
+        <variable citdl="address_type()" ilk="argument" name="family" />
+        <variable ilk="argument" name="address" />
+      </scope>
+      <scope classrefs="object" doc="&#xA;" ilk="class" line="421" lineend="434" name="ConnectionWrapper">
+        <scope ilk="function" line="432" lineend="434" name="recv" returns="ConnectionWrapper._loads()" signature="recv(self)">
+          <variable citdl="ConnectionWrapper" ilk="argument" name="self" />
+          <variable citdl="self._conn.recv_bytes()" line="433" name="s" />
+        </scope>
+        <scope ilk="function" line="429" lineend="431" name="send" signature="send(self, obj)">
+          <variable citdl="ConnectionWrapper" ilk="argument" name="self" />
+          <variable ilk="argument" name="obj" />
+          <variable citdl="_dumps()" line="430" name="s" />
+        </scope>
+        <scope ilk="function" line="422" lineend="428" name="__init__" signature="__init__(self, conn, dumps, loads)">
+          <variable ilk="argument" name="dumps" />
+          <variable citdl="ConnectionWrapper" ilk="argument" name="self" />
+          <variable citdl="getattr()" line="427" name="obj" />
+          <variable ilk="argument" name="loads" />
+          <variable ilk="argument" name="conn" />
+        </scope>
+        <variable attributes="protected __instancevar__" line="423" name="_conn" />
+        <variable attributes="protected __instancevar__" line="424" name="_dumps" />
+        <variable attributes="protected __instancevar__" line="425" name="_loads" />
+      </scope>
+      <variable citdl="bytes" line="390" name="FAILURE" />
+      <scope classrefs="object" doc="Class which supports object finalization using weakrefs&#xA;" ilk="class" name="Finalize">
+        <scope doc="Run the callback unless it has already been called or&#xA;cancelled" ilk="function" name="__call__" signature="__call__(self, wr=None)" />
+        <scope ilk="function" name="__repr__" signature="__repr__(self)" />
+        <scope doc="Return whether this finalizer is still waiting to invoke&#xA;callback" ilk="function" name="still_active" signature="still_active(self)" />
+        <scope doc="Cancel finalization of the object" ilk="function" name="cancel" signature="cancel(self)" />
+        <scope ilk="function" name="__init__" signature="__init__(self, obj, callback, args=(), kwargs=None, exitpriority=None)" />
+      </scope>
+      <scope classrefs="object" doc="Returns a listener object.&#xA;This is a wrapper for a bound socket which is &apos;listening&apos; for connections, or for a Windows named pipe." ilk="class" line="117" lineend="158" name="Listener">
+        <scope ilk="function" line="124" lineend="137" name="__init__" signature="__init__(self, address=None, family=None, backlog=1, authkey=None)">
+          <variable ilk="argument" name="authkey" />
+          <variable citdl="Listener" ilk="argument" name="self" />
+          <variable citdl="int" ilk="argument" name="backlog" />
+          <variable citdl="address_type()" ilk="argument" name="family" />
+          <variable citdl="arbitrary_address()" ilk="argument" name="address" />
+        </scope>
+        <scope doc="Close the bound socket or named pipe of `self`." ilk="function" line="151" lineend="155" name="close" returns="self._listener.close()" signature="close(self)">
+          <variable citdl="Listener" ilk="argument" name="self" />
+        </scope>
+        <scope doc="Accept a connection on the bound socket or named pipe of&#xA;`self`." ilk="function" line="139" lineend="149" name="accept" returns="self._listener.accept()" signature="accept(self)">
+          <variable citdl="Listener" ilk="argument" name="self" />
+          <variable citdl="self._listener.accept()" line="145" name="c" />
+        </scope>
+        <variable attributes="protected __instancevar__" citdl="SocketListener()" line="130" name="_listener" />
+        <variable attributes="protected __instancevar__" line="137" name="_authkey" />
+        <variable citdl="property()" line="158" name="last_accepted" />
+        <variable citdl="property()" line="157" name="address" />
+      </scope>
+      <variable citdl="int" line="386" name="MESSAGE_LENGTH" />
+      <scope doc="Returns pair of connection objects at either end of a pipe" ilk="function" line="204" lineend="240" name="Pipe" returns="tuple" signature="Pipe(duplex=True)">
+        <variable citdl="win32.PIPE_ACCESS_DUPLEX" line="210" name="openmode" />
+        <variable citdl="True" ilk="argument" name="duplex" />
+        <variable citdl="int" line="212" name="obsize" />
+        <variable citdl="win32.CreateNamedPipe()" line="218" name="h1" />
+        <variable citdl="int" line="211" name="access" />
+        <variable citdl="win32.CreateFile()" line="224" name="h2" />
+        <variable citdl="arbitrary_address()" line="208" name="address" />
+        <variable citdl="_multiprocessing.PipeConnection()" line="238" name="c2" />
+        <variable citdl="int" line="212" name="ibsize" />
+        <variable citdl="_multiprocessing.PipeConnection()" line="237" name="c1" />
+      </scope>
+      <scope doc="Return a connection object connected to the pipe given by&#xA;`address`" ilk="function" line="356" lineend="380" name="PipeClient" returns="_multiprocessing.PipeConnection()" signature="PipeClient(address)">
+        <variable citdl="win32.CreateFile()" line="364" name="h" />
+        <variable citdl="_init_timeout()" line="360" name="t" />
+        <variable ilk="argument" name="address" />
+      </scope>
+      <scope classrefs="object" doc="Representation of a named pipe&#xA;" ilk="class" line="310" lineend="354" name="PipeListener">
+        <scope ilk="function" line="351" lineend="354" name="_finalize_pipe_listener" signature="_finalize_pipe_listener(queue, address)">
+          <variable citdl="PipeListener" ilk="argument" name="queue" />
+          <variable ilk="argument" name="address" />
+        </scope>
+        <scope ilk="function" line="333" lineend="348" name="accept" returns="_multiprocessing.PipeConnection()" signature="accept(self)">
+          <variable citdl="win32.CreateNamedPipe()" line="334" name="newhandle" />
+          <variable citdl="PipeListener" ilk="argument" name="self" />
+          <variable citdl="self._handle_queue.pop()" line="342" name="handle" />
+        </scope>
+        <scope ilk="function" line="314" lineend="330" name="__init__" signature="__init__(self, address, backlog=None)">
+          <variable citdl="PipeListener" ilk="argument" name="self" />
+          <variable citdl="win32.CreateNamedPipe()" line="316" name="handle" />
+          <variable ilk="argument" name="backlog" />
+          <variable ilk="argument" name="address" />
+        </scope>
+        <variable attributes="__instancevar__" citdl="Finalize()" line="328" name="close" />
+        <variable attributes="protected __instancevar__" line="315" name="_address" />
+        <variable attributes="protected __instancevar__" citdl="list" line="323" name="_handle_queue" />
+        <variable attributes="protected __instancevar__" line="324" name="_last_accepted" />
+      </scope>
+      <scope doc="Return a connection object connected to the socket given by&#xA;`address`" ilk="function" line="279" lineend="302" name="SocketClient" returns="_multiprocessing.Connection()" signature="SocketClient(address)">
+        <variable citdl="_multiprocessing.Connection()" line="301" name="conn" />
+        <variable citdl="duplicate()" line="300" name="fd" />
+        <variable citdl="_init_timeout()" line="285" name="t" />
+        <variable citdl="address_type()" line="283" name="family" />
+        <variable ilk="argument" name="address" />
+      </scope>
+      <scope classrefs="object" doc="Representation of a socket which is bound to an address and listening&#xA;" ilk="class" line="246" lineend="276" name="SocketListener">
+        <scope ilk="function" line="266" lineend="271" name="accept" returns="_multiprocessing.Connection()" signature="accept(self)">
+          <variable citdl="SocketListener" ilk="argument" name="self" />
+          <variable citdl="duplicate()" line="268" name="fd" />
+          <variable line="267" name="s" />
+          <variable citdl="_multiprocessing.Connection()" line="269" name="conn" />
+        </scope>
+        <scope ilk="function" line="273" lineend="276" name="close" signature="close(self)">
+          <variable citdl="SocketListener" ilk="argument" name="self" />
+        </scope>
+        <scope ilk="function" line="250" lineend="264" name="__init__" signature="__init__(self, address, family, backlog=1)">
+          <variable citdl="SocketListener" ilk="argument" name="self" />
+          <variable citdl="int" ilk="argument" name="backlog" />
+          <variable ilk="argument" name="family" />
+          <variable ilk="argument" name="address" />
+        </scope>
+        <variable attributes="protected __instancevar__" citdl="self._socket.getsockname()" line="255" name="_address" />
+        <variable attributes="protected __instancevar__" citdl="socket.socket()" line="251" name="_socket" />
+        <variable attributes="protected __instancevar__" line="256" name="_family" />
+        <variable attributes="protected __instancevar__" citdl="Finalize()" line="260" name="_unlink" />
+        <variable attributes="protected __instancevar__" line="257" name="_last_accepted" />
+      </scope>
+      <variable citdl="bytes" line="389" name="WELCOME" />
+      <scope ilk="function" line="450" lineend="453" name="XmlClient" returns="ConnectionWrapper" signature="XmlClient(*args, **kwds)">
+        <variable attributes="varargs" ilk="argument" name="args" />
+        <variable attributes="kwargs" ilk="argument" name="kwds" />
+      </scope>
+      <scope classrefs="Listener" doc="&#xA;" ilk="class" line="443" lineend="448" name="XmlListener">
+        <scope ilk="function" line="444" lineend="448" name="accept" returns="ConnectionWrapper" signature="accept(self)">
+          <variable citdl="XmlListener" ilk="argument" name="self" />
+          <variable citdl="Listener.accept()" line="447" name="obj" />
+        </scope>
+      </scope>
+      <variable citdl="list" line="35" name="__all__" />
+      <import module="_multiprocessing" />
+      <scope doc="Return the types of the address" ilk="function" line="98" lineend="111" name="address_type" returns="str" signature="address_type(address)">
+        <variable ilk="argument" name="address" />
+      </scope>
+      <scope ilk="function" line="405" lineend="415" name="answer_challenge" signature="answer_challenge(connection, authkey)">
+        <variable ilk="argument" name="authkey" />
+        <variable ilk="argument" name="connection" />
+        <variable citdl="list" line="408" name="message" />
+        <variable line="411" name="digest" />
+        <variable citdl="connection.recv_bytes()" line="413" name="response" />
+      </scope>
+      <scope doc="Return an arbitrary free address for the given family" ilk="function" line="83" lineend="95" name="arbitrary_address" returns="tuple" signature="arbitrary_address(family)">
+        <variable ilk="argument" name="family" />
+      </scope>
+      <scope doc="Close a file descriptor (for low level IO)." ilk="function" name="close" signature="close(fd)" />
+      <scope doc="Return process object representing the current process" ilk="function" name="current_process" signature="current_process()" />
+      <scope ilk="function" name="debug" signature="debug(msg, *args)" />
+      <variable citdl="str" line="61" name="default_family" />
+      <scope ilk="function" line="392" lineend="403" name="deliver_challenge" signature="deliver_challenge(connection, authkey)">
+        <variable ilk="argument" name="authkey" />
+        <variable ilk="argument" name="connection" />
+        <variable citdl="os.urandom()" line="395" name="message" />
+        <variable line="397" name="digest" />
+        <variable citdl="connection.recv_bytes()" line="398" name="response" />
+      </scope>
+      <scope doc="Return a duplicate of a file descriptor." ilk="function" name="duplicate" signature="duplicate(handle, target_process=None, inheritable=False)" />
+      <import module="errno" />
+      <variable citdl="list" line="62" name="families" />
+      <scope ilk="function" name="get_temp_dir" signature="get_temp_dir()" />
+      <import module="itertools" />
+      <import module="os" />
+      <import module="socket" />
+      <scope ilk="function" name="sub_debug" signature="sub_debug(msg, *args)" />
+      <import module="sys" />
+      <import module="tempfile" />
+      <import module="time" />
+      <scope classrefs="object" doc="&#xA;" ilk="class" name="win32" />
+      <scope attributes="protected __hidden__" ilk="function" line="73" lineend="74" name="_init_timeout" returns="time.time()" signature="_init_timeout(timeout=CONNECTION_TIMEOUT)">
+        <variable citdl="float" ilk="argument" name="timeout" />
+      </scope>
+      <variable attributes="protected __hidden__" citdl="itertools.count()" line="59" name="_mmap_counter" />
+      <scope attributes="protected __hidden__" ilk="function" line="436" lineend="437" name="_xml_dumps" signature="_xml_dumps(obj)">
+        <variable ilk="argument" name="obj" />
+      </scope>
+      <scope attributes="protected __hidden__" ilk="function" line="439" lineend="441" name="_xml_loads" returns="obj" signature="_xml_loads(s)">
+        <variable ilk="argument" name="s" />
+        <variable line="440" name="method" />
+      </scope>
+      <scope attributes="protected __hidden__" ilk="function" line="76" lineend="77" name="_check_timeout" returns="bool" signature="_check_timeout(t)">
+        <variable ilk="argument" name="t" />
+      </scope>
+    </scope>
+    

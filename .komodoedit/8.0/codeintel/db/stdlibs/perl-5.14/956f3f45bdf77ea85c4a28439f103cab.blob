@@ -1,0 +1,29 @@
+<scope ilk="blob" lang="Perl" name="URI::sip">
+      <scope classrefs="URI::_server URI::_userpass" ilk="class" line="8" lineend="86" name="URI::sip">
+        <import line="10" module="URI::_server" />
+        <import line="11" module="URI::_userpass" />
+        <import line="16" module="URI::Escape" symbol="uri_unescape" />
+        <variable line="15" name="$VERSION" />
+        <variable line="15" name="@ISA" />
+        <scope ilk="function" line="20" lineend="20" name="default_port" signature="default_port()" />
+        <scope ilk="function" line="22" lineend="39" name="authority" signature="authority($self, $auth)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$auth" />
+        </scope>
+        <scope ilk="function" line="41" lineend="60" name="params_form" signature="params_form($self, @args)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="@args" />
+        </scope>
+        <scope ilk="function" line="62" lineend="76" name="params" signature="params($self, $new)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$new" />
+        </scope>
+        <scope ilk="function" line="79" lineend="79" name="path" signature="path()" />
+        <scope ilk="function" line="80" lineend="80" name="path_query" signature="path_query()" />
+        <scope ilk="function" line="81" lineend="81" name="path_segments" signature="path_segments()" />
+        <scope ilk="function" line="82" lineend="82" name="abs" signature="abs()" />
+        <scope ilk="function" line="83" lineend="83" name="rel" signature="rel()" />
+        <scope ilk="function" line="84" lineend="84" name="query_keywords" signature="query_keywords()" />
+      </scope>
+    </scope>
+    

@@ -1,0 +1,190 @@
+<scope doc="Read from and write to tar format archives.&#xA;" ilk="blob" lang="Python" name="tarfile">
+      <variable citdl="bytes" name="AREGTYPE" />
+      <variable citdl="bytes" name="BLKTYPE" />
+      <variable citdl="int" name="BLOCKSIZE" />
+      <variable citdl="bytes" name="CHRTYPE" />
+      <variable citdl="bytes" name="CONTTYPE" />
+      <scope classrefs="TarError" doc="Exception for unavailable compression methods.&#xA;" ilk="class" name="CompressionError" />
+      <variable citdl="int" name="DEFAULT_FORMAT" />
+      <variable citdl="bytes" name="DIRTYPE" />
+      <variable citdl="str" name="ENCODING" />
+      <scope classrefs="HeaderError" doc="Exception for end of file headers.&#xA;" ilk="class" name="EOFHeaderError" />
+      <scope classrefs="HeaderError" doc="Exception for empty headers.&#xA;" ilk="class" name="EmptyHeaderError" />
+      <scope classrefs="object" doc="File-like object for reading an archive member.&#xA;Is returned by TarFile.extractfile()." ilk="class" name="ExFileObject">
+        <scope ilk="function" name="writable" signature="writable(self)" />
+        <scope doc="Read at most size bytes from the file." ilk="function" name="read" signature="read(self, size=None)" />
+        <scope doc="Return a list with all remaining lines." ilk="function" name="readlines" signature="readlines(self)" />
+        <scope doc="Read at most size bytes from the file." ilk="function" name="read1" signature="read1(self, size=None)" />
+        <scope doc="Get an iterator over the file&apos;s lines." ilk="function" name="__iter__" signature="__iter__(self)" />
+        <scope ilk="function" name="readable" signature="readable(self)" />
+        <scope ilk="function" name="seekable" signature="seekable(self)" />
+        <scope doc="Close the file object." ilk="function" name="close" signature="close(self)" />
+        <scope doc="Read one entire line from the file." ilk="function" name="readline" signature="readline(self, size=-1)" />
+        <scope doc="Seek to a position in the file." ilk="function" name="seek" signature="seek(self, pos, whence=0)" />
+        <scope doc="Return the current file position." ilk="function" name="tell" signature="tell(self)" />
+        <scope ilk="function" name="__init__" signature="__init__(self, tarfile, tarinfo)" />
+      </scope>
+      <scope classrefs="TarError" doc="General exception for extract errors.&#xA;" ilk="class" name="ExtractError" />
+      <variable citdl="bytes" name="FIFOTYPE" />
+      <variable citdl="bytes" name="GNUTYPE_LONGLINK" />
+      <variable citdl="bytes" name="GNUTYPE_LONGNAME" />
+      <variable citdl="bytes" name="GNUTYPE_SPARSE" />
+      <variable citdl="int" name="GNU_FORMAT" />
+      <variable citdl="bytes" name="GNU_MAGIC" />
+      <variable citdl="tuple" name="GNU_TYPES" />
+      <scope classrefs="TarError" doc="Base exception for header errors.&#xA;" ilk="class" name="HeaderError" />
+      <scope classrefs="HeaderError" doc="Exception for invalid headers.&#xA;" ilk="class" name="InvalidHeaderError" />
+      <variable citdl="int" name="LENGTH_LINK" />
+      <variable citdl="int" name="LENGTH_NAME" />
+      <variable citdl="int" name="LENGTH_PREFIX" />
+      <variable citdl="bytes" name="LNKTYPE" />
+      <variable citdl="bytes" name="NUL" />
+      <variable citdl="tuple" name="PAX_FIELDS" />
+      <variable citdl="int" name="PAX_FORMAT" />
+      <variable citdl="set" name="PAX_NAME_FIELDS" />
+      <variable citdl="dict" name="PAX_NUMBER_FIELDS" />
+      <variable citdl="bytes" name="POSIX_MAGIC" />
+      <variable citdl="int" name="RECORDSIZE" />
+      <variable citdl="bytes" name="REGTYPE" />
+      <variable citdl="tuple" name="REGULAR_TYPES" />
+      <scope classrefs="TarError" doc="Exception for unreadble tar archives.&#xA;" ilk="class" name="ReadError" />
+      <variable citdl="bytes" name="SOLARIS_XHDTYPE" />
+      <variable citdl="tuple" name="SUPPORTED_TYPES" />
+      <variable citdl="bytes" name="SYMTYPE" />
+      <variable citdl="int" name="S_IFBLK" />
+      <variable citdl="int" name="S_IFCHR" />
+      <variable citdl="int" name="S_IFDIR" />
+      <variable citdl="int" name="S_IFIFO" />
+      <variable citdl="int" name="S_IFLNK" />
+      <variable citdl="int" name="S_IFREG" />
+      <scope classrefs="TarError" doc="Exception for unsupported operations on stream-like TarFiles.&#xA;" ilk="class" name="StreamError" />
+      <scope classrefs="HeaderError" doc="Exception for missing and invalid extended headers.&#xA;" ilk="class" name="SubsequentHeaderError" />
+      <variable citdl="int" name="TGEXEC" />
+      <variable citdl="int" name="TGREAD" />
+      <variable citdl="int" name="TGWRITE" />
+      <variable citdl="int" name="TOEXEC" />
+      <variable citdl="int" name="TOREAD" />
+      <variable citdl="int" name="TOWRITE" />
+      <variable citdl="int" name="TSGID" />
+      <variable citdl="int" name="TSUID" />
+      <variable citdl="int" name="TSVTX" />
+      <variable citdl="int" name="TUEXEC" />
+      <variable citdl="int" name="TUREAD" />
+      <variable citdl="int" name="TUWRITE" />
+      <scope classrefs="Exception" doc="Base exception.&#xA;" ilk="class" name="TarError" />
+      <scope classrefs="object" doc="The TarFile Class provides an interface to tar archives.&#xA;" ilk="class" name="TarFile">
+        <scope doc="Add the TarInfo object `tarinfo&apos; to the archive." ilk="function" name="addfile" signature="addfile(self, tarinfo, fileobj=None)" />
+        <scope doc="Set file permissions of targetpath according to tarinfo." ilk="function" name="chmod" signature="chmod(self, tarinfo, targetpath)" />
+        <scope doc="Return a TarInfo object for member `name&apos;." ilk="function" name="getmember" signature="getmember(self, name)" />
+        <scope doc="Close the TarFile." ilk="function" name="close" signature="close(self)" />
+        <scope doc="Create a TarInfo object for either the file `name&apos; or the&#xA;file object `fileobj&apos; (using os.fstat on its file&#xA;descriptor)." ilk="function" name="gettarinfo" signature="gettarinfo(self, name=None, arcname=None, fileobj=None)" />
+        <scope doc="Open a tar archive for reading, writing or appending." ilk="function" name="open" />
+        <scope doc="Open an (uncompressed) tar archive `name&apos;." ilk="function" name="__init__" signature="__init__(self, name=None, mode=&apos;r&apos;, fileobj=None, format=None, tarinfo=None, dereference=None, ignore_zeros=None, encoding=None, errors=&apos;surrogateescape&apos;, pax_headers=None, debug=None, errorlevel=None)" />
+        <scope doc="Make a fifo called targetpath." ilk="function" name="makefifo" signature="makefifo(self, tarinfo, targetpath)" />
+        <scope doc="Extract a member from the archive to the current working&#xA;directory, using its full name." ilk="function" name="extract" signature="extract(self, member, path=&apos;&apos;, set_attrs=True)" />
+        <scope ilk="function" name="__enter__" signature="__enter__(self)" />
+        <scope doc="Make a file called targetpath." ilk="function" name="makefile" signature="makefile(self, tarinfo, targetpath)" />
+        <scope doc="Return the next member of the archive as a TarInfo object,&#xA;when TarFile is opened for reading." ilk="function" name="next" signature="next(self)" />
+        <scope doc="Return the members of the archive as a list of their names." ilk="function" name="getnames" signature="getnames(self)" />
+        <scope doc="Add the file `name&apos; to the archive." ilk="function" name="add" signature="add(self, name, arcname=None, recursive=True, exclude=None, *, filter=None)" />
+        <scope doc="Make a (symbolic) link called targetpath." ilk="function" name="makelink" signature="makelink(self, tarinfo, targetpath)" />
+        <scope doc="Return the members of the archive as a list of TarInfo&#xA;objects." ilk="function" name="getmembers" signature="getmembers(self)" />
+        <scope doc="Write debugging output to sys.stderr." ilk="function" name="_dbg" signature="_dbg(self, level, msg)" />
+        <scope doc="Make a character or block device called targetpath." ilk="function" name="makedev" signature="makedev(self, tarinfo, targetpath)" />
+        <scope doc="Open gzip compressed tar archive name for reading or&#xA;writing." ilk="function" name="gzopen" />
+        <scope ilk="function" name="__exit__" signature="__exit__(self, type, value, traceback)" />
+        <scope doc="Find an archive member by name from bottom to top." ilk="function" name="_getmember" signature="_getmember(self, name, tarinfo=None, normalize=False)" />
+        <scope doc="Find the target member of a symlink or hardlink member in&#xA;the archive." ilk="function" name="_find_link_target" signature="_find_link_target(self, tarinfo)" />
+        <scope doc="Extract all members from the archive to the current working&#xA;directory and set owner, modification time and permissions&#xA;on directories afterwards." ilk="function" name="extractall" signature="extractall(self, path=&apos;.&apos;, members=None)" />
+        <scope doc="Check if TarFile is still open, and if the operation&apos;s mode&#xA;corresponds to TarFile&apos;s mode." ilk="function" name="_check" signature="_check(self, mode=None)" />
+        <scope doc="Open uncompressed tar archive name for reading or writing." ilk="function" name="taropen" />
+        <scope doc="Open bzip2 compressed tar archive name for reading or&#xA;writing." ilk="function" name="bz2open" />
+        <scope doc="Extract the TarInfo object tarinfo to a physical file called&#xA;targetpath." ilk="function" name="_extract_member" signature="_extract_member(self, tarinfo, targetpath, set_attrs=True)" />
+        <scope doc="Read through the entire archive file and look for readable&#xA;members." ilk="function" name="_load" signature="_load(self)" />
+        <scope doc="Set modification time of targetpath according to tarinfo." ilk="function" name="utime" signature="utime(self, tarinfo, targetpath)" />
+        <scope doc="Print a table of contents to sys.stdout." ilk="function" name="list" signature="list(self, verbose=True)" />
+        <scope doc="Provide an iterator object." ilk="function" name="__iter__" signature="__iter__(self)" />
+        <scope doc="Set owner of targetpath according to tarinfo." ilk="function" name="chown" signature="chown(self, tarinfo, targetpath)" />
+        <scope doc="Extract a member from the archive as a file object." ilk="function" name="extractfile" signature="extractfile(self, member)" />
+        <scope doc="Make a directory called targetpath." ilk="function" name="makedir" signature="makedir(self, tarinfo, targetpath)" />
+        <scope doc="Make a file from a TarInfo object with an unknown type at&#xA;targetpath." ilk="function" name="makeunknown" signature="makeunknown(self, tarinfo, targetpath)" />
+      </scope>
+      <scope classrefs="object" doc="Informational class which holds the details about an&#xA;archive member given by a tar header block. TarInfo objects are returned by TarFile.getmember(), TarFile.getmembers() and TarFile.gettarinfo() and are usually created internally." ilk="class" name="TarInfo">
+        <scope ilk="function" name="issym" signature="issym(self)" />
+        <scope ilk="function" name="isdev" signature="isdev(self)" />
+        <scope doc="Decode a single field from a pax record." ilk="function" name="_decode_pax_field" signature="_decode_pax_field(self, value, encoding, fallback_encoding, fallback_errors)" />
+        <scope doc="Return the object as a pax global header block sequence." ilk="function" name="create_pax_global_header" />
+        <scope doc="Round up a byte count by BLOCKSIZE and return it, e.g." ilk="function" name="_block" signature="_block(self, count)" />
+        <scope doc="Split a name longer than 100 chars into a prefix and a name&#xA;part." ilk="function" name="_posix_split_name" signature="_posix_split_name(self, name)" />
+        <scope doc="Return the TarInfo&apos;s attributes as a dictionary." ilk="function" name="get_info" signature="get_info(self)" />
+        <scope ilk="function" name="isfile" signature="isfile(self)" />
+        <scope doc="Replace fields with supplemental information from a previous&#xA;pax extended or global header." ilk="function" name="_apply_pax_info" signature="_apply_pax_info(self, pax_headers, encoding, errors)" />
+        <scope doc="Construct a TarInfo object." ilk="function" name="__init__" signature="__init__(self, name=&apos;&apos;)" />
+        <scope doc="Return the object as a ustar header block." ilk="function" name="create_pax_header" signature="create_pax_header(self, info, encoding)" />
+        <scope ilk="function" name="_setlinkpath" signature="_setlinkpath(self, linkname)" />
+        <scope doc="Return the object as a GNU header block sequence." ilk="function" name="create_gnu_header" signature="create_gnu_header(self, info, encoding, errors)" />
+        <scope doc="Return the object as a ustar header block." ilk="function" name="create_ustar_header" signature="create_ustar_header(self, info, encoding, errors)" />
+        <scope ilk="function" name="isreg" signature="isreg(self)" />
+        <scope doc="Choose the right processing method depending on the type and&#xA;call it." ilk="function" name="_proc_member" signature="_proc_member(self, tarfile)" />
+        <scope doc="Process the blocks that hold a GNU longname or longlink&#xA;member." ilk="function" name="_proc_gnulong" signature="_proc_gnulong(self, tarfile)" />
+        <scope doc="Return a GNUTYPE_LONGNAME or GNUTYPE_LONGLINK sequence for&#xA;name." ilk="function" name="_create_gnu_long_header" />
+        <scope doc="Return a POSIX.1-2008 extended or global header sequence&#xA;that contains a list of keyword, value pairs." ilk="function" name="_create_pax_generic_header" />
+        <scope doc="Process a GNU tar extended sparse header, version 1.0." ilk="function" name="_proc_gnusparse_10" signature="_proc_gnusparse_10(self, next, pax_headers, tarfile)" />
+        <scope doc="Return the next TarInfo object from TarFile object tarfile." ilk="function" name="fromtarfile" />
+        <scope ilk="function" name="_getlinkpath" signature="_getlinkpath(self)" />
+        <scope doc="Process a GNU tar extended sparse header, version 0.1." ilk="function" name="_proc_gnusparse_01" signature="_proc_gnusparse_01(self, next, pax_headers)" />
+        <scope doc="Process a GNU tar extended sparse header, version 0.0." ilk="function" name="_proc_gnusparse_00" signature="_proc_gnusparse_00(self, next, pax_headers, buf)" />
+        <scope ilk="function" name="_setpath" signature="_setpath(self, name)" />
+        <scope doc="# In pax headers the &quot;name&quot; and &quot;linkname&quot; field are called&#xA;# &quot;path&quot; and &quot;linkpath&quot;." ilk="function" name="_getpath" signature="_getpath(self)" />
+        <scope doc="Construct a TarInfo object from a 512 byte bytes object." ilk="function" name="frombuf" />
+        <scope doc="Process an extended or global header as described in&#xA;POSIX.1-2008." ilk="function" name="_proc_pax" signature="_proc_pax(self, tarfile)" />
+        <scope doc="Return a header block." ilk="function" name="_create_header" signature="_create_header(info, format, encoding, errors)" />
+        <scope ilk="function" name="isdir" signature="isdir(self)" />
+        <scope ilk="function" name="isblk" signature="isblk(self)" />
+        <scope ilk="function" name="ischr" signature="ischr(self)" />
+        <scope doc="Process a builtin type or an unknown type which will be&#xA;treated as a regular file." ilk="function" name="_proc_builtin" signature="_proc_builtin(self, tarfile)" />
+        <scope doc="Return a tar header as a string of 512 byte blocks." ilk="function" name="tobuf" signature="tobuf(self, format=1, encoding=&apos;utf-8&apos;, errors=&apos;surrogateescape&apos;)" />
+        <scope ilk="function" name="issparse" signature="issparse(self)" />
+        <scope doc="Return the string payload filled with zero bytes up to the&#xA;next 512 byte border." ilk="function" name="_create_payload" signature="_create_payload(payload)" />
+        <scope ilk="function" name="isfifo" signature="isfifo(self)" />
+        <scope ilk="function" name="__repr__" signature="__repr__(self)" />
+        <scope ilk="function" name="islnk" signature="islnk(self)" />
+        <scope doc="Process a GNU sparse header plus extra headers." ilk="function" name="_proc_sparse" signature="_proc_sparse(self, tarfile)" />
+      </scope>
+      <scope classrefs="object" doc="Iterator Class.&#xA;for tarinfo in TarFile(...): suite..." ilk="class" name="TarIter">
+        <scope doc="Return the next item using TarFile&apos;s next() method." ilk="function" name="__next__" signature="__next__(self)" />
+        <scope doc="Return iterator object." ilk="function" name="__iter__" signature="__iter__(self)" />
+        <scope doc="Construct a TarIter object." ilk="function" name="__init__" signature="__init__(self, tarfile)" />
+      </scope>
+      <scope classrefs="HeaderError" doc="Exception for truncated headers.&#xA;" ilk="class" name="TruncatedHeaderError" />
+      <variable citdl="int" name="USTAR_FORMAT" />
+      <variable citdl="bytes" name="XGLTYPE" />
+      <variable citdl="bytes" name="XHDTYPE" />
+      <variable citdl="list" name="__all__" />
+      <variable citdl="str" name="__cvsid__" />
+      <scope doc="open(file, mode=&apos;r&apos;, buffering=-1, encoding=None,&#xA;errors=None, newline=None, closefd=True) -&gt; file object" ilk="function" name="bltn_open" />
+      <scope doc="Calculate the checksum for a member&apos;s header by summing up&#xA;all characters except for the chksum field which is treated&#xA;as if it was filled with spaces." ilk="function" name="calc_chksums" signature="calc_chksums(buf)" />
+      <import module="copy" />
+      <scope doc="Copy length bytes from fileobj src to fileobj dst." ilk="function" name="copyfileobj" signature="copyfileobj(src, dst, length=None)" />
+      <import module="errno" />
+      <scope doc="Convert a file&apos;s mode to a string of the form -rwxrwxrwx." ilk="function" name="filemode" signature="filemode(mode)" />
+      <variable citdl="tuple" name="filemode_table" />
+      <variable citdl="NoneType" name="grp" />
+      <scope doc="Return True if name points to a tar archive that we are able&#xA;to handle, else return False." ilk="function" name="is_tarfile" signature="is_tarfile(name)" />
+      <scope doc="Convert a python number to a number field." ilk="function" name="itn" signature="itn(n, digits=8, format=1)" />
+      <scope doc="Convert a number field to a python number." ilk="function" name="nti" signature="nti(s)" />
+      <scope doc="Convert a null-terminated bytes object to a string." ilk="function" name="nts" signature="nts(s, encoding, errors)" />
+      <scope doc="Open a tar archive for reading, writing or appending." ilk="function" name="open" />
+      <import module="os" />
+      <variable citdl="NoneType" name="pwd" />
+      <import module="re" />
+      <import module="shutil" />
+      <import module="stat" />
+      <scope doc="Convert a string to a null-terminated bytes object." ilk="function" name="stn" signature="stn(s, length, encoding, errors)" />
+      <import module="struct" />
+      <variable citdl="tuple" name="symlink_exception" />
+      <import module="sys" />
+      <import module="time" />
+      <variable citdl="str" name="version" />
+    </scope>
+    

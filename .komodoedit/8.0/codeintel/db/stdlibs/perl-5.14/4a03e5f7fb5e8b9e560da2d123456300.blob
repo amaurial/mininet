@@ -1,0 +1,28 @@
+<scope ilk="blob" lang="Perl" name="Net::hostent">
+      <scope ilk="class" line="1" lineend="64" name="Net::hostent">
+        <import line="8" module="Exporter" />
+        <import line="22" module="Class::Struct" symbol="struct" />
+        <variable line="5" name="$VERSION" />
+        <variable line="6" name="%EXPORT_TAGS" />
+        <variable line="6" name="@EXPORT" />
+        <variable line="6" name="@EXPORT_OK" />
+        <variable attributes="__exportable__" line="36" name="$h_name" />
+        <variable attributes="__exportable__" line="38" name="$h_addrtype" />
+        <variable attributes="__exportable__" line="39" name="$h_length" />
+        <variable attributes="__exportable__" line="40" name="$h_addr" />
+        <scope ilk="function" line="20" lineend="20" name="import" signature="import()" />
+        <scope ilk="function" line="31" lineend="31" name="addr" signature="addr()" />
+        <scope ilk="function" line="33" lineend="43" name="populate" signature="populate()">
+          </scope>
+        <scope attributes="__exported__" ilk="function" line="45" lineend="45" name="gethostbyname" signature="gethostbyname()" />
+        <scope attributes="__exported__" ilk="function" line="47" lineend="53" name="gethostbyaddr" signature="gethostbyaddr()">
+          <import line="50" module="Socket" />
+          <import line="50" module="Socket" />
+        </scope>
+        <scope attributes="__exported__" ilk="function" line="55" lineend="62" name="gethost" signature="gethost()">
+          <import line="57" module="Socket" />
+          <import line="57" module="Socket" />
+        </scope>
+      </scope>
+    </scope>
+    

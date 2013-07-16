@@ -1,0 +1,74 @@
+<scope ilk="blob" lang="Perl" name="SQL::Statement::Function">
+      <scope classrefs="SQL::Statement::Term" ilk="class" line="1" lineend="49" name="SQL::Statement::Function">
+        <import line="7" module="SQL::Statement::Term" />
+        <variable line="5" name="$VERSION" />
+        <variable line="5" name="@ISA" />
+        <scope ilk="function" line="42" lineend="49" name="DESTROY" signature="DESTROY()">
+          </scope>
+      </scope>
+      <scope classrefs="SQL::Statement::Function" ilk="class" line="51" lineend="148" name="SQL::Statement::Function::UserFunc">
+        <import line="55" module="Carp" />
+        <import line="56" module="Params::Util" symbol="_INSTANCE" />
+        <import line="58" module="SQL::Statement::Functions" symbol="*" />
+        <variable line="53" name="@ISA" />
+        <scope ilk="function" line="103" lineend="138" name="new" signature="new($class, $owner, $name, $subnm, $params)">
+          <variable ilk="argument" name="$class" />
+          <variable ilk="argument" name="$owner" />
+          <variable ilk="argument" name="$name" />
+          <variable ilk="argument" name="$subnm" />
+          <variable ilk="argument" name="$params" />
+        </scope>
+        <scope ilk="function" line="140" lineend="148" name="value" signature="value()">
+          </scope>
+      </scope>
+      <scope classrefs="SQL::Statement::Function" ilk="class" line="150" lineend="223" name="SQL::Statement::Function::NumericEval">
+        <import line="154" module="Params::Util" symbol="_NUMBER" />
+        <import line="154" module="Params::Util" symbol="_INSTANCE" />
+        <variable line="152" name="@ISA" />
+        <scope ilk="function" line="196" lineend="206" name="new" signature="new($class, $owner, $expr, $params)">
+          <variable ilk="argument" name="$class" />
+          <variable ilk="argument" name="$owner" />
+          <variable ilk="argument" name="$expr" />
+          <variable ilk="argument" name="$params" />
+        </scope>
+        <scope ilk="function" line="208" lineend="223" name="value" signature="value($self, $eval)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$eval" />
+        </scope>
+      </scope>
+      <scope classrefs="SQL::Statement::Function" ilk="class" line="225" lineend="314" name="SQL::Statement::Function::Trim">
+        <variable line="227" name="@ISA" />
+        <scope ilk="function" line="290" lineend="307" name="new" signature="new($class, $owner, $spec, $char, $params)">
+          <variable ilk="argument" name="$class" />
+          <variable ilk="argument" name="$owner" />
+          <variable ilk="argument" name="$spec" />
+          <variable ilk="argument" name="$char" />
+          <variable ilk="argument" name="$params" />
+        </scope>
+        <scope ilk="function" line="309" lineend="314" name="value" signature="value()">
+          </scope>
+      </scope>
+      <scope classrefs="SQL::Statement::Function" ilk="class" line="316" lineend="404" name="SQL::Statement::Function::SubString">
+        <variable line="318" name="@ISA" />
+        <scope ilk="function" line="384" lineend="395" name="new" signature="new($class, $owner, $start, $length, $params)">
+          <variable ilk="argument" name="$class" />
+          <variable ilk="argument" name="$owner" />
+          <variable ilk="argument" name="$start" />
+          <variable ilk="argument" name="$length" />
+          <variable ilk="argument" name="$params" />
+        </scope>
+        <scope ilk="function" line="397" lineend="404" name="value" signature="value()">
+          </scope>
+      </scope>
+      <scope classrefs="SQL::Statement::Function" ilk="class" line="406" lineend="482" name="SQL::Statement::Function::StrConcat">
+        <variable line="408" name="@ISA" />
+        <scope ilk="function" line="448" lineend="457" name="new" signature="new($class, $owner, $params)">
+          <variable ilk="argument" name="$class" />
+          <variable ilk="argument" name="$owner" />
+          <variable ilk="argument" name="$params" />
+        </scope>
+        <scope ilk="function" line="459" lineend="468" name="value" signature="value()">
+          </scope>
+      </scope>
+    </scope>
+    

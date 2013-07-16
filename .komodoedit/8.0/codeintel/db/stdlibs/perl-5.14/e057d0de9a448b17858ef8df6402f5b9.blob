@@ -1,0 +1,80 @@
+<scope ilk="blob" lang="Perl" name="PPIx::Regexp::Lexer">
+      <scope ilk="class" line="34" lineend="518" name="PPIx::Regexp::Lexer">
+        <import line="41" module="Carp" symbol="confess" />
+        <import line="42" module="PPIx::Regexp::Constant" symbol="TOKEN_LITERAL" />
+        <import line="42" module="PPIx::Regexp::Constant" symbol="TOKEN_UNKNOWN" />
+        <import line="43" module="PPIx::Regexp::Node::Range" />
+        <import line="44" module="PPIx::Regexp::Structure" />
+        <import line="45" module="PPIx::Regexp::Structure::Assertion" />
+        <import line="46" module="PPIx::Regexp::Structure::BranchReset" />
+        <import line="47" module="PPIx::Regexp::Structure::Code" />
+        <import line="48" module="PPIx::Regexp::Structure::Capture" />
+        <import line="49" module="PPIx::Regexp::Structure::CharClass" />
+        <import line="50" module="PPIx::Regexp::Structure::Subexpression" />
+        <import line="51" module="PPIx::Regexp::Structure::Main" />
+        <import line="52" module="PPIx::Regexp::Structure::Modifier" />
+        <import line="53" module="PPIx::Regexp::Structure::NamedCapture" />
+        <import line="54" module="PPIx::Regexp::Structure::Quantifier" />
+        <import line="55" module="PPIx::Regexp::Structure::Regexp" />
+        <import line="56" module="PPIx::Regexp::Structure::Replacement" />
+        <import line="57" module="PPIx::Regexp::Structure::Switch" />
+        <import line="58" module="PPIx::Regexp::Structure::Unknown" />
+        <import line="59" module="PPIx::Regexp::Token::Unmatched" />
+        <import line="60" module="PPIx::Regexp::Tokenizer" />
+        <import line="61" module="PPIx::Regexp::Util" symbol="__instance" />
+        <variable line="63" name="$VERSION" />
+        <scope attributes="__ctor__" ilk="function" line="80" lineend="99" name="new" signature="new($class, $tokenizer, %args)">
+          <variable ilk="argument" name="$class" />
+          <variable ilk="argument" name="$tokenizer" />
+          <variable ilk="argument" name="%args" />
+        </scope>
+        <scope ilk="function" line="101" lineend="103" name="errstr" signature="errstr()" />
+        <scope ilk="function" line="128" lineend="131" name="failures" signature="failures($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope attributes="__ctor__" ilk="function" line="140" lineend="235" name="lex" signature="lex($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="239" lineend="246" name="_finalize" signature="_finalize($self, @content)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="@content" />
+        </scope>
+        <scope attributes="__ctor__" ilk="function" line="261" lineend="354" name="_get_delimited" signature="_get_delimited($self, $class, $expect_open_bracket)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$class" />
+          <variable ilk="argument" name="$expect_open_bracket" />
+        </scope>
+        <scope ilk="function" line="362" lineend="372" name="_get_token" signature="_get_token($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="382" lineend="394" name="_make_node" signature="_make_node($self, $token)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$token" />
+        </scope>
+        <scope attributes="__ctor__" ilk="function" line="398" lineend="427" name="_curly" signature="_curly($self, $args)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$args" />
+        </scope>
+        <scope attributes="__ctor__" ilk="function" line="430" lineend="469" name="_recover_curly" signature="_recover_curly($self, $token)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$token" />
+        </scope>
+        <scope attributes="__ctor__" ilk="function" line="471" lineend="491" name="_recover_curly_quantifiers" signature="_recover_curly_quantifiers($self, $args)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$args" />
+        </scope>
+        <scope ilk="function" line="493" lineend="498" name="_round" signature="_round($self, $args)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$args" />
+        </scope>
+        <scope ilk="function" line="500" lineend="503" name="_square" signature="_square($self, $args)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$args" />
+        </scope>
+        <scope ilk="function" line="512" lineend="516" name="_unget_token" signature="_unget_token($self, @args)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="@args" />
+        </scope>
+      </scope>
+    </scope>
+    

@@ -1,0 +1,66 @@
+<scope ilk="blob" lang="Perl" name="Compress::Raw::Zlib">
+      <scope classrefs="Exporter" ilk="class" line="2" lineend="536" name="Compress::Raw::Zlib">
+        <import line="5" module="Exporter" />
+        <import line="6" module="AutoLoader" symbol="*" />
+        <import line="7" module="Carp" symbol="*" />
+        <import line="91" module="XSLoader" />
+        <import line="96" module="DynaLoader" />
+        <variable line="14" name="$AUTOLOAD" />
+        <variable line="14" name="$VERSION" />
+        <variable line="14" name="$XS_VERSION" />
+        <variable line="14" name="@EXPORT" />
+        <variable line="14" name="@ISA" />
+        <scope ilk="function" line="74" lineend="82" name="AUTOLOAD" signature="AUTOLOAD()">
+          </scope>
+        <scope ilk="function" line="120" lineend="131" name="ParseParameters" signature="ParseParameters($level)">
+          <variable ilk="argument" name="$level" />
+        </scope>
+        <scope attributes="__ctor__" ilk="function" line="134" lineend="144" name="Compress::Raw::Zlib::Parameters::new" signature="Compress::Raw::Zlib::Parameters::new($class)">
+          <variable ilk="argument" name="$class" />
+        </scope>
+        <scope ilk="function" line="146" lineend="154" name="Compress::Raw::Zlib::Parameters::setError" signature="Compress::Raw::Zlib::Parameters::setError($self, $error)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$error" />
+        </scope>
+        <scope ilk="function" line="162" lineend="251" name="Compress::Raw::Zlib::Parameters::parse" signature="Compress::Raw::Zlib::Parameters::parse($self, $default, $count)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$default" />
+          <variable ilk="argument" name="$count" />
+        </scope>
+        <scope ilk="function" line="253" lineend="316" name="Compress::Raw::Zlib::Parameters::_checkType" signature="Compress::Raw::Zlib::Parameters::_checkType($self, $key, $value, $type, $validate, $output)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$key" />
+          <variable ilk="argument" name="$value" />
+          <variable ilk="argument" name="$type" />
+          <variable ilk="argument" name="$validate" />
+          <variable ilk="argument" name="$output" />
+        </scope>
+        <scope ilk="function" line="320" lineend="326" name="Compress::Raw::Zlib::Parameters::parsed" signature="Compress::Raw::Zlib::Parameters::parsed($self, $name)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$name" />
+        </scope>
+        <scope ilk="function" line="328" lineend="341" name="Compress::Raw::Zlib::Parameters::value" signature="Compress::Raw::Zlib::Parameters::value($self, $name)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$name" />
+        </scope>
+        <scope ilk="function" line="343" lineend="384" name="Compress::Raw::Zlib::Deflate::new" signature="Compress::Raw::Zlib::Deflate::new($pkg)">
+          <variable ilk="argument" name="$pkg" />
+        </scope>
+        <scope ilk="function" line="386" lineend="421" name="Compress::Raw::Zlib::Inflate::new" signature="Compress::Raw::Zlib::Inflate::new($pkg)">
+          <variable ilk="argument" name="$pkg" />
+        </scope>
+        <scope ilk="function" line="423" lineend="449" name="Compress::Raw::Zlib::InflateScan::new" signature="Compress::Raw::Zlib::InflateScan::new($pkg)">
+          <variable ilk="argument" name="$pkg" />
+        </scope>
+        <scope ilk="function" line="451" lineend="486" name="Compress::Raw::Zlib::inflateScanStream::createDeflateStream" signature="Compress::Raw::Zlib::inflateScanStream::createDeflateStream($pkg)">
+          <variable ilk="argument" name="$pkg" />
+        </scope>
+        <scope ilk="function" line="488" lineend="503" name="Compress::Raw::Zlib::inflateScanStream::inflate" signature="Compress::Raw::Zlib::inflateScanStream::inflate($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="505" lineend="531" name="Compress::Raw::Zlib::deflateStream::deflateParams" signature="Compress::Raw::Zlib::deflateStream::deflateParams($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+      </scope>
+    </scope>
+    

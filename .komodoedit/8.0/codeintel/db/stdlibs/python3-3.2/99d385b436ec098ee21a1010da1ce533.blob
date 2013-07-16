@@ -1,0 +1,80 @@
+<scope doc="Conversions to/from quoted-printable transport encoding as per RFC 1521.&#xA;" ilk="blob" lang="Python" name="quopri">
+      <variable citdl="bytes" line="12" name="EMPTYSTRING" />
+      <variable citdl="bytes" line="9" name="ESCAPE" />
+      <variable citdl="bytes" line="11" name="HEX" />
+      <variable citdl="int" line="10" name="MAXLINESIZE" />
+      <variable citdl="list" line="7" name="__all__" />
+      <scope doc="Decode a string of qp-encoded data" ilk="function" line="17" name="a2b_qp" />
+      <scope doc="Encode a string using quoted-printable encoding." ilk="function" line="18" name="b2a_qp" signature="b2a_qp(data, quotetabs=0, istext=1, header=0) -&gt; s;" />
+      <scope doc="Read &apos;input&apos;, apply quoted-printable decoding, and write to&#xA;&apos;output&apos;." ilk="function" line="119" lineend="160" name="decode" signature="decode(input, output, header=False)">
+        <variable citdl="list" line="143" name="c" />
+        <variable citdl="int" line="136" name="partial" />
+        <variable ilk="argument" name="output" />
+        <variable citdl="int" line="134" name="i" />
+        <variable citdl="a2b_qp()" line="126" name="odata" />
+        <variable citdl="len()" line="134" name="n" />
+        <variable citdl="False" ilk="argument" name="header" />
+        <variable citdl="str" line="130" name="new" />
+        <variable ilk="argument" name="input" />
+        <variable citdl="input.readline()" line="132" name="line" />
+        <variable citdl="input.read()" line="125" name="data" />
+      </scope>
+      <scope ilk="function" line="162" lineend="169" name="decodestring" returns="a2b_qp()" signature="decodestring(s, header=False)">
+        <variable citdl="False" ilk="argument" name="header" />
+        <variable ilk="argument" name="s" />
+        <variable citdl="BytesIO()" line="167" name="outfp" />
+        <variable citdl="BytesIO()" line="166" name="infp" />
+      </scope>
+      <scope doc="Read &apos;input&apos;, apply quoted-printable encoding, and write to&#xA;&apos;output&apos;." ilk="function" line="44" lineend="106" name="encode" signature="encode(input, output, quotetabs, header=False)">
+        <variable citdl="bytes()" line="84" name="c" />
+        <variable citdl="list" line="76" name="outline" />
+        <variable citdl="str" line="78" name="stripped" />
+        <variable citdl="b2a_qp()" line="57" name="odata" />
+        <variable citdl="list" line="71" name="prevline" />
+        <scope ilk="function" line="61" lineend="69" name="write" signature="write(s, output=output, lineEnd=&apos;\n&apos;)">
+          <variable ilk="argument" name="s" />
+          <variable ilk="argument" name="output" />
+          <variable citdl="str" ilk="argument" name="lineEnd" />
+        </scope>
+        <variable citdl="False" ilk="argument" name="header" />
+        <variable ilk="argument" name="quotetabs" />
+        <variable ilk="argument" name="output" />
+        <variable citdl="input.readline()" line="73" name="line" />
+        <variable citdl="input.read()" line="56" name="data" />
+        <variable citdl="list" line="96" name="thisline" />
+        <variable ilk="argument" name="input" />
+      </scope>
+      <scope ilk="function" line="108" lineend="115" name="encodestring" returns="outfp.getvalue()" signature="encodestring(s, quotetabs=False, header=False)">
+        <variable citdl="False" ilk="argument" name="quotetabs" />
+        <variable ilk="argument" name="s" />
+        <variable citdl="BytesIO()" line="113" name="outfp" />
+        <variable citdl="BytesIO()" line="112" name="infp" />
+        <variable citdl="False" ilk="argument" name="header" />
+      </scope>
+      <scope doc="Return true if the byte ordinal &apos;c&apos; is a hexadecimal digit&#xA;in ASCII." ilk="function" line="174" lineend="177" name="ishex" returns="bool" signature="ishex(c)">
+        <variable ilk="argument" name="c" />
+      </scope>
+      <scope ilk="function" line="197" lineend="239" name="main" signature="main()">
+        <variable citdl="sys.stdin.buffer" line="222" name="fp" />
+        <variable citdl="int" line="209" name="deco" />
+        <variable citdl="int" line="219" name="sts" />
+        <variable citdl="int" line="210" name="tabs" />
+        <variable citdl="list" line="201" name="args" />
+        <variable line="201" name="opts" />
+      </scope>
+      <scope doc="Decide whether a particular byte ordinal needs to be quoted." ilk="function" line="21" lineend="34" name="needsquoting" returns="bool" signature="needsquoting(c, quotetabs, header)">
+        <variable ilk="argument" name="quotetabs" />
+        <variable ilk="argument" name="c" />
+        <variable ilk="argument" name="header" />
+      </scope>
+      <scope doc="Quote a single character." ilk="function" line="36" lineend="40" name="quote" returns="bytes()" signature="quote(c)">
+        <variable citdl="ord()" ilk="argument" name="c" />
+      </scope>
+      <scope doc="Get the integer value of a hexadecimal number." ilk="function" line="179" lineend="193" name="unhex" returns="ord()" signature="unhex(s)">
+        <variable citdl="ord()" line="185" name="i" />
+        <variable ilk="argument" name="s" />
+        <variable citdl="ord()" line="181" name="bits" />
+        <variable citdl="bytes()" line="183" name="c" />
+      </scope>
+    </scope>
+    

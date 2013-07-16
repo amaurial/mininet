@@ -1,0 +1,70 @@
+<scope ilk="blob" lang="Perl" name="autodie::exception">
+      <scope ilk="class" line="1" lineend="723" name="autodie::exception">
+        <import line="5" module="Carp" symbol="croak" />
+        <variable line="7" name="$DEBUG" />
+        <variable line="17" name="$VERSION" />
+        <scope ilk="function" line="77" lineend="77" name="args" signature="args()" />
+        <scope ilk="function" line="87" lineend="87" name="function" signature="function()" />
+        <scope ilk="function" line="98" lineend="98" name="file" signature="file()" />
+        <scope ilk="function" line="108" lineend="108" name="package" signature="package()" />
+        <scope ilk="function" line="118" lineend="118" name="caller" signature="caller()" />
+        <scope ilk="function" line="128" lineend="128" name="line" signature="line()" />
+        <scope ilk="function" line="140" lineend="140" name="context" signature="context()" />
+        <scope ilk="function" line="153" lineend="153" name="return" signature="return()" />
+        <scope ilk="function" line="171" lineend="171" name="errno" signature="errno()" />
+        <scope ilk="function" line="183" lineend="183" name="eval_error" signature="eval_error()" />
+        <scope ilk="function" line="222" lineend="251" name="matches" signature="matches($this, $that)">
+          <import line="241" module="Fatal" />
+          <variable ilk="argument" name="$this" />
+          <variable ilk="argument" name="$that" />
+          <import line="241" module="Fatal" />
+        </scope>
+        <scope ilk="function" line="257" lineend="261" name="_expand_tag" signature="_expand_tag($this, @args)">
+          <variable ilk="argument" name="$this" />
+          <variable ilk="argument" name="@args" />
+        </scope>
+        <scope ilk="function" line="289" lineend="337" name="_format_flock" signature="_format_flock($this)">
+          <import line="292" module="Fcntl" />
+          <variable ilk="argument" name="$this" />
+          <import line="292" module="Fcntl" />
+        </scope>
+        <scope ilk="function" line="340" lineend="364" name="_format_dbmopen" signature="_format_dbmopen($this)">
+          <variable ilk="argument" name="$this" />
+        </scope>
+        <scope ilk="function" line="368" lineend="382" name="_format_close" signature="_format_close($this)">
+          <variable ilk="argument" name="$this" />
+        </scope>
+        <scope ilk="function" line="388" lineend="401" name="_format_open_with_mode" signature="_format_open_with_mode($this, $mode, $file, $error)">
+          <variable ilk="argument" name="$this" />
+          <variable ilk="argument" name="$mode" />
+          <variable ilk="argument" name="$file" />
+          <variable ilk="argument" name="$error" />
+        </scope>
+        <scope ilk="function" line="403" lineend="470" name="_format_open" signature="_format_open($this)">
+          <variable ilk="argument" name="$this" />
+        </scope>
+        <scope ilk="function" line="485" lineend="492" name="register" signature="register($class, $symbol, $handler)">
+          <variable ilk="argument" name="$class" />
+          <variable ilk="argument" name="$symbol" />
+          <variable ilk="argument" name="$handler" />
+        </scope>
+        <scope ilk="function" line="508" lineend="512" name="add_file_and_line" signature="add_file_and_line($this)">
+          <variable ilk="argument" name="$this" />
+        </scope>
+        <scope ilk="function" line="527" lineend="546" name="stringify" signature="stringify($this)">
+          <variable ilk="argument" name="$this" />
+        </scope>
+        <scope ilk="function" line="566" lineend="601" name="format_default" signature="format_default($this)">
+          <variable ilk="argument" name="$this" />
+        </scope>
+        <scope attributes="__ctor__" ilk="function" line="629" lineend="643" name="new" signature="new($class, @args)">
+          <variable ilk="argument" name="$class" />
+          <variable ilk="argument" name="@args" />
+        </scope>
+        <scope ilk="function" line="645" lineend="721" name="_init" signature="_init($this, %args)">
+          <variable ilk="argument" name="$this" />
+          <variable ilk="argument" name="%args" />
+        </scope>
+      </scope>
+    </scope>
+    

@@ -1,0 +1,37 @@
+<scope ilk="blob" lang="Perl" name="Encode::Encoder">
+      <scope classrefs="Exporter" ilk="class" line="4" lineend="100" name="Encode::Encoder">
+        <import line="9" module="Exporter" />
+        <import line="15" module="Encode" symbol="encode" />
+        <import line="15" module="Encode" symbol="decode" />
+        <import line="15" module="Encode" symbol="find_encoding" />
+        <import line="15" module="Encode" symbol="from_to" />
+        <import line="16" module="Carp" symbol="*" />
+        <variable line="7" name="$VERSION" />
+        <variable line="11" name="@EXPORT_OK" />
+        <variable line="13" name="$AUTOLOAD" />
+        <scope ilk="function" line="14" lineend="14" name="DEBUG" signature="DEBUG()" />
+        <scope attributes="__ctor__" ilk="function" line="18" lineend="33" name="new" signature="new($class, $data, $encname)">
+          <variable ilk="argument" name="$class" />
+          <variable ilk="argument" name="$data" />
+          <variable ilk="argument" name="$encname" />
+        </scope>
+        <scope ilk="function" line="35" lineend="35" name="encoder" signature="encoder()" />
+        <scope ilk="function" line="37" lineend="46" name="data" signature="data($self, $data)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$data" />
+        </scope>
+        <scope ilk="function" line="48" lineend="59" name="encoding" signature="encoding($self, $encname)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$encname" />
+        </scope>
+        <scope ilk="function" line="61" lineend="69" name="bytes" signature="bytes($self, $encname)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$encname" />
+        </scope>
+        <scope ilk="function" line="71" lineend="73" name="DESTROY" signature="DESTROY()" />
+        <scope ilk="function" line="75" lineend="92" name="AUTOLOAD" signature="AUTOLOAD($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+      </scope>
+    </scope>
+    

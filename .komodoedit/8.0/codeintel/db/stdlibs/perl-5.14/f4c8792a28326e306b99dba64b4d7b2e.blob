@@ -1,0 +1,120 @@
+<scope ilk="blob" lang="Perl" name="App::Cpan">
+      <scope ilk="class" line="1" lineend="394" name="App::Cpan">
+        <import line="183" module="CPAN" />
+        <import line="186" module="File::Spec::Functions" symbol="*" />
+        <import line="187" module="File::Basename" symbol="*" />
+        <import line="189" module="Getopt::Std" symbol="*" />
+        <variable line="4" name="$VERSION" />
+        <variable line="209" name="$Default" />
+        <variable line="209" name="%CPAN_METHODS" />
+        <variable line="209" name="@CPAN_OPTIONS" />
+        <variable line="209" name="@META_OPTIONS" />
+        <variable line="209" name="@option_order" />
+        <variable line="210" name="%Method_table" />
+        <variable line="210" name="%Method_table_index" />
+        <scope ilk="function" line="233" lineend="233" name="NO_ARGS" signature="NO_ARGS()" />
+        <scope ilk="function" line="234" lineend="234" name="ARGS" signature="ARGS()" />
+        <scope ilk="function" line="235" lineend="235" name="GOOD_EXIT" signature="GOOD_EXIT()" />
+        <scope ilk="function" line="284" lineend="288" name="_stupid_interface_hack_for_non_rtfmers" signature="_stupid_interface_hack_for_non_rtfmers()" />
+        <scope ilk="function" line="290" lineend="302" name="_process_options" signature="_process_options()">
+          </scope>
+        <scope ilk="function" line="304" lineend="335" name="_process_setup_options" signature="_process_setup_options($class, $options)">
+          <variable ilk="argument" name="$class" />
+          <variable ilk="argument" name="$options" />
+        </scope>
+        <scope ilk="function" line="349" lineend="392" name="run" signature="run($class)">
+          <variable ilk="argument" name="$class" />
+        </scope>
+      </scope>
+      <scope ilk="class" line="395" lineend="1067" name="Local::Null::Logger">
+        <variable citdl="Local::Null::Logger" line="408" name="$logger" />
+        <variable line="628" name="$CPAN::Config" />
+        <variable line="638" name="$CPAN::Config_loaded" />
+        <scope attributes="__ctor__" ilk="function" line="397" lineend="397" name="new" signature="new()" />
+        <scope ilk="function" line="398" lineend="398" name="AUTOLOAD" signature="AUTOLOAD()" />
+        <scope ilk="function" line="399" lineend="399" name="DESTROY" signature="DESTROY()" />
+        <scope ilk="function" line="402" lineend="422" name="_init_logger" signature="_init_logger()">
+          </scope>
+        <scope ilk="function" line="428" lineend="474" name="_default" signature="_default($args, $options)">
+          <variable ilk="argument" name="$args" />
+          <variable ilk="argument" name="$options" />
+        </scope>
+        <scope ilk="function" line="488" lineend="508" name="_hook_into_CPANpm_report" signature="_hook_into_CPANpm_report($self, $what, $self, $what)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$what" />
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$what" />
+        </scope>
+        <scope ilk="function" line="510" lineend="510" name="_clear_cpanpm_output" signature="_clear_cpanpm_output()" />
+        <scope ilk="function" line="512" lineend="512" name="_get_cpanpm_output" signature="_get_cpanpm_output()" />
+        <scope ilk="function" line="522" lineend="545" name="_get_cpanpm_last_line" signature="_get_cpanpm_last_line()">
+          </scope>
+        <scope ilk="function" line="552" lineend="558" name="_cpanpm_output_indicates_failure" signature="_cpanpm_output_indicates_failure()">
+          </scope>
+        <scope ilk="function" line="561" lineend="567" name="_cpanpm_output_indicates_success" signature="_cpanpm_output_indicates_success()">
+          </scope>
+        <scope ilk="function" line="569" lineend="576" name="_cpanpm_output_is_vague" signature="_cpanpm_output_is_vague()" />
+        <scope ilk="function" line="581" lineend="585" name="_print_help" signature="_print_help()" />
+        <scope ilk="function" line="587" lineend="593" name="_print_version" signature="_print_version()" />
+        <scope ilk="function" line="595" lineend="603" name="_create_autobundle" signature="_create_autobundle()" />
+        <scope ilk="function" line="605" lineend="612" name="_recompile" signature="_recompile()" />
+        <scope ilk="function" line="614" lineend="621" name="_upgrade" signature="_upgrade()" />
+        <scope ilk="function" line="623" lineend="643" name="_load_config" signature="_load_config($file)">
+          <variable ilk="argument" name="$file" />
+        </scope>
+        <scope ilk="function" line="645" lineend="660" name="_dump_config" signature="_dump_config($args)">
+          <import line="648" module="Data::Dumper" />
+          <variable ilk="argument" name="$args" />
+          <import line="648" module="Data::Dumper" />
+        </scope>
+        <scope ilk="function" line="662" lineend="670" name="_lock_lobotomy" signature="_lock_lobotomy()">
+          </scope>
+        <scope ilk="function" line="672" lineend="691" name="_download" signature="_download($args)">
+          <variable ilk="argument" name="$args" />
+        </scope>
+        <scope ilk="function" line="693" lineend="693" name="_make_path" signature="_make_path()" />
+        <scope ilk="function" line="695" lineend="715" name="_get_file" signature="_get_file($path)">
+          <variable ilk="argument" name="$path" />
+        </scope>
+        <scope ilk="function" line="717" lineend="754" name="_gitify" signature="_gitify($args)">
+          <variable ilk="argument" name="$args" />
+        </scope>
+        <scope ilk="function" line="756" lineend="780" name="_show_Changes" signature="_show_Changes($args)">
+          <variable ilk="argument" name="$args" />
+        </scope>
+        <scope ilk="function" line="782" lineend="803" name="_get_changes_file" signature="_get_changes_file($url)">
+          <variable ilk="argument" name="$url" />
+        </scope>
+        <scope ilk="function" line="805" lineend="827" name="_show_Author" signature="_show_Author($args)">
+          <variable ilk="argument" name="$args" />
+        </scope>
+        <scope ilk="function" line="829" lineend="855" name="_show_Details" signature="_show_Details($args)">
+          <variable ilk="argument" name="$args" />
+        </scope>
+        <scope ilk="function" line="857" lineend="875" name="_show_out_of_date" signature="_show_out_of_date()">
+          </scope>
+        <scope ilk="function" line="877" lineend="892" name="_show_author_mods" signature="_show_author_mods($args)">
+          <variable ilk="argument" name="$args" />
+        </scope>
+        <scope ilk="function" line="894" lineend="923" name="_list_all_mods" signature="_list_all_mods($args)">
+          <import line="896" module="File::Find" />
+          <variable ilk="argument" name="$args" />
+          <import line="896" module="File::Find" />
+        </scope>
+        <scope ilk="function" line="925" lineend="933" name="_generator" signature="_generator()">
+          </scope>
+        <scope ilk="function" line="935" lineend="963" name="_parse_version_safely" signature="_parse_version_safely($file)">
+          <variable ilk="argument" name="$file" />
+        </scope>
+        <scope ilk="function" line="965" lineend="985" name="_eval_version" signature="_eval_version($line, $sigil, $var)">
+          <variable ilk="argument" name="$line" />
+          <variable ilk="argument" name="$sigil" />
+          <variable ilk="argument" name="$var" />
+        </scope>
+        <scope ilk="function" line="987" lineend="1002" name="_path_to_module" signature="_path_to_module($inc, $path)">
+          <variable ilk="argument" name="$inc" />
+          <variable ilk="argument" name="$path" />
+        </scope>
+      </scope>
+    </scope>
+    

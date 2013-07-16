@@ -1,0 +1,71 @@
+<scope doc="Abstract Base Classes (ABCs) for numbers, according to PEP 3141.&#xA;TODO: Fill out more detailed documentation on the operators." ilk="blob" lang="Python" name="numbers">
+      <scope classrefs="type" doc="Metaclass for defining Abstract Base Classes (ABCs).&#xA;Use this metaclass to create an ABC.  An ABC can be subclassed directly, and then acts as a mix-in class.  You can also register unrelated concrete classes (even built-in classes) and unrelated ABCs as &apos;virtual subclasses&apos; -- these and their descendants will be considered subclasses of the registering ABC by the built-in issubclass() function, but the registering ABC won&apos;t show up in their MRO (Method Resolution Order) nor will method implementations defined by the registering ABC be callable (not even via super())." ilk="class" name="ABCMeta">
+        <scope ilk="function" name="__new__" signature="__new__(mcls, name, bases, namespace)" />
+        <scope doc="Override for isinstance(instance, cls)." ilk="function" name="__instancecheck__" signature="__instancecheck__(cls, instance)" />
+        <scope doc="Register a virtual subclass of an ABC." ilk="function" name="register" signature="register(cls, subclass)" />
+        <scope doc="Override for issubclass(subclass, cls)." ilk="function" name="__subclasscheck__" signature="__subclasscheck__(cls, subclass)" />
+        <scope doc="Debug helper to print the ABC registry." ilk="function" name="_dump_registry" signature="_dump_registry(cls, file=None)" />
+      </scope>
+      <scope classrefs="Number" doc="Complex defines the operations that work on the builtin complex type.&#xA;In short, those are: a conversion to complex, .real, .imag, +, -, *, /, abs(), .conjugate, ==, and !=.  If it is given heterogenous arguments, and doesn&apos;t have special knowledge about them, it should fall back to the builtin complex type as described below." ilk="class" name="Complex">
+        <scope doc="self != other" ilk="function" name="__ne__" signature="__ne__(self, other)" />
+        <scope doc="other / self" ilk="function" name="__rtruediv__" signature="__rtruediv__(self, other)" />
+        <scope doc="other + self" ilk="function" name="__radd__" signature="__radd__(self, other)" />
+        <scope doc="True if self != 0. Called for bool(self)." ilk="function" name="__bool__" signature="__bool__(self)" />
+        <scope doc="self / other: Should promote to float when necessary." ilk="function" name="__truediv__" signature="__truediv__(self, other)" />
+        <scope doc="other - self" ilk="function" name="__rsub__" signature="__rsub__(self, other)" />
+        <scope doc="self**exponent; should promote to float or complex when&#xA;necessary." ilk="function" name="__pow__" signature="__pow__(self, exponent)" />
+        <scope doc="self + other" ilk="function" name="__add__" signature="__add__(self, other)" />
+        <scope doc="(x+y*i).conjugate() returns (x-y*i)." ilk="function" name="conjugate" signature="conjugate(self)" />
+        <scope doc="other * self" ilk="function" name="__rmul__" signature="__rmul__(self, other)" />
+        <scope doc="self == other" ilk="function" name="__eq__" signature="__eq__(self, other)" />
+        <scope doc="Return a builtin complex instance. Called for complex(self)." ilk="function" name="__complex__" signature="__complex__(self)" />
+        <scope doc="base ** self" ilk="function" name="__rpow__" signature="__rpow__(self, base)" />
+        <scope doc="Returns the Real distance from 0. Called for abs(self)." ilk="function" name="__abs__" signature="__abs__(self)" />
+        <scope doc="+self" ilk="function" name="__pos__" signature="__pos__(self)" />
+        <scope doc="-self" ilk="function" name="__neg__" signature="__neg__(self)" />
+        <scope doc="self - other" ilk="function" name="__sub__" signature="__sub__(self, other)" />
+        <scope doc="self * other" ilk="function" name="__mul__" signature="__mul__(self, other)" />
+      </scope>
+      <scope classrefs="Rational" doc="Integral adds a conversion to int and the bit-string operations.&#xA;" ilk="class" name="Integral">
+        <scope doc="int(self)" ilk="function" name="__int__" signature="int(self)" />
+        <scope doc="~self" ilk="function" name="__invert__" signature="__invert__(self)" />
+        <scope doc="other | self" ilk="function" name="__ror__" signature="__ror__(self, other)" />
+        <scope doc="other &gt;&gt; self" ilk="function" name="__rrshift__" signature="__rrshift__(self, other)" />
+        <scope doc="self | other" ilk="function" name="__or__" signature="__or__(self, other)" />
+        <scope doc="self &lt;&lt; other" ilk="function" name="__lshift__" signature="__lshift__(self, other)" />
+        <scope doc="self &amp; other" ilk="function" name="__and__" signature="__and__(self, other)" />
+        <scope doc="other &lt;&lt; self" ilk="function" name="__rlshift__" signature="__rlshift__(self, other)" />
+        <scope doc="other ^ self" ilk="function" name="__rxor__" signature="__rxor__(self, other)" />
+        <scope doc="float(self) == float(int(self))" ilk="function" name="__float__" signature="float(self) == float(int(self))" />
+        <scope doc="self &gt;&gt; other" ilk="function" name="__rshift__" signature="__rshift__(self, other)" />
+        <scope doc="other &amp; self" ilk="function" name="__rand__" signature="__rand__(self, other)" />
+        <scope doc="self ^ other" ilk="function" name="__xor__" signature="__xor__(self, other)" />
+        <scope doc="someobject[self]" ilk="function" name="__index__" signature="__index__(self)" />
+        <scope doc="self ** exponent % modulus, but maybe faster." ilk="function" name="__pow__" signature="__pow__(self, exponent, modulus=None)" />
+      </scope>
+      <scope classrefs="object" doc="All numbers inherit from this class.&#xA;If you just want to check if an argument x is a number, without caring what kind, use isinstance(x, Number)." ilk="class" name="Number" />
+      <scope classrefs="Real" doc=".numerator and .denominator should be in lowest terms.&#xA;" ilk="class" name="Rational">
+        <scope doc="It&apos;s important that this conversion use the integer&apos;s &quot;true&quot;&#xA;division rather than casting one side to float before&#xA;dividing so that ratios of huge integers convert without&#xA;overflowing." ilk="function" name="__float__" signature="float(self) = self.numerator / self.denominator" />
+      </scope>
+      <scope classrefs="Complex" doc="To Complex, Real adds the operations that work on real numbers.&#xA;In short, those are: a conversion to float, trunc(), divmod, %, &lt;, &lt;=, &gt;, and &gt;=.  Real also provides defaults for the derived operations." ilk="class" name="Real">
+        <scope doc="The pair (self // other, self % other)." ilk="function" name="__rdivmod__" signature="divmod(other, self)" />
+        <scope doc="Finds the greatest Integral &lt;= self." ilk="function" name="__floor__" signature="__floor__(self)" />
+        <scope doc="The pair (self // other, self % other)." ilk="function" name="__divmod__" signature="divmod(self, other)" />
+        <scope doc="Conjugate is a no-op for Reals." ilk="function" name="conjugate" signature="conjugate(self)" />
+        <scope doc="self &lt; other" ilk="function" name="__lt__" signature="__lt__(self, other)" />
+        <scope doc="Finds the least Integral &gt;= self." ilk="function" name="__ceil__" signature="__ceil__(self)" />
+        <scope doc="other % self" ilk="function" name="__rmod__" signature="__rmod__(self, other)" />
+        <scope doc="complex(self) == complex(float(self), 0)" ilk="function" name="__complex__" signature="complex(self) == complex(float(self), 0)" />
+        <scope doc="Rounds self to ndigits decimal places, defaulting to 0." ilk="function" name="__round__" signature="__round__(self, ndigits=None)" />
+        <scope doc="Truncates self to an Integral." ilk="function" name="__trunc__" signature="trunc(self)" />
+        <scope doc="self % other" ilk="function" name="__mod__" signature="__mod__(self, other)" />
+        <scope doc="self &lt;= other" ilk="function" name="__le__" signature="__le__(self, other)" />
+        <scope doc="other // self: The floor() of other/self." ilk="function" name="__rfloordiv__" signature="__rfloordiv__(self, other)" />
+        <scope doc="self // other: The floor() of self/other." ilk="function" name="__floordiv__" signature="__floordiv__(self, other)" />
+        <scope doc="Any Real can be converted to a native float object." ilk="function" name="__float__" signature="__float__(self)" />
+      </scope>
+      <variable citdl="list" name="__all__" />
+      <scope doc="A decorator indicating abstract methods." ilk="function" name="abstractmethod" signature="abstractmethod(funcobj)" />
+      <scope classrefs="property" doc="A decorator indicating abstract properties.&#xA;Requires that the metaclass is ABCMeta or derived from it.  A class that has a metaclass derived from ABCMeta cannot be instantiated unless all of its abstract properties are overridden. The abstract properties can be called using any of the normal &apos;super&apos; call mechanisms.  Usage:  class C(metaclass=ABCMeta): @abstractproperty" ilk="class" name="abstractproperty" />
+    </scope>
+    

@@ -1,0 +1,36 @@
+<scope ilk="blob" lang="Perl" name="Perl::Critic::Policy::ValuesAndExpressions::ProhibitLeadingZeros">
+      <scope ilk="class" line="8" lineend="188" name="Perl::Critic::Policy::ValuesAndExpressions::ProhibitLeadingZeros">
+        <import line="14" module="Readonly" symbol="*" />
+        <import line="16" module="Perl::Critic::Utils" symbol="**" />
+        <variable line="19" name="$VERSION" />
+        <scope ilk="function" line="28" lineend="38" name="supported_parameters" signature="supported_parameters()" />
+        <scope ilk="function" line="40" lineend="40" name="default_severity" signature="default_severity()" />
+        <scope ilk="function" line="41" lineend="41" name="default_themes" signature="default_themes()" />
+        <scope ilk="function" line="42" lineend="42" name="applies_to" signature="applies_to()" />
+        <scope ilk="function" line="46" lineend="56" name="violates" signature="violates()" />
+        <scope ilk="function" line="58" lineend="66" name="_create_violation" signature="_create_violation($self, $elem)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$elem" />
+        </scope>
+        <scope ilk="function" line="68" lineend="76" name="_is_first_argument_of_chmod_or_umask" signature="_is_first_argument_of_chmod_or_umask($self, $elem)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$elem" />
+        </scope>
+        <scope ilk="function" line="78" lineend="96" name="_is_second_argument_of_mkdir" signature="_is_second_argument_of_mkdir($self, $elem)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$elem" />
+        </scope>
+        <scope ilk="function" line="98" lineend="127" name="_is_third_argument_of_dbmopen" signature="_is_third_argument_of_dbmopen($self, $elem)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$elem" />
+        </scope>
+        <scope ilk="function" line="129" lineend="168" name="_is_fourth_argument_of_sysopen" signature="_is_fourth_argument_of_sysopen($self, $elem)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$elem" />
+        </scope>
+        <scope ilk="function" line="170" lineend="186" name="_previous_token_that_isnt_a_parenthesis" signature="_previous_token_that_isnt_a_parenthesis($elem)">
+          <variable ilk="argument" name="$elem" />
+        </scope>
+      </scope>
+    </scope>
+    

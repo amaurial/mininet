@@ -1,0 +1,176 @@
+<scope ilk="blob" lang="Perl" name="CGI">
+      <scope ilk="class" line="1" lineend="4316" name="CGI">
+        <import line="3" module="Carp" symbol="croak" />
+        <import line="28" module="CGI::Util" symbol="rearrange" />
+        <import line="28" module="CGI::Util" symbol="rearrange_header" />
+        <import line="28" module="CGI::Util" symbol="make_attributes" />
+        <import line="28" module="CGI::Util" symbol="unescape" />
+        <import line="28" module="CGI::Util" symbol="escape" />
+        <import line="28" module="CGI::Util" symbol="expires" />
+        <import line="28" module="CGI::Util" symbol="ebcdic2ascii" />
+        <import line="28" module="CGI::Util" symbol="ascii2ebcdic" />
+        <import line="144" module="Config" />
+        <import line="199" module="Apache2::Response" />
+        <import line="200" module="Apache2::RequestRec" />
+        <import line="201" module="Apache2::RequestUtil" />
+        <import line="202" module="Apache2::RequestIO" />
+        <import line="203" module="APR::Pool" />
+        <import line="206" module="Apache" />
+        <variable line="22" name="$CGI::revision" />
+        <variable line="23" name="$CGI::VERSION" />
+        <variable line="38" name="$TAINTED" />
+        <variable line="41" name="$MOD_PERL" />
+        <variable line="44" name="$POST_MAX" />
+        <variable line="45" name="$DISABLE_UPLOADS" />
+        <variable line="47" name="@SAVED_SYMBOLS" />
+        <variable line="53" name="$AUTOLOAD_DEBUG" />
+        <variable line="56" name="$XHTML" />
+        <variable line="60" name="$DEFAULT_DTD" />
+        <variable line="67" name="$NOSTICKY" />
+        <variable line="74" name="$NPH" />
+        <variable line="78" name="$DEBUG" />
+        <variable line="85" name="$PRIVATE_TEMPFILES" />
+        <variable line="88" name="$TABINDEX" />
+        <variable line="98" name="$CLOSE_UPLOAD_FILES" />
+        <variable line="101" name="$EBCDIC" />
+        <variable line="104" name="$HEADERS_ONCE" />
+        <variable line="107" name="$USE_PARAM_SEMICOLONS" />
+        <variable line="111" name="$NO_UNDEF_PARAMS" />
+        <variable line="114" name="$PARAM_UTF8" />
+        <variable line="118" name="$BEEN_THERE" />
+        <variable line="119" name="$DTD_PUBLIC_IDENTIFIER" />
+        <variable line="134" name="*endform" />
+        <variable line="145" name="$OS" />
+        <variable line="169" name="$needs_binmode" />
+        <variable line="172" name="$DefaultClass" />
+        <variable line="175" name="$AutoloadClass" />
+        <variable line="179" name="$SL" />
+        <variable line="218" name="$CRLF" />
+        <variable line="407" name="$CGI::Q" />
+        <variable line="483" name="$Q" />
+        <variable line="786" name="$QUERY_CHARSET" />
+        <variable line="991" name="$AUTOLOADED_ROUTINES" />
+        <variable line="4305" name="$CGI::CGI" />
+        <scope ilk="function" line="51" lineend="128" name="initialize_globals" signature="initialize_globals()" />
+        <scope ilk="function" line="265" lineend="287" name="can" signature="can($class, $method)">
+          <variable ilk="argument" name="$class" />
+          <variable ilk="argument" name="$method" />
+        </scope>
+        <scope ilk="function" line="290" lineend="314" name="import" signature="import($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="316" lineend="319" name="compile" signature="compile($pack)">
+          <variable ilk="argument" name="$pack" />
+        </scope>
+        <scope ilk="function" line="321" lineend="330" name="expand_tags" signature="expand_tags($tag)">
+          <variable ilk="argument" name="$tag" />
+        </scope>
+        <scope attributes="__ctor__" ilk="function" line="336" lineend="378" name="new" signature="new($class, @initializer)">
+          <variable ilk="argument" name="$class" />
+          <variable ilk="argument" name="@initializer" />
+        </scope>
+        <scope ilk="function" line="387" lineend="395" name="DESTROY" signature="DESTROY($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="397" lineend="402" name="r" signature="r($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="404" lineend="415" name="upload_hook" signature="upload_hook($hook, $data, $use_tempfile)">
+          <variable ilk="argument" name="$hook" />
+          <variable ilk="argument" name="$data" />
+          <variable ilk="argument" name="$use_tempfile" />
+        </scope>
+        <scope ilk="function" line="428" lineend="465" name="param" signature="param()">
+          </scope>
+        <scope ilk="function" line="467" lineend="476" name="_decode_utf8" signature="_decode_utf8($self, $val)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$val" />
+        </scope>
+        <scope ilk="function" line="478" lineend="487" name="self_or_default" signature="self_or_default()" />
+        <scope ilk="function" line="489" lineend="498" name="self_or_CGI" signature="self_or_CGI()" />
+        <scope ilk="function" line="513" lineend="738" name="init" signature="init($self, $initializer)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$initializer" />
+        </scope>
+        <scope ilk="function" line="742" lineend="755" name="to_filehandle" signature="to_filehandle($thingy)">
+          <variable ilk="argument" name="$thingy" />
+        </scope>
+        <scope ilk="function" line="758" lineend="761" name="put" signature="put()">
+          </scope>
+        <scope ilk="function" line="764" lineend="767" name="print" signature="print()" />
+        <scope ilk="function" line="770" lineend="774" name="cgi_error" signature="cgi_error()">
+          </scope>
+        <scope ilk="function" line="776" lineend="789" name="save_request" signature="save_request($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="791" lineend="805" name="parse_params" signature="parse_params($self, $tosplit)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$tosplit" />
+        </scope>
+        <scope ilk="function" line="807" lineend="812" name="add_parameter" signature="add_parameter($self, $param)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$param" />
+        </scope>
+        <scope ilk="function" line="814" lineend="819" name="all_parameters" signature="all_parameters($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="822" lineend="825" name="binmode" signature="binmode()" />
+        <scope ilk="function" line="827" lineend="854" name="_make_tag_func" signature="_make_tag_func($self, $tagname)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$tagname" />
+        </scope>
+        <scope ilk="function" line="856" lineend="860" name="AUTOLOAD" signature="AUTOLOAD()">
+          </scope>
+        <scope ilk="function" line="862" lineend="904" name="_compile" signature="_compile()">
+          </scope>
+        <scope ilk="function" line="906" lineend="911" name="_selected" signature="_selected($self, $value)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$value" />
+        </scope>
+        <scope ilk="function" line="913" lineend="918" name="_checked" signature="_checked($self, $value)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$value" />
+        </scope>
+        <scope ilk="function" line="920" lineend="920" name="_reset_globals" signature="_reset_globals()" />
+        <scope ilk="function" line="922" lineend="965" name="_setup_symbols" signature="_setup_symbols($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="967" lineend="971" name="charset" signature="charset()">
+          </scope>
+        <scope ilk="function" line="973" lineend="977" name="element_id" signature="element_id()">
+          </scope>
+        <scope ilk="function" line="979" lineend="986" name="element_tab" signature="element_tab()">
+          </scope>
+      </scope>
+      <scope ilk="class" line="3867" lineend="3940" name="Fh">
+        <variable line="3874" name="$FH" />
+        <variable line="3876" name="*Fh::AUTOLOAD" />
+        <variable line="3883" name="$AUTOLOADED_ROUTINES" />
+        <scope ilk="function" line="3878" lineend="3881" name="DESTROY" signature="DESTROY($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+      </scope>
+      <scope ilk="class" line="3943" lineend="4203" name="MultipartBuffer">
+        <variable line="3949" name="$INITIAL_FILLUNIT" />
+        <variable line="3950" name="$TIMEOUT" />
+        <variable line="3951" name="$SPIN_LOOP_MAX" />
+        <variable line="3952" name="$CRLF" />
+        <variable line="3955" name="*MultipartBuffer::AUTOLOAD" />
+        <variable line="3963" name="$AUTOLOADED_ROUTINES" />
+        <scope ilk="function" line="3958" lineend="3958" name="DESTROY" signature="DESTROY()" />
+      </scope>
+      <scope ilk="class" line="4208" lineend="4297" name="CGITempFile">
+        <variable line="4211" name="$SL" />
+        <variable line="4212" name="$MAC" />
+        <variable line="4241" name="$TMPDIRECTORY" />
+        <variable line="4249" name="$MAXTRIES" />
+        <variable line="4253" name="*CGITempFile::AUTOLOAD" />
+        <variable line="4265" name="$AUTOLOADED_ROUTINES" />
+        <scope ilk="function" line="4210" lineend="4245" name="find_tempdir" signature="find_tempdir()">
+          </scope>
+        <scope ilk="function" line="4255" lineend="4260" name="DESTROY" signature="DESTROY($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+      </scope>
+    </scope>
+    

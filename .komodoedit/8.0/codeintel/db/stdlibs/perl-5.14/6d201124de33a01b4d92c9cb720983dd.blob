@@ -1,0 +1,35 @@
+<scope ilk="blob" lang="Perl" name="SelfLoader">
+      <scope classrefs="Exporter" ilk="class" line="1" lineend="177" name="SelfLoader">
+        <import line="4" module="IO::Handle" symbol="*" />
+        <import line="42" module="Exporter" symbol="*" />
+        <variable line="5" name="$VERSION" />
+        <variable line="9" name="$AttrList" />
+        <variable line="44" name="@EXPORT" />
+        <variable line="56" name="$AUTOLOAD" />
+        <scope ilk="function" line="45" lineend="45" name="Version" signature="Version()" />
+        <scope ilk="function" line="46" lineend="46" name="DEBUG" signature="DEBUG()" />
+        <scope ilk="function" line="52" lineend="52" name="croak" signature="croak()">
+          <import line="52" module="Carp" />
+          <import line="52" module="Carp" />
+        </scope>
+        <scope ilk="function" line="53" lineend="53" name="carp" signature="carp()">
+          <import line="53" module="Carp" />
+          <import line="53" module="Carp" />
+        </scope>
+        <scope ilk="function" line="86" lineend="86" name="load_stubs" signature="load_stubs()" />
+        <scope ilk="function" line="88" lineend="160" name="_load_stubs" signature="_load_stubs($self, $callpack, $endlines)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$callpack" />
+          <variable ilk="argument" name="$endlines" />
+        </scope>
+        <scope ilk="function" line="163" lineend="173" name="_add_to_cache" signature="_add_to_cache($self, $fullname, $pack, $lines, $protoype)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$fullname" />
+          <variable ilk="argument" name="$pack" />
+          <variable ilk="argument" name="$lines" />
+          <variable ilk="argument" name="$protoype" />
+        </scope>
+        <scope ilk="function" line="175" lineend="175" name="_package_defined" signature="_package_defined()" />
+      </scope>
+    </scope>
+    

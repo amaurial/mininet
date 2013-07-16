@@ -1,0 +1,107 @@
+<scope doc="RFC 3548: Base16, Base32, Base64 Data Encodings&#xA;" ilk="blob" lang="Python" name="base64">
+      <variable citdl="int" line="310" name="MAXBINSIZE" />
+      <variable citdl="int" line="309" name="MAXLINESIZE" />
+      <variable citdl="list" line="14" name="__all__" />
+      <scope doc="Decode a Base16 encoded byte string." ilk="function" line="284" lineend="301" name="b16decode" returns="binascii.unhexlify()" signature="b16decode(s, casefold=False)">
+        <variable citdl="False" ilk="argument" name="casefold" />
+        <variable citdl="s.upper()" ilk="argument" name="s" />
+      </scope>
+      <scope doc="Encode a byte string using Base16." ilk="function" line="274" lineend="281" name="b16encode" signature="b16encode(s)">
+        <variable ilk="argument" name="s" />
+      </scope>
+      <scope doc="Decode a Base32 encoded byte string." ilk="function" line="195" lineend="267" name="b32decode" returns="str.join()" signature="b32decode(s, casefold=False, map01=None)">
+        <variable citdl="int" line="240" name="acc" />
+        <variable citdl="list" line="253" name="last" />
+        <variable citdl="int" line="232" name="padchars" />
+        <variable citdl="_b32rev.get()" line="243" name="val" />
+        <variable citdl="int" line="241" name="shift" />
+        <variable citdl="re.search()" line="233" name="mo" />
+        <variable citdl="False" ilk="argument" name="casefold" />
+        <variable citdl="list" ilk="argument" name="s" />
+        <variable citdl="list" line="239" name="parts" />
+        <variable line="216" name="quanta" />
+        <variable ilk="argument" name="map01" />
+        <variable line="216" name="leftover" />
+      </scope>
+      <scope doc="Encode a byte string using Base32." ilk="function" line="152" lineend="192" name="b32encode" returns="bytes()" signature="b32encode(s)">
+        <variable citdl="bytes()" ilk="argument" name="s" />
+        <variable line="159" name="quanta" />
+        <variable citdl="bytes()" line="164" name="encoded" />
+        <variable line="171" name="c3" />
+        <variable line="159" name="leftover" />
+        <variable line="171" name="c1" />
+        <variable line="171" name="c2" />
+      </scope>
+      <scope doc="Decode a Base64 encoded byte string." ilk="function" line="68" lineend="92" name="b64decode" returns="binascii.a2b_base64()" signature="b64decode(s, altchars=None, validate=False)">
+        <variable ilk="argument" name="altchars" />
+        <variable citdl="_translate()" ilk="argument" name="s" />
+        <variable citdl="False" ilk="argument" name="validate" />
+      </scope>
+      <scope doc="Encode a byte string using Base64." ilk="function" line="45" lineend="65" name="b64encode" returns="list" signature="b64encode(s, altchars=None)">
+        <variable ilk="argument" name="altchars" />
+        <variable citdl="list" line="58" name="encoded" />
+        <variable ilk="argument" name="s" />
+      </scope>
+      <import module="binascii" />
+      <variable citdl="tuple" line="30" name="bytes_types" />
+      <scope doc="Decode a file; input and output are binary files." ilk="function" line="327" lineend="334" name="decode" signature="decode(input, output)">
+        <variable ilk="argument" name="input" />
+        <variable citdl="input.readline()" line="330" name="line" />
+        <variable citdl="binascii.a2b_base64()" line="333" name="s" />
+        <variable ilk="argument" name="output" />
+      </scope>
+      <scope doc="Decode a bytestring of base-64 data into a bytestring." ilk="function" line="356" lineend="360" name="decodebytes" returns="binascii.a2b_base64()" signature="decodebytes(s)">
+        <variable ilk="argument" name="s" />
+      </scope>
+      <scope doc="Legacy alias of decodebytes()." ilk="function" line="362" lineend="367" name="decodestring" returns="decodebytes()" signature="decodestring(s)">
+        <variable ilk="argument" name="s" />
+      </scope>
+      <scope doc="Encode a file; input and output are binary files." ilk="function" line="312" lineend="324" name="encode" signature="encode(input, output)">
+        <variable ilk="argument" name="input" />
+        <variable citdl="input.read()" line="315" name="s" />
+        <variable citdl="input.read()" line="319" name="ns" />
+        <variable citdl="binascii.b2a_base64()" line="323" name="line" />
+        <variable ilk="argument" name="output" />
+      </scope>
+      <scope doc="Encode a bytestring into a bytestring containing multiple&#xA;lines of base-64 data." ilk="function" line="337" lineend="346" name="encodebytes" returns="str.join()" signature="encodebytes(s)">
+        <variable ilk="argument" name="s" />
+        <variable citdl="list" line="344" name="chunk" />
+        <variable citdl="list" line="342" name="pieces" />
+      </scope>
+      <scope doc="Legacy alias of encodebytes()." ilk="function" line="348" lineend="353" name="encodestring" returns="encodebytes()" signature="encodestring(s)">
+        <variable ilk="argument" name="s" />
+      </scope>
+      <scope doc="Small main program" ilk="function" line="371" lineend="394" name="main" signature="main()">
+        <variable line="375" name="args" />
+        <variable citdl="encode" line="384" name="func" />
+        <variable line="375" name="opts" />
+      </scope>
+      <import module="re" />
+      <scope doc="Decode a byte string encoded with the standard Base64&#xA;alphabet." ilk="function" line="102" lineend="110" name="standard_b64decode" returns="b64decode()" signature="standard_b64decode(s)">
+        <variable ilk="argument" name="s" />
+      </scope>
+      <scope doc="Encode a byte string using the standard Base64 alphabet." ilk="function" line="95" lineend="100" name="standard_b64encode" returns="b64encode()" signature="standard_b64encode(s)">
+        <variable ilk="argument" name="s" />
+      </scope>
+      <import module="struct" />
+      <scope ilk="function" line="397" lineend="404" name="test" signature="test()">
+        <variable citdl="decodebytes()" line="402" name="s2" />
+        <variable citdl="encodebytes()" line="400" name="s1" />
+        <variable citdl="str" line="398" name="s0" />
+      </scope>
+      <scope doc="Decode a byte string encoded with the standard Base64&#xA;alphabet." ilk="function" line="121" lineend="131" name="urlsafe_b64decode" returns="b64decode()" signature="urlsafe_b64decode(s)">
+        <variable ilk="argument" name="s" />
+      </scope>
+      <scope doc="Encode a byte string using a url-safe Base64 alphabet." ilk="function" line="112" lineend="119" name="urlsafe_b64encode" returns="b64encode()" signature="urlsafe_b64encode(s)">
+        <variable ilk="argument" name="s" />
+      </scope>
+      <variable attributes="protected __hidden__" citdl="dict()" line="149" name="_b32rev" />
+      <variable attributes="protected __hidden__" citdl="list" line="148" name="_b32tab" />
+      <scope attributes="protected __hidden__" ilk="function" line="33" lineend="39" name="_translate" returns="s.translate()" signature="_translate(s, altchars)">
+        <variable ilk="argument" name="s" />
+        <variable ilk="argument" name="altchars" />
+        <variable citdl="bytearray()" line="36" name="translation" />
+      </scope>
+      <variable attributes="protected __hidden__" citdl="dict" line="136" name="_b32alphabet" />
+    </scope>
+    

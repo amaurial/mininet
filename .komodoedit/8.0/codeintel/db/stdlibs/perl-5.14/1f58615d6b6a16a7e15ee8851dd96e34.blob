@@ -1,0 +1,202 @@
+<scope ilk="blob" lang="Perl" name="Perl::Critic::Config">
+      <scope ilk="class" line="8" lineend="963" name="Perl::Critic::Config">
+        <import line="14" module="English" symbol="-no_match_vars" />
+        <import line="15" module="Readonly" symbol="*" />
+        <import line="17" module="List::MoreUtils" symbol="any" />
+        <import line="17" module="List::MoreUtils" symbol="none" />
+        <import line="17" module="List::MoreUtils" symbol="apply" />
+        <import line="18" module="Scalar::Util" symbol="blessed" />
+        <import line="20" module="Perl::Critic::Exception::AggregateConfiguration" symbol="*" />
+        <import line="21" module="Perl::Critic::Exception::Configuration" symbol="*" />
+        <import line="22" module="Perl::Critic::Exception::Configuration::Option::Global::ParameterValue" symbol="*" />
+        <import line="23" module="Perl::Critic::Exception::Fatal::Internal" symbol="throw_internal" />
+        <import line="24" module="Perl::Critic::PolicyFactory" symbol="*" />
+        <import line="25" module="Perl::Critic::Theme" symbol="$RULE_INVALID_CHARACTER_REGEX" />
+        <import line="25" module="Perl::Critic::Theme" symbol="cook_rule" />
+        <import line="26" module="Perl::Critic::UserProfile" />
+        <import line="27" module="Perl::Critic::Utils" symbol="**" />
+        <import line="31" module="Perl::Critic::Utils::Constants" symbol="**" />
+        <import line="35" module="Perl::Critic::Utils::DataConversion" symbol="boolean_to_number" />
+        <import line="35" module="Perl::Critic::Utils::DataConversion" symbol="dor" />
+        <variable line="39" name="$VERSION" />
+        <scope attributes="__ctor__" ilk="function" line="48" lineend="54" name="new" signature="new($class, %args)">
+          <variable ilk="argument" name="$class" />
+          <variable ilk="argument" name="%args" />
+        </scope>
+        <scope ilk="function" line="58" lineend="160" name="_init" signature="_init($self, %args)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="%args" />
+        </scope>
+        <scope ilk="function" line="164" lineend="189" name="add_policy" signature="add_policy($self, %args)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="%args" />
+        </scope>
+        <scope ilk="function" line="193" lineend="211" name="_add_policy_if_enabled" signature="_add_policy_if_enabled($self, $policy_object)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$policy_object" />
+        </scope>
+        <scope ilk="function" line="215" lineend="258" name="_load_policies" signature="_load_policies($self, $errors)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$errors" />
+        </scope>
+        <scope ilk="function" line="262" lineend="266" name="_policy_is_disabled" signature="_policy_is_disabled($self, $policy)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$policy" />
+        </scope>
+        <scope ilk="function" line="270" lineend="274" name="_policy_is_enabled" signature="_policy_is_enabled($self, $policy)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$policy" />
+        </scope>
+        <scope ilk="function" line="278" lineend="282" name="_policy_is_thematic" signature="_policy_is_thematic($self, $policy)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$policy" />
+        </scope>
+        <scope ilk="function" line="286" lineend="291" name="_policy_is_unimportant" signature="_policy_is_unimportant($self, $policy)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$policy" />
+        </scope>
+        <scope ilk="function" line="295" lineend="300" name="_policy_is_included" signature="_policy_is_included($self, $policy)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$policy" />
+        </scope>
+        <scope ilk="function" line="304" lineend="309" name="_policy_is_excluded" signature="_policy_is_excluded($self, $policy)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$policy" />
+        </scope>
+        <scope ilk="function" line="313" lineend="321" name="_policy_is_single_policy" signature="_policy_is_single_policy($self, $policy)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$policy" />
+        </scope>
+        <scope ilk="function" line="325" lineend="331" name="_new_global_value_exception" signature="_new_global_value_exception($self, @args)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="@args" />
+        </scope>
+        <scope ilk="function" line="335" lineend="360" name="_add_single_policy_exception_to" signature="_add_single_policy_exception_to($self, $errors)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$errors" />
+        </scope>
+        <scope ilk="function" line="364" lineend="423" name="_validate_and_save_regex" signature="_validate_and_save_regex($self, $option_name, $args_value, $default_value, $errors)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$option_name" />
+          <variable ilk="argument" name="$args_value" />
+          <variable ilk="argument" name="$default_value" />
+          <variable ilk="argument" name="$errors" />
+        </scope>
+        <scope ilk="function" line="427" lineend="464" name="_validate_and_save_profile_strictness" signature="_validate_and_save_profile_strictness($self, $args_value, $errors)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$args_value" />
+          <variable ilk="argument" name="$errors" />
+        </scope>
+        <scope ilk="function" line="468" lineend="506" name="_validate_and_save_verbosity" signature="_validate_and_save_verbosity($self, $args_value, $errors)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$args_value" />
+          <variable ilk="argument" name="$errors" />
+        </scope>
+        <scope ilk="function" line="510" lineend="565" name="_validate_and_save_severity" signature="_validate_and_save_severity($self, $args_value, $errors)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$args_value" />
+          <variable ilk="argument" name="$errors" />
+        </scope>
+        <scope ilk="function" line="569" lineend="603" name="_validate_and_save_top" signature="_validate_and_save_top($self, $args_value, $errors)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$args_value" />
+          <variable ilk="argument" name="$errors" />
+        </scope>
+        <scope ilk="function" line="607" lineend="669" name="_validate_and_save_theme" signature="_validate_and_save_theme($self, $args_value, $errors)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$args_value" />
+          <variable ilk="argument" name="$errors" />
+        </scope>
+        <scope ilk="function" line="673" lineend="696" name="_validate_and_save_pager" signature="_validate_and_save_pager($self, $args_value, $errors)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$args_value" />
+          <variable ilk="argument" name="$errors" />
+        </scope>
+        <scope ilk="function" line="700" lineend="755" name="_validate_and_save_color_severity" signature="_validate_and_save_color_severity($self, $option_name, $args_value, $default_value, $errors)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$option_name" />
+          <variable ilk="argument" name="$args_value" />
+          <variable ilk="argument" name="$default_value" />
+          <variable ilk="argument" name="$errors" />
+        </scope>
+        <scope ilk="function" line="759" lineend="774" name="_validate_and_save_program_extensions" signature="_validate_and_save_program_extensions($self, $args_value, $errors)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$args_value" />
+          <variable ilk="argument" name="$errors" />
+        </scope>
+        <scope ilk="function" line="779" lineend="782" name="_profile" signature="_profile($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="786" lineend="789" name="all_policies_enabled_or_not" signature="all_policies_enabled_or_not($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="793" lineend="796" name="policies" signature="policies($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="800" lineend="803" name="exclude" signature="exclude($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="807" lineend="810" name="force" signature="force($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="814" lineend="817" name="include" signature="include($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="821" lineend="824" name="only" signature="only($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="828" lineend="831" name="profile_strictness" signature="profile_strictness($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="835" lineend="838" name="severity" signature="severity($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="842" lineend="845" name="single_policy" signature="single_policy($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="849" lineend="852" name="theme" signature="theme($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="856" lineend="859" name="top" signature="top($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="863" lineend="866" name="verbose" signature="verbose($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="870" lineend="873" name="color" signature="color($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="877" lineend="880" name="pager" signature="pager($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="884" lineend="887" name="unsafe_allowed" signature="unsafe_allowed($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="891" lineend="894" name="criticism_fatal" signature="criticism_fatal($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="898" lineend="900" name="site_policy_names" signature="site_policy_names()" />
+        <scope ilk="function" line="904" lineend="907" name="color_severity_highest" signature="color_severity_highest($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="911" lineend="914" name="color_severity_high" signature="color_severity_high($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="918" lineend="921" name="color_severity_medium" signature="color_severity_medium($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="925" lineend="928" name="color_severity_low" signature="color_severity_low($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="932" lineend="935" name="color_severity_lowest" signature="color_severity_lowest($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="939" lineend="942" name="program_extensions" signature="program_extensions($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="946" lineend="959" name="program_extensions_as_regexes" signature="program_extensions_as_regexes($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+      </scope>
+    </scope>
+    

@@ -1,0 +1,53 @@
+<scope ilk="blob" lang="Perl" name="CPAN::Tarzip">
+      <scope classrefs="CPAN::Debug" ilk="class" line="2" lineend="449" name="CPAN::Tarzip">
+        <import line="5" module="CPAN::Debug" symbol="*" />
+        <import line="6" module="File::Basename" symbol="basename" />
+        <variable line="4" name="$BUGHUNTING" />
+        <variable line="4" name="$VERSION" />
+        <variable line="4" name="@ISA" />
+        <variable line="335" name="$ungzf" />
+        <scope attributes="__ctor__" ilk="function" line="14" lineend="42" name="new" signature="new($class, $file)">
+          <variable ilk="argument" name="$class" />
+          <variable ilk="argument" name="$file" />
+        </scope>
+        <scope ilk="function" line="44" lineend="64" name="_my_which" signature="_my_which($what)">
+          <import line="54" module="File::Spec" />
+          <variable ilk="argument" name="$what" />
+          <import line="54" module="File::Spec" />
+        </scope>
+        <scope ilk="function" line="66" lineend="85" name="gzip" signature="gzip($self, $read)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$read" />
+        </scope>
+        <scope ilk="function" line="88" lineend="108" name="gunzip" signature="gunzip($self, $write)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$write" />
+        </scope>
+        <scope ilk="function" line="111" lineend="164" name="gtest" signature="gtest($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="167" lineend="198" name="TIEHANDLE" signature="TIEHANDLE($class, $file)">
+          <variable ilk="argument" name="$class" />
+          <variable ilk="argument" name="$file" />
+        </scope>
+        <scope ilk="function" line="201" lineend="213" name="READLINE" signature="READLINE($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="216" lineend="227" name="READ" signature="READ($self, $ref, $length, $offset)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$ref" />
+          <variable ilk="argument" name="$length" />
+          <variable ilk="argument" name="$offset" />
+        </scope>
+        <scope ilk="function" line="230" lineend="241" name="DESTROY" signature="DESTROY($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="243" lineend="405" name="untar" signature="untar($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="407" lineend="447" name="unzip" signature="unzip($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+      </scope>
+    </scope>
+    

@@ -1,0 +1,42 @@
+<scope ilk="blob" lang="Perl" name="Module::CoreList">
+      <scope ilk="class" line="1" lineend="25523" name="Module::CoreList">
+        <variable line="3" name="$VERSION" />
+        <variable line="3" name="%families" />
+        <variable line="3" name="%released" />
+        <variable line="3" name="%upstream" />
+        <variable line="3" name="%version" />
+        <variable line="4" name="%bug_tracker" />
+        <variable line="4" name="%deprecated" />
+        <scope ilk="function" line="200" lineend="206" name="import" signature="import($self, $what)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$what" />
+        </scope>
+        <scope ilk="function" line="214" lineend="226" name="first_release_raw" signature="first_release_raw($module, $version)">
+          <variable ilk="argument" name="$module" />
+          <variable ilk="argument" name="$version" />
+        </scope>
+        <scope ilk="function" line="228" lineend="232" name="first_release_by_date" signature="first_release_by_date()">
+          </scope>
+        <scope ilk="function" line="234" lineend="238" name="first_release" signature="first_release()">
+          </scope>
+        <scope ilk="function" line="240" lineend="253" name="find_modules" signature="find_modules($regex, @perls)">
+          <variable ilk="argument" name="$regex" />
+          <variable ilk="argument" name="@perls" />
+        </scope>
+        <scope ilk="function" line="255" lineend="260" name="find_version" signature="find_version($v)">
+          <variable ilk="argument" name="$v" />
+        </scope>
+        <scope ilk="function" line="262" lineend="270" name="is_deprecated" signature="is_deprecated($module, $perl_version)">
+          <variable ilk="argument" name="$module" />
+          <variable ilk="argument" name="$perl_version" />
+        </scope>
+        <scope ilk="function" line="272" lineend="275" name="removed_from" signature="removed_from()">
+          </scope>
+        <scope ilk="function" line="277" lineend="280" name="removed_from_by_date" signature="removed_from_by_date()">
+          </scope>
+        <scope ilk="function" line="282" lineend="290" name="removed_raw" signature="removed_raw($mod)">
+          <variable ilk="argument" name="$mod" />
+        </scope>
+      </scope>
+    </scope>
+    

@@ -1,0 +1,59 @@
+<scope ilk="blob" lang="Perl" name="Term::ReadLine::Perl">
+      <scope classrefs="Term::ReadLine::Stub Term::ReadLine::Compa Term::ReadLine::Perl::AU" ilk="class" line="1" lineend="115" name="Term::ReadLine::Perl">
+        <import line="2" module="Carp" symbol="*" />
+        <import line="3" module="Term::ReadLine" />
+        <variable line="7" name="$VERSION" />
+        <variable line="23" name="*addhistory" />
+        <variable line="26" name="$readline::minlength" />
+        <variable line="27" name="$readline::rl_readline_name" />
+        <variable line="28" name="$readline::rl_basic_word_break_characters" />
+        <variable line="48" name="$IN" />
+        <variable line="54" name="$readline::term_IN" />
+        <variable line="55" name="$readline::term_OUT" />
+        <variable line="56" name="$readline::stdin_not_tty" />
+        <variable line="68" name="$term" />
+        <variable line="93" name="$readline::rl_HistoryIndex" />
+        <variable line="103" name="%features" />
+        <scope ilk="function" line="9" lineend="20" name="readline" signature="readline()" />
+        <scope attributes="__ctor__" ilk="function" line="30" lineend="75" name="new" signature="new()">
+          <import line="65" module="Term::ReadLine::readline" />
+          <import line="65" module="Term::ReadLine::readline" />
+        </scope>
+        <scope ilk="function" line="76" lineend="83" name="newTTY" signature="newTTY($self, $in, $out)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$in" />
+          <variable ilk="argument" name="$out" />
+        </scope>
+        <scope ilk="function" line="84" lineend="84" name="ReadLine" signature="ReadLine()" />
+        <scope ilk="function" line="85" lineend="89" name="MinLine" signature="MinLine()">
+          </scope>
+        <scope ilk="function" line="90" lineend="94" name="SetHistory" signature="SetHistory()">
+          </scope>
+        <scope ilk="function" line="95" lineend="97" name="GetHistory" signature="GetHistory()" />
+        <scope ilk="function" line="98" lineend="102" name="AddHistory" signature="AddHistory()" />
+        <scope ilk="function" line="109" lineend="109" name="Features" signature="Features()" />
+        <scope ilk="function" line="112" lineend="114" name="Attribs" signature="Attribs()" />
+        <scope ilk="function" line="115" lineend="115" name="DESTROY" signature="DESTROY()" />
+      </scope>
+      <scope ilk="class" line="117" lineend="126" name="Term::ReadLine::Perl::AU">
+        <scope ilk="function" line="119" lineend="126" name="AUTOLOAD" signature="AUTOLOAD()">
+          </scope>
+      </scope>
+      <scope ilk="class" line="128" lineend="140" name="Term::ReadLine::Perl::Tie">
+        <scope attributes="__ctor__" ilk="function" line="130" lineend="130" name="TIEHASH" signature="TIEHASH()" />
+        <scope ilk="function" line="131" lineend="131" name="DESTROY" signature="DESTROY()" />
+        <scope ilk="function" line="133" lineend="136" name="STORE" signature="STORE()">
+          </scope>
+        <scope ilk="function" line="137" lineend="140" name="FETCH" signature="FETCH()">
+          </scope>
+      </scope>
+      <scope ilk="class" line="142" lineend="155" name="Term::ReadLine::Compa">
+        <scope ilk="function" line="144" lineend="147" name="get_c" signature="get_c($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="149" lineend="153" name="get_line" signature="get_line($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+      </scope>
+    </scope>
+    

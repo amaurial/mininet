@@ -1,0 +1,34 @@
+<scope ilk="blob" lang="Perl" name="DBI::Gofer::Response">
+      <scope ilk="class" line="1" lineend="217" name="DBI::Gofer::Response">
+        <import line="12" module="Carp" symbol="*" />
+        <import line="13" module="DBI" symbol="neat" />
+        <import line="13" module="DBI" symbol="neat_list" />
+        <variable line="17" name="$VERSION" />
+        <variable line="21" name="@EXPORT" />
+        <scope ilk="function" line="41" lineend="46" name="new" signature="new($self, $args)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$args" />
+        </scope>
+        <scope ilk="function" line="49" lineend="52" name="err_errstr_state" signature="err_errstr_state($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="54" lineend="58" name="executed_flag_set" signature="executed_flag_set()">
+          </scope>
+        <scope ilk="function" line="61" lineend="102" name="add_err" signature="add_err($self, $err, $errstr, $state, $trace)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$err" />
+          <variable ilk="argument" name="$errstr" />
+          <variable ilk="argument" name="$state" />
+          <variable ilk="argument" name="$trace" />
+        </scope>
+        <scope ilk="function" line="105" lineend="157" name="summary_as_text" signature="summary_as_text($self, $context)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$context" />
+        </scope>
+        <scope ilk="function" line="160" lineend="193" name="outline_as_text" signature="outline_as_text($self, $context)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$context" />
+        </scope>
+      </scope>
+    </scope>
+    

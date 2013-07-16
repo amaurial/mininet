@@ -1,0 +1,39 @@
+<scope ilk="blob" lang="Perl" name="DBM_Filter">
+      <scope ilk="class" line="1" lineend="5" name="DBM_Filter">
+        <variable line="5" name="$VERSION" />
+      </scope>
+      <scope ilk="class" line="7" lineend="222" name="Tie::Hash">
+        <import line="12" module="Carp" symbol="*" />
+        <variable line="15" name="%LayerStack" />
+        <variable line="16" name="%origDESTROY" />
+        <variable line="18" name="%Filters" />
+        <variable line="25" name="%Options" />
+        <variable line="139" name="$k" />
+        <scope ilk="function" line="38" lineend="42" name="Filtered" signature="Filtered($this)">
+          <variable ilk="argument" name="$this" />
+        </scope>
+        <scope ilk="function" line="44" lineend="60" name="Filter_Pop" signature="Filter_Pop($this)">
+          <variable ilk="argument" name="$this" />
+        </scope>
+        <scope ilk="function" line="62" lineend="65" name="Filter_Key_Push" signature="Filter_Key_Push()" />
+        <scope ilk="function" line="67" lineend="70" name="Filter_Value_Push" signature="Filter_Value_Push()" />
+        <scope ilk="function" line="73" lineend="76" name="Filter_Push" signature="Filter_Push()" />
+        <scope ilk="function" line="78" lineend="190" name="_do_Filter_Push" signature="_do_Filter_Push($this, $class, @params)">
+          <variable ilk="argument" name="$this" />
+          <variable ilk="argument" name="$class" />
+          <variable ilk="argument" name="@params" />
+        </scope>
+        <scope ilk="function" line="192" lineend="200" name="store_hook" signature="store_hook($this, $type)">
+          <variable ilk="argument" name="$this" />
+          <variable ilk="argument" name="$type" />
+        </scope>
+        <scope ilk="function" line="202" lineend="210" name="fetch_hook" signature="fetch_hook($this, $type)">
+          <variable ilk="argument" name="$this" />
+          <variable ilk="argument" name="$type" />
+        </scope>
+        <scope ilk="function" line="212" lineend="220" name="MyDESTROY" signature="MyDESTROY($this)">
+          <variable ilk="argument" name="$this" />
+        </scope>
+      </scope>
+    </scope>
+    

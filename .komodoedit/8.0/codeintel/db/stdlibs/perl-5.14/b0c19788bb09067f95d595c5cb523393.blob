@@ -1,0 +1,43 @@
+<scope ilk="blob" lang="Perl" name="Sub::Install">
+      <scope ilk="class" line="1" lineend="329" name="Sub::Install">
+        <import line="6" module="Carp" symbol="*" />
+        <import line="7" module="Scalar::Util" />
+        <variable line="19" name="$VERSION" />
+        <variable line="191" name="*_ignore_warnings" />
+        <variable line="195" name="*install_sub" />
+        <variable line="197" name="*_carp_warnings" />
+        <variable line="202" name="*reinstall_sub" />
+        <variable line="204" name="*_install_fatal" />
+        <variable line="287" name="*import" />
+        <scope ilk="function" line="88" lineend="94" name="_name_of_code" signature="_name_of_code($code)">
+          <import line="90" module="B" />
+          <variable ilk="argument" name="$code" />
+          <import line="90" module="B" />
+        </scope>
+        <scope ilk="function" line="97" lineend="101" name="_CODELIKE" signature="_CODELIKE()" />
+        <scope ilk="function" line="104" lineend="133" name="_build_public_installer" signature="_build_public_installer($installer, $arg)">
+          <variable ilk="argument" name="$installer" />
+          <variable ilk="argument" name="$arg" />
+        </scope>
+        <scope ilk="function" line="150" lineend="179" name="_do_with_warn" signature="_do_with_warn($arg, $code, $error)">
+          <variable ilk="argument" name="$arg" />
+          <variable ilk="argument" name="$code" />
+          <variable ilk="argument" name="$error" />
+        </scope>
+        <scope ilk="function" line="181" lineend="188" name="_installer" signature="_installer($pkg, $name, $code)">
+          <variable ilk="argument" name="$pkg" />
+          <variable ilk="argument" name="$name" />
+          <variable ilk="argument" name="$code" />
+        </scope>
+        <scope ilk="function" line="233" lineend="253" name="install_installers" signature="install_installers($into, $package, $subs)">
+          <variable ilk="argument" name="$into" />
+          <variable ilk="argument" name="$package" />
+          <variable ilk="argument" name="$subs" />
+        </scope>
+        <scope ilk="function" line="272" lineend="285" name="exporter" signature="exporter($arg, $class)">
+          <variable ilk="argument" name="$arg" />
+          <variable ilk="argument" name="$class" />
+        </scope>
+      </scope>
+    </scope>
+    

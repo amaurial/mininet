@@ -1,0 +1,34 @@
+<scope doc="A pure Python implementation of import.&#xA;References on import:  * Language reference http://docs.python.org/ref/import.html * __import__ function http://docs.python.org/lib/built-in-funcs.html * Packages http://www.python.org/doc/essays/packages.html * PEP 235: Import on Case-Insensitive Platforms http://www.python.org/dev/peps/pep-0235" ilk="blob" lang="Python" name="importlib">
+      <variable citdl="list" line="21" name="__all__" />
+      <scope doc="Import a module." ilk="function" name="__import__" signature="__import__(name, globals={}, locals={}, fromlist=[], level=0)" />
+      <import module="_bootstrap" />
+      <import module="_io" />
+      <import module="_os" />
+      <import module="_warnings" />
+      <import module="errno" />
+      <import module="imp" />
+      <scope doc="Import a module." ilk="function" line="108" lineend="124" name="import_module" returns="_bootstrap._gcd_import()" signature="import_module(name, package=None)">
+        <variable citdl="int" line="116" name="level" />
+        <variable ilk="argument" name="name" />
+        <variable ilk="argument" name="package" />
+      </scope>
+      <import module="marshal" />
+      <import module="os" />
+      <import module="re" />
+      <variable citdl="str" name="sep" />
+      <import module="sys" />
+      <import module="tokenize" />
+      <scope attributes="protected __hidden__" doc="Convert a 32-bit integer to little-endian.&#xA;&#xA;XXX Temporary until marshal&apos;s long functions are exposed.&#xA;" ilk="function" line="44" lineend="56" name="_w_long" returns="bytearray()" signature="_w_long(x)">
+        <variable citdl="int()" ilk="argument" name="x" />
+        <variable citdl="list" line="51" name="int_bytes" />
+      </scope>
+      <scope attributes="protected __hidden__" doc="Check if the directory contains something matching &apos;check&apos;.&#xA;&#xA;No check is done if the file/directory exists or not.&#xA;" ilk="function" line="31" lineend="41" name="_case_ok" returns="bool" signature="_case_ok(directory, check)">
+        <variable ilk="argument" name="directory" />
+        <variable ilk="argument" name="check" />
+      </scope>
+      <scope attributes="protected __hidden__" doc="Convert 4 bytes in little-endian to an integer.&#xA;&#xA;XXX Temporary until marshal&apos;s long function are exposed.&#xA;" ilk="function" line="59" lineend="69" name="_r_long" signature="_r_long(int_bytes)">
+        <variable ilk="argument" name="int_bytes" />
+        <variable line="65" name="x" />
+      </scope>
+    </scope>
+    

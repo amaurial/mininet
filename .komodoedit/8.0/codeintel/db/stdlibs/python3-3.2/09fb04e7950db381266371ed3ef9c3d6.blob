@@ -1,0 +1,80 @@
+<scope doc="Stuff to parse AIFF-C and AIFF files.&#xA;Unless explicitly stated otherwise, the description below is true both for AIFF-C files and AIFF files.  An AIFF-C file has the following structure.  +-----------------+ | FORM            | +-----------------+ | &lt;size&gt;          | +----+------------+" ilk="blob" lang="Python" name="aifc">
+      <scope classrefs="object" doc="&#xA;" ilk="class" name="Aifc_read">
+        <scope ilk="function" name="getcompname" signature="getcompname(self)" />
+        <scope ilk="function" name="getparams" signature="getparams(self)" />
+        <scope ilk="function" name="setpos" signature="setpos(self, pos)" />
+        <scope doc="# User visible methods." ilk="function" name="getfp" signature="getfp(self)" />
+        <scope ilk="function" name="_alaw2lin" signature="_alaw2lin(self, data)" />
+        <scope ilk="function" name="_read_comm_chunk" signature="_read_comm_chunk(self, chunk)" />
+        <scope ilk="function" name="_ulaw2lin" signature="_ulaw2lin(self, data)" />
+        <scope ilk="function" name="getnframes" signature="getnframes(self)" />
+        <scope ilk="function" name="close" signature="close(self)" />
+        <scope ilk="function" name="_adpcm2lin" signature="_adpcm2lin(self, data)" />
+        <scope ilk="function" name="__init__" signature="__init__(self, f)" />
+        <scope ilk="function" name="getframerate" signature="getframerate(self)" />
+        <scope ilk="function" name="getsampwidth" signature="getsampwidth(self)" />
+        <scope ilk="function" name="getmarkers" signature="getmarkers(self)" />
+        <scope ilk="function" name="getmark" signature="getmark(self, id)" />
+        <scope ilk="function" name="_readmark" signature="_readmark(self, chunk)" />
+        <scope ilk="function" name="getcomptype" signature="getcomptype(self)" />
+        <scope ilk="function" name="rewind" signature="rewind(self)" />
+        <scope ilk="function" name="readframes" signature="readframes(self, nframes)" />
+        <scope ilk="function" name="initfp" signature="initfp(self, file)" />
+        <scope ilk="function" name="tell" signature="tell(self)" />
+        <scope ilk="function" name="getnchannels" signature="getnchannels(self)" />
+      </scope>
+      <scope classrefs="object" doc="&#xA;" ilk="class" name="Aifc_write">
+        <scope ilk="function" name="getcompname" signature="getcompname(self)" />
+        <scope ilk="function" name="getparams" signature="getparams(self)" />
+        <scope doc="# User visible methods." ilk="function" name="aiff" signature="aiff(self)" />
+        <scope ilk="function" name="setnchannels" signature="setnchannels(self, nchannels)" />
+        <scope ilk="function" name="aifc" signature="aifc(self)" />
+        <scope ilk="function" name="_write_header" signature="_write_header(self, initlength)" />
+        <scope ilk="function" name="close" signature="close(self)" />
+        <scope ilk="function" name="__init__" signature="__init__(self, f)" />
+        <scope ilk="function" name="_writemarkers" signature="_writemarkers(self)" />
+        <scope ilk="function" name="setnframes" signature="setnframes(self, nframes)" />
+        <scope ilk="function" name="getsampwidth" signature="getsampwidth(self)" />
+        <scope ilk="function" name="setmark" signature="setmark(self, id, pos, name)" />
+        <scope ilk="function" name="getcomptype" signature="getcomptype(self)" />
+        <scope ilk="function" name="_lin2ulaw" signature="_lin2ulaw(self, data)" />
+        <scope ilk="function" name="initfp" signature="initfp(self, file)" />
+        <scope ilk="function" name="setparams" signature="setparams(self, params)" />
+        <scope ilk="function" name="tell" signature="tell(self)" />
+        <scope ilk="function" name="setsampwidth" signature="setsampwidth(self, sampwidth)" />
+        <scope ilk="function" name="_write_form_length" signature="_write_form_length(self, datalength)" />
+        <scope ilk="function" name="__del__" signature="__del__(self)" />
+        <scope ilk="function" name="_lin2adpcm" signature="_lin2adpcm(self, data)" />
+        <scope ilk="function" name="getnframes" signature="getnframes(self)" />
+        <scope ilk="function" name="_lin2alaw" signature="_lin2alaw(self, data)" />
+        <scope ilk="function" name="_ensure_header_written" signature="_ensure_header_written(self, datasize)" />
+        <scope ilk="function" name="getframerate" signature="getframerate(self)" />
+        <scope ilk="function" name="_patchheader" signature="_patchheader(self)" />
+        <scope ilk="function" name="writeframesraw" signature="writeframesraw(self, data)" />
+        <scope ilk="function" name="setframerate" signature="setframerate(self, framerate)" />
+        <scope ilk="function" name="writeframes" signature="writeframes(self, data)" />
+        <scope ilk="function" name="getmarkers" signature="getmarkers(self)" />
+        <scope ilk="function" name="getmark" signature="getmark(self, id)" />
+        <scope ilk="function" name="_init_compression" signature="_init_compression(self)" />
+        <scope ilk="function" name="getnchannels" signature="getnchannels(self)" />
+        <scope ilk="function" name="setcomptype" signature="setcomptype(self, comptype, compname)" />
+      </scope>
+      <scope classrefs="object" doc="&#xA;" ilk="class" name="Chunk">
+        <scope ilk="function" name="isatty" signature="isatty(self)" />
+        <scope doc="Read at most size bytes from the chunk." ilk="function" name="read" signature="read(self, size=-1)" />
+        <scope doc="Skip the rest of the chunk." ilk="function" name="skip" signature="skip(self)" />
+        <scope doc="Return the name (ID) of the current chunk." ilk="function" name="getname" signature="getname(self)" />
+        <scope doc="Return the size of the current chunk." ilk="function" name="getsize" signature="getsize(self)" />
+        <scope ilk="function" name="close" signature="close(self)" />
+        <scope doc="Seek to specified position into the chunk." ilk="function" name="seek" signature="seek(self, pos, whence=0)" />
+        <scope ilk="function" name="tell" signature="tell(self)" />
+        <scope ilk="function" name="__init__" signature="__init__(self, file, align=True, bigendian=True, inclheader=False)" />
+      </scope>
+      <scope classrefs="Exception" doc="&#xA;" ilk="class" name="Error" />
+      <variable citdl="list" name="__all__" />
+      <import module="builtins" />
+      <scope ilk="function" name="open" signature="open(f, mode=None)" />
+      <scope ilk="function" name="openfp" signature="openfp(f, mode=None)" />
+      <import module="struct" />
+    </scope>
+    

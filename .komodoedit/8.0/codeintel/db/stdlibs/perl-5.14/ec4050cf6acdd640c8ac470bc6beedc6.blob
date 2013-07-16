@@ -1,0 +1,41 @@
+<scope ilk="blob" lang="Perl" name="Sub::Exporter::Util">
+      <scope ilk="class" line="4" lineend="360" name="Sub::Exporter::Util">
+        <import line="6" module="Data::OptList" />
+        <import line="7" module="Params::Util" />
+        <import line="332" module="Sub::Exporter" symbol="*" />
+        <variable line="19" name="$VERSION" />
+        <variable line="73" name="*curry_class" />
+        <scope ilk="function" line="64" lineend="71" name="curry_method" signature="curry_method($override_name, $class, $name)">
+          <variable ilk="argument" name="$override_name" />
+          <variable ilk="argument" name="$class" />
+          <variable ilk="argument" name="$name" />
+        </scope>
+        <scope ilk="function" line="106" lineend="137" name="curry_chain" signature="curry_chain(@opt_list, $class)">
+          <variable ilk="argument" name="@opt_list" />
+          <variable ilk="argument" name="$class" />
+        </scope>
+        <scope ilk="function" line="201" lineend="225" name="merge_col" signature="merge_col(%groups, $class, $name, $arg, $col)">
+          <variable ilk="argument" name="%groups" />
+          <variable ilk="argument" name="$class" />
+          <variable ilk="argument" name="$name" />
+          <variable ilk="argument" name="$arg" />
+          <variable ilk="argument" name="$col" />
+        </scope>
+        <scope ilk="function" line="244" lineend="259" name="__mixin_class_for" signature="__mixin_class_for($class, $mix_into)">
+          <import line="246" module="Package::Generator" />
+          <variable ilk="argument" name="$class" />
+          <variable ilk="argument" name="$mix_into" />
+          <import line="246" module="Package::Generator" />
+        </scope>
+        <scope attributes="__ctor__" ilk="function" line="261" lineend="273" name="mixin_installer" signature="mixin_installer($arg, $to_export)">
+          <variable ilk="argument" name="$arg" />
+          <variable ilk="argument" name="$to_export" />
+        </scope>
+        <scope ilk="function" line="275" lineend="278" name="mixin_exporter" signature="mixin_exporter()" />
+        <scope ilk="function" line="302" lineend="329" name="like" signature="like($value, $arg)">
+          <variable ilk="argument" name="$value" />
+          <variable ilk="argument" name="$arg" />
+        </scope>
+      </scope>
+    </scope>
+    

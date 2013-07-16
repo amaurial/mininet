@@ -1,0 +1,63 @@
+<scope ilk="blob" lang="Perl" name="PPI::Tokenizer">
+      <scope ilk="class" line="1" lineend="1002" name="PPI::Tokenizer">
+        <import line="82" module="Params::Util" symbol="_INSTANCE" />
+        <import line="82" module="Params::Util" symbol="_SCALAR0" />
+        <import line="82" module="Params::Util" symbol="_ARRAY0" />
+        <import line="83" module="List::MoreUtils" />
+        <import line="84" module="PPI::Util" />
+        <import line="85" module="PPI::Element" />
+        <import line="86" module="PPI::Token" />
+        <import line="87" module="PPI::Exception" />
+        <import line="88" module="PPI::Exception::ParserRejection" />
+        <variable line="90" name="$VERSION" />
+        <scope attributes="__ctor__" ilk="function" line="119" lineend="223" name="new" signature="new()">
+          </scope>
+        <scope ilk="function" line="255" lineend="313" name="get_token" signature="get_token($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="332" lineend="358" name="all_tokens" signature="all_tokens($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="376" lineend="380" name="increment_cursor" signature="increment_cursor()" />
+        <scope ilk="function" line="401" lineend="410" name="decrement_cursor" signature="decrement_cursor($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="421" lineend="433" name="_get_line" signature="_get_line($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="438" lineend="466" name="_fill_line" signature="_fill_line($self, $inscan)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$inscan" />
+        </scope>
+        <scope ilk="function" line="469" lineend="472" name="_char" signature="_char($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="485" lineend="526" name="_process_next_line" signature="_process_next_line($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="539" lineend="588" name="_process_next_char" signature="_process_next_char($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="599" lineend="609" name="_finalize_token" signature="_finalize_token($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="613" lineend="627" name="_new_token" signature="_new_token($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="631" lineend="661" name="_clean_eof" signature="_clean_eof($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="671" lineend="673" name="_last_token" signature="_last_token()" />
+        <scope ilk="function" line="675" lineend="685" name="_last_significant_token" signature="_last_significant_token($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="691" lineend="711" name="_previous_significant_tokens" signature="_previous_significant_tokens($self, $count)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$count" />
+        </scope>
+        <scope ilk="function" line="739" lineend="757" name="_opcontext" signature="_opcontext($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+      </scope>
+    </scope>
+    

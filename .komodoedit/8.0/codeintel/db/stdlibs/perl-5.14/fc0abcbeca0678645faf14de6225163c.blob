@@ -1,0 +1,54 @@
+<scope ilk="blob" lang="Perl" name="CPANPLUS::Internals::Source::Memory">
+      <scope ilk="class" line="1" lineend="374" name="CPANPLUS::Internals::Source::Memory">
+        <import line="7" module="CPANPLUS::Error" symbol="*" />
+        <import line="8" module="CPANPLUS::Module" symbol="*" />
+        <import line="9" module="CPANPLUS::Module::Fake" symbol="*" />
+        <import line="10" module="CPANPLUS::Module::Author" symbol="*" />
+        <import line="11" module="CPANPLUS::Internals::Constants" symbol="*" />
+        <import line="13" module="File::Fetch" symbol="*" />
+        <import line="14" module="Archive::Extract" symbol="*" />
+        <import line="16" module="IPC::Cmd" symbol="can_run" />
+        <import line="17" module="File::Temp" symbol="tempdir" />
+        <import line="18" module="File::Basename" symbol="dirname" />
+        <import line="19" module="Params::Check" symbol="allow" />
+        <import line="19" module="Params::Check" symbol="check" />
+        <import line="20" module="Module::Load::Conditional" symbol="can_load" />
+        <import line="21" module="Locale::Maketext::Simple" symbol="Class" />
+        <variable line="23" name="$Params::Check::VERBOSE" />
+        <variable line="159" name="$sub" />
+        <scope ilk="function" line="35" lineend="65" name="_init_trees" signature="_init_trees($self, %hash)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="%hash" />
+        </scope>
+        <scope ilk="function" line="67" lineend="67" name="_standard_trees_completed" signature="_standard_trees_completed()" />
+        <scope ilk="function" line="68" lineend="68" name="_custom_trees_completed" signature="_custom_trees_completed()" />
+        <scope ilk="function" line="70" lineend="93" name="_finalize_trees" signature="_finalize_trees($self, %hash)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="%hash" />
+        </scope>
+        <scope ilk="function" line="96" lineend="99" name="_save_state" signature="_save_state($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="102" lineend="123" name="_add_author_object" signature="_add_author_object($self, %hash)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="%hash" />
+        </scope>
+        <scope ilk="function" line="125" lineend="147" name="_add_module_object" signature="_add_module_object($self, %hash)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="%hash" />
+        </scope>
+        <scope ilk="function" line="226" lineend="256" name="__memory_retrieve_source" signature="__memory_retrieve_source($self, %hash)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="%hash" />
+        </scope>
+        <scope ilk="function" line="285" lineend="333" name="__memory_save_source" signature="__memory_save_source($self, %hash)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="%hash" />
+        </scope>
+        <scope ilk="function" line="335" lineend="362" name="__memory_storable_file" signature="__memory_storable_file($self, $path)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$path" />
+        </scope>
+      </scope>
+    </scope>
+    

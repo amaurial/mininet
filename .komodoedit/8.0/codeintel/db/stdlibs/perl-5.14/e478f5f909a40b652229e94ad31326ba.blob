@@ -1,0 +1,106 @@
+<scope ilk="blob" lang="Perl" name="Net::Cmd">
+      <scope classrefs="Exporter" ilk="class" line="7" lineend="607" name="Net::Cmd">
+        <import line="10" module="Exporter" />
+        <import line="14" module="Carp" symbol="*" />
+        <import line="15" module="Symbol" symbol="gensym" />
+        <import line="19" module="Convert::EBCDIC" />
+        <variable line="13" name="$VERSION" />
+        <variable line="13" name="@EXPORT" />
+        <variable line="13" name="@ISA" />
+        <variable line="27" name="*is_utf8" />
+        <scope attributes="__exported__" ilk="function" line="45" lineend="45" name="CMD_INFO" signature="CMD_INFO()" />
+        <scope attributes="__exported__" ilk="function" line="46" lineend="46" name="CMD_OK" signature="CMD_OK()" />
+        <scope attributes="__exported__" ilk="function" line="47" lineend="47" name="CMD_MORE" signature="CMD_MORE()" />
+        <scope attributes="__exported__" ilk="function" line="48" lineend="48" name="CMD_REJECT" signature="CMD_REJECT()" />
+        <scope attributes="__exported__" ilk="function" line="49" lineend="49" name="CMD_ERROR" signature="CMD_ERROR()" />
+        <scope attributes="__exported__" ilk="function" line="50" lineend="50" name="CMD_PENDING" signature="CMD_PENDING()" />
+        <scope ilk="function" line="57" lineend="69" name="toebcdic" signature="toebcdic($cmd)">
+          <variable ilk="argument" name="$cmd" />
+        </scope>
+        <scope ilk="function" line="72" lineend="77" name="toascii" signature="toascii($cmd)">
+          <variable ilk="argument" name="$cmd" />
+        </scope>
+        <scope ilk="function" line="80" lineend="110" name="_print_isa" signature="_print_isa($pkg)">
+          <variable ilk="argument" name="$pkg" />
+        </scope>
+        <scope ilk="function" line="113" lineend="144" name="debug" signature="debug($cmd, $level)">
+          <variable ilk="argument" name="$cmd" />
+          <variable ilk="argument" name="$level" />
+        </scope>
+        <scope ilk="function" line="147" lineend="155" name="message" signature="message($cmd)">
+          <variable ilk="argument" name="$cmd" />
+        </scope>
+        <scope ilk="function" line="158" lineend="158" name="debug_text" signature="debug_text()" />
+        <scope ilk="function" line="161" lineend="164" name="debug_print" signature="debug_print($cmd, $out, $text)">
+          <variable ilk="argument" name="$cmd" />
+          <variable ilk="argument" name="$out" />
+          <variable ilk="argument" name="$text" />
+        </scope>
+        <scope ilk="function" line="167" lineend="176" name="code" signature="code($cmd)">
+          <variable ilk="argument" name="$cmd" />
+        </scope>
+        <scope ilk="function" line="179" lineend="185" name="status" signature="status($cmd)">
+          <variable ilk="argument" name="$cmd" />
+        </scope>
+        <scope ilk="function" line="188" lineend="200" name="set_status" signature="set_status($cmd, $code, $resp)">
+          <variable ilk="argument" name="$cmd" />
+          <variable ilk="argument" name="$code" />
+          <variable ilk="argument" name="$resp" />
+        </scope>
+        <scope ilk="function" line="203" lineend="243" name="command" signature="command($cmd)">
+          <variable ilk="argument" name="$cmd" />
+        </scope>
+        <scope ilk="function" line="246" lineend="251" name="ok" signature="ok()">
+          </scope>
+        <scope ilk="function" line="254" lineend="260" name="unsupported" signature="unsupported($cmd)">
+          <variable ilk="argument" name="$cmd" />
+        </scope>
+        <scope ilk="function" line="263" lineend="320" name="getline" signature="getline($cmd)">
+          <variable ilk="argument" name="$cmd" />
+        </scope>
+        <scope ilk="function" line="323" lineend="328" name="ungetline" signature="ungetline($cmd, $str)">
+          <variable ilk="argument" name="$cmd" />
+          <variable ilk="argument" name="$str" />
+        </scope>
+        <scope ilk="function" line="331" lineend="335" name="parse_response" signature="parse_response()" />
+        <scope ilk="function" line="338" lineend="367" name="response" signature="response($cmd)">
+          <variable ilk="argument" name="$cmd" />
+        </scope>
+        <scope ilk="function" line="370" lineend="394" name="read_until_dot" signature="read_until_dot($cmd, $fh)">
+          <variable ilk="argument" name="$cmd" />
+          <variable ilk="argument" name="$fh" />
+        </scope>
+        <scope ilk="function" line="397" lineend="464" name="datasend" signature="datasend($cmd)">
+          <variable ilk="argument" name="$cmd" />
+        </scope>
+        <scope ilk="function" line="467" lineend="507" name="rawdatasend" signature="rawdatasend($cmd)">
+          <variable ilk="argument" name="$cmd" />
+        </scope>
+        <scope ilk="function" line="510" lineend="537" name="dataend" signature="dataend($cmd)">
+          <variable ilk="argument" name="$cmd" />
+        </scope>
+        <scope ilk="function" line="540" lineend="546" name="tied_fh" signature="tied_fh($cmd)">
+          <variable ilk="argument" name="$cmd" />
+        </scope>
+        <scope ilk="function" line="549" lineend="553" name="TIEHANDLE" signature="TIEHANDLE($class, $cmd)">
+          <variable ilk="argument" name="$class" />
+          <variable ilk="argument" name="$cmd" />
+        </scope>
+        <scope ilk="function" line="557" lineend="573" name="READ" signature="READ($cmd)">
+          <variable ilk="argument" name="$cmd" />
+        </scope>
+        <scope ilk="function" line="576" lineend="585" name="READLINE" signature="READLINE($cmd)">
+          <variable ilk="argument" name="$cmd" />
+        </scope>
+        <scope ilk="function" line="588" lineend="596" name="PRINT" signature="PRINT($cmd, $buf, $len, $offset)">
+          <variable ilk="argument" name="$cmd" />
+          <variable ilk="argument" name="$buf" />
+          <variable ilk="argument" name="$len" />
+          <variable ilk="argument" name="$offset" />
+        </scope>
+        <scope ilk="function" line="599" lineend="605" name="CLOSE" signature="CLOSE($cmd)">
+          <variable ilk="argument" name="$cmd" />
+        </scope>
+      </scope>
+    </scope>
+    

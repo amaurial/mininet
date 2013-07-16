@@ -1,0 +1,110 @@
+<scope doc="Quoted-printable content transfer encoding per RFCs 2045-2047.&#xA;This module handles the content transfer encoding method defined in RFC 2045 to encode US ASCII-like 8-bit data called `quoted-printable&apos;.  It is used to safely encode text that is in a character set similar to the 7-bit US ASCII character set, but that includes some 8-bit characters that are normally not allowed in email bodies or headers.  Quoted-printable is very space-inefficient for encoding binary files; use the email.base64mime module for that instead.  This module provides an interface to encode and decode both headers and bodies" ilk="blob" lang="Python" name="email.quoprimime">
+      <variable citdl="str" line="47" name="CRLF" />
+      <variable citdl="str" line="49" name="EMPTYSTRING" />
+      <variable citdl="str" line="48" name="NL" />
+      <variable citdl="list" line="29" name="__all__" />
+      <variable citdl="str" name="ascii_letters" />
+      <scope doc="Return True if the octet should be escaped with body quopri." ilk="function" line="79" lineend="81" name="body_check" returns="bool" signature="body_check(octet)">
+        <variable ilk="argument" name="octet" />
+      </scope>
+      <scope doc="Decode a quoted-printable string." ilk="function" line="302" name="body_decode" signature="body_decode(encoded, eol=&apos;\n&apos;)" />
+      <scope doc="Encode with quoted-printable, wrapping at maxlinelen&#xA;characters." ilk="function" line="205" lineend="248" name="body_encode" returns="str" signature="body_encode(body, maxlinelen=76, eol=&apos;\n&apos;)">
+        <variable ilk="argument" name="body" />
+        <variable citdl="_body_accumulator" line="233" name="encoded_body" />
+        <variable citdl="quote()" line="241" name="c" />
+        <variable citdl="int" ilk="argument" name="maxlinelen" />
+        <variable citdl="body.splitlines()" line="235" name="lines" />
+        <variable citdl="str" ilk="argument" name="eol" />
+        <variable citdl="len()" line="238" name="last_char_index" />
+        <variable citdl="len()" line="236" name="last_line_no" />
+        <variable citdl="bool" line="230" name="last_has_eol" />
+        <variable citdl="quote()" line="183" name="prev" />
+        <variable citdl="list" line="177" name="line" />
+        <variable citdl="str" line="182" name="encoded_line" />
+        <variable citdl="len()" line="184" name="linelen" />
+        <variable citdl="int" line="170" name="lineno" />
+      </scope>
+      <scope doc="Return a body quoted-printable encoding length." ilk="function" line="97" lineend="104" name="body_length" returns="sum()" signature="body_length(bytearray)">
+        <variable ilk="argument" name="bytearray" />
+      </scope>
+      <variable citdl="int" name="c" />
+      <scope doc="Decode a quoted-printable string." ilk="function" line="254" lineend="298" name="decode" returns="str" signature="decode(encoded, eol=&apos;\n&apos;)">
+        <variable citdl="list" line="264" name="decoded" />
+        <variable line="275" name="c" />
+        <variable citdl="int" line="272" name="i" />
+        <variable ilk="argument" name="encoded" />
+        <variable citdl="line.rstrip()" line="267" name="line" />
+        <variable citdl="str" ilk="argument" name="eol" />
+        <variable citdl="len()" line="273" name="n" />
+      </scope>
+      <scope doc="Decode a quoted-printable string." ilk="function" line="303" name="decodestring" signature="decodestring(encoded, eol=&apos;\n&apos;)" />
+      <variable citdl="str" name="digits" />
+      <scope doc="Return True if the octet should be escaped with header&#xA;quopri." ilk="function" line="74" lineend="76" name="header_check" returns="bool" signature="header_check(octet)">
+        <variable ilk="argument" name="octet" />
+      </scope>
+      <scope doc="Decode a string encoded with RFC 2045 MIME header `Q&apos;&#xA;encoding." ilk="function" line="314" lineend="322" name="header_decode" returns="re.sub()" signature="header_decode(s)">
+        <variable citdl="s.replace()" ilk="argument" name="s" />
+      </scope>
+      <scope doc="Encode a single header line with quoted-printable (like)&#xA;encoding." ilk="function" line="128" lineend="148" name="header_encode" returns="tuple" signature="header_encode(header_bytes, charset=&apos;iso-8859-1&apos;)">
+        <variable citdl="list" line="143" name="encoded" />
+        <variable ilk="argument" name="header_bytes" />
+        <variable citdl="str" ilk="argument" name="charset" />
+      </scope>
+      <scope doc="Return a header quoted-printable encoding length." ilk="function" line="84" lineend="94" name="header_length" returns="sum()" signature="header_length(bytearray)">
+        <variable ilk="argument" name="bytearray" />
+      </scope>
+      <variable citdl="str" name="hexdigits" />
+      <import module="io" />
+      <scope ilk="function" line="123" lineend="124" name="quote" returns="str" signature="quote(c)">
+        <variable ilk="argument" name="c" />
+      </scope>
+      <import module="re" />
+      <scope doc="Turn a string in the form =AB to the ASCII character with&#xA;value 0xab" ilk="function" line="118" lineend="120" name="unquote" returns="chr()" signature="unquote(s)">
+        <variable ilk="argument" name="s" />
+      </scope>
+      <scope attributes="protected __hidden__" classrefs="io.StringIO" ilk="class" line="151" lineend="202" name="_body_accumulator">
+        <scope attributes="__ctor__" ilk="function" line="153" lineend="156" name="__init__" signature="_body_accumulator(maxlinelen, eol, *args, **kw)">
+          <variable citdl="_body_accumulator" ilk="argument" name="self" />
+          <variable ilk="argument" name="maxlinelen" />
+          <variable ilk="argument" name="eol" />
+          <variable attributes="varargs" ilk="argument" name="args" />
+          <variable attributes="kwargs" ilk="argument" name="kw" />
+        </scope>
+        <variable attributes="__instancevar__" line="155" name="eol" />
+        <variable attributes="__instancevar__" line="156" name="maxlinelen" />
+        <scope doc="Add string s to the accumulated body." ilk="function" line="158" lineend="161" name="write_str" signature="write_str(s)">
+          <variable citdl="_body_accumulator" ilk="argument" name="self" />
+          <variable ilk="argument" name="s" />
+        </scope>
+        <scope doc="Write eol, then start new line." ilk="function" line="163" lineend="166" name="newline" signature="newline()">
+          <variable citdl="_body_accumulator" ilk="argument" name="self" />
+        </scope>
+        <variable attributes="__instancevar__" line="166" name="room" />
+        <scope doc="Write a soft break, then start a new line." ilk="function" line="168" lineend="171" name="write_soft_break" signature="write_soft_break()">
+          <variable citdl="_body_accumulator" ilk="argument" name="self" />
+        </scope>
+        <scope doc="Add a soft line break if needed, then write s." ilk="function" line="173" lineend="177" name="write_wrapped" signature="write_wrapped(s, extra_room=0)">
+          <variable citdl="_body_accumulator" ilk="argument" name="self" />
+          <variable ilk="argument" name="s" />
+          <variable citdl="int" ilk="argument" name="extra_room" />
+        </scope>
+        <scope ilk="function" line="179" lineend="202" name="write_char" signature="write_char(c, is_last_char)">
+          <variable citdl="_body_accumulator" ilk="argument" name="self" />
+          <variable ilk="argument" name="c" />
+          <variable ilk="argument" name="is_last_char" />
+        </scope>
+      </scope>
+      <scope attributes="protected __hidden__" ilk="function" line="107" lineend="115" name="_max_append" signature="_max_append(L, s, maxlen, extra=&apos;&apos;)">
+        <variable ilk="argument" name="L" />
+        <variable citdl="chr()" ilk="argument" name="s" />
+        <variable ilk="argument" name="maxlen" />
+        <variable citdl="str" ilk="argument" name="extra" />
+      </scope>
+      <scope attributes="protected __hidden__" doc="Turn a match in the form =AB to the ASCII character with value 0xab" ilk="function" line="307" lineend="310" name="_unquote_match" returns="unquote()" signature="_unquote_match(match)">
+        <variable ilk="argument" name="match" />
+        <variable citdl="match.group()" line="309" name="s" />
+      </scope>
+      <variable attributes="protected __hidden__" citdl="dict()" line="56" name="_QUOPRI_HEADER_MAP" />
+      <variable attributes="protected __hidden__" citdl="_QUOPRI_HEADER_MAP.copy()" line="57" name="_QUOPRI_BODY_MAP" />
+    </scope>
+    

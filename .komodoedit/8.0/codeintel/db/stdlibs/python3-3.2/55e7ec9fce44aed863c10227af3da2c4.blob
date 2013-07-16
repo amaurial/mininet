@@ -1,0 +1,25 @@
+<scope doc="Various types of useful iterators and generators.&#xA;" ilk="blob" lang="Python" name="email.iterators">
+      <scope classrefs="_TextIOBase" doc="Text I/O implementation using an in-memory buffer.&#xA;The initial_value argument sets the value of object.  The newline argument is like the one of TextIOWrapper&apos;s constructor." ilk="class" name="StringIO">
+        <scope ilk="function" name="writable" />
+        <scope doc="Truncate size to pos." ilk="function" name="truncate" />
+        <scope ilk="function" name="__setstate__" />
+        <scope doc="Read at most n characters, returned as a string." ilk="function" name="read" />
+        <scope doc="x.__next__() &lt;==&gt; next(x)" ilk="function" name="__next__" signature="x.__next__() &lt;==&gt; next(x)" />
+        <scope ilk="function" name="readable" />
+        <scope doc="Retrieve the entire contents of the object." ilk="function" name="getvalue" />
+        <scope doc="Write string to file." ilk="function" name="write" />
+        <scope ilk="function" name="seekable" />
+        <scope doc="Close the IO object." ilk="function" name="close" />
+        <scope doc="Read until newline or EOF." ilk="function" name="readline" />
+        <scope ilk="function" name="__getstate__" />
+        <scope doc="Change stream position." ilk="function" name="seek" />
+        <scope doc="Tell the current file position." ilk="function" name="tell" />
+        <scope ilk="function" name="__init__" />
+      </scope>
+      <variable citdl="list" name="__all__" />
+      <scope doc="Iterate over the parts, returning string payloads line-by-&#xA;line." ilk="function" name="body_line_iterator" signature="body_line_iterator(msg, decode=False)" />
+      <import module="sys" />
+      <scope doc="Iterate over the subparts with a given MIME type." ilk="function" name="typed_subpart_iterator" signature="typed_subpart_iterator(msg, maintype=&apos;text&apos;, subtype=None)" />
+      <scope doc="Walk over the message tree, yielding each subpart." ilk="function" name="walk" signature="walk(self)" />
+    </scope>
+    

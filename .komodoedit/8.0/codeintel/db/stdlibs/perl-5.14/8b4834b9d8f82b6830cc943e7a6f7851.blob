@@ -1,0 +1,69 @@
+<scope ilk="blob" lang="Perl" name="CPANPLUS::Backend">
+      <scope classrefs="CPANPLUS::Internals" ilk="class" line="1" lineend="1322" name="CPANPLUS::Backend">
+        <import line="6" module="CPANPLUS::Error" symbol="*" />
+        <import line="7" module="CPANPLUS::Configure" symbol="*" />
+        <import line="8" module="CPANPLUS::Internals" symbol="*" />
+        <import line="9" module="CPANPLUS::Internals::Constants" symbol="*" />
+        <import line="10" module="CPANPLUS::Module" symbol="*" />
+        <import line="11" module="CPANPLUS::Module::Author" symbol="*" />
+        <import line="12" module="CPANPLUS::Backend::RV" symbol="*" />
+        <import line="14" module="FileHandle" symbol="*" />
+        <import line="15" module="File::Spec" />
+        <import line="16" module="File::Spec::Unix" />
+        <import line="17" module="File::Basename" />
+        <import line="18" module="Params::Check" symbol="check" />
+        <import line="19" module="Locale::Maketext::Simple" symbol="Class" />
+        <variable line="21" name="$Params::Check::VERBOSE" />
+        <variable line="23" name="$VERSION" />
+        <variable line="23" name="@ISA" />
+        <scope ilk="function" line="99" lineend="112" name="new" signature="new($class)">
+          <variable ilk="argument" name="$class" />
+        </scope>
+        <scope ilk="function" line="129" lineend="162" name="module_tree" signature="module_tree($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="179" lineend="192" name="author_tree" signature="author_tree($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="205" lineend="205" name="configure_object" signature="configure_object()" />
+        <scope ilk="function" line="216" lineend="216" name="selfupdate_object" signature="selfupdate_object()" />
+        <scope ilk="function" line="249" lineend="279" name="search" signature="search($self, %hash)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="%hash" />
+        </scope>
+        <scope ilk="function" line="466" lineend="749" name="parse_module" signature="parse_module($self, %hash)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="%hash" />
+        </scope>
+        <scope ilk="function" line="770" lineend="796" name="reload_indices" signature="reload_indices($self, %hash)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="%hash" />
+        </scope>
+        <scope ilk="function" line="845" lineend="865" name="flush" signature="flush($self, $type)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$type" />
+        </scope>
+        <scope ilk="function" line="879" lineend="885" name="installed" signature="installed($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="930" lineend="1005" name="local_mirror" signature="local_mirror($self, %hash)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="%hash" />
+        </scope>
+        <scope ilk="function" line="1031" lineend="1137" name="autobundle" signature="autobundle($self, %hash)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="%hash" />
+        </scope>
+        <scope ilk="function" line="1158" lineend="1161" name="save_state" signature="save_state($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="1192" lineend="1194" name="list_custom_sources" signature="list_custom_sources()" />
+        <scope ilk="function" line="1209" lineend="1211" name="add_custom_source" signature="add_custom_source()" />
+        <scope ilk="function" line="1226" lineend="1228" name="remove_custom_source" signature="remove_custom_source()" />
+        <scope ilk="function" line="1258" lineend="1268" name="update_custom_source" signature="update_custom_source($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="1286" lineend="1288" name="write_custom_source_index" signature="write_custom_source_index()" />
+      </scope>
+    </scope>
+    

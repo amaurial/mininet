@@ -1,0 +1,19 @@
+<scope doc="Functions to convert between Python values and C structs.&#xA;Python bytes objects are used to hold the data representing the C struct and also as format strings (explained below) to describe the layout of data in the C struct.  The optional first format char indicates byte order, size and alignment: @: native order, size &amp; alignment (default) =: native order, std. size &amp; alignment &lt;: little-endian, std. size &amp; alignment &gt;: big-endian, std. size &amp; alignment !: same as &gt;" ilk="blob" lang="Python" name="_struct">
+      <scope classrefs="object" doc="Struct(fmt) --&gt; compiled struct object&#xA;Return a new Struct object which writes and reads binary data according to the format string fmt.  See help(struct) for more on format strings." ilk="class" name="Struct">
+        <scope doc="x.__setattr__(&apos;name&apos;, value) &lt;==&gt; x.name = value" ilk="function" name="__setattr__" signature="x.__setattr__(&apos;name&apos;, value) &lt;==&gt; x.name = value" />
+        <scope doc="x.__getattribute__(&apos;name&apos;) &lt;==&gt; x.name" ilk="function" name="__getattribute__" signature="x.__getattribute__(&apos;name&apos;) &lt;==&gt; x.name" />
+        <scope doc="Pack the values v1, v2, ..." ilk="function" name="pack_into" signature="S.pack_into(buffer, offset, v1, v2, ...)" />
+        <scope doc="x.__delattr__(&apos;name&apos;) &lt;==&gt; del x.name" ilk="function" name="__delattr__" signature="x.__delattr__(&apos;name&apos;) &lt;==&gt; del x.name" />
+        <scope doc="Return a tuple containing values unpacked according to the&#xA;format string S.format." ilk="function" name="unpack_from" signature="S.unpack_from(buffer, offset=0) -&gt; (v1, v2, ...)" />
+        <scope doc="Return a tuple containing values unpacked according to the&#xA;format string S.format." ilk="function" name="unpack" signature="S.unpack(buffer) -&gt; (v1, v2, ...)" />
+        <scope ilk="function" name="__init__" />
+        <scope doc="Return a bytes object containing values v1, v2, ..." ilk="function" name="pack" signature="S.pack(v1, v2, ...) -&gt; bytes" />
+      </scope>
+      <scope doc="Return size in bytes of the struct described by the format&#xA;string fmt." ilk="function" name="calcsize" returns="int" signature="calcsize(fmt) -&gt; integer" />
+      <scope classrefs="Exception" doc="&#xA;" ilk="class" name="error" />
+      <scope doc="Return a bytes object containing the values v1, v2, ..." ilk="function" name="pack" signature="pack(fmt, v1, v2, ...) -&gt; bytes" />
+      <scope doc="Pack the values v1, v2, ..." ilk="function" name="pack_into" signature="pack_into(fmt, buffer, offset, v1, v2, ...)" />
+      <scope doc="Return a tuple containing values unpacked according to the&#xA;format string fmt." ilk="function" name="unpack" signature="unpack(fmt, buffer) -&gt; (v1, v2, ...)" />
+      <scope doc="Return a tuple containing values unpacked according to the&#xA;format string fmt." ilk="function" name="unpack_from" signature="unpack_from(fmt, buffer, offset=0) -&gt; (v1, v2, ...)" />
+    </scope>
+    

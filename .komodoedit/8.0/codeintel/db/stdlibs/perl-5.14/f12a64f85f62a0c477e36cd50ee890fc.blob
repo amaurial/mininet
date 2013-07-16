@@ -1,0 +1,96 @@
+<scope ilk="blob" lang="Perl" name="PPIx::Regexp::Dumper">
+      <scope ilk="class" line="33" lineend="594" name="PPIx::Regexp::Dumper">
+        <import line="40" module="Carp" symbol="*" />
+        <import line="41" module="Scalar::Util" symbol="blessed" />
+        <import line="41" module="Scalar::Util" symbol="looks_like_number" />
+        <import line="43" module="PPIx::Regexp" symbol="*" />
+        <import line="44" module="PPIx::Regexp::Tokenizer" symbol="*" />
+        <import line="45" module="PPIx::Regexp::Util" symbol="__instance" />
+        <variable line="47" name="$VERSION" />
+        <scope attributes="__ctor__" ilk="function" line="161" lineend="203" name="new" signature="new($class, $re, %args)">
+          <variable ilk="argument" name="$class" />
+          <variable ilk="argument" name="$re" />
+          <variable ilk="argument" name="%args" />
+        </scope>
+        <scope ilk="function" line="216" lineend="224" name="list" signature="list($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="234" lineend="238" name="print : method" signature="print : method($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="249" lineend="254" name="string" signature="string($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="257" lineend="277" name="_safe" signature="_safe($self, @args)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="@args" />
+        </scope>
+        <scope ilk="function" line="279" lineend="282" name="_safe_version" signature="_safe_version($self, $version)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$version" />
+        </scope>
+        <scope ilk="function" line="284" lineend="291" name="_nav" signature="_nav($self, @args)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="@args" />
+        </scope>
+        <scope ilk="function" line="293" lineend="301" name="_perl_version" signature="_perl_version($self, $elem)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$elem" />
+        </scope>
+        <scope ilk="function" line="303" lineend="317" name="_content" signature="_content($self, $elem, $dflt)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$elem" />
+          <variable ilk="argument" name="$dflt" />
+        </scope>
+        <scope ilk="function" line="319" lineend="330" name="_tokens_dump" signature="_tokens_dump($self, $elem)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$elem" />
+        </scope>
+        <scope ilk="function" line="332" lineend="345" name="_format_modifiers_dump" signature="_format_modifiers_dump($self, $elem)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$elem" />
+        </scope>
+        <scope ilk="function" line="347" lineend="363" name="_tokens_test" signature="_tokens_test($self, $elem)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$elem" />
+        </scope>
+        <scope ilk="function" line="365" lineend="384" name="PPIx::Regexp::__PPIX_DUMPER__test" signature="PPIx::Regexp::__PPIX_DUMPER__test($self, $dumper)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$dumper" />
+        </scope>
+        <scope ilk="function" line="386" lineend="404" name="PPIx::Regexp::Node::__PPIX_DUMPER__dump" signature="PPIx::Regexp::Node::__PPIX_DUMPER__dump($self, $dumper)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$dumper" />
+        </scope>
+        <scope ilk="function" line="406" lineend="430" name="PPIx::Regexp::Node::__PPIX_DUMPER__test" signature="PPIx::Regexp::Node::__PPIX_DUMPER__test($self, $dumper)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$dumper" />
+        </scope>
+        <scope ilk="function" line="440" lineend="477" name="PPIx::Regexp::Structure::__PPIX_DUMPER__dump" signature="PPIx::Regexp::Structure::__PPIX_DUMPER__dump($self, $dumper)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$dumper" />
+        </scope>
+        <scope ilk="function" line="481" lineend="516" name="PPIx::Regexp::Structure::__PPIX_DUMPER__test" signature="PPIx::Regexp::Structure::__PPIX_DUMPER__test($self, $dumper)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$dumper" />
+        </scope>
+        <scope ilk="function" line="518" lineend="523" name="PPIx::Regexp::Tokenizer::__PPIX_DUMPER__dump" signature="PPIx::Regexp::Tokenizer::__PPIX_DUMPER__dump($self, $dumper)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$dumper" />
+        </scope>
+        <scope ilk="function" line="525" lineend="529" name="PPIx::Regexp::Tokenizer::__PPIX_DUMPER__test" signature="PPIx::Regexp::Tokenizer::__PPIX_DUMPER__test($self, $dumper)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$dumper" />
+        </scope>
+        <scope ilk="function" line="531" lineend="561" name="PPIx::Regexp::Token::__PPIX_DUMPER__dump" signature="PPIx::Regexp::Token::__PPIX_DUMPER__dump($self, $dumper)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$dumper" />
+        </scope>
+        <scope ilk="function" line="563" lineend="592" name="PPIx::Regexp::Token::__PPIX_DUMPER__test" signature="PPIx::Regexp::Token::__PPIX_DUMPER__test($self, $dumper, @nav)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$dumper" />
+          <variable ilk="argument" name="@nav" />
+        </scope>
+      </scope>
+    </scope>
+    

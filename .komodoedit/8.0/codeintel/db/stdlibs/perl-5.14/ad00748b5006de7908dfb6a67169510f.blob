@@ -1,0 +1,192 @@
+<scope ilk="blob" lang="Perl" name="readline">
+      <import line="2295" module="SelfLoader" symbol="*" />
+      <variable line="39" name="*ioctl" />
+      <variable line="55" name="$VERSION" />
+      <variable line="205" name="$rl_getc" />
+      <variable line="411" name="$rl_screen_width" />
+      <variable line="418" name="$rl_margin" />
+      <variable line="420" name="$force_redraw" />
+      <variable line="440" name="$term_IN" />
+      <variable line="441" name="$term_OUT" />
+      <variable line="443" name="$var_HorizontalScrollMode" />
+      <variable line="454" name="$var_TcshCompleteMode" />
+      <variable line="458" name="$var_CompleteAddsuffix" />
+      <variable line="462" name="$var_DeleteSelection" />
+      <variable line="484" name="$minlength" />
+      <variable line="489" name="$inDOS" />
+      <variable line="499" name="$TIOCGWINSZ" />
+      <variable line="500" name="$TIOCGETP" />
+      <variable line="501" name="$TIOCSETP" />
+      <variable line="502" name="$sgttyb_t" />
+      <variable line="503" name="$winsz_t" />
+      <variable line="504" name="$RAW" />
+      <variable line="505" name="$ECHO" />
+      <variable line="510" name="$FIONREAD" />
+      <variable line="511" name="$TCGETS" />
+      <variable line="512" name="$TCSETS" />
+      <variable line="513" name="$TCXONC" />
+      <variable line="528" name="$mode" />
+      <variable line="530" name="$IGNBRK" />
+      <variable line="531" name="$BRKINT" />
+      <variable line="532" name="$ISTRIP" />
+      <variable line="533" name="$INLCR" />
+      <variable line="534" name="$IGNCR" />
+      <variable line="535" name="$ICRNL" />
+      <variable line="536" name="$OPOST" />
+      <variable line="537" name="$ISIG" />
+      <variable line="538" name="$ICANON" />
+      <variable line="539" name="$TCOON" />
+      <variable line="540" name="$TERMIOS_READLINE_ION" />
+      <variable line="541" name="$TERMIOS_READLINE_IOFF" />
+      <variable line="542" name="$TERMIOS_READLINE_OON" />
+      <variable line="543" name="$TERMIOS_READLINE_OOFF" />
+      <variable line="544" name="$TERMIOS_READLINE_LON" />
+      <variable line="545" name="$TERMIOS_READLINE_LOFF" />
+      <variable line="546" name="$TERMIOS_NORMAL_ION" />
+      <variable line="547" name="$TERMIOS_NORMAL_IOFF" />
+      <variable line="548" name="$TERMIOS_NORMAL_OON" />
+      <variable line="549" name="$TERMIOS_NORMAL_OOFF" />
+      <variable line="550" name="$TERMIOS_NORMAL_LON" />
+      <variable line="551" name="$TERMIOS_NORMAL_LOFF" />
+      <variable line="558" name="$winsz" />
+      <variable line="559" name="$fionread_t" />
+      <variable line="560" name="$fion" />
+      <variable line="561" name="$NCCS" />
+      <variable line="562" name="$termios_t" />
+      <variable line="563" name="$termios" />
+      <variable line="565" name="$TERMIOS_IFLAG" />
+      <variable line="566" name="$TERMIOS_OFLAG" />
+      <variable line="567" name="$TERMIOS_CFLAG" />
+      <variable line="568" name="$TERMIOS_LFLAG" />
+      <variable line="569" name="$TERMIOS_VMIN" />
+      <variable line="570" name="$TERMIOS_VTIME" />
+      <variable line="572" name="$rl_delete_selection" />
+      <variable line="573" name="$rl_correct_sw" />
+      <variable line="574" name="$rl_scroll_nextline" />
+      <variable line="575" name="$rl_last_pos_can_backspace" />
+      <variable line="578" name="$rl_start_default_at_beginning" />
+      <variable line="579" name="$rl_vi_replace_default_on_insert" />
+      <variable line="582" name="$rl_completion_function" />
+      <variable line="584" name="$rl_basic_word_break_characters" />
+      <variable line="585" name="$rl_completer_word_break_characters" />
+      <variable line="586" name="$rl_special_prefixes" />
+      <variable line="590" name="$rl_MaxHistorySize" />
+      <variable line="591" name="$rl_max_numeric_arg" />
+      <variable line="592" name="$rl_OperateCount" />
+      <variable line="594" name="$rl_term_set" />
+      <variable line="597" name="$InsertMode" />
+      <variable line="598" name="$KillBuffer" />
+      <variable line="599" name="$line" />
+      <variable line="600" name="$D" />
+      <variable line="601" name="$InputLocMsg" />
+      <variable line="1058" name="$Vi_delete_patterns" />
+      <variable line="1067" name="$Vi_move_patterns" />
+      <variable line="1076" name="$Vi_change_patterns" />
+      <variable line="1085" name="$Vi_yank_patterns" />
+      <variable line="1113" name="$dumb_term" />
+      <variable line="1115" name="$stdin_not_tty" />
+      <variable line="1123" name="$initialized" />
+      <variable line="1205" name="$doingNumArg" />
+      <variable line="1518" name="$old" />
+      <variable line="1519" name="$oldbar" />
+      <variable line="1524" name="$prompt" />
+      <variable line="1552" name="$rl_HistoryIndex" />
+      <variable line="1558" name="$line_for_revert" />
+      <variable line="1570" name="$LastCommandKilledText" />
+      <variable line="1571" name="$lastcommand" />
+      <variable line="1572" name="$line_rl_mark" />
+      <variable line="1577" name="$lastredisplay" />
+      <variable line="1578" name="$lastlen" />
+      <variable line="1579" name="$lastpromptlen" />
+      <variable line="1580" name="$lastdelta" />
+      <variable line="1581" name="$si" />
+      <variable line="1649" name="$rl_first_char" />
+      <variable line="1652" name="$input" />
+      <variable line="1656" name="$AcceptLine" />
+      <variable line="1661" name="$ThisCommandKilledText" />
+      <variable line="1717" name="$sgttyb" />
+      <variable line="1889" name="$i" />
+      <variable line="1890" name="$c" />
+      <variable line="1966" name="$delta" />
+      <scope ilk="function" line="403" lineend="429" name="get_window_size" signature="get_window_size($sig)">
+        <variable ilk="argument" name="$sig" />
+      </scope>
+      <scope ilk="function" line="436" lineend="1105" name="preinit" signature="preinit()">
+        <import line="491" module="Term::ReadKey" />
+        <import line="491" module="Term::ReadKey" />
+      </scope>
+      <scope ilk="function" line="1107" lineend="1124" name="init" signature="init()">
+        </scope>
+      <scope ilk="function" line="1130" lineend="1147" name="InitKeymap" signature="InitKeymap()">
+        </scope>
+      <scope ilk="function" line="1197" lineend="1209" name="filler_Pending" signature="filler_Pending($keys, $c)">
+        <variable ilk="argument" name="$keys" />
+        <variable ilk="argument" name="$c" />
+      </scope>
+      <scope ilk="function" line="1211" lineend="1256" name="_unescape" signature="_unescape()">
+        </scope>
+      <scope ilk="function" line="1258" lineend="1265" name="RL_func" signature="RL_func($name_or_macro)">
+        <variable ilk="argument" name="$name_or_macro" />
+      </scope>
+      <scope ilk="function" line="1267" lineend="1318" name="actually_do_binding" signature="actually_do_binding($func)">
+        <variable ilk="argument" name="$func" />
+      </scope>
+      <scope ilk="function" line="1320" lineend="1380" name="rl_bind" signature="rl_bind()">
+        </scope>
+      <scope ilk="function" line="1382" lineend="1453" name="read_an_init_file" signature="read_an_init_file($file, $include_depth)">
+        <variable ilk="argument" name="$file" />
+        <variable ilk="argument" name="$include_depth" />
+      </scope>
+      <scope ilk="function" line="1455" lineend="1464" name="F_ReReadInitFile" signature="F_ReReadInitFile()">
+        </scope>
+      <scope ilk="function" line="1466" lineend="1488" name="get_ornaments_selected" signature="get_ornaments_selected()">
+        <import line="1472" module="Term::Cap" />
+        <import line="1472" module="Term::Cap" />
+      </scope>
+      <scope ilk="function" line="1490" lineend="1500" name="readline_dumb" signature="readline_dumb()" />
+      <scope ilk="function" line="1506" lineend="1694" name="readline" signature="readline()">
+        <import line="1610" module="Term::Cap" />
+        <import line="1610" module="Term::Cap" />
+      </scope>
+      <scope ilk="function" line="1697" lineend="1699" name="ctrl" signature="ctrl()" />
+      <scope ilk="function" line="1703" lineend="1754" name="SetTTY" signature="SetTTY()">
+        </scope>
+      <scope ilk="function" line="1756" lineend="1779" name="ResetTTY" signature="ResetTTY()">
+        </scope>
+      <scope ilk="function" line="1784" lineend="1839" name="substr_with_props" signature="substr_with_props($p, $s, $from, $len, $ket, $bsel, $esel)">
+        <variable ilk="argument" name="$p" />
+        <variable ilk="argument" name="$s" />
+        <variable ilk="argument" name="$from" />
+        <variable ilk="argument" name="$len" />
+        <variable ilk="argument" name="$ket" />
+        <variable ilk="argument" name="$bsel" />
+        <variable ilk="argument" name="$esel" />
+      </scope>
+      <scope ilk="function" line="1841" lineend="1847" name="redisplay_high" signature="redisplay_high()" />
+      <scope ilk="function" line="1866" lineend="2070" name="redisplay" signature="redisplay()">
+        </scope>
+      <scope ilk="function" line="2072" lineend="2072" name="min" signature="min()" />
+      <scope ilk="function" line="2074" lineend="2082" name="getc_with_pending" signature="getc_with_pending()">
+        </scope>
+      <scope ilk="function" line="2084" lineend="2093" name="rl_getc" signature="rl_getc()">
+        </scope>
+      <scope ilk="function" line="2101" lineend="2112" name="get_command" signature="get_command($key)">
+        <variable ilk="argument" name="$key" />
+      </scope>
+      <scope ilk="function" line="2120" lineend="2128" name="do_command" signature="do_command($keymap, $count, $key)">
+        <variable ilk="argument" name="$keymap" />
+        <variable ilk="argument" name="$count" />
+        <variable ilk="argument" name="$key" />
+      </scope>
+      <scope ilk="function" line="2134" lineend="2137" name="savestate" signature="savestate()" />
+      <scope ilk="function" line="2140" lineend="2153" name="preserve_state" signature="preserve_state()">
+        </scope>
+      <scope ilk="function" line="2158" lineend="2170" name="F_SelfInsert" signature="F_SelfInsert($count, $ord)">
+        <variable ilk="argument" name="$count" />
+        <variable ilk="argument" name="$ord" />
+      </scope>
+      <scope ilk="function" line="2175" lineend="2183" name="F_AcceptLine" signature="F_AcceptLine()" />
+      <scope ilk="function" line="2185" lineend="2202" name="add_line_to_history" signature="add_line_to_history()" />
+      <scope ilk="function" line="2205" lineend="2216" name="remove_selection" signature="remove_selection()" />
+    </scope>
+    

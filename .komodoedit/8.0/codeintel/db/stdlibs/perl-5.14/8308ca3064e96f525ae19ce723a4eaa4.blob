@@ -1,0 +1,86 @@
+<scope ilk="blob" lang="Perl" name="CPANPLUS::Internals::Utils">
+      <scope ilk="class" line="1" lineend="661" name="CPANPLUS::Internals::Utils">
+        <import line="5" module="CPANPLUS::Error" symbol="*" />
+        <import line="6" module="CPANPLUS::Internals::Constants" symbol="*" />
+        <import line="8" module="Cwd" symbol="chdir" />
+        <import line="8" module="Cwd" symbol="cwd" />
+        <import line="9" module="File::Copy" symbol="*" />
+        <import line="10" module="Params::Check" symbol="check" />
+        <import line="11" module="Module::Load::Conditional" symbol="can_load" />
+        <import line="12" module="Locale::Maketext::Simple" symbol="Class" />
+        <scope ilk="function" line="51" lineend="78" name="_mkdir" signature="_mkdir($self, %hash)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="%hash" />
+        </scope>
+        <scope ilk="function" line="90" lineend="106" name="_chdir" signature="_chdir($self, %hash)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="%hash" />
+        </scope>
+        <scope ilk="function" line="118" lineend="142" name="_rmdir" signature="_rmdir($self, %hash)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="%hash" />
+        </scope>
+        <scope ilk="function" line="155" lineend="181" name="_perl_version" signature="_perl_version($self, %hash)">
+          <import line="170" module="Config" />
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="%hash" />
+          <import line="170" module="Config" />
+        </scope>
+        <scope ilk="function" line="191" lineend="204" name="_version_to_number" signature="_version_to_number($self, %hash)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="%hash" />
+        </scope>
+        <scope ilk="function" line="214" lineend="214" name="_whoami" signature="_whoami()">
+          </scope>
+        <scope ilk="function" line="224" lineend="239" name="_get_file_contents" signature="_get_file_contents($self, %hash)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="%hash" />
+        </scope>
+        <scope ilk="function" line="251" lineend="270" name="_move" signature="_move($self, %hash)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="%hash" />
+        </scope>
+        <scope ilk="function" line="282" lineend="301" name="_copy" signature="_copy($self, %hash)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="%hash" />
+        </scope>
+        <scope ilk="function" line="311" lineend="335" name="_mode_plus_w" signature="_mode_plus_w($self, %hash)">
+          <import line="315" module="File::stat" />
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="%hash" />
+          <import line="315" module="File::stat" />
+        </scope>
+        <scope ilk="function" line="345" lineend="365" name="_host_to_uri" signature="_host_to_uri($self, %hash)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="%hash" />
+        </scope>
+        <scope ilk="function" line="373" lineend="380" name="_vcmp" signature="_vcmp($self, $x, $y)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$x" />
+          <variable ilk="argument" name="$y" />
+        </scope>
+        <scope ilk="function" line="388" lineend="398" name="_home_dir" signature="_home_dir()">
+          </scope>
+        <scope ilk="function" line="410" lineend="474" name="_safe_path" signature="_safe_path($self, %hash)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="%hash" />
+        </scope>
+        <scope ilk="function" line="552" lineend="585" name="_split_package_string" signature="_split_package_string($self, %hash)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="%hash" />
+        </scope>
+        <scope ilk="function" line="592" lineend="608" name="_uri_encode" signature="_uri_encode($self, %hash)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="%hash" />
+        </scope>
+        <scope ilk="function" line="611" lineend="626" name="_uri_decode" signature="_uri_decode($self, %hash)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="%hash" />
+        </scope>
+        <scope ilk="function" line="629" lineend="651" name="_update_timestamp" signature="_update_timestamp($self, %hash)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="%hash" />
+        </scope>
+      </scope>
+    </scope>
+    

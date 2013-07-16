@@ -1,0 +1,126 @@
+<scope doc="Implementation of JSONEncoder&#xA;" ilk="blob" lang="Python" name="json.encoder">
+      <variable citdl="SRE_Pattern" line="14" name="ESCAPE" />
+      <variable citdl="SRE_Pattern" line="15" name="ESCAPE_ASCII" />
+      <variable citdl="dict" line="17" name="ESCAPE_DCT" />
+      <scope doc="Return the canonical string representation of the object." ilk="function" line="32" name="FLOAT_REPR" returns="str" signature="repr(object) -&gt; string" />
+      <variable citdl="SRE_Pattern" line="16" name="HAS_UTF8" />
+      <variable citdl="float" line="31" name="INFINITY" />
+      <scope classrefs="object" doc="Extensible JSON &lt;http://json.org&gt; encoder for Python data structures.&#xA;Supports the following objects and types by default:  +-------------------+---------------+ | Python            | JSON          | +===================+===============+ | dict              | object        | +-------------------+---------------+ | list, tuple       | array         | +-------------------+---------------+ | str               | string        |" ilk="class" line="68" lineend="246" name="JSONEncoder">
+        <scope doc="Implement this method in a subclass such that it returns a&#xA;serializable object for ``o``, or calls the base&#xA;implementation (to raise a ``TypeError``)." ilk="function" line="152" lineend="170" name="default" signature="default(self, o)">
+          <variable citdl="JSONEncoder" ilk="argument" name="self" />
+          <variable ilk="argument" name="o" />
+        </scope>
+        <scope doc="Constructor for JSONEncoder, with sensible defaults." ilk="function" line="99" lineend="150" name="__init__" signature="__init__(self, skipkeys=False, ensure_ascii=True, check_circular=True, allow_nan=True, sort_keys=False, indent=None, separators=None, default=None)">
+          <variable ilk="argument" name="indent" />
+          <variable ilk="argument" name="default" />
+          <variable citdl="JSONEncoder" ilk="argument" name="self" />
+          <variable citdl="True" ilk="argument" name="check_circular" />
+          <variable citdl="False" ilk="argument" name="skipkeys" />
+          <variable citdl="True" ilk="argument" name="allow_nan" />
+          <variable citdl="True" ilk="argument" name="ensure_ascii" />
+          <variable ilk="argument" name="separators" />
+          <variable citdl="False" ilk="argument" name="sort_keys" />
+        </scope>
+        <scope doc="Return a JSON string representation of a Python data&#xA;structure." ilk="function" line="172" lineend="191" name="encode" returns="str.join()" signature="encode(self, o)">
+          <variable citdl="list()" line="188" name="chunks" />
+          <variable citdl="JSONEncoder" ilk="argument" name="self" />
+          <variable ilk="argument" name="o" />
+        </scope>
+        <scope doc="Encode the given object and yield each string representation&#xA;as available." ilk="function" line="193" lineend="246" name="iterencode" returns="JSONEncoder.iterencode._iterencode()" signature="iterencode(self, o, _one_shot=False)">
+          <variable citdl="False" ilk="argument" name="_one_shot" />
+          <variable attributes="protected" citdl="encode_basestring" line="208" name="_encoder" />
+          <scope ilk="function" line="212" lineend="232" name="floatstr" returns="JSONEncoder.iterencode.floatstr._repr()" signature="floatstr(o, allow_nan=self.allow_nan, _repr=FLOAT_REPR, _inf=INFINITY, _neginf=-INFINITY)">
+            <variable ilk="argument" name="o" />
+            <variable citdl="True" ilk="argument" name="allow_nan" />
+            <variable citdl="repr" ilk="argument" name="_repr" />
+            <variable citdl="float()" ilk="argument" name="_inf" />
+            <variable citdl="float()" ilk="argument" name="_neginf" />
+            <variable citdl="str" line="219" name="text" />
+          </scope>
+          <variable citdl="JSONEncoder" ilk="argument" name="self" />
+          <variable attributes="protected" citdl="c_make_encoder()" line="237" name="_iterencode" />
+          <variable ilk="argument" name="o" />
+          <variable citdl="dict" line="204" name="markers" />
+        </scope>
+        <variable attributes="__instancevar__" line="146" name="indent" />
+        <variable attributes="__instancevar__" citdl="True" line="143" name="check_circular" />
+        <variable citdl="str" line="98" name="key_separator" />
+        <variable citdl="str" line="97" name="item_separator" />
+        <variable attributes="__instancevar__" citdl="False" line="141" name="skipkeys" />
+        <variable attributes="__instancevar__" citdl="True" line="144" name="allow_nan" />
+        <variable attributes="__instancevar__" citdl="True" line="142" name="ensure_ascii" />
+        <variable attributes="__instancevar__" citdl="False" line="145" name="sort_keys" />
+      </scope>
+      <scope doc="Return an ASCII-only JSON representation of a Python string" ilk="function" line="8" name="c_encode_basestring_ascii" returns="str" signature="encode_basestring_ascii(string) -&gt; string" />
+      <scope classrefs="object" doc="_iterencode(obj, _current_indent_level) -&gt; iterable&#xA;" ilk="class" line="12" name="c_make_encoder">
+        <scope doc="x.__call__(...) &lt;==&gt; x(...)" ilk="function" name="__call__" signature="x.__call__(...) &lt;==&gt; x(...)" />
+        <scope ilk="function" name="__init__" />
+      </scope>
+      <scope doc="Return a JSON representation of a Python string" ilk="function" line="34" lineend="40" name="encode_basestring" returns="str" signature="encode_basestring(s)">
+        <variable ilk="argument" name="s" />
+        <scope ilk="function" line="38" lineend="39" name="replace" signature="replace(match)">
+          <variable ilk="argument" name="match" />
+        </scope>
+      </scope>
+      <scope doc="Return an ASCII-only JSON representation of a Python string" ilk="function" line="65" name="encode_basestring_ascii" returns="str" signature="encode_basestring_ascii(string) -&gt; string" />
+      <variable citdl="int" name="i" />
+      <scope doc="Return an ASCII-only JSON representation of a Python string" ilk="function" line="43" lineend="62" name="py_encode_basestring_ascii" returns="str" signature="py_encode_basestring_ascii(s)">
+        <variable ilk="argument" name="s" />
+        <scope ilk="function" line="47" lineend="61" name="replace" returns="str.format()" signature="replace(match)">
+          <variable ilk="argument" name="match" />
+          <variable citdl="match.group()" line="48" name="s" />
+          <variable citdl="ord()" line="52" name="n" />
+          <variable citdl="int" line="59" name="s1" />
+          <variable citdl="int" line="60" name="s2" />
+        </scope>
+      </scope>
+      <import module="re" />
+      <scope attributes="protected __hidden__" ilk="function" line="248" lineend="424" name="_make_iterencode" returns="_make_iterencode._iterencode" signature="_make_iterencode(markers, _default, _encoder, _indent, _floatstr, _key_separator, _item_separator, _sort_keys, _skipkeys, _one_shot, ValueError=ValueError, dict=dict, float=float, id=id, int=int, isinstance=isinstance, list=list, str=str, tuple=tuple)">
+        <variable ilk="argument" name="markers" />
+        <variable ilk="argument" name="_default" />
+        <variable ilk="argument" name="_encoder" />
+        <variable citdl="str" ilk="argument" name="_indent" />
+        <variable ilk="argument" name="_floatstr" />
+        <variable ilk="argument" name="_key_separator" />
+        <variable ilk="argument" name="_item_separator" />
+        <variable ilk="argument" name="_sort_keys" />
+        <variable ilk="argument" name="_skipkeys" />
+        <variable ilk="argument" name="_one_shot" />
+        <variable citdl="ValueError" ilk="argument" name="ValueError" />
+        <variable citdl="dict" ilk="argument" name="dict" />
+        <variable citdl="float" ilk="argument" name="float" />
+        <variable citdl="id" ilk="argument" name="id" />
+        <variable citdl="int" ilk="argument" name="int" />
+        <variable citdl="isinstance" ilk="argument" name="isinstance" />
+        <variable citdl="list" ilk="argument" name="list" />
+        <variable citdl="str" ilk="argument" name="str" />
+        <variable citdl="tuple" ilk="argument" name="tuple" />
+        <scope attributes="protected" ilk="function" line="265" lineend="316" name="_iterencode_list" signature="_iterencode_list(lst, _current_indent_level)">
+          <variable ilk="argument" name="lst" />
+          <variable ilk="argument" name="_current_indent_level" />
+          <variable citdl="id()" line="270" name="markerid" />
+          <variable citdl="str" line="274" name="buf" />
+          <variable citdl="str" line="277" name="newline_indent" />
+          <variable citdl="str" line="278" name="separator" />
+          <variable citdl="True" line="283" name="first" />
+          <variable citdl="_iterencode()" line="304" name="chunks" />
+        </scope>
+        <scope attributes="protected" ilk="function" line="318" lineend="392" name="_iterencode_dict" signature="_iterencode_dict(dct, _current_indent_level)">
+          <variable ilk="argument" name="dct" />
+          <variable ilk="argument" name="_current_indent_level" />
+          <variable citdl="id()" line="323" name="markerid" />
+          <variable citdl="str" line="330" name="newline_indent" />
+          <variable citdl="str" line="331" name="item_separator" />
+          <variable citdl="True" line="336" name="first" />
+          <variable citdl="sorted()" line="338" name="items" />
+          <variable citdl="str" line="347" name="key" />
+          <variable citdl="_iterencode()" line="380" name="chunks" />
+        </scope>
+        <scope attributes="protected" ilk="function" line="394" lineend="423" name="_iterencode" signature="_iterencode(o, _current_indent_level)">
+          <variable citdl="_default()" ilk="argument" name="o" />
+          <variable ilk="argument" name="_current_indent_level" />
+          <variable citdl="id()" line="415" name="markerid" />
+        </scope>
+      </scope>
+    </scope>
+    

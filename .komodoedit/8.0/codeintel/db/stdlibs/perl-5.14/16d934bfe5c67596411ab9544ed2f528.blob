@@ -1,0 +1,19 @@
+<scope ilk="blob" lang="Perl" name="URI::file::Unix">
+      <scope classrefs="URI::file::Base" ilk="class" line="1" lineend="55" name="URI::file::Unix">
+        <import line="3" module="URI::file::Base" />
+        <import line="7" module="URI::Escape" symbol="uri_unescape" />
+        <scope ilk="function" line="9" lineend="19" name="_file_extract_path" signature="_file_extract_path($class, $path)">
+          <variable ilk="argument" name="$class" />
+          <variable ilk="argument" name="$path" />
+        </scope>
+        <scope ilk="function" line="21" lineend="24" name="_file_is_absolute" signature="_file_is_absolute($class, $path)">
+          <variable ilk="argument" name="$class" />
+          <variable ilk="argument" name="$path" />
+        </scope>
+        <scope ilk="function" line="26" lineend="53" name="file" signature="file($class, $uri)">
+          <variable ilk="argument" name="$class" />
+          <variable ilk="argument" name="$uri" />
+        </scope>
+      </scope>
+    </scope>
+    

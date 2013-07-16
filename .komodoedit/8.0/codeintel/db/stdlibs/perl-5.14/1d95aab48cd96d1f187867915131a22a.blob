@@ -1,0 +1,37 @@
+<scope ilk="blob" lang="Perl" name="IO::Uncompress::Adapter::Bunzip2">
+      <scope ilk="class" line="1" lineend="109" name="IO::Uncompress::Adapter::Bunzip2">
+        <import line="7" module="IO::Compress::Base::Common" symbol="*" />
+        <import line="9" module="Compress::Raw::Bzip2" symbol="*" />
+        <variable line="11" name="$VERSION" />
+        <variable line="11" name="@ISA" />
+        <scope attributes="__ctor__" ilk="function" line="14" lineend="31" name="mkUncompObject" signature="mkUncompObject($small, $verbosity)">
+          <variable ilk="argument" name="$small" />
+          <variable ilk="argument" name="$verbosity" />
+        </scope>
+        <scope ilk="function" line="33" lineend="55" name="uncompr" signature="uncompr($self, $from, $to, $eof)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$from" />
+          <variable ilk="argument" name="$to" />
+          <variable ilk="argument" name="$eof" />
+        </scope>
+        <scope ilk="function" line="58" lineend="74" name="reset" signature="reset($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="76" lineend="80" name="compressedBytes" signature="compressedBytes($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="82" lineend="86" name="uncompressedBytes" signature="uncompressedBytes($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="88" lineend="92" name="crc32" signature="crc32($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="94" lineend="98" name="adler32" signature="adler32($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="100" lineend="106" name="sync" signature="sync($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+      </scope>
+    </scope>
+    

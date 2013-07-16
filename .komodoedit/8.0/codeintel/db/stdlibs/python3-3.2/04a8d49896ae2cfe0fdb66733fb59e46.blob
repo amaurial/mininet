@@ -1,0 +1,196 @@
+<scope doc="distutils.command.build_ext&#xA;Implements the Distutils &apos;build_ext&apos; command, for building extension modules (currently limited to C extensions, should accommodate C++ extensions ASAP)." ilk="blob" lang="Python" name="distutils.command.build_ext">
+      <scope classrefs="Exception" doc="Some compile/link operation failed.&#xA;" ilk="class" name="CCompilerError" />
+      <scope classrefs="object" doc="Abstract base class for defining command classes, the &quot;worker bees&quot;&#xA;of the Distutils.  A useful analogy for command classes is to think of them as subroutines with local variables called &quot;options&quot;.  The options are &quot;declared&quot; in &apos;initialize_options()&apos; and &quot;defined&quot; (given their final values, aka &quot;finalized&quot;) in &apos;finalize_options()&apos;, both of which must be defined by every command class.  The distinction between the two is necessary because option values might come from the outside world (command line, config file, ...), and any options dependent on other options must be computed *after* these outside influences have been processed -- hence &apos;finalize_options()&apos;.  The &quot;body&quot; of the subroutine, where it does all its work based on the values of its" ilk="class" name="Command">
+        <scope ilk="function" name="_ensure_tested_string" signature="_ensure_tested_string(self, option, tester, what, error_fmt, default=None)" />
+        <scope doc="Spawn an external command respecting dry-run flag." ilk="function" name="spawn" signature="spawn(self, cmd, search_path=1, level=1)" />
+        <scope ilk="function" name="ensure_finalized" signature="ensure_finalized(self)" />
+        <scope doc="Create and initialize a new Command object." ilk="function" name="__init__" signature="__init__(self, dist)" />
+        <scope doc="Set default values for all the options that this command&#xA;supports." ilk="function" name="initialize_options" signature="initialize_options(self)" />
+        <scope ilk="function" name="dump_options" signature="dump_options(self, header=None, indent=&apos;&apos;)" />
+        <scope doc="# XXX A more explicit way to customize dry_run would be&#xA;better." ilk="function" name="__getattr__" signature="__getattr__(self, attr)" />
+        <scope doc="Determine the sub-commands that are relevant in the current&#xA;distribution (ie., that need to be run)." ilk="function" name="get_sub_commands" signature="get_sub_commands(self)" />
+        <scope doc="Copy an entire directory tree respecting verbose, dry-run,&#xA;and force flags." ilk="function" name="copy_tree" signature="copy_tree(self, infile, outfile, preserve_mode=1, preserve_times=1, preserve_symlinks=0, level=1)" />
+        <scope doc="If the current verbosity level is of greater than or equal&#xA;to &apos;level&apos; print &apos;msg&apos; to stdout." ilk="function" name="announce" signature="announce(self, msg, level=1)" />
+        <scope doc="Run some other command: uses the &apos;run_command()&apos; method of&#xA;Distribution, which creates and finalizes the command object&#xA;if necessary and then invokes its &apos;run()&apos; method." ilk="function" name="run_command" signature="run_command(self, command)" />
+        <scope doc="Set the values of any &quot;undefined&quot; options from corresponding&#xA;option values in some other command object." ilk="function" name="set_undefined_options" signature="set_undefined_options(self, src_cmd, *option_pairs)" />
+        <scope doc="A command&apos;s raison d&apos;etre: carry out the action it exists to&#xA;perform, controlled by the options initialized in&#xA;&apos;initialize_options()&apos;, customized by other commands, the&#xA;setup script, the command-line, and config files, and&#xA;finalized in" ilk="function" name="run" signature="run(self)" />
+        <scope doc="# XXX rename to &apos;get_reinitialized_command()&apos;? (should do&#xA;the # same in dist.py, if so)" ilk="function" name="reinitialize_command" signature="reinitialize_command(self, command, reinit_subcommands=0)" />
+        <scope doc="Copy a file respecting verbose, dry-run and force flags." ilk="function" name="copy_file" signature="copy_file(self, infile, outfile, preserve_mode=1, preserve_times=1, link=None, level=1)" />
+        <scope ilk="function" name="warn" signature="warn(self, msg)" />
+        <scope ilk="function" name="ensure_dirname" signature="ensure_dirname(self, option)" />
+        <scope doc="Move a file respecting dry-run flag." ilk="function" name="move_file" signature="move_file(self, src, dst, level=1)" />
+        <scope doc="Ensure that &apos;option&apos; is a list of strings." ilk="function" name="ensure_string_list" signature="ensure_string_list(self, option)" />
+        <scope ilk="function" name="_ensure_stringlike" signature="_ensure_stringlike(self, option, what, default=None)" />
+        <scope doc="Wrapper around Distribution&apos;s &apos;get_command_obj()&apos; method:&#xA;find (create if necessary and &apos;create&apos; is true) the command&#xA;object for &apos;command&apos;, call its &apos;ensure_finalized()&apos; method,&#xA;and return the finalized command object." ilk="function" name="get_finalized_command" signature="get_finalized_command(self, command, create=1)" />
+        <scope ilk="function" name="execute" signature="execute(self, func, args, msg=None, level=1)" />
+        <scope doc="Ensure that &apos;option&apos; is a string; if not defined, set it to&#xA;&apos;default&apos;." ilk="function" name="ensure_string" signature="ensure_string(self, option, default=None)" />
+        <scope ilk="function" name="mkpath" signature="mkpath(self, name, mode=511)" />
+        <scope ilk="function" name="make_archive" signature="make_archive(self, base_name, format, root_dir=None, base_dir=None)" />
+        <scope ilk="function" name="get_command_name" signature="get_command_name(self)" />
+        <scope doc="Special case of &apos;execute()&apos; for operations that process one&#xA;or more input files and generate one output file." ilk="function" name="make_file" signature="make_file(self, infiles, outfile, func, args, exec_msg=None, skip_msg=None, level=1)" />
+        <scope doc="Set final values for all the options that this command&#xA;supports." ilk="function" name="finalize_options" signature="finalize_options(self)" />
+        <scope doc="Ensure that &apos;option&apos; is the name of an existing file." ilk="function" name="ensure_filename" signature="ensure_filename(self, option)" />
+        <scope doc="Print &apos;msg&apos; to stdout if the global DEBUG (taken from the&#xA;DISTUTILS_DEBUG environment variable) flag is true." ilk="function" name="debug_print" signature="debug_print(self, msg)" />
+      </scope>
+      <scope classrefs="CCompilerError" doc="Failure to compile one or more C/C++ source files.&#xA;" ilk="class" name="CompileError" />
+      <scope classrefs="DistutilsError" doc="Raised by fancy_getopt in response to getopt.error -- ie. an&#xA;error in the command line usage." ilk="class" name="DistutilsArgError" />
+      <scope classrefs="DistutilsError" doc="Byte compile error.&#xA;" ilk="class" name="DistutilsByteCompileError" />
+      <scope classrefs="DistutilsError" doc="Some command class (or possibly distribution class, if anyone&#xA;feels a need to subclass Distribution) is found not to be holding up its end of the bargain, ie. implementing some part of the &quot;command &quot;interface." ilk="class" name="DistutilsClassError" />
+      <scope classrefs="Exception" doc="The root of all Distutils evil.&#xA;" ilk="class" name="DistutilsError" />
+      <scope classrefs="DistutilsError" doc="Any problems executing an external program (such as the C&#xA;compiler, when compiling C files)." ilk="class" name="DistutilsExecError" />
+      <scope classrefs="DistutilsError" doc="Any problems in the filesystem: expected file not found, etc.&#xA;Typically this is for problems that we detect before IOError or OSError could be raised." ilk="class" name="DistutilsFileError" />
+      <scope classrefs="DistutilsError" doc="The option table provided to &apos;fancy_getopt()&apos; is bogus.&#xA;" ilk="class" name="DistutilsGetoptError" />
+      <scope classrefs="DistutilsError" doc="Internal inconsistencies or impossibilities (obviously, this&#xA;should never be seen if the code is working!)." ilk="class" name="DistutilsInternalError" />
+      <scope classrefs="DistutilsError" doc="Unable to load an expected module, or to find an expected class&#xA;within some module (in particular, command modules and classes)." ilk="class" name="DistutilsModuleError" />
+      <scope classrefs="DistutilsError" doc="Syntactic/semantic errors in command options, such as use of&#xA;mutually conflicting options, or inconsistent options, badly-spelled values, etc.  No distinction is made between option values originating in the setup script, the command line, config files, or what-have-you -- but if we *know* something originated in the setup script, we&apos;ll raise DistutilsSetupError instead." ilk="class" name="DistutilsOptionError" />
+      <scope classrefs="DistutilsError" doc="We don&apos;t know how to do something on the current platform (but&#xA;we do know how to do it on some platform) -- eg. trying to compile C files on a platform not supported by a CCompiler subclass." ilk="class" name="DistutilsPlatformError" />
+      <scope classrefs="DistutilsError" doc="For errors that can be definitely blamed on the setup script,&#xA;such as invalid keyword arguments to &apos;setup()&apos;." ilk="class" name="DistutilsSetupError" />
+      <scope classrefs="DistutilsError" doc="Syntax error in a file list template.&#xA;" ilk="class" name="DistutilsTemplateError" />
+      <scope classrefs="object" doc="Just a collection of attributes that describes an extension&#xA;module and everything needed to build it (hopefully in a portable way, but there are hooks that let you be as unportable as you need).  Instance attributes: name : string the full name of the extension, including any packages -- ie. *not* a filename or pathname, but Python dotted name sources : [string] list of source filenames, relative to the distribution root (where the setup script lives), in Unix form (slash-separated)" ilk="class" name="Extension">
+        <scope doc="# When adding arguments to this constructor, be sure to&#xA;update # setup_keywords in core.py." ilk="function" name="__init__" signature="__init__(self, name, sources, include_dirs=None, define_macros=None, undef_macros=None, library_dirs=None, libraries=None, runtime_library_dirs=None, extra_objects=None, extra_compile_args=None, extra_link_args=None, export_symbols=None, swig_opts=None, depends=None, language=None, optional=None, **kw)" />
+      </scope>
+      <variable citdl="bool" line="19" name="HAS_USER_SITE" />
+      <scope classrefs="CCompilerError" doc="Failure to create a static library from one or more C/C++ object&#xA;files." ilk="class" name="LibError" />
+      <scope classrefs="CCompilerError" doc="Failure to link one or more C/C++ object files into an executable&#xA;or shared library file." ilk="class" name="LinkError" />
+      <variable citdl="int" line="26" name="MSVC_VERSION" />
+      <scope classrefs="CCompilerError" doc="Failure to preprocess one or more C/C++ files.&#xA;" ilk="class" name="PreprocessError" />
+      <variable citdl="str" line="18" name="USER_BASE" />
+      <scope classrefs="CCompilerError" doc="Attempt to process an unknown file type.&#xA;" ilk="class" name="UnknownFileError" />
+      <scope classrefs="Command" doc="&#xA;" ilk="class" line="39" lineend="760" name="build_ext">
+        <scope doc="Convert the name of an extension (eg." ilk="function" line="660" lineend="674" name="get_ext_filename" returns="str" signature="get_ext_filename(self, ext_name)">
+          <variable citdl="get_config_var()" line="671" name="so_ext" />
+          <variable citdl="ext_name.split()" line="666" name="ext_path" />
+          <variable citdl="build_ext" ilk="argument" name="self" />
+          <variable ilk="argument" name="ext_name" />
+        </scope>
+        <scope doc="Returns the path of the filename for a given extension." ilk="function" line="624" lineend="649" name="get_ext_fullpath" returns="os.path.join()" signature="get_ext_fullpath(self, ext_name)">
+          <variable citdl="self.get_finalized_command()" line="644" name="build_py" />
+          <variable citdl="str.join()" line="643" name="package" />
+          <variable citdl="build_ext" ilk="argument" name="self" />
+          <variable citdl="self.get_ext_filename()" line="632" name="filename" />
+          <variable citdl="fullname.split()" line="631" name="modpath" />
+          <variable citdl="self.get_ext_fullname()" line="630" name="fullname" />
+          <variable ilk="argument" name="ext_name" />
+          <variable citdl="os.path.abspath()" line="645" name="package_dir" />
+        </scope>
+        <scope ilk="function" line="283" lineend="345" name="run" signature="run(self)">
+          <variable citdl="self.get_finalized_command()" line="305" name="build_clib" />
+          <variable citdl="build_ext" ilk="argument" name="self" />
+        </scope>
+        <scope doc="Ensure that the list of extensions (presumably provided as a&#xA;command option &apos;extensions&apos;) is valid, i.e." ilk="function" line="347" lineend="423" name="check_extensions_list" signature="check_extensions_list(self, extensions)">
+          <variable citdl="build_info.get()" line="409" name="macros" />
+          <variable citdl="build_ext" ilk="argument" name="self" />
+          <variable ilk="argument" name="extensions" />
+          <variable citdl="Extension()" line="390" name="ext" />
+          <variable citdl="build_info.get()" line="397" name="val" />
+        </scope>
+        <scope ilk="function" line="448" lineend="459" name="build_extensions" signature="build_extensions(self)">
+          <variable citdl="build_ext" ilk="argument" name="self" />
+        </scope>
+        <scope doc="Return the name of the SWIG executable." ilk="function" line="597" lineend="620" name="find_swig" returns="str" signature="find_swig(self)">
+          <variable citdl="build_ext" ilk="argument" name="self" />
+          <variable citdl="os.path.join()" line="609" name="fn" />
+        </scope>
+        <scope doc="Return the list of symbols that a shared extension has to&#xA;export." ilk="function" line="676" lineend="685" name="get_export_symbols" returns="ext.export_symbols" signature="get_export_symbols(self, ext)">
+          <variable citdl="build_ext" ilk="argument" name="self" />
+          <variable citdl="str" line="682" name="initfunc_name" />
+          <variable ilk="argument" name="ext" />
+        </scope>
+        <scope doc="Walk the list of source files in &apos;sources&apos;, looking for SWIG&#xA;interface (.i) files." ilk="function" line="543" lineend="595" name="swig_sources" returns="list" signature="swig_sources(self, sources, extension)">
+          <variable citdl="self.find_swig()" line="579" name="swig" />
+          <variable citdl="list" line="550" name="swig_sources" />
+          <variable ilk="argument" name="extension" />
+          <variable citdl="list" line="580" name="swig_cmd" />
+          <variable citdl="build_ext" ilk="argument" name="self" />
+          <variable ilk="argument" name="sources" />
+          <variable line="568" name="ext" />
+          <variable line="568" name="base" />
+          <variable citdl="str" line="563" name="target_ext" />
+          <variable citdl="dict" line="551" name="swig_targets" />
+          <variable citdl="list" line="549" name="new_sources" />
+          <variable line="591" name="target" />
+        </scope>
+        <scope ilk="function" line="113" lineend="134" name="initialize_options" signature="initialize_options(self)">
+          <variable citdl="build_ext" ilk="argument" name="self" />
+        </scope>
+        <scope ilk="function" line="461" lineend="541" name="build_extension" signature="build_extension(self, ext)">
+          <variable citdl="self.compiler.detect_language()" line="530" name="language" />
+          <variable citdl="list" line="499" name="macros" />
+          <variable citdl="self.get_ext_fullpath()" line="470" name="ext_path" />
+          <variable citdl="build_ext" ilk="argument" name="self" />
+          <variable citdl="ext.sources" line="471" name="depends" />
+          <variable citdl="list" line="497" name="extra_args" />
+          <variable citdl="ext.sources" line="462" name="sources" />
+          <variable ilk="argument" name="ext" />
+          <variable citdl="self.compiler.compile()" line="503" name="objects" />
+        </scope>
+        <scope ilk="function" line="425" lineend="432" name="get_source_files" returns="list" signature="get_source_files(self)">
+          <variable citdl="build_ext" ilk="argument" name="self" />
+          <variable citdl="list" line="427" name="filenames" />
+        </scope>
+        <scope doc="Returns the fullname of a given extension name." ilk="function" line="651" lineend="658" name="get_ext_fullname" returns="str" signature="get_ext_fullname(self, ext_name)">
+          <variable citdl="build_ext" ilk="argument" name="self" />
+          <variable ilk="argument" name="ext_name" />
+        </scope>
+        <scope ilk="function" line="434" lineend="446" name="get_outputs" returns="list" signature="get_outputs(self)">
+          <variable citdl="list" line="443" name="outputs" />
+          <variable citdl="build_ext" ilk="argument" name="self" />
+        </scope>
+        <scope ilk="function" line="136" lineend="281" name="finalize_options" signature="finalize_options(self)">
+          <variable citdl="os.path.join()" line="275" name="user_include" />
+          <variable citdl="list" line="204" name="suffix" />
+          <variable citdl="build_ext" ilk="argument" name="self" />
+          <variable citdl="os.path.join()" line="276" name="user_lib" />
+          <variable citdl="os.path.join()" line="208" name="new_lib" />
+          <variable citdl="sysconfig.get_python_inc()" line="155" name="py_include" />
+          <variable citdl="sysconfig.get_python_inc()" line="156" name="plat_py_include" />
+          <variable citdl="self.define.split()" line="259" name="defines" />
+        </scope>
+        <scope doc="Return the list of libraries to link against when building a&#xA;shared extension." ilk="function" line="687" lineend="760" name="get_libraries" returns="list" signature="get_libraries(self, ext)">
+          <variable ilk="argument" name="ext" />
+          <variable citdl="list" line="737" name="extra" />
+          <variable citdl="str" line="703" name="pythonlib" />
+          <variable citdl="str" line="700" name="template" />
+          <variable citdl="build_ext" ilk="argument" name="self" />
+        </scope>
+        <variable attributes="__instancevar__" line="129" name="force" />
+        <variable attributes="__instancevar__" citdl="list" line="133" name="swig_opts" />
+        <variable attributes="__instancevar__" citdl="list" line="126" name="rpath" />
+        <variable attributes="__instancevar__" citdl="os.path.join()" line="117" name="build_temp" />
+        <variable attributes="protected __instancevar__" citdl="list" line="520" name="_built_objects" />
+        <variable citdl="list" line="62" name="user_options" />
+        <variable attributes="__instancevar__" citdl="self.undef.split()" line="123" name="undef" />
+        <variable attributes="__instancevar__" citdl="int" line="118" name="inplace" />
+        <variable citdl="os.pathsep" line="61" name="sep_by" />
+        <variable attributes="__instancevar__" citdl="list" line="124" name="libraries" />
+        <variable attributes="__instancevar__" line="132" name="swig_cpp" />
+        <variable attributes="__instancevar__" citdl="new_compiler()" line="130" name="compiler" />
+        <variable attributes="__instancevar__" citdl="list" line="122" name="define" />
+        <variable attributes="__instancevar__" line="116" name="plat_name" />
+        <variable citdl="str" line="41" name="description" />
+        <variable attributes="__instancevar__" line="131" name="swig" />
+        <variable citdl="list" line="108" name="help_options" />
+        <variable citdl="list" line="101" name="boolean_options" />
+        <variable attributes="__instancevar__" line="115" name="build_lib" />
+        <variable attributes="__instancevar__" citdl="list" line="121" name="include_dirs" />
+        <variable attributes="__instancevar__" citdl="self.distribution.ext_package" line="119" name="package" />
+        <variable attributes="__instancevar__" line="127" name="link_objects" />
+        <variable attributes="__instancevar__" citdl="self.distribution.ext_modules" line="114" name="extensions" />
+        <variable attributes="__instancevar__" line="128" name="debug" />
+        <variable attributes="__instancevar__" citdl="list" line="125" name="library_dirs" />
+        <variable attributes="__instancevar__" line="134" name="user" />
+      </scope>
+      <scope doc="Do any platform-specific customization of a CCompiler&#xA;instance." ilk="function" name="customize_compiler" signature="customize_compiler(compiler)" />
+      <variable citdl="SRE_Pattern" line="30" name="extension_name_re" />
+      <scope doc="Return the version of MSVC that was used to build Python." ilk="function" name="get_build_version" signature="get_build_version()" />
+      <scope doc="Return a string that identifies the current platform." ilk="function" name="get_platform" signature="get_platform()" />
+      <scope doc="Return a string containing the major and minor Python&#xA;version, leaving off the patchlevel." ilk="function" name="get_python_version" signature="get_python_version()" />
+      <import module="log" />
+      <scope doc="Return true if &apos;target&apos; is out-of-date with respect to any&#xA;file listed in &apos;sources&apos;." ilk="function" name="newer_group" signature="newer_group(sources, target, missing=&apos;error&apos;)" />
+      <import module="os" />
+      <import module="re" />
+      <scope ilk="function" line="34" lineend="36" name="show_compilers" signature="show_compilers()" />
+      <import module="sys" />
+      <variable citdl="str" line="7" name="__revision__" />
+    </scope>
+    

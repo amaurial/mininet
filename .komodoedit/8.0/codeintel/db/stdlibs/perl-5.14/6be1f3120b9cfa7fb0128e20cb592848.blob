@@ -1,0 +1,33 @@
+<scope ilk="blob" lang="Perl" name="DBI::DBD">
+      <scope classrefs="Exporter" ilk="class" line="1" lineend="3465" name="DBI::DBD">
+        <import line="3242" module="Exporter" />
+        <import line="3243" module="Config" symbol="%Config" />
+        <import line="3244" module="Carp" symbol="*" />
+        <import line="3245" module="Cwd" symbol="*" />
+        <import line="3246" module="File::Spec" symbol="*" />
+        <import line="3255" module="vmsish" />
+        <import line="3257" module="VMS::Filespec" />
+        <import line="3277" module="DBI" />
+        <variable line="4" name="$VERSION" />
+        <variable line="3249" name="@EXPORT" />
+        <variable line="3249" name="@ISA" />
+        <variable line="3250" name="$is_dbi" />
+        <variable line="3261" name="*vmsify" />
+        <variable line="3262" name="*unixify" />
+        <scope ilk="function" line="3282" lineend="3317" name="_inst_checks" signature="_inst_checks()">
+          </scope>
+        <scope attributes="__exported__" ilk="function" line="3319" lineend="3418" name="dbd_edit_mm_attribs" signature="dbd_edit_mm_attribs($mm_attr, $dbd_attr)">
+          <variable ilk="argument" name="$mm_attr" />
+          <variable ilk="argument" name="$dbd_attr" />
+        </scope>
+        <scope attributes="__exported__" ilk="function" line="3420" lineend="3426" name="dbd_dbi_dir" signature="dbd_dbi_dir()">
+          </scope>
+        <scope attributes="__exported__" ilk="function" line="3428" lineend="3439" name="dbd_dbi_arch_dir" signature="dbd_dbi_arch_dir()">
+          </scope>
+        <scope attributes="__exported__" ilk="function" line="3441" lineend="3465" name="dbd_postamble" signature="dbd_postamble($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+      </scope>
+      <scope ilk="class" line="3467" lineend="3469" name="DBDI" />
+    </scope>
+    

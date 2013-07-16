@@ -1,0 +1,160 @@
+<scope doc="TestSuite&#xA;" ilk="blob" lang="Python" name="unittest.suite">
+      <scope classrefs="object" doc="A simple test suite that doesn&apos;t provide class or module shared fixtures.&#xA;" ilk="class" line="16" lineend="72" name="BaseTestSuite">
+        <scope ilk="function" line="31" lineend="32" name="__ne__" returns="bool" signature="__ne__(self, other)">
+          <variable citdl="BaseTestSuite" ilk="argument" name="self" />
+          <variable ilk="argument" name="other" />
+        </scope>
+        <scope ilk="function" line="59" lineend="64" name="run" signature="run(self, result)">
+          <variable citdl="BaseTestSuite" ilk="argument" name="self" />
+          <variable ilk="argument" name="result" />
+        </scope>
+        <scope ilk="function" line="53" lineend="57" name="addTests" signature="addTests(self, tests)">
+          <variable citdl="BaseTestSuite" ilk="argument" name="self" />
+          <variable ilk="argument" name="tests" />
+        </scope>
+        <scope ilk="function" line="66" lineend="67" name="__call__" returns="BaseTestSuite.run()" signature="__call__(self, *args, **kwds)">
+          <variable citdl="BaseTestSuite" ilk="argument" name="self" />
+          <variable attributes="varargs" ilk="argument" name="args" />
+          <variable attributes="kwargs" ilk="argument" name="kwds" />
+        </scope>
+        <scope ilk="function" line="34" lineend="35" name="__iter__" returns="iter()" signature="__iter__(self)">
+          <variable citdl="BaseTestSuite" ilk="argument" name="self" />
+        </scope>
+        <scope ilk="function" line="23" lineend="24" name="__repr__" returns="tuple" signature="__repr__(self)">
+          <variable citdl="BaseTestSuite" ilk="argument" name="self" />
+        </scope>
+        <scope doc="Run the tests without collecting errors in a TestResult" ilk="function" line="69" lineend="72" name="debug" signature="debug(self)">
+          <variable citdl="BaseTestSuite" ilk="argument" name="self" />
+        </scope>
+        <scope ilk="function" line="43" lineend="51" name="addTest" signature="addTest(self, test)">
+          <variable ilk="argument" name="test" />
+          <variable citdl="BaseTestSuite" ilk="argument" name="self" />
+        </scope>
+        <scope ilk="function" line="26" lineend="29" name="__eq__" returns="NotImplemented" signature="__eq__(self, other)">
+          <variable citdl="BaseTestSuite" ilk="argument" name="self" />
+          <variable ilk="argument" name="other" />
+        </scope>
+        <scope ilk="function" line="37" lineend="41" name="countTestCases" returns="int" signature="countTestCases(self)">
+          <variable citdl="BaseTestSuite" ilk="argument" name="self" />
+          <variable citdl="int" line="38" name="cases" />
+        </scope>
+        <scope ilk="function" line="19" lineend="21" name="__init__" signature="__init__(self, tests=())">
+          <variable citdl="BaseTestSuite" ilk="argument" name="self" />
+          <variable citdl="tuple" ilk="argument" name="tests" />
+        </scope>
+        <variable attributes="protected __instancevar__" citdl="list" line="20" name="_tests" />
+      </scope>
+      <scope classrefs="BaseTestSuite" doc="A test suite is a composite test consisting of a number of TestCases.&#xA;For use, create an instance of TestSuite, then add test case instances. When all tests have been added, the suite can be passed to a test runner, such as TextTestRunner. It will run the individual test cases in the order in which they were added, aggregating the results. When subclassing, do not forget to call the base class constructor." ilk="class" line="75" lineend="247" name="TestSuite">
+        <scope ilk="function" line="190" lineend="196" name="_addClassOrModuleLevelException" signature="_addClassOrModuleLevelException(self, result, exception, errorName)">
+          <variable ilk="argument" name="exception" />
+          <variable ilk="argument" name="result" />
+          <variable citdl="_ErrorHolder()" line="191" name="error" />
+          <variable citdl="TestSuite" ilk="argument" name="self" />
+          <variable ilk="argument" name="errorName" />
+          <variable citdl="getattr()" line="192" name="addSkip" />
+        </scope>
+        <scope ilk="function" line="85" lineend="113" name="run" signature="run(self, result, debug=False)">
+          <variable citdl="False" ilk="argument" name="debug" />
+          <variable citdl="False" line="86" name="topLevel" />
+          <variable citdl="TestSuite" ilk="argument" name="self" />
+          <variable ilk="argument" name="result" />
+        </scope>
+        <scope ilk="function" line="154" lineend="159" name="_get_previous_module" returns="previousClass.__module__" signature="_get_previous_module(self, result)">
+          <variable citdl="getattr()" line="156" name="previousClass" />
+          <variable citdl="previousClass.__module__" line="155" name="previousModule" />
+          <variable citdl="TestSuite" ilk="argument" name="self" />
+          <variable ilk="argument" name="result" />
+        </scope>
+        <scope ilk="function" line="122" lineend="152" name="_handleClassSetUp" signature="_handleClassSetUp(self, test, result)">
+          <variable citdl="getattr()" line="139" name="setUpClass" />
+          <variable citdl="TestSuite" ilk="argument" name="self" />
+          <variable citdl="str" line="149" name="errorName" />
+          <variable citdl="util.strclass()" line="148" name="className" />
+          <variable citdl="getattr()" line="123" name="previousClass" />
+          <variable ilk="argument" name="result" />
+          <variable ilk="argument" name="test" />
+          <variable citdl="test.__class__" line="124" name="currentClass" />
+        </scope>
+        <scope ilk="function" line="198" lineend="221" name="_handleModuleTearDown" signature="_handleModuleTearDown(self, result)">
+          <variable citdl="_get_previous_module()" line="199" name="previousModule" />
+          <variable line="206" name="module" />
+          <variable citdl="getattr()" line="210" name="tearDownModule" />
+          <variable citdl="TestSuite" ilk="argument" name="self" />
+          <variable citdl="_get_previous_module()" line="218" name="errorName" />
+          <variable ilk="argument" name="result" />
+        </scope>
+        <scope doc="Run the tests without collecting errors in a TestResult" ilk="function" line="115" lineend="118" name="debug" signature="debug(self)">
+          <variable citdl="_DebugResult()" line="117" name="debug" />
+          <variable citdl="TestSuite" ilk="argument" name="self" />
+        </scope>
+        <scope ilk="function" line="162" lineend="188" name="_handleModuleFixture" signature="_handleModuleFixture(self, test, result)">
+          <variable citdl="_get_previous_module()" line="163" name="previousModule" />
+          <variable citdl="test.__class__.__module__" line="164" name="currentModule" />
+          <variable citdl="TestSuite" ilk="argument" name="self" />
+          <variable line="173" name="module" />
+          <variable citdl="test.__class__.__module__" line="185" name="errorName" />
+          <variable ilk="argument" name="test" />
+          <variable citdl="getattr()" line="176" name="setUpModule" />
+          <variable ilk="argument" name="result" />
+        </scope>
+        <scope ilk="function" line="223" lineend="247" name="_tearDownPreviousClass" signature="_tearDownPreviousClass(self, test, result)">
+          <variable citdl="TestSuite" ilk="argument" name="self" />
+          <variable citdl="util.strclass()" line="244" name="errorName" />
+          <variable citdl="util.strclass()" line="243" name="className" />
+          <variable citdl="getattr()" line="224" name="previousClass" />
+          <variable citdl="getattr()" line="235" name="tearDownClass" />
+          <variable ilk="argument" name="test" />
+          <variable citdl="test.__class__" line="225" name="currentClass" />
+          <variable ilk="argument" name="result" />
+        </scope>
+      </scope>
+      <import module="case" />
+      <import module="sys" />
+      <import module="util" />
+      <scope attributes="protected __hidden__" doc="A crude way to tell apart testcases and suites with duck-typing" ilk="function" line="288" lineend="294" name="_isnotsuite" returns="bool" signature="_isnotsuite(test)">
+        <variable ilk="argument" name="test" />
+      </scope>
+      <scope attributes="protected __hidden__" classrefs="object" doc="Used by the TestSuite to hold previous class when running in debug." ilk="class" line="297" lineend="301" name="_DebugResult">
+        <variable attributes="protected" line="299" name="_previousTestClass" />
+        <variable attributes="protected" citdl="False" line="300" name="_moduleSetUpFailed" />
+        <variable citdl="False" line="301" name="shouldStop" />
+      </scope>
+      <scope attributes="protected __hidden__" ilk="function" line="11" lineend="13" name="_call_if_exists" signature="_call_if_exists(parent, attr)">
+        <variable ilk="argument" name="parent" />
+        <variable ilk="argument" name="attr" />
+        <variable citdl="getattr()" line="12" name="func" />
+      </scope>
+      <variable attributes="private __hidden__" citdl="True" line="8" name="__unittest" />
+      <scope attributes="protected __hidden__" classrefs="object" doc="Placeholder for a TestCase inside a result. As far as a TestResult&#xA;is concerned, this looks exactly like a unit test. Used to insert&#xA;arbitrary errors into a test suite run." ilk="class" line="250" lineend="286" name="_ErrorHolder">
+        <variable line="260" name="failureException" />
+        <scope attributes="__ctor__" ilk="function" line="262" lineend="263" name="__init__" signature="_ErrorHolder(description)">
+          <variable citdl="_ErrorHolder" ilk="argument" name="self" />
+          <variable ilk="argument" name="description" />
+        </scope>
+        <variable attributes="__instancevar__" line="263" name="description" />
+        <scope ilk="function" line="265" lineend="266" name="id" signature="id()">
+          <variable citdl="_ErrorHolder" ilk="argument" name="self" />
+        </scope>
+        <scope ilk="function" line="268" lineend="269" name="shortDescription" signature="shortDescription()">
+          <variable citdl="_ErrorHolder" ilk="argument" name="self" />
+        </scope>
+        <scope ilk="function" line="271" lineend="272" name="__repr__" returns="tuple" signature="__repr__()">
+          <variable citdl="_ErrorHolder" ilk="argument" name="self" />
+        </scope>
+        <scope ilk="function" line="274" lineend="275" name="__str__" returns="_ErrorHolder.id()" signature="__str__()">
+          <variable citdl="_ErrorHolder" ilk="argument" name="self" />
+        </scope>
+        <scope ilk="function" line="277" lineend="280" name="run" signature="run(result)">
+          <variable citdl="_ErrorHolder" ilk="argument" name="self" />
+          <variable ilk="argument" name="result" />
+        </scope>
+        <scope ilk="function" line="282" lineend="283" name="__call__" returns="_ErrorHolder.run()" signature="__call__(result)">
+          <variable citdl="_ErrorHolder" ilk="argument" name="self" />
+          <variable ilk="argument" name="result" />
+        </scope>
+        <scope ilk="function" line="285" lineend="286" name="countTestCases" returns="int" signature="countTestCases()">
+          <variable citdl="_ErrorHolder" ilk="argument" name="self" />
+        </scope>
+      </scope>
+    </scope>
+    

@@ -1,0 +1,50 @@
+<scope ilk="blob" lang="Perl" name="Module::Build::Notes">
+      <scope ilk="class" line="1" lineend="165" name="Module::Build::Notes">
+        <import line="9" module="Data::Dumper" symbol="*" />
+        <import line="10" module="IO::File" symbol="*" />
+        <import line="11" module="Module::Build::Dumper" symbol="*" />
+        <variable line="6" name="$VERSION" />
+        <scope attributes="__ctor__" ilk="function" line="13" lineend="22" name="new" signature="new($class, %args)">
+          <variable ilk="argument" name="$class" />
+          <variable ilk="argument" name="%args" />
+        </scope>
+        <scope ilk="function" line="24" lineend="31" name="restore" signature="restore($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="33" lineend="43" name="access" signature="access($self, $key, $value)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$key" />
+          <variable ilk="argument" name="$value" />
+        </scope>
+        <scope ilk="function" line="45" lineend="48" name="has_data" signature="has_data($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="50" lineend="53" name="exists" signature="exists($self, $key)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$key" />
+        </scope>
+        <scope ilk="function" line="55" lineend="70" name="read" signature="read($self, $key)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$key" />
+        </scope>
+        <scope ilk="function" line="72" lineend="77" name="_same" signature="_same($self, $x, $y)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$x" />
+          <variable ilk="argument" name="$y" />
+        </scope>
+        <scope ilk="function" line="79" lineend="105" name="write" signature="write($self, $href)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$href" />
+        </scope>
+        <scope ilk="function" line="107" lineend="112" name="_dump" signature="_dump($self, $file, $data)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$file" />
+          <variable ilk="argument" name="$data" />
+        </scope>
+        <scope ilk="function" line="117" lineend="135" name="write_config_data" signature="write_config_data($self, %args)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="%args" />
+        </scope>
+      </scope>
+    </scope>
+    

@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<RDF:RDF xmlns:NC="http://home.netscape.com/NC-rdf#"
+         xmlns:RDF="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+  <RDF:Description RDF:about="chrome://komodo/content/komodo.xul#widekeyset"
+                   persisted_kb="true" />
+  <RDF:Description RDF:about="chrome://komodo/content/komodo.xul#komodo_main"
+                   screenX="1"
+                   screenY="8"
+                   height="739"
+                   width="1339" />
+  <RDF:Description RDF:about="chrome://komodo/content/komodo.xul#workspace_left_area"
+                   type="icons" />
+  <RDF:Description RDF:about="chrome://komodo/content/komodo.xul">
+    <NC:persist RDF:resource="chrome://komodo/content/komodo.xul#workspace_right_area"/>
+    <NC:persist RDF:resource="chrome://komodo/content/komodo.xul#workspace_left_area"/>
+    <NC:persist RDF:resource="chrome://komodo/content/komodo.xul#workspace_bottom_area"/>
+    <NC:persist RDF:resource="chrome://komodo/content/komodo.xul#widekeyset"/>
+    <NC:persist RDF:resource="chrome://komodo/content/komodo.xul#komodo_main"/>
+  </RDF:Description>
+  <RDF:Description RDF:about="chrome://komodo/content/find/find2.xul#find2-window"
+                   screenX="80"
+                   screenY="244" />
+  <RDF:Description RDF:about="chrome://komodo/content/find/find2.xul">
+    <NC:persist RDF:resource="chrome://komodo/content/find/find2.xul#find2-window"/>
+  </RDF:Description>
+  <RDF:Description RDF:about="chrome://komodo/content/komodo.xul#workspace_bottom_area"
+                   type="horizontal" />
+  <RDF:Description RDF:about="chrome://komodo/content/komodo.xul#workspace_right_area"
+                   type="icons" />
+</RDF:RDF>

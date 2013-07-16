@@ -1,0 +1,248 @@
+<scope ilk="blob" lang="Perl" name="Net::FTP">
+      <scope classrefs="Exporter Net::Cmd IO::Socket::INET" ilk="class" line="9" lineend="1247" name="Net::FTP">
+        <import line="15" module="Carp" symbol="*" />
+        <import line="17" module="Socket" symbol="*" />
+        <import line="18" module="IO::Socket" symbol="*" />
+        <import line="19" module="Time::Local" symbol="*" />
+        <import line="20" module="Net::Cmd" symbol="*" />
+        <import line="21" module="Net::Config" symbol="*" />
+        <import line="22" module="Fcntl" symbol="O_WRONLY" />
+        <import line="22" module="Fcntl" symbol="O_RDONLY" />
+        <import line="22" module="Fcntl" symbol="O_APPEND" />
+        <import line="22" module="Fcntl" symbol="O_CREAT" />
+        <import line="22" module="Fcntl" symbol="O_TRUNC" />
+        <variable line="14" name="$VERSION" />
+        <variable line="14" name="@ISA" />
+        <variable line="30" name="$TELNET_DM" />
+        <variable line="30" name="$TELNET_IAC" />
+        <variable line="30" name="$TELNET_IP" />
+        <variable line="38" name="*trEBCDIC" />
+        <scope ilk="function" line="42" lineend="115" name="new" signature="new($pkg)">
+          <variable ilk="argument" name="$pkg" />
+        </scope>
+        <scope ilk="function" line="122" lineend="125" name="host" signature="host($me)">
+          <variable ilk="argument" name="$me" />
+        </scope>
+        <scope ilk="function" line="128" lineend="140" name="hash" signature="hash($ftp, $h, $b)">
+          <variable ilk="argument" name="$ftp" />
+          <variable ilk="argument" name="$h" />
+          <variable ilk="argument" name="$b" />
+        </scope>
+        <scope ilk="function" line="143" lineend="148" name="quit" signature="quit($ftp)">
+          <variable ilk="argument" name="$ftp" />
+        </scope>
+        <scope ilk="function" line="151" lineend="151" name="DESTROY" signature="DESTROY()" />
+        <scope ilk="function" line="154" lineend="154" name="ascii" signature="ascii()" />
+        <scope ilk="function" line="155" lineend="155" name="binary" signature="binary()" />
+        <scope ilk="function" line="158" lineend="161" name="ebcdic" signature="ebcdic()" />
+        <scope ilk="function" line="164" lineend="167" name="byte" signature="byte()" />
+        <scope ilk="function" line="172" lineend="178" name="quot" signature="quot($ftp, $cmd)">
+          <variable ilk="argument" name="$ftp" />
+          <variable ilk="argument" name="$cmd" />
+        </scope>
+        <scope ilk="function" line="181" lineend="186" name="site" signature="site($ftp)">
+          <variable ilk="argument" name="$ftp" />
+        </scope>
+        <scope ilk="function" line="189" lineend="205" name="mdtm" signature="mdtm($ftp, $file)">
+          <variable ilk="argument" name="$ftp" />
+          <variable ilk="argument" name="$file" />
+        </scope>
+        <scope ilk="function" line="208" lineend="235" name="size" signature="size($ftp, $file)">
+          <variable ilk="argument" name="$ftp" />
+          <variable ilk="argument" name="$file" />
+        </scope>
+        <scope ilk="function" line="238" lineend="335" name="login" signature="login($ftp, $user, $pass, $acct)">
+          <import line="243" module="Net::Netrc" />
+          <import line="263" module="Net::Netrc" />
+          <import line="312" module="Net::Netrc" />
+          <variable ilk="argument" name="$ftp" />
+          <variable ilk="argument" name="$user" />
+          <variable ilk="argument" name="$pass" />
+          <variable ilk="argument" name="$acct" />
+          <import line="243" module="Net::Netrc" />
+          <import line="263" module="Net::Netrc" />
+          <import line="312" module="Net::Netrc" />
+        </scope>
+        <scope ilk="function" line="338" lineend="343" name="account" signature="account($ftp, $acct)">
+          <variable ilk="argument" name="$ftp" />
+          <variable ilk="argument" name="$acct" />
+        </scope>
+        <scope ilk="function" line="346" lineend="361" name="_auth_id" signature="_auth_id($ftp, $auth, $resp)">
+          <import line="350" module="Net::Netrc" />
+          <variable ilk="argument" name="$ftp" />
+          <variable ilk="argument" name="$auth" />
+          <variable ilk="argument" name="$resp" />
+          <import line="350" module="Net::Netrc" />
+        </scope>
+        <scope ilk="function" line="364" lineend="375" name="authorize" signature="authorize()">
+          </scope>
+        <scope ilk="function" line="378" lineend="385" name="rename" signature="rename($ftp, $from, $to)">
+          <variable ilk="argument" name="$ftp" />
+          <variable ilk="argument" name="$from" />
+          <variable ilk="argument" name="$to" />
+        </scope>
+        <scope ilk="function" line="388" lineend="402" name="type" signature="type($ftp, $type)">
+          <variable ilk="argument" name="$ftp" />
+          <variable ilk="argument" name="$type" />
+        </scope>
+        <scope ilk="function" line="405" lineend="419" name="alloc" signature="alloc($ftp, $size)">
+          <variable ilk="argument" name="$ftp" />
+          <variable ilk="argument" name="$size" />
+        </scope>
+        <scope ilk="function" line="422" lineend="435" name="abort" signature="abort($ftp)">
+          <variable ilk="argument" name="$ftp" />
+        </scope>
+        <scope ilk="function" line="438" lineend="528" name="get" signature="get($ftp, $remote, $local, $where)">
+          <variable ilk="argument" name="$ftp" />
+          <variable ilk="argument" name="$remote" />
+          <variable ilk="argument" name="$local" />
+          <variable ilk="argument" name="$where" />
+        </scope>
+        <scope ilk="function" line="531" lineend="541" name="cwd" signature="cwd($ftp, $dir)">
+          <variable ilk="argument" name="$ftp" />
+          <variable ilk="argument" name="$dir" />
+        </scope>
+        <scope ilk="function" line="544" lineend="547" name="cdup" signature="cdup()" />
+        <scope ilk="function" line="550" lineend="556" name="pwd" signature="pwd($ftp)">
+          <variable ilk="argument" name="$ftp" />
+        </scope>
+        <scope ilk="function" line="568" lineend="605" name="rmdir" signature="rmdir($ftp, $dir, $recurse)">
+          <variable ilk="argument" name="$ftp" />
+          <variable ilk="argument" name="$dir" />
+          <variable ilk="argument" name="$recurse" />
+        </scope>
+        <scope ilk="function" line="608" lineend="616" name="restart" signature="restart($ftp, $where)">
+          <variable ilk="argument" name="$ftp" />
+          <variable ilk="argument" name="$where" />
+        </scope>
+        <scope ilk="function" line="619" lineend="661" name="mkdir" signature="mkdir($ftp, $dir, $recurse)">
+          <variable ilk="argument" name="$ftp" />
+          <variable ilk="argument" name="$dir" />
+          <variable ilk="argument" name="$recurse" />
+        </scope>
+        <scope ilk="function" line="664" lineend="668" name="delete" signature="delete()" />
+        <scope ilk="function" line="671" lineend="671" name="put" signature="put()" />
+        <scope ilk="function" line="672" lineend="672" name="put_unique" signature="put_unique()" />
+        <scope ilk="function" line="673" lineend="673" name="append" signature="append()" />
+        <scope ilk="function" line="676" lineend="676" name="nlst" signature="nlst()" />
+        <scope ilk="function" line="677" lineend="677" name="list" signature="list()" />
+        <scope ilk="function" line="678" lineend="678" name="retr" signature="retr()" />
+        <scope ilk="function" line="679" lineend="679" name="stor" signature="stor()" />
+        <scope ilk="function" line="680" lineend="680" name="stou" signature="stou()" />
+        <scope ilk="function" line="681" lineend="681" name="appe" signature="appe()" />
+        <scope ilk="function" line="684" lineend="784" name="_store_cmd" signature="_store_cmd($ftp, $cmd, $local, $remote)">
+          <import line="695" module="File::Basename" />
+          <import line="779" module="File::Basename" />
+          <variable ilk="argument" name="$ftp" />
+          <variable ilk="argument" name="$cmd" />
+          <variable ilk="argument" name="$local" />
+          <variable ilk="argument" name="$remote" />
+          <import line="695" module="File::Basename" />
+          <import line="779" module="File::Basename" />
+        </scope>
+        <scope ilk="function" line="787" lineend="820" name="port" signature="port($ftp, $port)">
+          <variable ilk="argument" name="$ftp" />
+          <variable ilk="argument" name="$port" />
+        </scope>
+        <scope ilk="function" line="823" lineend="823" name="ls" signature="ls()" />
+        <scope ilk="function" line="824" lineend="824" name="dir" signature="dir()" />
+        <scope ilk="function" line="827" lineend="837" name="pasv" signature="pasv($ftp)">
+          <variable ilk="argument" name="$ftp" />
+        </scope>
+        <scope ilk="function" line="840" lineend="843" name="unique_name" signature="unique_name($ftp)">
+          <variable ilk="argument" name="$ftp" />
+        </scope>
+        <scope ilk="function" line="846" lineend="870" name="supported" signature="supported($ftp)">
+          <variable ilk="argument" name="$ftp" />
+        </scope>
+        <scope ilk="function" line="877" lineend="881" name="lsl" signature="lsl()" />
+        <scope ilk="function" line="884" lineend="888" name="authorise" signature="authorise()" />
+        <scope ilk="function" line="896" lineend="908" name="_extract_path" signature="_extract_path($ftp, $path)">
+          <variable ilk="argument" name="$ftp" />
+          <variable ilk="argument" name="$path" />
+        </scope>
+        <scope ilk="function" line="915" lineend="950" name="_dataconn" signature="_dataconn($ftp)">
+          <variable ilk="argument" name="$ftp" />
+        </scope>
+        <scope attributes="__ctor__" ilk="function" line="953" lineend="987" name="_list_cmd" signature="_list_cmd($ftp)">
+          <import line="965" module="Net::FTP::A" />
+          <variable ilk="argument" name="$ftp" />
+          <import line="965" module="Net::FTP::A" />
+        </scope>
+        <scope ilk="function" line="990" lineend="1060" name="_data_cmd" signature="_data_cmd($ftp)">
+          <variable ilk="argument" name="$ftp" />
+        </scope>
+        <scope ilk="function" line="1067" lineend="1067" name="debug_text" signature="debug_text()" />
+        <scope ilk="function" line="1070" lineend="1075" name="command" signature="command($ftp)">
+          <variable ilk="argument" name="$ftp" />
+        </scope>
+        <scope ilk="function" line="1078" lineend="1086" name="response" signature="response($ftp)">
+          <variable ilk="argument" name="$ftp" />
+        </scope>
+        <scope ilk="function" line="1089" lineend="1100" name="parse_response" signature="parse_response($ftp)">
+          <variable ilk="argument" name="$ftp" />
+        </scope>
+        <scope ilk="function" line="1107" lineend="1110" name="pasv_xfer_unique" signature="pasv_xfer_unique($sftp, $sfile, $dftp, $dfile)">
+          <variable ilk="argument" name="$sftp" />
+          <variable ilk="argument" name="$sfile" />
+          <variable ilk="argument" name="$dftp" />
+          <variable ilk="argument" name="$dfile" />
+        </scope>
+        <scope ilk="function" line="1113" lineend="1136" name="pasv_xfer" signature="pasv_xfer($sftp, $sfile, $dftp, $dfile, $unique)">
+          <variable ilk="argument" name="$sftp" />
+          <variable ilk="argument" name="$sfile" />
+          <variable ilk="argument" name="$dftp" />
+          <variable ilk="argument" name="$dfile" />
+          <variable ilk="argument" name="$unique" />
+        </scope>
+        <scope ilk="function" line="1139" lineend="1161" name="pasv_wait" signature="pasv_wait($ftp, $non_pasv)">
+          <variable ilk="argument" name="$ftp" />
+          <variable ilk="argument" name="$non_pasv" />
+        </scope>
+        <scope ilk="function" line="1164" lineend="1185" name="feature" signature="feature($ftp, $feat)">
+          <variable ilk="argument" name="$ftp" />
+          <variable ilk="argument" name="$feat" />
+        </scope>
+        <scope ilk="function" line="1188" lineend="1188" name="cmd" signature="cmd()" />
+        <scope ilk="function" line="1196" lineend="1196" name="_ABOR" signature="_ABOR()" />
+        <scope ilk="function" line="1197" lineend="1197" name="_ALLO" signature="_ALLO()" />
+        <scope ilk="function" line="1198" lineend="1198" name="_CDUP" signature="_CDUP()" />
+        <scope ilk="function" line="1199" lineend="1199" name="_NOOP" signature="_NOOP()" />
+        <scope ilk="function" line="1200" lineend="1200" name="_PASV" signature="_PASV()" />
+        <scope ilk="function" line="1201" lineend="1201" name="_QUIT" signature="_QUIT()" />
+        <scope ilk="function" line="1202" lineend="1202" name="_DELE" signature="_DELE()" />
+        <scope ilk="function" line="1203" lineend="1203" name="_CWD" signature="_CWD()" />
+        <scope ilk="function" line="1204" lineend="1204" name="_PORT" signature="_PORT()" />
+        <scope ilk="function" line="1205" lineend="1205" name="_RMD" signature="_RMD()" />
+        <scope ilk="function" line="1206" lineend="1206" name="_MKD" signature="_MKD()" />
+        <scope ilk="function" line="1207" lineend="1207" name="_PWD" signature="_PWD()" />
+        <scope ilk="function" line="1208" lineend="1208" name="_TYPE" signature="_TYPE()" />
+        <scope ilk="function" line="1209" lineend="1209" name="_RNTO" signature="_RNTO()" />
+        <scope ilk="function" line="1210" lineend="1210" name="_RESP" signature="_RESP()" />
+        <scope ilk="function" line="1211" lineend="1211" name="_MDTM" signature="_MDTM()" />
+        <scope ilk="function" line="1212" lineend="1212" name="_SIZE" signature="_SIZE()" />
+        <scope ilk="function" line="1213" lineend="1213" name="_HELP" signature="_HELP()" />
+        <scope ilk="function" line="1214" lineend="1214" name="_STAT" signature="_STAT()" />
+        <scope ilk="function" line="1215" lineend="1215" name="_FEAT" signature="_FEAT()" />
+        <scope ilk="function" line="1216" lineend="1216" name="_APPE" signature="_APPE()" />
+        <scope ilk="function" line="1217" lineend="1217" name="_LIST" signature="_LIST()" />
+        <scope ilk="function" line="1218" lineend="1218" name="_NLST" signature="_NLST()" />
+        <scope ilk="function" line="1219" lineend="1219" name="_RETR" signature="_RETR()" />
+        <scope ilk="function" line="1220" lineend="1220" name="_STOR" signature="_STOR()" />
+        <scope ilk="function" line="1221" lineend="1221" name="_STOU" signature="_STOU()" />
+        <scope ilk="function" line="1222" lineend="1222" name="_RNFR" signature="_RNFR()" />
+        <scope ilk="function" line="1223" lineend="1223" name="_REST" signature="_REST()" />
+        <scope ilk="function" line="1224" lineend="1224" name="_PASS" signature="_PASS()" />
+        <scope ilk="function" line="1225" lineend="1225" name="_ACCT" signature="_ACCT()" />
+        <scope ilk="function" line="1226" lineend="1226" name="_AUTH" signature="_AUTH()" />
+        <scope ilk="function" line="1229" lineend="1238" name="_USER" signature="_USER($ftp)">
+          <variable ilk="argument" name="$ftp" />
+        </scope>
+        <scope ilk="function" line="1241" lineend="1241" name="_SMNT" signature="_SMNT()" />
+        <scope ilk="function" line="1242" lineend="1242" name="_MODE" signature="_MODE()" />
+        <scope ilk="function" line="1243" lineend="1243" name="_SYST" signature="_SYST()" />
+        <scope ilk="function" line="1244" lineend="1244" name="_STRU" signature="_STRU()" />
+        <scope ilk="function" line="1245" lineend="1245" name="_REIN" signature="_REIN()" />
+      </scope>
+    </scope>
+    

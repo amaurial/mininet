@@ -1,0 +1,31 @@
+<scope ilk="blob" lang="Perl" name="IO::Compress::Adapter::Bzip2">
+      <scope ilk="class" line="1" lineend="159" name="IO::Compress::Adapter::Bzip2">
+        <import line="7" module="IO::Compress::Base::Common" symbol="*" />
+        <import line="10" module="Compress::Raw::Bzip2" symbol="*" />
+        <variable line="12" name="$VERSION" />
+        <scope attributes="__ctor__" ilk="function" line="15" lineend="34" name="mkCompObject" signature="mkCompObject($BlockSize100K, $WorkFactor, $Verbosity)">
+          <variable ilk="argument" name="$BlockSize100K" />
+          <variable ilk="argument" name="$WorkFactor" />
+          <variable ilk="argument" name="$Verbosity" />
+        </scope>
+        <scope ilk="function" line="36" lineend="55" name="compr" signature="compr($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="57" lineend="77" name="flush" signature="flush($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="79" lineend="98" name="close" signature="close($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="101" lineend="119" name="reset" signature="reset($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="121" lineend="125" name="compressedBytes" signature="compressedBytes($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="127" lineend="131" name="uncompressedBytes" signature="uncompressedBytes($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+      </scope>
+    </scope>
+    

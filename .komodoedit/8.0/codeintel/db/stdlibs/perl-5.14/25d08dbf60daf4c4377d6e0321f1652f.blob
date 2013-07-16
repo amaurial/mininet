@@ -1,0 +1,40 @@
+<scope ilk="blob" lang="Perl" name="Parse::CPAN::Meta">
+      <scope ilk="class" line="1" lineend="122" name="Parse::CPAN::Meta">
+        <import line="4" module="Carp" symbol="croak" />
+        <import line="19" module="Exporter" />
+        <variable line="20" name="$Parse::CPAN::Meta::VERSION" />
+        <variable line="21" name="@Parse::CPAN::Meta::ISA" />
+        <variable line="22" name="@Parse::CPAN::Meta::EXPORT_OK" />
+        <scope ilk="function" line="7" lineend="7" name="HAVE_UTF8" signature="HAVE_UTF8()" />
+        <scope ilk="function" line="8" lineend="8" name="IO_LAYER" signature="IO_LAYER()" />
+        <scope ilk="function" line="25" lineend="37" name="load_file" signature="load_file($class, $filename)">
+          <variable ilk="argument" name="$class" />
+          <variable ilk="argument" name="$filename" />
+        </scope>
+        <scope ilk="function" line="39" lineend="47" name="load_yaml_string" signature="load_yaml_string($class, $string)">
+          <variable ilk="argument" name="$class" />
+          <variable ilk="argument" name="$string" />
+        </scope>
+        <scope ilk="function" line="49" lineend="52" name="load_json_string" signature="load_json_string($class, $string)">
+          <variable ilk="argument" name="$class" />
+          <variable ilk="argument" name="$string" />
+        </scope>
+        <scope ilk="function" line="54" lineend="69" name="yaml_backend" signature="yaml_backend()">
+          </scope>
+        <scope ilk="function" line="71" lineend="84" name="json_backend" signature="json_backend()" />
+        <scope ilk="function" line="86" lineend="90" name="_slurp" signature="_slurp()" />
+        <scope ilk="function" line="92" lineend="105" name="_can_load" signature="_can_load($module, $version)">
+          <variable ilk="argument" name="$module" />
+          <variable ilk="argument" name="$version" />
+        </scope>
+        <scope ilk="function" line="109" lineend="113" name="LoadFile" signature="LoadFile()">
+          <import line="110" module="CPAN::Meta::YAML" />
+          <import line="110" module="CPAN::Meta::YAML" />
+        </scope>
+        <scope ilk="function" line="116" lineend="120" name="Load" signature="Load()">
+          <import line="117" module="CPAN::Meta::YAML" />
+          <import line="117" module="CPAN::Meta::YAML" />
+        </scope>
+      </scope>
+    </scope>
+    

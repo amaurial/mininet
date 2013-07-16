@@ -1,0 +1,40 @@
+<scope ilk="blob" lang="Perl" name="CPAN::CacheMgr">
+      <scope ilk="class" line="3" lineend="248" name="CPAN::CacheMgr">
+        <import line="5" module="CPAN::InfoObj" symbol="*" />
+        <import line="7" module="Cwd" symbol="chdir" />
+        <import line="8" module="File::Find" symbol="*" />
+        <variable line="6" name="@CPAN::CacheMgr::ISA" />
+        <variable line="11" name="$VERSION" />
+        <scope ilk="function" line="19" lineend="26" name="as_string" signature="as_string()">
+          <import line="20" module="Data::Dumper" />
+          <import line="20" module="Data::Dumper" />
+        </scope>
+        <scope ilk="function" line="29" lineend="31" name="cachesize" signature="cachesize()" />
+        <scope ilk="function" line="34" lineend="52" name="tidyup" signature="tidyup($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="55" lineend="57" name="dir" signature="dir()" />
+        <scope ilk="function" line="60" lineend="82" name="entries" signature="entries($self, $dir)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$dir" />
+        </scope>
+        <scope ilk="function" line="85" lineend="145" name="disk_usage" signature="disk_usage($self, $dir, $fast)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$dir" />
+          <variable ilk="argument" name="$fast" />
+        </scope>
+        <scope ilk="function" line="148" lineend="188" name="_clean_cache" signature="_clean_cache($self, $dir)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$dir" />
+        </scope>
+        <scope attributes="__ctor__" ilk="function" line="191" lineend="214" name="new" signature="new($class, $phase)">
+          <variable ilk="argument" name="$class" />
+          <variable ilk="argument" name="$phase" />
+        </scope>
+        <scope ilk="function" line="217" lineend="246" name="scan_cache" signature="scan_cache($self, $phase)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$phase" />
+        </scope>
+      </scope>
+    </scope>
+    

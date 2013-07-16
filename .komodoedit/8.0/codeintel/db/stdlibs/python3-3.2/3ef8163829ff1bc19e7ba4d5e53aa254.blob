@@ -1,0 +1,188 @@
+<scope doc="# Support for the API of the multiprocessing package using threads&#xA;# # multiprocessing/dummy/__init__.py # # Copyright (c) 2006-2008, R Oudkerk # All rights reserved. # # Redistribution and use in source and binary forms, with or without # modification, are permitted provided that the following conditions # are met: #" ilk="blob" lang="Python" name="multiprocessing.dummy">
+      <scope ilk="function" line="131" lineend="132" name="Array" returns="array.array()" signature="Array(typecode, sequence, lock=True)">
+        <variable citdl="True" ilk="argument" name="lock" />
+        <variable ilk="argument" name="sequence" />
+        <variable ilk="argument" name="typecode" />
+      </scope>
+      <scope ilk="function" name="BoundedSemaphore" signature="BoundedSemaphore(*args, **kwargs)" />
+      <scope classrefs="_Condition" doc="&#xA;" ilk="class" line="87" lineend="92" name="Condition">
+        <variable citdl="threading._Condition.notify_all.__func__" line="90" name="notify_all" />
+      </scope>
+      <scope classrefs="Thread" doc="&#xA;" ilk="class" line="61" lineend="81" name="DummyProcess">
+        <scope ilk="function" line="70" lineend="74" name="start" signature="start(self)">
+          <variable citdl="DummyProcess" ilk="argument" name="self" />
+        </scope>
+        <scope ilk="function" line="63" lineend="68" name="__init__" signature="__init__(self, group=None, target=None, name=None, args=(), kwargs={})">
+          <variable ilk="argument" name="group" />
+          <variable ilk="argument" name="target" />
+          <variable citdl="dict" ilk="argument" name="kwargs" />
+          <variable citdl="DummyProcess" ilk="argument" name="self" />
+          <variable citdl="tuple" ilk="argument" name="args" />
+          <variable ilk="argument" name="name" />
+        </scope>
+        <scope attributes="__hidden__" ilk="function" line="77" lineend="81" name="exitcode (property getter)" returns="int" signature="exitcode (property getter)()">
+          <variable citdl="DummyProcess" ilk="argument" name="self" />
+        </scope>
+        <variable attributes="protected __instancevar__" citdl="weakref.WeakKeyDictionary()" line="66" name="_children" />
+        <variable attributes="protected __instancevar__" line="65" name="_pid" />
+        <variable attributes="protected __instancevar__" citdl="True" line="67" name="_start_called" />
+        <variable attributes="protected __instancevar__" citdl="current_process()" line="68" name="_parent" />
+        <variable attributes="property" citdl="int" line="77" name="exitcode" />
+      </scope>
+      <scope ilk="function" name="Event" signature="Event(*args, **kwargs)" />
+      <scope classrefs="object" doc="Create a queue object with a given maximum size.&#xA;If maxsize is &lt;= 0, the queue size is infinite." ilk="class" line="156" name="JoinableQueue">
+        <scope doc="Return the approximate size of the queue (not reliable!)." ilk="function" name="qsize" signature="qsize(self)" />
+        <scope doc="Remove and return an item from the queue." ilk="function" name="get" signature="get(self, block=True, timeout=None)" />
+        <scope doc="Indicate that a formerly enqueued task is complete." ilk="function" name="task_done" signature="task_done(self)" />
+        <scope doc="# Initialize the queue representation" ilk="function" name="_init" signature="_init(self, maxsize)" />
+        <scope doc="# Get an item from the queue" ilk="function" name="_get" signature="_get(self)" />
+        <scope doc="Return True if the queue is full, False otherwise (not&#xA;reliable!)." ilk="function" name="full" signature="full(self)" />
+        <scope doc="Put an item into the queue." ilk="function" name="put" signature="put(self, item, block=True, timeout=None)" />
+        <scope ilk="function" name="__init__" signature="__init__(self, maxsize=0)" />
+        <scope doc="Blocks until all items in the Queue have been gotten and&#xA;processed." ilk="function" name="join" signature="join(self)" />
+        <scope doc="# Put a new item in the queue" ilk="function" name="_put" signature="_put(self, item)" />
+        <scope doc="Remove and return an item from the queue without blocking." ilk="function" name="get_nowait" signature="get_nowait(self)" />
+        <scope doc="Put an item into the queue without blocking." ilk="function" name="put_nowait" signature="put_nowait(self, item)" />
+        <scope ilk="function" name="_qsize" signature="_qsize(self, len=&lt;built-in function len&gt;)" />
+        <scope doc="Return True if the queue is empty, False otherwise (not&#xA;reliable!)." ilk="function" name="empty" signature="empty(self)" />
+      </scope>
+      <scope doc="(allocate() is an obsolete synonym)" ilk="function" name="Lock" signature="allocate_lock() -&gt; lock object" />
+      <scope ilk="function" line="146" lineend="147" name="Manager" signature="Manager()" />
+      <scope classrefs="object" doc="&#xA;" ilk="class" line="116" lineend="126" name="Namespace">
+        <scope ilk="function" line="119" lineend="126" name="__repr__" returns="str" signature="__repr__(self)">
+          <variable citdl="list()" line="120" name="items" />
+          <variable citdl="Namespace" ilk="argument" name="self" />
+          <variable citdl="list" line="121" name="temp" />
+        </scope>
+        <scope ilk="function" line="117" lineend="118" name="__init__" signature="__init__(self, **kwds)">
+          <variable citdl="Namespace" ilk="argument" name="self" />
+          <variable attributes="kwargs" ilk="argument" name="kwds" />
+        </scope>
+      </scope>
+      <scope ilk="function" name="Pipe" signature="Pipe(duplex=True)" />
+      <scope ilk="function" line="152" lineend="154" name="Pool" returns="ThreadPool()" signature="Pool(processes=None, initializer=None, initargs=())">
+        <variable citdl="tuple" ilk="argument" name="initargs" />
+        <variable ilk="argument" name="processes" />
+        <variable ilk="argument" name="initializer" />
+      </scope>
+      <scope classrefs="Thread" doc="&#xA;" ilk="class" line="98" name="Process">
+        <scope ilk="function" name="start" signature="start(self)" />
+        <scope ilk="function" name="__init__" signature="__init__(self, group=None, target=None, name=None, args=(), kwargs={})" />
+      </scope>
+      <scope classrefs="object" doc="Create a queue object with a given maximum size.&#xA;If maxsize is &lt;= 0, the queue size is infinite." ilk="class" name="Queue">
+        <scope doc="Return the approximate size of the queue (not reliable!)." ilk="function" name="qsize" signature="qsize(self)" />
+        <scope doc="Remove and return an item from the queue." ilk="function" name="get" signature="get(self, block=True, timeout=None)" />
+        <scope doc="Indicate that a formerly enqueued task is complete." ilk="function" name="task_done" signature="task_done(self)" />
+        <scope doc="# Initialize the queue representation" ilk="function" name="_init" signature="_init(self, maxsize)" />
+        <scope doc="# Get an item from the queue" ilk="function" name="_get" signature="_get(self)" />
+        <scope doc="Return True if the queue is full, False otherwise (not&#xA;reliable!)." ilk="function" name="full" signature="full(self)" />
+        <scope doc="Put an item into the queue." ilk="function" name="put" signature="put(self, item, block=True, timeout=None)" />
+        <scope ilk="function" name="__init__" signature="__init__(self, maxsize=0)" />
+        <scope doc="Blocks until all items in the Queue have been gotten and&#xA;processed." ilk="function" name="join" signature="join(self)" />
+        <scope doc="# Put a new item in the queue" ilk="function" name="_put" signature="_put(self, item)" />
+        <scope doc="Remove and return an item from the queue without blocking." ilk="function" name="get_nowait" signature="get_nowait(self)" />
+        <scope doc="Put an item into the queue without blocking." ilk="function" name="put_nowait" signature="put_nowait(self, item)" />
+        <scope ilk="function" name="_qsize" signature="_qsize(self, len=&lt;built-in function len&gt;)" />
+        <scope doc="Return True if the queue is empty, False otherwise (not&#xA;reliable!)." ilk="function" name="empty" signature="empty(self)" />
+      </scope>
+      <scope ilk="function" name="RLock" signature="RLock(verbose=None, *args, **kwargs)" />
+      <scope ilk="function" name="Semaphore" signature="Semaphore(*args, **kwargs)" />
+      <scope classrefs="ProcessError" doc="&#xA;" ilk="class" name="TimeoutError" />
+      <scope classrefs="object" doc="&#xA;" ilk="class" line="134" lineend="144" name="Value">
+        <scope ilk="function" line="138" lineend="139" name="_get" signature="_get(self)">
+          <variable citdl="Value" ilk="argument" name="self" />
+        </scope>
+        <scope ilk="function" line="143" lineend="144" name="__repr__" returns="tuple" signature="__repr__(self)">
+          <variable citdl="Value" ilk="argument" name="self" />
+        </scope>
+        <scope ilk="function" line="135" lineend="137" name="__init__" signature="__init__(self, typecode, value, lock=True)">
+          <variable citdl="True" ilk="argument" name="lock" />
+          <variable citdl="Value" ilk="argument" name="self" />
+          <variable ilk="argument" name="value" />
+          <variable ilk="argument" name="typecode" />
+        </scope>
+        <scope ilk="function" line="140" lineend="141" name="_set" signature="_set(self, value)">
+          <variable citdl="Value" ilk="argument" name="self" />
+          <variable ilk="argument" name="value" />
+        </scope>
+        <variable attributes="protected __instancevar__" line="137" name="_value" />
+        <variable attributes="protected __instancevar__" line="136" name="_typecode" />
+        <variable citdl="property()" line="142" name="value" />
+      </scope>
+      <variable citdl="list" line="35" name="__all__" />
+      <scope ilk="function" line="102" lineend="107" name="active_children" returns="list()" signature="active_children()">
+        <variable line="103" name="children" />
+      </scope>
+      <import module="array" />
+      <import module="connection" />
+      <scope doc="Returns the number of CPUs in the system" ilk="function" name="cpu_count" signature="cpu_count()" />
+      <scope ilk="function" line="99" name="current_process" signature="current_process()" />
+      <scope classrefs="object" doc="dict() -&gt; new empty dictionary&#xA;dict(mapping) -&gt; new dictionary initialized from a mapping object&apos;s (key, value) pairs dict(iterable) -&gt; new dictionary initialized as if via: d = {} for k, v in iterable: d[k] = v dict(**kwargs) -&gt; new dictionary initialized with the name=value pairs in the keyword argument list.  For example:  dict(one=1, two=2)" ilk="class" line="128" name="dict">
+        <scope doc="x.__gt__(y) &lt;==&gt; x&gt;y" ilk="function" name="__gt__" signature="x.__gt__(y) &lt;==&gt; x&gt;y" />
+        <scope doc="x.__getattribute__(&apos;name&apos;) &lt;==&gt; x.name" ilk="function" name="__getattribute__" signature="x.__getattribute__(&apos;name&apos;) &lt;==&gt; x.name" />
+        <scope doc="If key is not found, d is returned if given, otherwise&#xA;KeyError is raised" ilk="function" name="pop" signature="D.pop(k[,d]) -&gt; v, remove specified key and return the corresponding value." />
+        <scope doc="x.__lt__(y) &lt;==&gt; x&lt;y" ilk="function" name="__lt__" signature="x.__lt__(y) &lt;==&gt; x&lt;y" />
+        <scope doc="D.__sizeof__() -&gt; size of D in memory, in bytes" ilk="function" name="__sizeof__" signature="D.__sizeof__() -&gt; size of D in memory, in bytes" />
+        <scope ilk="function" name="__init__" />
+        <scope doc="D.__contains__(k) -&gt; True if D has a key k, else False" ilk="function" name="__contains__" returns="bool" signature="D.__contains__(k) -&gt; True if D has a key k, else False" />
+        <scope doc="x.__len__() &lt;==&gt; len(x)" ilk="function" name="__len__" signature="x.__len__() &lt;==&gt; len(x)" />
+        <scope doc="x.__ne__(y) &lt;==&gt; x!=y" ilk="function" name="__ne__" signature="x.__ne__(y) &lt;==&gt; x!=y" />
+        <scope doc="x.__getitem__(y) &lt;==&gt; x[y]" ilk="function" name="__getitem__" signature="x.__getitem__(y) &lt;==&gt; x[y]" />
+        <scope doc="D.get(k[,d]) -&gt; D[k] if k in D, else d.  d defaults to None." ilk="function" name="get" signature="D.get(k[,d]) -&gt; D[k] if k in D, else d.  d defaults to None." />
+        <scope doc="D.keys() -&gt; a set-like object providing a view on D&apos;s keys" ilk="function" name="keys" signature="D.keys() -&gt; a set-like object providing a view on D&apos;s keys" />
+        <scope doc="If E has a .keys() method, does:     for k in E: D[k] = E[k]&#xA;If E lacks .keys() method, does:     for (k, v) in E: D[k] =&#xA;v In either case, this is followed by: for k in F: D[k] =&#xA;F[k]" ilk="function" name="update" signature="D.update(E, **F) -&gt; None.  Update D from dict/iterable E and F." />
+        <scope doc="x.__setitem__(i, y) &lt;==&gt; x[i]=y" ilk="function" name="__setitem__" signature="x.__setitem__(i, y) &lt;==&gt; x[i]=y" />
+        <scope doc="2-tuple; but raise KeyError if D is empty." ilk="function" name="popitem" signature="D.popitem() -&gt; (k, v), remove and return some (key, value) pair as a" />
+        <scope doc="D.copy() -&gt; a shallow copy of D" ilk="function" name="copy" signature="D.copy() -&gt; a shallow copy of D" />
+        <scope doc="x.__eq__(y) &lt;==&gt; x==y" ilk="function" name="__eq__" signature="x.__eq__(y) &lt;==&gt; x==y" />
+        <scope doc="x.__delitem__(y) &lt;==&gt; del x[y]" ilk="function" name="__delitem__" signature="x.__delitem__(y) &lt;==&gt; del x[y]" />
+        <scope doc="D.setdefault(k[,d]) -&gt; D.get(k,d), also set D[k]=d if k not in D" ilk="function" name="setdefault" signature="D.setdefault(k[,d]) -&gt; D.get(k,d), also set D[k]=d if k not in D" />
+        <scope doc="D.items() -&gt; a set-like object providing a view on D&apos;s items" ilk="function" name="items" signature="D.items() -&gt; a set-like object providing a view on D&apos;s items" />
+        <scope doc="D.clear() -&gt; None.  Remove all items from D." ilk="function" name="clear" signature="D.clear() -&gt; None.  Remove all items from D." />
+        <scope doc="x.__iter__() &lt;==&gt; iter(x)" ilk="function" name="__iter__" signature="x.__iter__() &lt;==&gt; iter(x)" />
+        <scope doc="x.__le__(y) &lt;==&gt; x&lt;=y" ilk="function" name="__le__" signature="x.__le__(y) &lt;==&gt; x&lt;=y" />
+        <scope doc="D.values() -&gt; an object providing a view on D&apos;s values" ilk="function" name="values" signature="D.values() -&gt; an object providing a view on D&apos;s values" />
+        <scope doc="x.__repr__() &lt;==&gt; repr(x)" ilk="function" name="__repr__" signature="x.__repr__() &lt;==&gt; repr(x)" />
+        <scope doc="x.__ge__(y) &lt;==&gt; x&gt;=y" ilk="function" name="__ge__" signature="x.__ge__(y) &lt;==&gt; x&gt;=y" />
+      </scope>
+      <scope ilk="function" line="109" lineend="110" name="freeze_support" signature="freeze_support()" />
+      <import module="itertools" />
+      <scope classrefs="object" doc="list() -&gt; new empty list&#xA;list(iterable) -&gt; new list initialized from iterable&apos;s items" ilk="class" line="129" name="list">
+        <scope doc="x.__getattribute__(&apos;name&apos;) &lt;==&gt; x.name" ilk="function" name="__getattribute__" signature="x.__getattribute__(&apos;name&apos;) &lt;==&gt; x.name" />
+        <scope doc="Raises IndexError if list is empty or index is out of range." ilk="function" name="pop" signature="L.pop([index]) -&gt; item -- remove and return item at index (default last)." />
+        <scope doc="remove first occurrence of value." ilk="function" name="remove" signature="L.remove(value)" />
+        <scope doc="x.__rmul__(n) &lt;==&gt; n*x" ilk="function" name="__rmul__" signature="x.__rmul__(n) &lt;==&gt; n*x" />
+        <scope doc="x.__lt__(y) &lt;==&gt; x&lt;y" ilk="function" name="__lt__" signature="x.__lt__(y) &lt;==&gt; x&lt;y" />
+        <scope doc="size of L in memory, in bytes" ilk="function" name="__sizeof__" signature="L.__sizeof__()" />
+        <scope ilk="function" name="__init__" />
+        <scope doc="L.count(value) -&gt; integer -- return number of occurrences of value" ilk="function" name="count" returns="int" signature="L.count(value) -&gt; integer -- return number of occurrences of value" />
+        <scope doc="Raises ValueError if the value is not present." ilk="function" name="index" returns="int" signature="L.index(value, [start, [stop]]) -&gt; integer -- return first index of value." />
+        <scope doc="x.__contains__(y) &lt;==&gt; y in x" ilk="function" name="__contains__" signature="x.__contains__(y) &lt;==&gt; y in x" />
+        <scope doc="append object to end" ilk="function" name="append" signature="L.append(object)" />
+        <scope doc="x.__len__() &lt;==&gt; len(x)" ilk="function" name="__len__" signature="x.__len__() &lt;==&gt; len(x)" />
+        <scope doc="x.__mul__(n) &lt;==&gt; x*n" ilk="function" name="__mul__" signature="x.__mul__(n) &lt;==&gt; x*n" />
+        <scope doc="stable sort *IN PLACE*" ilk="function" name="sort" signature="L.sort(key=None, reverse=False)" />
+        <scope doc="x.__ne__(y) &lt;==&gt; x!=y" ilk="function" name="__ne__" signature="x.__ne__(y) &lt;==&gt; x!=y" />
+        <scope doc="x.__getitem__(y) &lt;==&gt; x[y]" ilk="function" name="__getitem__" signature="x.__getitem__(y) &lt;==&gt; x[y]" />
+        <scope doc="insert object before index" ilk="function" name="insert" signature="L.insert(index, object)" />
+        <scope doc="x.__setitem__(i, y) &lt;==&gt; x[i]=y" ilk="function" name="__setitem__" signature="x.__setitem__(i, y) &lt;==&gt; x[i]=y" />
+        <scope doc="x.__add__(y) &lt;==&gt; x+y" ilk="function" name="__add__" signature="x.__add__(y) &lt;==&gt; x+y" />
+        <scope doc="x.__gt__(y) &lt;==&gt; x&gt;y" ilk="function" name="__gt__" signature="x.__gt__(y) &lt;==&gt; x&gt;y" />
+        <scope doc="x.__eq__(y) &lt;==&gt; x==y" ilk="function" name="__eq__" signature="x.__eq__(y) &lt;==&gt; x==y" />
+        <scope doc="reverse *IN PLACE*" ilk="function" name="reverse" signature="L.reverse()" />
+        <scope doc="extend list by appending elements from the iterable" ilk="function" name="extend" signature="L.extend(iterable)" />
+        <scope doc="x.__delitem__(y) &lt;==&gt; del x[y]" ilk="function" name="__delitem__" signature="x.__delitem__(y) &lt;==&gt; del x[y]" />
+        <scope doc="return a reverse iterator over the list" ilk="function" name="__reversed__" signature="L.__reversed__()" />
+        <scope doc="x.__imul__(y) &lt;==&gt; x*=y" ilk="function" name="__imul__" signature="x.__imul__(y) &lt;==&gt; x*=y" />
+        <scope doc="x.__iter__() &lt;==&gt; iter(x)" ilk="function" name="__iter__" signature="x.__iter__() &lt;==&gt; iter(x)" />
+        <scope doc="x.__iadd__(y) &lt;==&gt; x+=y" ilk="function" name="__iadd__" signature="x.__iadd__(y) &lt;==&gt; x+=y" />
+        <scope doc="x.__le__(y) &lt;==&gt; x&lt;=y" ilk="function" name="__le__" signature="x.__le__(y) &lt;==&gt; x&lt;=y" />
+        <scope doc="x.__repr__() &lt;==&gt; repr(x)" ilk="function" name="__repr__" signature="x.__repr__() &lt;==&gt; repr(x)" />
+        <scope doc="x.__ge__(y) &lt;==&gt; x&gt;=y" ilk="function" name="__ge__" signature="x.__ge__(y) &lt;==&gt; x&gt;=y" />
+      </scope>
+      <scope ilk="function" line="149" lineend="150" name="shutdown" signature="shutdown()" />
+      <import module="sys" />
+      <import module="threading" />
+      <import module="weakref" />
+    </scope>
+    

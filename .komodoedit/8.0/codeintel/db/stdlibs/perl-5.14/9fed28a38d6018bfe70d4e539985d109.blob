@@ -1,0 +1,34 @@
+<scope ilk="blob" lang="Perl" name="inc::latest::private">
+      <scope ilk="class" line="1" lineend="99" name="inc::latest::private">
+        <import line="7" module="File::Spec" symbol="*" />
+        <import line="8" module="IO::File" symbol="*" />
+        <variable line="3" name="$VERSION" />
+        <scope ilk="function" line="12" lineend="40" name="import" signature="import($package, $mod, @args)">
+          <variable ilk="argument" name="$package" />
+          <variable ilk="argument" name="$mod" />
+          <variable ilk="argument" name="@args" />
+        </scope>
+        <scope ilk="function" line="42" lineend="45" name="_version" signature="_version()">
+          <import line="43" module="ExtUtils::MakeMaker" />
+          <import line="43" module="ExtUtils::MakeMaker" />
+        </scope>
+        <scope ilk="function" line="48" lineend="56" name="_load_module" signature="_load_module($package, $mod, @args)">
+          <variable ilk="argument" name="$package" />
+          <variable ilk="argument" name="$mod" />
+          <variable ilk="argument" name="@args" />
+        </scope>
+        <scope ilk="function" line="58" lineend="73" name="_search_bundled" signature="_search_bundled($self, $file)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$file" />
+        </scope>
+        <scope ilk="function" line="76" lineend="88" name="_search_INC" signature="_search_INC($self, $file)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$file" />
+        </scope>
+        <scope ilk="function" line="91" lineend="97" name="_mod2path" signature="_mod2path($self, $mod)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$mod" />
+        </scope>
+      </scope>
+    </scope>
+    

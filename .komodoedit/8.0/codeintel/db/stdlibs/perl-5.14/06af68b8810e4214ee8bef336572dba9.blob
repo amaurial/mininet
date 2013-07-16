@@ -1,0 +1,84 @@
+<scope ilk="blob" lang="Perl" name="DBD::SQLite">
+      <scope classrefs="DynaLoader" ilk="class" line="1" lineend="73" name="DBD::SQLite">
+        <import line="5" module="DBI" symbol="*" />
+        <import line="6" module="DynaLoader" />
+        <variable line="8" name="$VERSION" />
+        <variable line="8" name="@ISA" />
+        <variable line="9" name="$drh" />
+        <variable line="9" name="$err" />
+        <variable line="9" name="$errstr" />
+        <variable line="9" name="$sqlite_version" />
+        <variable line="9" name="$sqlite_version_number" />
+        <variable line="10" name="%COLLATION" />
+        <scope ilk="function" line="38" lineend="69" name="driver" signature="driver()" />
+        <scope ilk="function" line="71" lineend="73" name="CLONE" signature="CLONE()" />
+      </scope>
+      <scope ilk="class" line="76" lineend="167" name="DBD::SQLite::dr">
+        <scope ilk="function" line="78" lineend="144" name="connect" signature="connect($drh, $dbname, $user, $auth, $attr)">
+          <import line="105" module="Win32" />
+          <import line="106" module="File::Basename" />
+          <variable ilk="argument" name="$drh" />
+          <variable ilk="argument" name="$dbname" />
+          <variable ilk="argument" name="$user" />
+          <variable ilk="argument" name="$auth" />
+          <variable ilk="argument" name="$attr" />
+          <import line="105" module="Win32" />
+          <import line="106" module="File::Basename" />
+        </scope>
+        <scope ilk="function" line="146" lineend="159" name="install_collation" signature="install_collation($dbh, $name)">
+          <variable ilk="argument" name="$dbh" />
+          <variable ilk="argument" name="$name" />
+        </scope>
+        <scope ilk="function" line="164" lineend="167" name="regexp" signature="regexp()" />
+      </scope>
+      <scope ilk="class" line="169" lineend="573" name="DBD::SQLite::db">
+        <scope ilk="function" line="171" lineend="183" name="prepare" signature="prepare($dbh, $sql)">
+          <variable ilk="argument" name="$dbh" />
+          <variable ilk="argument" name="$sql" />
+        </scope>
+        <scope ilk="function" line="185" lineend="202" name="do" signature="do($dbh, $statement, $attr, @bind_values)">
+          <variable ilk="argument" name="$dbh" />
+          <variable ilk="argument" name="$statement" />
+          <variable ilk="argument" name="$attr" />
+          <variable ilk="argument" name="@bind_values" />
+        </scope>
+        <scope ilk="function" line="204" lineend="206" name="_get_version" signature="_get_version()" />
+        <scope ilk="function" line="214" lineend="219" name="get_info" signature="get_info($dbh, $info_type)">
+          <variable ilk="argument" name="$dbh" />
+          <variable ilk="argument" name="$info_type" />
+        </scope>
+        <scope ilk="function" line="221" lineend="231" name="_attached_database_list" signature="_attached_database_list($dbh)">
+          <variable ilk="argument" name="$dbh" />
+        </scope>
+        <scope ilk="function" line="236" lineend="350" name="table_info" signature="table_info($dbh, $cat_val, $sch_val, $tbl_val, $typ_val, $attr)">
+          <variable ilk="argument" name="$dbh" />
+          <variable ilk="argument" name="$cat_val" />
+          <variable ilk="argument" name="$sch_val" />
+          <variable ilk="argument" name="$tbl_val" />
+          <variable ilk="argument" name="$typ_val" />
+          <variable ilk="argument" name="$attr" />
+        </scope>
+        <scope ilk="function" line="352" lineend="402" name="primary_key_info" signature="primary_key_info($dbh, $catalog, $schema, $table, $attr)">
+          <variable ilk="argument" name="$dbh" />
+          <variable ilk="argument" name="$catalog" />
+          <variable ilk="argument" name="$schema" />
+          <variable ilk="argument" name="$table" />
+          <variable ilk="argument" name="$attr" />
+        </scope>
+        <scope ilk="function" line="404" lineend="443" name="type_info_all" signature="type_info_all()" />
+        <scope ilk="function" line="466" lineend="573" name="column_info" signature="column_info($dbh, $cat_val, $sch_val, $tbl_val, $col_val)">
+          <variable ilk="argument" name="$dbh" />
+          <variable ilk="argument" name="$cat_val" />
+          <variable ilk="argument" name="$sch_val" />
+          <variable ilk="argument" name="$tbl_val" />
+          <variable ilk="argument" name="$col_val" />
+        </scope>
+      </scope>
+      <scope classrefs="Tie::StdHash" ilk="class" line="579" lineend="598" name="DBD::SQLite::_WriteOnceHash">
+        <import line="581" module="Tie::Hash" />
+        <scope attributes="__ctor__" ilk="function" line="585" lineend="587" name="TIEHASH" signature="TIEHASH()" />
+        <scope ilk="function" line="589" lineend="592" name="STORE" signature="STORE()" />
+        <scope ilk="function" line="594" lineend="596" name="DELETE" signature="DELETE()" />
+      </scope>
+    </scope>
+    

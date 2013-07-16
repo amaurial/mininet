@@ -1,0 +1,67 @@
+<scope ilk="blob" lang="Perl" name="Test::Harness">
+      <scope classrefs="Exporter" ilk="class" line="1" lineend="481" name="Test::Harness">
+        <import line="10" module="TAP::Harness" />
+        <import line="11" module="TAP::Parser::Aggregator" />
+        <import line="12" module="TAP::Parser::Source" />
+        <import line="13" module="TAP::Parser::SourceHandler::Perl" />
+        <import line="15" module="TAP::Parser::Utils" symbol="split_shell" />
+        <import line="17" module="Config" symbol="*" />
+        <import line="18" module="Exporter" symbol="*" />
+        <variable line="22" name="$VERSION" />
+        <variable line="23" name="@EXPORT" />
+        <variable line="23" name="@EXPORT_OK" />
+        <variable line="23" name="@ISA" />
+        <variable line="24" name="$Debug" />
+        <variable line="24" name="$Switches" />
+        <variable line="24" name="$Verbose" />
+        <variable line="25" name="$debug" />
+        <variable attributes="__exportable__" line="25" name="$switches" />
+        <variable attributes="__exportable__" line="25" name="$verbose" />
+        <variable line="26" name="$Columns" />
+        <variable line="27" name="$Color" />
+        <variable line="28" name="$Directives" />
+        <variable line="29" name="$Timer" />
+        <variable line="30" name="$Strap" />
+        <variable line="31" name="$HarnessSubclass" />
+        <variable line="32" name="$has_time_hires" />
+        <variable line="33" name="$IgnoreExit" />
+        <variable line="56" name="*verbose" />
+        <variable line="57" name="*switches" />
+        <variable line="58" name="*debug" />
+        <scope ilk="function" line="121" lineend="125" name="_has_taint" signature="_has_taint($test)">
+          <variable ilk="argument" name="$test" />
+        </scope>
+        <scope ilk="function" line="127" lineend="135" name="_aggregate" signature="_aggregate($harness, $aggregate, @tests)">
+          <variable ilk="argument" name="$harness" />
+          <variable ilk="argument" name="$aggregate" />
+          <variable ilk="argument" name="@tests" />
+        </scope>
+        <scope ilk="function" line="138" lineend="147" name="_apply_extra_INC" signature="_apply_extra_INC($harness)">
+          <variable ilk="argument" name="$harness" />
+        </scope>
+        <scope ilk="function" line="149" lineend="155" name="_aggregate_tests" signature="_aggregate_tests($harness, $aggregate, @tests)">
+          <variable ilk="argument" name="$harness" />
+          <variable ilk="argument" name="$aggregate" />
+          <variable ilk="argument" name="@tests" />
+        </scope>
+        <scope attributes="__exported__" ilk="function" line="157" lineend="188" name="runtests" signature="runtests(@tests)">
+          <variable ilk="argument" name="@tests" />
+        </scope>
+        <scope ilk="function" line="190" lineend="206" name="_canon" signature="_canon()">
+          </scope>
+        <scope ilk="function" line="208" lineend="257" name="_new_harness" signature="_new_harness($sub_args)">
+          <variable ilk="argument" name="$sub_args" />
+        </scope>
+        <scope ilk="function" line="261" lineend="295" name="_filtered_inc" signature="_filtered_inc()">
+          </scope>
+        <scope ilk="function" line="302" lineend="313" name="_default_inc" signature="_default_inc()">
+          </scope>
+        <scope ilk="function" line="316" lineend="325" name="_check_sequence" signature="_check_sequence(@list)">
+          <variable ilk="argument" name="@list" />
+        </scope>
+        <scope attributes="__exportable__" ilk="function" line="327" lineend="437" name="execute_tests" signature="execute_tests(%args)">
+          <variable ilk="argument" name="%args" />
+        </scope>
+      </scope>
+    </scope>
+    

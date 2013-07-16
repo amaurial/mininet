@@ -1,0 +1,42 @@
+<scope ilk="blob" lang="Perl" name="PPI::Cache">
+      <scope ilk="class" line="1" lineend="304" name="PPI::Cache">
+        <import line="49" module="Carp" />
+        <import line="50" module="File::Spec" />
+        <import line="51" module="File::Path" />
+        <import line="52" module="Storable" />
+        <import line="53" module="Digest::MD5" />
+        <import line="54" module="Params::Util" symbol="_INSTANCE" />
+        <import line="54" module="Params::Util" symbol="_SCALAR" />
+        <import line="55" module="PPI::Document" />
+        <variable line="57" name="$VERSION" />
+        <scope ilk="function" line="64" lineend="77" name="import" signature="import()">
+          </scope>
+        <scope attributes="__ctor__" ilk="function" line="115" lineend="139" name="new" signature="new($class, %params)">
+          <variable ilk="argument" name="$class" />
+          <variable ilk="argument" name="%params" />
+        </scope>
+        <scope ilk="function" line="150" lineend="150" name="path" signature="path()" />
+        <scope ilk="function" line="161" lineend="161" name="readonly" signature="readonly()" />
+        <scope ilk="function" line="179" lineend="185" name="get_document" signature="get_document()">
+          </scope>
+        <scope ilk="function" line="200" lineend="212" name="store_document" signature="store_document($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="223" lineend="234" name="_store" signature="_store($self, $md5hex, $object)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$md5hex" />
+          <variable ilk="argument" name="$object" />
+        </scope>
+        <scope ilk="function" line="238" lineend="254" name="_load" signature="_load($self, $md5hex)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$md5hex" />
+        </scope>
+        <scope ilk="function" line="257" lineend="263" name="_paths" signature="_paths($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="266" lineend="274" name="_md5hex" signature="_md5hex($either)">
+          <variable ilk="argument" name="$either" />
+        </scope>
+      </scope>
+    </scope>
+    

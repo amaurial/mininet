@@ -1,0 +1,82 @@
+<scope ilk="blob" lang="Perl" name="TAP::Parser">
+      <scope classrefs="TAP::Base" ilk="class" line="1" lineend="1898" name="TAP::Parser">
+        <import line="6" module="TAP::Base" />
+        <import line="7" module="TAP::Parser::Grammar" />
+        <import line="8" module="TAP::Parser::Result" />
+        <import line="9" module="TAP::Parser::ResultFactory" />
+        <import line="10" module="TAP::Parser::Source" />
+        <import line="11" module="TAP::Parser::Iterator" />
+        <import line="12" module="TAP::Parser::IteratorFactory" />
+        <import line="13" module="TAP::Parser::SourceHandler::Executable" />
+        <import line="14" module="TAP::Parser::SourceHandler::Perl" />
+        <import line="15" module="TAP::Parser::SourceHandler::File" />
+        <import line="16" module="TAP::Parser::SourceHandler::RawTAP" />
+        <import line="17" module="TAP::Parser::SourceHandler::Handle" />
+        <import line="19" module="Carp" symbol="confess" />
+        <variable line="4" name="$VERSION" />
+        <variable line="4" name="@ISA" />
+        <variable line="826" name="*actual_ok" />
+        <scope ilk="function" line="69" lineend="72" name="_stream" signature="_stream($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="285" lineend="285" name="_default_grammar_class" signature="_default_grammar_class()" />
+        <scope ilk="function" line="286" lineend="286" name="_default_result_factory_class" signature="_default_result_factory_class()" />
+        <scope ilk="function" line="287" lineend="287" name="_default_iterator_factory_class" signature="_default_iterator_factory_class()" />
+        <scope ilk="function" line="310" lineend="313" name="next" signature="next($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="325" lineend="331" name="run" signature="run($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="362" lineend="362" name="make_iterator_factory" signature="make_iterator_factory()" />
+        <scope ilk="function" line="363" lineend="363" name="make_grammar" signature="make_grammar()" />
+        <scope ilk="function" line="364" lineend="364" name="make_result" signature="make_result()" />
+        <scope ilk="function" line="405" lineend="487" name="_initialize" signature="_initialize($self, $arg_for)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$arg_for" />
+        </scope>
+        <scope ilk="function" line="798" lineend="798" name="passed" signature="passed()" />
+        <scope ilk="function" line="810" lineend="810" name="failed" signature="failed()" />
+        <scope ilk="function" line="825" lineend="825" name="actual_passed" signature="actual_passed()" />
+        <scope ilk="function" line="845" lineend="845" name="actual_failed" signature="actual_failed()" />
+        <scope ilk="function" line="858" lineend="858" name="todo" signature="todo()" />
+        <scope ilk="function" line="873" lineend="873" name="todo_passed" signature="todo_passed()" />
+        <scope ilk="function" line="886" lineend="890" name="todo_failed" signature="todo_failed()" />
+        <scope ilk="function" line="901" lineend="901" name="skipped" signature="skipped()" />
+        <scope ilk="function" line="919" lineend="932" name="pragma" signature="pragma()">
+          </scope>
+        <scope ilk="function" line="942" lineend="942" name="pragmas" signature="pragmas()" />
+        <scope ilk="function" line="961" lineend="964" name="good_plan" signature="good_plan()" />
+        <scope ilk="function" line="1018" lineend="1024" name="has_problems" signature="has_problems($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="1061" lineend="1061" name="ignore_exit" signature="ignore_exit()" />
+        <scope ilk="function" line="1123" lineend="1123" name="parse_errors" signature="parse_errors()" />
+        <scope ilk="function" line="1125" lineend="1129" name="_add_error" signature="_add_error($self, $error)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$error" />
+        </scope>
+        <scope ilk="function" line="1131" lineend="1336" name="_make_state_table" signature="_make_state_table($self, $unk, $pragma, $plan, $test)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$unk" />
+          <variable ilk="argument" name="$pragma" />
+          <variable ilk="argument" name="$plan" />
+          <variable ilk="argument" name="$test" />
+        </scope>
+        <scope ilk="function" line="1345" lineend="1345" name="get_select_handles" signature="get_select_handles()" />
+        <scope ilk="function" line="1347" lineend="1357" name="_grammar" signature="_grammar($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="1359" lineend="1454" name="_iter" signature="_iter($self, $token)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$token" />
+        </scope>
+        <scope ilk="function" line="1456" lineend="1500" name="_finish" signature="_finish($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="1510" lineend="1514" name="delete_spool" signature="delete_spool($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+      </scope>
+    </scope>
+    

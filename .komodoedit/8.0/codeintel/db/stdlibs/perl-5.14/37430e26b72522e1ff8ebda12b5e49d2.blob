@@ -1,0 +1,32 @@
+<scope ilk="blob" lang="Perl" name="Moose::Meta::Role::Attribute">
+      <scope ilk="class" line="1" lineend="192" name="Moose::Meta::Role::Attribute">
+        <import line="12" module="Carp" symbol="confess" />
+        <import line="13" module="List::MoreUtils" symbol="all" />
+        <import line="14" module="Scalar::Util" symbol="blessed" />
+        <variable line="3" name="$Moose::Meta::Role::Attribute::AUTHORITY" />
+        <variable line="6" name="$Moose::Meta::Role::Attribute::VERSION" />
+        <scope attributes="__ctor__" ilk="function" line="48" lineend="62" name="new" signature="new($class, $name, %options)">
+          <variable ilk="argument" name="$class" />
+          <variable ilk="argument" name="$name" />
+          <variable ilk="argument" name="%options" />
+        </scope>
+        <scope ilk="function" line="64" lineend="72" name="attach_to_role" signature="attach_to_role($self, $role)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$role" />
+        </scope>
+        <scope ilk="function" line="74" lineend="78" name="original_role" signature="original_role($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="80" lineend="87" name="attribute_for_class" signature="attribute_for_class($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="89" lineend="99" name="clone" signature="clone($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="101" lineend="121" name="is_same_as" signature="is_same_as($self, $attr)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$attr" />
+        </scope>
+      </scope>
+    </scope>
+    

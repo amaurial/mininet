@@ -1,0 +1,125 @@
+<scope ilk="blob" lang="Perl" name="CPAN::Distroprefs">
+      <scope ilk="class" line="5" lineend="192" name="CPAN::Distroprefs">
+        <import line="86" module="Carp" />
+        <import line="87" module="DirHandle" symbol="*" />
+        <variable line="7" name="$VERSION" />
+        <scope ilk="function" line="89" lineend="93" name="_load_method" signature="_load_method($self, $loader, $result)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$loader" />
+          <variable ilk="argument" name="$result" />
+        </scope>
+        <scope ilk="function" line="95" lineend="111" name="_load_yaml" signature="_load_yaml($self, $loader, $result)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$loader" />
+          <variable ilk="argument" name="$result" />
+        </scope>
+        <scope ilk="function" line="113" lineend="138" name="_load_dd" signature="_load_dd($self, $loader, $result)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$loader" />
+          <variable ilk="argument" name="$result" />
+        </scope>
+        <scope ilk="function" line="140" lineend="148" name="_load_st" signature="_load_st($self, $loader, $result)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$loader" />
+          <variable ilk="argument" name="$result" />
+        </scope>
+        <scope ilk="function" line="150" lineend="192" name="find" signature="find($self, $dir, $ext_map)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$dir" />
+          <variable ilk="argument" name="$ext_map" />
+        </scope>
+      </scope>
+      <scope ilk="class" line="10" lineend="42" name="CPAN::Distroprefs::Result">
+        <import line="12" module="File::Spec" symbol="*" />
+        <scope attributes="__ctor__" ilk="function" line="14" lineend="14" name="new" signature="new()" />
+        <scope ilk="function" line="16" lineend="16" name="abs" signature="abs()" />
+        <scope ilk="function" line="18" lineend="28" name="__cloner" signature="__cloner($class, $name, $newclass)">
+          <variable ilk="argument" name="$class" />
+          <variable ilk="argument" name="$name" />
+          <variable ilk="argument" name="$newclass" />
+        </scope>
+        <scope ilk="function" line="33" lineend="37" name="__accessor" signature="__accessor($class, $key)">
+          <variable ilk="argument" name="$class" />
+          <variable ilk="argument" name="$key" />
+        </scope>
+        <scope ilk="function" line="40" lineend="40" name="is_warning" signature="is_warning()" />
+        <scope ilk="function" line="41" lineend="41" name="is_fatal" signature="is_fatal()" />
+        <scope ilk="function" line="42" lineend="42" name="is_success" signature="is_success()" />
+      </scope>
+      <scope classrefs="CPAN::Distroprefs::Result" ilk="class" line="44" lineend="56" name="CPAN::Distroprefs::Result::Error">
+        <variable line="45" name="@ISA" />
+        <scope ilk="function" line="49" lineend="56" name="as_string" signature="as_string($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+      </scope>
+      <scope classrefs="CPAN::Distroprefs::Result::Error" ilk="class" line="58" lineend="63" name="CPAN::Distroprefs::Result::Warning">
+        <variable line="59" name="@ISA" />
+        <scope ilk="function" line="61" lineend="61" name="is_warning" signature="is_warning()" />
+        <scope ilk="function" line="62" lineend="62" name="fmt_reason" signature="fmt_reason()" />
+        <scope ilk="function" line="63" lineend="63" name="fmt_unknown" signature="fmt_unknown()" />
+      </scope>
+      <scope classrefs="CPAN::Distroprefs::Result::Error" ilk="class" line="65" lineend="70" name="CPAN::Distroprefs::Result::Fatal">
+        <variable line="66" name="@ISA" />
+        <scope ilk="function" line="68" lineend="68" name="is_fatal" signature="is_fatal()" />
+        <scope ilk="function" line="69" lineend="69" name="fmt_reason" signature="fmt_reason()" />
+        <scope ilk="function" line="70" lineend="70" name="fmt_unknown" signature="fmt_unknown()" />
+      </scope>
+      <scope classrefs="CPAN::Distroprefs::Result" ilk="class" line="72" lineend="76" name="CPAN::Distroprefs::Result::Success">
+        <variable line="73" name="@ISA" />
+        <scope ilk="function" line="76" lineend="76" name="is_success" signature="is_success()" />
+      </scope>
+      <scope ilk="class" line="78" lineend="82" name="CPAN::Distroprefs::Iterator">
+        <scope attributes="__ctor__" ilk="function" line="80" lineend="80" name="new" signature="new()" />
+        <scope ilk="function" line="82" lineend="82" name="next" signature="next()" />
+      </scope>
+      <scope ilk="class" line="194" lineend="309" name="CPAN::Distroprefs::Pref">
+        <import line="196" module="Carp" />
+        <scope attributes="__ctor__" ilk="function" line="198" lineend="198" name="new" signature="new()" />
+        <scope ilk="function" line="200" lineend="200" name="data" signature="data()" />
+        <scope ilk="function" line="202" lineend="202" name="has_any_match" signature="has_any_match()" />
+        <scope ilk="function" line="204" lineend="207" name="has_match" signature="has_match()">
+          </scope>
+        <scope ilk="function" line="209" lineend="213" name="has_valid_subkeys" signature="has_valid_subkeys()" />
+        <scope ilk="function" line="215" lineend="223" name="_pattern" signature="_pattern($re)">
+          <variable ilk="argument" name="$re" />
+        </scope>
+        <scope ilk="function" line="225" lineend="229" name="_match_scalar" signature="_match_scalar($match, $data)">
+          <variable ilk="argument" name="$match" />
+          <variable ilk="argument" name="$data" />
+        </scope>
+        <scope ilk="function" line="231" lineend="244" name="_match_hash" signature="_match_hash($match, $data)">
+          <variable ilk="argument" name="$match" />
+          <variable ilk="argument" name="$data" />
+        </scope>
+        <scope ilk="function" line="246" lineend="256" name="_match" signature="_match($self, $key, $data, $matcher)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$key" />
+          <variable ilk="argument" name="$data" />
+          <variable ilk="argument" name="$matcher" />
+        </scope>
+        <scope ilk="function" line="258" lineend="261" name="_scalar_match" signature="_scalar_match($self, $key, $data)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$key" />
+          <variable ilk="argument" name="$data" />
+        </scope>
+        <scope ilk="function" line="263" lineend="266" name="_hash_match" signature="_hash_match($self, $key, $data)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$key" />
+          <variable ilk="argument" name="$data" />
+        </scope>
+        <scope ilk="function" line="270" lineend="270" name="match_attributes" signature="match_attributes()" />
+        <scope ilk="function" line="272" lineend="282" name="match_module" signature="match_module($self, $modules)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$modules" />
+        </scope>
+        <scope ilk="function" line="284" lineend="284" name="match_distribution" signature="match_distribution()" />
+        <scope ilk="function" line="285" lineend="285" name="match_perl" signature="match_perl()" />
+        <scope ilk="function" line="287" lineend="287" name="match_perlconfig" signature="match_perlconfig()" />
+        <scope ilk="function" line="288" lineend="288" name="match_env" signature="match_env()" />
+        <scope ilk="function" line="290" lineend="307" name="matches" signature="matches($self, $arg)">
+          <variable ilk="argument" name="$self" />
+          <variable ilk="argument" name="$arg" />
+        </scope>
+      </scope>
+    </scope>
+    

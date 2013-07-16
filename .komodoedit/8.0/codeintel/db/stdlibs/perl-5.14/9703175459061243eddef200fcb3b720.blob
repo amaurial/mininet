@@ -1,0 +1,44 @@
+<scope ilk="blob" lang="Perl" name="File::HomeDir::Windows">
+      <scope classrefs="File::HomeDir::Driver" ilk="class" line="1" lineend="203" name="File::HomeDir::Windows">
+        <import line="7" module="Carp" />
+        <import line="8" module="File::Spec" />
+        <import line="9" module="File::HomeDir::Driver" />
+        <variable line="11" name="$VERSION" />
+        <variable line="11" name="@ISA" />
+        <scope ilk="function" line="17" lineend="17" name="CREATE" signature="CREATE()" />
+        <scope ilk="function" line="26" lineend="49" name="my_home" signature="my_home($class)">
+          <variable ilk="argument" name="$class" />
+        </scope>
+        <scope ilk="function" line="51" lineend="83" name="my_desktop" signature="my_desktop($class)">
+          <import line="56" module="Win32" />
+          <variable ilk="argument" name="$class" />
+          <import line="56" module="Win32" />
+        </scope>
+        <scope ilk="function" line="85" lineend="96" name="my_documents" signature="my_documents($class)">
+          <import line="90" module="Win32" />
+          <variable ilk="argument" name="$class" />
+          <import line="90" module="Win32" />
+        </scope>
+        <scope ilk="function" line="98" lineend="109" name="my_data" signature="my_data($class)">
+          <import line="103" module="Win32" />
+          <variable ilk="argument" name="$class" />
+          <import line="103" module="Win32" />
+        </scope>
+        <scope ilk="function" line="111" lineend="122" name="my_music" signature="my_music($class)">
+          <import line="116" module="Win32" />
+          <variable ilk="argument" name="$class" />
+          <import line="116" module="Win32" />
+        </scope>
+        <scope ilk="function" line="124" lineend="135" name="my_pictures" signature="my_pictures($class)">
+          <import line="129" module="Win32" />
+          <variable ilk="argument" name="$class" />
+          <import line="129" module="Win32" />
+        </scope>
+        <scope ilk="function" line="137" lineend="148" name="my_videos" signature="my_videos($class)">
+          <import line="142" module="Win32" />
+          <variable ilk="argument" name="$class" />
+          <import line="142" module="Win32" />
+        </scope>
+      </scope>
+    </scope>
+    

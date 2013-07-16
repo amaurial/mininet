@@ -1,0 +1,41 @@
+<scope ilk="blob" lang="Perl" name="IO::Compress::Adapter::Deflate">
+      <scope ilk="class" line="1" lineend="162" name="IO::Compress::Adapter::Deflate">
+        <import line="7" module="IO::Compress::Base::Common" symbol="*" />
+        <import line="9" module="Compress::Raw::Zlib" symbol="*" />
+        <variable line="10" name="$VERSION" />
+        <scope attributes="__ctor__" ilk="function" line="14" lineend="35" name="mkCompObject" signature="mkCompObject($crc32, $adler32, $level, $strategy)">
+          <variable ilk="argument" name="$crc32" />
+          <variable ilk="argument" name="$adler32" />
+          <variable ilk="argument" name="$level" />
+          <variable ilk="argument" name="$strategy" />
+        </scope>
+        <scope ilk="function" line="37" lineend="53" name="compr" signature="compr($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="55" lineend="73" name="flush" signature="flush($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="75" lineend="83" name="close" signature="close($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="85" lineend="100" name="reset" signature="reset($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="102" lineend="117" name="deflateParams" signature="deflateParams($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="133" lineend="138" name="compressedBytes" signature="compressedBytes($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="140" lineend="144" name="uncompressedBytes" signature="uncompressedBytes($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="149" lineend="153" name="crc32" signature="crc32($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+        <scope ilk="function" line="155" lineend="159" name="adler32" signature="adler32($self)">
+          <variable ilk="argument" name="$self" />
+        </scope>
+      </scope>
+    </scope>
+    

@@ -1,0 +1,28 @@
+<scope ilk="blob" lang="Perl" name="threads">
+      <scope ilk="class" line="1" lineend="127" name="threads">
+        <import line="13" module="Config" />
+        <import line="31" module="XSLoader" />
+        <variable line="8" name="$VERSION" />
+        <variable line="28" name="$threads::threads" />
+        <variable line="51" name="$threads::thread_exit_only" />
+        <variable line="110" name="*new" />
+        <scope ilk="function" line="37" lineend="81" name="import" signature="import($class)">
+          <import line="54" module="Carp" />
+          <import line="65" module="Carp" />
+          <variable ilk="argument" name="$class" />
+          <import line="54" module="Carp" />
+          <import line="65" module="Carp" />
+        </scope>
+        <scope ilk="function" line="87" lineend="102" name="exit" signature="exit($class, $status)">
+          <import line="96" module="Carp" />
+          <variable ilk="argument" name="$class" />
+          <variable ilk="argument" name="$status" />
+          <import line="96" module="Carp" />
+        </scope>
+        <scope ilk="function" line="105" lineend="105" name="threads::all" signature="threads::all()" />
+        <scope ilk="function" line="106" lineend="106" name="threads::running" signature="threads::running()" />
+        <scope ilk="function" line="107" lineend="107" name="threads::joinable" signature="threads::joinable()" />
+        <scope ilk="function" line="113" lineend="118" name="async" signature="async()" />
+      </scope>
+    </scope>
+    

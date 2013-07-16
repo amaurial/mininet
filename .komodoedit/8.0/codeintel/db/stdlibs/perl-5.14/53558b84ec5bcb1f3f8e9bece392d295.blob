@@ -1,0 +1,33 @@
+<scope ilk="blob" lang="Perl" name="LWP::MediaTypes">
+      <scope classrefs="Exporter" ilk="class" line="1" lineend="194" name="LWP::MediaTypes">
+        <import line="3" module="Exporter" />
+        <variable line="7" name="$VERSION" />
+        <scope ilk="function" line="44" lineend="48" name="_dump" signature="_dump()">
+          <import line="45" module="Data::Dumper" />
+          <import line="45" module="Data::Dumper" />
+        </scope>
+        <scope attributes="__exported__" ilk="function" line="51" lineend="108" name="guess_media_type" signature="guess_media_type($file, $header)">
+          <variable ilk="argument" name="$file" />
+          <variable ilk="argument" name="$header" />
+        </scope>
+        <scope attributes="__exported__" ilk="function" line="111" lineend="131" name="media_suffix" signature="media_suffix(@type)">
+          <variable ilk="argument" name="@type" />
+        </scope>
+        <scope ilk="function" line="134" lineend="140" name="file_exts" signature="file_exts()">
+          <import line="136" module="File::Basename" />
+          <import line="136" module="File::Basename" />
+        </scope>
+        <scope attributes="__exportable__" ilk="function" line="143" lineend="151" name="add_type" signature="add_type($type, @exts)">
+          <variable ilk="argument" name="$type" />
+          <variable ilk="argument" name="@exts" />
+        </scope>
+        <scope attributes="__exportable__" ilk="function" line="154" lineend="161" name="add_encoding" signature="add_encoding($type, @exts)">
+          <variable ilk="argument" name="$type" />
+          <variable ilk="argument" name="@exts" />
+        </scope>
+        <scope attributes="__exportable__" ilk="function" line="164" lineend="192" name="read_media_types" signature="read_media_types(@files)">
+          <variable ilk="argument" name="@files" />
+        </scope>
+      </scope>
+    </scope>
+    

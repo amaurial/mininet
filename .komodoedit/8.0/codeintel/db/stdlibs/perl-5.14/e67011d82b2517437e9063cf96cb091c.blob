@@ -1,0 +1,100 @@
+<scope ilk="blob" lang="Perl" name="Encode">
+      <scope ilk="class" line="4" lineend="342" name="Encode">
+        <import line="9" module="XSLoader" />
+        <import line="12" module="Exporter" />
+        <import line="48" module="Encode::Alias" symbol="*" />
+        <import line="53" module="Encode::Config" />
+        <import line="60" module="Encode::ConfigLocal" />
+        <variable line="7" name="$VERSION" />
+        <variable line="17" name="@EXPORT" />
+        <variable line="21" name="@FB_FLAGS" />
+        <variable line="25" name="@FB_CONSTS" />
+        <variable line="29" name="@EXPORT_OK" />
+        <variable line="37" name="%EXPORT_TAGS" />
+        <variable line="46" name="$ON_EBCDIC" />
+        <variable line="51" name="%Encoding" />
+        <variable line="52" name="%ExtModule" />
+        <variable line="162" name="*str2bytes" />
+        <variable line="178" name="*bytes2str" />
+        <scope ilk="function" line="8" lineend="8" name="DEBUG" signature="DEBUG()" />
+        <scope ilk="function" line="63" lineend="80" name="encodings" signature="encodings($class)">
+          <variable ilk="argument" name="$class" />
+        </scope>
+        <scope ilk="function" line="82" lineend="86" name="perlio_ok" signature="perlio_ok()">
+          </scope>
+        <scope ilk="function" line="88" lineend="99" name="define_encoding" signature="define_encoding($obj, $name, $alias)">
+          <variable ilk="argument" name="$obj" />
+          <variable ilk="argument" name="$name" />
+          <variable ilk="argument" name="$alias" />
+        </scope>
+        <scope ilk="function" line="101" lineend="123" name="getEncoding" signature="getEncoding($class, $name, $skip_external)">
+          <variable ilk="argument" name="$class" />
+          <variable ilk="argument" name="$name" />
+          <variable ilk="argument" name="$skip_external" />
+        </scope>
+        <scope ilk="function" line="125" lineend="128" name="find_encoding" signature="find_encoding($name, $skip_external)">
+          <variable ilk="argument" name="$name" />
+          <variable ilk="argument" name="$skip_external" />
+        </scope>
+        <scope ilk="function" line="130" lineend="134" name="resolve_alias" signature="resolve_alias()">
+          </scope>
+        <scope ilk="function" line="136" lineend="142" name="clone_encoding" signature="clone_encoding()">
+          <import line="139" module="Storable" />
+          <import line="139" module="Storable" />
+        </scope>
+        <scope ilk="function" line="144" lineend="161" name="encode" signature="encode($name, $string, $check)">
+          <import line="150" module="Carp" />
+          <import line="155" module="Carp" />
+          <variable ilk="argument" name="$name" />
+          <variable ilk="argument" name="$string" />
+          <variable ilk="argument" name="$check" />
+          <import line="150" module="Carp" />
+          <import line="155" module="Carp" />
+        </scope>
+        <scope ilk="function" line="164" lineend="177" name="decode" signature="decode($name, $octets, $check)">
+          <import line="171" module="Carp" />
+          <variable ilk="argument" name="$name" />
+          <variable ilk="argument" name="$octets" />
+          <variable ilk="argument" name="$check" />
+          <import line="171" module="Carp" />
+        </scope>
+        <scope ilk="function" line="180" lineend="198" name="from_to" signature="from_to($string, $from, $to, $check)">
+          <import line="186" module="Carp" />
+          <import line="191" module="Carp" />
+          <variable ilk="argument" name="$string" />
+          <variable ilk="argument" name="$from" />
+          <variable ilk="argument" name="$to" />
+          <variable ilk="argument" name="$check" />
+          <import line="186" module="Carp" />
+          <import line="191" module="Carp" />
+        </scope>
+        <scope ilk="function" line="200" lineend="204" name="encode_utf8" signature="encode_utf8($str)">
+          <variable ilk="argument" name="$str" />
+        </scope>
+        <scope ilk="function" line="208" lineend="218" name="decode_utf8" signature="decode_utf8($octets, $check)">
+          <variable ilk="argument" name="$octets" />
+          <variable ilk="argument" name="$check" />
+        </scope>
+        <scope ilk="function" line="238" lineend="340" name="predefine_encodings" signature="predefine_encodings($use_xs, $obj, $str, $chk, $obj, $str, $chk, $obj, $str, $chk, $obj, $octets, $chk, $obj, $string, $chk)">
+          <import line="239" module="Encode::Encoding" />
+          <variable ilk="argument" name="$use_xs" />
+          <variable ilk="argument" name="$obj" />
+          <variable ilk="argument" name="$str" />
+          <variable ilk="argument" name="$chk" />
+          <variable ilk="argument" name="$obj" />
+          <variable ilk="argument" name="$str" />
+          <variable ilk="argument" name="$chk" />
+          <variable ilk="argument" name="$obj" />
+          <variable ilk="argument" name="$str" />
+          <variable ilk="argument" name="$chk" />
+          <variable ilk="argument" name="$obj" />
+          <variable ilk="argument" name="$octets" />
+          <variable ilk="argument" name="$chk" />
+          <variable ilk="argument" name="$obj" />
+          <variable ilk="argument" name="$string" />
+          <variable ilk="argument" name="$chk" />
+          <import line="239" module="Encode::Encoding" />
+        </scope>
+      </scope>
+    </scope>
+    
